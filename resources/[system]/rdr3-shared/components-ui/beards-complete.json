@@ -1,0 +1,4130 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 560477017,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "21683359",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_BLONDE"
+      },
+      {
+        "component": 3359999566,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c845864e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_BROWN"
+      },
+      {
+        "component": 3811269149,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e32b5a1d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_DARKEST_BROWN"
+      },
+      {
+        "component": 1700911990,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6561db76",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_DARK_BLONDE"
+      },
+      {
+        "component": 1953208774,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "746b99c6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_DARK_GINGER"
+      },
+      {
+        "component": 3428413098,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cc596eaa",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_DARK_GREY"
+      },
+      {
+        "component": 3128266259,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ba758e13",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_GINGER"
+      },
+      {
+        "component": 122428071,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "74c1aa7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_GREY"
+      },
+      {
+        "component": 3926915906,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ea0ffb42",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_JET_BLACK"
+      },
+      {
+        "component": 3468384252,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cebb57fc",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_LIGHT_BLONDE"
+      },
+      {
+        "component": 768038038,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2dc75496",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_LIGHT_BROWN"
+      },
+      {
+        "component": 351936442,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "14fa1fba",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_LIGHT_GINGER"
+      },
+      {
+        "component": 2834932461,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a8f9a2ed",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_LIGHT_GREY"
+      },
+      {
+        "component": 1522736310,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5ac31cb6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_MEDIUM_BROWN"
+      },
+      {
+        "component": 2196041061,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "82e4ed65",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_SALT_PEPPER"
+      },
+      {
+        "component": 2841222333,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a9599cbd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 2484842446,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "941bafce",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_001_UNCLE_GREY"
+      },
+      {
+        "component": 1906774516,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "71a711f4",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_BLONDE"
+      },
+      {
+        "component": 3891950391,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e7fa7337",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_BROWN"
+      },
+      {
+        "component": 1517615086,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5a74f7ee",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_DARKEST_BROWN"
+      },
+      {
+        "component": 529788430,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1f93ee0e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_DARK_BLONDE"
+      },
+      {
+        "component": 2927222219,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ae79ddcb",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_DARK_GINGER"
+      },
+      {
+        "component": 2181192407,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "82025ad7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_DARK_GREY"
+      },
+      {
+        "component": 3633324851,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d8902333",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_GINGER"
+      },
+      {
+        "component": 1269387091,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4ba94f53",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_GREY"
+      },
+      {
+        "component": 1692876447,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "64e73e9f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_JET_BLACK"
+      },
+      {
+        "component": 661022885,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "276668a5",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_LIGHT_BLONDE"
+      },
+      {
+        "component": 2654365761,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9e366841",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_LIGHT_BROWN"
+      },
+      {
+        "component": 1561687115,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5d15744b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_LIGHT_GINGER"
+      },
+      {
+        "component": 773929310,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2e21395e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_LIGHT_GREY"
+      },
+      {
+        "component": 1092082138,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4117d9da",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_MEDIUM_BROWN"
+      },
+      {
+        "component": 381599086,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "16bebd6e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_SALT_PEPPER"
+      },
+      {
+        "component": 4252816540,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fd7cd49c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 1647585511,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "623428e7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_002_UNCLE_GREY"
+      },
+      {
+        "component": 3965585130,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ec5e06ea",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_BLONDE"
+      },
+      {
+        "component": 3261987659,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c26dfb4b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_BROWN"
+      },
+      {
+        "component": 4251665592,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fd6b44b8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_DARKEST_BROWN"
+      },
+      {
+        "component": 1114869792,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "42739020",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_DARK_BLONDE"
+      },
+      {
+        "component": 962097997,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3958734d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_DARK_GINGER"
+      },
+      {
+        "component": 839868052,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "320f5e94",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_DARK_GREY"
+      },
+      {
+        "component": 2592094004,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9a803734",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_GINGER"
+      },
+      {
+        "component": 1889659997,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "70a1ec5d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_GREY"
+      },
+      {
+        "component": 3101964980,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b8e43ab4",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_JET_BLACK"
+      },
+      {
+        "component": 3499245083,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d0923e1b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_LIGHT_BLONDE"
+      },
+      {
+        "component": 3852769926,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e5a49a86",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_LIGHT_BROWN"
+      },
+      {
+        "component": 3200116226,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bebde602",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_LIGHT_GINGER"
+      },
+      {
+        "component": 2224626300,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "84991a7c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_LIGHT_GREY"
+      },
+      {
+        "component": 4209486082,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fae7a902",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_MEDIUM_BROWN"
+      },
+      {
+        "component": 2673606804,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9f5c0094",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_SALT_PEPPER"
+      },
+      {
+        "component": 4102053214,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f4805d5e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 611832531,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2477d2d3",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_003_UNCLE_GREY"
+      },
+      {
+        "component": 306678665,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "12478b89",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_BLONDE"
+      },
+      {
+        "component": 1262135006,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4b3aa6de",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_BROWN"
+      },
+      {
+        "component": 1346672098,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "504495e2",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_DARKEST_BROWN"
+      },
+      {
+        "component": 1278497410,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4c345282",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_DARK_BLONDE"
+      },
+      {
+        "component": 3717390630,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "dd92e126",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_DARK_GINGER"
+      },
+      {
+        "component": 3295253150,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c469929e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_DARK_GREY"
+      },
+      {
+        "component": 3016142633,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b3c6af29",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_GINGER"
+      },
+      {
+        "component": 784428444,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2ec16d9c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_GREY"
+      },
+      {
+        "component": 166579674,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9edcdda",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_JET_BLACK"
+      },
+      {
+        "component": 1505085490,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "59b5c832",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_LIGHT_BLONDE"
+      },
+      {
+        "component": 1883341592,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "70418318",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_LIGHT_BROWN"
+      },
+      {
+        "component": 2110468749,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7dcb328d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_LIGHT_GINGER"
+      },
+      {
+        "component": 2675055356,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9f721afc",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_LIGHT_GREY"
+      },
+      {
+        "component": 2031466514,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7915b812",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_MEDIUM_BROWN"
+      },
+      {
+        "component": 1192139082,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "470e994a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_SALT_PEPPER"
+      },
+      {
+        "component": 2428864485,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "90c587e5",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 1715749200,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "66444150",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_004_UNCLE_GREY"
+      },
+      {
+        "component": 3593465254,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d62feda6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_BLONDE"
+      },
+      {
+        "component": 1073719212,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3fffa7ac",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_BROWN"
+      },
+      {
+        "component": 59227358,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "387bcde",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_DARKEST_BROWN"
+      },
+      {
+        "component": 2377311071,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8db2e35f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_DARK_BLONDE"
+      },
+      {
+        "component": 3136919646,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "baf9985e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_DARK_GINGER"
+      },
+      {
+        "component": 1784730331,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6a60d2db",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_DARK_GREY"
+      },
+      {
+        "component": 2869194922,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ab0470aa",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_GINGER"
+      },
+      {
+        "component": 3994876446,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ee1cfa1e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_GREY"
+      },
+      {
+        "component": 252768736,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f10f1e0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_JET_BLACK"
+      },
+      {
+        "component": 1422368367,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "54c79e6f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_LIGHT_BLONDE"
+      },
+      {
+        "component": 4177888721,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f90585d1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_LIGHT_BROWN"
+      },
+      {
+        "component": 2326397606,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8aaa02a6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_LIGHT_GINGER"
+      },
+      {
+        "component": 3170246895,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bcf620ef",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_LIGHT_GREY"
+      },
+      {
+        "component": 2979982612,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b19eed14",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_MEDIUM_BROWN"
+      },
+      {
+        "component": 1508626347,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "59ebcfab",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_SALT_PEPPER"
+      },
+      {
+        "component": 4002065779,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ee8aad73",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 3080466848,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b79c31a0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_005_UNCLE_GREY"
+      },
+      {
+        "component": 3805554892,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e2d428cc",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_BLONDE"
+      },
+      {
+        "component": 226841406,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d85533e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_BROWN"
+      },
+      {
+        "component": 2458131705,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "92841cf9",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_DARKEST_BROWN"
+      },
+      {
+        "component": 2165856356,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "81185864",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_DARK_BLONDE"
+      },
+      {
+        "component": 1783629149,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6a50055d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_DARK_GINGER"
+      },
+      {
+        "component": 2347083130,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8be5a57a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_DARK_GREY"
+      },
+      {
+        "component": 3963253620,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ec3a7374",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_GINGER"
+      },
+      {
+        "component": 3665597818,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "da7c957a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_GREY"
+      },
+      {
+        "component": 1375791587,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5200e9e3",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_JET_BLACK"
+      },
+      {
+        "component": 830243454,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "317c827e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_LIGHT_BLONDE"
+      },
+      {
+        "component": 1672202441,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "63abc8c9",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_LIGHT_BROWN"
+      },
+      {
+        "component": 1900893047,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "714d5377",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_LIGHT_GINGER"
+      },
+      {
+        "component": 1807816867,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6bc118a3",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_LIGHT_GREY"
+      },
+      {
+        "component": 3720413870,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ddc102ae",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_MEDIUM_BROWN"
+      },
+      {
+        "component": 649961113,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "26bd9e99",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_SALT_PEPPER"
+      },
+      {
+        "component": 506016508,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1e2932fc",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 2972528156,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b12d2e1c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_006_UNCLE_GREY"
+      },
+      {
+        "component": 354937489,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1527ea91",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_BLONDE"
+      },
+      {
+        "component": 2031577909,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "79176b35",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_BROWN"
+      },
+      {
+        "component": 1658715876,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "62ddfee4",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_DARKEST_BROWN"
+      },
+      {
+        "component": 2705244413,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a13ec0fd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_DARK_BLONDE"
+      },
+      {
+        "component": 298392309,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "11c91af5",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_DARK_GINGER"
+      },
+      {
+        "component": 185164474,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b0962ba",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_DARK_GREY"
+      },
+      {
+        "component": 1264771549,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4b62e1dd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_GINGER"
+      },
+      {
+        "component": 766015793,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2da87931",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_GREY"
+      },
+      {
+        "component": 1855989868,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6ea0286c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_JET_BLACK"
+      },
+      {
+        "component": 2679509709,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9fb612cd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_LIGHT_BLONDE"
+      },
+      {
+        "component": 1743934292,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "67f25354",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_LIGHT_BROWN"
+      },
+      {
+        "component": 3388554110,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c9f93b7e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_LIGHT_GINGER"
+      },
+      {
+        "component": 1881866345,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "702b0069",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_LIGHT_GREY"
+      },
+      {
+        "component": 481122513,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1cad58d1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_MEDIUM_BROWN"
+      },
+      {
+        "component": 75152474,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "47abc5a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_SALT_PEPPER"
+      },
+      {
+        "component": 2316362411,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8a10e2ab",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 2253995546,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "86593e1a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_007_UNCLE_GREY"
+      },
+      {
+        "component": 1597397871,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5f365b6f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_BLONDE"
+      },
+      {
+        "component": 2210118077,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "83bbb9bd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_BROWN"
+      },
+      {
+        "component": 990976242,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3b1118f2",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_DARKEST_BROWN"
+      },
+      {
+        "component": 1491762223,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "58ea7c2f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_DARK_BLONDE"
+      },
+      {
+        "component": 4094840815,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f4124fef",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_DARK_GINGER"
+      },
+      {
+        "component": 1807775801,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6bc07839",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_DARK_GREY"
+      },
+      {
+        "component": 3494122446,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d04413ce",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_GINGER"
+      },
+      {
+        "component": 1797835665,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6b28cb91",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_GREY"
+      },
+      {
+        "component": 1072039547,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3fe6067b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_JET_BLACK"
+      },
+      {
+        "component": 683934875,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "28c4049b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_LIGHT_BLONDE"
+      },
+      {
+        "component": 3001136381,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b2e1b4fd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_LIGHT_BROWN"
+      },
+      {
+        "component": 1623302616,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "60c1a1d8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_LIGHT_GINGER"
+      },
+      {
+        "component": 145804206,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8b0cbae",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_LIGHT_GREY"
+      },
+      {
+        "component": 2838736201,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a933ad49",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_MEDIUM_BROWN"
+      },
+      {
+        "component": 424212880,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1948f990",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_SALT_PEPPER"
+      },
+      {
+        "component": 1620228718,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6092ba6e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 3426387291,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cc3a855b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_008_UNCLE_GREY"
+      },
+      {
+        "component": 1882197063,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "70300c47",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_BLONDE"
+      },
+      {
+        "component": 4064296031,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f2403c5f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_BROWN"
+      },
+      {
+        "component": 785798480,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2ed65550",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_DARKEST_BROWN"
+      },
+      {
+        "component": 4234219349,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fc610f55",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_DARK_BLONDE"
+      },
+      {
+        "component": 3799450529,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e27703a1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_DARK_GINGER"
+      },
+      {
+        "component": 1257638385,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4af609f1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_DARK_GREY"
+      },
+      {
+        "component": 1713580799,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "66232aff",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_GINGER"
+      },
+      {
+        "component": 3783314784,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e180cd60",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_GREY"
+      },
+      {
+        "component": 1244870786,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4a333882",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_JET_BLACK"
+      },
+      {
+        "component": 4110243018,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f4fd54ca",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_LIGHT_BLONDE"
+      },
+      {
+        "component": 841976497,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "322f8ab1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_LIGHT_BROWN"
+      },
+      {
+        "component": 180350727,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "abfef07",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_LIGHT_GINGER"
+      },
+      {
+        "component": 4179638410,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f920388a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_LIGHT_GREY"
+      },
+      {
+        "component": 4051416117,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f17bb435",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_MEDIUM_BROWN"
+      },
+      {
+        "component": 4187014157,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f990c40d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_SALT_PEPPER"
+      },
+      {
+        "component": 1076604375,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "402badd7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 1536172717,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5b9022ad",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_009_UNCLE_GREY"
+      },
+      {
+        "component": 934537342,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "37b3e87e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_BLONDE"
+      },
+      {
+        "component": 1127522151,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "43349f67",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_BROWN"
+      },
+      {
+        "component": 2670447343,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9f2bcaef",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_DARKEST_BROWN"
+      },
+      {
+        "component": 2056621230,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7a958cae",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_DARK_BLONDE"
+      },
+      {
+        "component": 1402999799,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "53a013f7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_DARK_GINGER"
+      },
+      {
+        "component": 757034744,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2d1f6ef8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_DARK_GREY"
+      },
+      {
+        "component": 631072807,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "259d6827",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_GINGER"
+      },
+      {
+        "component": 2143523902,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7fc3943e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_GREY"
+      },
+      {
+        "component": 4031164574,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f046b09e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_JET_BLACK"
+      },
+      {
+        "component": 2414746645,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8fee1c15",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_LIGHT_BLONDE"
+      },
+      {
+        "component": 3414927490,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cb8ba882",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_LIGHT_BROWN"
+      },
+      {
+        "component": 822923592,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "310cd148",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_LIGHT_GINGER"
+      },
+      {
+        "component": 2858182524,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "aa5c677c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_LIGHT_GREY"
+      },
+      {
+        "component": 3462712427,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ce64cc6b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_MEDIUM_BROWN"
+      },
+      {
+        "component": 3176954766,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bd5c7b8e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_SALT_PEPPER"
+      },
+      {
+        "component": 1125203251,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "43113d33",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 3002038257,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b2ef77f1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_010_UNCLE_GREY"
+      },
+      {
+        "component": 1658129915,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "62d50dfb",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_BLONDE"
+      },
+      {
+        "component": 3606833227,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d6fbe84b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_BROWN"
+      },
+      {
+        "component": 111710205,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6a88ffd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_DARKEST_BROWN"
+      },
+      {
+        "component": 3757979606,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "dffe37d6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_DARK_BLONDE"
+      },
+      {
+        "component": 3706499520,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "dcecb1c0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_DARK_GINGER"
+      },
+      {
+        "component": 516169719,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1ec41ff7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_DARK_GREY"
+      },
+      {
+        "component": 1818061280,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6c5d69e0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_GINGER"
+      },
+      {
+        "component": 1560460654,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5d02bd6e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_GREY"
+      },
+      {
+        "component": 549062696,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "20ba0828",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_JET_BLACK"
+      },
+      {
+        "component": 1210149633,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "48216b01",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_LIGHT_BLONDE"
+      },
+      {
+        "component": 2658301552,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9e727670",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_LIGHT_BROWN"
+      },
+      {
+        "component": 3568848985,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d4b85059",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_LIGHT_GINGER"
+      },
+      {
+        "component": 2268535099,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8737193b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_LIGHT_GREY"
+      },
+      {
+        "component": 3173658289,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bd2a2eb1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_MEDIUM_BROWN"
+      },
+      {
+        "component": 3928420048,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ea26eed0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_SALT_PEPPER"
+      },
+      {
+        "component": 2697665153,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a0cb1a81",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 1896236580,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "71064624",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_011_UNCLE_GREY"
+      },
+      {
+        "component": 1437370193,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "55ac8751",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_BLONDE"
+      },
+      {
+        "component": 2564197849,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "98d68dd9",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_BROWN"
+      },
+      {
+        "component": 1036166436,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3dc2a524",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_DARKEST_BROWN"
+      },
+      {
+        "component": 1105419118,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "41e35b6e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_DARK_BLONDE"
+      },
+      {
+        "component": 307184935,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "124f4527",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_DARK_GINGER"
+      },
+      {
+        "component": 2816141621,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a7dae935",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_DARK_GREY"
+      },
+      {
+        "component": 3848157593,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e55e3999",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_GINGER"
+      },
+      {
+        "component": 1666623013,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6356a625",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_GREY"
+      },
+      {
+        "component": 1206933050,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "47f0563a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_JET_BLACK"
+      },
+      {
+        "component": 1372322083,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "51cbf923",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_LIGHT_BLONDE"
+      },
+      {
+        "component": 1457766250,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "56e3bf6a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_LIGHT_BROWN"
+      },
+      {
+        "component": 1451003681,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "567c8f21",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_LIGHT_GINGER"
+      },
+      {
+        "component": 1376969807,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5212e44f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_LIGHT_GREY"
+      },
+      {
+        "component": 1213264145,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4850f111",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_MEDIUM_BROWN"
+      },
+      {
+        "component": 4243253661,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fceae99d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_SALT_PEPPER"
+      },
+      {
+        "component": 74902531,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "476ec03",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 39295965,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2579bdd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_012_UNCLE_GREY"
+      },
+      {
+        "component": 3169600415,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bcec439f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_BLONDE"
+      },
+      {
+        "component": 1063184222,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3f5ee75e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_BROWN"
+      },
+      {
+        "component": 382614413,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "16ce3b8d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_DARKEST_BROWN"
+      },
+      {
+        "component": 3359587060,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c83f3af4",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_DARK_BLONDE"
+      },
+      {
+        "component": 1239485608,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "49e10ca8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_DARK_GINGER"
+      },
+      {
+        "component": 1163598653,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "455b1b3d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_DARK_GREY"
+      },
+      {
+        "component": 1389714514,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "52d55c52",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_GINGER"
+      },
+      {
+        "component": 2587879296,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9a3fe780",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_GREY"
+      },
+      {
+        "component": 605652010,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2419842a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_JET_BLACK"
+      },
+      {
+        "component": 3750364151,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "df8a03f7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_LIGHT_BLONDE"
+      },
+      {
+        "component": 1971724686,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7586218e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_LIGHT_BROWN"
+      },
+      {
+        "component": 502538388,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1df42094",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_LIGHT_GINGER"
+      },
+      {
+        "component": 3750146482,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "df86b1b2",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_LIGHT_GREY"
+      },
+      {
+        "component": 1717239876,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "665b0044",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_MEDIUM_BROWN"
+      },
+      {
+        "component": 2663513395,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9ec1fd33",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_SALT_PEPPER"
+      },
+      {
+        "component": 146025810,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8b42d52",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 2706920252,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a158533c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_013_UNCLE_GREY"
+      },
+      {
+        "component": 2836117189,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a90bb6c5",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_BLONDE"
+      },
+      {
+        "component": 2549723902,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "97f9b2fe",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_BROWN"
+      },
+      {
+        "component": 3187802383,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "be02010f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_DARKEST_BROWN"
+      },
+      {
+        "component": 3538861559,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d2eebdf7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_DARK_BLONDE"
+      },
+      {
+        "component": 1204379617,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "47c95fe1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_DARK_GINGER"
+      },
+      {
+        "component": 2929866760,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "aea23808",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_DARK_GREY"
+      },
+      {
+        "component": 508353135,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1e4cda6f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_GINGER"
+      },
+      {
+        "component": 1664964724,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "633d5874",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_GREY"
+      },
+      {
+        "component": 1311851556,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4e314424",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_JET_BLACK"
+      },
+      {
+        "component": 2639004079,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9d4c01af",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_LIGHT_BLONDE"
+      },
+      {
+        "component": 1620485665,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6096a621",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_LIGHT_BROWN"
+      },
+      {
+        "component": 4183051519,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f9544cff",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_LIGHT_GINGER"
+      },
+      {
+        "component": 2235804659,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8543abf3",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_LIGHT_GREY"
+      },
+      {
+        "component": 323985567,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "134fa09f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_MEDIUM_BROWN"
+      },
+      {
+        "component": 133965099,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7fc252b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_SALT_PEPPER"
+      },
+      {
+        "component": 1082664383,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "408825bf",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 95718510,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5b48c6e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_014_UNCLE_GREY"
+      },
+      {
+        "component": 3270933002,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c2f67a0a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_BLONDE"
+      },
+      {
+        "component": 3106733659,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b92cfe5b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_BROWN"
+      },
+      {
+        "component": 2339538374,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8b7285c6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_DARKEST_BROWN"
+      },
+      {
+        "component": 2869759893,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ab0d0f95",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_DARK_BLONDE"
+      },
+      {
+        "component": 1804112853,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6b8893d5",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_DARK_GINGER"
+      },
+      {
+        "component": 3372798554,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c908d25a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_DARK_GREY"
+      },
+      {
+        "component": 2209754912,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "83b62f20",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_GINGER"
+      },
+      {
+        "component": 4076216113,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f2f61f31",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_GREY"
+      },
+      {
+        "component": 601768357,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "23de41a5",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_JET_BLACK"
+      },
+      {
+        "component": 1727197799,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "66f2f267",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_LIGHT_BLONDE"
+      },
+      {
+        "component": 3455182175,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cdf1e55f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_LIGHT_BROWN"
+      },
+      {
+        "component": 3491375629,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d01a2a0d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_LIGHT_GINGER"
+      },
+      {
+        "component": 1625991163,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "60eaa7fb",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_LIGHT_GREY"
+      },
+      {
+        "component": 1706701994,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "65ba34aa",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_MEDIUM_BROWN"
+      },
+      {
+        "component": 1270498360,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4bba4438",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_SALT_PEPPER"
+      },
+      {
+        "component": 319152566,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1305e1b6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 1820377312,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6c80c0e0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_015_UNCLE_GREY"
+      },
+      {
+        "component": 248711205,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ed30825",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_BLONDE"
+      },
+      {
+        "component": 2937424526,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "af158a8e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_BROWN"
+      },
+      {
+        "component": 2771489520,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a53192f0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_DARKEST_BROWN"
+      },
+      {
+        "component": 4029336581,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f02acc05",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_DARK_BLONDE"
+      },
+      {
+        "component": 2696207373,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a0b4dc0d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_DARK_GINGER"
+      },
+      {
+        "component": 2004750666,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "777e114a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_DARK_GREY"
+      },
+      {
+        "component": 4088282214,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f3ae3c66",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_GINGER"
+      },
+      {
+        "component": 3967340697,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ec78d099",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_GREY"
+      },
+      {
+        "component": 2115010028,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7e107dec",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_JET_BLACK"
+      },
+      {
+        "component": 1119270192,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "42b6b530",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_LIGHT_BLONDE"
+      },
+      {
+        "component": 683891516,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "28c35b3c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_LIGHT_BROWN"
+      },
+      {
+        "component": 145201052,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8a7979c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_LIGHT_GINGER"
+      },
+      {
+        "component": 766301466,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2dacd51a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_LIGHT_GREY"
+      },
+      {
+        "component": 2543734778,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "979e4ffa",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_MEDIUM_BROWN"
+      },
+      {
+        "component": 2178256954,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "81d5903a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_SALT_PEPPER"
+      },
+      {
+        "component": 1121209784,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "42d44db8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 1676545681,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "63ee0e91",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_016_UNCLE_GREY"
+      },
+      {
+        "component": 2415588384,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8ffaf420",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_BLONDE"
+      },
+      {
+        "component": 555155903,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "211701bf",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_BROWN"
+      },
+      {
+        "component": 282054283,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "10cfce8b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_DARKEST_BROWN"
+      },
+      {
+        "component": 3010498713,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b3709099",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_DARK_BLONDE"
+      },
+      {
+        "component": 1071274056,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3fda5848",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_DARK_GINGER"
+      },
+      {
+        "component": 1885907986,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7068ac12",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_DARK_GREY"
+      },
+      {
+        "component": 2169749075,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8153be53",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_GINGER"
+      },
+      {
+        "component": 164485044,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9cdd7b4",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_GREY"
+      },
+      {
+        "component": 2973239026,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b13806f2",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_JET_BLACK"
+      },
+      {
+        "component": 2397940937,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8eedacc9",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_LIGHT_BLONDE"
+      },
+      {
+        "component": 3805805594,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e2d7fc1a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_LIGHT_BROWN"
+      },
+      {
+        "component": 4133352301,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f65df36d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_LIGHT_GINGER"
+      },
+      {
+        "component": 1232390969,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4974cb39",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_LIGHT_GREY"
+      },
+      {
+        "component": 1496508503,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5932e857",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_MEDIUM_BROWN"
+      },
+      {
+        "component": 3670735525,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "dacafaa5",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_SALT_PEPPER"
+      },
+      {
+        "component": 2054997725,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7a7cc6dd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 2148944406,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "80164a16",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_017_UNCLE_GREY"
+      },
+      {
+        "component": 390637164,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1748a66c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_BLONDE"
+      },
+      {
+        "component": 1858184912,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6ec1a6d0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_BROWN"
+      },
+      {
+        "component": 3521221739,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d1e1946b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_DARKEST_BROWN"
+      },
+      {
+        "component": 3354484471,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c7f15ef7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_DARK_BLONDE"
+      },
+      {
+        "component": 4078914253,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f31f4acd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_DARK_GINGER"
+      },
+      {
+        "component": 1920767020,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "727c942c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_DARK_GREY"
+      },
+      {
+        "component": 2104391593,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7d6e77a9",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_GINGER"
+      },
+      {
+        "component": 3223635078,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c024c486",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_GREY"
+      },
+      {
+        "component": 1802175605,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6b6b0475",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_JET_BLACK"
+      },
+      {
+        "component": 1858638465,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6ec89281",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_LIGHT_BLONDE"
+      },
+      {
+        "component": 2037363766,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "796fb436",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_LIGHT_BROWN"
+      },
+      {
+        "component": 4239242526,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fcadb51e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_LIGHT_GINGER"
+      },
+      {
+        "component": 231928634,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "dd2f33a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_LIGHT_GREY"
+      },
+      {
+        "component": 3252081425,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c1d6d311",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_MEDIUM_BROWN"
+      },
+      {
+        "component": 484622924,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1ce2c24c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_SALT_PEPPER"
+      },
+      {
+        "component": 1050007297,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3e95d701",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 261793413,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f9aa685",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_018_UNCLE_GREY"
+      },
+      {
+        "component": 3202209652,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "beddd774",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_BLONDE"
+      },
+      {
+        "component": 1351177428,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "508954d4",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_BROWN"
+      },
+      {
+        "component": 1807543115,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6bbceb4b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_DARKEST_BROWN"
+      },
+      {
+        "component": 1807494016,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6bbc2b80",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_DARK_BLONDE"
+      },
+      {
+        "component": 4197281720,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fa2d6fb8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_DARK_GINGER"
+      },
+      {
+        "component": 3364810881,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c88ef081",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_DARK_GREY"
+      },
+      {
+        "component": 1957241420,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "74a9224c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_GINGER"
+      },
+      {
+        "component": 3891804603,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e7f839bb",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_GREY"
+      },
+      {
+        "component": 2126455682,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7ebf2382",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_JET_BLACK"
+      },
+      {
+        "component": 3130258751,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ba93f53f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_LIGHT_BLONDE"
+      },
+      {
+        "component": 2276918031,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "87b7030f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_LIGHT_BROWN"
+      },
+      {
+        "component": 1415120973,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5459084d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_LIGHT_GINGER"
+      },
+      {
+        "component": 175443526,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a750e46",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_LIGHT_GREY"
+      },
+      {
+        "component": 2077475408,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7bd3c250",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_MEDIUM_BROWN"
+      },
+      {
+        "component": 1552798668,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5c8dd3cc",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_SALT_PEPPER"
+      },
+      {
+        "component": 2860810906,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "aa84829a",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 199121926,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bde5c06",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_019_UNCLE_GREY"
+      },
+      {
+        "component": 3678086192,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "db3b2430",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_BLONDE"
+      },
+      {
+        "component": 1529291189,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5b2721b5",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_BROWN"
+      },
+      {
+        "component": 111379000,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6a38238",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_DARKEST_BROWN"
+      },
+      {
+        "component": 3163913471,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bc957cff",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_DARK_BLONDE"
+      },
+      {
+        "component": 2896881433,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "acaae719",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_DARK_GINGER"
+      },
+      {
+        "component": 1387443021,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "52b2b34d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_DARK_GREY"
+      },
+      {
+        "component": 3563599103,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d46834ff",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_GINGER"
+      },
+      {
+        "component": 983283548,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3a9bb75c",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_GREY"
+      },
+      {
+        "component": 587465329,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "23040271",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_JET_BLACK"
+      },
+      {
+        "component": 949651033,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "389a8659",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_LIGHT_BLONDE"
+      },
+      {
+        "component": 2084264417,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7c3b59e1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_LIGHT_BROWN"
+      },
+      {
+        "component": 898572524,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "358f20ec",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_LIGHT_GINGER"
+      },
+      {
+        "component": 3263282150,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c281bbe6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_LIGHT_GREY"
+      },
+      {
+        "component": 1864790483,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6f2671d3",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_MEDIUM_BROWN"
+      },
+      {
+        "component": 2042541768,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "79beb6c8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_SALT_PEPPER"
+      },
+      {
+        "component": 2197298280,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "82f81c68",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 3492210719,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d026e81f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_020_UNCLE_GREY"
+      },
+      {
+        "component": 4214953211,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fb3b14fb",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_BLONDE"
+      },
+      {
+        "component": 2673590163,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9f5bbf93",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_BROWN"
+      },
+      {
+        "component": 3202083669,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bedbeb55",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_DARKEST_BROWN"
+      },
+      {
+        "component": 1718088001,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6667f141",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_DARK_BLONDE"
+      },
+      {
+        "component": 2723814342,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a25a1bc6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_DARK_GINGER"
+      },
+      {
+        "component": 3855680805,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e5d10525",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_DARK_GREY"
+      },
+      {
+        "component": 19363891,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1277833",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_GINGER"
+      },
+      {
+        "component": 3495936372,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d05fc174",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_GREY"
+      },
+      {
+        "component": 3515089297,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d1840191",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_JET_BLACK"
+      },
+      {
+        "component": 96189939,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5bbbdf3",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_LIGHT_BLONDE"
+      },
+      {
+        "component": 2743289969,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a3834871",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_LIGHT_BROWN"
+      },
+      {
+        "component": 4013069152,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ef329360",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_LIGHT_GINGER"
+      },
+      {
+        "component": 638112146,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2608d192",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_LIGHT_GREY"
+      },
+      {
+        "component": 846185989,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "326fc605",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_MEDIUM_BROWN"
+      },
+      {
+        "component": 1998279575,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "771b5397",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_SALT_PEPPER"
+      },
+      {
+        "component": 2905047290,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ad2780fa",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 851618488,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "32c2aab8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_021_UNCLE_GREY"
+      },
+      {
+        "component": 3720555038,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ddc32a1e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_BLONDE"
+      },
+      {
+        "component": 4054521870,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f1ab180e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_BROWN"
+      },
+      {
+        "component": 2733871421,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a2f3913d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_DARKEST_BROWN"
+      },
+      {
+        "component": 1037532367,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3dd77ccf",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_DARK_BLONDE"
+      },
+      {
+        "component": 3454329345,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cde4e201",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_DARK_GINGER"
+      },
+      {
+        "component": 3228745165,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c072bdcd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_DARK_GREY"
+      },
+      {
+        "component": 2016318535,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "782e9447",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_GINGER"
+      },
+      {
+        "component": 518502517,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1ee7b875",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_GREY"
+      },
+      {
+        "component": 2089978915,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7c928c23",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_JET_BLACK"
+      },
+      {
+        "component": 4006182275,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "eec97d83",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_LIGHT_BLONDE"
+      },
+      {
+        "component": 3678542354,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "db421a12",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_LIGHT_BROWN"
+      },
+      {
+        "component": 4119072356,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f5840e64",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_LIGHT_GINGER"
+      },
+      {
+        "component": 1659065808,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "62e355d0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_LIGHT_GREY"
+      },
+      {
+        "component": 1418693294,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "548f8aae",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_MEDIUM_BROWN"
+      },
+      {
+        "component": 1676777041,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "63f19651",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_SALT_PEPPER"
+      },
+      {
+        "component": 2891677343,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ac5b7e9f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 2941020767,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "af4c6a5f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_022_UNCLE_GREY"
+      },
+      {
+        "component": 3939138320,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "eaca7b10",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_BLONDE"
+      },
+      {
+        "component": 4203626976,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fa8e41e0",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_BROWN"
+      },
+      {
+        "component": 348235608,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "14c1a758",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_DARKEST_BROWN"
+      },
+      {
+        "component": 453986413,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1b0f486d",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_DARK_BLONDE"
+      },
+      {
+        "component": 1788167345,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6a9544b1",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_DARK_GINGER"
+      },
+      {
+        "component": 3280423972,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c3874c24",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_DARK_GREY"
+      },
+      {
+        "component": 2366243005,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8d0a00bd",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_GINGER"
+      },
+      {
+        "component": 3788428150,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e1ced376",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_GREY"
+      },
+      {
+        "component": 603874579,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "23fe6513",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_JET_BLACK"
+      },
+      {
+        "component": 3745135171,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "df3a3a43",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_LIGHT_BLONDE"
+      },
+      {
+        "component": 3274186849,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c3282061",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_LIGHT_BROWN"
+      },
+      {
+        "component": 948242550,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "38850876",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_LIGHT_GINGER"
+      },
+      {
+        "component": 2138943690,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7f7db0ca",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_LIGHT_GREY"
+      },
+      {
+        "component": 1086943796,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "40c97234",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_MEDIUM_BROWN"
+      },
+      {
+        "component": 2785726214,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a60acf06",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_SALT_PEPPER"
+      },
+      {
+        "component": 1703681656,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "658c1e78",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 3213796942,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bf8ea64e",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_023_UNCLE_GREY"
+      },
+      {
+        "component": 1400480499,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5379a2f3",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_BLONDE"
+      },
+      {
+        "component": 257598950,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f5aa5e6",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_BROWN"
+      },
+      {
+        "component": 17656519,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "10d6ac7",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_DARKEST_BROWN"
+      },
+      {
+        "component": 4162676863,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f81d687f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_DARK_BLONDE"
+      },
+      {
+        "component": 1550139832,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5c6541b8",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_DARK_GINGER"
+      },
+      {
+        "component": 2431077655,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "90e74d17",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_DARK_GREY"
+      },
+      {
+        "component": 564751375,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "21a96c0f",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_GINGER"
+      },
+      {
+        "component": 2240704400,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "858e6f90",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_GREY"
+      },
+      {
+        "component": 315685828,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "12d0fbc4",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_LIGHT_BLONDE"
+      },
+      {
+        "component": 265519583,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fd381df",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_LIGHT_BROWN"
+      },
+      {
+        "component": 4036955195,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f09f0c3b",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_LIGHT_GINGER"
+      },
+      {
+        "component": 917365001,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "36ade109",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_LIGHT_GREY"
+      },
+      {
+        "component": 1094772655,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4140e7af",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_MEDIUM_BROWN"
+      },
+      {
+        "component": 3478843776,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cf5af180",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_SALT_PEPPER"
+      },
+      {
+        "component": 3918210966,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e98b2796",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_STRAWBERRY_BLONDE"
+      },
+      {
+        "component": 272648835,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "10404a83",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_BEARD_024_UNCLE_GREY"
+      },
+      {
+        "component": 1412973097,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "54384229",
+        "itemType": "beards_complete"
+      },
+      {
+        "component": 1744685570,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "67fdca02",
+        "itemType": "beards_complete"
+      },
+      {
+        "component": 4127777233,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f608e1d1",
+        "itemType": "beards_complete"
+      },
+      {
+        "component": 4279620277,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ff15d2b5",
+        "itemType": "beards_complete"
+      }
+    ]
+  },
+  {
+    "name": 550,
+    "components": [
+      {
+        "component": 1766639216,
+        "category": 4160842698,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "694cc670",
+        "itemType": "beards_complete",
+        "name": "CLOTHING_ITEM_M_NECKERCHIEF_550_TINT_024",
+        "id": 550,
+        "tint": 24
+      }
+    ]
+  }
+]

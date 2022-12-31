@@ -1,0 +1,11 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ts-node src/socket.ts",
+    "watch": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node src/socket.ts\"",
+    "prettier": "prettier src/**/*.{ts,tsx} --write"
+  }
+}

@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Resources:src" pattern="file[pioneer-village]:resources/*/src//*||file[pioneer-village]:lib//*" />
+</component>

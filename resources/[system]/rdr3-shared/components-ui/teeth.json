@@ -1,0 +1,180 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 959712255,
+        "category": 2532159068,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "39340bff",
+        "name": "CLOTHING_ITEM_F_TEETH_000",
+        "itemType": "teeth",
+        "friendlyName": "The Chompers"
+      },
+      {
+        "component": 1255518018,
+        "category": 2532159068,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4ad5af42",
+        "name": "CLOTHING_ITEM_F_TEETH_001",
+        "itemType": "teeth",
+        "friendlyName": "The Gilded"
+      },
+      {
+        "component": 1420215012,
+        "category": 2532159068,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "54a6c2e4",
+        "name": "CLOTHING_ITEM_F_TEETH_002",
+        "itemType": "teeth",
+        "friendlyName": "Plumb Wore Out"
+      },
+      {
+        "component": 1718707833,
+        "category": 2532159068,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "66716679",
+        "name": "CLOTHING_ITEM_F_TEETH_003",
+        "itemType": "teeth",
+        "friendlyName": "The Hayseed"
+      },
+      {
+        "component": 4118611090,
+        "category": 2532159068,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f57d0492",
+        "name": "CLOTHING_ITEM_F_TEETH_004",
+        "itemType": "teeth",
+        "friendlyName": "The Long-Dead"
+      },
+      {
+        "component": 550263600,
+        "category": 2532159068,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "20cc5b30",
+        "name": "CLOTHING_ITEM_F_TEETH_005",
+        "itemType": "teeth",
+        "friendlyName": "The Gummer"
+      },
+      {
+        "component": 841743855,
+        "category": 2532159068,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "322bfdef",
+        "name": "CLOTHING_ITEM_F_TEETH_006",
+        "itemType": "teeth",
+        "friendlyName": "The Yokel"
+      },
+      {
+        "component": 712446626,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2a7712a2",
+        "name": "CLOTHING_ITEM_M_TEETH_000",
+        "itemType": "teeth",
+        "friendlyName": "The Chompers"
+      },
+      {
+        "component": 1629650936,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "61227ff8",
+        "name": "CLOTHING_ITEM_M_TEETH_001",
+        "itemType": "teeth",
+        "friendlyName": "The Gilded"
+      },
+      {
+        "component": 101272007,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "60949c7",
+        "name": "CLOTHING_ITEM_M_TEETH_002",
+        "itemType": "teeth",
+        "friendlyName": "Plumb Wore Out"
+      },
+      {
+        "component": 1015527107,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3c87b6c3",
+        "name": "CLOTHING_ITEM_M_TEETH_003",
+        "itemType": "teeth",
+        "friendlyName": "The Hayseed"
+      },
+      {
+        "component": 3785588988,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e1a380fc",
+        "name": "CLOTHING_ITEM_M_TEETH_004",
+        "itemType": "teeth",
+        "friendlyName": "The Long-Dead"
+      },
+      {
+        "component": 402451886,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "17fcedae",
+        "name": "CLOTHING_ITEM_M_TEETH_005",
+        "itemType": "teeth",
+        "friendlyName": "The Gummer"
+      },
+      {
+        "component": 3776970741,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e11ffff5",
+        "name": "CLOTHING_ITEM_M_TEETH_006",
+        "itemType": "teeth",
+        "friendlyName": "The Yokel"
+      },
+      {
+        "component": 381881482,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "16c30c8a",
+        "name": "CLOTHING_ITEM_SKIN_TEETH_PZ_000",
+        "itemType": "teeth"
+      },
+      {
+        "component": 350323462,
+        "category": 2532159068,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "14e18306",
+        "itemType": "teeth"
+      }
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="fishing:src" pattern="file[pioneer-village]:resources/fishing/src//*" />
+</component>

@@ -1,0 +1,186 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 2302423248,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "893c30d0",
+        "itemType": "holsters_right",
+        "friendlyName": "Arthur's Holster"
+      },
+      {
+        "component": 3903886445,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "e8b0946d",
+        "itemType": "holsters_right",
+        "friendlyName": "Grizzlies Holster"
+      },
+      {
+        "component": 4290526492,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "ffbc3d1c",
+        "itemType": "holsters_right",
+        "friendlyName": "John's Holster"
+      },
+      {
+        "component": 2848712459,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "a9cbe70b",
+        "itemType": "holsters_right",
+        "friendlyName": "Legend Of The East Holster"
+      },
+      {
+        "component": 3730657041,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "de5d4f11",
+        "itemType": "holsters_right",
+        "friendlyName": "Nuevo Paraiso Holster"
+      },
+      {
+        "component": 3012632333,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "b3911f0d",
+        "itemType": "holsters_right",
+        "friendlyName": "Weathered Holster"
+      },
+      {
+        "component": 1398329674,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "5358d14a",
+        "name": "PROVISION_REINFORCED_HOLSTER_BEAR",
+        "itemType": "holsters_right",
+        "friendlyName": "Explorer Holster"
+      },
+      {
+        "component": 4259229888,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "fddeb0c0",
+        "name": "PROVISION_REINFORCED_HOLSTER_BOAR",
+        "itemType": "holsters_right",
+        "friendlyName": "Gambler Holster"
+      },
+      {
+        "component": 651323163,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "26d2671b",
+        "name": "PROVISION_REINFORCED_HOLSTER_BUFFALO",
+        "itemType": "holsters_right",
+        "friendlyName": "Herbalist Holster"
+      },
+      {
+        "component": 343794650,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "147de3da",
+        "name": "PROVISION_REINFORCED_HOLSTER_COUGAR",
+        "itemType": "holsters_right",
+        "friendlyName": "Master Hunter Holster"
+      },
+      {
+        "component": 2072880089,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "7b8da3d9",
+        "name": "PROVISION_REINFORCED_HOLSTER_DEER",
+        "itemType": "holsters_right",
+        "friendlyName": "Horseman Holster"
+      },
+      {
+        "component": 624387589,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "25376605",
+        "name": "PROVISION_REINFORCED_HOLSTER_GATOR",
+        "itemType": "holsters_right",
+        "friendlyName": "Bandit Holster"
+      },
+      {
+        "component": 2174217570,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "8197ed62",
+        "name": "PROVISION_REINFORCED_HOLSTER_PANTHER",
+        "itemType": "holsters_right",
+        "friendlyName": "Sharpshooter Holster"
+      },
+      {
+        "component": 2545894932,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "97bf4614",
+        "name": "PROVISION_REINFORCED_HOLSTER_RABBIT",
+        "itemType": "holsters_right",
+        "friendlyName": "Survivalist Holster"
+      },
+      {
+        "component": 3711187121,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "dd3438b1",
+        "name": "PROVISION_REINFORCED_HOLSTER_SNAKE",
+        "itemType": "holsters_right",
+        "friendlyName": "Weapons Expert Holster"
+      },
+      {
+        "component": 2319732058,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "8a444d5a",
+        "name": "UPGRADE_HOLSTER",
+        "itemType": "holsters_right",
+        "friendlyName": "Upgraded Holster"
+      },
+      {
+        "component": 2604553115,
+        "category": 3118660097,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "9b3e539b",
+        "itemType": "holsters_right"
+      }
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="place-object:src" pattern="file[pioneer-village]:resources/*tools*/place-object/src//*" />
+</component>

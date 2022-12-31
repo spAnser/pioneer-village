@@ -1,0 +1,3427 @@
+[
+  {
+    "component": 3461477004,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ce51f28c",
+    "itemType": "boot_accessories",
+    "friendlyName": "Gerden Spurs"
+  },
+  {
+    "component": 3314140176,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c589c410",
+    "itemType": "boot_accessories",
+    "friendlyName": "Western Snake Spurs"
+  },
+  {
+    "component": 3144193551,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "bb68960f",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_10",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3602042019,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d6b2cca3",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_11",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3893391198,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e8106f5e",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_12",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1684727829,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "646ae815",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_13",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1050235929,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "3e995419",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3245758929,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c17659d1",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_4",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2929800231,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "aea13427",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2633142474,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9cf290ca",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_6",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4232269678,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fc434f6e",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2055261159,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "7a80cbe7",
+    "name": "CLOTHING_HL_PLAYER_SPURS_000_8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3398611469,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ca92b20d",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_1",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3340721260,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c71f5c6c",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_10",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3167688326,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "bccf1686",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4013259602,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ef357b52",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3782926301,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e17adfdd",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_4",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 27926587,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1aa203b",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4146662201,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f7290b39",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_6",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 643492252,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "265ae99c",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 398347363,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "17be4c63",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3428758869,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "cc5eb555",
+    "name": "CLOTHING_HL_PLAYER_SPURS_001_9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2872551429,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ab37a805",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_1",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1950734438,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "7445d866",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_10",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3653829927,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d9c90527",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3356910018,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c81661c2",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2374036632,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8d80ec98",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_4",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2092387077,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "7cb74b05",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2848105751,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a9c2a517",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_6",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2550923690,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "980c01aa",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1454079726,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "56ab7eee",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1173216627,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "45eddd73",
+    "name": "CLOTHING_HL_PLAYER_SPURS_002_9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2870855381,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ab1dc6d5",
+    "name": "CLOTHING_HL_PLAYER_SPURS_003_10",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 636504808,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "25f04ae8",
+    "name": "CLOTHING_HL_PLAYER_SPURS_003_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 143527972,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "88e1024",
+    "name": "CLOTHING_HL_PLAYER_SPURS_003_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2712552042,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a1ae426a",
+    "name": "CLOTHING_HL_PLAYER_SPURS_003_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2482022127,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "93f0a6ef",
+    "name": "CLOTHING_HL_PLAYER_SPURS_003_8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1936777050,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "7370df5a",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_1",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 329153760,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "139e7ce0",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_10",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 112657896,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "6b705e8",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 345809331,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "149ca1b3",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2863287756,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "aaaa4dcc",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3109350177,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "b954eb21",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_6",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1334318985,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "4f881789",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3471611472,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ceec9650",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3720623103,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ddc433ff",
+    "name": "CLOTHING_HL_PLAYER_SPURS_004_9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 630024740,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "258d6a24",
+    "name": "CLOTHING_HL_PLAYER_SPURS_005_1",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 164803247,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9d2b2af",
+    "name": "CLOTHING_HL_PLAYER_SPURS_005_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4219213314,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fb7c1602",
+    "name": "CLOTHING_HL_PLAYER_SPURS_005_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3760152393,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e01f5f49",
+    "name": "CLOTHING_HL_PLAYER_SPURS_005_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3471425286,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "cee9bf06",
+    "name": "CLOTHING_HL_PLAYER_SPURS_005_6",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2249043279,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "860dad4f",
+    "name": "CLOTHING_HL_PLAYER_SPURS_005_9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3734728068,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "de9b6d84",
+    "name": "CLOTHING_HL_PLAYER_SPURS_006_1",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4268498839,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fe6c1f97",
+    "name": "CLOTHING_HL_PLAYER_SPURS_006_10",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3355787352,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c8054058",
+    "name": "CLOTHING_HL_PLAYER_SPURS_006_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3123094683,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ba26a49b",
+    "name": "CLOTHING_HL_PLAYER_SPURS_006_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2808577817,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a7677f19",
+    "name": "CLOTHING_HL_PLAYER_SPURS_006_4",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2443596695,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "91a65397",
+    "name": "CLOTHING_HL_PLAYER_SPURS_006_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1826327042,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "6cdb8a02",
+    "name": "CLOTHING_HL_PLAYER_SPURS_006_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2111843343,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "7de02c0f",
+    "name": "CLOTHING_HL_PLAYER_SPURS_006_8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3713100654,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "dd516b6e",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_1",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3941893812,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "eaf486b4",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4203161049,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fa8725d9",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2018287970,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "784ca162",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_4",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2516442308,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "95fddcc4",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2746972223,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a3bb783f",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_6",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3010434987,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "b36f97ab",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1422252633,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "54c5da59",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1681094964,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "64337934",
+    "name": "CLOTHING_HL_PLAYER_SPURS_013_9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1664819298,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "633b2062",
+    "name": "CLOTHING_HL_PLAYER_SPURS_014_1",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3669822328,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "dabd0b78",
+    "name": "CLOTHING_HL_PLAYER_SPURS_014_10",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1426162671,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "550183ef",
+    "name": "CLOTHING_HL_PLAYER_SPURS_014_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2893329108,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ac74b2d4",
+    "name": "CLOTHING_HL_PLAYER_SPURS_014_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2654410329,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9e371659",
+    "name": "CLOTHING_HL_PLAYER_SPURS_014_6",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4033690352,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f06d3af0",
+    "name": "CLOTHING_HL_PLAYER_SPURS_014_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4089528728,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f3c14198",
+    "name": "CLOTHING_HL_PLAYER_SPURS_014_9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2515696666,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "95f27c1a",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_1",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4023854858,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "efd7270a",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_10",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2810060593,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a77e1f31",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3115795363,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "b9b743a3",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3365658988,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c89be16c",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_4",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3673720361,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "daf88629",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3962939555,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ec35a8a3",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_6",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4269755702,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fe7f4d36",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 299987962,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "11e173fa",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 605263966,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "2413985e",
+    "name": "CLOTHING_HL_PLAYER_SPURS_022_9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3436772927,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ccd8fe3f",
+    "name": "CLOTHING_HL_PLAYER_SPURS_023_1",
+    "itemType": "boot_accessories",
+    "friendlyName": "Vaquero Rider Spurs"
+  },
+  {
+    "component": 325229574,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "13629c06",
+    "name": "CLOTHING_HL_PLAYER_SPURS_024_1",
+    "itemType": "boot_accessories",
+    "friendlyName": "Vaquero Deluxe Spurs"
+  },
+  {
+    "component": 1694019116,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "64f8ae2c",
+    "name": "CLOTHING_ITEM_F_SEASONAL_002_SPURS_000",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1752777248,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68794220",
+    "name": "CLOTHING_ITEM_F_SEASONAL_003_SPURS_000",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3209463755,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bf4c87cb",
+    "name": "CLOTHING_ITEM_F_SEASONAL_004_SPURS_VAR_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3464833184,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce8528a0",
+    "name": "CLOTHING_ITEM_F_SEASONAL_005_SPURS_VAR_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4016971663,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef6e1f8f",
+    "name": "CLOTHING_ITEM_F_SEASON_SPURS_000_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3227299499,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c05caeab",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2385758814,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e33ca5e",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2632247232,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9ce4e7c0",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1789330245,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6aa70345",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2042863998,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "79c3a17e",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1736080620,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "677a7cec",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 910269051,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "36419a7b",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1140831735,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "43ffb5f7",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1464261773,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5746dc8d",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1010379214,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c3929ce",
+    "name": "CLOTHING_ITEM_F_SPURS_000_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2034364228,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7941ef44",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1216548295,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "48830dc7",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1422730843,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54cd265b",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3577259888,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d538a770",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2733294293,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a2eac2d5",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3239247653,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c112ff25",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2405440448,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f601bc0",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4114671428,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f540e744",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3272540897,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c30f02e1",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 564283410,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "21a24812",
+    "name": "CLOTHING_ITEM_F_SPURS_001_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2629158014,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9cb5c47e",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1659949301,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62f0d0f5",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1090424081,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "40fe8d11",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3973440709,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ecd5e4c5",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3131310178,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "baa40062",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2432412942,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "90fbad0e",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3722790628,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dde546e4",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 905017083,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35f176fb",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 70882188,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "439938c",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4271211700,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe9584b4",
+    "name": "CLOTHING_ITEM_F_SPURS_002_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2818193195,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7fa372b",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3047936654,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b5abd28e",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 192249376,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b757e20",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2539558388,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "975e95f4",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3709313381,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dd17a165",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4217298419,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb5eddf3",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1111288750,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "423cebae",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3463054346,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce6a040a",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 366023383,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15d112d7",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1276218895,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c118e0f",
+    "name": "CLOTHING_ITEM_F_SPURS_003_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1193235905,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "471f55c1",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1440740174,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "55dff34e",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1210210259,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "482257d3",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4183341633,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f958ba41",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3952484028,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb961ebc",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2730626309,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a2c20d05",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 224977505,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d68e261",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3339703712,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c70fd5a0",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2958207014,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b052a826",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1693979342,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "64f812ce",
+    "name": "CLOTHING_ITEM_F_SPURS_004_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3365456875,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c898cbeb",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2923599679,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ae42973f",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 739054294,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c0d12d6",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1104559720,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "41d63e68",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2395035709,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ec1583d",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2510382589,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95a165fd",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4134119308,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f669a78c",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1143587579,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4429c2fb",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1515188039,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a4fef47",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2025097147,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78b487bb",
+    "name": "CLOTHING_ITEM_F_SPURS_007_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3759118423,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e00f9857",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 674867370,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2839a8aa",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 981749055,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a844d3f",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2224546149,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8497e165",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 385123872,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "16f48620",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1669406520,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "63811f38",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1975141290,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75ba43aa",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3196114230,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be80d536",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3494049978,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d042f8ba",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 980172311,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a6c3e17",
+    "name": "CLOTHING_ITEM_F_SPURS_008_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 742798933,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c463655",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2861675246,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa91b2ee",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2622232163,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c4c1663",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3473374169,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf077bd9",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3232554788,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0acdf24",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1635918032,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "618220d0",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1396737101,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5340844d",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2284973615,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8831ee2f",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2011385234,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "77e34d92",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2514782900,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95e48ab4",
+    "name": "CLOTHING_ITEM_F_SPURS_009_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 367303955,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15e49d13",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3441986456,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd288b98",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4055291060,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1b6d4b4",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2933083886,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aed34eee",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3190091153,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be24ed91",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2336655317,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b4687d5",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2560828046,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98a3228e",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2658872902,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e7b2e46",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2899364593,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "acd0caf1",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4281525080,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ff32e358",
+    "name": "CLOTHING_ITEM_F_SPURS_010_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4161465894,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f80aee26",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 573915770,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2235427a",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 342402785,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1468a6e1",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3443464335,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd3f188f",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3204676632,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bf037c18",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3920744820,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e9b1d174",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3664982775,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da7332f7",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 731829525,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b9ed515",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1616264835,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "60563e83",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1891622506,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "70bfde6a",
+    "name": "CLOTHING_ITEM_F_SPURS_011_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1432789896,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5566a388",
+    "name": "CLOTHING_ITEM_M_SEASONAL_002_SPURS_000",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4231928027,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fc3e18db",
+    "name": "CLOTHING_ITEM_M_SEASONAL_003_SPURS_000",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3002320323,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2f3c5c3",
+    "name": "CLOTHING_ITEM_M_SEASONAL_004_SPURS_VAR_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 118009497,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "708ae99",
+    "name": "CLOTHING_ITEM_M_SEASONAL_005_SPURS_VAR_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4092425435,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3ed74db",
+    "name": "CLOTHING_ITEM_M_SEASON_SPURS_000_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3647510571,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d968982b",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1056596813,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3efa634d",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 826591202,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3144c7e2",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2839361493,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a93d37d5",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3274664889,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c32f6bb9",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 199523618,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be47d22",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4127281500,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f601515c",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3167936260,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bcd2df04",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1804844167,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b93bc87",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2758929914,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a471edfa",
+    "name": "CLOTHING_ITEM_M_SPURS_000_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3242671169,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c1473c41",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2939656226,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "af379822",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 114771808,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6d74760",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4111115207,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f50aa3c7",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3843294170,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e51403da",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1515974248,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a5bee68",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1217546965,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "48924ad5",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1002451249,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3bc03131",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 186961911,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b24cff7",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3632786858,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d887edaa",
+    "name": "CLOTHING_ITEM_M_SPURS_001_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2260435328,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86bb8180",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3037978160,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b513de30",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 267424752,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ff093f0",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1036316568,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3dc4ef98",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 681231684,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "289ac544",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3595673779,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d651a0b3",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1386060205,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "529d99ad",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2228125198,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84ce7e0e",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1844465746,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6df05052",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4070250697,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f29b18c9",
+    "name": "CLOTHING_ITEM_M_SPURS_002_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4136792239,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f69270af",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3897807922,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e853d432",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3674519956,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "db04b994",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3438222697,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ccef1d69",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 338504680,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "142d2be8",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 99323749,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5eb8f65",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4135153793,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6797081",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3896431628,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e83ed40c",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1279695898,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c469c1a",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2607598533,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b6ccbc5",
+    "name": "CLOTHING_ITEM_M_SPURS_003_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 77973687,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4a5c8b7",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 389311956,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "17346dd4",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4223612662,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fbbf36f6",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 352807302,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15076986",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3747249693,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df5a7e1d",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3917714047,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e983927f",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3181197987,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd9d3aa3",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3478511124,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf55de14",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2535517611,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9720edab",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 506461867,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1e2ffeab",
+    "name": "CLOTHING_ITEM_M_SPURS_004_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 112685011,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b76fd3",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2245520922,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "85d7ee1a",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1342210668,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5000826c",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1002002910,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3bb959de",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1275132525,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c00fa6d",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2865477629,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aacbb7fd",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1948338857,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74214aa9",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2236017908,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8546ecf4",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1324843094,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ef78056",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 147224393,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c67749",
+    "name": "CLOTHING_ITEM_M_SPURS_007_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3618114470,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7a80ba6",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3819185050,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e3a4239a",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3521216533,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d1e18015",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 68641920,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4176480",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 780515676,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2e85b95c",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 444567888,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a7f9150",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1288402407,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ccb75e7",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 923552361,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "370c4a69",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1765355210,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69392eca",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2340058228,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b7a7474",
+    "name": "CLOTHING_ITEM_M_SPURS_008_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2665271676,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9edcd17c",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2955375633,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0277411",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2186287203,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "82501863",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1470546705,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57a6c311",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1776641934,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69e5678e",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 993200682,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b330a2a",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1285729545,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ca2ad09",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 527913647,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1f7752af",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 810546272,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "304ff460",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1858040770,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6ebf73c2",
+    "name": "CLOTHING_ITEM_M_SPURS_009_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3601369336,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6a888f8",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 148598109,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8db6d5d",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4077142447,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f30441af",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2760975562,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a49124ca",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 528489126,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1f801aa6",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1363607091,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5146fe33",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1009374201,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c29d3f9",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3991582588,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edeab77c",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3049670376,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b5c646e8",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3026185223,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b45fec07",
+    "name": "CLOTHING_ITEM_M_SPURS_010_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4118750075,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f57f237b",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_001",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 70238428,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "42fc0dc",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_002",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 434236480,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "19e1ec40",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_003",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2831059451,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a8be89fb",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_004",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 756716209,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2d1a92b1",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_005",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1126809295,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4329becf",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_006",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1366776682,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "51775b6a",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_007",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3873998414,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e6e8864e",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 795907925,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f709755",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_009",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1332140137,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f66d869",
+    "name": "CLOTHING_ITEM_M_SPURS_011_TINT_010",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3679749400,
+    "category": 410165049,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "db548518",
+    "name": "PROVISION_TALISMAN_EAGLE_TALSON",
+    "itemType": "boot_accessories",
+    "friendlyName": "Eagle Talon Talisman"
+  },
+  {
+    "component": 255905955,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f40d0a3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 559607436,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "215aee8c",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 650809461,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "26ca9075",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 919838664,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "36d39fc8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 956577000,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "390434e8",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1183502325,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "468acff5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1465636868,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "575bd804",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1696496733,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "651e7c5d",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1819839253,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6c788b15",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1881805444,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "702a1284",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1943579280,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "73d8aa90",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2053285609,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a62a6e9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2300433690,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "891dd51a",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2429722661,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "90d2a025",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2514922009,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95e6aa19",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2710949314,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a195cdc2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3115890255,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9b8b64f",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3151448202,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bbd7488a",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3191601911,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be3bfaf7",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3498221444,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d0829f84",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3753721337,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dfbd3df9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3902076060,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e894f49c",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3960493727,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ec10569f",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4188173622,
+    "category": 410165049,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f9a27536",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 132382412,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7e3fecc",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 147283976,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c76008",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 305913291,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "123bddcb",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 349214889,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14d098a9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 480380861,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ca207bd",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 537557352,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "200a7968",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 590460267,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2331b56b",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 695422527,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29734e3f",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 884467628,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34b7e7ac",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 957295473,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "390f2b71",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1161320681,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "453858e9",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1171824610,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45d89fe2",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1411560480,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5422b420",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1570862229,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5da17495",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 1939445837,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7399984d",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 2761737300,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a49cc454",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3460107135,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce3d0b7f",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3696764853,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc5827b5",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3829176051,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e43c96f3",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3919430208,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e99dc240",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 3951956080,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb8e1070",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4016876883,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef6cad53",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4219842655,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb85b05f",
+    "itemType": "boot_accessories"
+  },
+  {
+    "component": 4278078582,
+    "category": 410165049,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fefe4c76",
+    "itemType": "boot_accessories"
+  }
+]

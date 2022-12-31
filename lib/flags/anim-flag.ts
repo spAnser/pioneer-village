@@ -1,0 +1,19 @@
+export enum AnimFlag {
+  NORMAL = 0,
+  REPEAT = 1,
+  STOP_LAST_FRAME = 2,
+  UNK_4 = 4,
+  UPPERBODY = 8,
+  ENABLE_PLAYER_CONTROL = 16,
+  CANCELABLE = 32,
+  UNK_64 = 64,
+  OFFSET_POSITION = 128,
+  OFFSET_POSITION_ENTITY = 256,
+  UNK_512 = 512,
+  UNK_1024 = 1024,
+  UNK_2048 = 2048,
+  UNK_4096 = 4096,
+  UNK_8192 = 8192,
+  UNK_16384 = 16384,
+  UNK_IS_ENTITY = 32768, // Freeze Position ? Detach ?
+}

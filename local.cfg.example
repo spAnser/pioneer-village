@@ -1,0 +1,14 @@
+ensure dev
+ensure dev-lua
+ensure tracking
+ensure research
+
+sv_licenseKey _LICENSE_KEY_
+set steam_webApiKey webApiKey
+
+sv_master1 " "
+
+set onesync_forceMigration true
+
+#Used in /webpack/webpack.hot-reload.js for auto reloading resources on change
+rcon_password "qwerty"

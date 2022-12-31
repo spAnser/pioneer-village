@@ -1,0 +1,302 @@
+[
+  {
+    "component": 2777946983,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a5941b67",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_001",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 3084763130,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7ddbffa",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_002",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 3377717990,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c953e2e6",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_003",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 829043461,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "316a3305",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_004",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1130419954,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4360d6f2",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_005",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1428617854,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5526fa7e",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_006",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1691654621,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "64d499dd",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_007",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 3907035635,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8e0a1f3",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_008",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 4203300164,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fa894544",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_009",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 2126205186,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7ebb5102",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_001_TINT_010",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 654707516,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27060b3c",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_001",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1459874615,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5703eb37",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_002",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1154336459,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44cdc6cb",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_003",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1922474588,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7296a25c",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_004",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1850317250,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6e4999c2",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_005",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 2113091849,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7df33909",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_006",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1816729013,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6c4915b5",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_007",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 2575822898,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9987f032",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_008",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 3082235024,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7b72c90",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_009",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1418487632,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "548c6750",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_002_TINT_010",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 4007863728,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eee325b0",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_001",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 938522614,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "37f0b7f6",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_002",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1243012162,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4a16dc42",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_003",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 2492494136,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "94907138",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_004",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 650384797,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "26c4159d",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_005",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1896131105,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7104aa21",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_006",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 2203995860,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "835e4ed4",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_007",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 3385449386,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c9c9dbaa",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_008",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 3682107143,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "db787f07",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_009",
+    "itemType": "hair_accessories"
+  },
+  {
+    "component": 1332733944,
+    "category": 2391057066,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f6fe7f8",
+    "name": "CLOTHING_ITEM_F_HAIR_ACCS_003_TINT_010",
+    "itemType": "hair_accessories"
+  }
+]

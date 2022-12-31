@@ -1,0 +1,911 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 372060605,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "162d31bd",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_000",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Cherry & Charcoal"
+      },
+      {
+        "component": 3568742097,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d4b6aed1",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_001",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal"
+      },
+      {
+        "component": 578865764,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2280ca64",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_002",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Walnut & Natural"
+      },
+      {
+        "component": 4240637673,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fcc2fee9",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_003",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Natural & Chestnut"
+      },
+      {
+        "component": 3394509324,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ca541a0c",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_004",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Natural"
+      },
+      {
+        "component": 2565650238,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "98ecb73e",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_005",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Plum"
+      },
+      {
+        "component": 3954924762,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ebbb5cda",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_006",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Olive & Hickory"
+      },
+      {
+        "component": 2707376163,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a15f4823",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_007",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Cyan & Natural"
+      },
+      {
+        "component": 2283148689,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "88161591",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_008",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Snow & Charcoal"
+      },
+      {
+        "component": 1039335756,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3df3014c",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_003_NEW_009",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Hickory & Tan"
+      },
+      {
+        "component": 669471981,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "27e754ed",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_000",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Walnut & Bison"
+      },
+      {
+        "component": 1026719619,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3d327f83",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_001",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Cougar"
+      },
+      {
+        "component": 4255842421,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fdab0075",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_002",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Buck"
+      },
+      {
+        "component": 282830550,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "10dba6d6",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_003",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Wolf"
+      },
+      {
+        "component": 1640122530,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "61c248a2",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_004",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Hickory & Fox"
+      },
+      {
+        "component": 1952443869,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "745feddd",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_005",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Natural & Beaver"
+      },
+      {
+        "component": 345943136,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "149eac60",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_006",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Chestnut & Buck"
+      },
+      {
+        "component": 3806316771,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e2dfc8e3",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_007",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Cherry & Wolf"
+      },
+      {
+        "component": 4043695407,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f105e52f",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_008",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Tan & Bear"
+      },
+      {
+        "component": 3208249752,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bf3a0198",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_004_NEW_009",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Chestnut & Wolf"
+      },
+      {
+        "component": 3472698931,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cefd2e33",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_005_NEW_000",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Bigpaw Saddle Bag"
+      },
+      {
+        "component": 3142551256,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bb4f86d8",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_005_NEW_001",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Bigpaw Saddle Bag"
+      },
+      {
+        "component": 2873747149,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ab49e6cd",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_005_NEW_002",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Bigpaw Saddle Bag"
+      },
+      {
+        "component": 2562474418,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "98bc41b2",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_005_NEW_003",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Bigpaw Saddle Bag"
+      },
+      {
+        "component": 2256215344,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "867b1d30",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_005_NEW_004",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Bigpaw Saddle Bag"
+      },
+      {
+        "component": 1020916485,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3cd9f305",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_006_NEW_000",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Softcoat Saddle Bag"
+      },
+      {
+        "component": 791435178,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2f2c57aa",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_006_NEW_001",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Softcoat Saddle Bag"
+      },
+      {
+        "component": 3767384686,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e08dba6e",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_006_NEW_002",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Softcoat Saddle Bag"
+      },
+      {
+        "component": 3535347397,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d2b91ec5",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_006_NEW_003",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Softcoat Saddle Bag"
+      },
+      {
+        "component": 3023299011,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b433e1c3",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_006_NEW_004",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Softcoat Saddle Bag"
+      },
+      {
+        "component": 3222927364,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "c019f804",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_NEW_000",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Natural"
+      },
+      {
+        "component": 2346782611,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "8be10f93",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_NEW_001",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Tan"
+      },
+      {
+        "component": 2639868547,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "9d593283",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_NEW_002",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Walnut"
+      },
+      {
+        "component": 3849339572,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "e57042b4",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_NEW_003",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Chestnut"
+      },
+      {
+        "component": 4177226186,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f8fb69ca",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_NEW_004",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal"
+      },
+      {
+        "component": 3227165866,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "c05aa4aa",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_USED_000",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Dark Oak"
+      },
+      {
+        "component": 2920349719,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "ae110017",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_USED_001",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Tan"
+      },
+      {
+        "component": 3035893209,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "b4f40dd9",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_USED_002",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Walnut"
+      },
+      {
+        "component": 3803048268,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "e2ade94c",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_USED_003",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Chestnut"
+      },
+      {
+        "component": 3494429826,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "d048c482",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAGUPGRADE_USED_004",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Hickory"
+      },
+      {
+        "component": 1383590330,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "5277e9ba",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_NEW_000",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Natural"
+      },
+      {
+        "component": 548046368,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "20aa8620",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_NEW_001",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Tan"
+      },
+      {
+        "component": 1467937844,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "577ef434",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_NEW_002",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Walnut"
+      },
+      {
+        "component": 691935155,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "293e17b3",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_NEW_003",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Chestnut"
+      },
+      {
+        "component": 3826290009,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "e4108d59",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_NEW_004",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal"
+      },
+      {
+        "component": 4006051442,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "eec77e72",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_USED_000",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Dark Oak"
+      },
+      {
+        "component": 720369354,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "2aeff6ca",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_USED_001",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Tan"
+      },
+      {
+        "component": 491707272,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "1d4edb88",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_USED_002",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Walnut"
+      },
+      {
+        "component": 243875325,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "e893dfd",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_USED_003",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Chestnut"
+      },
+      {
+        "component": 4039311985,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f0c30271",
+        "name": "HORSE_EQUIPMENT_HORSE_SADDLEBAG_USED_004",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Weathered Hickory"
+      },
+      {
+        "component": 135775403,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "817c4ab",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Natural & Condor"
+      },
+      {
+        "component": 201301139,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bff9c93",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 203960694,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c283176",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal"
+      },
+      {
+        "component": 227054703,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d88946f",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 254654389,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f2db7b5",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Chestnut & Charcoal"
+      },
+      {
+        "component": 366698546,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "15db6032",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Snow & Raven"
+      },
+      {
+        "component": 413558108,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "18a6655c",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Hawk"
+      },
+      {
+        "component": 421377743,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "191db6cf",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 453830644,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1b0ce7f4",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 484856614,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1ce65326",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Olive & Sage"
+      },
+      {
+        "component": 838557012,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "31fb5d54",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 881171846,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "34859d86",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Chestnut & Eagle"
+      },
+      {
+        "component": 918750943,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "36c306df",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Sand & Gravel"
+      },
+      {
+        "component": 983464400,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3a9e79d0",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 1140957532,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4401a15c",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Cherry"
+      },
+      {
+        "component": 1362187997,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "513156dd",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Tan & Condor"
+      },
+      {
+        "component": 1468377192,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5785a868",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 1477560700,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5811c97c",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Gravel & Olive"
+      },
+      {
+        "component": 1588654556,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5eb0f1dc",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Natural & Hawk"
+      },
+      {
+        "component": 1741179117,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "67c848ed",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 1751307608,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6862d558",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 1775430858,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "69d2ecca",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Tan & Hickory"
+      },
+      {
+        "component": 1951037651,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "744a78d3",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 2730843882,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a2c55eea",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Natural"
+      },
+      {
+        "component": 2779268268,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a5a844ac",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 2880071446,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "abaa6716",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 2958752277,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b05afa15",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Walnut"
+      },
+      {
+        "component": 2991659291,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b251191b",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Charcoal & Cardinal"
+      },
+      {
+        "component": 3141270281,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bb3bfb09",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Walnut & Chestnut"
+      },
+      {
+        "component": 3187116976,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bdf78bb0",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 3493769278,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d03eb03e",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 3799667893,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e27a54b5",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 3883565937,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e77a8371",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Crimson & Raven"
+      },
+      {
+        "component": 3947694762,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "eb4d0aaa",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Walnut & Owl"
+      },
+      {
+        "component": 4013515527,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ef396307",
+        "itemType": "HORSE_SADDLEBAGS"
+      },
+      {
+        "component": 4217809737,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fb66ab49",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Ash & Eagle"
+      },
+      {
+        "component": 4257289436,
+        "category": 2152012837,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fdc114dc",
+        "itemType": "HORSE_SADDLEBAGS",
+        "friendlyName": "Hickory & Natural"
+      }
+    ]
+  }
+]

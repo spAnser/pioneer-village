@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 1667119228,
+        "category": 355515932,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "635e387c",
+        "name": "HORSE_EQUIPMENT_SADDLE_LANTERN_BASIC",
+        "itemType": "saddle_lanterns",
+        "friendlyName": "Lantern"
+      }
+    ]
+  }
+]

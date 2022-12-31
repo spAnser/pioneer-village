@@ -1,0 +1,510 @@
+[
+  {
+    "component": 1484641439,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "587dd49f",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_000",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Belled Oxbow Stirrup"
+  },
+  {
+    "component": 1739551490,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "67af7302",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_001",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Deep Roper Stirrup"
+  },
+  {
+    "component": 1964477906,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "75178dd2",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_002",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Slim-line Stirrup"
+  },
+  {
+    "component": 2185635887,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "8246282f",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_003",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Fillies Stirrup"
+  },
+  {
+    "component": 3415882454,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "cb9a3ad6",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_004",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Baroque Stirrup"
+  },
+  {
+    "component": 2666062196,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "9ee8e174",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_005",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Oxbow Stirrup"
+  },
+  {
+    "component": 3879727649,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "e73ff221",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_006",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Slim-line Iron Stirrup"
+  },
+  {
+    "component": 3186728837,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "bdf19f85",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_007",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Tapaderos Stirrup"
+  },
+  {
+    "component": 62106376,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "3b3ab08",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_008",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Safety Stirrup"
+  },
+  {
+    "component": 3635303678,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "d8ae54fe",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_009",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Hooded Stirrup"
+  },
+  {
+    "component": 2366359514,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "8d0bc7da",
+    "name": "HORSE_EQUIPMENT_STIRRUP_NEW_010",
+    "itemType": "saddle_stirrups",
+    "friendlyName": "Bell Stirrup"
+  },
+  {
+    "component": 11888056,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b565b8",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 198493555,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd4c573",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 638478868,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "260e6a14",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 702571499,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29e063eb",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 830107741,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "317a705d",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 914736506,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3685c57a",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 924630539,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "371cbe0b",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 994517536,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b472220",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1011547101,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c4afbdd",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1088887323,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "40e71a1b",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1138744888,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "43dfde38",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1222004370,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "48d64e92",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1325603664,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f031b50",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1413881415,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54461e47",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1420146409,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54a5b6e9",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1589632939,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ebfdfab",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 1665057268,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "633ec1f4",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2026723814,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78cd59e6",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2177825788,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "81cefbfc",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2218408539,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "843a3a5b",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2253819173,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86568d25",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2321816979,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a641d93",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2543791808,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "979f2ec0",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2582525402,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "99ee35da",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2605212405,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b4862f5",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2624808830,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c73677e",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2659159611,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e7f8e3b",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2677598056,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9f98e768",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2686669370,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a023523a",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 2698841918,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0dd0f3e",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3158176206,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc3df1ce",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3183699169,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bdc364e1",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3185437428,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bdddeaf4",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3296829558,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c481a076",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3423639216,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc1096b0",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3525793762,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d22757e2",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3618356405,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7abbcb5",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3676532667,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "db236fbb",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3778620834,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1392da2",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3788349851,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1cda19b",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3858817214,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e600e0be",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 3992465142,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edf82ef6",
+    "itemType": "saddle_stirrups"
+  },
+  {
+    "component": 4247906865,
+    "category": 3664621002,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd31ea31",
+    "itemType": "saddle_stirrups"
+  }
+]

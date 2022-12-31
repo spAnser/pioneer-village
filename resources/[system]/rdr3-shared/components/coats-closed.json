@@ -1,0 +1,4364 @@
+[
+  {
+    "component": 731863173,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b9f5885",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 902819050,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35cfecea",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 535085332,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1fe4c114",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1780667791,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a22d58f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1518941788,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a89365c",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2360056480,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8cab9aa0",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2128543495,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7edeff07",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2677555321,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9f984079",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2443486354,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "91a4a492",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3057839342,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b642ecee",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_000_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1235903780,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "49aa6524",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1683856002,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "645d9a82",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1446444597,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5636fe35",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2165920761,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "811953f9",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1927133058,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72ddb782",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2669481980,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9f1d0ffc",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2371513467,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d5a6c7b",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3076702343,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b762c087",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2846434580,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9a92514",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1742871471,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67e21baf",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_002_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1127594950,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4335bbc6",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 889200475,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35001f5b",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1125694352,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4318bb90",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 887562029,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34e71f2d",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1587966635,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ea672ab",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1349244470,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "506bd636",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3957656874,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ebe50d2a",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 364339406,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15b760ce",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 125355089,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "778c451",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3054250269,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b60c291d",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_004_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2824275055,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a857046f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3600081130,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d694e0ea",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3813866098,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e352fa72",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3524843518,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d218d7fe",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4273385789,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "feb6b13d",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3983642291,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ed718eb3",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 445278436,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a8a68e4",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 139215976,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84c4468",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 901422916,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35ba9f44",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3534965939,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2b34cb3",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_005_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2724811658,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a269538a",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2487465791,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9443b73f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2211354197,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83ce9655",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1578715879,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5e194ae7",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1295886640,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4d3da930",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1065618877,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f840dbd",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 729081247,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b74e59f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 615372817,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24add811",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 407387974,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18483f46",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2618741565,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c16d33d",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_006_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 256255268,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f462524",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 159455642,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "981199a",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2066316521,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b297ce9",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1718571893,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "666f5375",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3367016438,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c8b097f6",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 569395828,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "21f04a74",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 291350863,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "115da94f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4262953667,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe1782c3",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2100363512,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d3100f8",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1092224995,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "411a07e3",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_007_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 824851344,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "312a3b90",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1064687655,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f75d827",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1370979498,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "51b77caa",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3600975498,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6a2868a",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1477675362,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58138962",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1785802269,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a712e1d",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2360504991,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8cb2729f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 511448628,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1e7c1634",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2324950642,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a93ee72",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3084600724,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7db4594",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_008_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1018385611,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3cb354cb",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1308751720,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e01f768",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2522581022,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "965b881e",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2831494385,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a8c52cf1",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4075274549,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f2e7c135",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 87844318,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "53c65de",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2984165180,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1debf3c",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2659850387,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e8a1893",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 223147543,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d4cf617",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 842474915,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "323725a3",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_009_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3348854049,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c79b7521",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3105118227,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9145813",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1791835014,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6acd3b86",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3471311802,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cee803ba",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 11200319,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aae73f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4067281605,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f26dcac5",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2755833456,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a442ae70",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3749455066,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df7c24da",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3501885271,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d0ba8757",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2426373742,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "909f866e",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_301_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4034392411,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f077f15b",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_302_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3801503128,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2965598",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_302_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3443600110,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd412aee",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_302_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3212480353,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bf7a8f61",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_302_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 433354580,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "19d47754",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 68111306,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "40f4bca",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 881274041,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34872cb9",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3468714281,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cec06129",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3238970822,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c10ec5c6",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4043679139,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f105a5a3",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 448526607,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1abbf90f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2649653126,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9dee7f86",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2252820536,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86475038",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1862967391,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f0aa05f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_303_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1818170544,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6c5f14b0",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2173583118,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "818e3f0e",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2345423754,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8bcc538a",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2648963001,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9de3f7b9",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3567183154,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d49ee532",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2804910676,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a72f8a54",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1881447487,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "70249c3f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3266003275,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c2ab414b",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 444100836,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a7870e4",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2475877375,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9392e3ff",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_304_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 452442465,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1af7b961",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_305_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2379728018,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8dd7c492",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_307_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3821103432,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e3c16948",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_309_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 420511120,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "19107d90",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3853326026,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e5ad16ca",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3087317878,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b804bb76",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 169926577,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a20dfb1",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 572100514,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22198fa2",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 717529336,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ac4a0f8",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4110005603,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f4f9b563",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1328179651,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f2a69c3",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3845821909,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e53a95d5",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2824446404,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a859a1c4",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_311_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1000420212,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3ba13374",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 674958504,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "283b0ca8",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1442703405,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "55fde82d",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1148634399,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4476c51f",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1916051610,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7234a09a",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1361862286,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "512c5e8e",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2130393643,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7efb3a2b",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1842747361,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6dd617e1",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2610951028,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b9ff374",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2332744150,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b0ad9d6",
+    "name": "CLOTHING_ITEM_F_CLOSECOAT_313_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 317003363,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "12e51663",
+    "name": "CLOTHING_ITEM_F_SEASONAL_246_NECKERCHIEF_VAR_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2416218276,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "900490a4",
+    "name": "CLOTHING_ITEM_F_SEASONAL_246_NECKERCHIEF_VAR_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 102478998,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61bb496",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4150662955,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f766172b",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 688224873,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29057a69",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 457891572,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1b4adef4",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1012080896,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c532100",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 785483261,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ed185fd",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1545724061,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5c21e09d",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1307264048,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4deb4430",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1949044913,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "742c10b1",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2129537449,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7eee29a9",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_000_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1571735745,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5daec8c1",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2430840618,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "90e3af2a",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2005466233,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7788fc79",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1641009415,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61cfd107",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1250697856,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4a8c2280",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1012499995,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c59861b",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 811953711,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "30656e2f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 454443921,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1b164391",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3838990090,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e4d2570a",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1641337413,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61d4d245",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_002_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 111310695,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a27767",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3720684901,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddc52565",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3482257657,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf8f08f9",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2571246688,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "99421c60",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 177569541,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a957f05",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3075528829,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b750d87d",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2843622616,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a97e3cd8",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1406046582,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "53ce9176",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3320051107,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c5e3f5a3",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2910406150,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad794606",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_003_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1133022400,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "43888cc0",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4001227428,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ee7de2a4",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3654793560,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d9d7b958",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2461313811,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92b4ab13",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3831352932,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e45dce64",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 123671654,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75f1466",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 320023502,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13132bce",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 733535513,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2bb8dd19",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 898101431,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3587f0b7",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1760376617,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68ed3729",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_005_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1924204618,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72b1084a",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3431414773,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc873bf5",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2652069646,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e135f0e",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1474351782,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57e0d2a6",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1771206153,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69927609",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2847143555,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9b3f683",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2013401888,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78021320",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 246759504,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb54050",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 544007103,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "206ce3bf",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4156690762,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f7c2114a",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_006_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 882667579,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "349c703b",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3545476523,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d353adab",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3776792894,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e11d493e",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4057262765,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1d4eaad",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1886513125,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7071e7e5",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4266623906,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe4f83a2",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 451198156,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ae4bccc",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 682514527,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "28ae585f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3001543888,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2e7ecd0",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3606197256,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6f23408",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_007_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 583258491,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22c3d17b",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 882013464,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34927518",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1844078531,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6dea67c3",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1061358197,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f430a75",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 159325934,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97f1eee",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 417512885,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18e2bdb5",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3023172693,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b431f455",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2262342051,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86d899a3",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1349954780,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5076acdc",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3766504337,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e0804b91",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_008_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 761551698,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2d645b52",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 304424148,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "122524d4",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4292902987,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ffe0804b",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4139412991,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6ba6dff",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1990979040,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "76abede0",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1685211501,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6472496d",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1228542717,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "493a12fd",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1055915625,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3eeffe69",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2142699518,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7fb6fffe",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3758899055,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e00c3f6f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_009_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2047402996,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a08e3f4",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2935311816,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aef54dc8",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2628823359,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9cb0a93f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4074788265,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f2e055a9",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3769151802,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e0a8b13a",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 397221702,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "17ad1f46",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 74217665,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "46c78c1",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2870658591,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ab1ac61f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2576163588,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "998d2304",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2770777811,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a526b6d3",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_301_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2983582089,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1d5d989",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_302_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3587776911,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5d9218f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_302_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3346236612,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c77384c4",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_302_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4182370416,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f949e870",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_302_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4253308837,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd8457a5",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3610381057,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7320b01",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3419862087,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cbd6f447",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2812718055,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7a6abe7",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2034487074,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7943cf22",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2299981512,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8916eec8",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1427670732,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "551886cc",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1869265776,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f6abb70",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1101324261,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "41a4dfe5",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1354993470,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "50c38f3e",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_303_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3886268889,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e7a3c1d9",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4259966565,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fde9ee65",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1497048294,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "593b24e6",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1122760772,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "42ebf844",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 350034983,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14dd1c27",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 645316442,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2676bf5a",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2687546064,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a030b2d0",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1911739989,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71f2d655",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2075847141,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7bbae9e5",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2272264815,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8770026f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_304_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2495504457,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "94be6049",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_305_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3393572221,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca45cd7d",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_307_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1493399034,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "590375fa",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_309_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 877930265,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34542719",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3925480038,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e9fa1266",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3769958364,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e0b4ffdc",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 124833107,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "770cd53",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4231182039,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fc32b6d7",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2463654948,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92d86424",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2174599599,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "819dc1af",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3500761029,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d0a95fc5",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3194469186,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be67bb42",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 224320007,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5eda07",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_311_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3434158418,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ccb11952",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_001",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3740777951,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "def7bddf",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_002",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4082099855,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f34fe68f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_003",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 93719323,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5960b1b",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_004",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2819706895,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a811500f",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_005",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3125474434,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba4af482",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_006",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3432782116,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc9c1924",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_007",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3739139497,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dedebda9",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_008",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1591754158,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ee03dae",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_009",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1353591434,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "50ae2a8a",
+    "name": "CLOTHING_ITEM_M_CLOSECOAT_313_TINT_010",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 142436932,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "87d6a44",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 166138692,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e71344",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 206439994,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c4e063a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 260721156,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8a4a04",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 272188882,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "103945d2",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 339562765,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "143d510d",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 340858003,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14511493",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 341101829,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1454cd05",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 366647875,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15da9a43",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 459781701,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1b67b645",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 474722494,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1c4bb0be",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 570158166,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "21fbec56",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 578002059,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22739c8b",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 612794069,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24867ed5",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 612855406,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24876e6e",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 638119152,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2608ecf0",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 799975167,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2faea6ff",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 852571283,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32d13493",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 901245669,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35b7eae5",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 946911858,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3870ba72",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1037779800,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3ddb4358",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1078346688,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "404643c0",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1134228262,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "439af326",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1150507031,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44935817",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1153166711,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44bbed77",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1278921266,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c3aca32",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1314324653,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e5700ad",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1338563135,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4fc8da3f",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1430032519,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "553c9087",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1457295796,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56dc91b4",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1481375624,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "584bff88",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1485075125,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "588472b5",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1512375102,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a25033e",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1580213824,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5e302640",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1595467403,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f18e68b",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1608557504,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5fe0a3c0",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1629569463,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "612141b7",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1728604140,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "670867ec",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1808311941,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6bc8a685",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1876390836,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6fd773b4",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2082086042,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7c1a1c9a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2105985537,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d86ca01",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2181540205,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8207a96d",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2192624902,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "82b0cd06",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2232151570,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "850bee12",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2322118967,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a68b937",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2325224217,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a981b19",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2334711282,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b28ddf2",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2364376994,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ced87a2",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2522207626,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9655d58a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2561226555,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98a9373b",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2566683033,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98fc7999",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2598183809,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9add2381",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2614168299,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9bd10aeb",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2622480636,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c4fe0fc",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2697045373,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0c1a57d",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2932717286,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aecdb6e6",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2955890213,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b02f4e25",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2964949459,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0b989d3",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2967897650,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0e68632",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3031982489,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4b86199",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3074134996,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b73b93d4",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3136568954,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "baf43e7a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3172684673,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd1b5381",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3194612378,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be69ea9a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3204325985,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "befe2261",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3217283286,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bfc3d8d6",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3235479850,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0d9812a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3237226305,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0f42741",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3253963215,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c1f389cf",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3321685320,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c5fce548",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3334964663,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6c785b7",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3340351123,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c719b693",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3452226588,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cdc4cc1c",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3471499908,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ceeae284",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3474367509,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf16a415",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3475487102,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf27b97e",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3514399805,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d1797c3d",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3572373410,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d4ee17a2",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3574289014,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d50b5276",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3624970313,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d810a849",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3694052563,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc2ec4d3",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3718057876,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dd9d0f94",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3723711960,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddf355d8",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3768149399,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e0996597",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3795323923,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2380c13",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3804476237,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2c3b34d",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3809790993,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e314cc11",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3897128431,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e84975ef",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3931131080,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ea504cc8",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4065644506,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f254cfda",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4106448750,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f4c36f6e",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4252267280,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd747310",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4294705006,
+    "category": 107129908,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fffbff6e",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 97788026,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5d4207a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 115947688,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6e938a8",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 177365333,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a926155",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 216258139,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce3d65b",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 251033811,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef678d3",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 274661703,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "105f0147",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 326616226,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1377c4a2",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 395099389,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "178cbcfd",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 528076232,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1f79cdc8",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 581477850,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22a8a5da",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 586543258,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22f5f09a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 851985945,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32c84619",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 995406652,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b54b33c",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1048833849,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e83ef39",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1088491674,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "40e1109a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1104781669,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "41d9a165",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1170855879,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45c9d7c7",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1210895596,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "482cccec",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1235798035,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "49a8c813",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1292860071,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4d0f7aa7",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1312388952,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e397758",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1342916993,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "500b4981",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1372079881,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "51c84709",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1392817377,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5304b4e1",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1458097420,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56e8cd0c",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1460402763,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "570bfa4b",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1465737172,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "575d5fd4",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1469603127,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57985d37",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1506190377,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59c6a429",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1549882996,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5c615674",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1582139598,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5e4d88ce",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1702521391,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "657a6a2f",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1716968325,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6656db85",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1778607057,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a0363d1",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1805089447,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b977aa7",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1887949008,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7087d0d0",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1938207552,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7386b340",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1954142607,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7479d98f",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1955596378,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7490085a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1969294914,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75610e42",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 1978443883,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75eca86b",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2016942601,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78381a09",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2044712015,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "79dfd44f",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2161583406,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80d7252e",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2164596667,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "81051fbb",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2180326180,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "81f52324",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2241493968,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "859a7bd0",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2271066196,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "875db854",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2322324712,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a6bdce8",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2324771539,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a9132d3",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2331190465,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8af324c1",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2337297202,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b505332",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2401644058,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f262e1a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2433991009,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9113c161",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2488207661,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "944f092d",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2496451378,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "94ccd332",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2643195817,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9d8bf7a9",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2655341413,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e454b65",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2716816300,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a1ef53ac",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2750129130,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a3eba3ea",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2795054916,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a6992744",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2863280188,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aaaa303c",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2906388520,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad3bf828",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2927623225,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ae7ffc39",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2936411383,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "af0614f7",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2996113094,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2950ec6",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 2997417247,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2a8f51f",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3052036748,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b5ea628c",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3152421224,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bbe62168",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3257151251,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c2242f13",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3311344267,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c55f1a8b",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3342125193,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c734c889",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3475032029,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf20c7dd",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3539685322,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2fb4fca",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3704587728,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dccf85d0",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3731664247,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "de6cad77",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3781598644,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1669db4",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3817972234,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e391a20a",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3888214785,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e7c17301",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3904032377,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8b2ce79",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 3936675094,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eaa4e516",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4027646876,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f011039c",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4187059028,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f9917354",
+    "itemType": "coats_closed"
+  },
+  {
+    "component": 4239676495,
+    "category": 107129908,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fcb4544f",
+    "itemType": "coats_closed"
+  }
+]

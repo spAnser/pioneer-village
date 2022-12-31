@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 625143600,
+        "category": 2053881099,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2542ef30",
+        "itemType": "jewelry_rings_right",
+        "friendlyName": "Redcliff Rings"
+      },
+      {
+        "component": 1923311272,
+        "category": 2053881099,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "72a366a8",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 2155676251,
+        "category": 2053881099,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "807d025b",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 2891440640,
+        "category": 2053881099,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ac57e200",
+        "itemType": "jewelry_rings_right",
+        "friendlyName": "Tyringham Ring"
+      },
+      {
+        "component": 3074584549,
+        "category": 2053881099,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b7426fe5",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 3653547273,
+        "category": 2053881099,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d9c4b509",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 3893252508,
+        "category": 2053881099,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e80e519c",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 4250500146,
+        "category": 2053881099,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fd597c32",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 95447827,
+        "category": 2053881099,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5b06b13",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 1033591528,
+        "category": 2053881099,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3d9b5ae8",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 1286207749,
+        "category": 2053881099,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4ca9f905",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 1659381121,
+        "category": 2053881099,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "62e82581",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 3463868691,
+        "category": 2053881099,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ce767113",
+        "itemType": "jewelry_rings_right",
+        "friendlyName": "Redcliff Rings"
+      },
+      {
+        "component": 3742761105,
+        "category": 2053881099,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "df160091",
+        "itemType": "jewelry_rings_right",
+        "friendlyName": "Tyringham Ring"
+      },
+      {
+        "component": 3760889864,
+        "category": 2053881099,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e02aa008",
+        "itemType": "jewelry_rings_right"
+      },
+      {
+        "component": 4135963838,
+        "category": 2053881099,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f685ccbe",
+        "itemType": "jewelry_rings_right"
+      }
+    ]
+  }
+]

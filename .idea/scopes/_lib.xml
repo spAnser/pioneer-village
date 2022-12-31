@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="@lib" pattern="file[pioneer-village]:lib//*" />
+</component>

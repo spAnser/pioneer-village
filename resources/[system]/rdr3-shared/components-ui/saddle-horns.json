@@ -1,0 +1,659 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 3334701557,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "c6c381f5",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_000",
+        "itemType": "saddle_horns",
+        "friendlyName": "Maple 'Duck Bill' Horn"
+      },
+      {
+        "component": 3689327675,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "dbe6ac3b",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_001",
+        "itemType": "saddle_horns",
+        "friendlyName": "Pine 'Dally' Horn"
+      },
+      {
+        "component": 707315902,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "2a28c8be",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_002",
+        "itemType": "saddle_horns",
+        "friendlyName": "Birch 'Dally' Horn"
+      },
+      {
+        "component": 3789305942,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "e1dc3856",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_003",
+        "itemType": "saddle_horns",
+        "friendlyName": "Steel 'Dally' Horn"
+      },
+      {
+        "component": 873684163,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "34135cc3",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_004",
+        "itemType": "saddle_horns",
+        "friendlyName": "Brass Eagle Horn"
+      },
+      {
+        "component": 1044410653,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "3e40711d",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_005",
+        "itemType": "saddle_horns",
+        "friendlyName": "Aspen 'Duck Bill' Horn"
+      },
+      {
+        "component": 276665752,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "107d9598",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_006",
+        "itemType": "saddle_horns",
+        "friendlyName": "Steel 'Duck Bill' Horn"
+      },
+      {
+        "component": 2597497408,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "9ad2aa40",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_007",
+        "itemType": "saddle_horns",
+        "friendlyName": "Steel 'Diablo' Horn"
+      },
+      {
+        "component": 3976974005,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "ed0bceb5",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_008",
+        "itemType": "saddle_horns",
+        "friendlyName": "Steel 'Diez Corona' Horn"
+      },
+      {
+        "component": 4163298539,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f826e4eb",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_009",
+        "itemType": "saddle_horns",
+        "friendlyName": "Aspen 'Thick Neck' Horn"
+      },
+      {
+        "component": 4174047011,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f8cae723",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_010",
+        "itemType": "saddle_horns",
+        "friendlyName": "Birch 'Torquemada' Horn"
+      },
+      {
+        "component": 3786520817,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "e1b1b8f1",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_011",
+        "itemType": "saddle_horns",
+        "friendlyName": "Redemption 'Sindewinder' Horn"
+      },
+      {
+        "component": 859626502,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "333cdc06",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_012",
+        "itemType": "saddle_horns",
+        "friendlyName": "Maple 'Torquemada' Horn"
+      },
+      {
+        "component": 4036777710,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f09c56ee",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_013",
+        "itemType": "saddle_horns",
+        "friendlyName": "Birch 'Wide Belly' Horn"
+      },
+      {
+        "component": 4205079294,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "faa46afe",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_014",
+        "itemType": "saddle_horns",
+        "friendlyName": "Copper Rosette Horn"
+      },
+      {
+        "component": 3386018139,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c9d2895b",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_015",
+        "itemType": "saddle_horns",
+        "friendlyName": "Gold Bison Horn"
+      },
+      {
+        "component": 3692506596,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "dc172de4",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_016",
+        "itemType": "saddle_horns",
+        "friendlyName": "Silver Liberty Horn"
+      },
+      {
+        "component": 1467753644,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "577c24ac",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_017",
+        "itemType": "saddle_horns",
+        "friendlyName": "Gold Muerte Horn"
+      },
+      {
+        "component": 3250256168,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c1baf928",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_018",
+        "itemType": "saddle_horns",
+        "friendlyName": "Gold Equestrian Horn"
+      },
+      {
+        "component": 2496470861,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "94cd1f4d",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_019",
+        "itemType": "saddle_horns",
+        "friendlyName": "White Gold Bigpaw Horn"
+      },
+      {
+        "component": 2282095195,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8806025b",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_020",
+        "itemType": "saddle_horns",
+        "friendlyName": "Bronze Egret Horn"
+      },
+      {
+        "component": 3196677985,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "be896f61",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_021",
+        "itemType": "saddle_horns",
+        "friendlyName": "Gold Gambler Horn"
+      },
+      {
+        "component": 2899233772,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "accecbec",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_022",
+        "itemType": "saddle_horns",
+        "friendlyName": "White Gold Shield Horn"
+      },
+      {
+        "component": 818140116,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "30c3d3d4",
+        "name": "HORSE_EQUIPMENT_HORN_NEW_023",
+        "itemType": "saddle_horns",
+        "friendlyName": "Silver & Gold Kismet Horn"
+      },
+      {
+        "component": 3118233723,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b9dc787b",
+        "name": "hat_mr1_062_c1_merge",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 59106054,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "385e306",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 126987344,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "791ac50",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 192812681,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b7e1689",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 227405473,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d8deea1",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 285295869,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "110144fd",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 378029499,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "168845bb",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 536497215,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1ffa4c3f",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 538971278,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "20200c8e",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 541858081,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "204c1921",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 685478682,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "28db931a",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 710595602,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2a5ad412",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 839409249,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "32085e61",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 990168927,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3b04c75f",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1026249744,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3d2b5410",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1386042456,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "529d5458",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1399182929,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5365d651",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1480642778,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5840d0da",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1523049888,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5ac7e5a0",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1589149966,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5eb8810e",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1665917977,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "634be419",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1722999675,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "66b2e37b",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 1953396988,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "746e78fc",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2049266551,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7a255377",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2095635158,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7ce8dad6",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2110079625,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7dc54289",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2133339214,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7f282c4e",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2203954882,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "835daec2",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2405897386,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8f6714aa",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2544478403,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "97a9a8c3",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2660435734,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9e930716",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2765346882,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a4d3d842",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2775281709,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a56b702d",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 2858072927,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "aa5abb5f",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 3173342172,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bd255bdc",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 3334572632,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c6c18a58",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 3357027023,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c8182acf",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 3364077418,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c883bf6a",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 3472067772,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cef38cbc",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 3923012788,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e9d46cb4",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 3951735845,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "eb8ab425",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 4073327814,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f2ca0cc6",
+        "itemType": "saddle_horns"
+      },
+      {
+        "component": 4220546352,
+        "category": 88372018,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fb906d30",
+        "itemType": "saddle_horns"
+      }
+    ]
+  }
+]

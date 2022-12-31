@@ -1,0 +1,2309 @@
+[
+  {
+    "component": 88751280,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "54a3cb0",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 627211160,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "25627b98",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 775392906,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "2e378e8a",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 1006512663,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "3bfe2a17",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 1338790323,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "4fcc51b3",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 1566141645,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "5d596ccd",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 1866797252,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "6f4510c4",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 2106600794,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "7d902d5a",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 2461161374,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "92b2579e",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 2534432502,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "97105ef6",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 2700407843,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "a0f4f423",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 2789997933,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "a64bfd6d",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 2973569867,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "b13d134b",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 3477294935,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "cf434f57",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 3571866597,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "d4e65be5",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 3697469846,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "dc62e996",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 3925738704,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "e9fe04d0",
+    "itemType": "horse_manes",
+    "friendlyName": "Braided"
+  },
+  {
+    "component": 85079931,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "512377b",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 161890467,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "9a640a3",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 231691041,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "dcf5321",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 534539535,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "1fdc6d0f",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 605913021,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "241d7fbd",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 981216390,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "3a7c2c86",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 1211811843,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "483ac803",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 1614346239,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "6038f7ff",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 1838420661,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "6d9412b5",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 2203467321,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "83563e39",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 2533254537,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "96fe6589",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 3002831691,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "b2fb934b",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 3374956455,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "c929bfa7",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 3452553447,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "cdc9c8e7",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 3760420822,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "e02377d6",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 4279741314,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "ff17ab82",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 4294162282,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "fff3b76a",
+    "itemType": "horse_manes",
+    "friendlyName": "Dreadlocked"
+  },
+  {
+    "component": 37084145,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "235dbf1",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 104002231,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "632f2b7",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 184253476,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "afb7c24",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 1147825921,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "446a6f01",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 1594070435,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "5f0395a3",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 1608685397,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "5fe29755",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 1824076046,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "6cb9310e",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 2207145656,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "838e5eb8",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 2499117446,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "94f58186",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 2547029492,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "97d095f4",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 2710808954,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "a193a97a",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 2856299546,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "aa3fac1a",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 3095480477,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "b881489d",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 3362023523,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "c8646863",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 3385944881,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "c9d16b31",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 3770427302,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "e0bc27a6",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 4235517755,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "fc74df3b",
+    "itemType": "horse_manes",
+    "friendlyName": "Long"
+  },
+  {
+    "component": 159608433,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "9836e71",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 189984956,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "b52f0bc",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 336167465,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "14098229",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 502404946,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "1df21752",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 759674365,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "2d47b5fd",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 948849458,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "388e4b32",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 1353481414,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "50ac7cc6",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 2256103519,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "8679685f",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 2650281820,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "9df8175c",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 2896344241,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "aca2b4b1",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 3221773172,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "c0085b74",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 3511877129,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "d152fe09",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 3560244181,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "d43503d5",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 3654192564,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "d9ce8db4",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 3777797220,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "e12c9c64",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 3937873797,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "eab72f85",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 4077174804,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "f304c014",
+    "itemType": "horse_manes",
+    "friendlyName": "Mohawk"
+  },
+  {
+    "component": 319697946,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "130e341a",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 378682918,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "16923e26",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 442123702,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "1a5a45b6",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 801829067,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "2fcaf0cb",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 1100846192,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "419d9470",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 1105891734,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "41ea9196",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 1413855680,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "5445b9c0",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 1590774687,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "5ed14b9f",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 1713462647,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "66215d77",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 1798988913,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "6b3a6471",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 2172326134,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "817b10f6",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 2812599625,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "a7a4dd49",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 3052632550,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "b5f379e6",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 3633626920,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "d894bf28",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 3779285121,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "e1435081",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 3930514060,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "ea46e28c",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 4278325050,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "ff020f3a",
+    "itemType": "horse_manes",
+    "friendlyName": "Regular"
+  },
+  {
+    "component": 55899831,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "354f6b7",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 404332360,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "18199f48",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 1059057228,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "3f1fee4c",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 1326746949,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "4f148d45",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 1390155208,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "52dc15c8",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 1575365352,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "5de62ae8",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 1686780196,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "648a3924",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 1889063233,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "7098d141",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 2252700826,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "86457c9a",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 2517375795,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "960c1b33",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 2583012346,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "99f5a3fa",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 2766256350,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "a4e1b8de",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 2879932255,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "aba8475f",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 2995311660,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "b288d42c",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 3178982149,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "bd7b6b05",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 3243471297,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "c15371c1",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 4075115992,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": true,
+    "componentHex": "f2e555d8",
+    "itemType": "horse_manes",
+    "friendlyName": "Short"
+  },
+  {
+    "component": 8830631,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86bea7",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 17205337,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1068859",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 52424077,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31fed8d",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 121413827,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "73ca0c3",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 123015392,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75510e0",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 162921181,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b5fadd",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 169632049,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a1c6131",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 175183344,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7115f0",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 176445602,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a8458a2",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 241220176,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e60ba50",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 271484842,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "102e87aa",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 297838303,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "11c0a6df",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 310092603,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "127ba33b",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 352959104,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1509ba80",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 416553345,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18d41981",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 463419468,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1b9f384c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 467660179,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1bdfed93",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 472423486,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1c289c3e",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 516972462,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ed05fae",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 540391313,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2035b791",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 565007780,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "21ad55a4",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 587608633,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "23063239",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 590913953,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2338a1a1",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 612305799,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "247f0b87",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 635894440,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25e6faa8",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 637095756,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25f94f4c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 643704080,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "265e2510",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 668317144,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27d5b5d8",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 679589968,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2881b850",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 708254934,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2a371cd6",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 728197400,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b676918",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 740190526,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c1e693e",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 841239851,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32244d2b",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 894887074,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3556e4a2",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 896814801,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35744ed1",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 898650445,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3590514d",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 916847917,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "36a5fd2d",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 951866725,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "38bc5565",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 957936743,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3918f467",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 964657948,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "397f831c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 986012887,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3ac55cd7",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1034685529,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3dac0c59",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1115457030,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "427c8606",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1119305644,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "42b73fac",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1165744068,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "457bd7c4",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1179583941,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "464f05c5",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1207269175,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47f57737",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1271539633,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4bca27b1",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1314505589,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e59c375",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1374370502,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "51eb3ac6",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1413491673,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54402bd9",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1425451770,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54f6aafa",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1495593353,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5924f189",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1557350851,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5cd349c3",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1600257510,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f61fde6",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1601252790,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f712db6",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1642776634,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61eac83a",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1656562004,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62bd2154",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1663183412,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "63222a34",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1702263886,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "65767c4e",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1743567474,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67ecba72",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1751129725,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68601e7d",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1801912941,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b67026d",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1815817296,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6c3b2c50",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1823890629,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6cb65cc5",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1843990690,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6de910a2",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1864953454,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f28ee6e",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1868125370,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f5954ba",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1902244804,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7161f3c4",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1917547531,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "724b740b",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1962823184,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74fe4e10",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1975729177,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75c33c19",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 1987604553,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "76787049",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2016997758,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7838f17e",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2033812671,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "793984bf",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2090052421,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7c93ab45",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2092097753,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7cb2e0d9",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2101746888,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d461cc8",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2150961290,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8035108a",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2203818157,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "835b98ad",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2205551180,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83760a4c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2212457159,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83df6ac7",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2319947163,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a47959b",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2353395043,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c45f563",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2378592638,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8dc6717e",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2381302145,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8defc981",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2428995278,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "90c786ce",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2450127916,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9209fc2c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2460202343,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92a3b567",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2460366168,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92a63558",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2486349313,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9432ae01",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2490227910,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "946ddcc6",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2511908561,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95b8aed1",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2516068246,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95f82796",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2536166658,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "972ad502",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2541921852,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9782a63c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2553269740,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "982fcdec",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2575846579,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "99884cb3",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2625649371,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c803adb",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2673922321,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9f60d111",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2684687501,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a005148d",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2756630717,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a44ed8bd",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2801295420,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a6f8603c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2953495031,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b00ac1f7",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 2981055573,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1af4c55",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3053485088,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b6007c20",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3115292705,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9af9821",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3172399925,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd16fb35",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3231628445,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c09ebc9d",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3255285449,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c207b6c9",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3284240810,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c3c189aa",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3321208378,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c5f59e3a",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3325047036,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c63030fc",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3392758075,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca39613b",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3433176227,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cca21ca3",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3477905312,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf4c9fa0",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3488473468,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cfede17c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3491607178,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d01db28a",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3507790640,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d114a330",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3524987492,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d21b0a64",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3563586611,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d4680433",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3652756530,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d9b8a432",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3702987786,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dcb71c0a",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3704508572,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dcce509c",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3781601819,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e166aa1b",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3805234853,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2cf46a5",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3827888506,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e428f17a",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3835369180,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e49b16dc",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3908878730,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8fcc18a",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3913056418,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e93c80a2",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 3961346969,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ec1d5b99",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4016686661,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef69c645",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4053928685,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1a20aed",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4084354610,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3724e32",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4105665469,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f4b77bbd",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4117885993,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f571f429",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4201379894,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fa6bf836",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4227010804,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fbf310f4",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4233581727,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fc57549f",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4270296921,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe878f59",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4275206642,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fed279f2",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4275707889,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "feda1ff1",
+    "itemType": "horse_manes"
+  },
+  {
+    "component": 4286035803,
+    "category": 2852263851,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ff77b75b",
+    "itemType": "horse_manes"
+  }
+]

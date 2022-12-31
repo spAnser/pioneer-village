@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 2699468920,
+        "category": 3972575834,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "a0e6a078",
+        "name": "CLOTHING_ITEM_STACHE_002",
+        "itemType": "beards_mustache",
+        "friendlyName": "Stache 002"
+      },
+      {
+        "component": 1629162959,
+        "category": 3972575834,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "611b0dcf",
+        "name": "CLOTHING_ITEM_STACHE_HANDLEBAR",
+        "itemType": "beards_mustache"
+      },
+      {
+        "component": 2272026208,
+        "category": 3972575834,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "876c5e60",
+        "name": "CLOTHING_ITEM_STACHE_NORMAL",
+        "itemType": "beards_mustache"
+      },
+      {
+        "component": 216184750,
+        "category": 3972575834,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "ce2b7ae",
+        "itemType": "beards_mustache"
+      },
+      {
+        "component": 2947148912,
+        "category": 3972575834,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "afa9ec70",
+        "itemType": "beards_mustache"
+      },
+      {
+        "component": 3939904146,
+        "category": 3972575834,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "ead62a92",
+        "itemType": "beards_mustache"
+      }
+    ]
+  }
+]

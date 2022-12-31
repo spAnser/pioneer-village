@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 916803334,
+        "category": 1995498098,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "36a54f06",
+        "itemType": "aprons"
+      }
+    ]
+  }
+]

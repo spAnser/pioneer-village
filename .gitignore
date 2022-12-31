@@ -1,0 +1,36 @@
+yarn-error.log
+yarn.lock
+lerna-debug.log
+node_modules/
+cache/
+local.cfg
+resources/*/build/
+resources/*/*/build/
+artifacts/*/
+.env
+
+# Idea User-specific stuff:
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/dictionaries
+**/.idea/vcs.xml
+**/.idea/php.xml
+**/.idea/yii2settings.xml
+**/.idea/jsLibraryMappings.xml
+**/.idea/git_toolbox_prj.xml
+**/.idea/discord.xml
+
+# Idea commit Shelf
+**/.idea/shelf/
+
+# Idea Sensitive or high-churn files:
+**/.idea/dataSources/
+**/.idea/dataSources.ids
+**/.idea/dataSources.xml
+**/.idea/dataSources.local.xml
+**/.idea/sqlDataSources.xml
+**/.idea/dynamic.xml
+**/.idea/uiDesigner.xml
+
+# Idea File-based project format:
+*.iws

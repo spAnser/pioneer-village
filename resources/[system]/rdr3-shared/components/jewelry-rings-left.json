@@ -1,0 +1,256 @@
+[
+  {
+    "component": 2861379350,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa8d2f16",
+    "name": "CLOTHING_F_SEASON3_RINGL_001_TINT_001",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 2316201178,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a0e6cda",
+    "name": "CLOTHING_M_SEASON3_RINGL_001_TINT_001",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 525502566,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1f528866",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 763602120,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2d83a4c8",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 1020150621,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3cce435d",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 1211521585,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "48365a31",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 1449424525,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5664768d",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 2093063672,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7cc19df8",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 2323659125,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a803975",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 2444225827,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "91afed23",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 2457192800,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9275c960",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 2822567150,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a83cf4ee",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 2962490740,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0940574",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 3663026422,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da5558f6",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 4122933709,
+    "category": 4050263331,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5bef9cd",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 369546402,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1606d4a2",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 538207337,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "20146469",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 628815846,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "257af7e6",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 655095472,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "270bf6b0",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 2958362944,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0550940",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 3060896037,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b6719125",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 3234605618,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0cc2a32",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 3265048015,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c29cadcf",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 3403528701,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "caddb9fd",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 3538046554,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2e24e5a",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 3912267426,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e93076a2",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 3995828376,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ee2b8098",
+    "itemType": "jewelry_rings_left"
+  },
+  {
+    "component": 4285211415,
+    "category": 4050263331,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ff6b2317",
+    "itemType": "jewelry_rings_left"
+  }
+]

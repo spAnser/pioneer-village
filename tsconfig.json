@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "strict": true,
+    "module": "es6",
+    "target": "es2017",
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2017"],
+    "paths": {
+      "@lib/*": [
+        "./lib/*"
+      ]
+    },
+    "types": ["@types/node"],
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./",
+    "./types.d.ts",
+    "./socket/**/types.d.ts",
+    "./resources/**/types.d.ts"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "module": "none",
+    "target": "es2017",
+    "lib": ["es2017"],
+    "outDir": "./build",
+    "types": ["@types/node"],
+    "skipLibCheck": true,
+    "moduleResolution": "node"
+  },
+  "ts-node": {
+    "files": true
+  },
+  "include": [
+    "./**/*.ts",
+    "./types.d.ts",
+    "../../types.d.ts",
+    "../../env.d.ts",
+    "../../resources/**/types.d.ts"
+  ]
+}

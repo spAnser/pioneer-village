@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="world:src" pattern="file[pioneer-village]:resources/*core*/world/src//*||file[pioneer-village]:socket/src/controllers/world.ts" />
+</component>

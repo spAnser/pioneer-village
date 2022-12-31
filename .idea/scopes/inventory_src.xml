@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="inventory:src" pattern="file[pioneer-village]:resources/inventory/src//*||file[pioneer-village]:resources/ui/src/ui/app/layers/inventory//*||file[pioneer-village]:socket/src//*inventor*" />
+</component>

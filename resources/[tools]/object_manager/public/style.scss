@@ -1,0 +1,133 @@
+$white: #fff;
+$gray: #7c7c7c;
+$black: #000;
+$red: #f45762;
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+canvas {
+    display: block;
+}
+
+button {
+    transition: 250ms;
+    font-size: 16px;
+    padding: 4px 8px;
+    border: 0;
+    background: $red;
+    color: $white;
+    &:hover {
+        background: $white;
+        color: $red;
+    }
+    &:disabled {
+        opacity: 0.666;
+        pointer-events: none;
+        background-color: $gray;
+    }
+    + button {
+        margin-left: 8px;
+    }
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    span {
+        display: block;
+        margin-right: 8px;
+        white-space: nowrap;
+    }
+}
+
+input {
+    width: 100%;
+    font-size: 14px;
+    padding: 2px 4px;
+    border-radius: 0;
+    border: 0;
+}
+
+textarea {
+    margin-top: 16px;
+    resize: none;
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+}
+
+ol {
+    padding-left: 0;
+    background: $white;
+    color: $black;
+    list-style: none;
+    li {
+        padding: 4px 8px;
+        &.active {
+            background-color: $red;
+            color: $white;
+        }
+    }
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    text-transform: capitalize;
+    li {
+        background-color: $white;
+        color: $black;
+        padding: 4px 8px;
+        font-size: 12px;
+        &.active {
+            background-color: $red;
+            color: $white;
+        }
+    }
+}
+
+#app {
+    visibility: hidden;
+    opacity: 0;
+    transition: 250ms;
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.window {
+    position: fixed;
+    top: 7.5vh;
+    width: 15vw;
+    height: 85vh;
+    box-sizing: border-box;
+    padding: 0 16px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    overflow: auto;
+
+    &--left {
+        left: 5vw;
+    }
+    &--right {
+        right: 5vw;
+    }
+}
+
+.input-row {
+    display: flex;
+    > label {
+        &:not(first-child) {
+            margin-left: 8px;
+        }
+    }
+}

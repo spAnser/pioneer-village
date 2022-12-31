@@ -1,0 +1,294 @@
+[
+  {
+    "component": 4222829406,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fbb3435e",
+    "itemType": "cloaks",
+    "friendlyName": "Legendary Panther Cloak"
+  },
+  {
+    "component": 1103691625,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "41c8ff69",
+    "itemType": "cloaks",
+    "friendlyName": "Trapper's Cloak"
+  },
+  {
+    "component": 2388684410,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e606e7a",
+    "name": "CLOTHING_ITEM_F_SEASONAL_005_PONCHO_VAR_001",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 3213352433,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bf87ddf1",
+    "name": "CLOTHING_ITEM_M_SEASONAL_005_PONCHO_VAR_001",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 609076110,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "244dc38e",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 875520849,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "342f6351",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 1064769327,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f77172f",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 1303360416,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4dafb3a0",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 2584693862,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a0f4c66",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 2828462453,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a896e975",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 3441104170,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd1b152a",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 3444257501,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd4b32dd",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 3528761145,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2549f39",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 3734124568,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "de923818",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 3817627487,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e38c5f5f",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 4216713631,
+    "category": 1008366797,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb55f19f",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 365661718,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15cb8e16",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 430280399,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "19a58ecf",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 546153370,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "208da39a",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 659565092,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27502a24",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 1021238328,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3cdedc38",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 1138484027,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "43dbe33b",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 2098189730,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d0fd5a2",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 2555119903,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "984c091f",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 2566689906,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98fc9472",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 2812455631,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7a2aacf",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 2860494214,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa7fad86",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 3018768484,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b3eec064",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 3694107359,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc2f9adf",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 4050568541,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f16ec55d",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 4244951695,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd04d28f",
+    "itemType": "cloaks"
+  },
+  {
+    "component": 4251997801,
+    "category": 1008366797,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd705669",
+    "itemType": "cloaks"
+  }
+]

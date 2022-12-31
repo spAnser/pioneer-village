@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="prompts:src" pattern="file[pioneer-village]:resources/*core*/prompts/src//*||file[pioneer-village]:resources/*core*/prompts/lua//*" />
+</component>

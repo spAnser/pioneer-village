@@ -1,0 +1,42 @@
+[
+  {
+    "component": 211956332,
+    "category": 366200818,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ca2326c",
+    "name": "CLOTHING_ITEM_BEARD_FORKED",
+    "itemType": "beards_chin",
+    "friendlyName": "Beard Forked"
+  },
+  {
+    "component": 2026761603,
+    "category": 366200818,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "78cded83",
+    "name": "CLOTHING_ITEM_BEARD_SINGLE",
+    "itemType": "beards_chin",
+    "friendlyName": "Beard Single"
+  },
+  {
+    "component": 1331190543,
+    "category": 366200818,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "4f585b0f",
+    "itemType": "beards_chin"
+  },
+  {
+    "component": 1645689077,
+    "category": 366200818,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "621738f5",
+    "itemType": "beards_chin"
+  }
+]

@@ -1,0 +1,3008 @@
+[
+  {
+    "component": 4162760119,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f81eadb7",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3318401296,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c5cac910",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2879100082,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ab9b94b2",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 769235244,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2dd9992c",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 864330882,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3384a482",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 21348357,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "145c005",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 418901865,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18f7ef69",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2514184446,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95db68fe",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2082616716,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7c22358c",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 589300377,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "23200299",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_000_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3432872768,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc9d7b40",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2592741146,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a8a171a",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1816738433,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6c493a81",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2049201719,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a245637",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 835601804,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31ce458c",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1068753239,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3fb3e157",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2740234391,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a354a897",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2985936353,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1f9c5e1",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2296902590,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88e7f3be",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3738118035,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "decf2793",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_001_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1310560820,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e1d9234",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3073107027,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b72be453",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2862664509,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aaa0cb3d",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1394514942,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "531e9bfe",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1596830748,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f2db41c",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2924663401,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ae52d269",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3163090645,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc88eed5",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1002270012,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3bbd6d3c",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 169249263,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a1689ef",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3593673249,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6331a21",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_010_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4134198822,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f66ade26",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 393027630,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "176d202e",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 160924803,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9978483",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1375442250,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "51fb954a",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 728909880,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b724838",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1887490644,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7080d254",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1609511217,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5fef3131",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2334328732,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b23079c",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2222717514,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "847bfa4a",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4028068439,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f0177257",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_200_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 726781158,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b51cce6",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 421079157,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "19192875",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2649698847,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9def321f",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2492473185,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "94901f61",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 23623956,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1687914",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3616679272,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7922568",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3047317897,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b5a26189",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2867940391,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aaf14c27",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2693150545,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0863751",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1994092600,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "76db7038",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_201_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2203827749,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "835bbe25",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1726907723,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "66ee854b",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3571310888,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d4dde128",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3396062276,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca6bcc44",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1160364478,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4529c1be",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 978824218,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a57ac1a",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 730041970,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b838e72",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2588208119,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a44ebf7",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 265803547,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd7d71b",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 578064748,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2274916c",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_210_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3905223926,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8c4fcf6",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_311_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3600308381,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d698589d",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_311_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2118559739,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7e46a7fb",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_311_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1802699348,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b730254",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_311_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4044691848,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1151988",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_312_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1465968158,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5760e61e",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_312_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1173898061,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45f8434d",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_312_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 55229931,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34abdeb",
+    "name": "CLOTHING_ITEM_F_BANDOLIER_312_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3422156823,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cbf9f817",
+    "name": "CLOTHING_ITEM_F_SEASONAL_001_BANDOLIER_000",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3559282925,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d42658ed",
+    "name": "CLOTHING_ITEM_F_SEASONAL_005_BANDOLIER_VAR_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3881958970,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e761fe3a",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 496888497,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d9deab1",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 793153026,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f468e02",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4079556040,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f32915c8",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 215566632,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd94928",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1722383559,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "66a97cc7",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1888653469,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7092909d",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 997631586,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b76a662",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1446042582,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5630dbd6",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4206601169,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fabba3d1",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_000_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2748178380,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a3cddfcc",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3975508514,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ecf57222",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2136151767,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f5316d7",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1425818154,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54fc422a",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1732437687,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6742e6b7",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2991553743,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b24f7ccf",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1153278381,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44bda1ad",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 532993980,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1fc4d7bc",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 804714528,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ff6f820",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4045633330,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1237732",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_001_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2606535858,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b5c94b2",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2895263517,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ac92371d",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3215482185,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bfa85d49",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3453548970,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cdd8f9aa",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1416693468,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "547106dc",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1649713827,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6254a2a3",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2028392391,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78e6cfc7",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2259774300,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86b16b5c",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1355054983,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "50c47f87",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2647988291,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9dd51843",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_010_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1878714904,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6ffaea18",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1069353373,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3fbd099d",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3834794825,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e4925349",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4065423047,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f2516ec7",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2263750658,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86ee1802",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2528393102,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "96b4378e",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3151954399,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bbdf01df",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 674028157,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "282cda7d",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3745630372,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df41c8a4",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2950063682,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "afd66642",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_200_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4124608732,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5d888dc",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 128134257,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a32c71",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 537582912,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "200add40",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 568451310,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "21e1e0ee",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1014011403,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c70960b",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1314830823,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e5eb9e7",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2657048975,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e5f598f",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2899408499,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "acd17673",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2985754822,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1f700c6",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 118271052,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "70cac4c",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_201_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2465498259,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92f48493",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2388032343,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e567b57",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2139610554,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f87ddba",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1768075632,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6962b170",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3915395433,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e9603169",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_005",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3324504825,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c627eaf9",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_006",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3084734052,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7dd4e64",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_007",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2726175654,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a27e23a6",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_008",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 575120191,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2247a33f",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_009",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2789170921,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a63f5ee9",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_210_TINT_010",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3074650333,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b74370dd",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_311_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2298516568,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "89009458",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_311_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1334616433,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f8ca171",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_311_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 550880260,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "20d5c404",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_311_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 556062506,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2124d72a",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_312_TINT_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3863667063,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e64ae177",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_312_TINT_002",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3296697825,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c47f9de1",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_312_TINT_003",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2293835353,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88b92659",
+    "name": "CLOTHING_ITEM_M_BANDOLIER_312_TINT_004",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 475267810,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1c5402e2",
+    "name": "CLOTHING_ITEM_M_SEASONAL_001_BANDOLIER_000",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 309791422,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "12770abe",
+    "name": "CLOTHING_ITEM_M_SEASONAL_005_BANDOLIER_VAR_001",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4046007197,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f1292b9d",
+    "name": "CLOTHING_ITEM_PZ_LOADOUT_BANDOLIER_01",
+    "itemType": "loadouts",
+    "friendlyName": "Bandolier"
+  },
+  {
+    "component": 1877538667,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "6fe8f76b",
+    "name": "PROVISION_REINFORCED_BANDOLIER_BEAR",
+    "itemType": "loadouts",
+    "friendlyName": "Explorer Bandolier"
+  },
+  {
+    "component": 3547849056,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d377e160",
+    "name": "PROVISION_REINFORCED_BANDOLIER_BOAR",
+    "itemType": "loadouts",
+    "friendlyName": "Gambler Bandolier"
+  },
+  {
+    "component": 356885366,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1545a376",
+    "name": "PROVISION_REINFORCED_BANDOLIER_BUFFALO",
+    "itemType": "loadouts",
+    "friendlyName": "Herbalist Bandolier"
+  },
+  {
+    "component": 3561182861,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d443568d",
+    "name": "PROVISION_REINFORCED_BANDOLIER_COUGAR",
+    "itemType": "loadouts",
+    "friendlyName": "Master Hunter Bandolier"
+  },
+  {
+    "component": 2284945866,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "883181ca",
+    "name": "PROVISION_REINFORCED_BANDOLIER_DEER",
+    "itemType": "loadouts",
+    "friendlyName": "Horseman Bandolier"
+  },
+  {
+    "component": 227686058,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d9236aa",
+    "name": "PROVISION_REINFORCED_BANDOLIER_GATOR",
+    "itemType": "loadouts",
+    "friendlyName": "Bandit Bandolier"
+  },
+  {
+    "component": 2731916086,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a2d5bb36",
+    "name": "PROVISION_REINFORCED_BANDOLIER_PANTHER",
+    "itemType": "loadouts",
+    "friendlyName": "Sharpshooter Bandolier"
+  },
+  {
+    "component": 1532314048,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "5b5541c0",
+    "name": "PROVISION_REINFORCED_BANDOLIER_RABBIT",
+    "itemType": "loadouts",
+    "friendlyName": "Survivalist Bandolier"
+  },
+  {
+    "component": 2915994752,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "adce8c80",
+    "name": "PROVISION_REINFORCED_BANDOLIER_SNAKE",
+    "itemType": "loadouts",
+    "friendlyName": "Weapons Expert Bandolier"
+  },
+  {
+    "component": 1171350303,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "45d1631f",
+    "name": "UPGRADE_BANDOLIER",
+    "itemType": "loadouts",
+    "friendlyName": "Upgraded Bandolier"
+  },
+  {
+    "component": 58091989,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "37669d5",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 104771530,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "63eafca",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 197748151,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc965b7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 200216213,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bef0e95",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 205921779,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c461df3",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 257727822,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5c9d4e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 325963612,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "136dcf5c",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 334537169,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13f0a1d1",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 364578614,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15bb0736",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 379932823,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "16a55097",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 426948684,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1972b84c",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 438545150,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a23aafe",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 500163616,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1dcfe420",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 579945399,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "229143b7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 644489391,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "266a20af",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 664851624,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27a0d4a8",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 670851830,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27fc62f6",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 676146266,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "284d2c5a",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 678818872,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2875f438",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 699025931,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29aa4a0b",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 877526458,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "344dfdba",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 893686509,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "354492ed",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 900362427,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35aa70bb",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 968676969,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "39bcd669",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1074057068,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4004cf6c",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1101659459,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "41a9fd43",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1142807574,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "441ddc16",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1146592172,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44579bac",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1149645168,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44863170",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1297595891,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4d57bdf3",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1488722231,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58bc1937",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1513315530,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a335cca",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1527555896,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b0ca738",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1610044139,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ff752eb",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1617708606,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "606c463e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1620808957,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "609b94fd",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1640589014,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61c966d6",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1824443036,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6cbeca9c",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1855972005,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6e9fe2a5",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1889924168,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "70a5f448",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1926150499,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72ceb963",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1987471067,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "767666db",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1989927921,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "769be3f1",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2060749510,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7ad48ac6",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2119471017,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7e548fa9",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2122477091,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7e826e23",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2256178064,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "867a8b90",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2327700382,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8abde39e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2372677621,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d6c2ff5",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2388226168,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e597078",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2388343399,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e5b3a67",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2472382073,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "935d8e79",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2694195430,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a09628e6",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2712349460,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a1ab2b14",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2728900209,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a2a7b671",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2821383538,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a82ae572",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2884381597,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "abec2b9d",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2913351430,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ada63706",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3034634979,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4e0dae3",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3070447856,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b70350f0",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3071235548,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b70f55dc",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3074833586,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7463cb2",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3139007693,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bb1974cd",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3299995937,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c4b1f121",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3328236263,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c660dae7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3342237582,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c7367f8e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3481376187,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf8195bb",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3496976249,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d06f9f79",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3591081728,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d60b8f00",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3711381798,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dd373126",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3720197484,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddbdb56c",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3748108936,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df679a88",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3786139301,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1abe6a5",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4001183923,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ee7d38b3",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4022223517,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "efbe429d",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4036004258,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f09089a2",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4050077111,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f16745b7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4063572623,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f235328f",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4174016554,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8ca702a",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4189226595,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f9b28663",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4229780467,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fc1d53f3",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4250028233,
+    "category": 2206760584,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd5248c9",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 126747879,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78e04e7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 265931943,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd9cca7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 344556034,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14898202",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 356491338,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "153fa04a",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 396249864,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "179e4b08",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 403315874,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "180a1ca2",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 506655766,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1e32f416",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 581251544,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22a531d8",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 752947687,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ce111e7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 793704611,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f4ef8a3",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 797888464,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f8ecfd0",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 803322034,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2fe1b8b2",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 889853703,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "350a1707",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 891814997,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35280455",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 968086815,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "39b3d51f",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 973399228,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a04e4bc",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1025261059,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3d1c3e03",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1156752362,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44f2a3ea",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1179569208,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "464ecc38",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1196227367,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "474cfb27",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1255651699,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ad7b973",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1257408155,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4af2869b",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1346963948,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "504909ec",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1351620334,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "509016ee",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1417963683,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "548468a3",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1493491452,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5904defc",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1514458766,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a44ce8e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1522568815,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ac08e6f",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1574842762,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5dde318a",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1640201183,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61c37bdf",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1649870968,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62570878",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1698675509,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "653fbb35",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1723497063,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "66ba7a67",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1748265581,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68346a6d",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1759193764,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68db2aa4",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1806407409,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6bab96f1",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1814660433,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6c298551",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1828567982,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6cfdbbae",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1886131202,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "706c1402",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1946528725,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7405abd5",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 1999849300,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "77334754",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2010785752,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "77da27d8",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2046440334,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "79fa338e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2119392857,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7e535e59",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2129576359,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7eeec1a7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2135985161,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f508c09",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2144894072,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7fd87c78",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2193521482,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "82be7b4a",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2239161307,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8576e3db",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2303019694,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "89454aae",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2372992148,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d70fc94",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2426430730,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "90a0650a",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2482803857,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "93fc9491",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2586711566,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a2e160e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2603478655,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b2dee7f",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2614576406,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9bd74516",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2729867414,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a2b67896",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2845499549,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a99ae09d",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2908900109,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad624b0d",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2951255939,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "afe89783",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 2960466051,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0752083",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3091684646,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8475d26",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3091932095,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b84b23bf",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3250483220,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c1be7014",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3275060915,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c33576b3",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3327404141,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c654286d",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3335408949,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6ce4d35",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3393138763,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca3f304b",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3519513920,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d1c78540",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3531955388,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2855cbc",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3583166194,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d592c6f2",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3630671235,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d867a583",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3638124199,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d8d95ea7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3802587410,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2a6e112",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3843872672,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e51cd7a0",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3869468501,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e6a36755",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3873499534,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e6e0e98e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 3940129255,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ead999e7",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4074664739,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f2de7323",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4094337135,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f40aa06f",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4121862926,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5aea30e",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4277285136,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fef23110",
+    "itemType": "loadouts"
+  },
+  {
+    "component": 4290514146,
+    "category": 2206760584,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ffbc0ce2",
+    "itemType": "loadouts"
+  }
+]

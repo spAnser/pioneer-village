@@ -1,0 +1,2611 @@
+[
+  {
+    "component": 4168180784,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f8716430",
+    "itemType": "neckties",
+    "friendlyName": "Grand Neckerchief"
+  },
+  {
+    "component": 1732493259,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "6743bfcb",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_1",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1390533501,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "52e1db7d",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_10",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2274951285,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "87990075",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_2",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2042193078,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "79b964b6",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_3",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3255137613,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c205754d",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_4",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2608670781,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9b7d283d",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_5",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3765482023,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e070b227",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_6",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3492221332,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d0271194",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_7",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3676612491,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "db24a78b",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_8",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3571620615,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d4e29b07",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_002_9",
+    "itemType": "neckties"
+  },
+  {
+    "component": 57803522,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "3720302",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_1",
+    "itemType": "neckties"
+  },
+  {
+    "component": 47430120,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "2d3b9e8",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_10",
+    "itemType": "neckties"
+  },
+  {
+    "component": 815422802,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "309a5d52",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_2",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1594178087,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "5f053a27",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_3",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3663802593,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "da6130e1",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_4",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3358592127,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c8300c7f",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_5",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4193054712,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f9eceff8",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_6",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3885189957,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e7934b45",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_7",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2205909779,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "837b8313",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_8",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2972900993,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "b132de81",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_003_9",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1516947474,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "5a6ac812",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_004_3",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3375211930,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c92da59a",
+    "name": "CLOTHING_HL_PLAYER_NECKTIE_004_7",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4219503846,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb8084e6",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 781642514,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2e96eb12",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1759764399,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68e3dfaf",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2049114669,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a23022d",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1168677177,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45a89939",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2010807708,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "77da7d9c",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2914609493,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "adb96955",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2670382136,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9f2acc38",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2301861962,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8933a04a",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1398272184,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5357f0b8",
+    "name": "CLOTHING_ITEM_F_NECKTIE_000_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2823102138,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a8451eba",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2038284584,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "797dc128",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3273315429,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c31ad465",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3041441985,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b548b8c1",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1319201648,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ea16b70",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1085788061,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "40b7cf9d",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1778197031,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69fd2227",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1556514746,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5cc687ba",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1436842350,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "55a4796e",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2534600750,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9712f02e",
+    "name": "CLOTHING_ITEM_F_NECKTIE_001_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3897035302,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8480a26",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1591080768,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ed5f740",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1991288565,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "76b0a6f5",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1684669032,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "646a0268",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 840801744,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "321d9dd0",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2680224021,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9fc0f915",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3796237858,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e245fe22",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3498859183,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d08c5aaf",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2127083305,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7ec8b729",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1603401144,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f91f5b8",
+    "name": "CLOTHING_ITEM_F_NECKTIE_002_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4236079644,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fc7d721c",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3676712814,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "db262f6e",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2648290518,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9dd9b4d6",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2341736523,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b94104b",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3012812874,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b393e04a",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2993217012,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b268ddf4",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1478404449,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "581ea961",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1189906173,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "46ec86fd",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1854428752,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6e885650",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 399189939,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "17cb27b3",
+    "name": "CLOTHING_ITEM_F_NECKTIE_003_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 625557869,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2549416d",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 931325408,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3782e5e0",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3522304704,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d1f21ac0",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3577291086,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d539214e",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3881747865,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e75ec599",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4171032597,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f89ce815",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2293925966,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88ba884e",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2600283347,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9afd2cd3",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3190649651,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be2d7333",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 690931800,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "292ec858",
+    "name": "CLOTHING_ITEM_F_NECKTIE_004_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1947203311,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "740ff6ef",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1641173620,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61d25274",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2493036544,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9498b800",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2253921151,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86581b7f",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2867160217,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aae56499",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2564669578,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98ddc08a",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3448646094,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd8e29ce",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3218574945,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bfd78e61",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 829911463,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "317771a7",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 222505543,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d432a47",
+    "name": "CLOTHING_ITEM_F_NECKTIE_005_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2253064950,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "864b0af6",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 572932774,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "222642a6",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 415838188,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18c92fec",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 93555073,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5938981",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4225070597,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fbd57605",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2071590220,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b79f54c",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1772048791,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "699f5197",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1592605747,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5eed3c33",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1295620300,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4d3998cc",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 967537384,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "39ab72e8",
+    "name": "CLOTHING_ITEM_F_NECKTIE_006_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1526560414,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5afd769e",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3168680542,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bcde3a5e",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3469860421,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ced1de45",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2526277066,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9693edca",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2684158108,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9ffd009c",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4189664275,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f9b93413",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 361458615,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "158b6bb7",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3747446620,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df5d7f5c",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3911488234,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e92492ea",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1968384553,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75532a29",
+    "name": "CLOTHING_ITEM_F_NECKTIE_007_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1504102506,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59a6c86a",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 861338571,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3356fbcb",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 85466958,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5181f4e",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3388909792,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c9fea8e0",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 582703764,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22bb5a94",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3734721049,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "de9b5219",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3168538267,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bcdc0e9b",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3046342722,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b5938042",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3344573391,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c75a23cf",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1652546364,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "627fdb3c",
+    "name": "CLOTHING_ITEM_F_NECKTIE_301_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 376512148,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "16711e94",
+    "name": "CLOTHING_ITEM_F_SEASONAL_005_NECKTIE_VAR_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2599334551,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9aeeb297",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1475095699,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57ec2c93",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1177127182,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4629890e",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1914364136,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "721ae0e8",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1739639828,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67b0cc14",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1637957621,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61a13ff5",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1331338088,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f5a9b68",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 987066974,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3ad5725e",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 832004066,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31975fe2",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3314681561,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c59206d9",
+    "name": "CLOTHING_ITEM_M_NECKTIE_000_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2510476539,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95a2d4fb",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3889264983,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e7d17957",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2048204256,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a151de0",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2889515562,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ac3a822a",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3192530505,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be4a2649",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3034485606,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4de9366",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3338155929,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6f83799",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 407951949,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1850da4d",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 714440406,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2a957ed6",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2421604655,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9056c12f",
+    "name": "CLOTHING_ITEM_M_NECKTIE_001_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1045873403,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e56c2fb",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1341941318,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ffc6646",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4207000530,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fac1bbd2",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 112972742,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6bbd3c6",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 411924329,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "188d7769",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2699003919,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0df880f",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3016404453,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b3caade5",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2746092968,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a3ae0da8",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2900697110,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ace52016",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1567260734,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5d6a803e",
+    "name": "CLOTHING_ITEM_M_NECKTIE_002_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2116314776,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7e246698",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1754413940,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68923b74",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 584134639,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22d12fef",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1798095017,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b2cc0a9",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1165292854,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4574f536",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 262965670,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fac89a6",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3825545816,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e4053258",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 911824639,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "365956ff",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2799843387,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a6e2383b",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1958635872,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74be6960",
+    "name": "CLOTHING_ITEM_M_NECKTIE_003_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2281333531,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "87fa631b",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2035205572,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "794ec5c4",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2916560592,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "add72ed0",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2630126763,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9cc48cab",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3209941449,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bf53d1c9",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3024272287,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b442bb9f",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2785812274,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a60c1f32",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3352847050,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c7d862ca",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3125725111,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba4ec7b7",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2802819105,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a70fa021",
+    "name": "CLOTHING_ITEM_M_NECKTIE_004_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4008749851,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eef0ab1b",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3031414406,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4afb686",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2725384715,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a272120b",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2568159053,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9912ff4d",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2211239105,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83ccd4c1",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2541747259,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "977ffc3b",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2243778742,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "85bd58b6",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1829971810,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6d132762",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1532593135,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b5983ef",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3726576272,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "de1f0a90",
+    "name": "CLOTHING_ITEM_M_NECKTIE_005_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2467183782,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "930e3ca6",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3370461267,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c8e52853",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4011619521,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef1c74c1",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 639001272,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "261662b8",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3143208252,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bb598d3c",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 310164357,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "127cbb85",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 398706195,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "17c3c613",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1931640015,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "73227ccf",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 72294186,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44f1f2a",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3090745419,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b839084b",
+    "name": "CLOTHING_ITEM_M_NECKTIE_006_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 713050283,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2a8048ab",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2030364087,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7904e5b7",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1193214444,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "471f01ec",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2471270982,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "934c9a46",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1774470966,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69c44736",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2953335741,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b00853bd",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3323297751,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6157fd7",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2862598376,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa9fc8e8",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3234723140,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0cdf544",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3438415488,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ccf20e80",
+    "name": "CLOTHING_ITEM_M_NECKTIE_007_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3395206408,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca5ebd08",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3986228104,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ed990388",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_002",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1592026653,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ee4661d",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_003",
+    "itemType": "neckties"
+  },
+  {
+    "component": 287230611,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "111eca93",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_004",
+    "itemType": "neckties"
+  },
+  {
+    "component": 39857430,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2602d16",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_005",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1412747446,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5434d0b6",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_006",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1173566515,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45f33433",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_007",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4172782013,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8b799bd",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_008",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1785593128,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a6dfd28",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_009",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2716659033,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a1eced59",
+    "name": "CLOTHING_ITEM_M_NECKTIE_301_TINT_010",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1788677365,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a9d0cf5",
+    "name": "CLOTHING_ITEM_M_SEASONAL_005_NECKTIE_VAR_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2379310473,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8dd16589",
+    "name": "CLOTHING_ITEM_NECKTIES_PZERO_001",
+    "itemType": "neckties"
+  },
+  {
+    "component": 23384379,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "164d13b",
+    "itemType": "neckties"
+  },
+  {
+    "component": 202331595,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0f55cb",
+    "itemType": "neckties"
+  },
+  {
+    "component": 236330564,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e161e44",
+    "itemType": "neckties"
+  },
+  {
+    "component": 321549510,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "132a74c6",
+    "itemType": "neckties"
+  },
+  {
+    "component": 378956505,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "16966ad9",
+    "itemType": "neckties"
+  },
+  {
+    "component": 484686815,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ce3bbdf",
+    "itemType": "neckties"
+  },
+  {
+    "component": 518915190,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1eee0476",
+    "itemType": "neckties"
+  },
+  {
+    "component": 558646452,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "214c44b4",
+    "itemType": "neckties"
+  },
+  {
+    "component": 689255496,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29153448",
+    "itemType": "neckties"
+  },
+  {
+    "component": 794434656,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f5a1c60",
+    "itemType": "neckties"
+  },
+  {
+    "component": 973226613,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a024275",
+    "itemType": "neckties"
+  },
+  {
+    "component": 974270928,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a1231d0",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1279518456,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c43e6f8",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1554905902,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5cadfb2e",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1595276247,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f15fbd7",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1784419978,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a5c168a",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1976119851,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75c9322b",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1987495802,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7676c77a",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2004332737,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7777b0c1",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2236796023,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8552cc77",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2340642207,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b835d9f",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2482203064,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "93f369b8",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2569795824,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "992bf8f0",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2713027900,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a1b5853c",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2730477465,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a2bfc799",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3044553176,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b57831d8",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3379989943,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c9768db7",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3854899708,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e5c519fc",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3859319230,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e60889be",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3890958831,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e7eb51ef",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4127177329,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5ffba71",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4161058468,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f804b6a4",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4162581072,
+    "category": 2056714954,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f81bf250",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3746172370,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "df4a0dd2",
+    "itemType": "neckties"
+  },
+  {
+    "component": 258520866,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f68b722",
+    "itemType": "neckties"
+  },
+  {
+    "component": 278804881,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "109e3991",
+    "itemType": "neckties"
+  },
+  {
+    "component": 332829865,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13d694a9",
+    "itemType": "neckties"
+  },
+  {
+    "component": 496522113,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d985381",
+    "itemType": "neckties"
+  },
+  {
+    "component": 558947062,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2150daf6",
+    "itemType": "neckties"
+  },
+  {
+    "component": 572272948,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "221c3134",
+    "itemType": "neckties"
+  },
+  {
+    "component": 929782738,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "376b5bd2",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1027311026,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3d3b85b2",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1056670531,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3efb8343",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1167718447,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4599f82f",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1272051822,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4bd1f86e",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1496781624,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59371338",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1533518794,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b67a3ca",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1745858793,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "680fb0e9",
+    "itemType": "neckties"
+  },
+  {
+    "component": 1899935342,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "713eb66e",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2088513278,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7c7c2efe",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2248010949,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "85fdecc5",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2452751661,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9232052d",
+    "itemType": "neckties"
+  },
+  {
+    "component": 2690949522,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a064a192",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3017088431,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b3d51daf",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3026780456,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4690128",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3244144832,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c15db8c0",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3396480314,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca722d3a",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3478246568,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf51d4a8",
+    "itemType": "neckties"
+  },
+  {
+    "component": 3774576635,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e0fb77fb",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4165019274,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f841268a",
+    "itemType": "neckties"
+  },
+  {
+    "component": 4261669120,
+    "category": 2056714954,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe03e900",
+    "itemType": "neckties"
+  }
+]

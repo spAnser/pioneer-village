@@ -1,0 +1,1201 @@
+[
+  {
+    "component": 479389656,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1c92e7d8",
+    "name": "CLOTHING_ITEM_SATCHEL_PZ_000_MONEY_BAG",
+    "itemType": "accessories",
+    "friendlyName": "Money bag"
+  },
+  {
+    "component": 125186871,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7763337",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1103112138,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "41c027ca",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1563745971,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5d34deb3",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1928104482,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72ec8a22",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2193303999,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "82bb29bf",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2413708293,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8fde4405",
+    "itemType": "accessories"
+  },
+  {
+    "component": 184553188,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b000ee4",
+    "itemType": "accessories"
+  },
+  {
+    "component": 415476331,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18c3aa6b",
+    "itemType": "accessories"
+  },
+  {
+    "component": 630506505,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2594c409",
+    "itemType": "accessories"
+  },
+  {
+    "component": 869490822,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "33d36086",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1831981894,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6d31d346",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3539967712,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2ff9ee0",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2615911919,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9beba5ef",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3535606677,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2bd1395",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3707250699,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dcf8280b",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3952297281,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb934541",
+    "itemType": "accessories"
+  },
+  {
+    "component": 4190691756,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f9c8e1ac",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1425315838,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54f497fe",
+    "itemType": "accessories"
+  },
+  {
+    "component": 186865449,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b235729",
+    "itemType": "accessories"
+  },
+  {
+    "component": 633637995,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25c48c6b",
+    "itemType": "accessories"
+  },
+  {
+    "component": 840049926,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32122506",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1071693987,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3fe0c0a3",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1572797535,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5dbefc5f",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1870962666,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f849fea",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1924727825,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72b90411",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1249910627,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4a801f63",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1421751263,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54be33df",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2347606593,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8beda241",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2785105512,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a6015668",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2957535990,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0486af6",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2142472653,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7fb389cd",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2195213171,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "82d84b73",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2245513598,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "85d7d17e",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2066103311,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b263c0f",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2774634629,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a5619085",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3440140250,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd0c5fda",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2425251551,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "908e66df",
+    "itemType": "accessories"
+  },
+  {
+    "component": 472730324,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1c2d4ad4",
+    "itemType": "accessories"
+  },
+  {
+    "component": 751889435,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2cd0ec1b",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1367324028,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "517fb57c",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1383905138,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "527cb772",
+    "itemType": "accessories"
+  },
+  {
+    "component": 4108581958,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f4e3fc46",
+    "itemType": "accessories"
+  },
+  {
+    "component": 4169827215,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f88a838f",
+    "itemType": "accessories"
+  },
+  {
+    "component": 268570922,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1002112a",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1161395096,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45397b98",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1459429151,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56fd1f1f",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1488331409,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58b62291",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3700828751,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc962a4f",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3998469578,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ee53cdca",
+    "itemType": "accessories"
+  },
+  {
+    "component": 331889766,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13c83c66",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1033605132,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3d9b900c",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1646221587,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "621f5913",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1934228328,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7349fb68",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3215004705,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bfa11421",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2910121921,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad74efc1",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2549371645,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97f452fd",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3091567607,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b84593f7",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3387832136,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c9ee3748",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1982467945,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "762a0f69",
+    "itemType": "accessories"
+  },
+  {
+    "component": 996448735,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b6499df",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1783560191,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a4ef7ff",
+    "itemType": "accessories"
+  },
+  {
+    "component": 962388072,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "395ce068",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1310657000,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e1f09e8",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2020826768,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78735e90",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2798009141,
+    "category": 2044190614,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a6c63b35",
+    "itemType": "accessories"
+  },
+  {
+    "component": 672816198,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "281a5c46",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1375457417,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "51fbd089",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2110595215,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "7dcd208f",
+    "itemType": "accessories"
+  },
+  {
+    "component": 106536658,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6599ed2",
+    "itemType": "accessories"
+  },
+  {
+    "component": 334838281,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13f53a09",
+    "itemType": "accessories"
+  },
+  {
+    "component": 395446814,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "17920a1e",
+    "itemType": "accessories"
+  },
+  {
+    "component": 407739098,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "184d9ada",
+    "itemType": "accessories"
+  },
+  {
+    "component": 543109313,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "205f30c1",
+    "itemType": "accessories"
+  },
+  {
+    "component": 639284852,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "261ab674",
+    "itemType": "accessories"
+  },
+  {
+    "component": 698986061,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29a9ae4d",
+    "itemType": "accessories"
+  },
+  {
+    "component": 842060900,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3230d464",
+    "itemType": "accessories"
+  },
+  {
+    "component": 869906529,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "33d9b861",
+    "itemType": "accessories"
+  },
+  {
+    "component": 908007386,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "361f17da",
+    "itemType": "accessories"
+  },
+  {
+    "component": 929771352,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "376b2f58",
+    "itemType": "accessories"
+  },
+  {
+    "component": 998211937,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b7f8161",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1089223782,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "40ec3c66",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1093485276,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "412d42dc",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1129689671,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4355b247",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1154349470,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44cdf99e",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1184587236,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "469b5de4",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1205001629,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47d2dd9d",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1233681743,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "49887d4f",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1532334500,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b5591a4",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1644237999,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "620114af",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1772359125,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69a40dd5",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1916923621,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7241eee5",
+    "itemType": "accessories"
+  },
+  {
+    "component": 1960563697,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74dbd3f1",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2030947604,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "790dcd14",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2054532984,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a75af78",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2081384484,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7c0f6824",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2083997285,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7c374665",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2119613742,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7e56bd2e",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2128550154,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7edf190a",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2188373785,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "826fef19",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2222887774,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "847e935e",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2259986609,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86b4a8b1",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2283065514,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8814d0aa",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2323702520,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a80e2f8",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2401734228,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f278e54",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2405456205,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f60594d",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2515232355,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95eb6663",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2522512733,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "965a7d5d",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2528720851,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "96b937d3",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2577096401,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "999b5ed1",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2582201839,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "99e945ef",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2692746986,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0800eea",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2711270202,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a19ab33a",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2763852298,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a4bd0a0a",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2811879760,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a799e150",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2817677893,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7f25a45",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2833841516,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a8e8fd6c",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2922818135,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ae36aa57",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2947152543,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "afa9fa9f",
+    "itemType": "accessories"
+  },
+  {
+    "component": 2986685622,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b20534b6",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3035759915,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4f2052b",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3069947527,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b6fbae87",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3123969736,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba33fec8",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3229848359,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0839327",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3358051035,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c827cadb",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3418646580,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cbc46834",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3687948771,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dbd1a1e3",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3726727053,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "de21578d",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3851150942,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e58be65e",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3972147053,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ecc2276d",
+    "itemType": "accessories"
+  },
+  {
+    "component": 3973678412,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ecd9854c",
+    "itemType": "accessories"
+  },
+  {
+    "component": 4034097926,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f0737306",
+    "itemType": "accessories"
+  },
+  {
+    "component": 4212924881,
+    "category": 2044190614,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb1c21d1",
+    "itemType": "accessories"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 4173337785,
+        "category": 2080418032,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "f8c014b9",
+        "name": "PROVISION_TALISMAN_RAVEN_CLAW",
+        "itemType": "talisman_holster",
+        "friendlyName": "Raven Claw Talisman"
+      }
+    ]
+  }
+]

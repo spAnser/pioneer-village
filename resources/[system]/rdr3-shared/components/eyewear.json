@@ -1,0 +1,1633 @@
+[
+  {
+    "component": 3666291437,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da872aed",
+    "name": "CLOTHING_F_HALLOWEEN_BLINDFOLD_001_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3604429719,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6d73b97",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_001_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 158572755,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "973a0d3",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_001_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4172054337,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8ac7f41",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_001_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 765356328,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2d9e6928",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_001_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4214228044,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb30044c",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_001_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1383936741,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "527d32e5",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_001_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4131166310,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f63c9866",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_002_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2188646331,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "827417bb",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_003_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2955277086,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b025f31e",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_003_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1674173031,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "63c9da67",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_003_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2451060483,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92183703",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_003_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 946144158,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3865039e",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_003_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1956281352,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "749a7c08",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_003_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1969276072,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7560c4a8",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_000",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1802744014,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b73b0ce",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 356287585,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "153c8461",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2295884695,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88d86b97",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1385856796,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "529a7f1c",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 612901624,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "248822f8",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3997775475,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ee493673",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3791527389,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1fe1ddd",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_007",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 196374857,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bb47149",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_008",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4249146474,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd44d46a",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_400_TINT_009",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3750606429,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df8db65d",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_000",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3457553262,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce16136e",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1088747786,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "40e4f90a",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 831674981,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31925a65",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2772451807,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a54041df",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2590977085,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a6f2c3d",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2307951232,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "89908a80",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4006040784,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eec754d0",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_007",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1194296739,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "472f85a3",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_008",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3081954984,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7b2e6a8",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_401_TINT_009",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 608830321,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "244a0371",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_000",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4261885676,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe0736ec",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1338366568,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4fc5da68",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 153865525,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92bcd35",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3939799175,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ead49087",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1454598163,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56b36813",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1030370689,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3d6a3581",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4089127460,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3bb2224",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_007",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1241632432,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4a01ceb0",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_008",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 541588285,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2047fb3d",
+    "name": "CLOTHING_ITEM_F_EYEWEAR_402_TINT_009",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4101185819,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f473211b",
+    "name": "CLOTHING_ITEM_F_SEASON_EYEWEAR_000_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 648925612,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "26add1ac",
+    "name": "CLOTHING_ITEM_F_SEASON_EYEWEAR_001_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1735180074,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "676cbf2a",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_001_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1975999455,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75c75bdf",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_001_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2212624404,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83e1f814",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_001_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2586911926,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a3124b6",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_001_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2840511217,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a94ec2f1",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_001_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3195858253,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be7ced4d",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_001_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4159375900,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f7eb0a1c",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_002_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1402367803,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "53966f3b",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_003_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 492831439,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d6002cf",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_003_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 795256540,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f66a6dc",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_003_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2034383494,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "79423a86",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_003_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2331500017,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8af7ddf1",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_003_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1950593173,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7443b095",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_003_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1855433464,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6e97aaf8",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_000",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1614679621,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "603e0e45",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2466018241,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92fc73c1",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2227820380,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84c9d75c",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3046193390,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b59138ee",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2804128787,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7239c13",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3118711187,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9e3c193",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2950278535,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "afd9ad87",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_007",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2726040268,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a27c12cc",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_008",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3572168617,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d4eaf7a9",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_400_TINT_009",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3966305505,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ec6904e1",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_000",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4273416573,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "feb7297d",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3502067082,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d0bd4d8a",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3771985335,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e0d3edb7",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3030586710,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4a31556",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3328522458,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c66538da",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2580045725,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "99c85f9d",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2192322905,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "82ac3159",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_007",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1422677402,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54cc559a",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_008",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1711962134,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "660a7816",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_401_TINT_009",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2985649579,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1f565ab",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_000",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2738571319,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a33b4837",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2507648176,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9577acb0",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_002",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1053065059,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3ec47f63",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_003",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 287712295,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "11262427",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_004",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 66062779,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f009bb",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_005",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4121455916,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5a86d2c",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_006",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1974332725,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75aded35",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_007",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1741541749,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67cdd175",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_008",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1520121616,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a9b3710",
+    "name": "CLOTHING_ITEM_M_EYEWEAR_402_TINT_009",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 633673784,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25c51838",
+    "name": "CLOTHING_ITEM_M_SEASON_EYEWEAR_000_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3127964802,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba70f482",
+    "name": "CLOTHING_ITEM_M_SEASON_EYEWEAR_001_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 273042443,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "10464c0b",
+    "name": "CLOTHING_M_HALLOWEEN_BLINDFOLD_001_TINT_001",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 25757734,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1890826",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 57840671,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "372941f",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 232285778,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dd86652",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 256513079,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f4a1437",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 261066652,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8f8f9c",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 404882903,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "182205d7",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 468303075,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1be9bce3",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 491596567,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d4d2b17",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 687658761,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "28fcd709",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 703897274,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29f49eba",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 833646746,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31b0709a",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 839013505,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32025481",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 853760873,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32e35b69",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 934442100,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "37b27474",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1043399903,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e3104df",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1062144983,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f4f0bd7",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1159266260,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4518ffd4",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1232312314,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "497397fa",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1273995356,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4befa05c",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1277902794,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c2b3fca",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1360047962,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5110af5a",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1471642175,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57b77a3f",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1561839464,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5d17c768",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1918332203,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72576d2b",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1999532911,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "772e736f",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2103428499,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d5fc593",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2496442901,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "94ccb215",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2602778310,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b233ec6",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2843270001,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a978db71",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3002920389,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2fcedc5",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3112582587,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9863dbb",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3692200647,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc1282c7",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3702671003,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dcb2469b",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3719408597,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddb1abd5",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3807198078,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2ed3b7e",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3848388711,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e561c067",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3946628855,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb3cc6f7",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4154746092,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f7a464ec",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4177355384,
+    "category": 98860198,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8fd6278",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 143997640,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8953ac8",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 216253896,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce3c5c8",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 248048712,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ec8ec48",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 280793835,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "10bc92eb",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 286982018,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "111aff82",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 442424923,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a5ede5b",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 620426131,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24faf393",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 710985267,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2a60c633",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 910496775,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "36451407",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 913610374,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "36749686",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 950952654,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "38ae62ce",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1000448224,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3ba1a0e0",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1326026628,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f098f84",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1376537493,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "520c4b95",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1539057897,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5bbc28e9",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1905513620,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7193d494",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 1964216731,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7513919b",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2136938148,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f5f16a4",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2422534239,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9064f05f",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2436577884,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "913b3a5c",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2604031456,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b365de0",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2701842939,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a10ad9fb",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2758570060,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a46c704c",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2821205422,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a8282dae",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 2989506990,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b23041ae",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3013055713,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b39794e1",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3072366548,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b72097d4",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3185486191,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bddea96f",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3364006122,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c882a8ea",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3394454128,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca534270",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3465119823,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce89884f",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3536507719,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2cad347",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3547038756,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d36b8424",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3688124301,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dbd44f8d",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3785826459,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1a7209b",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3843323866,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e51477da",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 3988353879,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edb97357",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4092628831,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3f08f5f",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4215657432,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb45d3d8",
+    "itemType": "eyewear"
+  },
+  {
+    "component": 4237174501,
+    "category": 98860198,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fc8e26e5",
+    "itemType": "eyewear"
+  }
+]

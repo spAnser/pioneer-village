@@ -1,0 +1,10 @@
+{
+  "extends": "../../../../../tsconfig.client.json",
+  "include": [
+    "./",
+    "../../../../../types.d.ts",
+    "../../../../*/rdr3-shared/types/*.d.ts",
+    "../../../../**/src/types.d.ts",
+    "../../../../**/src/client/types.d.ts"
+  ]
+}

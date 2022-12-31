@@ -1,0 +1,1792 @@
+[
+  {
+    "component": 1473136074,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "57ce45ca",
+    "itemType": "belts",
+    "friendlyName": "Ammunition Belt"
+  },
+  {
+    "component": 1845747474,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "6e03df12",
+    "itemType": "belts",
+    "friendlyName": "Custom Ammunition Belt"
+  },
+  {
+    "component": 1463018264,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5733e318",
+    "name": "CLOTHING_ITEM_F_SEASONAL_000_BELT_000",
+    "itemType": "belts"
+  },
+  {
+    "component": 357463992,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "154e77b8",
+    "name": "CLOTHING_ITEM_F_SEASONAL_001_BELT_000",
+    "itemType": "belts"
+  },
+  {
+    "component": 3917713822,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e983919e",
+    "name": "CLOTHING_ITEM_F_SEASONAL_003_BELT_000",
+    "itemType": "belts"
+  },
+  {
+    "component": 3636508515,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d8c0b763",
+    "name": "CLOTHING_ITEM_M_SEASONAL_000_BELT_000",
+    "itemType": "belts"
+  },
+  {
+    "component": 2171425070,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "816d512e",
+    "name": "CLOTHING_ITEM_M_SEASONAL_001_BELT_000",
+    "itemType": "belts"
+  },
+  {
+    "component": 836717178,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31df4a7a",
+    "name": "CLOTHING_ITEM_M_SEASONAL_003_BELT_000",
+    "itemType": "belts"
+  },
+  {
+    "component": 27429346,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a289e2",
+    "itemType": "belts"
+  },
+  {
+    "component": 77281155,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "49b3783",
+    "itemType": "belts"
+  },
+  {
+    "component": 85760909,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "51c9b8d",
+    "itemType": "belts"
+  },
+  {
+    "component": 164078819,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c7a4e3",
+    "itemType": "belts"
+  },
+  {
+    "component": 235209306,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e05025a",
+    "itemType": "belts"
+  },
+  {
+    "component": 272594406,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "103f75e6",
+    "itemType": "belts"
+  },
+  {
+    "component": 308597565,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1264d33d",
+    "itemType": "belts"
+  },
+  {
+    "component": 310845978,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1287221a",
+    "itemType": "belts"
+  },
+  {
+    "component": 396247184,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "179e4090",
+    "itemType": "belts"
+  },
+  {
+    "component": 434651734,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "19e84256",
+    "itemType": "belts"
+  },
+  {
+    "component": 493840722,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d6f6952",
+    "itemType": "belts"
+  },
+  {
+    "component": 547118156,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "209c5c4c",
+    "itemType": "belts"
+  },
+  {
+    "component": 558618427,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "214bd73b",
+    "itemType": "belts"
+  },
+  {
+    "component": 697588165,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "299459c5",
+    "itemType": "belts"
+  },
+  {
+    "component": 699523561,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29b1e1e9",
+    "itemType": "belts"
+  },
+  {
+    "component": 777285116,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2e546dfc",
+    "itemType": "belts"
+  },
+  {
+    "component": 795764089,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f6e6579",
+    "itemType": "belts"
+  },
+  {
+    "component": 798625191,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f9a0da7",
+    "itemType": "belts"
+  },
+  {
+    "component": 803879457,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2fea3a21",
+    "itemType": "belts"
+  },
+  {
+    "component": 821501170,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "30f71cf2",
+    "itemType": "belts"
+  },
+  {
+    "component": 923046309,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "370491a5",
+    "itemType": "belts"
+  },
+  {
+    "component": 953360409,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "38d32019",
+    "itemType": "belts"
+  },
+  {
+    "component": 964185405,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "39784d3d",
+    "itemType": "belts"
+  },
+  {
+    "component": 1064045917,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f6c0d5d",
+    "itemType": "belts"
+  },
+  {
+    "component": 1127899329,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "433a60c1",
+    "itemType": "belts"
+  },
+  {
+    "component": 1180580659,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "465e3b33",
+    "itemType": "belts"
+  },
+  {
+    "component": 1244682020,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4a305724",
+    "itemType": "belts"
+  },
+  {
+    "component": 1264331603,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b5c2b53",
+    "itemType": "belts"
+  },
+  {
+    "component": 1329669406,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f41251e",
+    "itemType": "belts"
+  },
+  {
+    "component": 1483904820,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58729734",
+    "itemType": "belts"
+  },
+  {
+    "component": 1484054368,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5874df60",
+    "itemType": "belts"
+  },
+  {
+    "component": 1680232168,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "64264ee8",
+    "itemType": "belts"
+  },
+  {
+    "component": 1728394329,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67053459",
+    "itemType": "belts"
+  },
+  {
+    "component": 1756984590,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68b9750e",
+    "itemType": "belts"
+  },
+  {
+    "component": 1763266373,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69194f45",
+    "itemType": "belts"
+  },
+  {
+    "component": 1784418239,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a5c0fbf",
+    "itemType": "belts"
+  },
+  {
+    "component": 1903992234,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "717c9daa",
+    "itemType": "belts"
+  },
+  {
+    "component": 1907444145,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71b149b1",
+    "itemType": "belts"
+  },
+  {
+    "component": 1924328449,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72b2ec01",
+    "itemType": "belts"
+  },
+  {
+    "component": 1948268890,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7420395a",
+    "itemType": "belts"
+  },
+  {
+    "component": 1959955780,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74d28d44",
+    "itemType": "belts"
+  },
+  {
+    "component": 2013637394,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7805ab12",
+    "itemType": "belts"
+  },
+  {
+    "component": 2020553633,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "786f33a1",
+    "itemType": "belts"
+  },
+  {
+    "component": 2025555469,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78bb860d",
+    "itemType": "belts"
+  },
+  {
+    "component": 2028552940,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78e942ec",
+    "itemType": "belts"
+  },
+  {
+    "component": 2111575750,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7ddc16c6",
+    "itemType": "belts"
+  },
+  {
+    "component": 2139117892,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f805944",
+    "itemType": "belts"
+  },
+  {
+    "component": 2162115713,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80df4481",
+    "itemType": "belts"
+  },
+  {
+    "component": 2205084972,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "836eed2c",
+    "itemType": "belts"
+  },
+  {
+    "component": 2211901271,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83d6ef57",
+    "itemType": "belts"
+  },
+  {
+    "component": 2290950050,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "888d1fa2",
+    "itemType": "belts"
+  },
+  {
+    "component": 2325145159,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a96e647",
+    "itemType": "belts"
+  },
+  {
+    "component": 2342498893,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b9fb24d",
+    "itemType": "belts"
+  },
+  {
+    "component": 2405319259,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f5e425b",
+    "itemType": "belts"
+  },
+  {
+    "component": 2460313613,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92a5680d",
+    "itemType": "belts"
+  },
+  {
+    "component": 2523118415,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9663bb4f",
+    "itemType": "belts"
+  },
+  {
+    "component": 2534547444,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97121ff4",
+    "itemType": "belts"
+  },
+  {
+    "component": 2540121056,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97672be0",
+    "itemType": "belts"
+  },
+  {
+    "component": 2614396995,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9bd48843",
+    "itemType": "belts"
+  },
+  {
+    "component": 2620114655,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c2bc6df",
+    "itemType": "belts"
+  },
+  {
+    "component": 2639286070,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9d504f36",
+    "itemType": "belts"
+  },
+  {
+    "component": 2709778774,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a183f156",
+    "itemType": "belts"
+  },
+  {
+    "component": 2724585433,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a265dfd9",
+    "itemType": "belts"
+  },
+  {
+    "component": 2765601663,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a4d7bb7f",
+    "itemType": "belts"
+  },
+  {
+    "component": 2772594211,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a5426e23",
+    "itemType": "belts"
+  },
+  {
+    "component": 2893147513,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ac71ed79",
+    "itemType": "belts"
+  },
+  {
+    "component": 2916294248,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "add31e68",
+    "itemType": "belts"
+  },
+  {
+    "component": 2945589734,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "af9221e6",
+    "itemType": "belts"
+  },
+  {
+    "component": 2955180886,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0247b56",
+    "itemType": "belts"
+  },
+  {
+    "component": 3130511218,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba97cf72",
+    "itemType": "belts"
+  },
+  {
+    "component": 3186141723,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bde8aa1b",
+    "itemType": "belts"
+  },
+  {
+    "component": 3192980288,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be510340",
+    "itemType": "belts"
+  },
+  {
+    "component": 3194709088,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be6b6460",
+    "itemType": "belts"
+  },
+  {
+    "component": 3249874696,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c1b52708",
+    "itemType": "belts"
+  },
+  {
+    "component": 3268649140,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c2d3a0b4",
+    "itemType": "belts"
+  },
+  {
+    "component": 3294684226,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c460e442",
+    "itemType": "belts"
+  },
+  {
+    "component": 3333616563,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6b2f3b3",
+    "itemType": "belts"
+  },
+  {
+    "component": 3333802097,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6b5c871",
+    "itemType": "belts"
+  },
+  {
+    "component": 3453848970,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cddd8d8a",
+    "itemType": "belts"
+  },
+  {
+    "component": 3480662926,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf76b38e",
+    "itemType": "belts"
+  },
+  {
+    "component": 3495382776,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d0574ef8",
+    "itemType": "belts"
+  },
+  {
+    "component": 3537513554,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2da2c52",
+    "itemType": "belts"
+  },
+  {
+    "component": 3653972131,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d9cb30a3",
+    "itemType": "belts"
+  },
+  {
+    "component": 3663422208,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da5b6300",
+    "itemType": "belts"
+  },
+  {
+    "component": 3684509961,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "db9d2909",
+    "itemType": "belts"
+  },
+  {
+    "component": 3721761043,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddd59113",
+    "itemType": "belts"
+  },
+  {
+    "component": 3801390955,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2949f6b",
+    "itemType": "belts"
+  },
+  {
+    "component": 3849930751,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e57947ff",
+    "itemType": "belts"
+  },
+  {
+    "component": 3916907709,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e97744bd",
+    "itemType": "belts"
+  },
+  {
+    "component": 3973515255,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ecd707f7",
+    "itemType": "belts"
+  },
+  {
+    "component": 4004131516,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eeaa32bc",
+    "itemType": "belts"
+  },
+  {
+    "component": 4134338090,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f66cfe2a",
+    "itemType": "belts"
+  },
+  {
+    "component": 4144130833,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f7026b11",
+    "itemType": "belts"
+  },
+  {
+    "component": 4147241010,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f731e032",
+    "itemType": "belts"
+  },
+  {
+    "component": 4157014250,
+    "category": 2798728390,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f7c700ea",
+    "itemType": "belts"
+  },
+  {
+    "component": 1478648583,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "58226307",
+    "itemType": "belts"
+  },
+  {
+    "component": 7635313,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "748171",
+    "itemType": "belts"
+  },
+  {
+    "component": 27101825,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "19d8a81",
+    "itemType": "belts"
+  },
+  {
+    "component": 78420045,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ac984d",
+    "itemType": "belts"
+  },
+  {
+    "component": 129313270,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b529f6",
+    "itemType": "belts"
+  },
+  {
+    "component": 207156152,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c58f3b8",
+    "itemType": "belts"
+  },
+  {
+    "component": 271524070,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "102f20e6",
+    "itemType": "belts"
+  },
+  {
+    "component": 320684923,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "131d437b",
+    "itemType": "belts"
+  },
+  {
+    "component": 351767783,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14f78ce7",
+    "itemType": "belts"
+  },
+  {
+    "component": 415907976,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18ca4088",
+    "itemType": "belts"
+  },
+  {
+    "component": 495929766,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d8f49a6",
+    "itemType": "belts"
+  },
+  {
+    "component": 543415123,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2063db53",
+    "itemType": "belts"
+  },
+  {
+    "component": 590405869,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2330e0ed",
+    "itemType": "belts"
+  },
+  {
+    "component": 640692056,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "26302f58",
+    "itemType": "belts"
+  },
+  {
+    "component": 662331030,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "277a5e96",
+    "itemType": "belts"
+  },
+  {
+    "component": 687598731,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "28fbec8b",
+    "itemType": "belts"
+  },
+  {
+    "component": 693792757,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "295a6ff5",
+    "itemType": "belts"
+  },
+  {
+    "component": 715187253,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2aa0e435",
+    "itemType": "belts"
+  },
+  {
+    "component": 718749511,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ad73f47",
+    "itemType": "belts"
+  },
+  {
+    "component": 883366093,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34a718cd",
+    "itemType": "belts"
+  },
+  {
+    "component": 892664331,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3534fa0b",
+    "itemType": "belts"
+  },
+  {
+    "component": 893979216,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35490a50",
+    "itemType": "belts"
+  },
+  {
+    "component": 898979011,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "359554c3",
+    "itemType": "belts"
+  },
+  {
+    "component": 1031215158,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3d771836",
+    "itemType": "belts"
+  },
+  {
+    "component": 1061814043,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f49ff1b",
+    "itemType": "belts"
+  },
+  {
+    "component": 1104879870,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "41db20fe",
+    "itemType": "belts"
+  },
+  {
+    "component": 1180679230,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "465fbc3e",
+    "itemType": "belts"
+  },
+  {
+    "component": 1225003663,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4904128f",
+    "itemType": "belts"
+  },
+  {
+    "component": 1254923486,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4acc9cde",
+    "itemType": "belts"
+  },
+  {
+    "component": 1258104219,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4afd259b",
+    "itemType": "belts"
+  },
+  {
+    "component": 1263167699,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b4a68d3",
+    "itemType": "belts"
+  },
+  {
+    "component": 1264137840,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b593670",
+    "itemType": "belts"
+  },
+  {
+    "component": 1340007615,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4fdee4bf",
+    "itemType": "belts"
+  },
+  {
+    "component": 1362874870,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "513bd1f6",
+    "itemType": "belts"
+  },
+  {
+    "component": 1365163362,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "515ebd62",
+    "itemType": "belts"
+  },
+  {
+    "component": 1384156829,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "52808e9d",
+    "itemType": "belts"
+  },
+  {
+    "component": 1417654340,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "547fb044",
+    "itemType": "belts"
+  },
+  {
+    "component": 1487323374,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58a6c0ee",
+    "itemType": "belts"
+  },
+  {
+    "component": 1502860005,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5993d2e5",
+    "itemType": "belts"
+  },
+  {
+    "component": 1527847193,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b111919",
+    "itemType": "belts"
+  },
+  {
+    "component": 1546822145,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5c32a201",
+    "itemType": "belts"
+  },
+  {
+    "component": 1574883058,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ddecef2",
+    "itemType": "belts"
+  },
+  {
+    "component": 1650778375,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6264e107",
+    "itemType": "belts"
+  },
+  {
+    "component": 1659729241,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62ed7559",
+    "itemType": "belts"
+  },
+  {
+    "component": 1743673121,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67ee5721",
+    "itemType": "belts"
+  },
+  {
+    "component": 1759932810,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68e6718a",
+    "itemType": "belts"
+  },
+  {
+    "component": 1803394044,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b7d9bfc",
+    "itemType": "belts"
+  },
+  {
+    "component": 1833942422,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6d4fbd96",
+    "itemType": "belts"
+  },
+  {
+    "component": 1938424408,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "738a0258",
+    "itemType": "belts"
+  },
+  {
+    "component": 2002506158,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "775bd1ae",
+    "itemType": "belts"
+  },
+  {
+    "component": 2093498001,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7cc83e91",
+    "itemType": "belts"
+  },
+  {
+    "component": 2108861151,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7db2aadf",
+    "itemType": "belts"
+  },
+  {
+    "component": 2111248363,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7dd717eb",
+    "itemType": "belts"
+  },
+  {
+    "component": 2210175669,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83bc9ab5",
+    "itemType": "belts"
+  },
+  {
+    "component": 2245109479,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "85d1a6e7",
+    "itemType": "belts"
+  },
+  {
+    "component": 2256753159,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86835207",
+    "itemType": "belts"
+  },
+  {
+    "component": 2296083629,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88db74ad",
+    "itemType": "belts"
+  },
+  {
+    "component": 2366025029,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d06ad45",
+    "itemType": "belts"
+  },
+  {
+    "component": 2377460494,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8db52b0e",
+    "itemType": "belts"
+  },
+  {
+    "component": 2400533095,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f153a67",
+    "itemType": "belts"
+  },
+  {
+    "component": 2407616124,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f814e7c",
+    "itemType": "belts"
+  },
+  {
+    "component": 2455877631,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9261b7ff",
+    "itemType": "belts"
+  },
+  {
+    "component": 2522149290,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9654f1aa",
+    "itemType": "belts"
+  },
+  {
+    "component": 2526560364,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9698406c",
+    "itemType": "belts"
+  },
+  {
+    "component": 2552220547,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "981fcb83",
+    "itemType": "belts"
+  },
+  {
+    "component": 2673460727,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9f59c5f7",
+    "itemType": "belts"
+  },
+  {
+    "component": 2750506911,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a3f1679f",
+    "itemType": "belts"
+  },
+  {
+    "component": 2852024128,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9fe6f40",
+    "itemType": "belts"
+  },
+  {
+    "component": 2869555792,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ab09f250",
+    "itemType": "belts"
+  },
+  {
+    "component": 2949621555,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "afcfa733",
+    "itemType": "belts"
+  },
+  {
+    "component": 2979660504,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b19a02d8",
+    "itemType": "belts"
+  },
+  {
+    "component": 3033693408,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4d27ce0",
+    "itemType": "belts"
+  },
+  {
+    "component": 3070023572,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b6fcd794",
+    "itemType": "belts"
+  },
+  {
+    "component": 3086126109,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7f28c1d",
+    "itemType": "belts"
+  },
+  {
+    "component": 3101948171,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8e3f90b",
+    "itemType": "belts"
+  },
+  {
+    "component": 3134296294,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bad190e6",
+    "itemType": "belts"
+  },
+  {
+    "component": 3234327338,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0c7eb2a",
+    "itemType": "belts"
+  },
+  {
+    "component": 3256160943,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c21512af",
+    "itemType": "belts"
+  },
+  {
+    "component": 3385288849,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c9c76891",
+    "itemType": "belts"
+  },
+  {
+    "component": 3407189684,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cb1596b4",
+    "itemType": "belts"
+  },
+  {
+    "component": 3432199273,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc933469",
+    "itemType": "belts"
+  },
+  {
+    "component": 3510003580,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d136677c",
+    "itemType": "belts"
+  },
+  {
+    "component": 3634839507,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d8a73fd3",
+    "itemType": "belts"
+  },
+  {
+    "component": 3660648293,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da310f65",
+    "itemType": "belts"
+  },
+  {
+    "component": 3830892854,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e456c936",
+    "itemType": "belts"
+  },
+  {
+    "component": 3861997722,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e631689a",
+    "itemType": "belts"
+  },
+  {
+    "component": 3868580784,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e695dbb0",
+    "itemType": "belts"
+  },
+  {
+    "component": 3899894762,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e873abea",
+    "itemType": "belts"
+  },
+  {
+    "component": 3904547964,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8baac7c",
+    "itemType": "belts"
+  },
+  {
+    "component": 3906265134,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8d4e02e",
+    "itemType": "belts"
+  },
+  {
+    "component": 4053005062,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f193f306",
+    "itemType": "belts"
+  },
+  {
+    "component": 4136602208,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f68f8a60",
+    "itemType": "belts"
+  },
+  {
+    "component": 4165798702,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f84d0b2e",
+    "itemType": "belts"
+  },
+  {
+    "component": 4176448619,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8ef8c6b",
+    "itemType": "belts"
+  },
+  {
+    "component": 4207383252,
+    "category": 2798728390,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fac792d4",
+    "itemType": "belts"
+  }
+]

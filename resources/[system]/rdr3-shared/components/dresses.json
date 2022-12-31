@@ -1,0 +1,21 @@
+[
+  {
+    "component": 3250050649,
+    "category": 2727505819,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c1b7d659",
+    "name": "CLOTHING_M_SEASON3_NIGHTGOWN_001_TINT_001",
+    "itemType": "dresses"
+  },
+  {
+    "component": 3097988864,
+    "category": 2727505819,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8a78f00",
+    "itemType": "dresses"
+  }
+]

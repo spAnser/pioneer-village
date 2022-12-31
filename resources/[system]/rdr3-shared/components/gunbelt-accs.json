@@ -1,0 +1,466 @@
+[
+  {
+    "component": 3697835770,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc687efa",
+    "name": "CLOTHING_ITEM_F_GUNBELT_ACCS_001_TINT_001",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1780554349,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a211a6d",
+    "name": "CLOTHING_ITEM_F_GUNBELT_ACCS_001_TINT_002",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 673617541,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "28269685",
+    "name": "CLOTHING_ITEM_F_GUNBELT_ACCS_001_TINT_003",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 911160022,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "364f32d6",
+    "name": "CLOTHING_ITEM_F_GUNBELT_ACCS_001_TINT_004",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2356535074,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c75df22",
+    "name": "CLOTHING_ITEM_F_GUNBELT_ACCS_001_TINT_005",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2597551069,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9ad37bdd",
+    "name": "CLOTHING_ITEM_F_GUNBELT_ACCS_001_TINT_006",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1616393810,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "60583652",
+    "name": "CLOTHING_ITEM_F_GUNBELT_ACCS_301_TINT_001",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2981012122,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1aea29a",
+    "name": "CLOTHING_ITEM_M_GUNBELT_ACCS_001_TINT_001",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3489128236,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cff7df2c",
+    "name": "CLOTHING_ITEM_M_GUNBELT_ACCS_001_TINT_002",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 657657249,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27330da1",
+    "name": "CLOTHING_ITEM_M_GUNBELT_ACCS_001_TINT_003",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 888711468,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34f8a92c",
+    "name": "CLOTHING_ITEM_M_GUNBELT_ACCS_001_TINT_004",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 4222891684,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fbb436a4",
+    "name": "CLOTHING_ITEM_M_GUNBELT_ACCS_001_TINT_005",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 158519841,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "972d221",
+    "name": "CLOTHING_ITEM_M_GUNBELT_ACCS_001_TINT_006",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3875485387,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e6ff36cb",
+    "name": "CLOTHING_ITEM_M_GUNBELT_ACCS_301_TINT_001",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 854558623,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32ef879f",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 982397463,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a8e3217",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1076710066,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "402d4ab2",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1332472111,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f6be92f",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1753160533,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "687f1b55",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1801549954,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b617882",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2040642970,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "79a1bd9a",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2100839623,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d3844c7",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2102598757,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d531c65",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2301309973,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "892b3415",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2485078525,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "941f49fd",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2963145466,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b09e02fa",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3120935176,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba05b108",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3284816350,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c3ca51de",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3459307870,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce30d95e",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3689608402,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dbeaf4d2",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3849029587,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e56b87d3",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 4080083806,
+    "category": 4048825617,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f331235e",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 271365123,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "102cb403",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 333605870,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13e26bee",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 489230767,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d2911af",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 978406399,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a514bff",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1179832526,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4652d0ce",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1218111634,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "489ae892",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 1728259430,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67032566",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2456681531,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "926dfc3b",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 2984605558,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1e57776",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3088253905,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b81303d1",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3270515087,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c2f0198f",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3403995636,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cae4d9f4",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3446156923,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd682e7b",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3701964153,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dca77d79",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3853029243,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e5a88f7b",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 3896223701,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e83ba7d5",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 4103548248,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f4972d58",
+    "itemType": "gunbelt_accs"
+  },
+  {
+    "component": 4106026280,
+    "category": 4048825617,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f4bcfd28",
+    "itemType": "gunbelt_accs"
+  }
+]

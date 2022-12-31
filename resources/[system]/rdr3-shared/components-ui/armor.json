@@ -1,0 +1,187 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 899778996,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "35a189b4",
+        "itemType": "armor"
+      },
+      {
+        "component": 1177299657,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "462c2ac9",
+        "itemType": "armor"
+      },
+      {
+        "component": 1953793889,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "74748761",
+        "itemType": "armor"
+      },
+      {
+        "component": 2637027539,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9d2dd8d3",
+        "itemType": "armor"
+      },
+      {
+        "component": 2763804176,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a4bc4e10",
+        "itemType": "armor"
+      },
+      {
+        "component": 2927139856,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ae789c10",
+        "itemType": "armor"
+      },
+      {
+        "component": 2949676568,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "afd07e18",
+        "itemType": "armor"
+      },
+      {
+        "component": 3130168220,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ba92939c",
+        "itemType": "armor"
+      },
+      {
+        "component": 3885755822,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e79bedae",
+        "itemType": "armor"
+      },
+      {
+        "component": 4048158986,
+        "category": 1927737204,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f14a010a",
+        "itemType": "armor"
+      },
+      {
+        "component": 989985828,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3b01fc24",
+        "itemType": "armor"
+      },
+      {
+        "component": 1631153824,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "61396ea0",
+        "itemType": "armor"
+      },
+      {
+        "component": 1814257258,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6c235e6a",
+        "itemType": "armor"
+      },
+      {
+        "component": 2051996353,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7a4efac1",
+        "itemType": "armor"
+      },
+      {
+        "component": 2262143950,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "86d593ce",
+        "itemType": "armor"
+      },
+      {
+        "component": 2465639440,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "92f6ac10",
+        "itemType": "armor"
+      },
+      {
+        "component": 2706655435,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a15448cb",
+        "itemType": "armor"
+      },
+      {
+        "component": 3377502403,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c95098c3",
+        "itemType": "armor"
+      },
+      {
+        "component": 3817803097,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e38f0d59",
+        "itemType": "armor"
+      },
+      {
+        "component": 4170970969,
+        "category": 1927737204,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f89bf759",
+        "itemType": "armor"
+      }
+    ]
+  }
+]

@@ -1,0 +1,116 @@
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script&family=Homemade+Apple&family=Josefin+Sans:wght@300&family=Open+Sans:wght@300;400;700&family=Oxygen:wght@300;400;700&family=Redressed&family=Satisfy&family=Waiting+for+the+Sunrise&display=swap');
+
+html
+{
+  box-sizing: border-box;
+
+  font-family: 'Oxygen', sans-serif;
+  //browser font size hack for accessibility to make rem multiple of 10's eg. 1rem = 10px
+  font-size: 62.5%;
+
+  text-rendering: optimizeLegibility;
+
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*
+{
+  box-sizing: border-box;
+}
+
+b,
+strong
+{
+  font-weight: 600;
+}
+
+picture
+{
+  display: block;
+
+  line-height: 0;
+}
+
+img
+{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+figure
+{
+  canvas
+  {
+    max-width: 100%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#app
+{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+
+  &.app--4-3
+  {
+    max-width: math.div(4, 3) * 100vh;
+  }
+
+  &.app--16-9
+  {
+    max-width: math.div(16, 9) * 100vh;
+  }
+
+  &.app--21-9
+  {
+    max-width: math.div(21, 9) * 100vh;
+  }
+}
+
+.app--daytime
+{
+  background: {
+    position: center;
+    size: cover;
+    image: url(https://p--v.b-cdn.net/daytime.webp);
+  };
+}
+
+.app--nighttime
+{
+  background: {
+    position: center;
+    size: cover;
+    image: url(https://p--v.b-cdn.net/nighttime.webp);
+  };
+}
+
+.app--inside
+{
+  background: {
+    position: center;
+    size: cover;
+    image: url(https://p--v.b-cdn.net/inside.webp);
+  };
+}

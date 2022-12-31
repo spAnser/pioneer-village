@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 206107233,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c48f261",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 213552724,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cba8e54",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 444467632,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1a7e09b0",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 795005860,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2f62d3a4",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 1128128582,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "433de046",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 1539550285,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5bc3ac4d",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 1669962694,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "63899bc6",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 1967931211,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "754c3f4b",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 2035697503,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7956475f",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 2122969561,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7e89f1d9",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 2270102371,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "874f0363",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 2282742994,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "880fe4d2",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 2511183904,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "95ada020",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 2863254040,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "aaa9ca18",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 3102795430,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b8f0e6a6",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 3489395893,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cffbf4b5",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 3520567439,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d1d7988f",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 3758535917,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e006b4ed",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 3809714167,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e3139ff7",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 4040506234,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f0d53b7a",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 4052499684,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f18c3ce4",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 4213274860,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fb2178ec",
+        "itemType": "horse_bridles"
+      },
+      {
+        "component": 4270741228,
+        "category": 2494751663,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fe8e56ec",
+        "itemType": "horse_bridles"
+      }
+    ]
+  }
+]

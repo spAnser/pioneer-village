@@ -1,0 +1,59 @@
+[
+  {
+    "component": 176992230,
+    "category": 1065301383,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a8cafe6",
+    "name": "CLOTHING_ITEM_BADGE_PZERO_000",
+    "itemType": "badges"
+  },
+  {
+    "component": 153708413,
+    "category": 1065301383,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "929677d",
+    "name": "CLOTHING_ITEM_F_BADGE_000_TINT_001",
+    "itemType": "badges"
+  },
+  {
+    "component": 173044969,
+    "category": 1065301383,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a5074e9",
+    "name": "CLOTHING_ITEM_M_BADGE_000_TINT_001",
+    "itemType": "badges"
+  },
+  {
+    "component": 3679208733,
+    "category": 1065301383,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "db4c451d",
+    "itemType": "badges"
+  },
+  {
+    "component": 532753564,
+    "category": 1065301383,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1fc12c9c",
+    "itemType": "badges"
+  },
+  {
+    "component": 1855386696,
+    "category": 1065301383,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6e96f448",
+    "itemType": "badges"
+  }
+]

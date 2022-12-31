@@ -1,0 +1,40 @@
+[
+  {
+    "component": 3182179136,
+    "category": 3065394999,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "bdac3340",
+    "name": "CLOTHING_ITEM_CHOPS_DUNBEARY",
+    "itemType": "beards_chops"
+  },
+  {
+    "component": 4124252281,
+    "category": 3065394999,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f5d31879",
+    "name": "CLOTHING_ITEM_CHOPS_NORMAL",
+    "itemType": "beards_chops"
+  },
+  {
+    "component": 1336948195,
+    "category": 3065394999,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "4fb035e3",
+    "itemType": "beards_chops"
+  },
+  {
+    "component": 2631482074,
+    "category": 3065394999,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9cd93ada",
+    "itemType": "beards_chops"
+  }
+]

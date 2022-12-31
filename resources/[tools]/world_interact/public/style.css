@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  inset: 0;
+}
+
+.window {
+  position: fixed;
+  top: 7.5vh;
+  width: 15vw;
+  height: 85vh;
+  box-sizing: border-box;
+  padding: 0 16px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  overflow: auto;
+}
+.window--left {
+  left: 5vw;
+}
+.window--right {
+  right: 5vw;
+}
+
+/*# sourceMappingURL=style.css.map */

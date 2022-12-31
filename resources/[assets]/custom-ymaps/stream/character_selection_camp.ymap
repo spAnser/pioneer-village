@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CMapData>
+  <name>character_selection_camp</name>
+  <parent />
+  <flags value="1"/>
+  <contentFlags value="65"/>
+  <streamingExtentsMin  x="2442.2294921875" y="1876.98681640625" z="-306.15721130371094"/>
+  <streamingExtentsMax x="3452.39990234375" y="2882.532470703125" z="694.7653045654297"/>
+  <entitiesExtentsMin x="2942.2294921875" y="2376.98681640625" z="193.84278869628906"/>
+  <entitiesExtentsMax x="2952.39990234375" y="2382.532470703125" z="194.7653045654297"/>
+  <entities>
+    <Item type="CEntityDef">
+      <archetypeName>P_APPLEPILE01X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2942.644287109375" y="2378.714111328125" z="194.6999969482422"/>
+      <rotation x="0" y="0" z="0" w="1"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_BARREL010X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2942.60009765625" y="2378.699951171875" z="193.869140625"/>
+      <rotation x="0" y="0" z="0" w="1"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_BOTTLEBEER01X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2945.264404296875" y="2381.845947265625" z="194.72047424316406"/>
+      <rotation x="0" y="0.026883096890704204" z="0" w="0.9996385842401068"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_BOTTLEBEER01A</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2945.65478515625" y="2381.49609375" z="194.7653045654297"/>
+      <rotation x="-0.007749756604212434" y="0.0191759750256359" z="0.0005519928438226325" w="0.9997859363675266"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_BOTTLECRATE01X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2946.10009765625" y="2382.39990234375" z="193.95301818847656"/>
+      <rotation x="0.0053902404287352775" y="0.07790672483100698" z="0.25009273255864684" w="0.9650674135290112"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_TENTMOUNTAINMEN01X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2952.39990234375" y="2381.75" z="194.16375732421875"/>
+      <rotation x="-0.005930330648938584" y="-0.040051890968359524" z="0.3417388261649225" w="0.938922388645448"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_BENCH_LOG06X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2949.7001953125" y="2378.548583984375" z="194.07470703125"/>
+      <rotation x="0" y="0" z="0.5431603292626029" w="0.8396289994487689"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>S_CAMPFIRE01X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2947.738037109375" y="2377.738037109375" z="194.16622924804688"/>
+      <rotation x="0" y="0" z="-0.007781859693495816" w="0.9999697208714425"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_BENCH_LOG07X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2945.6259765625" y="2376.98681640625" z="194.10260009765625"/>
+      <rotation x="-0.0026938478501100753" y="0.046414861468872665" z="-0.8050387273619711" w="0.5913975408014508"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_DLC_CRATEDOCK03X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2942.2294921875" y="2377.114501953125" z="193.84278869628906"/>
+      <rotation x="0" y="0" z="0.5986259137506624" w="0.8010287231967307"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_CHAIR_CRATE02X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2945.868896484375" y="2380.25244140625" z="194.13519287109375"/>
+      <rotation x="-0.04430884705576431" y="0.04530313606092037" z="0.8372299695757578" w="0.5431669448519584"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_CHAIR_CRATE02X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2946.64990234375" y="2381.199951171875" z="194.18109130859375"/>
+      <rotation x="-0.03290119053600778" y="0.036134088889265954" z="0.9224776581578492" w="0.38294491703254946"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_CHAIR_CRATE02X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2944.2451171875" y="2381.549072265625" z="193.9241485595703"/>
+      <rotation x="0" y="0" z="0.8661766316994837" w="0.4997379740401334"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_CHAIR_CRATE02X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2944.826416015625" y="2382.532470703125" z="193.9173583984375"/>
+      <rotation x="0" y="0" z="-0.3795237517168392" w="0.9251819939248574"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_CRATETABLEMIL01X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2945.39990234375" y="2381.39990234375" z="193.94374084472656"/>
+      <rotation x="0.03172099394896501" y="0.026126090046484553" z="-0.46135861623927926" w="0.8862614925537214"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+    <Item type="CEntityDef">
+      <archetypeName>P_CS_CHESSSET01X</archetypeName>
+      <flags value="1572865"/>
+      <id value="0x0"/>
+      <position x="2945.7431640625" y="2381.98828125" z="194.74745178222656"/>
+      <rotation x="0.031384848490962916" y="0.02639999299394884" z="-0.46126123287081955" w="0.8863160309424681"/>
+      <scaleXY value="1.00000000"/>
+      <scaleZ value="1.00000000"/>
+      <parentIndex value="-1"/>
+      <lodDist value="-1.00000000"/>
+      <childLodDist value="0.00000000"/>
+      <lodLevel>LODTYPES_DEPTH_ORPHANHD</lodLevel>
+      <numChildren value="0"/>
+      <priorityLevel>PRI_REQUIRED</priorityLevel>
+      <extensions/>
+      <redm_loves_you_8afd0f494c4bf509 value="0"/>
+      <tintValue value="0"/>
+      <redm_loves_you_2158e9a42f04a7dc value="255"/>
+      <redm_loves_you_7dd29b0dd179bea5 value="255"/>
+    </Item>
+  </entities>
+  <containerLods/>
+  <boxOccluders/>
+  <occludeModels/>
+  <physicsDictionaries/>
+  <instancedData>
+    <ImapLink/>
+    <PropInstanceList/>
+    <GrassInstanceList/>
+  </instancedData>
+  <timeCycleModifiers/>
+  <redm_loves_you_a1eeea498c70af98/>
+  <redm_loves_you_17e0674db883fc85/>
+  <carGenerators/>
+  <LODLightsSOA>
+    <direction/>
+    <falloff/>
+    <falloffExponent/>
+    <timeAndStateFlags/>
+    <hash/>
+    <coneInnerAngle/>
+    <coneOuterAngleOrCapExt/>
+    <coronaIntensity/>
+    <redm_loves_you_23d5e1fd45c2fc4d/>
+  </LODLightsSOA>
+  <DistantLODLightsSOA>
+    <position/>
+    <redm_loves_you_21b4ce800ac2d569/>
+    <intensity/>
+    <numStreetLights value="0"/>
+    <category value="0"/>
+    <redm_loves_you_8afd0f494c4bf509/>
+    <hash/>
+  </DistantLODLightsSOA>
+  <block>
+    <version value="0"/>
+    <flags value="0"/>
+    <name>character_selection_camp</name>
+    <exportedBy/>
+    <owner/>
+    <time/>
+  </block>
+</CMapData>

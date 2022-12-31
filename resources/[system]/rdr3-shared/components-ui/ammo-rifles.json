@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 495489215,
+        "category": 3658361941,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "1d8890bf",
+        "itemType": "ammo_rifles"
+      },
+      {
+        "component": 852806853,
+        "category": 3658361941,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "32d4ccc5",
+        "itemType": "ammo_rifles"
+      }
+    ]
+  }
+]

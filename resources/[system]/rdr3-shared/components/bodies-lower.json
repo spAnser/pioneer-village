@@ -1,0 +1,728 @@
+[
+  {
+    "component": 4040004332,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f0cd92ec",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_001_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1904350295,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71821457",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_001_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1295567813,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4d38cbc5",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_001_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1041575294,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e152d7e",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_001_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 666304706,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27b700c2",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_001_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3467333312,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ceab4ec0",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_001_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2691919271,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0736da7",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_002_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2791111038,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a65cf97e",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_002_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2560056819,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98975df3",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_002_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3381673960,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c9903fe8",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_002_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2866217590,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aad70276",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_002_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3689211025,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dbe4e491",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_002_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 295847116,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "11a244cc",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_003_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2728191703,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a29ce6d7",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_003_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3428072005,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc543a45",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_003_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3692747218,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc1ad9d2",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_003_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3990977887,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ede17d5f",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_003_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4183856213,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f9609455",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_003_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 996487218,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b653032",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_004_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 165072166,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9d6cd26",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_004_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 412183195,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18916a9b",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_004_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3879733241,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e74007f9",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_004_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4109738852,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f4f5a364",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_004_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1035908285,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3dbeb4bd",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_004_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1090654496,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "41021120",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_005_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 834564757,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31be7295",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_005_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 617568439,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24cf58b7",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_005_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 377797666,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1684bc22",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_005_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 79304845,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ba188d",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_005_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4136074280,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6877c28",
+    "name": "CLOTHING_ITEM_F_BODIES_LOWER_005_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 174153218,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a615e02",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_001_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 202858862,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c17616e",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_001_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2665940747,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9ee7070b",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_001_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2968922921,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0f62b29",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_001_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3550965899,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d3a7708b",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_001_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1702302764,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6577142c",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_001_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3837101269,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e4b584d5",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_002_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4125108010,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5e0272a",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_002_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2539219498,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97596a2a",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_002_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1694074219,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "64f9856b",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_002_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 911157255,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "364f2807",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_002_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2289847408,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "887c4c70",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_002_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4045206010,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f11cf1fa",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_003_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 670654390,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27f95fb6",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_003_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 363641629,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15acbb1d",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_003_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1207869376,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47fe9fc0",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_003_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 902953831,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35d1fb67",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_003_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1824319804,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6cbce93c",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_003_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2226823945,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84baa309",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_004_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1936785526,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "73710076",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_004_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3928485346,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ea27ede2",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_004_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3623045497,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7f34979",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_004_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1535332499,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b835093",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_004_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1389117221,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "52cc3f25",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_004_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2328978452,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ad16414",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_005_V_001",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3096952736,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b897bfa0",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_005_V_002",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4179181734,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f91940a6",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_005_V_003",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 181068809,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "acae409",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_005_V_004",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3723790941,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddf48a5d",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_005_V_005",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4020055470,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef9d2dae",
+    "name": "CLOTHING_ITEM_M_BODIES_LOWER_005_V_006",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 169225350,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a162c86",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1637538702,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "619adb8e",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2854612135,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa25eca7",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3284115479,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c3bfa017",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4091609116,
+    "category": 2184611829,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3e1001c",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 146887878,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8c154c6",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 514113415,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1ea4bf87",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 1354932335,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "50c2a06f",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2036331425,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "795ff3a1",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2155508947,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "807a74d3",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2883835464,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "abe3d648",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 2928447814,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ae8c9146",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 3594498593,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d63fb221",
+    "itemType": "BODIES_LOWER"
+  },
+  {
+    "component": 4075453406,
+    "category": 2184611829,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f2ea7bde",
+    "itemType": "BODIES_LOWER"
+  }
+]

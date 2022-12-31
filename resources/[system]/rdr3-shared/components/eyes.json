@@ -1,0 +1,382 @@
+[
+  {
+    "component": 928002221,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "375030ad",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_001",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3117725108,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9d4b5b4",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_002",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2273169671,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "877dd107",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_003",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2489772761,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9466ead9",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_004",
+    "itemType": "eyes"
+  },
+  {
+    "component": 1647937151,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6239867f",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_005",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3773694950,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e0ee03e6",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_006",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3450854762,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cdafdd6a",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_007",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3703470983,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dcbe7b87",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_008",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2836599857,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9131431",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_009",
+    "itemType": "eyes"
+  },
+  {
+    "component": 625380794,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25468dba",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_010",
+    "itemType": "eyes"
+  },
+  {
+    "component": 869083847,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "33cd2ac7",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_011",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3045109292,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b580ae2c",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_012",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2210319017,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83becaa9",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_013",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2451302243,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "921be763",
+    "name": "CLOTHING_ITEM_F_EYES_001_TINT_014",
+    "itemType": "eyes"
+  },
+  {
+    "component": 1864171073,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f1cfe41",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_001",
+    "itemType": "eyes"
+  },
+  {
+    "component": 1552505114,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5c89591a",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_002",
+    "itemType": "eyes"
+  },
+  {
+    "component": 46507404,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c5a58c",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_003",
+    "itemType": "eyes"
+  },
+  {
+    "component": 4030267507,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f0390073",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_004",
+    "itemType": "eyes"
+  },
+  {
+    "component": 642477207,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "264b6c97",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_005",
+    "itemType": "eyes"
+  },
+  {
+    "component": 329402181,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13a24745",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_006",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2501331517,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95174a3d",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_007",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2195072443,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "82d625bb",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_008",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3096645940,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8931134",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_009",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3983864603,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ed74f31b",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_010",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2739887825,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a34f5ed1",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_011",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2432743988,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9100ba34",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_012",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3065185688,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b6b30598",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_013",
+    "itemType": "eyes"
+  },
+  {
+    "component": 612262189,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "247e612d",
+    "name": "CLOTHING_ITEM_M_EYES_001_TINT_014",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2154931789,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8071a64d",
+    "name": "CLOTHING_ITEM_PZ_EYES_000",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2912303004,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad96379c",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3086830698,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7fd4c6a",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3322603653,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c60ae885",
+    "itemType": "eyes"
+  },
+  {
+    "component": 4023237638,
+    "category": 3928274014,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "efcdbc06",
+    "itemType": "eyes"
+  },
+  {
+    "component": 2452638665,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "92304bc9",
+    "itemType": "eyes"
+  },
+  {
+    "component": 3508160042,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "d11a462a",
+    "itemType": "eyes"
+  },
+  {
+    "component": 1065163858,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f7d1c52",
+    "itemType": "eyes"
+  },
+  {
+    "component": 1559811913,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5cf8d749",
+    "itemType": "eyes"
+  },
+  {
+    "component": 1798796230,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b3773c6",
+    "itemType": "eyes"
+  },
+  {
+    "component": 1986660907,
+    "category": 3928274014,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "766a0a2b",
+    "itemType": "eyes"
+  }
+]

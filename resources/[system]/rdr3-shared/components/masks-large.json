@@ -1,0 +1,119 @@
+[
+  {
+    "component": 1053772564,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "3ecf4b14",
+    "name": "CLOTHING_ITEM_MASK_PIG_001",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Pig Mask"
+  },
+  {
+    "component": 475137309,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1c52051d",
+    "name": "CLOTHING_ITEM_SKULLMASK_MR1_000_1",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Ram Skull Mask"
+  },
+  {
+    "component": 2837806690,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a9257e62",
+    "name": "CLOTHING_ITEM_SKULLMASK_MR1_001_1",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Pagan Skull Mask"
+  },
+  {
+    "component": 1701482196,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "656a8ed4",
+    "name": "CLOTHING_ITEM_SKULLMASK_MR1_002_1",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Cat Skull Mask"
+  },
+  {
+    "component": 703780738,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "29f2d782",
+    "name": "KIT_MASK_BLACK_HOOD",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Executioner Hood"
+  },
+  {
+    "component": 3848522738,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e563cbf2",
+    "name": "KIT_MASK_BROWN_SACK",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Canvas Sack Hood"
+  },
+  {
+    "component": 1147557067,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "446654cb",
+    "name": "KIT_MASK_GREY_CLOTH",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Cloth Mask"
+  },
+  {
+    "component": 4037816389,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f0ac3045",
+    "name": "KIT_MASK_METAL",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Metal Skull Mask"
+  },
+  {
+    "component": 3240264940,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c12284ec",
+    "name": "KIT_MASK_PSYCHO",
+    "itemType": "MASKS_LARGE",
+    "friendlyName": "Psycho Mask"
+  },
+  {
+    "component": 3700592636,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "dc928ffc",
+    "itemType": "MASKS_LARGE"
+  },
+  {
+    "component": 3812572577,
+    "category": 1249071452,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e33f3da1",
+    "itemType": "MASKS_LARGE"
+  }
+]

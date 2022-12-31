@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Object Manager</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app" :class="{ show }">
+        <div class="window window--top">
+            <ul>
+                <li>Position</li>
+                <li>X: {{ Math.round(cameraX * 100) / 100 }}</li>
+                <li>Y: {{ Math.round(cameraY * 100) / 100 }}</li>
+                <li>Z: {{ Math.round(cameraZ * 100) / 100 }}</li>
+            </ul>
+            <ul>
+                <li>Rotation</li>
+                <li>rX: {{ Math.round(cameraRotX * 100) / 100 }}</li>
+                <li>rY: {{ Math.round(cameraRotY * 100) / 100 }}</li>
+                <li>rZ: {{ Math.round(cameraRotZ * 100) / 100 }}</li>
+            </ul>
+        </div>
+        <div class="window window--left">
+            <ol name="objects" multiple>
+                <template v-for="object of objects">
+                    <li ref="objects" :class="{ active: object.id === editingId }" :key="object.id" @click="selectEntity(object.id)">[{{ object.id }}] {{ object.model }}</li>
+                </template>
+            </ol>
+            <button :disabled="!editable" @click="addHandler">Add</button>
+            <button :disabled="!editable" @click="removeHandler">Remove</button>
+            <textarea rows="8" readonly>{{ ymapEntityLimits }}</textarea>
+            <textarea rows="48" readonly>{{ ymapEntities }}</textarea>
+        </div>
+        <div class="window window--right">
+            <p>Space:</p>
+            <ul>
+                <template v-for="space in transformSpaces">
+                    <li :key="space" :class="{ active: transformSpace === space }" @click="setTransformSpace(space)">{{ space }}</li>
+                </template>
+            </ul>
+            <p>Mode:</p>
+            <ul>
+                <template v-for="mode in transformModes">
+                    <li :key="mode" :class="{ active: transformMode === mode }" @click="setTransformMode(mode)">{{ mode }}</li>
+                </template>
+            </ul>
+            <p>Camera Speed:</p>
+            <ul>
+                <template v-for="speed in cameraSpeeds">
+                    <li :key="speed" :class="{ active: cameraSpeed === speed }" @click="cameraSpeed = speed">{{ speed }}</li>
+                </template>
+            </ul>
+            <p>Translate Snap:</p>
+            <ul>
+                <li :class="{ active: translationSnap === null }" @click="setTranslationSnap(null)">None</li>
+                <template v-for="snap in translationSnaps">
+                    <li :key="snap" :class="{ active: translationSnap === snap }" @click="setTranslationSnap(snap)">{{ snap }}</li>
+                </template>
+            </ul>
+            <p>Rotation Snap:</p>
+            <ul>
+                <li :class="{ active: rotationSnap === null }" @click="setRotationSnap(null)">None</li>
+                <template v-for="snap in rotationSnaps">
+                    <li :key="snap" :class="{ active: rotationSnap === snap }" @click="setRotationSnap(snap)">{{ snap }}deg</li>
+                </template>
+            </ul>
+            <h1>Spawn Model</h1>
+            <label>
+                <span>Model Name</span>
+                <input type="text" @keyup="spawnKeyup" v-model="spawnModel">
+            </label>
+            <button :disabled="!spawnModel" @click="spawnButtonHandler">Spawn</button>
+            <h1>Edit Entity</h1>
+            <label>
+                <span>Entity Id</span>
+                <input type="text" v-model="editingId" @change="changeEntity">
+            </label>
+            <label>
+                <span>Model</span>
+                <input readonly type="text" v-model="hash">
+            </label>
+            <label>
+                <span>Alpha</span>
+                <input :disabled="!editable" type="number" v-model="alpha" min="0" max="254" step="1" @change="editEntity">
+            </label>
+            <div class="input-row">
+                <label>
+                    <span>X</span>
+                    <input :disabled="!editable" type="number" v-model="x" step="0.025" @change="editEntity">
+                </label>
+                <label>
+                    <span>Y</span>
+                    <input :disabled="!editable" type="number" v-model="y" step="0.025" @change="editEntity">
+                </label>
+                <label>
+                    <span>Z</span>
+                    <input :disabled="!editable" type="number" v-model="z" step="0.025" @change="editEntity">
+                </label>
+            </div>
+            <div class="input-row">
+                <label>
+                    <span>Pitch</span>
+                    <input :disabled="!editable" type="number" v-model="pitch" min="-360" max="360" step="0.25" @change="editEntity">
+                </label>
+                <label>
+                    <span>Roll</span>
+                    <input :disabled="!editable" type="number" v-model="roll" min="-360" max="360" step="0.25" @change="editEntity">
+                </label>
+                <label>
+                    <span>Yaw</span>
+                    <input :disabled="!editable" type="number" v-model="yaw" min="-360" max="360" step="0.25" @change="editEntity">
+                </label>
+            </div>
+            <div>{{ quaternion }}</div>
+            <button :disabled="!editable" @click="groundButtonHandler">Place on Ground</button>
+            <button :disabled="!editable" @click="cloneButtonHandler">Clone</button>
+            <button :disabled="!editable" @click="deleteEntity">Delete</button>
+        </div>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="transformControls.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

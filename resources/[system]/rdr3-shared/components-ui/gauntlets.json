@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 834504924,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "31bd88dc",
+        "name": "CLOTHING_ITEM_F_GAUNTLETS_400_VAR_001",
+        "itemType": "gauntlets",
+        "friendlyName": "Killerby Gauntlets"
+      },
+      {
+        "component": 3162300659,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bc7ce0f3",
+        "name": "CLOTHING_ITEM_M_GAUNTLETS_400_VAR_001",
+        "itemType": "gauntlets",
+        "friendlyName": "Killerby Gauntlets"
+      },
+      {
+        "component": 674625299,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2835f713",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 822544561,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "310708b1",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 1256012897,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4add3c61",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 1384150994,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "528077d2",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 1495128290,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "591dd8e2",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 1614341912,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6038e718",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 1991811889,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "76b8a331",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 3987191632,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "eda7b750",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 4000547727,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ee73838f",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 53467018,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "32fd78a",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 343734820,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "147cfa24",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 405143938,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "18260182",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 439682452,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1a350594",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 704226601,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "29f9a529",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 732440698,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2ba8287a",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 1954780236,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7483944c",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 2913078806,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ada20e16",
+        "itemType": "gauntlets"
+      },
+      {
+        "component": 3997171173,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ee3ffde5",
+        "itemType": "gauntlets"
+      }
+    ]
+  },
+  {
+    "name": "Leather Gauntlets",
+    "components": [
+      {
+        "component": 1842250006,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6dce8116",
+        "name": "CLOTHING_ITEM_F_SEASON_GAUNTLETS_000_TINT_001",
+        "itemType": "gauntlets",
+        "id": 0,
+        "tint": 0,
+        "friendlyName": "Leather Gauntlets"
+      },
+      {
+        "component": 376060699,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "166a3b1b",
+        "name": "CLOTHING_ITEM_M_SEASON_GAUNTLETS_000_TINT_001",
+        "itemType": "gauntlets",
+        "id": 0,
+        "tint": 0,
+        "friendlyName": "Leather Gauntlets"
+      }
+    ]
+  },
+  {
+    "name": "Harshaw Gauntlets",
+    "components": [
+      {
+        "component": 4192187294,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f9dfb39e",
+        "name": "CLOTHING_ITEM_F_GAUNTLETS_001_TINT_001",
+        "itemType": "gauntlets",
+        "id": 1,
+        "tint": 0,
+        "friendlyName": "Harshaw Gauntlets"
+      },
+      {
+        "component": 2677675883,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9f9a176b",
+        "name": "CLOTHING_ITEM_M_GAUNTLETS_001_TINT_001",
+        "itemType": "gauntlets",
+        "id": 1,
+        "tint": 0,
+        "friendlyName": "Harshaw Gauntlets"
+      }
+    ]
+  },
+  {
+    "name": "Tierney Gauntlets",
+    "components": [
+      {
+        "component": 3446296216,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cd6a4e98",
+        "name": "CLOTHING_ITEM_F_GAUNTLETS_002_TINT_001",
+        "itemType": "gauntlets",
+        "id": 2,
+        "tint": 0,
+        "friendlyName": "Tierney Gauntlets"
+      },
+      {
+        "component": 4251332239,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fd662e8f",
+        "name": "CLOTHING_ITEM_F_GAUNTLETS_002_TINT_002",
+        "itemType": "gauntlets",
+        "id": 2,
+        "tint": 1,
+        "friendlyName": "Tierney Gauntlets"
+      },
+      {
+        "component": 3948382834,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "eb578a72",
+        "name": "CLOTHING_ITEM_F_GAUNTLETS_002_TINT_003",
+        "itemType": "gauntlets",
+        "id": 2,
+        "tint": 2,
+        "friendlyName": "Tierney Gauntlets"
+      },
+      {
+        "component": 437708784,
+        "category": 2446236448,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1a16e7f0",
+        "name": "CLOTHING_ITEM_F_GAUNTLETS_002_TINT_004",
+        "itemType": "gauntlets",
+        "id": 2,
+        "tint": 3,
+        "friendlyName": "Tierney Gauntlets"
+      },
+      {
+        "component": 586942988,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "22fc0a0c",
+        "name": "CLOTHING_ITEM_M_GAUNTLETS_002_TINT_001",
+        "itemType": "gauntlets",
+        "id": 2,
+        "tint": 0,
+        "friendlyName": "Tierney Gauntlets"
+      },
+      {
+        "component": 892776065,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3536ae81",
+        "name": "CLOTHING_ITEM_M_GAUNTLETS_002_TINT_002",
+        "itemType": "gauntlets",
+        "id": 2,
+        "tint": 1,
+        "friendlyName": "Tierney Gauntlets"
+      },
+      {
+        "component": 2290701605,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "88895525",
+        "name": "CLOTHING_ITEM_M_GAUNTLETS_002_TINT_003",
+        "itemType": "gauntlets",
+        "id": 2,
+        "tint": 2,
+        "friendlyName": "Tierney Gauntlets"
+      },
+      {
+        "component": 2086747361,
+        "category": 2446236448,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7c613ce1",
+        "name": "CLOTHING_ITEM_M_GAUNTLETS_002_TINT_004",
+        "itemType": "gauntlets",
+        "id": 2,
+        "tint": 3,
+        "friendlyName": "Tierney Gauntlets"
+      }
+    ]
+  }
+]

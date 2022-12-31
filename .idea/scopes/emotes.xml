@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="emotes" pattern="file[pioneer-village]:resources/emotes//*" />
+</component>

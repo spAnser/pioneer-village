@@ -1,0 +1,36 @@
+declare interface ServerExports {
+  base: Base.ServerExports;
+}
+
+declare interface SocketEvents {
+  test: (one: string) => void;
+}
+
+declare namespace Base {
+  type ServerExports = {
+    emitSocket: emitSocket;
+    awaitSocket: awaitSocket;
+    onSocket: onSocket;
+  };
+
+  type emitSocket = <T extends keyof SocketServer.ServerEvents>(
+    evtName: T,
+    ...params: Parameters<SocketServer.ServerEvents[T]>
+  ) => void;
+
+  type awaitSocket = <
+    T extends keyof {
+      [K in keyof SocketServer.Server]: LastParam<SocketServer.Server[K]> extends () => any ? T : never;
+    },
+  >(
+    evtName: T,
+    ...params: DropLastParam<SocketServer.Server[T]>
+  ) => Promise<Parameters<LastParam<SocketServer.Server[T]>>[0]>;
+
+  type onSocket = <T extends keyof SocketEvents>(evtName: T, callback: SocketEvents[T]) => void;
+
+  type PlayerInfo = {
+    serverId: number;
+    coords?: [number, number, number];
+  };
+}

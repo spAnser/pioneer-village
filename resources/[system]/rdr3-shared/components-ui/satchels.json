@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 2062571572,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "7af05834",
+        "itemType": "satchels",
+        "friendlyName": "John's Satchel"
+      },
+      {
+        "component": 2873297640,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "ab430ae8",
+        "name": "CLOTHING_HL_PLAYER_SATCHEL_002_1",
+        "itemType": "satchels",
+        "friendlyName": "Tonics Satchel"
+      },
+      {
+        "component": 3464786274,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "ce847162",
+        "name": "CLOTHING_HL_PLAYER_SATCHEL_003_1",
+        "itemType": "satchels",
+        "friendlyName": "Ingredients Satchel"
+      },
+      {
+        "component": 917695895,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "36b2ed97",
+        "name": "CLOTHING_HL_PLAYER_SATCHEL_004_1",
+        "itemType": "satchels",
+        "friendlyName": "Kit Satchel"
+      },
+      {
+        "component": 2714371848,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "a1ca0708",
+        "name": "CLOTHING_HL_PLAYER_SATCHEL_005_1",
+        "itemType": "satchels",
+        "friendlyName": "Provisions Satchel"
+      },
+      {
+        "component": 1309992709,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "4e14e705",
+        "name": "CLOTHING_HL_PLAYER_SATCHEL_006_1",
+        "itemType": "satchels",
+        "friendlyName": "Materials Satchel"
+      },
+      {
+        "component": 1541618973,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "5be33d1d",
+        "name": "CLOTHING_HL_PLAYER_SATCHEL_007_1",
+        "itemType": "satchels",
+        "friendlyName": "Valuables Satchel"
+      },
+      {
+        "component": 3701018733,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "dc99106d",
+        "name": "CLOTHING_HL_PLAYER_SATCHEL_008_1",
+        "itemType": "satchels",
+        "friendlyName": "Legend of the East Satchel"
+      },
+      {
+        "component": 2832740883,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "a8d83213",
+        "name": "CLOTHING_HL_PLAYER_SATCHEL_009_1",
+        "itemType": "satchels"
+      },
+      {
+        "component": 1109685657,
+        "category": 2488290598,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "42247599",
+        "name": "CLOTHING_ITEM_F_SATCHEL_001",
+        "itemType": "satchels"
+      },
+      {
+        "component": 4239336475,
+        "category": 2488290598,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "fcaf241b",
+        "name": "CLOTHING_ITEM_F_SATCHEL_001",
+        "itemType": "satchels"
+      },
+      {
+        "component": 2105864149,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7d84efd5",
+        "name": "CLOTHING_ITEM_M_SATCHEL_001",
+        "itemType": "satchels"
+      },
+      {
+        "component": 3997825462,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ee49f9b6",
+        "name": "CLOTHING_ITEM_M_SATCHEL_001",
+        "itemType": "satchels"
+      },
+      {
+        "component": 1053001337,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "3ec38679",
+        "name": "CLOTHING_ITEM_SATCHEL_PZ_000",
+        "itemType": "satchels",
+        "friendlyName": "Arthur's Satchel"
+      },
+      {
+        "component": 2116878699,
+        "category": 2488290598,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7e2d016b",
+        "itemType": "satchels"
+      },
+      {
+        "component": 3928436241,
+        "category": 2488290598,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ea272e11",
+        "itemType": "satchels"
+      }
+    ]
+  }
+]

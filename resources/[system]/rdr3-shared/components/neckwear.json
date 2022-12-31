@@ -1,0 +1,5915 @@
+[
+  {
+    "component": 2088125723,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "7c76451b",
+    "itemType": "neckwear",
+    "friendlyName": "High Neckerchief"
+  },
+  {
+    "component": 3842564726,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e508e276",
+    "itemType": "neckwear",
+    "friendlyName": "Neck Scarf"
+  },
+  {
+    "component": 3323306118,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c615a086",
+    "name": "CLOTHING_F_SEASON3_MASK_001_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3614115829,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d76b07f5",
+    "name": "CLOTHING_ITEM_F_FRONTIER_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3033679411,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b4d24633",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2849681476,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9dab044",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2708184934,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a16b9f66",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1482067261,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58568d3d",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2094978637,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7cded64d",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 871810166,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "33f6c476",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1650630997,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6262a155",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4177383089,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8fdceb1",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 649112086,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "26b0aa16",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2434235850,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "91177dca",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_010",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2052935766,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a5d5056",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_011",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1169647367,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45b76707",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_012",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4035820725,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f08dbcb5",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_013",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 695316092,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2971ae7c",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_014",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 335250320,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13fb8390",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_015",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4140714294,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6ce4936",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_016",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2841914979,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9642e63",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_017",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3661271055,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da3a900f",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_018",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 218658218,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d0875aa",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_019",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 960187631,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "393b4cef",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_020",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3889277469,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e7d1aa1d",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_021",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 369362561,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "16040681",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_022",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1165944182,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "457ee576",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_023",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 24599912,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1775d68",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_024",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2932357131,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aec8380b",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_025",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3709768887,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dd1e94b7",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_026",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 205746944,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c437300",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_027",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1631460580,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "613e1ce4",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_028",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2401499311,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f23f8af",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_029",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3777406075,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e126a47b",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_030",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3546056935,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d35c88e7",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_031",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3870240648,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e6af2f88",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_032",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3573910581,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5058c35",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_033",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 173405909,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a55f6d5",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_000_TINT_034",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1802949143,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b76d217",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_001_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2061070556,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7ad970dc",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_001_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1493314862,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59022d2e",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_001_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2825407481,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a8684bf9",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_001_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3030279269,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b49e6465",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_001_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2752299846,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a40cc346",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_001_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3252551400,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c1ddfee8",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_001_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2410224255,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8fa91a7f",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_001_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3191389042,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be38bb72",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3414677008,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cb87d610",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3646321069,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d95671ad",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1730907481,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "672b8d59",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1960913092,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74e128c4",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2186003353,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "824bc399",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 215996611,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cdfd8c3",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 456455533,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1b34f56d",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 695374312,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "297291e8",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2603561972,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b2f33f4",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_010",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1825068839,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6cc85727",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_011",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3196779179,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be8afaab",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_012",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2419793420,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "903b1e0c",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_013",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2818755999,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a802cd9f",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_014",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3092344380,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8516e3c",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_015",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3424163274,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc1895ca",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_016",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3587090742,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5cea936",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_017",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4020002001,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef9c5cd1",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_018",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4210652043,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "faf9738b",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_019",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2383878876,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e171adc",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_020",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2145746553,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7fe57e79",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_021",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2796243972,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a6ab4c04",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_022",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2441159088,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "918121b0",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_023",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3305015466,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c4fe88aa",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_024",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3066096687,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b6c0ec2f",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_025",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4205147127,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "faa573f7",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_026",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3962492682,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ec2ed70a",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_027",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4051526059,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f17d61ab",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_028",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3812279590,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e33ac526",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_029",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3450052512,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cda39fa0",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_030",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3682286415,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "db7b3b4f",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_031",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3913373403,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e94156db",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_032",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4142658096,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6ebf230",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_033",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3768403343,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e09d458f",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_002_TINT_034",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 75443719,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47f2e07",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4056975530,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1d088aa",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 537519388,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2009e51c",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 261375025,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f944431",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3184795826,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bdd420b2",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3135838940,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bae91adc",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3914364842,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e95077aa",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3095434767,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b880960f",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3878384484,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e72b7364",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 7638878,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "748f5e",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_010",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1192664229,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47169ca5",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_011",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 888600674,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34f6f862",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_012",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1670600094,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6393559e",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_013",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1356771381,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "50deb035",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_014",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2693549971,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a08c4f93",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_015",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2390535028,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e7cab74",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_016",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3157067480,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc2d06d8",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_017",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2848481803,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9c8620b",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_018",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4049695040,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1617140",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_019",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1498693640,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59544008",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_020",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3107127236,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b932ffc4",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_021",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2262899489,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86e11b21",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_022",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2656619020,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e58ca0c",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_023",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2225182366,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84a1969e",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_024",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3221491046,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0040d66",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_025",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3460213211,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce3ea9db",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_026",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3862845914,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e63e59da",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_027",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3950208068,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb736444",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_028",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 28971217,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ba10d1",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_029",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1119000089,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "42b29619",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_030",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 810414412,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "304df14c",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_031",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 100965566,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6049cbe",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_032",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4090165323,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3caf84b",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_033",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3851377620,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e58f5bd4",
+    "name": "CLOTHING_ITEM_F_NECKERCHIEF_003_TINT_034",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3762594134,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e044a156",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_000_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1607278701,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5fcd206d",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_000_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1384547808,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "528685e0",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_000_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1149463002,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "448369da",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_000_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 909757767,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3639cd47",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_000_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2375416826,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d95fbfa",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_000_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2126274119,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7ebc5e47",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_000_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1613504807,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "602c2127",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_000_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1221901655,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "48d4bd57",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_001_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4006316346,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eecb893a",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_001_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 554593727,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "210e6dbf",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_001_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1401213623,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5384d2b7",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_001_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 93304514,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58fb6c2",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_001_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3889068864,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e7ce7b40",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_001_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3658801101,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da14dfcd",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_001_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 207832169,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c634469",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_001_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3984806310,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ed8351a6",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_002_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2555586371,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98532743",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_002_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2435324141,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "912818ed",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_002_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 646005665,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "268143a1",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_002_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 406497044,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "183aa714",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_002_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3389328042,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca050aaa",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_002_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1002991151,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3bc86e2f",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_002_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 110691277,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69903cd",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_002_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2750552060,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a3f217fc",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_200_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2436067963,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9133727b",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_200_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 220031569,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d1d6a51",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_200_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4216997579,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb5a46cb",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_200_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3902513486,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e89ba14e",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_200_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3591076910,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d60b7c2e",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_200_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1377465414,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "521a7446",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_200_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1120753068,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "42cd55ac",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_200_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4138717025,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6afcf61",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_311_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1839396631,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6da2f717",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1541690266,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5be4539a",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 135638014,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "815abfe",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4132440179,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6500873",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 613901569,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24976501",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 316457356,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "12dcc18c",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3512221320,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d1583e88",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3214318341,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bf969b05",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3987470127,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edabf72f",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3689763762,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dbed53b2",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_400_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4239778697,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fcb5e389",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4000532228,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ee734704",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2699406286,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0e5abce",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2452098643,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92280e53",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3276435607,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c34a7097",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3063142186,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b693d72a",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1740257656,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67ba3978",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1508941285,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59f09de5",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3165479793,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bcad6371",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2931476364,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aebac78c",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_401_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 619027838,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24e59d7e",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_402_TINT_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3725451095,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "de0ddf57",
+    "name": "CLOTHING_ITEM_F_NECKWEAR_403_TINT_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 968771889,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "39be4931",
+    "name": "CLOTHING_ITEM_F_OUTLAW_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3791567028,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1feb8b4",
+    "name": "CLOTHING_ITEM_F_ROUGHRIDER_SCARF_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1237454505,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "49c20ea9",
+    "name": "CLOTHING_ITEM_F_SEASONAL_000_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3114202742,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b99ef676",
+    "name": "CLOTHING_ITEM_F_SEASONAL_001_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1281675660,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c64d18c",
+    "name": "CLOTHING_ITEM_F_SEASONAL_002_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 644542331,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "266aef7b",
+    "name": "CLOTHING_ITEM_F_SEASONAL_003_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3408089852,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cb2352fc",
+    "name": "CLOTHING_ITEM_F_SEASON_NECKERCHIEF_000_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4034453407,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f078df9f",
+    "name": "CLOTHING_ITEM_F_SEASON_NECKERCHIEF_001_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3532433374,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d28ca7de",
+    "name": "CLOTHING_ITEM_F_VAQUERO_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3904773032,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8be1ba8",
+    "name": "CLOTHING_ITEM_M_FRONTIER_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 479789096,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1c990028",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2604268904,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b39fd68",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3155640218,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc173f9a",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3313521260,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c580526c",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3619354337,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7baf6e1",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1906846397,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71a82abd",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2163067208,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80edc948",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2470276583,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "933d6de7",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 477790307,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1c7a8063",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3515542821,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d18aed25",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_010",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3328628445,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c666d6dd",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_011",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2016295529,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "782e3a69",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_012",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2283461182,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "881ada3e",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_013",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 986759083,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3ad0bfab",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_014",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1262936215,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b46e097",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_015",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1023427594,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3d00440a",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_016",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3992135165,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edf325fd",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_017",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3744794753,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df350881",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_018",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 343241473,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14757301",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_019",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 887500534,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34e62ef6",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_020",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1056719650,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3efc4322",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_021",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1363273645,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5141e7ad",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_022",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3921680555,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e9c018ab",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_023",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4223057048,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fbb6bc98",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_024",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 91803676,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "578d01c",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_025",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 406615459,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "183c75a3",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_026",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2071018499,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b713c03",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_027",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3180970083,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd99c063",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_028",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2550002972,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97fdf51c",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_029",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 206102796,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c48e10c",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_030",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1426846357,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "550bf295",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_031",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3942325873,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eafb1e71",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_032",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 809052400,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "303928f0",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_033",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1179407638,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "464c5516",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_000_TINT_034",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4014858713,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef4de1d9",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_001_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 76024909,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4880c4d",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_001_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 370192222,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1610af5e",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_001_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2853492584,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa14d768",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_001_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3076813319,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7647207",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_001_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3449986691,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cda29e83",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_001_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3673504040,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "daf53928",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_001_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2458134595,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92842843",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_001_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 791032583,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f263307",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 620240555,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24f81eab",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1400044448,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5372fba0",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3622503558,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7eb0486",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 94953473,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a8e001",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4208380509,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fad6ca5d",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2862655982,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aaa0a9ee",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 555783920,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "212096f0",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1323594359,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ee47277",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2710280348,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a18b989c",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_010",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3090466286,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b834c5ee",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_011",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1762371485,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "690ba79d",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_012",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1455227648,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56bd0300",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_013",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3699445386,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc810e8a",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_014",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 173795903,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a5bea3f",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_015",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4292597055,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ffdbd53f",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_016",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2920460714,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ae12b1aa",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_017",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 398984471,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "17c80517",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_018",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1177936370,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4635e1f2",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_019",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4249997715,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd51d193",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_020",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 252998936,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f147518",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_021",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2700581084,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0f798dc",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_022",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2998090835,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2b33c53",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_023",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 649929833,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "26bd2469",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_024",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 920536235,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "36de44ab",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_025",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1226598695,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "491c6927",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_026",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3987452487,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edabb247",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_027",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1914878767,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7222bb2f",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_028",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2223595516,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84895ffc",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_029",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 680405331,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "288e2953",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_030",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 374080719,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "164c04cf",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_031",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2215731288,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84116058",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_032",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1908030378,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71ba3baa",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_033",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3979752100,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ed3632a4",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_002_TINT_034",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 373247086,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "163f4c6e",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4268530893,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe6c9ccd",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 270843965,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1024c03d",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3709688359,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dd1d5a27",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4016570044,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef67febc",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3084324763,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7d70f9b",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3374133799,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c91d3227",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2454799504,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92514490",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2782555042,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a5da6ba2",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3855214024,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e5c9e5c8",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_010",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3607087156,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6ffc834",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_011",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 554228813,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2108dc4d",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_012",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3531194152,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d279bf28",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_013",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2396927990,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ede37f6",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_014",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2156403530,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80881b4a",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_015",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3931336415,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ea536edf",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_016",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3691270721,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc045241",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_017",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 930154781,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3771091d",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_018",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1764682904,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "692eec98",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_019",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3298338430,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c498a67e",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_020",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2447229193,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "91ddc109",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_021",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1580751299,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5e3859c3",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_022",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1676436779,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "63ec652b",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_023",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2157813389,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "809d9e8d",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_024",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2389195298,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e683a22",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_025",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 391171061,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1750cbf5",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_026",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4248999897,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd4297d9",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_027",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 855081794,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32f78342",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_028",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1203023036,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47b4acbc",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_029",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 528214235,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1f7be8db",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_030",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2912355599,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad97050f",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_031",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3171525620,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd09a3f4",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_032",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3910859798,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e91afc16",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_033",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3670957961,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dace5f89",
+    "name": "CLOTHING_ITEM_M_NECKERCHIEF_003_TINT_034",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 72456305,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4519871",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_000_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4077680099,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f30c75e3",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_000_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3786003230,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1a9d31e",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_000_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3466046714,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce97acfa",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_000_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2719634428,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a21a53fc",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_000_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2385390628,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e2e2c24",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_000_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2106624745,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d908ae9",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_000_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1809147759,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6bd5676f",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_000_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3401697899,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cac1ca6b",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_001_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2105257948,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d7bafdc",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_001_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2656366990,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e54f18e",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_001_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2431669957,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "90f056c5",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_001_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1067267104,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f9d3420",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_001_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 845420974,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "326419ae",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_001_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1464427384,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57496378",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_001_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1173012667,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45eac0bb",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_001_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3589367949,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5f1688d",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_002_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 459535217,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1b63f371",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_002_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3986495460,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ed9d17e4",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_002_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2733834909,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a2f3029d",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_002_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3046418400,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b594a7e0",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_002_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3348220890,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c791cbda",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_002_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3644878647,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d9406f37",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_002_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1778225331,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69fd90b3",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_002_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 195872830,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bacc83e",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_200_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 444327388,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a7be5dc",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_200_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3780178823,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e150f387",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_200_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4280364839,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ff212f27",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_200_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1425300176,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54f45ad0",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_200_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1653700106,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6291760a",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_200_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 712148429,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2a7285cd",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_200_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 941957426,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "38252132",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_200_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2355517904,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c6659d0",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_311_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3720964946,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddc96b52",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3459763247,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce37cc2f",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3100811621,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8d2a165",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2867070344,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aae40588",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 629603020,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2586facc",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 282120544,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "10d0d160",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 27931411,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1aa3313",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4093614014,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3ff97be",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3719654138,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddb56afa",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3485716247,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cfc3cf17",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_400_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2385433611,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e2ed40b",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2031528411,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7916a9db",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 866950916,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "33ac9f04",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_002",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2624221314,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c6a7082",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_003",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2868612532,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aafb8db4",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_004",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 353329630,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "150f61de",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_005",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3485095729,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cfba5731",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_006",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3111922357,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b97c2ab5",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_007",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1917721690,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "724e1c5a",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_008",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3819339529,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e3a67f09",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_401_TINT_009",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1495304893,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59208abd",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_402_TINT_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2295942383,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88d94cef",
+    "name": "CLOTHING_ITEM_M_NECKWEAR_403_TINT_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2283925566,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8821f03e",
+    "name": "CLOTHING_ITEM_M_OUTLAW_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 894167286,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "354be8f6",
+    "name": "CLOTHING_ITEM_M_ROUGHRIDER_SCARF_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3904739787,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8bd99cb",
+    "name": "CLOTHING_ITEM_M_SEASONAL_000_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 486739435,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d030deb",
+    "name": "CLOTHING_ITEM_M_SEASONAL_001_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 65060921,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e0c039",
+    "name": "CLOTHING_ITEM_M_SEASONAL_002_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4055842602,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1bf3f2a",
+    "name": "CLOTHING_ITEM_M_SEASONAL_003_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2618083221,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c0cc795",
+    "name": "CLOTHING_ITEM_M_SEASON_NECKERCHIEF_000_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1888290172,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "708d057c",
+    "name": "CLOTHING_ITEM_M_SEASON_NECKERCHIEF_001_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 995654080,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b5879c0",
+    "name": "CLOTHING_ITEM_M_VAQUERO_NECKWEAR_000",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 844385044,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "32544b14",
+    "name": "CLOTHING_ITEM_PZ_NECKERCHIEF_001",
+    "itemType": "neckwear",
+    "friendlyName": "Neckerchief"
+  },
+  {
+    "component": 1039947233,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3dfc55e1",
+    "name": "CLOTHING_M_SEASON3_MASK_001_TINT_001",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2671238598,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9f37ddc6",
+    "name": "KIT_BANDANA",
+    "itemType": "neckwear",
+    "friendlyName": "Bandana"
+  },
+  {
+    "component": 4110143312,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f4fbcf50",
+    "name": "PROVISION_TALISMAN_BOAR_TUSK",
+    "itemType": "neckwear",
+    "friendlyName": "Boar Tusk Talisman"
+  },
+  {
+    "component": 18321379,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1178fe3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 65239590,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e37a26",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 75395770,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47e72ba",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 79150990,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b7bf8e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 147826241,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8cfa641",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 156767462,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95814e6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 158729547,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "976054b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 211358442,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c9912ea",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 225868801,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d767c01",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 289702821,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "114483a5",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 296422675,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "11ab0d13",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 301357579,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "11f65a0b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 304775217,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "122a8031",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 372573451,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1635050b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 463828404,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ba575b4",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 473109809,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1c331531",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 507913801,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1e462649",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 587605800,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "23062728",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 612212056,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "247d9d58",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 626297106,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25548912",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 671074743,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27ffc9b7",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 698419540,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29a10954",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 713406353,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2a85b791",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 757449736,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2d25c408",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 783540125,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2eb3df9d",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 784698959,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ec58e4f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 807987662,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3028e9ce",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 850147765,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32ac39b5",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 861238902,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "33557676",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 878466191,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "345c548f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 896748908,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35734d6c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 939011673,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "37f82e59",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 969502026,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "39c96d4a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1013873426,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c6e7b12",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1073021471,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3ff5021f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1089689155,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "40f35643",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1105911729,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "41eadfb1",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1120266257,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "42c5e811",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1134950609,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "43a5f8d1",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1157047080,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44f72328",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1174117314,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45fb9bc2",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1204340131,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47c8c5a3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1328083630,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f28f2ae",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1386009110,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "529cd216",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1433945130,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5578442a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1435394350,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "558e612e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1483980978,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5873c0b2",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1501994189,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59869ccd",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1651792265,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62745989",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1668264095,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "636fb09f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1680754876,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "642e48bc",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1748920758,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "683e69b6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1752609646,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6876b36e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1781163039,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a2a641f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1889884929,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "70a55b01",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2005834749,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "778e9bfd",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2070968128,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b707740",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2098694653,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d1789fd",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2139289788,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f82f8bc",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2160946010,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80cd6b5a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2164907984,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8109dfd0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2232093770,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "850b0c4a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2235086673,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8538b751",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2262067587,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86d46983",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2267262030,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8723ac4e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2281497689,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "87fce459",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2348217635,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8bf6f523",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2363134827,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8cda936b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2381526303,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8df3351f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2392927504,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ea12d10",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2479991255,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "93d1a9d7",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2487921418,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "944aab0a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2509509018,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9594119a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2513127837,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95cb499d",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2662454940,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9eb1d69c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2727699249,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a2956331",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2735479391,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a30c1a5f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2738413438,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a338df7e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2807048838,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7502a86",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2839775399,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a94388a7",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2841421266,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a95ca5d2",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2905987786,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad35daca",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2920679691,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ae16090b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2959342080,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b063fa00",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2996819868,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b29fd79c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2999861969,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2ce42d1",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3086659168,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7faae60",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3154388199,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc0424e7",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3188854987,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be1210cb",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3228959050,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c076014a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3267216358,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c2bdc3e6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3277947004,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c361807c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3297437258,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c48ae64a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3335220908,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6cb6eac",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3437377478,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cce237c6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3494867037,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d04f705d",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3562563355,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d458671b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3568830012,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d4b8063c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3583255777,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d59424e1",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3587320834,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5d22c02",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3594100435,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6399ed3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3623164328,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7f519a8",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3654341027,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d9d0d1a3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3701310166,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc9d82d6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3704264058,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dcca957a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3764186520,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e05ced98",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3765220153,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e06cb339",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3780388143,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e154252f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3801405904,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e294d9d0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3808142019,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2fba2c3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3824797777,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e3f9c851",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3899584223,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e86eeedf",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3913977933,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e94a904d",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3927225662,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ea14b53e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3948063491,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb52ab03",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3999643824,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ee65b8b0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4088715721,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3b4d9c9",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4099702111,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f45c7d5f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4145349324,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f71502cc",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4166439732,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f856d334",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4189505455,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f9b6c7af",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4192406785,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f9e30d01",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4231780748,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fc3bd98c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4294955526,
+    "category": 1606587013,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ffffd206",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 58261418,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "378ffaa",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 127765467,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "79d8bdb",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 128617035,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7aa8a4b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 179443688,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ab217e8",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 248236825,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ecbcb19",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 415893709,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18ca08cd",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 425406294,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "195b2f56",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 436833360,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a098c50",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 439431000,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a312f58",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 531437475,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1fad17a3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 543899357,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "206b3edd",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 561081788,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "21716dbc",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 601047708,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "23d3429c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 606537617,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24270791",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 666642097,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27bc26b1",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 742522305,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c41fdc1",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 752333292,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2cd7b1ec",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 792770214,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f40b6a6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 802245156,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2fd14a24",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 803249846,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2fe09eb6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 823661530,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "311813da",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 834507004,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31bd90fc",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 848405528,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3291a418",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 860008130,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3342aec2",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 874963205,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3426e105",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 892414283,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3531294b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 900305315,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35a991a3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 901178979,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35b6e663",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 926782392,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "373d93b8",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1011524462,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c4aa36e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1046887439,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e663c0f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1100944358,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "419f13e6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1120253749,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "42c5b735",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1124589144,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4307de58",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1159673791,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "451f37bf",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1163708846,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "455cc9ae",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1199033816,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4777cdd8",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1219711145,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "48b350a9",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1223374611,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "48eb3713",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1229159692,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "49437d0c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1256099040,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4ade8ce0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1263716431,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b52c84f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1346205879,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "503d78b7",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1366260519,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "516f7b27",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1395182478,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5328cb8e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1413107686,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "543a4fe6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1446205927,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "563359e7",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1456637429,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56d285f5",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1487743101,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58ad287d",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1531508180,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b48f5d4",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1548509194,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5c4c600a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1562471404,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5d216bec",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1562652963,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5d243123",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1566422448,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5d5db5b0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1700930052,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "65622204",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1719236933,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "66797945",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1726948910,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "66ef262e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1734100443,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "675c45db",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1741421848,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67cbfd18",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1742569828,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67dd8164",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1742929226,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "67e2fd4a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1785271242,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a6913ca",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1792266834,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6ad3d252",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1833070000,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6d426db0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1863076807,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f0c4bc7",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1868944806,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f65d5a6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1965154662,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7521e166",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 1975944394,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75c684ca",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2017609920,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "784248c0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2029918577,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78fe1971",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2032355962,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "79234a7a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2040079579,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "799924db",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2107275231,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d9a77df",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2167495074,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "813159a2",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2255945154,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8676fdc2",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2276803186,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "87b54272",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2291198321,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8890e971",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2292492934,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88a4aa86",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2314857519,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "89f9ec2f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2332541163,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b07c0eb",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2339467030,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b716f16",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2352836534,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c3d6fb6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2376682747,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8da94cfb",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2404283868,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f4e75dc",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2405276517,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f5d9b65",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2415414350,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ff84c4e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2445384765,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "91c19c3d",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2539413601,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "975c6061",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2543328474,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97981cda",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2545708730,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97bc6eba",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2590789141,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a6c4e15",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2622861669,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9c55b165",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2629067844,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9cb46444",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2637900468,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9d3b2ab4",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2679827411,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9fbaebd3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2712092664,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a1a73ff8",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2716762910,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a1ee831e",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2760685251,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a48cb6c3",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2832067288,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a8cdead8",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2861875121,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa94bfb1",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2897510044,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "acb47e9c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2903639681,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad120681",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2929087974,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ae9655e6",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2939115858,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "af2f5952",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2943536931,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "af72cf23",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2968935421,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0f65bfd",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 2983410711,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1d33c17",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3044727599,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b57adb2f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3064683264,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b6ab5b00",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3136266812,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "baefa23c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3176571385,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd56a1f9",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3207635239,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bf30a127",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3250058157,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c1b7f3ad",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3328476546,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6648582",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3349970834,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c7ac7f92",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3368517432,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c8c77f38",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3416491248,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cba384f0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3427009295,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc44030f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3466106224,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ce989570",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3473425756,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf08455c",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3515010914,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d182cf62",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3588627461,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5e61c05",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3756910375,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dfede727",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3771447888,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e0cbba50",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3784301635,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e18fdc43",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3789827663,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1e42e4f",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3817166346,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e385560a",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3837059725,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e4b4e28d",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3928712384,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ea2b64c0",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 3977938581,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ed1a8695",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4025925869,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eff6c0ed",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4082196315,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3515f5b",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4116954679,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f563be37",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4211352168,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb042268",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4265142008,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe38e6f8",
+    "itemType": "neckwear"
+  },
+  {
+    "component": 4292683000,
+    "category": 1606587013,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ffdd24f8",
+    "itemType": "neckwear"
+  }
+]

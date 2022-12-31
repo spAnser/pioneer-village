@@ -1,0 +1,2037 @@
+[
+  {
+    "component": 1166668376,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4589f258",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3618870957,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7b396ad",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 705641315,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2a0f3b63",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1010884550,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c40dfc6",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2456423451,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "926a0c1b",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2639274471,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9d5021e7",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3891017502,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e7ec371e",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 10709132,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a3688c",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3151322869,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bbd55ef5",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3740936366,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "defa28ae",
+    "name": "CLOTHING_ITEM_F_PONCHO_000_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2860732338,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa834fb2",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3675304132,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "db10b0c4",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3446412667,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd6c157b",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 914712492,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "368567ac",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 818502708,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "30c95c34",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 339223314,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14382312",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 107317101,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "665876d",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2006739417,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "779c69d9",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1780272858,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a1cceda",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1476864923,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58072b9b",
+    "name": "CLOTHING_ITEM_F_PONCHO_001_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2092360591,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7cb6e38f",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2658510604,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e75a70c",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3973759961,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ecdac3d9",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3254349331,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c1f96e13",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2422901494,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "906a8af6",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 932337991,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "37925947",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1172600299,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45e475eb",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4218249470,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fb6d60fe",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3936632684,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eaa43f6c",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4121318532,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5a65484",
+    "name": "CLOTHING_ITEM_F_PONCHO_002_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3221462307,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0039d23",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3987372144,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edaa7870",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3689960700,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dbf054fc",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 220215131,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d20375b",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2035290037,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "79500fb5",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2804738926,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a72ceb6e",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2498676466,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "94eec6f2",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3257180517,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c224a165",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1638752372,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61ad6074",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1921974571,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "728f012b",
+    "name": "CLOTHING_ITEM_F_PONCHO_003_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 5344312,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "518c38",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 738452380,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c03e39c",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3390513112,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca171fd8",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4064899132,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f249703c",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 747922641,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c9464d1",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3602692387,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6bcb923",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 285257130,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1100adaa",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4247684614,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd2e8606",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1918136404,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72547054",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3532076104,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2873448",
+    "name": "CLOTHING_ITEM_F_PONCHO_004_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1795208067,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b00b383",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1011471894,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c49d616",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1941882111,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "73bec4ff",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1624088349,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "60cd9f1d",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 559226925,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2155202d",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4086449320,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f39244a8",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1174006134,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45f9e976",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 404753859,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18200dc3",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3234651942,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0ccdf26",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2154454974,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "806a5fbe",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 838517380,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31fac284",
+    "name": "CLOTHING_ITEM_F_PONCHO_005_TINT_011",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1903121605,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "716f54c5",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2133913672,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f30f048",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1443208690,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56059df2",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1648604782,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6243b66e",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 411542263,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1887a2f7",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1185873733,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "46aeff45",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4243188664,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fce9ebb8",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 152699932,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "91a041c",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3154930170,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc0c69fa",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2964606946,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0b44fe2",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3128583022,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba7a636e",
+    "name": "CLOTHING_ITEM_F_PONCHO_006_TINT_011",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2975673363,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b15d2c13",
+    "name": "CLOTHING_ITEM_F_PONCHO_007_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 380375562,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "16ac120a",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4095790392,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f420cd38",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2511343704,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95b01058",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3531966978,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2858a02",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 34695449,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2116919",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1599873961,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f5c23a9",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1351255558,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "508a8606",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3387193536,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c9e478c0",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3151617195,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bbd9dcab",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2019714061,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7862640d",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1745601376,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "680bc360",
+    "name": "CLOTHING_ITEM_F_PONCHO_008_TINT_011",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1420014040,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54a3b1d8",
+    "name": "CLOTHING_ITEM_F_PONCHO_300_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 30753925,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d54485",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_000",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4096534835,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f42c2933",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 64735382,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3dbc896",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4134743493,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6732dc5",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 532512857,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1fbd8059",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 295691294,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "119fe41e",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1292983040,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4d115b00",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1065271259,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f7ebfdb",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1750929815,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "685d1197",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1519482368,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a917600",
+    "name": "CLOTHING_ITEM_F_PONCHO_400_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3201605010,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bed49d92",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2291282190,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8892310e",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2642893560,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9d875af8",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1701735111,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "656e6ac7",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2010976164,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "77dd0fa4",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1100391192,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4196a318",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1382171823,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "526244af",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 518315445,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ee4ddb5",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 820969929,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "30ef01c9",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2656589202,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9e585592",
+    "name": "CLOTHING_ITEM_M_PONCHO_000_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3054606023,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b61196c7",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3286381160,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c3e23268",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3991930503,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edf00687",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4223836716,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fbc2a22c",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 430562810,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "19a9ddfa",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 657946901,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27377915",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1157215381,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44f9b495",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2468794606,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9326d0ee",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1338591796,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4fc94a34",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1738274989,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "679bf8ad",
+    "name": "CLOTHING_ITEM_M_PONCHO_001_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1201105929,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47976c09",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 366577806,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15d9888e",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2466153174,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92fe82d6",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2721980757,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a23e2155",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2131024611,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f04dae3",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2359424541,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ca1f61d",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 192574420,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7a73d4",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3912249152,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e9302f40",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3049146453,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b5be4855",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 624862264,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "253ea438",
+    "name": "CLOTHING_ITEM_M_PONCHO_002_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1592656356,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5eee01e4",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3565939998,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d48bed1e",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3267250563,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c2be4983",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3084923847,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7e033c7",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2771979897,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a5390e79",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3129653552,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba8ab930",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2840106668,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a94896ac",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3726475349,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "de1d8055",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 214359463,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cc6dda7",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2499182388,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "94f67f34",
+    "name": "CLOTHING_ITEM_M_PONCHO_003_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 803478352,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2fe41b50",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1623129349,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "60befd05",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1265750635,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b71d26b",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3340093873,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c715c9b1",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2026745122,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78cdad22",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1656455422,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62bb80fe",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2489934937,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "94696459",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4140050697,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f6c42909",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3902049450,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8948caa",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2061646107,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7ae2391b",
+    "name": "CLOTHING_ITEM_M_PONCHO_004_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1723647080,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "66bcc468",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1450845155,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "567a23e3",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1386159149,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "529f1c2d",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3239868714,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c11c792a",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2935641318,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aefa54e6",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2629939317,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9cc1b075",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4187712039,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f99b6a27",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3897837465,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8544799",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2708650447,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a172b9cf",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4130563739,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f633669b",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3901246277,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e8884b45",
+    "name": "CLOTHING_ITEM_M_PONCHO_005_TINT_011",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1548618123,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5c4e098b",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1782850935,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6a442577",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2262326943,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86d85e9f",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2530344594,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "96d1fe92",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2761267733,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a4959a15",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3008870297,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b357b799",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3239072522,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c110530a",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3148433472,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bba94840",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3397936638,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca8865fe",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1595346993,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f171031",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2438526132,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9158f4b4",
+    "name": "CLOTHING_ITEM_M_PONCHO_006_TINT_011",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1504915528,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59b33048",
+    "name": "CLOTHING_ITEM_M_PONCHO_007_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1930698108,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "73141d7c",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3038224770,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b517a182",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3331409013,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6914475",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 415885545,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "18c9e8e9",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2782659339,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a5dc030b",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2894106720,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ac809060",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 501936935,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1deaf327",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 337436555,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "141cdf8b",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 23018000,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "15f3a10",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 136195474,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "81e2d92",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_010",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3586148567,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5c048d7",
+    "name": "CLOTHING_ITEM_M_PONCHO_008_TINT_011",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2666810049,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9ef44ac1",
+    "name": "CLOTHING_ITEM_M_PONCHO_300_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1079339481,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "405569d9",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_000",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 751059639,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2cc442b7",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_001",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 467247330,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1bd9a0e2",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_002",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 437099850,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a0d9d4a",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_003",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3588035810,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5dd14e2",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_004",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1133998165,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "43977055",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_005",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 590360455,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "23302f87",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_006",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 291933172,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "11668bf4",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_007",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2371584988,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d5b83dc",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_008",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 175668760,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a787e18",
+    "name": "CLOTHING_ITEM_M_PONCHO_400_TINT_009",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 153952505,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92d20f9",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 774796748,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2e2e75cc",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 788063605,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ef8e575",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1517495111,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a732347",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1946587047,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74068fa7",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3046955429,
+    "category": 2937336075,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b59cd9a5",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 88394759,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "544cc07",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 824318410,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "312219ca",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1189692760,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "46e94558",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 1474116308,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57dd3ad4",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2390643841,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e7e5481",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2489973482,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9469faea",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 2860081244,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa79605c",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 3854402302,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e5bd82fe",
+    "itemType": "ponchos"
+  },
+  {
+    "component": 4248448420,
+    "category": 2937336075,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd3a2da4",
+    "itemType": "ponchos"
+  }
+]

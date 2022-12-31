@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+      "baseUrl": ".",
+      "strictNullChecks": true,
+      "noImplicitAny": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es5",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "paths": {
+        "@lib/*": [
+          "../../../../lib/*",
+        ],
+        "@styled/*": [
+          "./app/styled/*",
+        ],
+        "@uiLib/*": [
+          "./app/lib/*",
+        ],
+        "react": ["../../../../node_modules/preact/compat/"],
+        "react-dom": ["../../../../node_modules/preact/compat/"]
+      },
+      "experimentalDecorators": true,
+      "jsx": "react-jsx",
+      "jsxImportSource": "preact",
+      "module": "esnext",
+      "types": ["@citizenfx/client", "@types/node", "webpack-env"],
+      "moduleResolution": "node",
+      "downlevelIteration": true
+  },
+  "include": [
+    "./",
+    "../../../../types.d.ts",
+    "../../../*/rdr3-shared/types/*.d.ts",
+    "../../../**/src/types.d.ts",
+    "../../../**/src/client/types.d.ts",
+    "../../../../socket/src/types.d.ts"
+  ]
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 4964077,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4bbeed",
+        "itemType": "horse_mustache",
+        "friendlyName": "Curled"
+      },
+      {
+        "component": 157339927,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "960d117",
+        "itemType": "horse_mustache",
+        "friendlyName": "Curled"
+      },
+      {
+        "component": 672820609,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "281a6d81",
+        "itemType": "horse_mustache",
+        "friendlyName": "Handlebar"
+      },
+      {
+        "component": 860849107,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "334f83d3",
+        "itemType": "horse_mustache",
+        "friendlyName": "Handlebar"
+      },
+      {
+        "component": 1419241348,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5497e784",
+        "itemType": "horse_mustache",
+        "friendlyName": "Curled"
+      },
+      {
+        "component": 1733889423,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "67590d8f",
+        "itemType": "horse_mustache",
+        "friendlyName": "Bushy"
+      },
+      {
+        "component": 2441639057,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "91887491",
+        "itemType": "horse_mustache",
+        "friendlyName": "Understated"
+      },
+      {
+        "component": 2598040722,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "9adaf492",
+        "itemType": "horse_mustache",
+        "friendlyName": "Bushy"
+      },
+      {
+        "component": 2890241895,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ac459767",
+        "itemType": "horse_mustache",
+        "friendlyName": "Bushy"
+      },
+      {
+        "component": 2938777560,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "af2a2fd8",
+        "itemType": "horse_mustache",
+        "friendlyName": "Understated"
+      },
+      {
+        "component": 3075817518,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b755402e",
+        "itemType": "horse_mustache",
+        "friendlyName": "Understated"
+      },
+      {
+        "component": 3485097552,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cfba5e50",
+        "itemType": "horse_mustache",
+        "friendlyName": "Bushy"
+      },
+      {
+        "component": 3699988064,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "dc895660",
+        "itemType": "horse_mustache",
+        "friendlyName": "Handlebar"
+      },
+      {
+        "component": 3941528363,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "eaeef32b",
+        "itemType": "horse_mustache",
+        "friendlyName": "Handlebar"
+      },
+      {
+        "component": 3985447280,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ed8d1970",
+        "itemType": "horse_mustache",
+        "friendlyName": "Curled"
+      },
+      {
+        "component": 4146085827,
+        "category": 819920351,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f7203fc3",
+        "itemType": "horse_mustache",
+        "friendlyName": "Understated"
+      }
+    ]
+  }
+]

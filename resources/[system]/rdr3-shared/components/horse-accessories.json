@@ -1,0 +1,474 @@
+[
+  {
+    "component": 3607917546,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d70c73ea",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_000_TINT_001",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 4051118279,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f17728c7",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_000_TINT_007",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1759203245,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68db4fad",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_001_TINT_001",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1657122858,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62c5b02a",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_002_TINT_001",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 4042089215,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f0ed62ff",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_003_TINT_001",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 779579110,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2e776ee6",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_004_TINT_001",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1969454269,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "75637cbd",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_004_TINT_002",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1251551017,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4a992729",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_004_TINT_003",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1311845985,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e312e61",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_004_TINT_004",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1208587318,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "48099436",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_005_TINT_001",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2006479699,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "77987353",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_005_TINT_002",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2909658877,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ad6ddefd",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_005_TINT_003",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1529002600,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b22ba68",
+    "name": "HORSE_EQUIPMENT_MASK_NEW_005_TINT_004",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 145198931,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8a78f53",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 330067537,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "13ac6e51",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 577449846,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "226b2f76",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 805587884,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "30044bac",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1081067207,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "406fc6c7",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1284277156,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c8c83a4",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1310876204,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e22622c",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1408166868,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "53eeebd4",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1639886344,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61beae08",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1761318878,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68fb97de",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1775081838,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69cd996e",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1798657937,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b355791",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 1881819891,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "702a4af3",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2054634177,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a773ac1",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2080012571,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7bfa791b",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2267679834,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "872a0c5a",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2353469060,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c471684",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2377352705,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8db38601",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2378964158,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8dcc1cbe",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2426806898,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "90a62272",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2571565172,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9946f874",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2584850969,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a11b219",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2645632508,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9db125fc",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2756725190,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a45049c6",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 2956550024,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0395f88",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3012940229,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b395d1c5",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3043486709,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b567ebf5",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3179837702,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd887906",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3297274844,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c4886bdc",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3339554624,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c70d8f40",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3372743849,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c907fca9",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3605166513,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d6e279b1",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3721247136,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ddcdb9a0",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3811019816,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e3278c28",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 3960526374,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ec10d626",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 4009123601,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eef65f11",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 4127648842,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f606ec4a",
+    "itemType": "horse_accessories"
+  },
+  {
+    "component": 4200297147,
+    "category": 3545239133,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fa5b72bb",
+    "itemType": "horse_accessories"
+  }
+]

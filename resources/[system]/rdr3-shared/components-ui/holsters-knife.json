@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 1796687236,
+        "category": 2078766994,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "6b174584",
+        "itemType": "holsters_knife"
+      },
+      {
+        "component": 2624506225,
+        "category": 2078766994,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "9c6ec971",
+        "itemType": "holsters_knife"
+      },
+      {
+        "component": 2775642691,
+        "category": 2078766994,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "a570f243",
+        "itemType": "holsters_knife"
+      }
+    ]
+  }
+]

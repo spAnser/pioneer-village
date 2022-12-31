@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="ui:app" pattern="file[pioneer-village]:resources/ui/src/ui/app//*" />
+</component>

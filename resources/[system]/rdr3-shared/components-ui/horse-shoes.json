@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 140878448,
+        "category": 4207920064,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "865a270",
+        "name": "horse_shoes",
+        "itemType": "horse_shoes"
+      }
+    ]
+  }
+]

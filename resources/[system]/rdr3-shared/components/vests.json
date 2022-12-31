@@ -1,0 +1,6660 @@
+[
+  {
+    "component": 3121438838,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ba0d6076",
+    "itemType": "vests",
+    "friendlyName": "Billy Vest"
+  },
+  {
+    "component": 962344255,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "395c353f",
+    "itemType": "vests",
+    "friendlyName": "Buckskin Vest"
+  },
+  {
+    "component": 2861944612,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "aa95cf24",
+    "itemType": "vests",
+    "friendlyName": "Country Vest"
+  },
+  {
+    "component": 3706809335,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "dcf16bf7",
+    "itemType": "vests",
+    "friendlyName": "Frontier Vest"
+  },
+  {
+    "component": 2390435316,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8e7b25f4",
+    "itemType": "vests",
+    "friendlyName": "Gunslinger Vest"
+  },
+  {
+    "component": 82377435,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "4e8fadb",
+    "itemType": "vests",
+    "friendlyName": "Hinterland Vest"
+  },
+  {
+    "component": 3832232429,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e46b39ed",
+    "itemType": "vests",
+    "friendlyName": "Huntsman Vest"
+  },
+  {
+    "component": 4121300307,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "f5a60d53",
+    "itemType": "vests",
+    "friendlyName": "Legendary Alligator Vest"
+  },
+  {
+    "component": 3222585794,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c014c1c2",
+    "itemType": "vests",
+    "friendlyName": "Legendary Bison Vest"
+  },
+  {
+    "component": 481065880,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1cac7b98",
+    "itemType": "vests",
+    "friendlyName": "Legendary Buck Vest"
+  },
+  {
+    "component": 475061862,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1c50de66",
+    "itemType": "vests",
+    "friendlyName": "Legendary Cougar & Wolf Vest"
+  },
+  {
+    "component": 1294112150,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "4d229596",
+    "itemType": "vests",
+    "friendlyName": "No-Man's Vest"
+  },
+  {
+    "component": 3295909646,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c473970e",
+    "itemType": "vests",
+    "friendlyName": "Rugged Wrangler Vest"
+  },
+  {
+    "component": 1692201364,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "64dcf194",
+    "itemType": "vests",
+    "friendlyName": "Rustic Vest"
+  },
+  {
+    "component": 2879153652,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ab9c65f4",
+    "itemType": "vests",
+    "friendlyName": "Sheepskin Vest"
+  },
+  {
+    "component": 3817568775,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e38b7a07",
+    "itemType": "vests",
+    "friendlyName": "Thompson Vest"
+  },
+  {
+    "component": 57610788,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "36f1224",
+    "itemType": "vests",
+    "friendlyName": "Wilderness Vest"
+  },
+  {
+    "component": 2903074874,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ad09683a",
+    "itemType": "vests",
+    "friendlyName": "Wrangler Vest"
+  },
+  {
+    "component": 2607236281,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9b6744b9",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_1",
+    "itemType": "vests"
+  },
+  {
+    "component": 51172679,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "30cd547",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_10",
+    "itemType": "vests"
+  },
+  {
+    "component": 291860984,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "116571f8",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_11",
+    "itemType": "vests",
+    "friendlyName": "Pocket Watch Vest"
+  },
+  {
+    "component": 3442452557,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "cd2fa84d",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_2",
+    "itemType": "vests"
+  },
+  {
+    "component": 3238137842,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c1020ff2",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_3",
+    "itemType": "vests"
+  },
+  {
+    "component": 1685083856,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "647056d0",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_4",
+    "itemType": "vests"
+  },
+  {
+    "component": 2522725034,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "965dbaaa",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_5",
+    "itemType": "vests"
+  },
+  {
+    "component": 2283019799,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "88141e17",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_6",
+    "itemType": "vests"
+  },
+  {
+    "component": 2613331319,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9bc44577",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_7",
+    "itemType": "vests"
+  },
+  {
+    "component": 464569678,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1bb0c54e",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_8",
+    "itemType": "vests"
+  },
+  {
+    "component": 1299589340,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "4d7628dc",
+    "name": "CLOTHING_HL_PLAYER_VEST_000_9",
+    "itemType": "vests"
+  },
+  {
+    "component": 1029905576,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "3d631ca8",
+    "name": "CLOTHING_HL_PLAYER_VEST_003_10",
+    "itemType": "vests",
+    "friendlyName": "Outdoorsmen Vest"
+  },
+  {
+    "component": 138778493,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "845977d",
+    "name": "CLOTHING_HL_PLAYER_VEST_003_7",
+    "itemType": "vests",
+    "friendlyName": "Ebony Outdoorsmen Vest"
+  },
+  {
+    "component": 3042605001,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "b55a77c9",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_1",
+    "itemType": "vests"
+  },
+  {
+    "component": 2499260014,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "94f7ae6e",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_10",
+    "itemType": "vests"
+  },
+  {
+    "component": 2209584252,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "83b3947c",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_2",
+    "itemType": "vests"
+  },
+  {
+    "component": 1321544352,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "4ec52aa0",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_3",
+    "itemType": "vests"
+  },
+  {
+    "component": 555306821,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "21194f45",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_4",
+    "itemType": "vests"
+  },
+  {
+    "component": 1790501511,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "6ab8e287",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_5",
+    "itemType": "vests"
+  },
+  {
+    "component": 1014367746,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "3c760602",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_6",
+    "itemType": "vests"
+  },
+  {
+    "component": 136945002,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8299d6a",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_7",
+    "itemType": "vests"
+  },
+  {
+    "component": 166109412,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9e6a0e4",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_8",
+    "itemType": "vests"
+  },
+  {
+    "component": 658430868,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "273edb94",
+    "name": "CLOTHING_HL_PLAYER_VEST_004_9",
+    "itemType": "vests"
+  },
+  {
+    "component": 2540360339,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "976ad293",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_1",
+    "itemType": "vests"
+  },
+  {
+    "component": 128832715,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "7add4cb",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_10",
+    "itemType": "vests"
+  },
+  {
+    "component": 3290967045,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c4282c05",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_2",
+    "itemType": "vests"
+  },
+  {
+    "component": 2929000671,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ae9500df",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_3",
+    "itemType": "vests"
+  },
+  {
+    "component": 2814997320,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a7c97348",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_4",
+    "itemType": "vests"
+  },
+  {
+    "component": 2585843703,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9a20d7f7",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_5",
+    "itemType": "vests"
+  },
+  {
+    "component": 2384379891,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8e1ebff3",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_6",
+    "itemType": "vests"
+  },
+  {
+    "component": 2000523825,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "773d9231",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_7",
+    "itemType": "vests"
+  },
+  {
+    "component": 829523610,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "3171869a",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_8",
+    "itemType": "vests"
+  },
+  {
+    "component": 1521604890,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "5ab1d91a",
+    "name": "CLOTHING_HL_PLAYER_VEST_009_9",
+    "itemType": "vests"
+  },
+  {
+    "component": 1555570667,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "5cb81feb",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_1",
+    "itemType": "vests"
+  },
+  {
+    "component": 2255862654,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8675bb7e",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_10",
+    "itemType": "vests"
+  },
+  {
+    "component": 2846097894,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "a9a401e6",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_11",
+    "itemType": "vests"
+  },
+  {
+    "component": 2608358787,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9b786583",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_12",
+    "itemType": "vests"
+  },
+  {
+    "component": 1393906878,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "531554be",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_13",
+    "itemType": "vests"
+  },
+  {
+    "component": 758909196,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "2d3c090c",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_14",
+    "itemType": "vests"
+  },
+  {
+    "component": 2022907833,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "78931fb9",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_15",
+    "itemType": "vests"
+  },
+  {
+    "component": 1622994957,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "60bcf00d",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_16",
+    "itemType": "vests"
+  },
+  {
+    "component": 4201489260,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fa6da36c",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_17",
+    "itemType": "vests"
+  },
+  {
+    "component": 3967289217,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ec780781",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_18",
+    "itemType": "vests"
+  },
+  {
+    "component": 502360691,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1df16a73",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_19",
+    "itemType": "vests"
+  },
+  {
+    "component": 615788516,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "24b42fe4",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_2",
+    "itemType": "vests"
+  },
+  {
+    "component": 4012410690,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "ef288742",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_20",
+    "itemType": "vests"
+  },
+  {
+    "component": 4243530447,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fcef22cf",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_21",
+    "itemType": "vests"
+  },
+  {
+    "component": 442981823,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1a675dbf",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_22",
+    "itemType": "vests",
+    "friendlyName": "Legion Vest"
+  },
+  {
+    "component": 786777158,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "2ee54446",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_3",
+    "itemType": "vests"
+  },
+  {
+    "component": 2165827754,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8117e8aa",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_4",
+    "itemType": "vests"
+  },
+  {
+    "component": 324046109,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "13508d1d",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_5",
+    "itemType": "vests"
+  },
+  {
+    "component": 2343206363,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "8baa7ddb",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_6",
+    "itemType": "vests"
+  },
+  {
+    "component": 424417568,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "194c1920",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_7",
+    "itemType": "vests"
+  },
+  {
+    "component": 1720365980,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "668ab39c",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_8",
+    "itemType": "vests"
+  },
+  {
+    "component": 1962037355,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "74f2506b",
+    "name": "CLOTHING_HL_PLAYER_VEST_010_9",
+    "itemType": "vests"
+  },
+  {
+    "component": 2314103802,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "89ee6bfa",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_1",
+    "itemType": "vests"
+  },
+  {
+    "component": 1115676749,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "427fe04d",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_10",
+    "itemType": "vests"
+  },
+  {
+    "component": 346883240,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "14ad04a8",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_11",
+    "itemType": "vests"
+  },
+  {
+    "component": 2421554156,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9055fbec",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_12",
+    "itemType": "vests",
+    "friendlyName": "Principal Vest"
+  },
+  {
+    "component": 464457597,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "1baf0f7d",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_2",
+    "itemType": "vests"
+  },
+  {
+    "component": 744108243,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "2c5a30d3",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_3",
+    "itemType": "vests"
+  },
+  {
+    "component": 1052562840,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "3ebcd598",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_4",
+    "itemType": "vests"
+  },
+  {
+    "component": 1352857956,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "50a2f964",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_5",
+    "itemType": "vests"
+  },
+  {
+    "component": 3848938228,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e56a22f4",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_6",
+    "itemType": "vests"
+  },
+  {
+    "component": 4221587296,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "fba04f60",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_7",
+    "itemType": "vests"
+  },
+  {
+    "component": 201617448,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "c047028",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_8",
+    "itemType": "vests"
+  },
+  {
+    "component": 2666141165,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9eea15ed",
+    "name": "CLOTHING_HL_PLAYER_VEST_011_9",
+    "itemType": "vests"
+  },
+  {
+    "component": 991187389,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b1451bd",
+    "name": "CLOTHING_ITEM_F_SEASONAL_003_VEST_000",
+    "itemType": "vests"
+  },
+  {
+    "component": 3988615307,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edbd708b",
+    "name": "CLOTHING_ITEM_F_SEASONAL_005_VEST_VAR_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2231103807,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84fbf13f",
+    "name": "CLOTHING_ITEM_F_VAQUERO_VEST_000",
+    "itemType": "vests"
+  },
+  {
+    "component": 1674226207,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "63caaa1f",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1444089520,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56130eb0",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2152555300,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "804d6324",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1860354127,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6ee2c04f",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2867869801,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aaf03869",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2633931910,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9cfe9c86",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3343184146,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c744f112",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3109311793,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9545531",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3393976092,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca4bf71c",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1482527333,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "585d9265",
+    "name": "CLOTHING_ITEM_F_VESTS_312_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 621691811,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "250e43a3",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 910419470,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3643e60e",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 731533503,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b9a50bf",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1036776738,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3dcbf522",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 318545796,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "12fc9f84",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 559365177,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "21573c39",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1452123813,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "568da6a5",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 2161572663,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80d6fb37",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3122851278,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba22edce",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3972744650,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eccb45ca",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 338760857,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14311499",
+    "name": "CLOTHING_ITEM_F_VEST_000_TINT_011",
+    "itemType": "vests"
+  },
+  {
+    "component": 1907915298,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71b87a22",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3123612437,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ba2e8b15",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 3760117493,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e01ed6f5",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 347324446,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "14b3c01e",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 748613620,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c9eeff4",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2464758919,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92e93c87",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2696271904,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0b5d820",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 4017780140,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ef7a75ac",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2101416247,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d411137",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1718607381,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "666fde15",
+    "name": "CLOTHING_ITEM_F_VEST_001_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2589471498,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a58330a",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2889012927,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ac32d6bf",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 807067281,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "301ade91",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 970519053,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "39d8f20d",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1258263642,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4aff945a",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1449437988,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5664ab24",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3584240035,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d5a329a3",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3789898279,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1e54227",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 4046315704,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f12de0b8",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 4294149047,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fff383b7",
+    "name": "CLOTHING_ITEM_F_VEST_002_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 4151181722,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f76e019a",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 867662380,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "33b77a2c",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 637820614,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "26045ec6",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 291386690,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "115e3542",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 731277746,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2b9669b2",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 467454527,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1bdcca3f",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1310437052,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4e1baebc",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 974489264,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a1586b0",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1950350084,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "743ffb04",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3751367317,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df995295",
+    "name": "CLOTHING_ITEM_F_VEST_003_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2239445100,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "857b386c",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1264043034,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b57c41a",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 106248734,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6553a1e",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 3441149864,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd1bc7a8",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 3654639899,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d9d5611b",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2965311215,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0bf0eef",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 760776740,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2d588824",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 337204646,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "141955a6",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 623704013,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "252cf7cd",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 716804450,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ab99162",
+    "name": "CLOTHING_ITEM_F_VEST_004_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 276291349,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1077df15",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3794829959,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2308287",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 3508854896,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d124e070",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 3335703500,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c6d2cbcc",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 3024070310,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b43fa6a6",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2793507626,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a6818b2a",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2546134445,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97c2edad",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 2315112995,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "89fdd223",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2067018896,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b343490",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1566210581,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5d5a7a15",
+    "name": "CLOTHING_ITEM_F_VEST_005_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1174588385,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4602cbe1",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1469607692,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57986f0c",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1750503560,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "68569088",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2049258533,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a253425",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2361284951,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8cbe5957",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2708832965,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a17582c5",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3007325786,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b340265a",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3320990654,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c5f24bbe",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3617713949,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7a1ef1d",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1401476617,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5388d609",
+    "name": "CLOTHING_ITEM_F_VEST_006_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 3730403918,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "de59724e",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2962659017,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b09696c9",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 3118311767,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9dda957",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 93700294,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "595c0c6",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 392717419,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1768646b",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 35666395,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22039db",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1404591374,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "53b85d0e",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 1587245780,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5e9b72d4",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 831068336,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "318918b0",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2152412495,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "804b354f",
+    "name": "CLOTHING_ITEM_F_VEST_007_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 3961828816,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ec24b5d0",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3096923830,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8974eb6",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2737447952,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a32a2410",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2373384306,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d76f872",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 3352948079,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c7d9ed6f",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2442100955,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "918f80db",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 973754778,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a0a519a",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 1178561028,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "463f6a04",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1580472813,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5e3419ed",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2667092633,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9ef89a99",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 3789561959,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1e02067",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_011",
+    "itemType": "vests"
+  },
+  {
+    "component": 3015853100,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b3c2442c",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_012",
+    "itemType": "vests"
+  },
+  {
+    "component": 1558615566,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ce6960e",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_013",
+    "itemType": "vests"
+  },
+  {
+    "component": 2292510090,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88a4ed8a",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_014",
+    "itemType": "vests"
+  },
+  {
+    "component": 1097981733,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4171df25",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_015",
+    "itemType": "vests"
+  },
+  {
+    "component": 1801138935,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b5b32f7",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_016",
+    "itemType": "vests"
+  },
+  {
+    "component": 532454331,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1fbc9bbb",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_017",
+    "itemType": "vests"
+  },
+  {
+    "component": 1367179068,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "517d7f3c",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_018",
+    "itemType": "vests"
+  },
+  {
+    "component": 43639158,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "299e176",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_019",
+    "itemType": "vests"
+  },
+  {
+    "component": 3188949174,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be1380b6",
+    "name": "CLOTHING_ITEM_F_VEST_010_TINT_020",
+    "itemType": "vests"
+  },
+  {
+    "component": 3347389977,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c7851e19",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2849497791,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9d7e2bf",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2596160652,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9abe448c",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2383162152,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e0c2b28",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1901982152,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "715df1c8",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1657558181,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62cc54a5",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1407497942,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "53e4b6d6",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 1196858810,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47569dba",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1439316645,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "55ca3aa5",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1684953169,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "646e5851",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1967913484,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "754bfa0c",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_011",
+    "itemType": "vests"
+  },
+  {
+    "component": 2161578278,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80d71126",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_012",
+    "itemType": "vests"
+  },
+  {
+    "component": 2453255147,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9239b3eb",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_013",
+    "itemType": "vests"
+  },
+  {
+    "component": 2742179420,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a372565c",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_014",
+    "itemType": "vests"
+  },
+  {
+    "component": 3159066638,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc4b880e",
+    "name": "CLOTHING_ITEM_F_VEST_014_TINT_015",
+    "itemType": "vests"
+  },
+  {
+    "component": 3796335526,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2477ba6",
+    "name": "CLOTHING_ITEM_F_VEST_015_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3556171525,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d3f6df05",
+    "name": "CLOTHING_ITEM_F_VEST_015_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 3030229075,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b49da053",
+    "name": "CLOTHING_ITEM_F_VEST_015_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2857536445,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aa528bbd",
+    "name": "CLOTHING_ITEM_F_VEST_015_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 421587288,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1920e958",
+    "name": "CLOTHING_ITEM_F_VEST_015_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1667145256,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "635e9e28",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3514038877,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d173fa5d",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 828488251,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3161ba3b",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 404129701,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "181687a5",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2259543250,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86ade4d2",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1954300015,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "747c406f",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 4168501345,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f8764861",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3745453555,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df3f15f3",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1291219300,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4cf67164",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2776015755,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a576a38b",
+    "name": "CLOTHING_ITEM_F_VEST_016_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2308178566,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "89940286",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1045392386,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e4f6c02",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 749521085,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2cacc8bd",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1525884233,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5af32549",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1331957291,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f640e2b",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 4120631960,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f59bda98",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3691882364,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dc0da77c",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 306680819,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "124793f3",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 109083745,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6807c61",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2376959833,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8dad8759",
+    "name": "CLOTHING_ITEM_F_VEST_017_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 813261271,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "307961d7",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1302240289,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4d9e9c21",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 3474595610,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf1a1f1a",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 3713579927,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dd58bb97",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 3938440805,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eabfd665",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 4177621736,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f90172e8",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2228390540,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "84d28a8c",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 2483890433,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "940d2901",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2724349355,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a26245ab",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2281016702,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "87f58d7e",
+    "name": "CLOTHING_ITEM_F_VEST_018_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1897410881,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71183141",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2412408485,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8fca6ea5",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1417574414,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "547e780e",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1666422200,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "635395b8",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1330540030,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f4e6dfe",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1489600756,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58c980f4",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 593925679,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2366962f",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 1027525087,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3d3ec9df",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2546990848,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "97cfff00",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2402840189,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f386e7d",
+    "name": "CLOTHING_ITEM_F_VEST_200_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 754932773,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2cff5c25",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1036516794,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3dc7fdba",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1333731624,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f7f2128",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1117030227,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "42948753",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1952901879,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7466eaf7",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1690258344,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "64bf4ba8",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2526687069,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "969a2f5d",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 2305430781,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "896a14fd",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3147856233,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bba07969",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1372210070,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "51ca4396",
+    "name": "CLOTHING_ITEM_F_VEST_201_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2133926841,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f3123b9",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2607045663,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9b645c1f",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2847340740,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9b6f8c4",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2633981801,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9cff5f69",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2866150166,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aad5fb16",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 947590754,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "387b1662",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1180873265,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4662b231",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 4269974106,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fe82a25a",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1407208748,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "53e04d2c",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 4121759655,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f5ad0fa7",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 601549826,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "23daec02",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_011",
+    "itemType": "vests"
+  },
+  {
+    "component": 237486236,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e27c09c",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_012",
+    "itemType": "vests"
+  },
+  {
+    "component": 3234702825,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c0cda5e9",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_013",
+    "itemType": "vests"
+  },
+  {
+    "component": 3936876957,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eaa7f99d",
+    "name": "CLOTHING_ITEM_F_VEST_202_TINT_014",
+    "itemType": "vests"
+  },
+  {
+    "component": 3183607540,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bdc1fef4",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2272760416,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "87779260",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2536452559,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "972f31cf",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 4136464526,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f68d708e",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 3548097131,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d37baa6b",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2777992862,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a594ce9e",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2950030112,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "afd5e320",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 803955529,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2feb6349",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 36931546,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "23387da",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 490945697,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d433ca1",
+    "name": "CLOTHING_ITEM_F_VEST_203_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1012011619,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c521263",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2967206773,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b0dbfb75",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2256840391,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8684a6c7",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1970734252,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "757704ac",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 3811991593,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e3366029",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 3620030791,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7c54947",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3447338161,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd7a34b1",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3156906514,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc2a9212",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 748778118,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2ca17286",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 880739041,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "347f02e1",
+    "name": "CLOTHING_ITEM_F_VEST_204_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1197353361,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "475e2991",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2575584740,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "99844de4",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 102639374,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61e270e",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1482476426,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "585ccb8a",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 783480887,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2eb2f837",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 14163074,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d81c82",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3445798296,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cd62b598",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 515201084,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1eb5583c",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3653848677,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d9c94e65",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3490528277,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d00d3c15",
+    "name": "CLOTHING_ITEM_F_VEST_205_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 943640230,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "383ecea6",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 704360992,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29fbb220",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1417185057,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "54788721",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1180592869,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "465e6ae5",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2366011452,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d06783c",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1656693678,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "62bf23ae",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2370795722,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d4f78ca",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 2131090487,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7f05dc37",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2848666049,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9cb31c1",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3171828103,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd0e4187",
+    "name": "CLOTHING_ITEM_F_VEST_206_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 637767903,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "260390df",
+    "name": "CLOTHING_ITEM_F_VEST_311_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 575695037,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "225068bd",
+    "name": "CLOTHING_ITEM_F_VEST_313_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 978613705,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a5475c9",
+    "name": "CLOTHING_ITEM_M_SEASONAL_003_VEST_000",
+    "itemType": "vests"
+  },
+  {
+    "component": 861761825,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "335d7121",
+    "name": "CLOTHING_ITEM_M_SEASONAL_005_VEST_VAR_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1326363666,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f0eb412",
+    "name": "CLOTHING_ITEM_M_VAQUERO_VEST_000",
+    "itemType": "vests"
+  },
+  {
+    "component": 3989969934,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "edd21c0e",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3633770904,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d896f198",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 3394065669,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca4d5505",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1007630471,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3c0f3887",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 768121850,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2dc89bfa",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 412184972,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1891718c",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 173266193,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a53d511",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 2351913206,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c2f58f6",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1911301232,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71ec2470",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2849821881,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a9dcd4b9",
+    "name": "CLOTHING_ITEM_M_VESTS_312_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2291486055,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "88954d67",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2572087002,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "994eeeda",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1807782846,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6bc093be",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 4022705094,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "efc59bc6",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 28655525,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1b53fa5",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 3536708055,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2cde1d7",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2752644192,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a4120460",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 50938449,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3094251",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 354805386,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1525e68a",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2034905005,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "794a2fad",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1519055407,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5a8af22f",
+    "name": "CLOTHING_ITEM_M_VEST_000_TINT_011",
+    "itemType": "vests"
+  },
+  {
+    "component": 3504886837,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d0e85435",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3702156217,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "dcaa6bb9",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1529669824,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b2ce8c0",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 668041738,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27d1820a",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 921706567,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "36f02047",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 154944736,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "93c44e0",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2696606671,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a0baf3cf",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 1918965532,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7261171c",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2067540178,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b3c28d2",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2311995546,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "89ce409a",
+    "name": "CLOTHING_ITEM_M_VEST_001_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 610861257,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "246900c9",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2502189618,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "95246232",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1262210670,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b3bce6e",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 963717849,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "39712ad9",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 3946188388,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb360e64",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1501063911,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59786ae7",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 248567193,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ed0d599",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 4244320750,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fcfb31ee",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2992544946,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b25e9cb2",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 389536295,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1737da27",
+    "name": "CLOTHING_ITEM_M_VEST_002_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2439481516,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "916788ac",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2356936405,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c7bfed5",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 507781735,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1e442267",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1777908175,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "69f8b9cf",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1538399554,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5bb21d42",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 838093255,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "31f449c7",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3820563794,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e3b92d52",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 226394332,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d7e80dc",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1060987993,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f3d6459",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2752653937,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a4122a71",
+    "name": "CLOTHING_ITEM_M_VEST_003_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 3239491847,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c116b907",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2982746732,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b1c91a6c",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 779490228,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2e7613b4",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2344537668,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8bbece44",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2047158993,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7a052ad1",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1746274035,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "681606f3",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 173624179,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a594b73",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 4110557381,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f50220c5",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3853746728,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e5b38228",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1823798204,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6cb4f3bc",
+    "name": "CLOTHING_ITEM_M_VEST_004_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 474561064,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1c493a28",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 4078036922,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f311e7ba",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 941552083,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "381ef1d3",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 781508287,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2e94debf",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 3316485362,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c5ad8cf2",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 3135141716,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bade7754",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3787015433,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1b94509",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3489833372,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d002a19c",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2388008516,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8e561e44",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1503508484,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "599db804",
+    "name": "CLOTHING_ITEM_M_VEST_005_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 4077906658,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f30feae2",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3848163199,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e55e4f7f",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2273678287,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "878593cf",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 3086709946,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7fb74ba",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2826622393,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a87ad5b9",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1509177517,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59f438ad",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1058407153,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3f1602f1",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 1892148820,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "70c7e654",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 217390772,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf51eb4",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3476890145,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf3d2221",
+    "name": "CLOTHING_ITEM_M_VEST_006_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 3002191292,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2f1cdbc",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1687171338,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6490310a",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1382419638,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "52660cb6",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2283010065,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8813f811",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2012272587,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "77f0d7cb",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2640945852,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9d69a2bc",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 191266492,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b667ebc",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3202278822,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bedee5a6",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2969782767,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b10349ef",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2729684632,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a2b3ae98",
+    "name": "CLOTHING_ITEM_M_VEST_008_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2410681321,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8fb013e9",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3305799325,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c50a7e9d",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2999245330,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b2c4da12",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1485120916,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "58852594",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1302958045,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4da98fdd",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1876612159,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6fdad43f",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 500740152,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1dd8b038",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 270996693,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "102714d5",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1048572294,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3e7ff186",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2062739271,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7af2e747",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1940641977,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "73abd8b9",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_011",
+    "itemType": "vests"
+  },
+  {
+    "component": 1701723198,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "656e3c3e",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_012",
+    "itemType": "vests"
+  },
+  {
+    "component": 1344278946,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "502011a2",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_013",
+    "itemType": "vests"
+  },
+  {
+    "component": 756534190,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2d17cbae",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_014",
+    "itemType": "vests"
+  },
+  {
+    "component": 517353259,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ed62f2b",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_015",
+    "itemType": "vests"
+  },
+  {
+    "component": 144376501,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "89b02b5",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_016",
+    "itemType": "vests"
+  },
+  {
+    "component": 4199573024,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fa506620",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_017",
+    "itemType": "vests"
+  },
+  {
+    "component": 3889021211,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e7cdc11b",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_018",
+    "itemType": "vests"
+  },
+  {
+    "component": 3666814622,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da8f269e",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_019",
+    "itemType": "vests"
+  },
+  {
+    "component": 2812858166,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7a8cf36",
+    "name": "CLOTHING_ITEM_M_VEST_010_TINT_020",
+    "itemType": "vests"
+  },
+  {
+    "component": 1328872436,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f34fbf4",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 4232140302,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fc41560e",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 713044619,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2a80328b",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2246633819,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "85e8e95b",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2085475877,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7c4dd625",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1635852428,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6181208c",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1475022176,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "57eb0d60",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 2465891306,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "92fa83ea",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3299698511,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c4ad674f",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 133852896,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7fa6ee0",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 698659380,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29a4b234",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_011",
+    "itemType": "vests"
+  },
+  {
+    "component": 1954858995,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7484c7f3",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_012",
+    "itemType": "vests"
+  },
+  {
+    "component": 2252991357,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8649eb7d",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_013",
+    "itemType": "vests"
+  },
+  {
+    "component": 1595940138,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5f201d2a",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_014",
+    "itemType": "vests"
+  },
+  {
+    "component": 1627398378,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "610020ea",
+    "name": "CLOTHING_ITEM_M_VEST_014_TINT_015",
+    "itemType": "vests"
+  },
+  {
+    "component": 927886904,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "374e6e38",
+    "name": "CLOTHING_ITEM_M_VEST_015_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1867341365,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f4d5e35",
+    "name": "CLOTHING_ITEM_M_VEST_015_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1527461297,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b0b35b1",
+    "name": "CLOTHING_ITEM_M_VEST_015_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2379750218,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8dd81b4a",
+    "name": "CLOTHING_ITEM_M_VEST_015_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2150268911,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "802a7fef",
+    "name": "CLOTHING_ITEM_M_VEST_015_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 3405701152,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cafee020",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 3231566686,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c09dcb5e",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1869850891,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6f73a90b",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 1630669960,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "61320c88",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2484957790,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "941d725e",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2262226897,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86d6d7d1",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 932854101,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "379a3955",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 704552478,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "29fe9e1e",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1029031116,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3d55c4cc",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3019157740,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b3f4b0ec",
+    "name": "CLOTHING_ITEM_M_VEST_016_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1574756928,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5ddce240",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2182884306,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "821c2bd2",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2550552486,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "980657a6",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2778264267,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a598f2cb",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 996613737,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3b671e69",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1326990795,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f1845cb",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1559028084,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5cece174",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 4069657792,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f2920cc0",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 10725603,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a3a8e3",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2662358934,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9eb05f96",
+    "name": "CLOTHING_ITEM_M_VEST_017_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 3529648356,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d26228e4",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 606751859,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "242a4c73",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 955741709,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "38f7760d",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 194779991,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9c1b57",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2357107966,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8c7e9cfe",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 3744416382,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "df2f427e",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 4027180083,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f009e433",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3265300833,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c2a08961",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2809877267,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a77b5313",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 581552246,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "22a9c876",
+    "name": "CLOTHING_ITEM_M_VEST_018_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2810760219,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a788cc1b",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 536493308,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1ffa3cfc",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 229611623,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "daf9867",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 4077150993,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f3046311",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 4038221421,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f0b25e6d",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 606455127,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2425c557",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1389929148,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "52d8a2bc",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 132254928,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7e20cd0",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 900065367,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "35a5e857",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3164862321,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bca3f771",
+    "name": "CLOTHING_ITEM_M_VEST_200_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 3024046174,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b43f485e",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1504154412,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "59a7932c",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1801533087,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b61369f",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2099730987,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7d275a2b",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 2397306276,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ee3fda4",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 279052578,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "10a20122",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 577086633,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2265a4a9",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 876595293,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "343fc85d",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1174039506,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45fa6bd2",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3410490711,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cb47f557",
+    "name": "CLOTHING_ITEM_M_VEST_201_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 2927492934,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ae7dff46",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2631425019,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9cd85bfb",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 485481492,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1cefdc14",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 789905526,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2f150076",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1699900656,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "65526cf0",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1403046285,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "53a0c98d",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3597061891,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d666cf03",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 145765269,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8b03395",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 4144664650,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f70a904a",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 641628457,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "263e7929",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 721388207,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2aff82af",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_011",
+    "itemType": "vests"
+  },
+  {
+    "component": 1020929636,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3cda2664",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_012",
+    "itemType": "vests"
+  },
+  {
+    "component": 3576878867,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d532d713",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_013",
+    "itemType": "vests"
+  },
+  {
+    "component": 2935130771,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aef28a93",
+    "name": "CLOTHING_ITEM_M_VEST_202_TINT_014",
+    "itemType": "vests"
+  },
+  {
+    "component": 3176142126,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bd50152e",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1540149801,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5bccd229",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 228701644,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da1b5cc",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 678554476,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2871eb6c",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 438587089,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1a244ed1",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2493268935,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "949c43c7",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 1180772178,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "46612752",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 1092558030,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "411f1cce",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 1792897098,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6add704a",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 2580664714,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "99d1d18a",
+    "name": "CLOTHING_ITEM_M_VEST_203_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1449487951,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56656e4f",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1628144539,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "610b839b",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 1926244132,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "72d02724",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 195975394,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bae58e2",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 496368817,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1d95fcb1",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 660082741,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27581035",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 974828986,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3a1ab5ba",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3490931113,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d01361a9",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3790341466,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e1ec055a",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1680083720,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "64240b08",
+    "name": "CLOTHING_ITEM_M_VEST_204_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 1281733092,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c65b1e4",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1578915153,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5e1c5551",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 2565130985,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98e4cae9",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 2863296116,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aaaa6e74",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1972044854,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "758b0436",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 2266343243,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8715a74b",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 3791674655,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e2005d1f",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 3820052609,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e3b16081",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 3190068584,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "be249568",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 1368702798,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5194bf4e",
+    "name": "CLOTHING_ITEM_M_VEST_205_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 343329028,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1476c904",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 38577328,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "24ca4b0",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_002",
+    "itemType": "vests"
+  },
+  {
+    "component": 908856430,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "362c0c6e",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_003",
+    "itemType": "vests"
+  },
+  {
+    "component": 668626891,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "27da6fcb",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_004",
+    "itemType": "vests"
+  },
+  {
+    "component": 1572756370,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5dbe5b92",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_005",
+    "itemType": "vests"
+  },
+  {
+    "component": 1265120998,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4b6836e6",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_006",
+    "itemType": "vests"
+  },
+  {
+    "component": 2196055519,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "82e525df",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_007",
+    "itemType": "vests"
+  },
+  {
+    "component": 1888911682,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "70968142",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_008",
+    "itemType": "vests"
+  },
+  {
+    "component": 2815848385,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7d66fc1",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_009",
+    "itemType": "vests"
+  },
+  {
+    "component": 3950147100,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "eb72761c",
+    "name": "CLOTHING_ITEM_M_VEST_206_TINT_010",
+    "itemType": "vests"
+  },
+  {
+    "component": 3215126917,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bfa2f185",
+    "name": "CLOTHING_ITEM_M_VEST_311_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 1343783098,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "501880ba",
+    "name": "CLOTHING_ITEM_M_VEST_313_TINT_001",
+    "itemType": "vests"
+  },
+  {
+    "component": 2675844196,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "9f7e2464",
+    "name": "CLOTHING_SP_PRE_PLAYER_VEST_005_1",
+    "itemType": "vests",
+    "friendlyName": "Buckskin King Vest"
+  },
+  {
+    "component": 393135632,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "176ec610",
+    "name": "CLOTHING_SP_VEST_FANCY01_VARIATION_01",
+    "itemType": "vests",
+    "friendlyName": "Fancy Vest"
+  },
+  {
+    "component": 8647731,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "83f433",
+    "itemType": "vests"
+  },
+  {
+    "component": 34074416,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "207ef30",
+    "itemType": "vests"
+  },
+  {
+    "component": 75661083,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4827f1b",
+    "itemType": "vests"
+  },
+  {
+    "component": 117130861,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6fb466d",
+    "itemType": "vests"
+  },
+  {
+    "component": 192313573,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b7678e5",
+    "itemType": "vests"
+  },
+  {
+    "component": 207247924,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c5a5a34",
+    "itemType": "vests"
+  },
+  {
+    "component": 314673019,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "12c1877b",
+    "itemType": "vests"
+  },
+  {
+    "component": 393122013,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "176e90dd",
+    "itemType": "vests"
+  },
+  {
+    "component": 558244996,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "21462484",
+    "itemType": "vests"
+  },
+  {
+    "component": 632256949,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25af79b5",
+    "itemType": "vests"
+  },
+  {
+    "component": 632335713,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25b0ad61",
+    "itemType": "vests"
+  },
+  {
+    "component": 635657756,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "25e35e1c",
+    "itemType": "vests"
+  },
+  {
+    "component": 687502422,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "28fa7456",
+    "itemType": "vests"
+  },
+  {
+    "component": 744967161,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2c674bf9",
+    "itemType": "vests"
+  },
+  {
+    "component": 855413839,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "32fc944f",
+    "itemType": "vests"
+  },
+  {
+    "component": 873482784,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "34104a20",
+    "itemType": "vests"
+  },
+  {
+    "component": 925099105,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3723e461",
+    "itemType": "vests"
+  },
+  {
+    "component": 928438741,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3756d9d5",
+    "itemType": "vests"
+  },
+  {
+    "component": 965568069,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "398d6645",
+    "itemType": "vests"
+  },
+  {
+    "component": 1094514831,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "413cf88f",
+    "itemType": "vests"
+  },
+  {
+    "component": 1112945406,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "425632fe",
+    "itemType": "vests"
+  },
+  {
+    "component": 1113417402,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "425d66ba",
+    "itemType": "vests"
+  },
+  {
+    "component": 1152202672,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "44ad37b0",
+    "itemType": "vests"
+  },
+  {
+    "component": 1284375619,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4c8e0443",
+    "itemType": "vests"
+  },
+  {
+    "component": 1305443458,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4dcf7c82",
+    "itemType": "vests"
+  },
+  {
+    "component": 1330793722,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4f524cfa",
+    "itemType": "vests"
+  },
+  {
+    "component": 1368852430,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "519707ce",
+    "itemType": "vests"
+  },
+  {
+    "component": 1401567593,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "538a3969",
+    "itemType": "vests"
+  },
+  {
+    "component": 1430571982,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5544cbce",
+    "itemType": "vests"
+  },
+  {
+    "component": 1459601492,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "56ffc054",
+    "itemType": "vests"
+  },
+  {
+    "component": 1497981160,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "594960e8",
+    "itemType": "vests"
+  },
+  {
+    "component": 1524277468,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5adaa0dc",
+    "itemType": "vests"
+  },
+  {
+    "component": 1579036522,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5e1e2f6a",
+    "itemType": "vests"
+  },
+  {
+    "component": 1798627858,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b34e212",
+    "itemType": "vests"
+  },
+  {
+    "component": 1800420160,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6b503b40",
+    "itemType": "vests"
+  },
+  {
+    "component": 1816735917,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6c4930ad",
+    "itemType": "vests"
+  },
+  {
+    "component": 1847214292,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "6e1a40d4",
+    "itemType": "vests"
+  },
+  {
+    "component": 1960470978,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74da69c2",
+    "itemType": "vests"
+  },
+  {
+    "component": 2001796267,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7750fcab",
+    "itemType": "vests"
+  },
+  {
+    "component": 2025248241,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "78b6d5f1",
+    "itemType": "vests"
+  },
+  {
+    "component": 2145182809,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7fdce459",
+    "itemType": "vests"
+  },
+  {
+    "component": 2147511079,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80006b27",
+    "itemType": "vests"
+  },
+  {
+    "component": 2161935113,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "80dc8309",
+    "itemType": "vests"
+  },
+  {
+    "component": 2367368334,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8d1b2c8e",
+    "itemType": "vests"
+  },
+  {
+    "component": 2586286938,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a279b5a",
+    "itemType": "vests"
+  },
+  {
+    "component": 2724812586,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a269572a",
+    "itemType": "vests"
+  },
+  {
+    "component": 2771128139,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a52c0f4b",
+    "itemType": "vests"
+  },
+  {
+    "component": 2790652672,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a655fb00",
+    "itemType": "vests"
+  },
+  {
+    "component": 2812509447,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a7a37d07",
+    "itemType": "vests"
+  },
+  {
+    "component": 2885577300,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "abfe6a54",
+    "itemType": "vests"
+  },
+  {
+    "component": 3039494118,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b52affe6",
+    "itemType": "vests"
+  },
+  {
+    "component": 3089473187,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8259ea3",
+    "itemType": "vests"
+  },
+  {
+    "component": 3103022346,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b8f45d0a",
+    "itemType": "vests"
+  },
+  {
+    "component": 3160563043,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "bc625d63",
+    "itemType": "vests"
+  },
+  {
+    "component": 3227181743,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c05ae2af",
+    "itemType": "vests"
+  },
+  {
+    "component": 3304423426,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c4f58002",
+    "itemType": "vests"
+  },
+  {
+    "component": 3474198868,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "cf141154",
+    "itemType": "vests"
+  },
+  {
+    "component": 3533347656,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d29a9b48",
+    "itemType": "vests"
+  },
+  {
+    "component": 3593085547,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d62a226b",
+    "itemType": "vests"
+  },
+  {
+    "component": 4052833870,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f191564e",
+    "itemType": "vests"
+  },
+  {
+    "component": 4225705493,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fbdf2615",
+    "itemType": "vests"
+  },
+  {
+    "component": 4248755318,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd3edc76",
+    "itemType": "vests"
+  },
+  {
+    "component": 4253504533,
+    "category": 1214179380,
+    "type": "1",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fd875415",
+    "itemType": "vests"
+  },
+  {
+    "component": 185998195,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "b161b73",
+    "itemType": "vests"
+  },
+  {
+    "component": 3824234482,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": false,
+    "isSp": true,
+    "componentHex": "e3f12ff2",
+    "itemType": "vests"
+  },
+  {
+    "component": 150973636,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8ffacc4",
+    "itemType": "vests"
+  },
+  {
+    "component": 179183007,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "aae1d9f",
+    "itemType": "vests"
+  },
+  {
+    "component": 212157959,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ca54607",
+    "itemType": "vests"
+  },
+  {
+    "component": 221188760,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2f1298",
+    "itemType": "vests"
+  },
+  {
+    "component": 383323022,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "16d90b8e",
+    "itemType": "vests"
+  },
+  {
+    "component": 509457653,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "1e5db4f5",
+    "itemType": "vests"
+  },
+  {
+    "component": 571286006,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "220d21f6",
+    "itemType": "vests"
+  },
+  {
+    "component": 802862819,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "2fdab6e3",
+    "itemType": "vests"
+  },
+  {
+    "component": 805623875,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "3004d843",
+    "itemType": "vests"
+  },
+  {
+    "component": 1164979980,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "45702f0c",
+    "itemType": "vests"
+  },
+  {
+    "component": 1207919603,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "47ff63f3",
+    "itemType": "vests"
+  },
+  {
+    "component": 1216802537,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4886eee9",
+    "itemType": "vests"
+  },
+  {
+    "component": 1300110441,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "4d7e1c69",
+    "itemType": "vests"
+  },
+  {
+    "component": 1430594243,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "554522c3",
+    "itemType": "vests"
+  },
+  {
+    "component": 1439171128,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "55c80238",
+    "itemType": "vests"
+  },
+  {
+    "component": 1537012070,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "5b9cf166",
+    "itemType": "vests"
+  },
+  {
+    "component": 1626773673,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "60f698a9",
+    "itemType": "vests"
+  },
+  {
+    "component": 1727907380,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "66fdc634",
+    "itemType": "vests"
+  },
+  {
+    "component": 1896833931,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "710f638b",
+    "itemType": "vests"
+  },
+  {
+    "component": 1899271013,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "71349365",
+    "itemType": "vests"
+  },
+  {
+    "component": 1943833622,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "73dc8c16",
+    "itemType": "vests"
+  },
+  {
+    "component": 1954087201,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "74790121",
+    "itemType": "vests"
+  },
+  {
+    "component": 2070933272,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "7b6fef18",
+    "itemType": "vests"
+  },
+  {
+    "component": 2257161855,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "86898e7f",
+    "itemType": "vests"
+  },
+  {
+    "component": 2399958208,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "8f0c74c0",
+    "itemType": "vests"
+  },
+  {
+    "component": 2492213892,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "948c2a84",
+    "itemType": "vests"
+  },
+  {
+    "component": 2565041247,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "98e36c5f",
+    "itemType": "vests"
+  },
+  {
+    "component": 2585823996,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "9a208afc",
+    "itemType": "vests"
+  },
+  {
+    "component": 2692530797,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "a07cc26d",
+    "itemType": "vests"
+  },
+  {
+    "component": 2898560571,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "acc4863b",
+    "itemType": "vests"
+  },
+  {
+    "component": 3108720764,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b94b507c",
+    "itemType": "vests"
+  },
+  {
+    "component": 3117249798,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "b9cd7506",
+    "itemType": "vests"
+  },
+  {
+    "component": 3320428677,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c5e9b885",
+    "itemType": "vests"
+  },
+  {
+    "component": 3355666093,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c80366ad",
+    "itemType": "vests"
+  },
+  {
+    "component": 3368251244,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "c8c36f6c",
+    "itemType": "vests"
+  },
+  {
+    "component": 3516354528,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d1974fe0",
+    "itemType": "vests"
+  },
+  {
+    "component": 3535862844,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "d2c0fc3c",
+    "itemType": "vests"
+  },
+  {
+    "component": 3666174396,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "da8561bc",
+    "itemType": "vests"
+  },
+  {
+    "component": 3816688915,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e37e0d13",
+    "itemType": "vests"
+  },
+  {
+    "component": 3870062834,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "e6ac78f2",
+    "itemType": "vests"
+  },
+  {
+    "component": 4058005925,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "f1e041a5",
+    "itemType": "vests"
+  },
+  {
+    "component": 4201869225,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "fa736fa9",
+    "itemType": "vests"
+  },
+  {
+    "component": 4272731863,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "feacb6d7",
+    "itemType": "vests"
+  },
+  {
+    "component": 4278266547,
+    "category": 1214179380,
+    "type": "0",
+    "isMp": true,
+    "isSp": false,
+    "componentHex": "ff012ab3",
+    "itemType": "vests"
+  }
+]

@@ -1,0 +1,860 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 2640248825,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "9d5efff9",
+        "name": "CLOTHING_ITEM_BODY_ARTHUR_0",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2458758467,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "928dad43",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_001_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2161838558,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "80db09de",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_001_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3251571649,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c1cf0bc1",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_001_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 743432389,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2c4fe0c5",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_001_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3800845627,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e28c4d3b",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_001_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3502614958,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d0c5a9ae",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_001_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1679300899,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "64181923",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_002_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1449229750,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "56617db6",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_002_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2147668216,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8002d0f8",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_002_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1900360573,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7145337d",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_002_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 453543685,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1b088705",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_002_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 231238785,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "dc86c81",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_002_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3631769965,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "d878696d",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_003_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2475843490,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "93925fa2",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_003_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2183380165,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8223bcc5",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_003_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 923281039,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3708268f",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_003_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2712599515,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "a1aefbdb",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_003_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1490610736,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "58d8ea30",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_003_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2379184713,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8dcf7a49",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_004_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2490861465,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "94778799",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_004_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1814410998,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6c25b6f6",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_004_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2043892305,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "79d35251",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_004_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 900188667,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "35a7c9fb",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_004_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1531843911,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5b4e1547",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_004_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 186465082,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b1d3b3a",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_005_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 238436716,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e36416c",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_005_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 736263364,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2be27cc4",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_005_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2995063299,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b2850a03",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_005_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3227133357,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c05a25ad",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_005_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2268476262,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "87363366",
+        "name": "CLOTHING_ITEM_F_BODIES_UPPER_005_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 4132004136,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f6496128",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_001_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3212342147,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "bf787383",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_001_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2582128739,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "99e82863",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_001_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1660566152,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "62fa3a88",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_001_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3024641315,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b4485d23",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_001_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1996808861,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "7704e29d",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_001_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 383947425,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "16e292a1",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_002_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1965838131,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "752c4f33",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_002_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 942003495,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3825d527",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_002_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1180660122,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "465f719a",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_002_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1807137864,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6bb6bc48",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_002_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3121207533,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ba09d8ed",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_002_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1257168263,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4aeedd87",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_003_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 885240113,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "34c3b131",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_003_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2196852103,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "82f14d87",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_003_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1834492501,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6d582255",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_003_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1588167928,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5ea984f8",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_003_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3370801528,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c8ea5978",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_003_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1272509601,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4bd8f4a1",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_004_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 96561259,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5c1686b",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_004_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1519555092,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5a929214",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_004_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2362013313,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8cc97681",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_004_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1210379577,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4824ed39",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_004_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1773547611,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "69b6305b",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_004_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3126420045,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "ba59624d",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_005_V_001",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2358675144,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8c9686c8",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_005_V_002",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3746704442,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "df522c3a",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_005_V_003",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2966572863,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "b0d24f3f",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_005_V_004",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 62321923,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "3b6f503",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_005_V_005",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3447687317,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "cd7f8895",
+        "name": "CLOTHING_ITEM_M_BODIES_UPPER_005_V_006",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1218117202,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "489afe52",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1269665978,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4bad90ba",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1632812036,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6152bc04",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2566826843,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "98feab5b",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3199792847,
+        "category": 188311241,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "beb8f6cf",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 29184152,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "1bd5098",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 270373168,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "101d9130",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 340510282,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "144bc64a",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 464810690,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "1bb472c2",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 903295690,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "35d732ca",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1104692218,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "41d843fa",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1203435878,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "47baf966",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1333201469,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "4f770a3d",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1833998502,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "6d5098a6",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 1861232849,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "6ef028d1",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2395677394,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "8ecb22d2",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2568464573,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "9917a8bd",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2591618928,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "9a78f770",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2749136787,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "a3dc7f93",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2792415997,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "a670e2fd",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 2937657967,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "af191a6f",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3050207174,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "b5ce77c6",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3171033637,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "bd022225",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3304692809,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "c4f99c49",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 3521798364,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "d1ea60dc",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 4184035305,
+        "category": 188311241,
+        "type": "0",
+        "isMp": false,
+        "isSp": true,
+        "componentHex": "f9634fe9",
+        "itemType": "BODIES_UPPER"
+      },
+      {
+        "component": 543187419,
+        "category": 188311241,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "206061db",
+        "itemType": "BODIES_UPPER"
+      }
+    ]
+  }
+]

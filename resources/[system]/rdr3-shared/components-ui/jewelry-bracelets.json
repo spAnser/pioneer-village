@@ -1,0 +1,115 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 1691819452,
+        "category": 2076247897,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "64d71dbc",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 1931885258,
+        "category": 2076247897,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "73263aca",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 2170967882,
+        "category": 2076247897,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "8166574a",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 2544305099,
+        "category": 2076247897,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "97a703cb",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 2899652135,
+        "category": 2076247897,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "acd52e27",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 3361596728,
+        "category": 2076247897,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "c85de538",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 97914417,
+        "category": 2076247897,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "5d60e31",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 325822812,
+        "category": 2076247897,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "136ba95c",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 575981358,
+        "category": 2076247897,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2254c72e",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 803168835,
+        "category": 2076247897,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "2fdf6243",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 3914028312,
+        "category": 2076247897,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e94b5518",
+        "itemType": "jewelry_bracelets"
+      },
+      {
+        "component": 4154061237,
+        "category": 2076247897,
+        "type": "0",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "f799f1b5",
+        "itemType": "jewelry_bracelets"
+      }
+    ]
+  }
+]

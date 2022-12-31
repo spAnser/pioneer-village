@@ -1,0 +1,917 @@
+[
+  {
+    "name": "Misc",
+    "components": [
+      {
+        "component": 401308115,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "17eb79d3",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 440103451,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "1a3b721b",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 632624486,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "25b51566",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 870822347,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "33e7b1cb",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 1092930633,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "4124cc49",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 1330800804,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "4f5268a4",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 2748974426,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "a3da055a",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 2787939927,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "a62c9657",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 2806221865,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "a7438c29",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 3031118676,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "b4ab3354",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 3271184370,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "c2fa4ff2",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 3343895621,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "c74fcc45",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 3510886445,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "d143e02d",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 3719595366,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "ddb48566",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 3955696011,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "ebc7218b",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 3976435628,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "ed0397ac",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 4138773254,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f6b0ab06",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Braid"
+      },
+      {
+        "component": 76881698,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "4951f22",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 316390319,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "12dbbbaf",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 998935820,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "3b8a8d0c",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 1238182289,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "49cd2991",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 1618564841,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "607956e9",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 1840705892,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "6db6f164",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 1965196111,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "7522834f",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 2217123395,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "84269e43",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 2271946720,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "876b27e0",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 2292361811,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "88a2aa53",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 2532164561,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "96edc3d1",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 2536162375,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "972ac447",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 2829346618,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "a8a4673a",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 3168015025,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "bcd412b1",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 3462575566,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "ce62b5ce",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 3718206535,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "dd9f5447",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 4020664405,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "efa67855",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Dreadlock"
+      },
+      {
+        "component": 101181149,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "607e6dd",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 120615842,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "73073a2",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 139291536,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "84d6b90",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 528128490,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "1f7a99ea",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 811613109,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "30603bb5",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 987779253,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "3ae050b5",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 1568645187,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "5d7fa043",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 2164940000,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "810a5ce0",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 3023523249,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "b4374db1",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 3271879500,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "c304eb4c",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 3621161595,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "d7d68a7b",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 3643313479,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "d9288d47",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 3655997718,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "d9ea1916",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 3938171577,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "eabbbab9",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 4096344864,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f4294320",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 4104340540,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f4a3443c",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 4167554577,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "f867d611",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Long"
+      },
+      {
+        "component": 107751023,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "66c266f",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 943621875,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "383e86f3",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 1025446868,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "3d1f13d4",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 1263644729,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "4b51b039",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 1464584237,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "574bc82d",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 1769303168,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "69756c80",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 1946616227,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "740701a3",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 2049215166,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "7a248abe",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 2303469837,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "894c290d",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 2628898776,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "9cb1cfd8",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 2692176515,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "a0775a83",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 2767249494,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "a4f0e056",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 2990865950,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "b244fe1e",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 3456054682,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "cdff359a",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 3817823638,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "e38f5d96",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 3936743143,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "eaa5eee7",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 3984093544,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "ed787168",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Regular"
+      },
+      {
+        "component": 184240428,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "afb492c",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 464906913,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "1bb5eaa1",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 513415362,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "1e9a18c2",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 779434100,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "2e753874",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 992465373,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "3b27d1dd",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 1025584503,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "3d212d77",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 1348664403,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "5062fc53",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 1351275594,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "508ad44a",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 1412563949,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "543203ed",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 1598583237,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "5f4871c5",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 1767583295,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "695b2e3f",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 1975830294,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "75c4c716",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 2195405038,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "82db38ee",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 2225988836,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "84ade4e4",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 3232707721,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "c0af3489",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 3705935191,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "dce41557",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 3941249380,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": true,
+        "componentHex": "eaeab164",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Short"
+      },
+      {
+        "component": 371298720,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "162191a0",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Wild"
+      },
+      {
+        "component": 535338346,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "1fe89d6a",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Wild"
+      },
+      {
+        "component": 1197306903,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "475d7417",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Wild"
+      },
+      {
+        "component": 1325956009,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "4f087ba9",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Wild"
+      },
+      {
+        "component": 1684383339,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "6465a66b",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Wild"
+      },
+      {
+        "component": 3800279653,
+        "category": 2788994576,
+        "type": "1",
+        "isMp": true,
+        "isSp": false,
+        "componentHex": "e283aa65",
+        "itemType": "HORSE_TAILS",
+        "friendlyName": "Wild"
+      }
+    ]
+  }
+]
