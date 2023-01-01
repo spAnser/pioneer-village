@@ -1,5 +1,4 @@
 import { emitSocket } from '@lib/server';
-import { PVDoors } from '@lib/client';
 
 RegisterCommand(
   'giveItem',
