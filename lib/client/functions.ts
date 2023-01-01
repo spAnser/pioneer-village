@@ -28,7 +28,7 @@ export const DrawTxt = (
 ) => {
   const str = VarString(10, 'LITERAL_STRING', rawString);
   SetTextScale(1, size);
-  SetTextColor(Math.floor(r), Math.floor(g), Math.floor(b), Math.floor(a));
+  BgSetTextColor(Math.floor(r), Math.floor(g), Math.floor(b), Math.floor(a));
   SetTextCentre(centre);
   if (enableShadow) {
     SetTextDropshadow(1, 0, 0, 0, 255);
