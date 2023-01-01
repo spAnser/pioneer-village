@@ -28,6 +28,7 @@ class Characters {
   ): Promise<PrismaCharacterWithFace | null> {
     // @ts-ignore
     characterData.dateOfBirth = new Date(characterData.dateOfBirth);
+    // @ts-ignore
     const character = await this.prisma.characters.create({ data: { ...characterData, accountId: ownerId } });
     await this.prisma.faces.create({ data: { ...faceData, characterId: character.id } });
     return this.prisma.characters.findFirst({ where: { id: character.id }, include: { face: true } });
