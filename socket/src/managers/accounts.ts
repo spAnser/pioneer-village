@@ -18,7 +18,7 @@ class Accounts {
   async getOrCreate(identifiers: Record<string, string>): Promise<PrismaAccount> {
     const where: Record<string, string> = {};
     for (const key in identifiers) {
-      if (key === 'ip') {
+      if (key === 'ip' || key === 'license' || key === 'license2' || key === 'discord') {
         continue;
       }
       where[`identifier_${key}`] = identifiers[key];
