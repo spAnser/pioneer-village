@@ -93,6 +93,7 @@ declare namespace UI.Customization {
   }
 
   interface State extends UI.BaseState {
+    state: 'transition' | 'gender' | 'creation' | 'tailor' | 'barber';
     components: Record<string, any>;
     model: string | number;
     gender: 'male' | 'female';
@@ -111,7 +112,7 @@ declare namespace UI.Customization {
     };
   }
 
-  type Event = Partial<UI.BaseState>;
+  type Event = Partial<State>;
 
   interface ComponentJsonData {
     component: number;

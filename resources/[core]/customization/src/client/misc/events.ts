@@ -9,6 +9,14 @@ onUI('customization.set-components', (components) => {
   creationManager.setComponents(components);
 });
 
+onUI('customization.highlight', (gender) => {
+  creationManager.highlightGender(gender);
+});
+
+onUI('customization.choose-gender', () => {
+  creationManager.chooseGender();
+});
+
 RegisterCommand(
   'create_start',
   () => {
@@ -26,23 +34,6 @@ RegisterCommand(
 );
 
 RegisterCommand(
-  'create_highlight',
-  async (source: number, args: string[]) => {
-    // @ts-ignore
-    creationManager.highlightGender(args[0]);
-  },
-  false,
-);
-
-RegisterCommand(
-  'create_choose',
-  async (source: number, args: string[]) => {
-    creationManager.chooseGender();
-  },
-  false,
-);
-
-RegisterCommand(
   'create_rotate',
   async (source: number, args: string[]) => {
     creationManager.rotateChosen(Number(args[0]));
@@ -55,22 +46,6 @@ RegisterCommand(
   async (source: number, args: string[]) => {
     // @ts-ignore
     creationManager.chooseCamera(args[0]);
-  },
-  false,
-);
-
-let ui = false;
-RegisterCommand(
-  'create_ui',
-  () => {
-    if (ui) {
-      emitUI('customization.state', { show: false });
-      focusUI(false, false);
-    } else {
-      emitUI('customization.state', { show: true });
-      focusUI(true, true);
-    }
-    ui = !ui;
   },
   false,
 );

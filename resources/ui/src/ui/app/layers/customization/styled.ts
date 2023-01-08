@@ -18,6 +18,20 @@ export const Modal = styled.div`
   background-position: center;
   color: ${theme.colors.white.hex};
   font-family: 'Caveat', cursive;
+
+  input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dashed ${theme.colors.gray50.hex};
+    font-size: ${uiSize(30)};
+    color: ${theme.colors.white.hex};
+
+    &:focus {
+      outline: none;
+      border-bottom-color: ${theme.colors.white.hex};
+    }
+  }
 `;
 
 export const ModalTitle = styled.div`

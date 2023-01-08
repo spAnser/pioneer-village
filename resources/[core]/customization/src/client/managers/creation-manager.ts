@@ -1,4 +1,4 @@
-import { PVBase, PVCamera, PVGame } from '@lib/client';
+import { emitUI, focusUI, PVBase, PVCamera, PVGame } from '@lib/client';
 import { Delay } from '@lib/functions';
 
 class CreationManager {
@@ -76,6 +76,9 @@ class CreationManager {
 
     this.currentState = -1;
     this.currentGender = 'male';
+
+    emitUI('customization.state', { show: false });
+    focusUI(false, false);
   }
 
   async start() {
@@ -102,6 +105,9 @@ class CreationManager {
     SetEntityAlpha(this.female, 50, false);
 
     DoScreenFadeIn(500);
+
+    emitUI('customization.state', { show: true, state: 'gender', gender: 'male' });
+    focusUI(true, true);
   }
 
   private createCameras() {
@@ -192,6 +198,7 @@ class CreationManager {
   }
 
   async chooseGender() {
+    emitUI('customization.state', { state: 'transition' });
     this.chosen = await PVGame.createPed(
       this.currentGender === 'male' ? 'mp_male' : 'mp_female',
       -558.5,
@@ -207,6 +214,7 @@ class CreationManager {
     FreezeEntityPosition(this.chosen, true);
     await PVCamera.interpolate('CreationTransition', 1500);
     PVCamera.interpolate('CreationDressing', 750);
+    emitUI('customization.state', { state: 'creation' });
     this.currentState = 1;
   }
 

@@ -61,4 +61,6 @@ declare interface UIEvents {
   ['character-select.choose']: (characterId: number) => void;
   ['customization.state']: (event: UI.Customization.Event) => void;
   ['customization.set-components']: (components: number[]) => void;
+  ['customization.highlight']: (gender: 'male' | 'female') => void;
+  ['customization.choose-gender']: () => void;
 }

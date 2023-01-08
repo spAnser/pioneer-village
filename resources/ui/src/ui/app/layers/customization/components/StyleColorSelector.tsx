@@ -131,7 +131,7 @@ export default class StyleColorSelector extends Component<Props, State> {
         <SCSContent
           ref={this.refContent}
           style={{ height: this.state.active ? this.state.contentHeight : null }}
-          className={this.state.active ? `active` : ''}
+          className={this.state.active ? 'active' : ''}
         >
           <SCSSelector>
             <div

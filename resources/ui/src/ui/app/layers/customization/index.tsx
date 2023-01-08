@@ -6,6 +6,7 @@ import { emitClient, LoadResourceJson, onClient } from '@lib/ui';
 import { defaultOverlays } from './data';
 import { Container, Modal, ModalTitle } from './styled';
 import StyleColorSelector from './components/StyleColorSelector';
+import { GenderSelect } from './components/Gender';
 
 const componentFiles = [
   '2886757168',
@@ -91,6 +92,7 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
 
     this.state = {
       show: false,
+      state: 'gender',
       components: {},
       model: '',
       gender: 'male',
@@ -153,29 +155,68 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
     emitClient('customization.set-components', components);
   }
 
+  handleHighlightGender(gender: 'male' | 'female', e: MouseEvent) {
+    this.setState({ gender });
+    emitClient('customization.highlight', gender);
+  }
+
+  handleChooseGender(e: MouseEvent) {
+    console.log('handleChooseGender');
+    emitClient('customization.choose-gender');
+  }
+
   render() {
     return (
       <>
-        {this.state.show && (
+        {this.state.show && this.state.state === 'gender' && (
           <>
-            <Container>
-              <Modal>
-                <ModalTitle>{`Clothes`}</ModalTitle>
-                <StyleColorSelector
-                  label={`Boots`}
-                  onChange={(style, option) => this.setComponent('boots', style, option)}
-                  components={ComponentsData.boots}
-                  gender={this.state.gender}
-                />
-                <StyleColorSelector
-                  label={`Shirts`}
-                  onChange={(style, option) => this.setComponent('shirts', style, option)}
-                  components={ComponentsData['shirts-full']}
-                  gender={this.state.gender}
-                />
-                <pre>{JSON.stringify(this.state.currentComponents, null, 2)}</pre>
-              </Modal>
-            </Container>
+            <GenderSelect
+              className={this.state.gender === 'male' ? 'active' : ''}
+              style={{ left: 0 }}
+              onMouseEnter={this.handleHighlightGender.bind(this, 'male')}
+              onMouseDown={this.handleChooseGender.bind(this)}
+            />
+            <GenderSelect
+              className={this.state.gender === 'female' ? 'active' : ''}
+              style={{ right: 0 }}
+              onMouseEnter={this.handleHighlightGender.bind(this, 'female')}
+              onMouseDown={this.handleChooseGender.bind(this)}
+            />
+          </>
+        )}
+        {this.state.show && this.state.state === 'creation' && (
+          <>
+            <Modal>
+              <ModalTitle>{`Information`}</ModalTitle>
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
+              <input type="date" />
+            </Modal>
+          </>
+        )}
+        {this.state.show && this.state.state === 'tailor' && (
+          <>
+            <Modal>
+              <ModalTitle>{`Clothes`}</ModalTitle>
+              <StyleColorSelector
+                label={`Boots`}
+                onChange={(style, option) => this.setComponent('boots', style, option)}
+                components={ComponentsData.boots}
+                gender={this.state.gender}
+              />
+              <StyleColorSelector
+                label={`Shirts`}
+                onChange={(style, option) => this.setComponent('shirts', style, option)}
+                components={ComponentsData['shirts-full']}
+                gender={this.state.gender}
+              />
+              <pre>{JSON.stringify(this.state.currentComponents, null, 2)}</pre>
+            </Modal>
+          </>
+        )}
+        {this.state.show && (this.state.state === 'creation' || this.state.state === 'barber') && (
+          <>
+            <h1>Barber</h1>
           </>
         )}
       </>

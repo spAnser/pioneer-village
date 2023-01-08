@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="customization:src" pattern="file[pioneer-village]:resources/*core*/customization/src//*||file[pioneer-village]:resources/ui/src/ui/app/layers/customization//*" />
+</component>
