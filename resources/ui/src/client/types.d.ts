@@ -63,4 +63,9 @@ declare interface UIEvents {
   ['customization.set-components']: (components: number[]) => void;
   ['customization.highlight']: (gender: 'male' | 'female') => void;
   ['customization.choose-gender']: () => void;
+  ['customization.set-information']: (
+    firstName: string,
+    lastName: string,
+    dateOfBirth: { day: number; month: number; year: number },
+  ) => void;
 }

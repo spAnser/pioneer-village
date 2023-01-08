@@ -32,6 +32,16 @@ export const Modal = styled.div`
       border-bottom-color: ${theme.colors.white.hex};
     }
   }
+  
+  input[type="submit"] {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dashed ${theme.colors.gray50.hex};
+    font-size: ${uiSize(30)};
+    color: ${theme.colors.white.hex};
+    cursor: pointer;
+    margin-top: ${uiSize(20)};
 `;
 
 export const ModalTitle = styled.div`

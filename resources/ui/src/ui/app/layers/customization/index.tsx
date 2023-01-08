@@ -165,6 +165,22 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
     emitClient('customization.choose-gender');
   }
 
+  setFirstName(e: any) {
+    this.setState({ firstName: e.target.value });
+  }
+
+  setLastName(e: any) {
+    this.setState({ lastName: e.target.value });
+  }
+
+  setDateOfBirth(e: any) {
+    this.setState({ dateOfBirth: e.target.value });
+  }
+
+  handleInformationConfirm() {
+    emitClient('customization.set-information', this.state.firstName, this.state.lastName, this.state.dateOfBirth);
+  }
+
   render() {
     return (
       <>
@@ -188,9 +204,12 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
           <>
             <Modal>
               <ModalTitle>{`Information`}</ModalTitle>
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="date" />
+              <input type="text" placeholder="First Name" name="firstName" onChange={this.setFirstName.bind(this)} />
+              <input type="text" placeholder="Last Name" name="lastName" onChange={this.setLastName.bind(this)} />
+              <input type="date" name="dateOfBirth" onChange={this.setDateOfBirth.bind(this)} />
+              <input type="submit" value="Confirm" onClick={this.handleInformationConfirm}>
+                Confirm
+              </input>
             </Modal>
           </>
         )}
