@@ -70,7 +70,6 @@ window.addEventListener('keyup', (e) => {
 });
 
 setTimeout(() => {
-  emitUI('splash.state', { show: false });
   emitUI('inventory.items', {
     [GetHashKey('PV_DOLLAR')]: {
       image: 'dollar',

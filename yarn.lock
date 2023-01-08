@@ -977,15 +977,15 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@citizenfx/client@2.0.6014-1":
-  version "2.0.6014-1"
-  resolved "https://registry.yarnpkg.com/@citizenfx/client/-/client-2.0.6014-1.tgz#e4498890a30a846d0f6b79b5a43ee9a19654f082"
-  integrity sha512-LTfLD2SR1zuaetvm108w6Hnvql1jw09K72NOc5Han/DPmKmR0FbmxI8i0DVnD7NZqTwqlzPZjkoA37Luo3P4og==
+"@citizenfx/client@2.0.6195-1":
+  version "2.0.6195-1"
+  resolved "https://registry.yarnpkg.com/@citizenfx/client/-/client-2.0.6195-1.tgz#5c6a2497a35d8c9afa812907f47f7f713aa569b7"
+  integrity sha512-udjnRkEtDeTr/wKX4GOCYoki5NKg0Vot0mQqhnFDlSeiaQMPID8sekHFnt2FHmzKRCsud4EMQuCtdM5ESrKFhw==
 
-"@citizenfx/server@2.0.6014-1":
-  version "2.0.6014-1"
-  resolved "https://registry.yarnpkg.com/@citizenfx/server/-/server-2.0.6014-1.tgz#1871ae44dc04aded21fc0e4417a17ad62cd50ebc"
-  integrity sha512-Xe9YS2LUz3+SBydej8I6SK3N6mTnsmHAUrOKyICIsKWU3Fm2nVT6TbOGoL0ebj9YgZpNDeg+KG2COK1PBY9LZg==
+"@citizenfx/server@2.0.6195-1":
+  version "2.0.6195-1"
+  resolved "https://registry.yarnpkg.com/@citizenfx/server/-/server-2.0.6195-1.tgz#33b0f0494abe515bf840e0e21ddb45387d0a3c60"
+  integrity sha512-tDY9qAK0cRrN3TqNX6KX5iKOs8kbmhfb5erclpImS113W1ZCgW0oUuXGgyjOqgHV6u1/CMcp0RAlF3yUUqLNHQ==
 
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"

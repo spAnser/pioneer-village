@@ -7,6 +7,7 @@ import { spawnCharacters } from './controllers/character-select';
 import './exports';
 import { emitSocket } from '@lib/client/comms/ui';
 
+let shouldHideLoadscreen = false;
 let firstRun = true;
 
 const playerId = PlayerId();
@@ -62,7 +63,7 @@ const characterSelection = async () => {
   await Delay(1000);
   DoScreenFadeIn(500);
 
-  emitUI('splash.state', { show: false });
+  shouldHideLoadscreen = true;
   emitUI('character-select.state', {
     show: true,
     characters: uiCharacters,
@@ -96,4 +97,9 @@ on('game:client:new_character', async (characterData: Game.Character, faceData: 
   await awaitUI('createCharacter', characterData, faceData);
   characterSelection();
   // TODO: This step will be unnecessary when custimization UI is ported to new UI system.
+});
+
+RegisterNuiCallbackType('loadscreen-shutdown-check');
+on('__cfx_nui:loadscreen-shutdown-check', (data: Record<string, any>, cb: (res: any) => void) => {
+  cb({ shutdown: shouldHideLoadscreen });
 });

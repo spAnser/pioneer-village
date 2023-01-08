@@ -37,7 +37,6 @@ declare interface UIEvents {
   ['__socket__']: UI.emitSocket;
   ['nui.close']: () => void;
   ['nui.restart']: () => void;
-  ['splash.state']: (data: UI.BaseEvent) => void;
   ['hud.state']: (event: UI.HUD.Event) => void;
   ['form.state']: (event: UI.Form.Event) => void;
   ['form.answer']: (event: UI.Form.Event) => void;
