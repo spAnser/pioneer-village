@@ -17,6 +17,22 @@ onUI('customization.choose-gender', () => {
   creationManager.chooseGender();
 });
 
+onUI('customization.set-information-firstname', (firstname) => {
+  creationManager.setFirstName(firstname);
+});
+
+onUI('customization.set-information-lastname', (lastname) => {
+  creationManager.setLastName(lastname);
+});
+
+onUI('customization.set-information-dateofbirth', (dateOfBirth) => {
+  creationManager.setDateOfBirth(dateOfBirth);
+});
+
+onUI('customization.set-information', () => {
+  creationManager.setInformation();
+});
+
 RegisterCommand(
   'create_start',
   () => {

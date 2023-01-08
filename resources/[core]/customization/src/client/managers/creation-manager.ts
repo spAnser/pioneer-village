@@ -54,6 +54,10 @@ class CreationManager {
 
   private currentGender: 'male' | 'female' = 'male';
 
+  private firstName = '';
+  private lastName = '';
+  private dateOfBirth: Date = new Date('0');
+
   constructor() {
     on('onResourceStop', (resourceName: string) => {
       if (this.currentState === -1) {
@@ -216,6 +220,24 @@ class CreationManager {
     PVCamera.interpolate('CreationDressing', 750);
     emitUI('customization.state', { state: 'creation' });
     this.currentState = 1;
+  }
+
+  setFirstName(name: string) {
+    this.firstName = name;
+  }
+
+  setLastName(name: string) {
+    this.lastName = name;
+  }
+
+  setDateOfBirth(date: Date) {
+    this.dateOfBirth = date;
+  }
+
+  async setInformation() {
+    emitUI('customization.state', { state: 'transition' });
+    console.log(`setInformation`, this.firstName, this.lastName, this.dateOfBirth);
+    emitUI('customization.state', { state: 'tailor' });
   }
 
   private async createMFPeds() {
