@@ -31,8 +31,8 @@ const logAll = (socket: Socket, next: (err?: Error) => void) => {
 };
 
 const server = createServer({
-  key: readFileSync(path.join(__dirname, "../key.pem")),
-  cert: readFileSync(path.join(__dirname, "../cert.pem"))
+  key: readFileSync(path.join(__dirname, "../../key.pem")),
+  cert: readFileSync(path.join(__dirname, "../../cert.pem"))
 });
 const io = new Server(server);
 
