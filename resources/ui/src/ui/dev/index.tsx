@@ -94,12 +94,14 @@ setTimeout(() => {
 
 const loadApp = async () => {
   const serverSocket = io(socketServerUri, {
+    secure: true,
     autoConnect: false,
     transports: ['websocket'],
     auth: { token: socketServerKey },
   });
 
   const clientSocket = io(socketClientUri, {
+    secure: true,
     reconnectionAttempts: 0,
     autoConnect: false,
     auth: {},

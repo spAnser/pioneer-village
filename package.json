@@ -60,6 +60,7 @@
     "colors": "^1.4.0",
     "dotenv": "^14.2.0",
     "howler": "^2.2.3",
+    "https": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "normalize.css": "^8.0.1",
     "object-hash": "^3.0.0",

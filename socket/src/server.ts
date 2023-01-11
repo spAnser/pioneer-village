@@ -1,4 +1,6 @@
-import { createServer } from 'http';
+import { readFileSync } from "fs";
+import path = require("path");
+import { createServer } from 'https';
 import { Namespace, Server, Socket } from 'socket.io';
 import { verify } from 'jsonwebtoken';
 import { randomBytes } from 'crypto';
@@ -28,7 +30,10 @@ const logAll = (socket: Socket, next: (err?: Error) => void) => {
   next();
 };
 
-const server = createServer();
+const server = createServer({
+  key: readFileSync(path.join(__dirname, "../key.pem")),
+  cert: readFileSync(path.join(__dirname, "../cert.pem"))
+});
 const io = new Server(server);
 
 export default server;
