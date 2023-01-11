@@ -6,7 +6,7 @@ NodeJS 16.9.1 is the version used for development. It is recommended to use this
 
 1. Have an instance of `postgresql` running with a database. The default db name is `redm` in `.env.example`.
 2. Copy `.env.example` to `.env` and make any necessary changes
-3. Copy `key.pem.example` to `key.pem` and `cert.pem.example` to `cert.pem`. Replace with your own SSL key/cert - CFX/NUI doesn't support self-signed
+3. Copy `key.pem.example` to `key.pem` and `cert.pem.example` to `cert.pem`. Replace with your own SSL key/cert - CFX/NUI doesn't support self-signed. CA bundle should be included in the `cert.pem`
 4. Run `yarn` in root of the repo.
 5. Run `yarn` in the `resources/[system]/sessionmanager-rdr3` folder
 6. Run `yarn migrate` to update the database with any migrations
