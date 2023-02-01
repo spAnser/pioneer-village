@@ -7,6 +7,8 @@ resources/*/build/
 resources/*/*/build/
 artifacts/*/
 .env
+cert.pem
+key.pem
 
 # Idea User-specific stuff:
 **/.idea/workspace.xml

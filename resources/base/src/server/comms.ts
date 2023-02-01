@@ -5,6 +5,7 @@ import { io, Socket } from 'socket.io-client';
 const socketListeners: Map<string, Map<string, any>> = new Map();
 
 const client: Socket<SocketEvents, SocketServer.Server> = io(process.env.SOCKET_SERVER_CONNECTION, {
+  secure: true,
   autoConnect: false,
   transports: ['websocket'],
   auth: {

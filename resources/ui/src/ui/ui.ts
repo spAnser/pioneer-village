@@ -14,7 +14,7 @@ setTimeout(async () => {
   const { socketUrl, token } = await awaitClient('getSocketDetails');
 
   const socket = io(socketUrl, {
-    secure: false,
+    secure: true,
     rejectUnauthorized: false,
     reconnectionAttempts: 0,
     autoConnect: false,
