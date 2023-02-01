@@ -1,6 +1,7 @@
 const path = require('path');
 const HotReloadPlugin = require('./webpack.hot-reload');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const { ProvidePlugin } = require('webpack');
 
 module.exports = () => ({
   entry: path.resolve('./src/ui/ui.ts'),
@@ -14,7 +15,13 @@ module.exports = () => ({
       {
         test: /\.tsx?$/,
         exclude: [/node_modules/, /build/],
-        loader: 'ts-loader',
+        loader: 'esbuild-loader',
+        options: {
+          loader: 'tsx',
+          target: 'es2017',
+          jsxFactory: 'h',
+          jsxFragment: 'Fragment',
+        },
       },
       {
         test: /\.s[ac]ss$/i,
@@ -30,7 +37,7 @@ module.exports = () => ({
       },
     ],
   },
-  plugins: [new HotReloadPlugin()],
+  plugins: [new HotReloadPlugin(), new ProvidePlugin({ h: ['preact', 'h'], Fragment: ['preact/compat', 'Fragment'] })],
   optimization: {
     minimize: false,
   },

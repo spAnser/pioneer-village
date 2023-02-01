@@ -9,7 +9,11 @@ module.exports = () => ({
       {
         test: /\.tsx?$/,
         exclude: [/node_modules/, /build/],
-        loader: 'ts-loader',
+        loader: 'esbuild-loader',
+        options: {
+          loader: 'tsx',
+          target: 'es2017',
+        },
       },
     ],
   },
