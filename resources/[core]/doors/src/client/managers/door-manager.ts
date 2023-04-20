@@ -170,6 +170,13 @@ class DoorManager {
         if (metadatas.doorHashes && metadatas.doorHashes.includes(doorHash)) {
           return true;
         }
+        if (metadatas.linkedDoors) {
+          for (const linkedDoors of metadatas.linkedDoors) {
+            if (linkedDoors.includes(doorHash)) {
+              return true;
+            }
+          }
+        }
       }
     }
     return false;
@@ -196,7 +203,7 @@ class DoorManager {
       return;
     }
     const state = data.state === 0 ? 1 : 0;
-    this.setDoorState(doorHash, state, emit);
+    await this.setDoorState(doorHash, state, emit);
   }
 
   async checkDoors() {

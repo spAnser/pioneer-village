@@ -368,6 +368,13 @@ class Inventories {
             if (metadata?.doorHashes && (metadata?.doorHashes as Prisma.JsonArray).includes(doorHash)) {
               return true;
             }
+            if (metadata?.linkedDoors) {
+              for (const linkedDoorHashes of metadata?.linkedDoors as Prisma.JsonArray) {
+                if ((linkedDoorHashes as Prisma.JsonArray).includes(doorHash)) {
+                  return true;
+                }
+              }
+            }
           }
         }
       }
