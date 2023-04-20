@@ -37,6 +37,7 @@ class StableController {
   }
 
   async loadHorses(characterId: number) {
+    console.log('loadHorses');
     const horses = await awaitUI('stable.load-character-horses', characterId);
     for (const horse of horses) {
       console.log('horse', horse);
@@ -211,10 +212,10 @@ class StableController {
 
     if (horse.gender === 'MALE') {
       console.log('Set Horse Face Features to Male');
-      Citizen.invokeNative('0x5653AB26C82938CF', horsePed, 0xa28b, 0.0); // Default
+      SetPedFaceFeature(horsePed, 0xa28b, 0.0); // Default
     } else if (horse.gender === 'FEMALE') {
       console.log('Set Horse Face Features to Female');
-      Citizen.invokeNative('0x5653AB26C82938CF', horsePed, 0xa28b, 0.999);
+      SetPedFaceFeature(horsePed, 0xa28b, 1.0);
     }
     // HORSE_EQUIPMENT_MALE_GENITALS
     // HORSE_EQUIPMENT_FEMALE_GENITALS
@@ -243,9 +244,15 @@ class StableController {
     SetPedRelationshipGroupHash(horsePed, GetPedRelationshipGroupHash(horsePed));
     Citizen.invokeNative('0x931B241409216C1F', playerPed, horsePed);
 
-    // await this.setNetworked(horsePed, horse);
     if (options.local) {
       NetworkSetEntityInvisibleToNetwork(horsePed, true);
+    } else {
+      await PVGame.registerNetworkEntity(horsePed);
+      // SET_PED_MOOD_TOWARDS_PED
+      // for (let n = 10; n--; ) {
+      //   Citizen.invokeNative('0x06D26A96CA1BCA75', horsePed, n, 0.0, gameManager.playerPed)
+      // }
+      // Citizen.invokeNative('0x06D26A96CA1BCA75', horsePed, 0, 0.8, gameManager.playerPed);
     }
 
     // this._spawningHorse.set(horse.id, false);
