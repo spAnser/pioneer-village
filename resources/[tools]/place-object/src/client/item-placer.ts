@@ -1,5 +1,6 @@
 import { Vector3 } from '@lib/math';
 import { PVGame, PVPrompt } from '@lib/client';
+import { VegModifierFlag, VegModifierType } from '@lib/flags/veg-modifiers';
 
 export default class ItemPlacer {
   ghostItem: number = 0;
@@ -328,5 +329,13 @@ export default class ItemPlacer {
     if (this.placed >= this.maxPlaced) {
       this.destroy();
     }
+
+    // Cull nearby vegetation
+    const [dimensionMin, dimensionMax] = GetModelDimensions(this.model);
+
+    const dimension = Vector3.fromArray(dimensionMax).sub(Vector3.fromArray(dimensionMin));
+    const radius = (Math.max(dimension.x, dimension.y) / 2) * 1.15;
+
+    PVGame.vegAddSphereAtEntity(objectId, radius, VegModifierType.Cull, VegModifierFlag.All);
   }
 }

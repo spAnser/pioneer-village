@@ -111,3 +111,5 @@ interface MinMax {
   min: number;
   max: number;
 }
+
+type ValueOf<T> = T[keyof T];

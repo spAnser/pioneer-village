@@ -2,6 +2,8 @@ import { exports } from '@lib/client';
 import { Vector3 } from '@lib/math/vector3';
 import gameManager from './managers/game-manager';
 import componentManager from './managers/component-manager';
+import vegModifierManager from './managers/veg-modifier-manager';
+import { VegModifierFlag } from '@lib/flags/veg-modifiers';
 
 const playerPed = (): number => gameManager.playerPed;
 const mountPed = (): number | null => gameManager.mountPed;
@@ -40,6 +42,10 @@ const setPedComponentsMp: Game.setPedComponentsMp = (ped, components) => {
 
 const finalizePedOutfit: Game.finalizePedOutfit = (ped) => {
   return gameManager.finalizePedOutfit(ped);
+};
+
+const registerNetworkEntity: Game.registerNetworkEntity = (entity) => {
+  return gameManager.registerNetworkEntity(entity);
 };
 
 const getNetworkControlOfEntity: Game.getNetworkControlOfEntity = (entity) => {
@@ -180,6 +186,18 @@ const destroyStateMachine: Game.destroyStateMachine = (id) => {
   gameManager.destroyStateMachine(id);
 };
 
+const vegAddSphereAtEntity: Game.vegAddSphereAtEntity = (entity, radius, modifierType, flags) => {
+  return vegModifierManager.addSphereAtEntity(entity, radius, modifierType, flags);
+};
+
+const vegAddVolume: Game.vegAddVolume = (coords, modifierType, flags) => {
+  return vegModifierManager.addVolume(coords, modifierType, flags);
+};
+
+const vegRemoveAllSpheres: Game.vegRemoveAllSpheres = () => {
+  vegModifierManager.removeAllSpheres();
+};
+
 exports<'game'>('playerPed', playerPed);
 exports<'game'>('mountPed', mountPed);
 exports<'game'>('playerCoords', playerCoords);
@@ -188,6 +206,7 @@ exports<'game'>('createPed', createPed);
 exports<'game'>('setPedComponents', setPedComponents);
 exports<'game'>('setPedComponentsMp', setPedComponentsMp);
 exports<'game'>('finalizePedOutfit', finalizePedOutfit);
+exports<'game'>('registerNetworkEntity', registerNetworkEntity);
 exports<'game'>('getNetworkControlOfEntity', getNetworkControlOfEntity);
 exports<'game'>('attachEntityToBoneIndex', attachEntityToBoneIndex);
 exports<'game'>('attachEntityToBoneName', attachEntityToBoneName);
@@ -217,3 +236,7 @@ exports<'game'>('stopStream', stopStream);
 exports<'game'>('requestFlowblock', requestFlowblock);
 exports<'game'>('createStateMachine', createStateMachine);
 exports<'game'>('destroyStateMachine', destroyStateMachine);
+
+exports<'game'>('vegAddSphereAtEntity', vegAddSphereAtEntity);
+exports<'game'>('vegAddVolume', vegAddVolume);
+exports<'game'>('vegRemoveAllSpheres', vegRemoveAllSpheres);

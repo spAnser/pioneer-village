@@ -612,8 +612,8 @@ global.AddToItemset = function (itemset, p1) {
   return _in(0xabe74510, 0x883c7950, itemset, p1, _r);
 };
 
-global.AddVegModifierSphere = function (p0, p1, p2, p3, p4, p5, p6) {
-  return _in(0xfa50f792, 0x57745e74, p0, p1, p2, p3, p4, p5, p6, _r, _ri);
+global.AddVegModifierSphere = function (x, y, z, radius, modType, flags, p6) {
+  return _in(0xfa50f792, 0x57745e74, x, y, z, _fv(radius), modType, flags, p6, _r, _ri);
 };
 
 global.AddVolumeToVolumeAggregate = function (aggregate, typeHash, p2, p3, p4, p5, p6, p7, p8, p9, p10) {
@@ -4083,7 +4083,7 @@ global.EventsUiIsPending = function (hash) {
  * Old name: _EVENT_MANAGER_PEEK_EVENT
  */
 global.EventsUiPeekMessage = function (hash, eventData) {
-  return _in(0x90237103, 0xf27f7937, _ch(hash), _ii(eventData) /* may be optional */, _r);
+  return _in(0x90237103, 0xf27f7937, _ch(hash), eventData, _r);
 };
 
 /**
@@ -21391,8 +21391,8 @@ global.N_0xbd1c3c0f271c39d3 = function (p0, p1) {
   return _in(0xbd1c3c0f, 0x271c39d3, p0, p1);
 };
 
-global.N_0xbd3324281e8b9933 = function (p0, p1, p2, p3) {
-  return _in(0xbd332428, 0x1e8b9933, p0, p1, p2, p3, _r, _ri);
+global.AddVegModifierZone = function (volume, modType, flags, p3) {
+  return _in(0xbd332428, 0x1e8b9933, volume, modType, flags, p3, _r, _ri);
 };
 
 global.N_0xbd3c4a2ed509205e = function (p0) {
@@ -27575,8 +27575,8 @@ global.RemoveTagFromMetaPed = function (ped, component, p2) {
   return _in(0xd710a500, 0x7c2ac539, ped, _ch(component), p2);
 };
 
-global.RemoveVegModifierSphere = function (p0, p1) {
-  return _in(0x9cf1836c, 0x03fb67a2, p0, p1);
+global.RemoveVegModifierSphere = function (vegModifierHandle, p1) {
+  return _in(0x9cf1836c, 0x03fb67a2, Citizen.pointerValueIntInitialized(vegModifierHandle), p1);
 };
 
 global.RemoveVehicleAsset = function (vehicleAsset) {

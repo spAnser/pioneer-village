@@ -483,12 +483,12 @@ declare function AddToClockTime(hours: number, minutes: number, seconds: number)
 declare function AddToItemset(itemset: number, p1: number): boolean;
 
 declare function AddVegModifierSphere(
-  p0: number,
-  p1: number,
-  p2: number,
-  p3: number,
-  p4: number,
-  p5: number,
+  x: number,
+  y: number,
+  z: number,
+  radius: number,
+  modType: number,
+  flags: number,
   p6: number,
 ): number;
 
@@ -2934,7 +2934,7 @@ declare function EventsUiIsPending(hash: string | number): boolean;
  * eventData: see EVENTS_UI_GET_MESSAGE
  * Old name: _EVENT_MANAGER_PEEK_EVENT
  */
-declare function EventsUiPeekMessage(hash: string | number, eventData?: number): [boolean, number];
+declare function EventsUiPeekMessage(hash: string | number, eventData: DataView): boolean;
 
 /**
  * Old name: _EVENT_MANAGER_POP_EVENT
@@ -13552,7 +13552,7 @@ declare function N_0xbd0e4f52f6d95242(p0: number): number;
 
 declare function N_0xbd1c3c0f271c39d3(p0: number, p1: number): void;
 
-declare function N_0xbd3324281e8b9933(p0: number, p1: number, p2: number, p3: number): number;
+declare function AddVegModifierZone(volume: number, modType: number, flags: number, p3: number): number;
 
 declare function N_0xbd3c4a2ed509205e(p0: number): number;
 

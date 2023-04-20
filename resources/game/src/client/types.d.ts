@@ -22,6 +22,8 @@ declare namespace Game {
   type setPedComponents = (ped: number, components: number[]) => Promise<void>;
   type setPedComponentsMp = (ped: number, components: number[]) => Promise<void>;
   type finalizePedOutfit = (ped: number) => void;
+
+  type registerNetworkEntity = (entity: number) => Promise<void>;
   type getNetworkControlOfEntity = (entity: number) => Promise<void>;
   type attachEntityToBoneIndex = (
     attacher: number,
@@ -69,6 +71,10 @@ declare namespace Game {
   type createStateMachine = (id: number, flowblock: number) => void;
   type destroyStateMachine = (id: number) => void;
 
+  type vegAddSphereAtEntity = (entity: number, radius: number, modifierType: number, flags: number) => number;
+  type vegAddVolume = (volume: number, modifierType: number, flags: number) => number;
+  type vegRemoveAllSpheres = () => void;
+
   type ClientExports = {
     playerPed: () => number;
     mountPed: () => number | null;
@@ -78,6 +84,7 @@ declare namespace Game {
     setPedComponents: setPedComponents;
     setPedComponentsMp: setPedComponentsMp;
     finalizePedOutfit: finalizePedOutfit;
+    registerNetworkEntity: registerNetworkEntity;
     getNetworkControlOfEntity: getNetworkControlOfEntity;
     attachEntityToBoneIndex: attachEntityToBoneIndex;
     attachEntityToBoneName: attachEntityToBoneName;
@@ -107,6 +114,10 @@ declare namespace Game {
     requestFlowblock: requestFlowblock;
     createStateMachine: createStateMachine;
     destroyStateMachine: destroyStateMachine;
+
+    vegAddSphereAtEntity: vegAddSphereAtEntity;
+    vegAddVolume: vegAddVolume;
+    vegRemoveAllSpheres: vegRemoveAllSpheres;
 
     // Lua
     getStateValue: (entity: number, key: string) => any;
