@@ -327,6 +327,34 @@ RegisterCommand(
   false,
 );
 
+const UIScriptEventType = {
+  INVALID: 0,
+  ITEM_FOCUSED: 0x984750e7,
+  ITEM_UNFOCUSED: 0xda4d50f6,
+  ITEM_SELECTED: 0xb841988c,
+  NEW_ACTIVITY: 0x36fb9f7e,
+  NEW_PAGE: 0x8445624d,
+  TAB_PAGE_INCREMENT: 0x29eb385c,
+  TAB_PAGE_DECREMENT: 0xd4e9057d,
+  INDEX_CHANGED: 0x6eaefeb9,
+  INDEX_CHANGE_REQUESTED: 0x462beb80,
+  ITEM_SELECTED_ACTION_SUCCEEDED: 0xe29a8210,
+  ITEM_HOLD_ACTION_STARTED: 0x37104afd,
+  ITEM_HOLD_ACTION_CANCELLED: 0x9ba74c01,
+  DATA_ADJUSTABLE_CHANGED: 0xbb5c7348,
+  DATA_ADJUSTABLE_CHANGED_ABSOLUTE: 0x60624708,
+  FEED_MESSAGE_INTERACTED: 0xb018ed22,
+  STICKY_FEED_CLEARED: 0xe5733ee0,
+  PAGED_COLLECTION_INITIALIZED: 0xf8d8e7ea,
+  PAGED_COLLECTION_REQUEST: 0x15f05555,
+  PAGED_COLLECTION_RESET: 0xf9307213,
+  ENTER_TRANSITION_COMPLETED: 0x5df51fc0,
+  EXIT_TRANSITION_COMPLETED: 0x7c0102d8,
+  VIRTUAL_KEYBOARD_RESULT: 0x73446e9b,
+  PINNED_ITEM_VALIDATION: 0x7d26e5ff,
+  FAST_TRAVEL_UI_EVENT_EXIT: 0xc485efa4,
+};
+
 RegisterCommand(
   'fasttravel',
   async () => {
@@ -363,11 +391,39 @@ RegisterCommand(
       },
     });
 
+    // TODO: Test moving above list.
     LaunchUiappByHash('FAST_TRAVEL_MENU');
     await Delay(5000);
     CloseUiappByHash('FAST_TRAVEL_MENU');
+
+    while (EventsUiIsPending('FAST_TRAVEL_MENU')) {
+      const data = new DataView(new ArrayBuffer(8 * 4));
+      const rtn = EventsUiPeekMessage('FAST_TRAVEL_MENU', data);
+      EventsUiPopMessage('FAST_TRAVEL_MENU');
+      if (!rtn) {
+        continue;
+      }
+      const datas = {
+        action: data.getUint32(0, true),
+        unk1: data.getUint32(4, true),
+        unk2: data.getUint32(8, true),
+        unk3: data.getUint32(12, true),
+        subAction: data.getUint32(16, true),
+        unk4: data.getUint32(20, true),
+        unk5: data.getUint32(24, true),
+        unk6: data.getUint32(28, true),
+      };
+
+      for (const [key, value] of Object.entries(datas)) {
+        console.log(
+          `data[${key}]`,
+          value,
+          Object.keys(UIScriptEventType)[Object.values(UIScriptEventType).indexOf(value)],
+        );
+      }
+    }
   },
   false,
 );
 
-SetSnowCoverageType(2);
+// SetSnowCoverageType(2);
