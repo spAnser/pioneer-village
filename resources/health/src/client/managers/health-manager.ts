@@ -983,13 +983,13 @@ export class HealthManager {
     SetPedDrunkness(this.playerPed, true, Math.min(this.alcoholContent.current, 0.999));
     // if (this.lastCustomWalk !== useCustomWalk) {
     //   this.lastCustomWalk = useCustomWalk;
-    //   ClearPedDesiredLocoForModel(this.playerPed);
-    //   SetPedDesiredLocoForModel(this.playerPed, 'default');
     //   // console.log(`SetPedDesiredLocoForModel(${this.playerPed}, 'default');`);
     //   if (useCustomWalk) {
+    //     SetPedDesiredLocoForModel(this.playerPed, 'default');
     //     SetPedDesiredLocoMotionType(this.playerPed, useCustomWalk);
     //     // console.log(`SetPedDesiredLocoMotionType(${this.playerPed}, ${useCustomWalk});`);
     //   } else {
+    //     ClearPedDesiredLocoForModel(this.playerPed);
     //     ClearPedDesiredLocoMotionType(this.playerPed);
     //     // console.log(`ClearPedDesiredLocoMotionType(${this.playerPed});`);
     //   }
