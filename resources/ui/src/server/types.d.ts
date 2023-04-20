@@ -1,1 +1,1 @@
-declare namespace AI {}
+declare namespace UI {}
