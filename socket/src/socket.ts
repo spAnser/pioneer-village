@@ -46,5 +46,12 @@ StableController(prisma);
 WorldController(prisma);
 
 server.listen(Number(SOCKET_PORT), () => {
-  console.log('Server listening');
+  const serverAddress = server.address();
+  if (typeof serverAddress === 'string') {
+    console.log(`Server listening on ${serverAddress}`);
+  } else if (serverAddress) {
+    console.log(`Server listening on ${serverAddress.address}:${serverAddress.port}`);
+  } else {
+    console.log('Server listening');
+  }
 });

@@ -8,7 +8,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
   Accounts.setDB(prisma);
 
   serverNamespace.on('connection', (socket) => {
-    logGreen('Game server connected');
+    logGreen('[User] Game server connected');
 
     socket.on('connectedPlayers', (players) => {});
 
