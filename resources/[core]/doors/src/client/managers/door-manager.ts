@@ -19,6 +19,13 @@ class DoorManager {
   constructor() {
     setInterval(this.checkDoors.bind(this), 2500);
     onNet('game:character-selected', this.init.bind(this));
+
+    if (GetResourceState('game') === 'started') {
+      const character = PVGame.getCurrentCharacter();
+      if (character) {
+        this.init();
+      }
+    }
   }
 
   async init() {
@@ -48,14 +55,6 @@ class DoorManager {
       }
 
       DoorSystemSetDoorState(doorHash, state);
-    }
-
-    if (GetResourceState('game') === 'started') {
-      await Delay(1000);
-      const character = PVGame.getCurrentCharacter();
-      if (character) {
-        this.init();
-      }
     }
     initManager.resolveThisResource();
   }
