@@ -12,6 +12,7 @@ local class = {
     [joaat('A_C_HORSE_AMERICANPAINT_SPLASHEDWHITE')] = {isHorse = true},
     [joaat('A_C_HORSE_AMERICANPAINT_TOBIANO')] = {isHorse = true},
     [joaat('A_C_HORSE_AMERICANSTANDARDBRED_BLACK')] = {isHorse = true},
+    [joaat('A_C_HORSE_ARABIAN_WHITE')] = {isHorse = true},
 
     -- Chairs
     [joaat('P_TOILETCHAIR01X')] = {isChair = true},

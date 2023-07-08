@@ -122,18 +122,18 @@ end
 --- @return table position
 --- @return table direction
 function Target:Direction()
-    local pos = GetFinalRenderedCamCoord()
-    local rot = glm_rad(GetFinalRenderedCamRot(2))
-    local q = glm_quatEuler(rot.z, rot.y, rot.x)
-    return pos, glm_rayPicking(
-        q * glm_forward,
-        q * glm_up,
-        glm_rad(self.fov),
-        self.ratio,
-        0.10000,
-        10000.0,
-        0, 0
-    )
+	local pos = GetFinalRenderedCamCoord()
+	local rot = glm_rad(GetFinalRenderedCamRot(2))
+	local q = glm_quatEuler(rot.z, rot.y, rot.x)
+	return pos, glm_rayPicking(
+		q * glm_forward,
+		q * glm_up,
+		glm_rad(self.fov),
+		self.ratio,
+		0.10000,
+		10000.0,
+		0, 0
+	)
 end
 
 --- @param map boolean Intersect with the world only
@@ -206,19 +206,25 @@ function Target:Enable(state)
 			local data = {
 				entity = entity,
 				type = GetEntityType(entity),
-				model = GetEntityModel(entity),
+				model = GetEntityType(entity) ~= 0 and GetEntityModel(entity),
 				coords = coords,
 				distance = #(self.cache.pedCoords - coords)
 			}
 
 			local dstCheck = data.distance <= self.distance
 
+			local flag = ''
+
+			if Citizen.InvokeNative(0x772A1969F649E902, data.model) then -- _IS_THIS_MODEL_A_HORSE
+				flag = 'isHorse'
+			end
+
 			if dstCheck then
 				local this = self.targets(data)
 
 				if this then
 					--SendNuiMessage({ontarget = true})
-					exports['ui']:emitUI('target.state', { active = true })
+					exports['ui']:emitUI('target.state', { active = true, type = data.type, flag = flag })
 
 					self:DisablePlayerFiring()
 
@@ -236,7 +242,7 @@ function Target:Enable(state)
 							--SetNuiFocus(true, true)
 							SetCursorLocation(0.5, 0.5)
 							--SendNuiMessage(json.encode(this.data)) -- Data sent when registering the target
-							exports['ui']:emitUI('target.state', { context = _entity, actions = this.data })
+							exports['ui']:emitUI('target.state', { context = _entity, type = data.type, actions = this.data })
 							exports['ui']:focusUI(true, true)
 						end
 					end
@@ -244,7 +250,7 @@ function Target:Enable(state)
 					self:DisablePlayerFiring()
 
 					--SendNuiMessage({ontarget = false})
-					exports['ui']:emitUI('target.state', { active = false })
+					exports['ui']:emitUI('target.state', { active = false, type = -1, flag = '' })
 				end
 			end
 		end
@@ -308,7 +314,7 @@ function Target:Enable(state)
 					self:DisablePlayerFiring()
 
 					--SendNuiMessage({ontarget = false})
-					exports['ui']:emitUI('target.state', { active = false })
+					exports['ui']:emitUI('target.state', { active = false, type = -1, flag = '' })
 				end
 			end
 		end
@@ -317,7 +323,7 @@ function Target:Enable(state)
 	until not self.active
 
 	--SendNuiMessage({show = false})
-	exports['ui']:emitUI('target.state', { show = false })
+	exports['ui']:emitUI('target.state', { show = false, type = -1, flag = '' })
 end
 
 --- @return nil
@@ -507,65 +513,93 @@ exports("RemoveTarget", Target.RemoveTarget)
 CreateThread(Target.Start)
 
 function AddOnUIHandler()
-    Citizen.CreateThread(function()
-        Wait(1000)
-        exports['ui']:onUI('target.action', function(context, action)
-            print('context: ' .. tostring(context))
-            print('action: ' .. json.encode(action))
-            print('TriggerEvent: ' .. action.event)
-            TriggerEvent(action.event, context, action.parameters)
-        end)
-    end)
+	Citizen.CreateThread(function()
+		Wait(1000)
+		exports['ui']:onUI('target.action', function(context, action)
+			print('context: ' .. tostring(context))
+			print('action: ' .. json.encode(action))
+			print('TriggerEvent: ' .. action.event)
+			TriggerEvent(action.event, context, action.parameters)
+		end)
+	end)
 end
 
 AddEventHandler('onResourceStart', function(resourceName)
-    if resourceName == 'ui' then
-        AddOnUIHandler()
-    end
+	if resourceName == 'ui' then
+		AddOnUIHandler()
+	end
 end)
 
 if GetResourceState('ui') == 'started' then
-    AddOnUIHandler()
+	AddOnUIHandler()
 end
 
 -- Example Usages
 
 CreateThread(function()
-    Wait(2000)
-    print('Add Example Targets')
-    local flagKey = Target.AddTarget({
-        id = 'horse',
-        type = 'flag',
-        group = {'isHorse'},
-        data = {
-            {
-                id = 'horse_drink',
-                label = 'Drink',
-                icon = 'water',
-                event = 'stable:client:drink',
-                parameters = {},
-            },
-            {
-                id = 'horse_lead',
-                label = 'Lead',
-                icon = 'lasso',
-                event = 'stable:client:lead',
-                parameters = {},
-            }
-        },
-        options = {
-            distance = 1.5,
-            isEnabled = function(data)
-                return IsEntityInWater(data.entity) == false
-            end
-        }
-    })
+	Wait(2000)
+	print('Add Example Targets')
+	local flagKey = Target.AddTarget({
+		id = 'horse',
+		type = 'flag',
+		group = {'isHorse'},
+		icon = 'horse',
+		data = {
+			{
+				id = 'horse_drink',
+				label = 'Drink',
+				icon = 'water',
+				event = 'stable:client:drink',
+				parameters = {},
+			},
+			{
+				id = 'horse_lead',
+				label = 'Lead',
+				icon = 'lasso',
+				event = 'stable:client:lead',
+				parameters = {},
+			}
+		},
+		options = {
+			distance = 1.5,
+			isEnabled = function(data)
+				return IsEntityInWater(data.entity) == false
+			end
+		}
+	})
+	Target.AddTarget({
+		id = 'coach',
+		type = 'flag',
+		group = {'isWagon'},
+		data = {
+			{
+				id = 'wagon_drink',
+				label = 'Drink',
+				icon = 'water',
+				event = 'stable:client:drink',
+				parameters = {},
+			},
+			{
+				id = 'wagon_lead',
+				label = 'Lead',
+				icon = 'lasso',
+				event = 'stable:client:lead',
+				parameters = {},
+			}
+		},
+		options = {
+			distance = 1.5,
+			isEnabled = function(data)
+				return IsEntityInWater(data.entity) == false
+			end
+		}
+	})
 end)
 
 AddEventHandler('stable:client:drink', function()
-    print('Do Horse Drinking')
+	print('Do Horse Drinking')
 end)
 
 AddEventHandler('stable:client:lead', function()
-    print('Do Horse Leading')
+	print('Do Horse Leading')
 end)

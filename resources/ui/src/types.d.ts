@@ -207,7 +207,18 @@ declare namespace UI.TargetLayer {
   interface State extends UI.BaseState {
     active: boolean;
     context: number | string;
+    type: number;
+    flag: string;
     actions: Target.Item[];
+  }
+
+  type Event = Partial<State>;
+}
+
+declare namespace UI.Interact {
+  interface State extends UI.BaseState {
+    options: Record<string, string>;
+    context: any;
   }
 
   type Event = Partial<State>;
@@ -288,7 +299,13 @@ declare namespace UI.Animations {
 declare namespace UI.Inventory {
   interface State extends UI.BaseState {
     mainInventory: string;
+    targetInventory: string;
     inventories: Map<string, LoadData>;
+    inventoriesWeight: Map<string, number>;
+    tooltipItem: UI.Inventory.ItemData | null;
+    tooltipBelow: boolean;
+    tooltipX: number;
+    tooltipY: number;
   }
 
   type Event = Partial<State>;
@@ -297,20 +314,18 @@ declare namespace UI.Inventory {
     identifier: number;
     ids: number[];
     metadatas: any[];
+    durability: number;
     quantity: number;
   }
 
   interface LoadData {
     identifier: string;
+    slots: number;
+    maxWeight: number;
     container: {
       locked: boolean;
       sealed: 'NONE' | 'SEALED' | 'BROKEN';
     };
-    items: Record<string, ItemData>;
-  }
-
-  interface AddData {
-    identifier: string;
     items: Record<string, ItemData>;
   }
 
@@ -325,10 +340,10 @@ declare namespace UI.Inventory {
     emptySlots: number[];
   }
 
-  // interface RemoveData {
-  //   identifier: string;
-  //   items: Record<string, ItemData>;
-  // }
+  interface RemoveData {
+    identifier: string;
+    items: Record<string, ItemData>;
+  }
 }
 
 declare namespace UI.CharacterSelect {
