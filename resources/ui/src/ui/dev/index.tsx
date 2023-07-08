@@ -1,6 +1,7 @@
 import { io } from 'socket.io-client';
 
 import App from '../app';
+import items from '@lib/shared/items';
 
 const socketServerUri = process.env.SOCKET_SERVER_CONNECTION as string;
 const socketServerKey = process.env.SOCKET_SERVER_KEY as string;
@@ -59,7 +60,7 @@ window.addEventListener('keyup', (e) => {
       emitUI('chat.state', { show: true });
       break;
     case 'k':
-      emitUI('inventory.state', { show: true });
+      emitUI('inventory.state', { show: true, targetInventory: `horse:1` });
       break;
     case 'b':
       speakVolume++;
@@ -69,27 +70,26 @@ window.addEventListener('keyup', (e) => {
   }
 });
 
+const sendInventoryItems = () => {
+  const uiItems: Inventory.UIItems = {};
+  for (const item of Object.values(items)) {
+    uiItems[item.identifier] = {
+      name: item.name,
+      description: item.description || '',
+      image: item.image,
+      weight: item.weight,
+      stackSize: item.stackSize,
+    };
+  }
+
+  emitUI('inventory.items', uiItems);
+};
+
 setTimeout(() => {
-  emitUI('inventory.items', {
-    [GetHashKey('PV_DOLLAR')]: {
-      image: 'dollar',
-    },
-    [GetHashKey('PV_RAW_MEAT')]: {
-      image: 'raw-meat',
-    },
-    [GetHashKey('PV_COOKED_MEAT')]: {
-      image: 'cooked-meat',
-    },
-    [GetHashKey('PV_BAIT_WORM')]: {
-      image: 'bait-worm',
-    },
-    [GetHashKey('PV_FISHINGROD') << 0]: {
-      image: 'fishingrod',
-    },
-    [GetHashKey('PV_SHOTGUN_REPEATING') << 0]: {
-      image: 'shotgun-repeating',
-    },
-  });
+  sendInventoryItems();
+  // emitUI('inventory.state', { mainInventory: `character:1`, targetInventory: `stash:1` });
+  // emitUI('inventory.state', { mainInventory: `character:1`, targetInventory: `horse:1` });
+  emitUI('inventory.state', { mainInventory: `character:1`, targetInventory: '' });
 }, 1000);
 
 const loadApp = async () => {

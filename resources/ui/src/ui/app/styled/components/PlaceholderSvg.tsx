@@ -18,7 +18,7 @@ const defaultProps: Required<PlaceholderSvgProps> = {
   fgColor: 'white',
 };
 
-export default function ProgressBar(props: RenderableProps<PlaceholderSvgProps>) {
+export default function PlaceholderSvg(props: RenderableProps<PlaceholderSvgProps>) {
   const { width, height, text } = { ...defaultProps, ...props };
   const bgColor = themeColor('hex', defaultProps.bgColor, props.bgColor) as string;
   const fgColor = themeColor('hex', defaultProps.fgColor, props.fgColor) as string;

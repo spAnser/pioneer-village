@@ -5,6 +5,7 @@ export const clamp = (value: number, min: number, max: number): number => Math.m
 export const boolval = (mixedVar: any): boolean =>
   !(
     mixedVar === false ||
+    mixedVar === 'false' ||
     mixedVar === 0 ||
     mixedVar === 0.0 ||
     mixedVar === '' ||

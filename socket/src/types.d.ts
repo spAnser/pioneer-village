@@ -4,13 +4,13 @@ declare namespace SocketServer {
     generateJWT: (serverId: number, identifiers: Record<string, string>, callback: (jwt: string) => void) => void;
 
     createInventory: (identifier: string, inventoryType: number, callback: (inventory: boolean) => void) => void;
-    // inventoryAddItem: (
-    //   identifier: string,
-    //   itemId: number,
-    //   amount: number,
-    //   metadata: Record<string, any>,
-    //   callback: (success: boolean) => void,
-    // ) => void;
+    inventoryAddItem: (
+      identifier: string,
+      itemId: number,
+      amount: number,
+      metadata: Record<string, any>,
+      callback: (success: boolean) => void,
+    ) => void;
     ['world.registered-objects']: (callback: (data: Record<string, number>) => void) => void;
     ['stable.load-character-horses']: (characterId: number, callback: (data: Horse.Data[]) => void) => void;
   };
@@ -43,6 +43,7 @@ declare namespace SocketServer {
 
     inventorySubscribe: (identifier: string) => void;
     inventoryUnsubscribe: (identifier: string) => void;
+    inventoryStack: (oldIdentifier: string, oldSlot: number, newIdentifier: string, newSlot: number) => void;
     inventoryMove: (oldIdentifier: string, oldSlot: number, newIdentifier: string, newSlot: number) => void;
 
     ['world.registered-objects']: (callback: (data: Record<string, number>) => void) => void;

@@ -12,6 +12,19 @@ declare namespace Inventory {
     KEY = 128,
   }
 
+  enum Restrictions {
+    None = 0,
+    OnlySmall = 1,
+    OnlyFood = 2,
+    OnlyAmmo = 4,
+  }
+
+  interface Type {
+    slots: number;
+    maxWeight: number;
+    restrictions: Restrictions;
+  }
+
   interface Thing {
     itemId: number;
     name: string;
@@ -26,6 +39,7 @@ declare namespace Inventory {
     identifier: number;
     image: string;
     name: string;
+    description?: string;
     flags: ItemFlags;
     stackSize: number;
     weight: number;
@@ -52,7 +66,10 @@ declare namespace Inventory {
 
   type UIItem = {
     name: string;
+    description: string;
     image: string;
+    weight: number;
+    stackSize: number;
   };
   type UIItems = Record<number, UIItem>;
 }

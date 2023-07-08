@@ -44,6 +44,7 @@ export default (prisma: PrismaClient) => {
     socket.on('inventorySubscribe', async (identifier) => {
       logInfoC('Subscribing to inventory', identifier);
 
+      // TODO: Check if user can access inventory. ie. Is Own Pockets, Distance, etc.
       socket.join(`inventory:${identifier}`);
 
       const inventory = await Inventories.getInventoryForUI(identifier);
@@ -59,6 +60,22 @@ export default (prisma: PrismaClient) => {
     socket.on('inventoryUnsubscribe', (identifier) => {
       logInfoC('Unsubscribing to inventory', identifier);
       socket.leave(`inventory:${identifier}`);
+    });
+
+    socket.on('inventoryStack', async (oldIdentifier, oldSlot, newIdentifier, newSlot) => {
+      logInfoC('inventoryStack', oldIdentifier, oldSlot, newIdentifier, newSlot);
+
+      const itemStackEvents = await Inventories.stackItem(oldIdentifier, oldSlot, newIdentifier, newSlot);
+
+      if (itemStackEvents) {
+        const [eventOld, eventNew] = itemStackEvents;
+        if (eventOld) {
+          userNamespace.to(`inventory:${eventOld.identifier}`).emit('inventoryMove', eventOld);
+        }
+        if (eventNew) {
+          userNamespace.to(`inventory:${eventNew.identifier}`).emit('inventoryMove', eventNew);
+        }
+      }
     });
 
     socket.on('inventoryMove', async (oldIdentifier, oldSlot, newIdentifier, newSlot) => {

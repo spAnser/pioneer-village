@@ -1,5 +1,5 @@
 import { emitUI, onUI, PVGame } from '@lib/client';
-import items from './items';
+import items from '@lib/shared/items';
 import './keybinds';
 import './weapons';
 import { Delay } from '@lib/functions';
@@ -19,7 +19,13 @@ onUI('inventory.use-item', (itemData: UI.Inventory.ItemData) => {
 const sendInventoryItems = () => {
   const uiItems: Inventory.UIItems = {};
   for (const item of Object.values(items)) {
-    uiItems[item.identifier] = { name: item.name, image: item.image };
+    uiItems[item.identifier] = {
+      name: item.name,
+      description: item.description || '',
+      image: item.image,
+      weight: item.weight,
+      stackSize: item.stackSize,
+    };
   }
 
   emitUI('inventory.items', uiItems);

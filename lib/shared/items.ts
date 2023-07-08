@@ -1,3 +1,22 @@
+const GetHashKey = (text: string): number => {
+  const keyLowered = text.toLowerCase();
+  const length = text.length;
+  let hash, i;
+
+  for (hash = i = 0; i < length; i++) {
+    hash += keyLowered.charCodeAt(i);
+    hash += hash << 10;
+    hash ^= hash >>> 6;
+  }
+
+  hash += hash << 3;
+  hash ^= hash >>> 11;
+  hash += hash << 15;
+
+  return hash;
+};
+
+// Inventory.ItemFlags
 enum ItemFlags {
   MATERIAL = 1,
   WEAPON = 2,
@@ -377,8 +396,8 @@ const items: Record<number, Inventory.Item> = {
     weaponHash: GetHashKey('WEAPON_SHOTGUN_DOUBLEBARREL'),
     weaponType: WeaponType.REQUIRES_AMMO,
   },
-  [GetHashKey('PV_SHOTGUN_REPEATING')]: {
-    identifier: GetHashKey('PV_SHOTGUN_REPEATING'),
+  [GetHashKey('PV_SHOTGUN_REPEATING') >>> 0]: {
+    identifier: GetHashKey('PV_SHOTGUN_REPEATING') >>> 0,
     image: 'shotgun-repeating',
     name: 'Repeating Shotgun',
     flags: ItemFlags.WEAPON,

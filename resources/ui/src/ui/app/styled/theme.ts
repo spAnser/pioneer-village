@@ -31,6 +31,12 @@ const theme: UI.Theme = {
     green: {
       hex: '#53ff45',
     },
+    blueGray12: {
+      hex: '#181c20',
+    },
+    redGray12: {
+      hex: '#201818',
+    },
     limeGreen: {
       hex: '#b0ff45',
     },
@@ -69,12 +75,12 @@ for (const [name, color] of Object.entries(theme.colors)) {
   theme.colors[name].rgbRaw = colorRGB;
 }
 
-export const themeColor = (
-  method: keyof UI.ColorData,
+export function themeColor<T extends keyof UI.ColorData>(
+  method: T,
   defaultColor: keyof UI.Theme['colors'],
   color?: keyof UI.Theme['colors'],
-): string | [r: number, g: number, b: number] | undefined => {
+): UI.ColorData[T] {
   return theme.colors[color || defaultColor][method];
-};
+}
 
 export default theme;
