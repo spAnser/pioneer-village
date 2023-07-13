@@ -2,7 +2,7 @@
 
 ## Initial Setup
 
-NodeJS 16.9.1 is the version used for development. It is recommended to use this version.
+NodeJS 16.13.2 is the version used for development. It is recommended to use this version. CFX Still uses a custom version of 16.9.1 but prisma v5 requires 16.13.x at the least. There shouldn't be any real conflicts for the CFX stuff.
 
 1. Have an instance of `postgresql` running with a database. The default db name is `redm` in `.env.example`.
 2. Copy `.env.example` to `.env` and make any necessary changes
