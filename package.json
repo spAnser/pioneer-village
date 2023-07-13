@@ -4,11 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "data": {
-    "serverVersion": "6195"
+    "serverVersion": "6551"
   },
   "scripts": {
     "download-server": "cd artifacts && node download.js",
-    "start": "./artifacts/6195/FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1436",
+    "start": "./artifacts/6551/FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1436",
     "watch": "lerna run watch --stream --parallel",
     "build": "lerna run build --stream --parallel",
     "prettier": "lerna run prettier --stream --parallel",
@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "7zip": "^0.0.6",
-    "@citizenfx/client": "2.0.6195-1",
-    "@citizenfx/server": "2.0.6195-1",
+    "@citizenfx/client": "2.0.6551-1",
+    "@citizenfx/server": "2.0.6551-1",
     "@types/howler": "^2.2.7",
     "@types/jsonwebtoken": "^9.0.2",
     "@types/lodash": "^4.14.178",
