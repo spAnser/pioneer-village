@@ -210,7 +210,8 @@ class DoorManager {
     await initManager.initializedThisResource();
     let doorChanged = false;
 
-    for (const [doorHash, doorEntity] of DoorSystemGetActive()) {
+    for (const [doorHashUnsigned, doorEntity] of DoorSystemGetActive()) {
+      const doorHash = doorHashUnsigned << 0;
       if (!this.doors.has(doorHash)) {
         let doorNetId = NetworkGetNetworkIdFromEntity(doorEntity);
 

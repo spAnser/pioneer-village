@@ -14,7 +14,7 @@ export default (prisma: PrismaClient) => {
     // logInfo('[doors]', doors);
 
     for (const door of doors) {
-      DoorState.set(door.hash >>> 0, door.state);
+      DoorState.set(door.hash << 0, door.state);
       // logInfo('[Door State]', door.hash, door.hash >>> 0, door.state);
     }
   });
@@ -41,7 +41,7 @@ export default (prisma: PrismaClient) => {
       if (currentDoorState === undefined) {
         await prisma.door.create({
           data: {
-            hash: doorHash,
+            hash: doorHash << 0,
             state,
           },
         });
@@ -50,7 +50,7 @@ export default (prisma: PrismaClient) => {
       const inventoryIdentifier = `character:${socket.data?.character?.id || 0}`;
       let hasKey = await Inventories.hasDoorKey(inventoryIdentifier, doorHash);
       if (hasKey || currentDoorState === undefined) {
-        DoorState.set(doorHash, state);
+        DoorState.set(doorHash << 0, state);
         userNamespace.emit('__client__', 'doors.set-door-state', doorHash, state);
         // TODO: Update DB
       } else {
