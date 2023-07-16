@@ -520,12 +520,23 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     if (!item) {
       return null;
     }
+    let name = item.name;
+    console.log('itemData.metadatas', itemData.metadatas);
+    if (itemData.metadatas?.length) {
+      for (const metadata of itemData.metadatas) {
+        console.log('metadata', metadata);
+        if (metadata.name) {
+          name += ` (${metadata.name})`;
+          break;
+        }
+      }
+    }
     return (
       <InventoryTooltip
         className={this.state.tooltipBelow ? 'below' : 'above'}
         style={{ top: this.state.tooltipY, left: this.state.tooltipX }}
       >
-        <h1>{item.name}</h1>
+        <h1>{name}</h1>
         {item.description && <p>{item.description}</p>}
         <ul>
           <li>These</li>
@@ -555,6 +566,7 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     return (
       this.state.show && (
         <>
+          {/* @ts-ignore */}
           <InventoryGlobalStyle />
           {this.state.tooltipItem && this.renderTooltip()}
           {this.state.targetInventory && (
