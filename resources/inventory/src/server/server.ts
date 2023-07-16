@@ -18,9 +18,16 @@ RegisterCommand(
   (source: number, args: string[], rawCommand: string) => {
     const characterId = Number(args[0]);
     const itemId = GetHashKey('PV_DOOR_KEY');
-    const doorHash = Number(args[1]);
 
-    emitSocket('inventoryAddItem', `character:${characterId}`, itemId, 1, { doorHash }, (success: boolean) => {
+    const metadata: { doorHashes?: number[]; doorHash?: number } = {};
+
+    if (args[1].includes(',')) {
+      metadata.doorHashes = args[1].split(',').map((doorHash) => Number(doorHash) << 0);
+    } else {
+      metadata.doorHash = Number(args[1]) << 0;
+    }
+
+    emitSocket('inventoryAddItem', `character:${characterId}`, itemId, 1, metadata, (success: boolean) => {
       console.log('success', success);
     });
   },
