@@ -170,3 +170,18 @@ RegisterCommand(
   },
   false,
 );
+
+/**
+ * Misc Commands
+ */
+RegisterCommand(
+  'get_pos',
+  () => {
+    const playerPed = PlayerPedId();
+    const coords = GetEntityCoords(playerPed, false);
+    const heightAboveGround = GetEntityHeightAboveGround(playerPed);
+
+    console.log(`x: ${coords[0]}, y: ${coords[1]}, z: ${coords[2] - heightAboveGround}`);
+  },
+  false,
+);
