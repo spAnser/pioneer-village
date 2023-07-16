@@ -1,7 +1,9 @@
 import stableController from './controllers/stable-controller';
 
 import Stables from '../shared/data/stables';
-import { zoneBoxSetup, zonePolySetup } from '@lib/client';
+// import { PVZone } from '@lib/client';
+import { addZone, removeZone } from '@lib/client';
+import { debounce } from '@lib/functions';
 
 for (const stable of Stables) {
   stableController.addStable(stable);
@@ -11,30 +13,33 @@ const zonePrefix = 'stable:';
 
 const registerStableZones = () => {
   for (const stable of Stables) {
-    console.log('adding zone', stable.identifier);
-    zonePolySetup({
+    // console.log('adding zone', stable.identifier);
+    // PVZone.CreatePoly(`${zonePrefix}${stable.identifier}`, stable.zones.interior, 114.0, 123.0, { debug: true },);
+    addZone({
+      _type: 'poly',
       name: `${zonePrefix}${stable.identifier}`,
-      minZ: 114.0,
-      maxZ: 123.0,
       coords: stable.zones.interior,
+      minZ: 0,
+      maxZ: 999,
+      options: { debug: false, delayExit: 5000 },
       onEnter() {
         console.log(`Entered ${stable.identifier}`);
         stableController.enterStable(stable.identifier);
       },
       onExit() {
         console.log(`Exited ${stable.identifier}`);
-        stableController.exitStable();
+        stableController.exitStable(stable.identifier);
       },
     });
   }
 };
 
-if (GetResourceState('plouffe_lib') === 'started') {
+if (GetResourceState('zones') === 'started') {
   registerStableZones();
 }
 
 on('onResourceStart', (resource: string) => {
-  if (resource === 'plouffe_lib') {
+  if (resource === 'zones') {
     registerStableZones();
   }
 });
