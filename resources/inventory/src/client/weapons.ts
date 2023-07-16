@@ -108,10 +108,10 @@ on('inventory:client:toggle_weapon', (item: Inventory.ItemWeapon) => {
   const [hasMainHand, currentWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
   const [hasOffHand, currentWeaponOffhand] = GetCurrentPedWeapon(playerPed, false, AttachPoint.OffHand, false);
 
-  if (currentWeapon === item.weaponHash) {
+  if (currentWeapon >>> 0 === item.weaponHash >>> 0) {
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, false, AttachPoint.MainHand, false, false);
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, false, AttachPoint.OffHand, false, false);
-  } else if (currentWeaponOffhand === item.weaponHash) {
+  } else if (currentWeaponOffhand >>> 0 === item.weaponHash >>> 0) {
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, false, AttachPoint.OffHand, false, false);
   } else {
     // TODO: Handle Thrown Weapons
@@ -134,7 +134,7 @@ on('inventory:client:toggle_thrown', (item: Inventory.ItemWeapon & Inventory.Ite
   const [hasMainHand, currentWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
   const [hasOffHand, currentWeaponOffhand] = GetCurrentPedWeapon(playerPed, false, AttachPoint.OffHand, false);
 
-  if (currentWeapon === item.weaponHash) {
+  if (currentWeapon >>> 0 === item.weaponHash >>> 0) {
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, false, AttachPoint.MainHand, false, false);
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, false, AttachPoint.OffHand, false, false);
   } else {
