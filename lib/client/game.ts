@@ -1,79 +1,41 @@
-const zoneSetup = (zone: Zone.SphereData | Zone.BoxData | Zone.PolyData, zoneData: Record<string, any>) => {
-  exports.plouffe_lib.Register(zoneData);
+import { PVZone } from '@lib/client/resources';
 
-  if (zone.onEnter) {
-    on(`${zone.name}:enter`, zone.onEnter);
+const RegisteredEvents = new Map<string, (...args: any[]) => void>();
+
+export const addZone = (data: Zones.ZoneData) => {
+  switch (data._type) {
+    case 'sphere':
+      PVZone.AddSphere(data.name, data.coords, data.radius, data.options || {});
+      break;
+    case 'box':
+      PVZone.AddBox(data.name, data.coords, data.size, data.rotation, data.options || {});
+      break;
+    case 'poly':
+      PVZone.AddPoly(data.name, data.coords, data.minZ, data.maxZ, data.options || {});
+      break;
   }
 
-  if (zone.onExit) {
-    on(`${zone.name}:exit`, zone.onExit);
+  if (data.onEnter && !RegisteredEvents.has(`zones::${data.name}::enter`)) {
+    on(`zones::${data.name}::enter`, data.onEnter);
+    RegisteredEvents.set(`zones::${data.name}::enter`, data.onEnter);
+  }
+
+  if (data.onExit && !RegisteredEvents.has(`zones::${data.name}::exit`)) {
+    on(`zones::${data.name}::exit`, data.onExit);
+    RegisteredEvents.set(`zones::${data.name}::exit`, data.onExit);
   }
 };
 
-export const zoneSphereSetup = (zone: Zone.SphereData) => {
-  const zoneData = {
-    name: zone.name,
-    coords: zone.coords,
-    maxDst: zone.radius,
-    isZone: true,
-    zoneMap: {
-      inEvent: `${zone.name}:enter`,
-      outEvent: `${zone.name}:exit`,
-    },
-  };
-  zoneSetup(zone, zoneData);
-};
-
-export const zoneBoxSetup = (zone: Zone.BoxData) => {
-  let xTotal = 0;
-  let yTotal = 0;
-
-  for (const coord of zone.coords) {
-    xTotal += coord.x;
-    yTotal += coord.y;
+export const removeZone = (name: string) => {
+  PVZone.Remove(name);
+  const enterEvent = RegisteredEvents.get(`zones::${name}::enter`);
+  if (enterEvent) {
+    removeEventListener(`zones::${name}::enter`, enterEvent);
   }
-  const xAverage = xTotal / 4;
-  const yAverage = yTotal / 4;
-
-  const zoneData = {
-    name: zone.name,
-    coords: { x: xAverage, y: yAverage, z: zone.minZ },
-    maxZ: zone.maxZ - zone.minZ,
-    minZ: 0,
-    box: zone.coords,
-    isZone: true,
-    zoneMap: {
-      inEvent: `${zone.name}:enter`,
-      outEvent: `${zone.name}:exit`,
-    },
-  };
-
-  zoneSetup(zone, zoneData);
-};
-
-export const zonePolySetup = (zone: Zone.PolyData) => {
-  let xTotal = 0;
-  let yTotal = 0;
-
-  for (const coord of zone.coords) {
-    xTotal += coord.x;
-    yTotal += coord.y;
+  const exitEvent = RegisteredEvents.get(`zones::${name}::exit`);
+  if (exitEvent) {
+    removeEventListener(`zones::${name}::exit`, exitEvent);
   }
-  const xAverage = xTotal / 4;
-  const yAverage = yTotal / 4;
-
-  const zoneData = {
-    name: zone.name,
-    coords: { x: xAverage, y: yAverage, z: zone.minZ },
-    maxZ: zone.maxZ - zone.minZ,
-    minZ: 0,
-    box: zone.coords,
-    isZone: true,
-    zoneMap: {
-      inEvent: `${zone.name}:enter`,
-      outEvent: `${zone.name}:exit`,
-    },
-  };
-
-  zoneSetup(zone, zoneData);
+  RegisteredEvents.delete(`zones::${name}::enter`);
+  RegisteredEvents.delete(`zones::${name}::exit`);
 };

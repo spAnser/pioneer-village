@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="zones:src" pattern="file[pioneer-village]:resources/*core*/zones/src//*" />
+</component>

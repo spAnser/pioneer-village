@@ -15,7 +15,7 @@ export const boolval = (mixedVar: any): boolean =>
     mixedVar === undefined
   );
 
-export const debounce = (wait: number, cb: Function): Function => {
+export const debounce = (wait: number, cb: Function): ((...args: any[]) => void) => {
   let h: NodeJS.Timeout;
   return (...args: any[]): void => {
     clearTimeout(h);

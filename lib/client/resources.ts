@@ -11,4 +11,5 @@ export const PVTarget = exports['target'];
 export const PVKeymapper = exports['keymapper'];
 export const PVDatabindings = exports['databindings'];
 export const PVDoors = exports['doors'];
-// export const PVZone = exports['plouffe_zones'];
+
+export const PVZone = exports['zones'];
