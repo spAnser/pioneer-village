@@ -7,6 +7,7 @@ resources/*/build/
 resources/*/*/build/
 artifacts/*/
 .env
+.replxx_history
 
 # Idea User-specific stuff:
 **/.idea/workspace.xml
