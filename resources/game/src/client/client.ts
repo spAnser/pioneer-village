@@ -85,7 +85,7 @@ onUI('socket.connected', () => {
   console.log('socket.connected', PVGame.getCurrentCharacter(), !PVGame.getCurrentCharacter());
   const character = PVGame.getCurrentCharacter();
   if (character) {
-    emitSocket('character-select.choose', character.id);
+    emitSocket('character-select.choose', character.id, PVGame.getPlayerServerId());
   } else {
     characterSelection();
   }

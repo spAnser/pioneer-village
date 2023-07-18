@@ -33,6 +33,8 @@ model Characters {
   lastX       Decimal    @default(0.0)
   lastY       Decimal    @default(0.0)
   lastZ       Decimal    @default(0.0)
+  food        Decimal    @default(100.0)
+  drink       Decimal    @default(100.0)
   components  Json       @default("[]")
   model       String     @default("mp_male")
   whistle     Json       @default("{\"pitch\": 0.5, \"shape\": 5, \"clarity\": 0.5}")

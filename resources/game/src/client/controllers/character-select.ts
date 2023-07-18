@@ -1,6 +1,6 @@
 import { shuffle } from 'lodash';
 
-import { exports } from '@lib/client';
+import { PVGame, exports } from '@lib/client';
 import { PVBase, PVCamera } from '@lib/client';
 import { Vector3 } from '@lib/math/vector3';
 import { AnimFlag } from '@lib/flags';
@@ -291,6 +291,7 @@ onUI('character-select.choose', async (characterId) => {
   await gameManager.collisionLoadedAtEntity(playerPed);
   await Delay(1000);
   DoScreenFadeIn(500);
+  emitSocket('character-select.choose', characterId, PVGame.getPlayerServerId())
   currentCharacter = character;
 });
 

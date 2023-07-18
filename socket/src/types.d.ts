@@ -26,6 +26,9 @@ declare namespace SocketServer {
     ) => void;
     ['world.register-object']: (name: string, netId: number) => void;
     ['world.unregister-object']: (name: string) => void;
+    ['character-update.last-position']: (serverId: number, coords: Vector3Format) => void; 
+    ['character-event.disconnected']: (serverId: number) => void; 
+    ['character-get.food-drink']: (charId: number, cb: (food: number, drink: number) => void) => void; 
   };
 
   type Client = {
@@ -39,7 +42,7 @@ declare namespace SocketServer {
     getCharacters: (callback: (characters: Game.Character[]) => void) => void;
     createCharacter: (characterData: Game.Character, faceData: Game.Face, callback: () => void) => void;
 
-    ['character-select.choose']: (characterId: number) => void;
+    ['character-select.choose']: (characterId: number, serverId: number) => void;
 
     inventorySubscribe: (identifier: string) => void;
     inventoryUnsubscribe: (identifier: string) => void;
@@ -55,6 +58,7 @@ declare namespace SocketServer {
 
     ['doors.get-door-states']: (callback: (data: [number, number][]) => void) => void;
     ['doors.set-door-state']: (doorHash: number, state: number) => void;
+    ['character-update.food-drink']: (food: number, water: number) => void; 
   };
 }
 
@@ -83,4 +87,25 @@ declare namespace Collection {
 
 declare interface String {
   GetHashKey(): number;
+}
+
+
+declare interface CharacterData {
+  id: number;
+  accountId: number;
+  firstName: string;
+  lastName: string;
+  dateOfBirth: string;
+  createdAt: string;
+  deletedAt: string | undefined;
+  lastX: number;
+  lastY: number;
+  lastZ: number;
+  model: string;
+  food: number;
+  drink: number;
+  face: Game.Face;
+  components: number[];
+  source: number;
+  socketId: string;
 }

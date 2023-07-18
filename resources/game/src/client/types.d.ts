@@ -75,6 +75,8 @@ declare namespace Game {
   type vegAddVolume = (volume: number, modifierType: number, flags: number) => number;
   type vegRemoveAllSpheres = () => void;
 
+  type playerServerId = number; 
+
   type ClientExports = {
     playerPed: () => number;
     mountPed: () => number | null;
@@ -122,6 +124,8 @@ declare namespace Game {
     // Lua
     getStateValue: (entity: number, key: string) => any;
     getChildEntity: (entity: number, name: string) => number;
+
+    getPlayerServerId: () => number; 
   };
 
   interface CharacterSpot {

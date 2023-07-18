@@ -2,15 +2,41 @@ import { PrismaClient } from '@prisma/client';
 import { serverNamespace, userNamespace } from '../server';
 import Characters from '../managers/characters';
 import Inventories from '../managers/inventories';
-import { logGreen, logInfoC } from '../helpers/log';
+import { logGreen, logInfoC, logInfoS } from '../helpers/log';
 
 export default (prisma: PrismaClient) => {
   Characters.setDB(prisma);
 
-  const activeCharacters: Map<string, number> = new Map();
-
   serverNamespace.on('connection', (socket) => {
     logGreen('[Characters] Game server connected');
+
+    socket.on('character-update.last-position', async (serverId, coords) => {
+      const selectedCharacter = Characters.getActiveCharacterForServerId(serverId)
+      if (selectedCharacter !== undefined) {
+        logInfoS(`[Characters] Player ${serverId} updated character ${selectedCharacter.id} and set last position ${JSON.stringify(coords)}`)
+        await Characters.setLastCoords(selectedCharacter.id, coords)
+      }
+    })
+
+    socket.on('character-event.disconnected', (serverId) => {
+      Characters.setCharacterAsNoLongerActive(serverId)
+      logInfoS(`[Characters] character ${serverId} was just disconnected and performed character cleanup`)
+    })
+
+    socket.on('character-get.food-drink', async (charId, cb) => {
+      if (!charId) {
+        cb(0, 0)
+      } else {
+        const result = await Characters.getCharacterFoodAndDrink(charId)
+        logInfoS('character-get.food-drink', charId, JSON.stringify(result))
+        if (!result) {
+          cb(0, 0)
+        } else {
+          cb(result.food.toNumber(), result.drink.toNumber())
+        }
+      }
+    })
+
   });
 
   userNamespace.on('connection', (socket) => {
@@ -98,12 +124,19 @@ export default (prisma: PrismaClient) => {
       cb();
     });
 
-    socket.on('character-select.choose', async (characterId) => {
+    socket.on('character-select.choose', async (characterId, serverId) => {
       // TODO: Validate player owns character.
       logInfoC('socket.data', socket.data);
       socket.data.character = { id: characterId };
-      activeCharacters.set(socket.id, characterId);
+      socket.data.serverId = serverId
+      await Characters.setActiveCharacter(characterId, serverId, socket.id)
       logInfoC('character-select.choose', characterId);
     });
+
+    socket.on('character-update.food-drink', async (food, water) => {
+      if (!socket.data.character || !socket.data.character.id) return 
+      await Characters.updateCharacterFoodAndDrink(socket.data.character.id, food, water)
+      logInfoC('character-update.food-drink', food, water, socket.data.character.id)
+    })
   });
 };

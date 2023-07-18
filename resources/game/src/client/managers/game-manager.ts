@@ -1093,6 +1093,10 @@ class GameManager {
     return components;
   }
 
+  getPlayerServerId() {
+    return GetPlayerServerId(PlayerId())
+  }
+
   // getComponentById(id: number): Component {
   //   return exports['research'].getComponentById(id);
   // }

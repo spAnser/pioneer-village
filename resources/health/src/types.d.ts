@@ -2,7 +2,9 @@ declare interface ClientExports {
   health: Health.ClientExports;
 }
 
-declare interface RPC {}
+declare interface RPC {
+  ['health.getFoodAndDrink']: (charId: number) => Promise<{food: number, drink: number}>;
+}
 
 declare namespace Health {
   interface BoneInfo {

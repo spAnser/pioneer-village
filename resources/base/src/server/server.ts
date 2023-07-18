@@ -1,5 +1,6 @@
 import './comms';
 import { emitSocket } from './comms';
+import { Vector3 } from '@lib/math/vector3'
 
 let connectedPlayers: Base.PlayerInfo[] = [];
 
@@ -31,3 +32,10 @@ setInterval(async () => {
   connectedPlayers = getConnectedPlayers();
   emitSocket('connectedPlayers', connectedPlayers);
 }, 3e3);
+
+on('playerDropped', () => {
+  const src = global.source; 
+  const coords = new Vector3().setFromArray(GetEntityCoords(GetPlayerPed(String(src))))
+  emitSocket('character-update.last-position', src, coords)
+  emitSocket('character-event.disconnected', src)
+})
