@@ -6,6 +6,7 @@ import { Socket } from 'socket.io-client';
 import DoorController from './controllers/doors';
 import StableController from './controllers/stable';
 import WorldController from './controllers/world';
+import BaseController from './controllers/base';
 
 export default (socket: Socket<UISocketEvents, SocketServer.Client & SocketServer.ClientEvents>) => {
   render(<App socket={socket} />, document.body);
@@ -32,6 +33,7 @@ export default (socket: Socket<UISocketEvents, SocketServer.Client & SocketServe
   DoorController(socket);
   StableController(socket);
   WorldController(socket);
+  BaseController(socket);
 
   if (module.hot) {
     module.hot.accept('./app', () => {

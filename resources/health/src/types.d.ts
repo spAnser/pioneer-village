@@ -1,9 +1,12 @@
+import Character = Game.Character;
+
 declare interface ClientExports {
   health: Health.ClientExports;
 }
 
 declare interface RPC {
   ['health.getFoodAndDrink']: (charId: number) => Promise<{food: number, drink: number}>;
+  ['health.getHealthMetadata']: (charId: number) => Promise<CharacterHealthMetadata>;
 }
 
 declare namespace Health {

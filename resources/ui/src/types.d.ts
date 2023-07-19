@@ -10,6 +10,8 @@ declare interface UISocketEvents {
   ['world.unregister-object']: (name: string) => void;
 
   ['doors.set-door-state']: (doorHash: number, state: number) => void;
+  ['character-client-update.getCharacter']: (character: string) => void;
+  ['character-client-update.updateAttribute']: (attr: keyof CharacterData, newVal: any) => void;
 }
 
 declare module '*.svg' {

@@ -2,6 +2,7 @@ import Timer = NodeJS.Timer;
 import { Vector3 } from '@lib/math/vector3';
 import { AnimFlag } from '@lib/flags';
 import { Delay } from '@lib/functions';
+import { awaitServer } from '@lib/client';
 
 class GameManager {
   protected static instance: GameManager;
@@ -28,6 +29,7 @@ class GameManager {
   protected _animWalkTick: number | null = null;
   protected _limitSpeedTick: number | null = null;
   protected _movementSpeed: number | null = null;
+  protected _steamid: string | null = null;
 
   protected _animLoopTasks: Map<string, Anim.LoopInfo> = new Map();
 
@@ -1094,7 +1096,14 @@ class GameManager {
   }
 
   getPlayerServerId() {
-    return GetPlayerServerId(PlayerId())
+    return GetPlayerServerId(PlayerId());
+  }
+
+  async getPlayerSteamId() {
+    if (!this._steamid) {
+      this._steamid = await awaitServer('game.getSteamId');
+    }
+    return this._steamid;
   }
 
   // getComponentById(id: number): Component {

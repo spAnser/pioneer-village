@@ -5,5 +5,14 @@ declare interface UIEvents {
 }
 
 declare interface SocketForwardEvents {
-  ['character-update.food-drink']: (food: number, water: number) => void; 
+  ['character-update.food-drink']: (food: number, water: number) => void;
+  ['character-update.health-status']: (
+    boneHealth: any[],
+    boneStatus: any[],
+    sick: boolean,
+    activeTonic: boolean,
+    health: number,
+    stamina: number,
+    litersOfBlood: number,
+  ) => void;
 }

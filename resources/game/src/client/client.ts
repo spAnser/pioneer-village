@@ -81,11 +81,12 @@ const initTick = setTick(() => {
   }
 });
 
-onUI('socket.connected', () => {
+onUI('socket.connected', async () => {
   console.log('socket.connected', PVGame.getCurrentCharacter(), !PVGame.getCurrentCharacter());
   const character = PVGame.getCurrentCharacter();
   if (character) {
-    emitSocket('character-select.choose', character.id, PVGame.getPlayerServerId());
+    const steamId = await PVGame.getPlayerSteamId();
+    emitSocket('character-select.choose', character.id, PVGame.getPlayerServerId(), steamId);
   } else {
     characterSelection();
   }

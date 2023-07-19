@@ -271,7 +271,7 @@ let currentCharacter: Game.Character | undefined;
 
 onUI('character-select.choose', async (characterId) => {
   console.log('character-select.choose', characterId);
-
+  const steam = await PVGame.getPlayerSteamId();
   const character = playerCharacters.get(characterId);
   if (!character) {
     return;
@@ -291,7 +291,7 @@ onUI('character-select.choose', async (characterId) => {
   await gameManager.collisionLoadedAtEntity(playerPed);
   await Delay(1000);
   DoScreenFadeIn(500);
-  emitSocket('character-select.choose', characterId, PVGame.getPlayerServerId())
+  emitSocket('character-select.choose', characterId, PVGame.getPlayerServerId(), steam);
   currentCharacter = character;
 });
 

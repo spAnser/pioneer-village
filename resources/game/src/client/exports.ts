@@ -199,8 +199,12 @@ const vegRemoveAllSpheres: Game.vegRemoveAllSpheres = () => {
 };
 
 const getPlayerServerId = (): Game.playerServerId => {
-  return gameManager.getPlayerServerId()
-}
+  return gameManager.getPlayerServerId();
+};
+
+const getPlayerSteamId = (): Promise<Game.playerSteamId> => {
+  return gameManager.getPlayerSteamId();
+};
 
 exports<'game'>('playerPed', playerPed);
 exports<'game'>('mountPed', mountPed);
@@ -245,4 +249,5 @@ exports<'game'>('vegAddSphereAtEntity', vegAddSphereAtEntity);
 exports<'game'>('vegAddVolume', vegAddVolume);
 exports<'game'>('vegRemoveAllSpheres', vegRemoveAllSpheres);
 
-exports<'game'>('getPlayerServerId', getPlayerServerId)
+exports<'game'>('getPlayerServerId', getPlayerServerId);
+exports<'game'>('getPlayerSteamId', getPlayerSteamId);
