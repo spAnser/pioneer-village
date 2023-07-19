@@ -111,6 +111,7 @@ class Characters {
       socket: null,
       steamId: '',
       offline: true,
+      userId: -1,
     };
   }
 
@@ -311,7 +312,7 @@ class Characters {
 
   // End of money management
 
-  async setActiveCharacter(charId: number, source: number, socket: Socket, steamId: string) {
+  async setActiveCharacter(charId: number, source: number, socket: Socket, steamId: string, userId: number) {
     const character = await this.getCharacter(charId);
     if (!character) {
       logInfoC('Attempted to get character with id', charId, 'but returned null');
@@ -320,6 +321,7 @@ class Characters {
     character.source = source;
     character.offline = false;
     character.steamId = steamId;
+    character.userId = userId;
     socket.emit('character-client-update.getCharacter', JSON.stringify(character));
     character.socket = socket;
     this.characters.push(character);

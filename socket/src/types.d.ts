@@ -44,7 +44,7 @@ declare namespace SocketServer {
     getCharacters: (callback: (characters: Game.Character[]) => void) => void;
     createCharacter: (characterData: Game.Character, faceData: Game.Face, callback: () => void) => void;
 
-    ['character-select.choose']: (characterId: number, serverId: number, steam: Game.playerSteamId) => void;
+    ['character-select.choose']: (characterId: number, steam: Game.playerSteamId) => void;
 
     inventorySubscribe: (identifier: string) => void;
     inventoryUnsubscribe: (identifier: string) => void;
@@ -136,5 +136,6 @@ declare interface CharacterData {
   components: number[];
   source: number;
   socket: any;
+  userId: number;
   offline: boolean;
 }

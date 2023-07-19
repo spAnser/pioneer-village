@@ -29,6 +29,6 @@ declare interface CharacterData {
   face: Game.Face;
   components: number[];
   source: number;
-  socket: any;
+  userId: number;
   offline: boolean;
 }

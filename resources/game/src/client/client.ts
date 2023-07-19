@@ -86,7 +86,7 @@ onUI('socket.connected', async () => {
   const character = PVGame.getCurrentCharacter();
   if (character) {
     const steamId = await PVGame.getPlayerSteamId();
-    emitSocket('character-select.choose', character.id, PVGame.getPlayerServerId(), steamId);
+    emitSocket('character-select.choose', character.id, steamId);
   } else {
     characterSelection();
   }

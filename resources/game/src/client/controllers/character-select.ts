@@ -291,7 +291,7 @@ onUI('character-select.choose', async (characterId) => {
   await gameManager.collisionLoadedAtEntity(playerPed);
   await Delay(1000);
   DoScreenFadeIn(500);
-  emitSocket('character-select.choose', characterId, PVGame.getPlayerServerId(), steam);
+  emitSocket('character-select.choose', characterId, steam);
   currentCharacter = character;
 });
 
