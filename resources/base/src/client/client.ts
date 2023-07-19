@@ -3,6 +3,7 @@ import { Delay } from '@lib/functions';
 
 import './blip-setup';
 import './door-register';
+import './characterData';
 
 const getNetworkControlOfEntity: Base.getNetworkControlOfEntity = async (entity: number): Promise<void> => {
   do {

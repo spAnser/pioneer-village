@@ -56,7 +56,6 @@ export default class CharacterSelect extends UIComponent<UI.BaseProps, UI.Charac
   chooseCharacter(characterId: number) {
     this.setState({ show: false });
     emitClient('character-select.choose', characterId);
-    this.context.socket.emit('character-select.choose', characterId);
   }
 
   createCharacter() {

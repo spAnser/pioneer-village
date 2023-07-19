@@ -38,7 +38,7 @@ const prisma = new PrismaClient();
 seedDB(prisma);
 
 UserController(prisma, userAccessKey);
-CharacterController(prisma);
+CharacterController(prisma, userAccessKey);
 ChatController(prisma);
 DoorController(prisma);
 InventoryController(prisma);

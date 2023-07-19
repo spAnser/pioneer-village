@@ -25,7 +25,7 @@ declare namespace UI {
 declare interface ClientForwardEvents {}
 
 declare interface SocketForwardEvents {
-  ['character-select.choose']: (characterId: number) => void;
+  ['character-select.choose']: (characterId: number, steam: Game.playerSteamId) => void;
 }
 
 declare interface UISocketEvents {

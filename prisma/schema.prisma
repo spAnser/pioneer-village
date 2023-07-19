@@ -23,25 +23,29 @@ model Accounts {
 }
 
 model Characters {
-  id          Int        @id @default(autoincrement())
-  accountId   Int
-  firstName   String
-  lastName    String
-  dateOfBirth DateTime
-  createdAt   DateTime   @default(now())
-  deletedAt   DateTime?
-  lastX       Decimal    @default(0.0)
-  lastY       Decimal    @default(0.0)
-  lastZ       Decimal    @default(0.0)
-  components  Json       @default("[]")
-  model       String     @default("mp_male")
-  whistle     Json       @default("{\"pitch\": 0.5, \"shape\": 5, \"clarity\": 0.5}")
-  brand       Brands?
-  account     Accounts   @relation(fields: [accountId], references: [id])
-  face        Faces?
-  horses      Horses[]
-  livestock   Livestock?
-  outfits     Outfits[]
+  id             Int        @id @default(autoincrement())
+  accountId      Int
+  firstName      String
+  lastName       String
+  dateOfBirth    DateTime
+  createdAt      DateTime   @default(now())
+  deletedAt      DateTime?
+  lastX          Decimal    @default(0.0)
+  lastY          Decimal    @default(0.0)
+  lastZ          Decimal    @default(0.0)
+  food           Decimal    @default(100.0)
+  drink          Decimal    @default(100.0)
+  currencies     Json       @default("{\"dollars\": 20, \"gold\": 0}")
+  healthMetadata Json       @default("{\"health\": 100, \"stamina\": 100, \"litersOfBlood\": 5, \"boneHealth\": \"[]\", \"activeTonic\": false, \"sick\": false, \"boneStatus\": \"[]\"}")
+  components     Json       @default("[]")
+  model          String     @default("mp_male")
+  whistle        Json       @default("{\"pitch\": 0.5, \"shape\": 5, \"clarity\": 0.5}")
+  brand          Brands?
+  account        Accounts   @relation(fields: [accountId], references: [id])
+  face           Faces?
+  horses         Horses[]
+  livestock      Livestock?
+  outfits        Outfits[]
 }
 
 model Faces {

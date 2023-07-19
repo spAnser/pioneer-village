@@ -1,16 +1,80 @@
 import { PrismaClient } from '@prisma/client';
 import { serverNamespace, userNamespace } from '../server';
-import Characters from '../managers/characters';
+import Characters, { GetFaceDataFromDatabase } from '../managers/characters';
 import Inventories from '../managers/inventories';
-import { logGreen, logInfoC } from '../helpers/log';
+import { verify } from 'jsonwebtoken';
+import { logGreen, logInfoC, logInfoS } from '../helpers/log';
 
-export default (prisma: PrismaClient) => {
+export default (prisma: PrismaClient, userAccessKey: string) => {
   Characters.setDB(prisma);
-
-  const activeCharacters: Map<string, number> = new Map();
 
   serverNamespace.on('connection', (socket) => {
     logGreen('[Characters] Game server connected');
+
+    socket.on('character-update.last-position', async (serverId, coords) => {
+      const selectedCharacter = Characters.getActiveCharacterForServerId(serverId);
+      if (selectedCharacter !== undefined) {
+        logInfoS(
+          `[Characters] Player ${serverId} updated character ${
+            selectedCharacter.id
+          } and set last position ${JSON.stringify(coords)}`,
+        );
+        await Characters.setLastCoords(selectedCharacter.id, coords);
+      }
+    });
+
+    socket.on('character-event.disconnected', (serverId) => {
+      Characters.setCharacterAsNoLongerActive(serverId);
+      logInfoS(`[Characters] character ${serverId} was just disconnected and performed character cleanup`);
+    });
+
+    socket.on('character-get.food-drink', async (charId, cb) => {
+      if (!charId) {
+        cb(0, 0);
+      } else {
+        const result = await Characters.getCharacterFoodAndDrink(charId);
+        logInfoS('character-get.food-drink', charId, JSON.stringify(result));
+        if (!result) {
+          cb(0, 0);
+        } else {
+          cb(result.food.toNumber(), result.drink.toNumber());
+        }
+      }
+    });
+
+    socket.on('character-get.health-metadata', async (charId, cb) => {
+      if (!charId) {
+        cb({
+          health: 100,
+          stamina: 100,
+          litersOfBlood: 5,
+          boneHealth: [],
+          activeTonic: false,
+          sick: false,
+          boneStatus: [],
+        });
+      } else {
+        const result = await Characters.getCharacterHealthMetadata(charId);
+        if (!result) {
+          cb({
+            health: 100,
+            stamina: 100,
+            litersOfBlood: 5,
+            boneHealth: [],
+            activeTonic: false,
+            sick: false,
+            boneStatus: [],
+          });
+          logInfoS(
+            'Attempted to get health metadata for character',
+            charId,
+            'but returned undefined falling back to defaults',
+          );
+        } else {
+          cb(result);
+        }
+      }
+    });
   });
 
   userNamespace.on('connection', (socket) => {
@@ -22,50 +86,7 @@ export default (prisma: PrismaClient) => {
         const prismaCharacters = await Characters.getCharacters(socket.data.user.userId);
 
         for (const character of prismaCharacters) {
-          // NOTE: There are defaults just in case, but they should never really not exist in the DB
-          const face: Game.Face = {
-            id: character.face?.id || 0,
-            noseHeight: character.face?.noseHeight.toNumber() || 0,
-            lowerLipWidth: character.face?.lowerLipWidth.toNumber() || 0,
-            upperLipHeight: character.face?.upperLipHeight.toNumber() || 0,
-            earlobeSize: character.face?.earlobeSize.toNumber() || 0,
-            lowerLipHeight: character.face?.lowerLipHeight.toNumber() || 0,
-            eyebrowHeight: character.face?.eyebrowHeight.toNumber() || 0,
-            jawHeight: character.face?.jawHeight.toNumber() || 0,
-            eyesDistance: character.face?.eyesDistance.toNumber() || 0,
-            mouthDepth: character.face?.mouthDepth.toNumber() || 0,
-            mouthWidth: character.face?.mouthWidth.toNumber() || 0,
-            noseCurvature: character.face?.noseCurvature.toNumber() || 0,
-            eyebrowDepth: character.face?.eyebrowDepth.toNumber() || 0,
-            earsHeight: character.face?.earsHeight.toNumber() || 0,
-            noseSize: character.face?.noseSize.toNumber() || 0,
-            headWidth: character.face?.headWidth.toNumber() || 0,
-            eyelidWidth: character.face?.eyelidWidth.toNumber() || 0,
-            mouthYPos: character.face?.mouthYPos.toNumber() || 0,
-            earsWidth: character.face?.earsWidth.toNumber() || 0,
-            jawWidth: character.face?.jawWidth.toNumber() || 0,
-            nostrilsDistance: character.face?.nostrilsDistance.toNumber() || 0,
-            noseWidth: character.face?.noseWidth.toNumber() || 0,
-            eyesHeight: character.face?.eyesHeight.toNumber() || 0,
-            chinHeight: character.face?.chinHeight.toNumber() || 0,
-            upperLipWidth: character.face?.upperLipWidth.toNumber() || 0,
-            eyebrowWidth: character.face?.eyebrowWidth.toNumber() || 0,
-            cheekBoneWidth: character.face?.cheekBoneWidth.toNumber() || 0,
-            chinWidth: character.face?.chinWidth.toNumber() || 0,
-            eyesAngle: character.face?.eyesAngle.toNumber() || 0,
-            earsAngle: character.face?.earsAngle.toNumber() || 0,
-            jawDepth: character.face?.jawDepth.toNumber() || 0,
-            eyelidHeight: character.face?.eyelidHeight.toNumber() || 0,
-            cheekBoneHeight: character.face?.cheekBoneHeight.toNumber() || 0,
-            chinDepth: character.face?.chinDepth.toNumber() || 0,
-            cheekBoneDepth: character.face?.cheekBoneDepth.toNumber() || 0,
-            upperLipDepth: character.face?.upperLipDepth.toNumber() || 0,
-            noseAngle: character.face?.noseAngle.toNumber() || 0,
-            mouthXPos: character.face?.mouthXPos.toNumber() || 0,
-            lowerLipDepth: character.face?.lowerLipDepth.toNumber() || 0,
-            eyesDepth: character.face?.eyesDepth.toNumber() || 0,
-            overlays: (character.face?.overlays as Record<string, any>) || {},
-          };
+          const face = GetFaceDataFromDatabase(character);
           characters.push({
             id: character.id,
             accountId: character.accountId,
@@ -98,12 +119,58 @@ export default (prisma: PrismaClient) => {
       cb();
     });
 
-    socket.on('character-select.choose', async (characterId) => {
-      // TODO: Validate player owns character.
+    socket.on('character-select.choose', async (characterId, steamId) => {
+      const ownsCharacter = await Characters.doesPlayerOwnCharacter(characterId, steamId);
+      const token = socket.handshake.auth.token;
+      const tokenPayload = verify(token, userAccessKey) as { serverId: number; userId: number };
+      if (!ownsCharacter) {
+        serverNamespace.emit(
+          'player-management.kick',
+          tokenPayload.serverId,
+          'You do not own this character please try again later.',
+        );
+        return;
+      }
       logInfoC('socket.data', socket.data);
       socket.data.character = { id: characterId };
-      activeCharacters.set(socket.id, characterId);
+      socket.data.serverId = tokenPayload.serverId;
+      await Characters.setActiveCharacter(characterId, tokenPayload.serverId, socket, steamId, tokenPayload.userId);
       logInfoC('character-select.choose', characterId);
     });
+
+    socket.on('character-update.food-drink', async (food, drink) => {
+      if (!socket.data.character || !socket.data.character.id) return;
+      await Characters.updateLocalCharacterAtributeWithCharId(socket.data.character.id, 'food', food);
+      await Characters.updateLocalCharacterAtributeWithCharId(socket.data.character.id, 'drink', drink);
+      logInfoC('character-update.food-drink', food, drink, socket.data.character.id);
+    });
+
+    socket.on(
+      'character-update.health-status',
+      (boneHealth, boneStatus, sick, activeTonic, health, stamina, litersOfBlood) => {
+        if (!socket.data.character || !socket.data.character.id) return;
+        const metadata = {
+          boneHealth,
+          boneStatus,
+          sick,
+          activeTonic,
+          health,
+          stamina,
+          litersOfBlood,
+        };
+        Characters.updateLocalCharacterAtributeWithCharId(socket.data.character, 'healthMetadata', metadata);
+        logInfoC(
+          'character-update.health-status',
+          socket.data.character.id,
+          JSON.stringify(boneHealth),
+          JSON.stringify(boneStatus),
+          sick,
+          activeTonic,
+          health,
+          stamina,
+          litersOfBlood,
+        );
+      },
+    );
   });
 };

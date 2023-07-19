@@ -4,6 +4,7 @@ declare interface ServerExports {
 
 declare interface SocketEvents {
   test: (one: string) => void;
+  ['player-management.kick']: (serverId: number, reason: string) => void;
 }
 
 declare namespace Base {

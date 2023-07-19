@@ -1,5 +1,6 @@
 declare interface RPC {
   getCharacters: () => Game.Character[];
+  ['game.getSteamId']: () => Promise<string>;
 }
 
 declare namespace Game {

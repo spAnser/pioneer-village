@@ -1,4 +1,4 @@
-import { PVGame, emitUI, focusUI } from '@lib/client';
+import { PVGame, awaitServer, emitUI, focusUI } from '@lib/client';
 
 import { DrawTxt, TxtAtWorldCoord } from '@lib/client';
 import { Vector3 } from '@lib/math';
@@ -10,8 +10,10 @@ import './misc/commands';
 import healthManager from './managers/health-manager';
 import { AnimFlag } from '@lib/flags';
 import { Delay } from '@lib/functions';
+import { emitSocket } from '@lib/client/comms/ui';
 
 const DEBUG = false;
+let characterSelected = false;
 
 SetAiMeleeWeaponDamageModifier(0.001);
 SetAiWeaponDamageModifier(0.001);
@@ -37,8 +39,23 @@ const boneNames: string[] = [
   'SKEL_R_FOOT',
 ];
 
-onNet('game:character-selected', () => {
+onNet('game:character-selected', async (charId: number) => {
   healthManager.checkUpdatePed();
+  characterSelected = true;
+
+  const { food, drink } = await awaitServer('health.getFoodAndDrink', charId);
+  healthManager.food = food;
+  healthManager.water = drink;
+  emitUI('hud.state', { food: food, drink: drink });
+
+  const healthMetadata = await awaitServer('health.getHealthMetadata', charId);
+  healthManager.health = healthMetadata.health;
+  healthManager.stamina = healthMetadata.stamina;
+  healthManager.litersOfBlood = healthMetadata.litersOfBlood;
+  healthManager.boneStatus = new Map(healthMetadata.boneStatus);
+  healthManager.boneHealth = new Map(healthMetadata.boneHealth);
+  healthManager.sick = healthMetadata.sick;
+  healthManager.activeTonic = healthMetadata.activeTonic;
 });
 
 if (DEBUG) {
@@ -312,6 +329,27 @@ RegisterCommand(
   },
   false,
 );
+
+(() => {
+  setInterval(() => {
+    if (!characterSelected && !DEBUG) return;
+    emitSocket(
+      'character-update.food-drink',
+      parseInt(healthManager.food.toFixed(2)),
+      parseInt(healthManager.water.toFixed(2)),
+    );
+    emitSocket(
+      'character-update.health-status',
+      Array.from(healthManager.boneHealth.entries()),
+      Array.from(healthManager.boneStatus.entries()),
+      healthManager.sick,
+      healthManager.activeTonic,
+      healthManager.health,
+      healthManager.stamina,
+      healthManager.litersOfBlood,
+    );
+  }, 5 * 60 * 60 * 1000); // every 5 minutes
+})();
 
 /*
  * TODO: Move to a different resource

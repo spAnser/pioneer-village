@@ -1,6 +1,6 @@
 import { shuffle } from 'lodash';
 
-import { exports } from '@lib/client';
+import { PVGame, exports } from '@lib/client';
 import { PVBase, PVCamera } from '@lib/client';
 import { Vector3 } from '@lib/math/vector3';
 import { AnimFlag } from '@lib/flags';
@@ -271,7 +271,7 @@ let currentCharacter: Game.Character | undefined;
 
 onUI('character-select.choose', async (characterId) => {
   console.log('character-select.choose', characterId);
-
+  const steam = await PVGame.getPlayerSteamId();
   const character = playerCharacters.get(characterId);
   if (!character) {
     return;
@@ -291,6 +291,7 @@ onUI('character-select.choose', async (characterId) => {
   await gameManager.collisionLoadedAtEntity(playerPed);
   await Delay(1000);
   DoScreenFadeIn(500);
+  emitSocket('character-select.choose', characterId, steam);
   currentCharacter = character;
 });
 
