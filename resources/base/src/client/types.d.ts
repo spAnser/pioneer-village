@@ -11,7 +11,7 @@ declare namespace Base {
     getNetworkControlOfEntity: getNetworkControlOfEntity;
     deleteEntity: deleteEntity;
     deleteEntities: deleteEntities;
-    getCurrentCharacter: CharacterData | null;
+    getCurrentCharacter: () => CharacterData | null;
   };
 
   type DoorData = [doorHash: number, modelHash: number, modelName: string, x: number, y: number, z: number];
