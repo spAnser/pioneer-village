@@ -82,7 +82,8 @@ const initTick = setTick(() => {
 });
 
 onUI('socket.connected', async () => {
-  console.log('socket.connected', PVGame.getCurrentCharacter(), !PVGame.getCurrentCharacter());
+  console.log('socket.connected');
+  // console.log('socket.connected', PVGame.getCurrentCharacter(), !PVGame.getCurrentCharacter());
   const character = PVGame.getCurrentCharacter();
   if (character) {
     const steamId = await PVGame.getPlayerSteamId();

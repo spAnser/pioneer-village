@@ -1,4 +1,4 @@
-import { DrawTxt, emitUI, focusUI, PVBase, PVGame, PVPlaceObject, PVPrompt, zoneBoxSetup } from '@lib/client';
+import { DrawTxt, emitUI, focusUI, PVBase, PVGame, PVPlaceObject, PVPrompt } from '@lib/client';
 import saloonController from './controllers/saloon-controller';
 import { Delay } from '@lib/functions';
 
