@@ -121,20 +121,24 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
 
     socket.on('character-select.choose', async (characterId, steamId) => {
       const ownsCharacter = await Characters.doesPlayerOwnCharacter(characterId, steamId);
-      const token = socket.handshake.auth.token;
-      const tokenPayload = verify(token, userAccessKey) as { serverId: number; userId: number };
       if (!ownsCharacter) {
         serverNamespace.emit(
           'player-management.kick',
-          tokenPayload.serverId,
+          socket.data.user.serverId,
           'You do not own this character please try again later.',
         );
         return;
       }
       logInfoC('socket.data', socket.data);
       socket.data.character = { id: characterId };
-      socket.data.serverId = tokenPayload.serverId;
-      await Characters.setActiveCharacter(characterId, tokenPayload.serverId, socket, steamId, tokenPayload.userId);
+      socket.data.serverId = socket.data.user.serverId;
+      await Characters.setActiveCharacter(
+        characterId,
+        socket.data.user.serverId,
+        socket,
+        steamId,
+        socket.data.user.userId,
+      );
       logInfoC('character-select.choose', characterId);
     });
 
