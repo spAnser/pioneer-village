@@ -1,6 +1,6 @@
 import { Vector3 } from '@lib/math';
 import { Delay, randomRange } from '@lib/functions';
-import { PVPrompt } from '@lib/client';
+import { PVBase, PVPrompt } from '@lib/client';
 
 const CityScenarios = [
   'WORLD_HUMAN_LEAN_READ_PAPER',
@@ -79,7 +79,7 @@ class CharacterSpawnManager {
     let view = new DataView(buffer);
 
     const foundScenarios: number | boolean = Citizen.invokeNative(
-      '0x345EC3B7EBDE1CB5',
+      '0x345EC3B7EBDE1CB5', // GetScenarioPointsInArea
       this.coords.x,
       this.coords.y,
       this.coords.z,
@@ -97,10 +97,8 @@ class CharacterSpawnManager {
     if (foundScenarios === false) return false;
     for (const [index, data] of result.entries()) {
       if (data !== 0) {
-        const hash: number = Citizen.invokeNative('0xA92450B5AE687AAF', data, Citizen.resultAsInteger());
-        const coords = new Vector3().setFromArray(
-          Citizen.invokeNative('0xA8452DD321607029', data, Citizen.resultAsVector()),
-        );
+        const hash = GetScenarioPointType(data);
+        const coords = new Vector3().setFromArray(GetScenarioPointCoords(data, true));
         finalScenarios.push({ hash, coords });
       }
     }
@@ -143,6 +141,25 @@ class CharacterSpawnManager {
     ); // 1 flag is town
     return ZoneHash !== 0;
   }
+
+  async destroyPedSpawn(immediate: boolean) {
+    const heldEntity = GetCurrentPedWeaponEntityIndex(PlayerPedId(), 0);
+    PVPrompt.hide('character-spawn:cancel:task');
+    if (immediate) {
+      ClearPedTasksImmediately(PlayerPedId());
+    } else {
+      ClearPedTasks(PlayerPedId());
+    }
+    characterSpawn.promptLoopRunning = false;
+    await Delay(2500);
+    ClearPedTasksImmediately(PlayerPedId());
+    FreezeEntityPosition(PlayerPedId(), false);
+    await Delay(500);
+    if (DoesEntityExist(heldEntity)) {
+      SetEntityAsMissionEntity(heldEntity, true, true);
+      PVBase.deleteEntity(heldEntity);
+    }
+  }
 }
 
 const characterSpawn = CharacterSpawnManager.getInstance();
@@ -153,9 +170,7 @@ const characterSpawn = CharacterSpawnManager.getInstance();
   }
   PVPrompt.register(
     () => {
-      PVPrompt.hide('character-spawn:cancel:task');
-      ClearPedTasks(PlayerPedId());
-      characterSpawn.promptLoopRunning = false;
+      characterSpawn.destroyPedSpawn(false);
     },
     'createHold',
     'character-spawn:cancel:task',
@@ -164,11 +179,9 @@ const characterSpawn = CharacterSpawnManager.getInstance();
   );
 })();
 
-on('onResourceStop', (pResName: string) => {
+on('onResourceStop', async (pResName: string) => {
   if (pResName !== GetCurrentResourceName()) return;
-  ClearPedTasksImmediately(PlayerPedId());
-  DoScreenFadeIn(1);
-  PVPrompt.hide('character-spawn:cancel:task');
+  await characterSpawn.destroyPedSpawn(true);
 });
 
 export default characterSpawn;

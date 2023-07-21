@@ -9,7 +9,7 @@ import { emitSocket, focusUI } from '@lib/client/comms/ui';
 import { Delay } from '@lib/functions';
 
 import gameManager from '../managers/game-manager';
-import characterSpawn from '../managers/characterSpawn-manager';
+import characterSpawn from '../managers/character-spawn-manager';
 
 const characterSpots: Game.CharacterSpot[] = [
   {
