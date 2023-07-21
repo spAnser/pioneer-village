@@ -36,7 +36,7 @@ model Characters {
   food           Decimal    @default(100.0)
   drink          Decimal    @default(100.0)
   currencies     Json       @default("{\"dollars\": 20, \"gold\": 0}")
-  healthMetadata Json       @default("{\"health\": 100, \"stamina\": 100, \"litersOfBlood\": 5, \"boneHealth\": \"[]\", \"activeTonic\": false, \"sick\": false, \"boneStatus\": \"[]\"}")
+  healthMetadata Json       @default("{\"health\": 100, \"stamina\": 100, \"litersOfBlood\": 5, \"boneHealth\": [], \"activeTonic\": false, \"sick\": false, \"boneStatus\": []}")
   components     Json       @default("[]")
   model          String     @default("mp_male")
   whistle        Json       @default("{\"pitch\": 0.5, \"shape\": 5, \"clarity\": 0.5}")
