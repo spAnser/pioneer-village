@@ -9,6 +9,7 @@ import { emitSocket, focusUI } from '@lib/client/comms/ui';
 import { Delay } from '@lib/functions';
 
 import gameManager from '../managers/game-manager';
+import characterSpawn from '../managers/character-spawn-manager';
 
 const characterSpots: Game.CharacterSpot[] = [
   {
@@ -284,13 +285,14 @@ onUI('character-select.choose', async (characterId) => {
   await skinPed(playerPed, character);
   await Delay(500);
   SetEntityCoords(playerPed, character.lastX, character.lastY, character.lastZ - 1.0, 0, 0, 0, false);
+
   cleanupCharacters();
 
   emit('game:character-selected', characterId);
   // console.log('game:character-selected');
   await gameManager.collisionLoadedAtEntity(playerPed);
   await Delay(1000);
-  DoScreenFadeIn(500);
+  await characterSpawn.setCoords(new Vector3().setFromArray([character.lastX, character.lastY, character.lastZ]));
   emitSocket('character-select.choose', characterId, steam);
   currentCharacter = character;
 });
