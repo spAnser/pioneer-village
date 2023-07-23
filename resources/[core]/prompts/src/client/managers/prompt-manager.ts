@@ -1,6 +1,7 @@
 import { Delay } from '@lib/functions';
 import { PVGame } from '@lib/client';
 import { initManager } from '@lib/shared/init-manager';
+import { PromptAttribute } from '@lib/flags/prompt-attribute';
 
 // const temporaryPromptGroup = 3;
 // const showPromptGroup = 4;
@@ -212,7 +213,7 @@ class PromptManager {
     PromptSetEnabled(id, enabled);
     PromptSetVisible(id, visible);
     PromptSetStandardMode(id, true);
-    PromptSetAttribute(id, 24, true);
+    PromptSetAttribute(id, PromptAttribute._0xA9F5CB58, true);
 
     PromptSetGroup(id, temporaryPromptGroup, 0);
     if (!this.prompts[name]) {
