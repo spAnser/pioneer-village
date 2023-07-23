@@ -303,6 +303,21 @@ class GameManager {
     });
   }
 
+  async waitTextureIsValid(textureId: number, delay = 125): Promise<void> {
+    return new Promise((resolve) => {
+      if (IsTextureValid(textureId)) {
+        resolve();
+      } else {
+        const textureLoadedCheck = setInterval(() => {
+          if (IsTextureValid(textureId)) {
+            resolve();
+            clearInterval(textureLoadedCheck);
+          }
+        }, delay);
+      }
+    });
+  }
+
   async setPlayerModel(model: string | number): Promise<number> {
     if (typeof model === 'string') {
       model = GetHashKey(model);

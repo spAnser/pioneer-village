@@ -4174,7 +4174,7 @@ declare function GetMaxWantedLevel(): number;
 
 declare function GetMeleeTargetForPed(ped: number): number;
 
-declare function GetMetaPedAssetGuids(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number): boolean;
+declare function GetMetaPedAssetGuids(ped: number, index: number): [number, number, number, number];
 
 declare function GetMetaPedAssetTint(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number): boolean;
 
@@ -7842,7 +7842,7 @@ declare function N_0x071769bcb24379e5(): number;
 
 declare function N_0x0730e518486deec3(p0: number): void;
 
-declare function N_0x0751d461f06e41ce(p0: number, p1: number, p2: number, p3: number): void;
+declare function ModifyPlayerUiPrompt(p0: number, p1: number, p2: number, p3: number): void;
 
 declare function N_0x07559b29950301ff(p0: number, p1: number): void;
 
@@ -12805,7 +12805,7 @@ declare function N_0xa3bd6ff95e713ee5(p0: number, p1: number, p2: number): void;
 
 declare function N_0xa3c53cde922bc78b(p0: number, p1: number): void;
 
-declare function N_0xa3db37edf9a74635(p0: number, p1: number, p2: number, p3: number, p4: number): void;
+declare function ModifyPlayerUiPromptForPed(p0: number, p1: number, p2: number, p3: number, p4: number): void;
 
 declare function N_0xa3eec0a5aff3fc5b(p0: number): number;
 
@@ -13520,16 +13520,16 @@ declare function N_0xbc1dc48270468444(p0: number): void;
 
 declare function N_0xbc3f847ae2c3dc65(p0: number, p1: number): void;
 
-declare function N_0xbc6df00d7a4a6819(
-  p0: number,
-  p1: number,
-  p2: number,
-  p3: number,
-  p4: number,
-  p5: number,
-  p6: number,
-  p7: number,
-  p8: number,
+declare function SetMetaPedTag(
+  ped: number,
+  drawable: number | string,
+  albedo: number | string,
+  normal: number | string,
+  material: number | string,
+  palette: number | string,
+  tint0: number,
+  tint1: number,
+  tint2: number,
 ): void;
 
 declare function N_0xbc781d24aa11f179(p0: number): void;

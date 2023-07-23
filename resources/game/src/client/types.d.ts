@@ -43,6 +43,7 @@ declare namespace Game {
   type requestTxd = (txd: string | number) => Promise<void>;
   type collisionLoadedAtEntity = (entity: number) => Promise<void>;
   type pedIsReadyToRender = (ped: number, delay?: number) => Promise<void>;
+  type waitTextureIsValid = (textureId: number, delay?: number) => Promise<void>;
   type reachedCoords = (destCoords: Vector3Format, distance?: number, timeout?: number) => Promise<boolean>;
   type setAnimWalk = (animWalk: Anim.Walk) => void;
   type clearAnimWalk = () => void;
@@ -96,6 +97,7 @@ declare namespace Game {
     requestTxd: requestTxd;
     collisionLoadedAtEntity: collisionLoadedAtEntity;
     pedIsReadyToRender: pedIsReadyToRender;
+    waitTextureIsValid: waitTextureIsValid;
     reachedCoords: reachedCoords;
     setAnimWalk: setAnimWalk;
     clearAnimWalk: clearAnimWalk;

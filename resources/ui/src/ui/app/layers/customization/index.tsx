@@ -7,6 +7,7 @@ import { defaultOverlays } from './data';
 import { Container, Modal, ModalTitle } from './styled';
 import StyleColorSelector from './components/StyleColorSelector';
 import { GenderSelect } from './components/Gender';
+import TintSelector from './components/TintSelector';
 
 const componentFiles = [
   '2886757168',
@@ -146,7 +147,6 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
     const components = [];
     for (const [category, data] of Object.entries(this.state.currentComponents)) {
       if (data.style > -1) {
-        //@ts-ignore
         const component = ComponentsData[category][data.style].components[data.option];
         components.push(component.component);
       }
@@ -217,6 +217,20 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
         {this.state.show && (this.state.state === 'creation' || this.state.state === 'barber') && (
           <>
             <h1>Barber</h1>
+          </>
+        )}
+        {this.state.show && (
+          <>
+            <Modal>
+              <TintSelector
+                label="Tint Test"
+                onChange={() => {}}
+                palette="metaped_tint_generic"
+                tint0={0}
+                tint1={0}
+                tint2={0}
+              />
+            </Modal>
           </>
         )}
       </>

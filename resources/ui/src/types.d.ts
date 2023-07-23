@@ -362,3 +362,7 @@ declare namespace UI.CharacterSelect {
 
   type Event = Partial<State>;
 }
+
+interface TypedInputEvent<T extends EventTarget> extends InputEvent {
+  target: T;
+}

@@ -112,6 +112,10 @@ const pedIsReadyToRender: Game.pedIsReadyToRender = (ped, delay) => {
   return gameManager.pedIsReadyToRender(ped, delay);
 };
 
+const waitTextureIsValid: Game.waitTextureIsValid = (textureId) => {
+  return gameManager.waitTextureIsValid(textureId);
+};
+
 const reachedCoords: Game.reachedCoords = (coords, distance, timeout) => {
   return gameManager.reachedCoords(coords, distance, timeout);
 };
@@ -222,6 +226,7 @@ exports<'game'>('loadModel', loadModel);
 exports<'game'>('requestTxd', requestTxd);
 exports<'game'>('collisionLoadedAtEntity', collisionLoadedAtEntity);
 exports<'game'>('pedIsReadyToRender', pedIsReadyToRender);
+exports<'game'>('waitTextureIsValid', waitTextureIsValid);
 exports<'game'>('reachedCoords', reachedCoords);
 exports<'game'>('setAnimWalk', setAnimWalk);
 exports<'game'>('clearAnimWalk', clearAnimWalk);

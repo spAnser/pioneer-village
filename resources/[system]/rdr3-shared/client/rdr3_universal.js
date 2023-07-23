@@ -5860,8 +5860,8 @@ global.GetMeleeTargetForPed = function (ped) {
   return _in(0x18a3e9ee, 0x1297fd39, ped, _r, _ri);
 };
 
-global.GetMetaPedAssetGuids = function (p0, p1, p2, p3, p4, p5) {
-  return _in(0xa9c28516, 0xa6dc9d56, p0, p1, p2, p3, p4, p5, _r);
+global.GetMetaPedAssetGuids = function (ped, index) {
+  return _in(0xa9c28516, 0xa6dc9d56, ped, index, _ri, _ri, _ri, _ri);
 };
 
 global.GetMetaPedAssetTint = function (p0, p1, p2, p3, p4, p5) {
@@ -11519,7 +11519,7 @@ global.N_0x0730e518486deec3 = function (p0) {
   return _in(0x0730e518, 0x486deec3, p0);
 };
 
-global.N_0x0751d461f06e41ce = function (p0, p1, p2, p3) {
+global.ModifyPlayerUiPrompt = function (p0, p1, p2, p3) {
   return _in(0x0751d461, 0xf06e41ce, p0, p1, p2, p3);
 };
 
@@ -20124,7 +20124,7 @@ global.N_0xa3c53cde922bc78b = function (p0, p1) {
   return _in(0xa3c53cde, 0x922bc78b, p0, p1);
 };
 
-global.N_0xa3db37edf9a74635 = function (p0, p1, p2, p3, p4) {
+global.ModifyPlayerUiPromptForPed = function (p0, p1, p2, p3, p4) {
   return _in(0xa3db37ed, 0xf9a74635, p0, p1, p2, p3, p4);
 };
 
@@ -21347,8 +21347,20 @@ global.N_0xbc3f847ae2c3dc65 = function (p0, p1) {
   return _in(0xbc3f847a, 0xe2c3dc65, p0, p1);
 };
 
-global.N_0xbc6df00d7a4a6819 = function (p0, p1, p2, p3, p4, p5, p6, p7, p8) {
-  return _in(0xbc6df00d, 0x7a4a6819, p0, p1, p2, p3, p4, p5, p6, p7, p8);
+global.SetMetaPedTag = function (ped, drawable, albedo, normal, material, palette, tint0, tint1, tint2) {
+  return _in(
+    0xbc6df00d,
+    0x7a4a6819,
+    ped,
+    _ch(drawable),
+    _ch(albedo),
+    _ch(normal),
+    _ch(material),
+    _ch(palette),
+    tint0,
+    tint1,
+    tint2,
+  );
 };
 
 global.N_0xbc781d24aa11f179 = function (p0) {
