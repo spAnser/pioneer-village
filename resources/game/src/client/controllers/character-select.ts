@@ -130,7 +130,7 @@ const cleanupCharacters = () => {
 const setPedOutfit = async (ped: number, components: number[]) => {
   const currentComponentCount = GetNumComponentsInPed(ped);
   for (let n = currentComponentCount; n--; ) {
-    const component = GetPedComponentAtIndex(
+    const component = GetShopItemComponentAtIndex(
       ped,
       n,
       false,

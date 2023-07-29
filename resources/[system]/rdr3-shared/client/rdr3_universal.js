@@ -5861,11 +5861,11 @@ global.GetMeleeTargetForPed = function (ped) {
 };
 
 global.GetMetaPedAssetGuids = function (ped, index) {
-  return _in(0xa9c28516, 0xa6dc9d56, ped, index, _ri, _ri, _ri, _ri);
+  return _in(0xa9c28516, 0xa6dc9d56, ped, index, _i, _i, _i, _i);
 };
 
-global.GetMetaPedAssetTint = function (p0, p1, p2, p3, p4, p5) {
-  return _in(0xe7998fec, 0x53a33bbe, p0, p1, p2, p3, p4, p5, _r);
+global.GetMetaPedAssetTint = function (ped, index) {
+  return _in(0xe7998fec, 0x53a33bbe, ped, index, _i, _i, _i, _i);
 };
 
 /**
@@ -6280,7 +6280,7 @@ global.GetPedCombatMovement = function (ped) {
   return _in(0xdea92412, 0xfcaeb3f5, ped, _r, _ri);
 };
 
-global.GetPedComponentAtIndex = function (ped, index, p2, p3, p4) {
+global.GetShopItemComponentAtIndex = function (ped, index, p2, p3, p4) {
   return _in(0x77ba3762, 0x2e22023b, ped, index, p2, p3, p4, _r, _ri);
 };
 
@@ -19618,8 +19618,8 @@ global.N_0x9b8d5d4cb8af58b3 = function (effectNameHash) {
   return _in(0x9b8d5d4c, 0xb8af58b3, _ch(effectNameHash));
 };
 
-global.N_0x9b90842304c938a7 = function (p0, p1, p2) {
-  return _in(0x9b908423, 0x04c938a7, p0, p1, p2, _r, _ri);
+global.GetCategoryOfComponentAtIndex = function (ped, index, p2 = undefined) {
+  return _in(0x9b908423, 0x04c938a7, ped, index, p2, _r, _ri);
 };
 
 global.N_0x9b9b9fa0ea283e3d = function (p0, p1) {

@@ -1100,7 +1100,7 @@ class GameManager {
     for (let i = componentCount; i--; ) {
       const struct1 = new DataView(new ArrayBuffer(4));
       const struct2 = new DataView(new ArrayBuffer(4));
-      const component = GetPedComponentAtIndex(entity, i, true, struct1, struct2);
+      const component = GetShopItemComponentAtIndex(entity, i, true, struct1, struct2);
       if (!component) {
         continue;
       }

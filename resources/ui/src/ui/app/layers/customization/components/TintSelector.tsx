@@ -114,7 +114,7 @@ export default class TintSelector extends Component<Props, State> {
           value={this.state.palette}
           onChange={(e: InputEvent) => this.handleSelectChange(e.target as HTMLSelectElement)}
         >
-          {palettes.map((palette, index) => {
+          {palettes.map((palette) => {
             return <option value={palette}>{palette}</option>;
           })}
         </TSSelect>

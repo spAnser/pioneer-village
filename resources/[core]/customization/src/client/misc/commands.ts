@@ -85,73 +85,26 @@ RegisterCommand(
   false,
 );
 
-// IN(0xA9C28516A6DC9D56, PlayerPedId(), 7, Citizen.PointerValueInt(), Citizen.PointerValueInt(), Citizen.PointerValueInt(), Citizen.PointerValueInt())
-
 // console.log('GetMetaPedAssetGuids', GetMetaPedAssetGuids(PVGame.playerPed(), 7));
-
-const SetMetaPedTag = function (
-  ped: number,
-  drawable: number | string,
-  albedo: number | string,
-  normal: number | string,
-  material: number | string,
-  palette: number | string,
-  tint0: number,
-  tint1: number,
-  tint2: number,
-) {
-  Citizen.invokeNative(
-    '0xBC6DF00D7A4A6819',
-    ped,
-    typeof drawable === 'string' ? GetHashKey(drawable) : drawable,
-    typeof albedo === 'string' ? GetHashKey(albedo) : albedo,
-    typeof normal === 'string' ? GetHashKey(normal) : normal,
-    typeof material === 'string' ? GetHashKey(material) : material,
-    typeof palette === 'string' ? GetHashKey(palette) : palette,
-    tint0,
-    tint1,
-    tint2,
-  );
-  PVGame.finalizePedOutfit(ped);
-};
-
-RegisterCommand(
-  'tint_test',
-  async (source: number, args: string[]) => {
-    const tint0 = Number(args[0]);
-    const tint1 = Number(args[1]);
-    const tint2 = Number(args[2]);
-    SetMetaPedTag(
-      PVGame.playerPed(),
-      994231401,
-      -1958475523,
-      967249018,
-      162475627,
-      'metaped_tint_generic',
-      tint0,
-      tint1,
-      tint2,
-    );
-  },
-  false,
-);
 
 const GetComponentIndexByCategory = (ped: number, category: number): number => {
   const componentCount = GetNumComponentsInPed(ped);
   for (let n = componentCount; n--; ) {
-    if (category === (Citizen.invokeNative('0x9b90842304c938a7', ped, n) as number)) {
+    if (category === GetCategoryOfComponentAtIndex(ped, n)) {
       return n;
     }
   }
+  return -1;
 };
 
 // @ts-ignore
 onUI('customization.tint-test', async (palette: string, tint0: number, tint1: number, tint2: number) => {
   console.log('customization.tint-test', palette, tint0, tint1, tint2);
 
-  const playerPed = PVGame.playerPed();
+  // const ped = PVGame.playerPed();
+  const ped = 673026;
 
-  // const textureId = TextureIDs.get(playerPed);
+  // const textureId = TextureIDs.get(ped);
   // const overlayId = 1;
   //
   // if (textureId) {
@@ -160,25 +113,23 @@ onUI('customization.tint-test', async (palette: string, tint0: number, tint1: nu
   //   UpdatePedTexture(textureId);
   // }
 
-  const index = GetComponentIndexByCategory(playerPed, GetHashKey('eyes'));
-  console.log('index', index);
-  // GetMetaPedAssetTint
-  // GetMetaPedAssetGuids
-  // @ts-ignore
-  const [drawable, albedo, normal, material] = Citizen.invokeNative(
-    '0xA9C28516A6DC9D56',
-    PVGame.playerPed(),
-    index,
-    Citizen.pointerValueInt(),
-    Citizen.pointerValueInt(),
-    Citizen.pointerValueInt(),
-    Citizen.pointerValueInt(),
-  );
+  // const index = GetComponentIndexByCategory(ped, GetHashKey('vests'));
+  // const index = 3;
+  const componentCount = GetNumComponentsInPed(ped);
+  for (let index = componentCount; index--; ) {
+    console.log('index', index);
+    const [oldPalette, oldTint0, oldTint1, oldTint2] = GetMetaPedAssetTint(ped, index);
+    console.log('palette', oldPalette, '->', palette);
+    console.log('tint0', oldTint0, '->', tint0);
+    console.log('tint1', oldTint1, '->', tint1);
+    console.log('tint2', oldTint2, '->', tint2);
+    const [drawable, albedo, normal, material] = GetMetaPedAssetGuids(ped, index);
 
-  // GetCategoryOfComponentAtIndex;
-  console.log('category', Citizen.invokeNative('0x9b90842304c938a7', playerPed, index));
+    console.log('category', GetCategoryOfComponentAtIndex(ped, index));
 
-  console.log('drawable', drawable);
+    console.log('drawable', drawable);
 
-  SetMetaPedTag(playerPed, drawable, albedo, normal, material, palette, tint0, tint1, tint2);
+    SetMetaPedTag(ped, drawable, albedo, normal, material, palette, tint0, tint1, tint2);
+  }
+  PVGame.finalizePedOutfit(ped);
 });

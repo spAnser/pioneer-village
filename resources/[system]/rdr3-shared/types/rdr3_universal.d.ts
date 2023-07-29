@@ -4176,7 +4176,7 @@ declare function GetMeleeTargetForPed(ped: number): number;
 
 declare function GetMetaPedAssetGuids(ped: number, index: number): [number, number, number, number];
 
-declare function GetMetaPedAssetTint(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number): boolean;
+declare function GetMetaPedAssetTint(ped: number, index: number): [number, number, number, number];
 
 /**
  * enum eMetaPedType
@@ -4468,7 +4468,13 @@ declare function GetPedCauseOfDeath(ped: number): number;
 
 declare function GetPedCombatMovement(ped: number): number;
 
-declare function GetPedComponentAtIndex(ped: number, index: number, p2: boolean, p3: DataView, p4: DataView): number;
+declare function GetShopItemComponentAtIndex(
+  ped: number,
+  index: number,
+  p2: boolean,
+  p3: DataView,
+  p4: DataView,
+): number;
 
 declare function GetPedComponentCategory(componentHash: string | number, metapedType: number, isMP: boolean): number;
 
@@ -7266,7 +7272,7 @@ declare function ItemdatabaseFilloutSatchelData(p0: number, p1: number): number;
 
 declare function ItemdatabaseFilloutSellPrice(p0: number, p1: number, p2: number): number;
 
-declare function ItemdatabaseFilloutTagData(p0: number, p1: number, p2: number, p3: number): number;
+declare function ItemdatabaseFilloutTagData(p0: number, p1: DataView, p2: DataView, p3: number): number;
 
 declare function ItemdatabaseFilloutUiData(p0: number, p1: DataView): number;
 
@@ -12537,7 +12543,7 @@ declare function N_0x9b6a58fdb0024f12(p0: number, p1: number): void;
  */
 declare function N_0x9b8d5d4cb8af58b3(effectNameHash: string | number): void;
 
-declare function N_0x9b90842304c938a7(p0: number, p1: number, p2: number): number;
+declare function GetCategoryOfComponentAtIndex(ped: number, index: number, p2?: number): number;
 
 declare function N_0x9b9b9fa0ea283e3d(p0: number, p1: number): void;
 
