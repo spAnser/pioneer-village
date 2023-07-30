@@ -4,6 +4,7 @@ import BaseOverlay from '../data/base-overlay';
 import OverlayInfo from '../data/overlay-info';
 import ColorPalettes from '../data/color-palettes';
 import { Delay } from '@lib/functions';
+import { paletteManager } from '../managers/palette-manager';
 
 const TextureIDs: Map<number, number> = new Map();
 
@@ -87,49 +88,26 @@ RegisterCommand(
 
 // console.log('GetMetaPedAssetGuids', GetMetaPedAssetGuids(PVGame.playerPed(), 7));
 
-const GetComponentIndexByCategory = (ped: number, category: number): number => {
-  const componentCount = GetNumComponentsInPed(ped);
-  for (let n = componentCount; n--; ) {
-    if (category === GetCategoryOfComponentAtIndex(ped, n)) {
-      return n;
-    }
-  }
-  return -1;
-};
-
 // @ts-ignore
 onUI('customization.tint-test', async (palette: string, tint0: number, tint1: number, tint2: number) => {
   console.log('customization.tint-test', palette, tint0, tint1, tint2);
 
-  // const ped = PVGame.playerPed();
-  const ped = 673026;
+  const ped = PVGame.playerPed();
+  paletteManager.setTint(ped, palette, tint0, tint1, tint2);
+  // paletteManager.setTintByCategory(ped, 'hats', palette, tint0, tint1, tint2);
 
-  // const textureId = TextureIDs.get(ped);
-  // const overlayId = 1;
-  //
-  // if (textureId) {
-  //   SetTextureLayerPallete(textureId, overlayId, GetHashKey(palette));
-  //   SetTextureLayerTint(textureId, overlayId, tint0, tint1, tint2);
-  //   UpdatePedTexture(textureId);
-  // }
+  // const ped = GetLastMount(PVGame.playerPed());
+  // paletteManager.setTint(ped, palette, tint0, tint1, tint2);
+  // paletteManager.removeTint(ped);
+  // paletteManager.setTintByHorsePart(ped, 'head', 'metaped_tint_horse', 18, 1, 5);
+  // paletteManager.setTintByHorsePart(ped, 'hand', 'metaped_tint_horse', 18, 1, 6);
+  // paletteManager.setTintByHorsePart(ped, 'hair', 'metaped_tint_horse', 0, 0, 0);
+  // paletteManager.setTintByHorsePart(ped, 'mane', 'metaped_tint_horse', 0, 0, 0);
+  // await Delay(1000);
+  // paletteManager.setTintByHorsePart(ped, 'teef', palette, tint0, tint1, tint2);
+  // paletteManager.setTintByHorsePart(ped, 'hair', palette, tint0, tint1, tint2);
+  // paletteManager.setTintByHorsePart(ped, 'mane', palette, tint0, tint1, tint2);
 
-  // const index = GetComponentIndexByCategory(ped, GetHashKey('vests'));
-  // const index = 3;
-  const componentCount = GetNumComponentsInPed(ped);
-  for (let index = componentCount; index--; ) {
-    console.log('index', index);
-    const [oldPalette, oldTint0, oldTint1, oldTint2] = GetMetaPedAssetTint(ped, index);
-    console.log('palette', oldPalette, '->', palette);
-    console.log('tint0', oldTint0, '->', tint0);
-    console.log('tint1', oldTint1, '->', tint1);
-    console.log('tint2', oldTint2, '->', tint2);
-    const [drawable, albedo, normal, material] = GetMetaPedAssetGuids(ped, index);
-
-    console.log('category', GetCategoryOfComponentAtIndex(ped, index));
-
-    console.log('drawable', drawable);
-
-    SetMetaPedTag(ped, drawable, albedo, normal, material, palette, tint0, tint1, tint2);
-  }
-  PVGame.finalizePedOutfit(ped);
+  // const ped = 7593731;
+  // paletteManager.setTint(ped, palette, tint0, tint1, tint2);
 });

@@ -29,7 +29,7 @@ const deleteEntity: Base.deleteEntity = async (entity: number): Promise<void> =>
   }
 
   await Delay(5);
-  console.log(`DeleteEntity(${entity})`);
+  // console.log(`DeleteEntity(${entity})`);
   DeleteEntity(entity);
 
   await Delay(10);
