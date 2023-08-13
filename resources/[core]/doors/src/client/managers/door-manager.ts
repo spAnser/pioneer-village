@@ -1,8 +1,6 @@
-import { awaitUI, PVGame } from '@lib/client';
+import { awaitUI, PVGame, PVInit } from '@lib/client';
 import { emitSocket } from '@lib/client/comms/ui';
 import { Vector3 } from '@lib/math';
-import { initManager } from '@lib/shared/init-manager';
-import { Delay } from '@lib/functions';
 
 class DoorManager {
   protected static instance: DoorManager;
@@ -18,17 +16,11 @@ class DoorManager {
 
   constructor() {
     setInterval(this.checkDoors.bind(this), 2500);
-    onNet('game:character-selected', this.init.bind(this));
-
-    if (GetResourceState('game') === 'started') {
-      const character = PVGame.getCurrentCharacter();
-      if (character) {
-        this.init();
-      }
-    }
+    this.init();
   }
 
   async init() {
+    await PVInit.initializedResource('game');
     console.log(`Door Manager Initializing...`);
     const doors = await awaitUI('doors.get-door-states');
 
@@ -56,7 +48,7 @@ class DoorManager {
 
       DoorSystemSetDoorState(doorHash, state);
     }
-    initManager.resolveThisResource();
+    PVInit.resolveResource('doors');
   }
 
   getDoor(doorHash: number): Doors.Data | null {
@@ -207,7 +199,7 @@ class DoorManager {
   }
 
   async checkDoors() {
-    await initManager.initializedThisResource();
+    await PVInit.initializedResource('doors');
     let doorChanged = false;
 
     for (const [doorHashUnsigned, doorEntity] of DoorSystemGetActive()) {

@@ -1,6 +1,6 @@
 import { Vector3 } from '@lib/math';
 import worldController from './controllers/world-controller';
-import { PVGame, PVTarget } from '@lib/client';
+import { onResourceInit, PVGame, PVTarget } from '@lib/client';
 import { Delay } from '@lib/functions';
 
 const registerTargets = () => {
@@ -53,19 +53,7 @@ const registerTargets = () => {
 
 worldController.stateBool.set('serial::cellar-door-open', false);
 
-(async () => {
-  if (GetResourceState('target') === 'started') {
-    await Delay(1500);
-    registerTargets();
-  }
-})();
-
-on('onResourceStart', async (resourceName: string) => {
-  if (resourceName === 'target') {
-    await Delay(1500);
-    registerTargets();
-  }
-});
+onResourceInit('target', registerTargets);
 
 on('world:client:open-cellar', (pEntity: number, pArgs: Record<string, any>) => {
   console.log('world:client:open-cellar', pEntity, pArgs);

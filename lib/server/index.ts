@@ -1,5 +1,7 @@
 export { emitSocket, awaitSocket, onSocket } from './comms/socket';
 export { onClientCall, onClient, awaitClient, emitClient } from './comms/client';
+
+// @ts-ignore
 export const exports: ServerExports = global.exports;
 
 export const getIdentifiers = (serverId: string | number) => {

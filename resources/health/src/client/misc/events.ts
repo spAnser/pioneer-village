@@ -1,4 +1,5 @@
 import { PVEvents } from '@lib/client';
+
 import healthManager from '../managers/health-manager';
 
 const registerEvents = () => {

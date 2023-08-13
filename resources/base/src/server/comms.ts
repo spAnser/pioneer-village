@@ -8,8 +8,12 @@ const client: Socket<SocketEvents, SocketServer.Server> = io(process.env.SOCKET_
   autoConnect: false,
   transports: ['websocket'],
   auth: {
-    token: process.env.SOCKET_SERVER_KEY
-  }
+    token: process.env.SOCKET_SERVER_KEY,
+  },
+});
+
+client.on('connect_error', (err) => {
+  console.error('Error connecting to server.', err);
 });
 
 client.on('disconnect', () => {
@@ -27,7 +31,7 @@ export const emitSocket: Base.emitSocket = (evtName, ...params) => {
 
 export const awaitSocket: Base.awaitSocket = (evtName, ...params) =>
   new Promise((res) => {
-    //@ts-ignore - fuck it. I'm too thick and it doesnt matter
+    //@ts-ignore - fuck it. I'm too thick and it doesn't matter
     client.emit(evtName, ...params, res);
   });
 

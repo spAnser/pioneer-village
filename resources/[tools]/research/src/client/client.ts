@@ -1,4 +1,4 @@
-import { emitUI, focusUI, onUI, PVDatabindings, PVGame } from '@lib/client';
+import { emitUI, focusUI, onUI, PVGame } from '@lib/client';
 
 import './stuff/apple';
 import './stuff/gold-panning';
@@ -6,7 +6,6 @@ import './stuff/instruments';
 import './stuff/police';
 
 import { AnimFlag } from '@lib/flags';
-import { Delay } from '@lib/functions';
 
 RegisterCommand(
   'anim_menu',

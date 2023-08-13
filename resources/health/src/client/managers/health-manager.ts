@@ -1,4 +1,4 @@
-import { emitUI, PVGame } from '@lib/client';
+import { emitUI } from '@lib/client';
 import { mpMaleBoneNames, mpMaleBones } from '../data/bones-mp-male';
 import { mpFemaleBoneNames, mpFemaleBones } from '../data/bones-mp-female';
 import {
@@ -57,8 +57,9 @@ export class HealthManager {
     return HealthManager.instance;
   }
 
+  initialized = false;
   // tick: number;
-  interval: NodeJS.Timeout;
+  interval: NodeJS.Timeout | undefined;
   playerPed: number = 0;
   isRagdolling: boolean = false;
   _isBleeding: boolean = false;
@@ -118,6 +119,13 @@ export class HealthManager {
     // ClearPedDesiredLocoForModel(this.playerPed);
     // SetPedDesiredLocoForModel(this.playerPed, 'default');
     // ClearPedDesiredLocoMotionType(this.playerPed);
+  }
+
+  init() {
+    if (this.initialized) {
+      return;
+    }
+    this.initialized = true;
     emitUI('hud.state', { bleeding: false, brokenBone: false });
 
     this.checkUpdatePed();
@@ -186,7 +194,9 @@ export class HealthManager {
 
   stop(): void {
     // clearTick(this.tick);
-    clearInterval(this.interval);
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   }
 
   foodWaterTick(delta: number): void {

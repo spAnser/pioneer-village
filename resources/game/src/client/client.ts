@@ -1,5 +1,5 @@
 import { Delay } from '@lib/functions';
-import { awaitUI, emitUI, focusUI, onUI, PVDoors, PVGame } from '@lib/client';
+import { awaitUI, emitUI, focusUI, onUI, PVDoors, PVGame, PVInit } from '@lib/client';
 import gameManager from './managers/game-manager';
 
 import { spawnCharacters } from './controllers/character-select';
@@ -68,6 +68,7 @@ const characterSelection = async () => {
     show: true,
     characters: uiCharacters,
   });
+  PVInit.resolveResource('game');
   focusUI(true, true);
   characterSelectionRunning = false;
 };

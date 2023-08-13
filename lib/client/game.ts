@@ -1,4 +1,6 @@
-import { PVZone } from '@lib/client/resources';
+import { PVInit, PVZone } from '@lib/client/resources';
+import { Delay } from '@lib/functions';
+// import { initManager } from '@lib/shared/init-manager';
 
 const RegisteredEvents = new Map<string, (...args: any[]) => void>();
 
@@ -38,4 +40,32 @@ export const removeZone = (name: string) => {
   }
   RegisteredEvents.delete(`zones::${name}::enter`);
   RegisteredEvents.delete(`zones::${name}::exit`);
+};
+
+export const onResourceStart = (resourceName: string, cb: () => void) => {
+  if (GetResourceState(resourceName) === 'started') {
+    cb();
+  }
+
+  on('onResourceStart', async (resource: string) => {
+    if (resource === resourceName) {
+      cb();
+    }
+  });
+};
+
+export const onResourceInit = (resourceName: string, cb: () => void) => {
+  (async () => {
+    if (GetResourceState(resourceName) === 'started') {
+      await PVInit.initializedResource(resourceName);
+      cb();
+    }
+
+    on('onResourceStart', async (resource: string) => {
+      if (resource === resourceName) {
+        await PVInit.initializedResource(resourceName);
+        cb();
+      }
+    });
+  })();
 };

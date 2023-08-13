@@ -169,7 +169,8 @@ end)
 
 -- LOOP
 Citizen.CreateThread(function()
-    Wait(500)
+    Wait(2000)
+    exports['init']:resolveResource('zones')
     while true do
         for zoneName, zone in pairs(Zones) do
             local inZone = false

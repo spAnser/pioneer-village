@@ -1,7 +1,7 @@
 import Horse from '../classes/horse';
 import Stable from '../classes/stable';
 import { awaitUI } from '@lib/client/comms/ui';
-import { PVBase, PVGame } from '@lib/client';
+import { onResourceInit, PVBase, PVGame, PVInit } from '@lib/client';
 import { Delay } from '@lib/functions';
 import { PedConfigFlag } from '@lib/flags';
 
@@ -27,23 +27,28 @@ class StableController {
   }
 
   constructor() {
-    const character = PVGame.getCurrentCharacter();
+    onResourceInit('game', () => {
+      const character = PVGame.getCurrentCharacter();
+      if (character) {
+        this.loadHorses(character.id);
+      }
+    });
     onNet('game:character-selected', async (characterId: number) => {
       this.loadHorses(characterId);
     });
-    if (character) {
-      this.loadHorses(character.id);
-    }
   }
 
   async loadHorses(characterId: number) {
-    console.log('loadHorses');
+    console.log('[STABLE] Load Horses Started');
+    PVInit.register('stable::load-hoses', { reset: true });
     const horses = await awaitUI('stable.load-character-horses', characterId);
     for (const horse of horses) {
       // console.log('horse', horse);
       this._horses.set(horse.id, new Horse(horse));
       this._stabledHorses.set(horse.id, horse.stable || '');
     }
+    PVInit.resolve('stable::load-hoses');
+    console.log('[STABLE] Load Horses Finished');
   }
 
   addStable(data: Stable.Data): void {
@@ -66,6 +71,7 @@ class StableController {
 
   async enterStable(stableId: Stable.Id): Promise<void> {
     if (this._currentStable === stableId) {
+      console.log('[STABLE] Already in stable');
       return;
     }
 
@@ -74,6 +80,7 @@ class StableController {
     const stable = this.getById(stableId);
 
     if (!stable) {
+      console.log('[STABLE] Stable not found');
       return;
     }
 
@@ -82,6 +89,16 @@ class StableController {
     const stableHorsePeds = this._stableHorsePeds.get(stableId) || new Map<number, Set<number>>();
 
     const characterId = PVGame.getCurrentCharacter().id;
+
+    console.log('characterId', characterId);
+
+    if (!characterId) {
+      console.log('[STABLE] Character not found');
+      return;
+    }
+
+    await PVInit.initialized('stable::load-hoses');
+    console.log('[STABLE] Spawn Horses');
 
     const characterHorsePeds = stableHorsePeds.get(characterId) || new Set<number>();
 
@@ -179,7 +196,11 @@ class StableController {
     console.log('spawning horse', horse.name);
 
     const playerPed = PVGame.playerPed();
-    const characterId = PVGame.getCurrentCharacter().id;
+    const characterId = PVGame.getCurrentCharacter()?.id;
+    if (!characterId) {
+      console.log('Error no character');
+      return 0;
+    }
 
     let spawnCoord = {
       x: horse.lastX,

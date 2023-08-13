@@ -538,6 +538,7 @@ end
 
 CreateThread(function()
 	Wait(2000)
+	exports['init']:resolveResource('target')
 	print('Add Example Targets')
 	local flagKey = Target.AddTarget({
 		id = 'horse',

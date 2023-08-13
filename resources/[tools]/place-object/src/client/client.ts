@@ -1,6 +1,6 @@
 import './helpers';
 
-import { exports, PVPrompt } from '@lib/client';
+import { exports, PVInit, PVPrompt } from '@lib/client';
 
 import PlacementManager from './managers/placement-manager';
 
@@ -62,7 +62,8 @@ exports<'place-object'>('placeObjectAdvanced', placeObjectAdvanced);
 
 exports<'place-object'>('placeObjects', placeObjects);
 
-const registerPrompts = () => {
+const registerPrompts = async () => {
+  await PVInit.initializedResource('prompts');
   console.log('place-object: registering prompts');
   PVPrompt.registerWithEvent('createHold', 'place-object::place', 0xcefd9220, 'Place Object');
 

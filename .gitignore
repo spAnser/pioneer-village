@@ -3,6 +3,7 @@ lerna-debug.log
 node_modules/
 cache/
 local.cfg
+resources-local.cfg
 resources/*/build/
 resources/*/*/build/
 artifacts/*/

@@ -1,11 +1,19 @@
 // import PromptManager from '@ts-shared/client/managers/prompt-manager';
 // import entityManager from '@ts-shared/shared/managers/entity-manager';
 
-import { PVBase, PVGame, PVHealth, PVPlaceObject, PVPrompt, PVTarget } from '@lib/client';
+import {
+  onResourceInit,
+  onResourceStart,
+  PVBase,
+  PVGame,
+  PVHealth,
+  PVPlaceObject,
+  PVPrompt,
+  PVTarget,
+} from '@lib/client';
 import { AnimFlag } from '@lib/flags';
 import { Vector3 } from '@lib/math';
 import { Delay } from '@lib/functions';
-import { initManager } from '@lib/shared/init-manager';
 
 // let bucket = PVGame.getChildEntity(1822722, 'bucket');
 // console.log('bucket', bucket);
@@ -272,10 +280,9 @@ const fillBucket = async () => {
   bucketWalk();
 };
 
-(async () => {
-  await initManager.initialized('prompts');
+onResourceInit('prompts', async () => {
   PVPrompt.register(fillBucket, 'createHold', 'fill_bucket', 0xcefd9220, 'Fill');
-})();
+});
 
 const carryBucket = () => {
   carryBucketTick = setTick(() => {
@@ -544,15 +551,7 @@ const registerTargets = () => {
   });
 };
 
-if (GetResourceState('target') === 'started') {
-  registerTargets();
-}
-
-on('onResourceStart', (resourceName: string) => {
-  if (resourceName === 'target') {
-    registerTargets();
-  }
-});
+onResourceInit('target', registerTargets);
 
 RegisterCommand(
   'placeGoldPanning',

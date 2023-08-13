@@ -1,5 +1,7 @@
+// @ts-ignore
 const exports: ClientExports = global.exports;
 
+export const PVInit = exports['init'];
 export const PVBase = exports['base'];
 export const PVCamera = exports['camera'];
 export const PVEventsManager = exports['events_manager'];
@@ -11,5 +13,4 @@ export const PVTarget = exports['target'];
 export const PVKeymapper = exports['keymapper'];
 export const PVDatabindings = exports['databindings'];
 export const PVDoors = exports['doors'];
-
 export const PVZone = exports['zones'];

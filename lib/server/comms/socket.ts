@@ -9,21 +9,17 @@ export const emitSocket: Base.emitSocket = (...args) => {
   } else {
     emitBuffer.add(args);
   }
-}
+};
 
 //@ts-ignore
 export const awaitSocket: Base.awaitSocket = (...args) => {
   if (GetResourceState('base') === 'started') {
-    return new Promise(
-      (res) => setImmediate(
-        () => res(exports['base'].awaitSocket(...args))
-      )
-    );
+    return new Promise((res) => setImmediate(() => res(exports['base'].awaitSocket(...args))));
   }
   return new Promise((res) => {
     awaitBuffer.set(args, res);
   });
-}
+};
 
 //@ts-ignore
 export const onSocket: Base.onSocket = (...args) => {
@@ -31,7 +27,7 @@ export const onSocket: Base.onSocket = (...args) => {
     setImmediate(() => exports['base'].onSocket(...args));
   }
   listenerRegistry.add(args);
-}
+};
 
 on('onResourceStart', (resource: string) => {
   if (resource !== 'base') {

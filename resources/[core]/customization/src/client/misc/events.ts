@@ -1,5 +1,5 @@
 import { creationManager } from '../managers/creation-manager';
-import { emitUI, focusUI, onUI } from '@lib/client';
+import { onUI } from '@lib/client';
 
 on('customization:client:character_creation', () => {
   creationManager.start();

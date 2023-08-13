@@ -1,6 +1,5 @@
 import { Delay } from '@lib/functions';
-import { PVGame } from '@lib/client';
-import { initManager } from '@lib/shared/init-manager';
+import { PVInit } from '@lib/client';
 import { PromptAttribute } from '@lib/flags/prompt-attribute';
 
 // const temporaryPromptGroup = 3;
@@ -48,7 +47,7 @@ class PromptManager {
       }
     });
 
-    initManager.resolveThisResource();
+    PVInit.resolveResource('prompts');
   }
 
   register(

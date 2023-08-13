@@ -1,0 +1,11 @@
+{
+  "name": "init",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "prettier": "prettier src/**/*.{ts,tsx} --write"
+  }
+}

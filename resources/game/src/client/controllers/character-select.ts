@@ -277,6 +277,7 @@ onUI('character-select.choose', async (characterId) => {
   if (!character) {
     return;
   }
+  currentCharacter = character;
 
   DoScreenFadeOut(500);
 
@@ -294,7 +295,6 @@ onUI('character-select.choose', async (characterId) => {
   await Delay(1000);
   await characterSpawn.setCoords(new Vector3().setFromArray([character.lastX, character.lastY, character.lastZ]));
   emitSocket('character-select.choose', characterId, steam);
-  currentCharacter = character;
 });
 
 onUI('character-select.create', () => {

@@ -1,6 +1,6 @@
 import { Vector3 } from '@lib/math';
 import { Delay, randomRange } from '@lib/functions';
-import { PVBase, PVPrompt } from '@lib/client';
+import { onResourceInit, PVBase, PVPrompt } from '@lib/client';
 
 const CityScenarios = [
   'WORLD_HUMAN_LEAN_READ_PAPER',
@@ -164,10 +164,7 @@ class CharacterSpawnManager {
 
 const characterSpawn = CharacterSpawnManager.getInstance();
 
-(async () => {
-  while (GetResourceState('prompts') !== 'started' || !PVPrompt) {
-    await Delay(5);
-  }
+onResourceInit('prompts', () => {
   PVPrompt.register(
     () => {
       characterSpawn.destroyPedSpawn(false);
@@ -177,7 +174,7 @@ const characterSpawn = CharacterSpawnManager.getInstance();
     GetHashKey('INPUT_ENTER'),
     'Stop Task',
   );
-})();
+});
 
 on('onResourceStop', async (pResName: string) => {
   if (pResName !== GetCurrentResourceName()) return;

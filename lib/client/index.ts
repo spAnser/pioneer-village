@@ -5,4 +5,5 @@ export * from './resources';
 export * from './game';
 export * from './events';
 
+// @ts-ignore
 export const exports: ClientExports = global.exports;

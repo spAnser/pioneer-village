@@ -1179,7 +1179,8 @@ RegisterCommand(
   'playInstrument',
   async (src: number, args: string[]) => {
     if (args.length > 2) {
-      instrumentManager.playInstrument(args[0], args[1], { streamSet: args[2], streamName: args[3] });
+      // instrumentManager.playInstrument(args[0], args[1], { streamSet: args[2], streamName: args[3] });
+      instrumentManager.playInstrument(args[0], undefined, { streamSet: args[1], streamName: args[2] });
     } else {
       instrumentManager.playInstrument(args[0], args[1]);
     }
