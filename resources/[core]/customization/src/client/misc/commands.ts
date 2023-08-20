@@ -92,10 +92,10 @@ RegisterCommand(
 onUI('customization.tint-test', async (palette: string, tint0: number, tint1: number, tint2: number) => {
   console.log('customization.tint-test', palette, tint0, tint1, tint2);
 
-  const ped = 437506;
-  // const ped = PVGame.playerPed();
-  paletteManager.setTint(ped, palette, tint0, tint1, tint2);
-  // paletteManager.setTintByCategory(ped, 'coats', palette, tint0, tint1, tint2);
+  // const ped = 437506;
+  // paletteManager.setTint(ped, palette, tint0, tint1, tint2);
+  const ped = PVGame.playerPed();
+  paletteManager.setTintByCategory(ped, 'coats', palette, tint0, tint1, tint2);
 
   // const ped = GetLastMount(PVGame.playerPed());
   // paletteManager.setTint(ped, palette, tint0, tint1, tint2);

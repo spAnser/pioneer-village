@@ -27,6 +27,7 @@
     "@types/styled-components": "^5.1.21",
     "@types/three": "^0.137.0",
     "@types/webpack-env": "^1.16.3",
+    "canvas": "^2.11.2",
     "chalk": "^4",
     "change-case": "^4.1.2",
     "css-loader": "^6.5.1",

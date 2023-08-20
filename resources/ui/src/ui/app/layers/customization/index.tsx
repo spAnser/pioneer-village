@@ -223,7 +223,7 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
           <>
             <Modal>
               <TintSelector
-                label="Tint Test"
+                label="Coat Tint"
                 onChange={() => {}}
                 palette="metaped_tint_generic"
                 tint0={0}
