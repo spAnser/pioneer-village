@@ -88,6 +88,8 @@ declare namespace UI.Catcher {
   }
 }
 
+type CustomizationPalette = Customization.Palette;
+
 declare namespace UI.Customization {
   interface Props extends UI.BaseProps {
     socket: any;
@@ -112,6 +114,7 @@ declare namespace UI.Customization {
       month: number;
       year: number;
     };
+    tints: Record<string, CustomizationPalette>;
   }
 
   type Event = Partial<State>;

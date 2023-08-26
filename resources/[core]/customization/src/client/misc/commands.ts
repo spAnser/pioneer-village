@@ -1,9 +1,8 @@
 import { emitUI, focusUI, onUI, PVGame } from '@lib/client';
+import { ColorPalettes } from '@lib/shared/color-palettes';
 import TextureTypes from '../data/texture-types';
 import BaseOverlay from '../data/base-overlay';
 import OverlayInfo from '../data/overlay-info';
-import ColorPalettes from '../data/color-palettes';
-import { Delay } from '@lib/functions';
 import { paletteManager } from '../managers/palette-manager';
 
 const TextureIDs: Map<number, number> = new Map();
@@ -45,7 +44,7 @@ RegisterCommand(
     );
     console.log('overlayId', overlayId);
 
-    SetTextureLayerPallete(textureId, overlayId, ColorPalettes.metaped_tint_generic);
+    SetTextureLayerPallete(textureId, overlayId, ColorPalettes.metaped_tint_generic.hash);
     SetTextureLayerTint(
       textureId,
       overlayId,
@@ -71,7 +70,18 @@ RegisterCommand(
 RegisterCommand(
   'overlay_ui',
   () => {
+    const ped = PVGame.playerPed();
+    const hatCategoryTint = paletteManager.getTintForCategory(ped, 'hats');
+    console.log('hatCategoryTint', hatCategoryTint);
+    const coatCategoryTint = paletteManager.getTintForCategory(ped, 'coats');
+    console.log('coatCategoryTint', coatCategoryTint);
     emitUI('customization.state', { show: true, state: 'gender' });
+    if (hatCategoryTint) {
+      emitUI('customization.set-tint-by-category', 'hats', hatCategoryTint);
+    }
+    if (coatCategoryTint) {
+      emitUI('customization.set-tint-by-category', 'coats', coatCategoryTint);
+    }
     focusUI(true, true);
   },
   false,
@@ -111,4 +121,11 @@ onUI('customization.tint-test', async (palette: string, tint0: number, tint1: nu
 
   // const ped = 7593731;
   // paletteManager.setTint(ped, palette, tint0, tint1, tint2);
+});
+
+onUI('customization.set-tint-by-category', (category, data) => {
+  const ped = PVGame.playerPed();
+  if (data.palette !== 0) {
+    paletteManager.setTintByCategory(ped, category, data.palette, data.tint0, data.tint1, data.tint2);
+  }
 });

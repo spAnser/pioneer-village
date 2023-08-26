@@ -1,10 +1,8 @@
-import { debounce } from 'lodash';
-
-import { Component } from 'preact';
 import styled from 'styled-components';
 import { emitClient } from '@lib/ui';
 import { uiSize } from '@uiLib/helpers';
 import theme from '@styled/theme';
+import { ColorPaletteNames, ColorPalettes } from '@lib/shared/color-palettes';
 
 const TSContainer = styled.div`
   display: flex;
@@ -109,162 +107,114 @@ const TSRadio = styled.label`
   }
 `;
 
-const palettes: Record<string, number> = {
-  metaped_tint_animal: 255, // 256
-  metaped_tint_combined: 255, // 256
-  metaped_tint_combined_leather: 255, // 256
-  metaped_tint_generic: 255, // 256
-  metaped_tint_generic_clean: 255, // 256
-  metaped_tint_generic_weathered: 255, // 256
-  metaped_tint_generic_worn: 255, // 256
-  metaped_tint_eye: 128,
-  metaped_tint_hair: 255, // 256
-  metaped_tint_hat: 255, // 256
-  metaped_tint_hat_clean: 255, // 256
-  metaped_tint_hat_weathered: 255, // 256
-  metaped_tint_hat_worn: 255, // 256
-  metaped_tint_horse: 255, // 256
-  metaped_tint_horse_leather: 255, // 256
-  metaped_tint_leather: 128,
-  metaped_tint_makeup: 64,
-  metaped_tint_mpadv: 255, // 256
-  metaped_tint_skirt_clean: 255, // 256
-  metaped_tint_skirt_weathered: 255, // 256
-  metaped_tint_skirt_worn: 255, // 256
-  weapon_tint_wood: 128,
-  weapon_tint_wood_working: 128,
-};
-
 interface Props {
   label: string;
-  onChange: (palette: string, tint0: number, tint1: number, tint2: number) => void;
-  palette: string;
+  category: string;
+  palette: number;
   tint0: number;
   tint1: number;
   tint2: number;
+  onChange: (category: string, tint: Customization.Palette) => void;
 }
 
-interface State {
-  palette: string;
-  tint0: number;
-  tint1: number;
-  tint2: number;
-}
+export default function TintSelector({ label, category, palette, tint0, tint1, tint2, onChange }: Props) {
+  const handleTint0Change = (target: HTMLInputElement) => {
+    onChange(category, { palette, tint0: Number(target.value), tint1, tint2 });
+  };
 
-export default class TintSelector extends Component<Props, State> {
-  constructor(props: Props) {
-    super();
-    this.state = {
-      palette: props.palette,
-      tint0: props.tint0,
-      tint1: props.tint1,
-      tint2: props.tint2,
-    };
-  }
+  const handleTint1Change = (target: HTMLInputElement) => {
+    onChange(category, { palette, tint0, tint1: Number(target.value), tint2 });
+  };
 
-  sendClientData = debounce(() => {
-    // @ts-ignore
-    emitClient('customization.tint-test', this.state.palette, this.state.tint0, this.state.tint1, this.state.tint2);
-  }, 1000);
+  const handleTint2Change = (target: HTMLInputElement) => {
+    onChange(category, { palette, tint0, tint1, tint2: Number(target.value) });
+  };
 
-  handleSelectChange(target: HTMLSelectElement) {
-    this.setState({ palette: target.value, tint0: 0, tint1: 0, tint2: 0 });
-    this.sendClientData();
-  }
+  const removePalette = () => {
+    onChange(category, { palette: -1, tint0, tint1, tint2 });
+  };
 
-  handleTint0Change(target: HTMLInputElement) {
-    this.setState({ tint0: Number(target.value) });
-    this.sendClientData();
-  }
+  const setPalette = (palette: Customization.Palettes) => {
+    onChange(category, { palette: ColorPalettes[palette].hash, tint0, tint1, tint2 });
+  };
 
-  handleTint1Change(target: HTMLInputElement) {
-    this.setState({ tint1: Number(target.value) });
-    this.sendClientData();
-  }
+  const setTints = (value: number) => {
+    onChange(category, { palette, tint0: value, tint1: value, tint2: value });
+  };
 
-  handleTint2Change(target: HTMLInputElement) {
-    this.setState({ tint2: Number(target.value) });
-    this.sendClientData();
-  }
+  return (
+    <TSContainer>
+      <h1>{label}</h1>
 
-  setPalette(palette: string) {
-    this.setState({ palette });
-    this.sendClientData();
-  }
+      <h2>Palettes</h2>
+      <TSPalettes>
+        <TSPalette>
+          <input type="radio" name="palette" value={0} checked={palette === -1} onClick={() => removePalette()} />
+          None
+        </TSPalette>
+        {Object.keys(ColorPalettes).map((p: Customization.Palettes) => {
+          return (
+            <TSPalette>
+              <input
+                type="radio"
+                name={`palette-${category}`}
+                value={ColorPalettes[p].hash}
+                checked={ColorPalettes[p].hash === palette >>> 0}
+                onClick={() => setPalette(p)}
+              />
+              {p.replace('metaped_tint_', '').split('_').join(' ')}
+            </TSPalette>
+          );
+        })}
+      </TSPalettes>
 
-  setTints(value: number) {
-    this.setState({ tint0: value, tint1: value, tint2: value });
-    this.sendClientData();
-  }
-
-  render() {
-    return (
-      <TSContainer>
-        <h1>{this.props.label}</h1>
-
-        <h2>Palettes</h2>
-        <TSPalettes>
-          {Object.keys(palettes).map((palette) => {
-            return (
-              <TSPalette>
-                <input
-                  type="radio"
-                  name="palette"
-                  value={palette}
-                  checked={this.state.palette === palette}
-                  onClick={() => this.setPalette(palette)}
-                />
-                {palette.replace('metaped_tint_', '').split('_').join(' ')}
-              </TSPalette>
-            );
-          })}
-        </TSPalettes>
-
-        <h2>Dyes</h2>
-        <TSOptions>
-          {new Array(palettes[this.state.palette]).fill(0).map((_, i) => (
+      <h2>Dyes</h2>
+      <TSOptions>
+        {palette !== -1 &&
+          new Array(ColorPalettes[ColorPaletteNames[palette >>> 0]]?.count || 0).fill(0).map((_, i) => (
             <TSOption key={i}>
               <TSThumb
                 style={{
-                  backgroundImage: `url(https://p--v.b-cdn.net/customization/palettes/${this.state.palette}_thumbs.png)`,
+                  backgroundImage: `url(https://p--v.b-cdn.net/customization/palettes/${
+                    ColorPaletteNames[palette >>> 0]
+                  }_thumbs.png)`,
                   backgroundPosition: `-${uiSize((i % 8) * 8 * scale)} -${uiSize(Math.floor(i / 8) * 8 * scale)}`,
                 }}
-                onClick={() => this.setTints(i)}
+                onClick={() => setTints(i)}
               />
               <TSRadio>
                 <input
                   type="radio"
-                  name="primary"
+                  name={`primary-${category}`}
                   value={i}
-                  checked={this.state.tint0 === i}
-                  onChange={(e) => this.handleTint0Change(e.target as HTMLInputElement)}
+                  checked={tint0 === i}
+                  onChange={(e) => handleTint0Change(e.target as HTMLInputElement)}
                 />
                 1
               </TSRadio>
               <TSRadio>
                 <input
                   type="radio"
-                  name="secondary"
+                  name={`secondary-${category}`}
                   value={i}
-                  checked={this.state.tint1 === i}
-                  onChange={(e) => this.handleTint1Change(e.target as HTMLInputElement)}
+                  checked={tint1 === i}
+                  onChange={(e) => handleTint1Change(e.target as HTMLInputElement)}
                 />
                 2
               </TSRadio>
               <TSRadio>
                 <input
                   type="radio"
-                  name="tertiary"
+                  name={`tertiary-${category}`}
                   value={i}
-                  checked={this.state.tint2 === i}
-                  onChange={(e) => this.handleTint2Change(e.target as HTMLInputElement)}
+                  checked={tint2 === i}
+                  onChange={(e) => handleTint2Change(e.target as HTMLInputElement)}
                 />
                 3
               </TSRadio>
             </TSOption>
           ))}
-        </TSOptions>
-      </TSContainer>
-    );
-  }
+      </TSOptions>
+    </TSContainer>
+  );
 }

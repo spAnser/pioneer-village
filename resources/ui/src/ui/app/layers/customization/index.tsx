@@ -1,7 +1,10 @@
+import { debounce } from 'lodash';
+
 import { Socket } from 'socket.io-client';
 
 import UIComponent from '@uiLib/ui-component';
 import { emitClient, LoadResourceJson, onClient } from '@lib/ui';
+import { ColorPalettes, ColorPaletteNames } from '@lib/shared/color-palettes';
 
 import { defaultOverlays } from './data';
 import { Container, Modal, ModalTitle } from './styled';
@@ -84,12 +87,73 @@ const componentFiles = [
 
 const ComponentsData: Record<string, UI.Customization.ComponentJson[]> = {};
 
+const pedComponentCategories = [
+  'accessories',
+  'ammo_pistols',
+  'ammo_rifles',
+  'aprons',
+  'armor',
+  'badges',
+  'belts',
+  'belt_buckles',
+  'bodies_lower',
+  'bodies_upper',
+  'boots',
+  'boot_accessories',
+  'chaps',
+  'cloaks',
+  'coats',
+  'coats_closed',
+  'eyes',
+  'eyewear',
+  'gauntlets',
+  'gloves',
+  'gunbelts',
+  'hair',
+  'hats',
+  'heads',
+  'holsters_crossdraw',
+  'holsters_knife',
+  'holsters_left',
+  'holsters_right',
+  'jewelry_bracelets',
+  'jewelry_rings_left',
+  'jewelry_rings_right',
+  'legs_accessories',
+  'loadouts',
+  'masks',
+  'masks_large',
+  'neckties',
+  'neckwear',
+  'pants',
+  'ponchos',
+  'satchels',
+  'shirts_full',
+  'skirts',
+  'spats',
+  'suspenders',
+  'vests',
+];
+
+const horseComponentCategories = ['head', 'hand', 'hair', 'mane', 'teef', 'hair', 'mane'];
+
 export default class Customization extends UIComponent<UI.BaseProps, UI.Customization.State, {}> {
   constructor(
     props: UI.BaseProps,
     context: { socket: Socket<UISocketEvents, SocketServer.Client & SocketServer.ClientEvents> },
   ) {
     super();
+
+    const tints: Record<string, CustomizationPalette> = {};
+
+    for (const category of [...pedComponentCategories, ...horseComponentCategories]) {
+      tints[category] = {
+        palette: -1,
+        tint0: 0,
+        tint1: 0,
+        tint2: 0,
+      };
+    }
 
     this.state = {
       show: false,
@@ -119,10 +183,15 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
         month: 1,
         year: 1800,
       },
+      tints,
     };
 
     onClient('customization.state', (state) => {
       this.setState(state);
+    });
+
+    onClient('customization.set-tint-by-category', (category, tint) => {
+      this.setState({ tints: { ...this.state.tints, [category]: tint } });
     });
 
     this.loadComponents();
@@ -139,6 +208,27 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
 
   onEvent(event: UI.Customization.Event) {
     this.setState(event);
+  }
+
+  sendClientData = debounce((updateCategory: string) => {
+    for (const [category, data] of Object.entries(this.state.tints)) {
+      if (category !== updateCategory) continue;
+      if (data.palette === 0) {
+        emitClient('customization.set-tint-by-category', category, {
+          palette: -1,
+          tint0: 0,
+          tint1: 0,
+          tint2: 0,
+        });
+      } else {
+        emitClient('customization.set-tint-by-category', category, data);
+      }
+    }
+  }, 1000);
+
+  setTintByCategory(category: string, tint: Customization.Palette) {
+    this.setState({ tints: { ...this.state.tints, [category]: tint } });
+    this.sendClientData(category);
   }
 
   setComponent(componentType: string, style: number, option: number) {
@@ -223,12 +313,22 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
           <>
             <Modal>
               <TintSelector
+                label="Hat Tint"
+                onChange={this.setTintByCategory.bind(this)}
+                category={'hats'}
+                palette={this.state.tints.hats.palette}
+                tint0={this.state.tints.hats.tint0}
+                tint1={this.state.tints.hats.tint1}
+                tint2={this.state.tints.hats.tint2}
+              />
+              <TintSelector
                 label="Coat Tint"
-                onChange={() => {}}
-                palette="metaped_tint_generic"
-                tint0={0}
-                tint1={0}
-                tint2={0}
+                onChange={this.setTintByCategory.bind(this)}
+                category={'coats'}
+                palette={this.state.tints.coats.palette}
+                tint0={this.state.tints.coats.tint0}
+                tint1={this.state.tints.coats.tint1}
+                tint2={this.state.tints.coats.tint2}
               />
             </Modal>
           </>

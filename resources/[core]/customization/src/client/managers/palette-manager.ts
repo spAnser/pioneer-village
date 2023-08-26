@@ -135,6 +135,21 @@ class PaletteManager {
     }
   };
 
+  removeTintByIndex: Customization.RemoveTintByIndex = (entity, index) => {
+    this.setTintAtIndex(entity, index, -1, 0, 0, 0);
+  };
+
+  removeTintByCategory: Customization.RemoveTintByCategory = (entity, category) => {
+    if (typeof category === 'string') {
+      category = GetHashKey(category);
+    }
+    const index = this.getIndexForCategory(entity, category);
+    if (index === -1) {
+      return;
+    }
+    this.setTintAtIndex(entity, index, -1, 0, 0, 0);
+  };
+
   setTintByCategory: Customization.SetTintByCategory = (entity, category, palette, tint0, tint1, tint2) => {
     if (typeof category === 'string') {
       category = GetHashKey(category);

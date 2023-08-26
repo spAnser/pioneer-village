@@ -27,6 +27,8 @@ declare namespace Customization {
   ) => void;
   type SetTint = (entity: number, palette: number | string, tint0: number, tint1: number, tint2: number) => void;
   type RemoveTint = (entity: number) => void;
+  type RemoveTintByIndex = (entity: number, index: number) => void;
+  type RemoveTintByCategory = (entity: number, category: number | string) => void;
   type SetTintByCategory = (
     entity: number,
     category: number | string,
@@ -72,6 +74,8 @@ declare namespace Customization {
     setTintAtIndex: SetTintAtIndex;
     setTint: SetTint;
     removeTint: RemoveTint;
+    removeTintByIndex: RemoveTintByIndex;
+    removeTintByCategory: RemoveTintByCategory;
     setTintByCategory: SetTintByCategory;
     setTintByDrawable: SetTintByDrawable;
     getHorseDrawableAtIndex: GetHorseDrawableAtIndex;

@@ -69,6 +69,14 @@ const removeTint: Customization.RemoveTint = (...args) => {
   return paletteManager.removeTint(...args);
 };
 
+const removeTintByindex: Customization.RemoveTintByIndex = (...args) => {
+  return paletteManager.removeTintByIndex(...args);
+};
+
+const removeTintByCategory: Customization.RemoveTintByCategory = (...args) => {
+  return paletteManager.removeTintByCategory(...args);
+};
+
 const setTintByCategory: Customization.SetTintByCategory = (...args) => {
   return paletteManager.setTintByCategory(...args);
 };
@@ -106,6 +114,8 @@ exports<'customization'>('getTintForCategory', getTintForCategory);
 exports<'customization'>('setTintAtIndex', setTintAtIndex);
 exports<'customization'>('setTint', setTint);
 exports<'customization'>('removeTint', removeTint);
+exports<'customization'>('removeTintByIndex', removeTintByindex);
+exports<'customization'>('removeTintByCategory', removeTintByCategory);
 exports<'customization'>('setTintByCategory', setTintByCategory);
 exports<'customization'>('setTintByDrawable', setTintByDrawable);
 exports<'customization'>('getHorseDrawableAtIndex', getHorseDrawableAtIndex);

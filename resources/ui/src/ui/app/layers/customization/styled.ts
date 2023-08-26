@@ -32,6 +32,24 @@ export const Modal = styled.div`
       border-bottom-color: ${theme.colors.white.hex};
     }
   }
+
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: ${uiSize(2)};
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(${theme.colors.black.rgb}, 0.75);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: ${theme.colors.black.hex};
+  }
 `;
 
 export const ModalTitle = styled.div`
