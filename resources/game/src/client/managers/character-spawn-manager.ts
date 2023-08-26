@@ -1,6 +1,6 @@
 import { Vector3 } from '@lib/math';
 import { Delay, randomRange } from '@lib/functions';
-import { onResourceInit, PVBase, PVPrompt } from '@lib/client';
+import { onResourceInit, PVBase, PVGame, PVPrompt } from '@lib/client';
 
 const CityScenarios = [
   'WORLD_HUMAN_LEAN_READ_PAPER',
@@ -27,7 +27,7 @@ class CharacterSpawnManager {
   }
 
   public async setCoords(coords: Vector3) {
-    ClearPedTasksImmediately(PlayerPedId());
+    ClearPedTasksImmediately(PVGame.playerPed());
     DoScreenFadeOut(500);
     await Delay(1000);
     this.coords = coords;
@@ -35,11 +35,11 @@ class CharacterSpawnManager {
 
     await Delay(100);
     if (!scenarioFound) {
-      SetEntityCoordsNoOffset(PlayerPedId(), this.coords.x, this.coords.y, this.coords.z, false, false, false);
+      SetEntityCoordsNoOffset(PVGame.playerPed(), this.coords.x, this.coords.y, this.coords.z, false, false, false);
       const position = this.isPlayerInsideCity() ? 'city' : 'wilderness';
       let scenario = 0;
       if (position === 'wilderness') {
-        scenario = Citizen.invokeNative('0x569F1E1237508DEB', PlayerPedId(), Citizen.resultAsInteger());
+        scenario = Citizen.invokeNative('0x569F1E1237508DEB', PVGame.playerPed(), Citizen.resultAsInteger());
         if (scenario === 0) {
           scenario = GetHashKey(WildernessScenarios[randomRange(1, WildernessScenarios.length)]);
           console.log('predetermined wilderness scenario', scenario);
@@ -53,7 +53,7 @@ class CharacterSpawnManager {
 
       await Delay(200);
       // @ts-ignore
-      TaskStartScenarioInPlace(PlayerPedId(), scenario, 0, false, false, 0, -1.0, false);
+      TaskStartScenarioInPlace(PVGame.playerPed(), scenario, 0, false, false, 0, -1.0, false);
     } else {
       console.log('dynamic place scenario is now playing');
     }
@@ -64,7 +64,7 @@ class CharacterSpawnManager {
     PVPrompt.show('character-spawn:cancel:task');
     this.promptLoopRunning = true;
     while (this.promptLoopRunning) {
-      const currentCoords = new Vector3().setFromArray(GetEntityCoords(PlayerPedId()));
+      const currentCoords = new Vector3().setFromArray(GetEntityCoords(PVGame.playerPed()));
       if (currentCoords.getDistance(this.coords) >= 2.0) {
         PVPrompt.hide('character-spawn:cancel:task');
         this.promptLoopRunning = false;
@@ -74,7 +74,7 @@ class CharacterSpawnManager {
   }
 
   async getScenariosInArea() {
-    ClearPedTasksImmediately(PlayerPedId());
+    ClearPedTasksImmediately(PVGame.playerPed());
     let buffer = new ArrayBuffer(256 * 4);
     let view = new DataView(buffer);
 
@@ -109,7 +109,7 @@ class CharacterSpawnManager {
 
     if (distanceBetweenPlayerAndScenario < 15.0) {
       SetEntityCoords(
-        PlayerPedId(),
+        PVGame.playerPed(),
         finalScenarios[index].coords.x,
         finalScenarios[index].coords.y,
         finalScenarios[index].coords.z,
@@ -121,12 +121,12 @@ class CharacterSpawnManager {
     } else {
       const [found, groundZ] = GetGroundZFor_3dCoord(this.coords.x, this.coords.y, this.coords.z, true);
       if (found) {
-        SetEntityCoordsNoOffset(PlayerPedId(), this.coords.x, this.coords.y, groundZ, false, false, false);
+        SetEntityCoordsNoOffset(PVGame.playerPed(), this.coords.x, this.coords.y, groundZ, false, false, false);
       }
     }
 
     // @ts-ignore
-    TaskStartScenarioInPlace(PlayerPedId(), finalScenarios[index].hash, 0, false, false, 0, -1.0, false);
+    TaskStartScenarioInPlace(PVGame.playerPed(), finalScenarios[index].hash, 0, false, false, 0, -1.0, false);
     return true;
   }
 
@@ -143,22 +143,17 @@ class CharacterSpawnManager {
   }
 
   async destroyPedSpawn(immediate: boolean) {
-    const heldEntity = GetCurrentPedWeaponEntityIndex(PlayerPedId(), 0);
+    const heldEntity = GetCurrentPedWeaponEntityIndex(PVGame.playerPed(), 0);
     PVPrompt.hide('character-spawn:cancel:task');
     if (immediate) {
-      ClearPedTasksImmediately(PlayerPedId());
-    } else {
-      ClearPedTasks(PlayerPedId());
-    }
-    characterSpawn.promptLoopRunning = false;
-    await Delay(2500);
-    ClearPedTasksImmediately(PlayerPedId());
-    FreezeEntityPosition(PlayerPedId(), false);
-    await Delay(500);
-    if (DoesEntityExist(heldEntity)) {
-      SetEntityAsMissionEntity(heldEntity, true, true);
+      ClearPedTasksImmediately(PVGame.playerPed());
       PVBase.deleteEntity(heldEntity);
+      return;
     }
+    ClearPedTasks(PVGame.playerPed());
+    characterSpawn.promptLoopRunning = false;
+    await Delay(500);
+    PVBase.deleteEntity(heldEntity);
   }
 }
 
