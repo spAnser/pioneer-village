@@ -12,3 +12,9 @@ set onesync_forceMigration true
 
 #Used in /webpack/webpack.hot-reload.js for auto reloading resources on change
 rcon_password "qwerty"
+
+# obfuscates files with a global key, instead of a per-client key
+#set adhesive_cdnKey "yourSecret"
+
+# adds a file server for 'all' resources
+#fileserver_add ".*" "https://server1.example.com/files"
