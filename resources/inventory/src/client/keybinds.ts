@@ -1,4 +1,5 @@
 import { emitUI, focusUI } from '@lib/client';
+import { Log } from '@lib/client/comms/ui';
 
 const Inputs = {
   ToggleHolster: GetHashKey('ToggleHolster'),
@@ -8,6 +9,7 @@ const Inputs = {
   SelectQuickselectDualwield: GetHashKey('INPUT_SELECT_QUICKSELECT_DUALWIELD'),
   // Keys
   KeyI: GetHashKey('INPUT_QUICK_USE_ITEM'),
+  KeyL: GetHashKey('INPUT_PLAYER_MENU'),
 };
 
 setTick(() => {
@@ -44,8 +46,13 @@ setTick(() => {
     emitUI('inventory.use-slot', 4);
   }
   if (IsDisabledControlJustReleased(0, Inputs.KeyI)) {
-    console.log('KeyI');
+    Log('KeyI');
     emitUI('inventory.state', { show: true });
+    focusUI(true, true);
+  }
+  if (IsDisabledControlJustReleased(0, Inputs.KeyL)) {
+    Log('KeyL');
+    emitUI('log.state', { show: true });
     focusUI(true, true);
   }
 });

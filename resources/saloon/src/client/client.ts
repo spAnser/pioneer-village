@@ -1,6 +1,7 @@
 import { DrawTxt, emitUI, focusUI, PVBase, PVGame, PVPlaceObject, PVPrompt } from '@lib/client';
 import saloonController from './controllers/saloon-controller';
 import { Delay } from '@lib/functions';
+import { Log } from '@lib/client/comms/ui';
 
 global.playerPed = PlayerPedId();
 
@@ -24,10 +25,10 @@ RegisterCommand(
 //     { x: -304.75, y: 815.075 },
 //   ],
 //   onEnter() {
-//     console.log('Entered saloon:valentine:dining');
+//     Log('Entered saloon:valentine:dining');
 //   },
 //   onExit() {
-//     console.log('Exited saloon:valentine:dining');
+//     Log('Exited saloon:valentine:dining');
 //   },
 // });
 //
@@ -42,10 +43,10 @@ RegisterCommand(
 //     { x: -314.35192871094, y: 808.02435302734 },
 //   ],
 //   onEnter() {
-//     console.log('Entered saloon:valentine:bartending');
+//     Log('Entered saloon:valentine:bartending');
 //   },
 //   onExit() {
-//     console.log('Exited saloon:valentine:bartending');
+//     Log('Exited saloon:valentine:bartending');
 //   },
 // });
 
@@ -100,7 +101,7 @@ EAT_STEW_BOWL_TABLE_EAT_TRANS
  */
 
 const pickupItem = async (entityId: number, networkId: number) => {
-  console.log('pickupItem', entityId, networkId);
+  Log('pickupItem', entityId, networkId);
 
   const propId = GetHashKey('P_BOTTLEBEER01X_PH_R_HAND');
   const itemInteractionState = GetHashKey('DRINK_BOTTLE@Bottle_Cylinder_D1-55_H18_Neck_A8_B1-8_UNCORK');
@@ -148,7 +149,7 @@ RegisterCommand(
 );
 
 on('events_manager:itemInteraction', async (state: boolean, interactionHash: number, entity: number) => {
-  console.log('events_manager:itemInteraction', state, interactionHash, entity);
+  Log('events_manager:itemInteraction', state, interactionHash, entity);
   if (holdInteractions.includes(interactionHash)) {
     saloonController.holdingDrink(entity);
     saloonController.endDrinking();
@@ -205,7 +206,7 @@ RegisterCommand(
     SetPedBlackboardBool(playerPed, name, value, -1);
     await Delay(5000);
     RemovePedBlackboardBool(playerPed, name);
-    console.log('removed');
+    Log('removed');
   },
   false,
 );
@@ -218,7 +219,7 @@ RegisterCommand(
     SetPedBlackboardFloat(playerPed, name, value, -1);
     await Delay(5000);
     RemovePedBlackboardFloat(playerPed, name);
-    console.log('removed');
+    Log('removed');
   },
   false,
 );
@@ -231,7 +232,7 @@ RegisterCommand(
     SetPedBlackboardInt(playerPed, name, value, -1);
     await Delay(5000);
     RemovePedBlackboardInt(playerPed, name);
-    console.log('removed');
+    Log('removed');
   },
   false,
 );
@@ -244,7 +245,7 @@ RegisterCommand(
     SetPedBlackboardHash(playerPed, name, value, -1);
     await Delay(5000);
     RemovePedBlackboardHash(playerPed, name);
-    console.log('removed');
+    Log('removed');
   },
   false,
 );

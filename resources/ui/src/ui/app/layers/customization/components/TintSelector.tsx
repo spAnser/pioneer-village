@@ -146,6 +146,9 @@ export default function TintSelector({ label, category, palette, tint0, tint1, t
     <TSContainer>
       <h1>{label}</h1>
 
+      <h2>Presets</h2>
+      {/* TODO */}
+
       <h2>Palettes</h2>
       <TSPalettes>
         <TSPalette>

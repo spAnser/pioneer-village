@@ -1,6 +1,7 @@
 import { eventNames, observedEvents } from '../data';
 import { EventManager } from '../managers/event-manager';
 import { KeyManager } from '../managers/key-manager';
+import { Log } from '@lib/client/comms/ui';
 
 const eventManager = EventManager.getInstance();
 const keyManager = KeyManager.getInstance();
@@ -49,10 +50,10 @@ export class EventListener {
 
         if (observedEvents.has(eventAtIndex)) {
           const observedEvent = observedEvents.get(eventAtIndex);
-          // console.log('observed event', eventNames.get(eventAtIndex) ?? eventAtIndex, observedEvent)
+          // Log('observed event', eventNames.get(eventAtIndex) ?? eventAtIndex, observedEvent)
 
           const [dataViewInts, dataViewFloats] = this.getEventData(0, i, observedEvent['dataSize']);
-          // console.log('dataview: ', dataView)
+          // Log('dataview: ', dataView)
           const returns: number[] = [];
           observedEvent.dataIndexes.forEach((key: number) => {
             returns.push(dataViewInts[key]);
@@ -60,12 +61,12 @@ export class EventListener {
           observedEvent.dataFloats.forEach((key: number) => {
             returns.push(dataViewFloats[key]);
           });
-          // console.log('returns', returns)
-          // console.log('trigger:', observedEvent['eventTrigger']);
+          // Log('returns', returns)
+          // Log('trigger:', observedEvent['eventTrigger']);
           eventManager.trigger(observedEvent['eventTrigger'], ...returns);
         } else {
           if (!seenUnobserved.has(eventAtIndex)) {
-            console.log('unobserved event', eventNames.get(eventAtIndex) ?? eventAtIndex);
+            Log('unobserved event', eventNames.get(eventAtIndex) ?? eventAtIndex);
             seenUnobserved.add(eventAtIndex);
           }
         }
@@ -98,7 +99,7 @@ export class EventListener {
     // const ints = new Int32Array(buffer);
     // let n = 0;
     // for (const float of floats) {
-    //     console.log(n, ints[n], float);
+    //     Log(n, ints[n], float);
     //     n++;
     // }
 

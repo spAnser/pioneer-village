@@ -1,5 +1,5 @@
 import { awaitUI, PVGame, PVInit } from '@lib/client';
-import { emitSocket } from '@lib/client/comms/ui';
+import { emitSocket, Log } from '@lib/client/comms/ui';
 import { Vector3 } from '@lib/math';
 
 class DoorManager {
@@ -21,7 +21,7 @@ class DoorManager {
 
   async init() {
     await PVInit.initializedResource('game');
-    console.log(`Door Manager Initializing...`);
+    Log(`Door Manager Initializing...`);
     const doors = await awaitUI('doors.get-door-states');
 
     for (const [doorHash, state] of doors) {
@@ -152,7 +152,7 @@ class DoorManager {
 
   async hasDoorKey(doorHash: number): Promise<boolean> {
     const items = await awaitUI('inventory.player-get-items', GetHashKey('PV_DOOR_KEY'));
-    // console.log(items);
+    // Log(items);
 
     for (const item of items) {
       for (const metadatas of item.metadatas) {
@@ -231,7 +231,7 @@ class DoorManager {
         this.doors.set(doorHash, data);
 
         doorChanged = true;
-        // console.log('addDoor', doorHash, doorEntity);
+        // Log('addDoor', doorHash, doorEntity);
       } else {
         const data = this.getDoor(doorHash);
         if (data && data.entity === 0) {
@@ -242,7 +242,7 @@ class DoorManager {
             data.coords = Vector3.fromArray(GetEntityCoords(entity)).toObject();
           }
 
-          // console.log(`Setting Door Entity: ${doorHash} ${entity}`);
+          // Log(`Setting Door Entity: ${doorHash} ${entity}`);
 
           this.doors.set(doorHash, data);
         }
@@ -250,10 +250,10 @@ class DoorManager {
     }
 
     if (doorChanged) {
-      // console.log(this.doors);
+      // Log(this.doors);
     }
 
-    // console.log(this.getClosestDoor());
+    // Log(this.getClosestDoor());
   }
 }
 

@@ -66,4 +66,7 @@ declare interface UIEvents {
 
   ['customization.set-tint-by-category']: (category: string, tint: Customization.Palette) => void;
   ['customization.remove-tint-by-category']: (category: string) => void;
+
+  ['log.state']: (event: UI.Log.Event) => void;
+  ['log.message']: (data: UI.Log.Data, overrideSource?: 'client' | 'server') => void;
 }

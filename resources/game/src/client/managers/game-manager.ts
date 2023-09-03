@@ -3,6 +3,7 @@ import { Vector3 } from '@lib/math/vector3';
 import { AnimFlag } from '@lib/flags';
 import { Delay } from '@lib/functions';
 import { awaitServer } from '@lib/client';
+import { Log } from '@lib/client/comms/ui';
 
 class GameManager {
   protected static instance: GameManager;
@@ -189,7 +190,7 @@ class GameManager {
     }
 
     await Delay(5);
-    console.log(`DeleteEntity(${entity})`);
+    Log(`DeleteEntity(${entity})`);
     DeleteEntity(entity);
 
     await Delay(10);
@@ -229,13 +230,13 @@ class GameManager {
   }
 
   handleTargetChange(target: number, type: number, coord: Vector3): void {
-    // console.log('target:changed', target, type, coord)
+    // Log('target:changed', target, type, coord)
     this._target = target;
     this._targetIsHorse = false;
     this._targetIsVehicle = false;
     switch (type) {
       case 1:
-        // console.log('handleTargetPed', target, type)
+        // Log('handleTargetPed', target, type)
         this.handleTargetPed(target, type, coord);
         break;
       case 2:
@@ -250,17 +251,17 @@ class GameManager {
   }
 
   handleTargetPed(target: number, type: number, coord: Vector3): void {
-    // console.log('PED', target, GetPedType(target), type, coord)
+    // Log('PED', target, GetPedType(target), type, coord)
     this._targetIsHorse = IsThisModelAHorse(GetEntityModel(target));
   }
 
   handleTargetVehicle(target: number, type: number, coord: Vector3): void {
-    // console.log('VEHICLE', target, type, coord)
+    // Log('VEHICLE', target, type, coord)
     this._targetIsVehicle = true;
   }
 
   handleTargetObject(target: number, type: number, coord: Vector3): void {
-    // console.log('OBJECT', target, type, coord)
+    // Log('OBJECT', target, type, coord)
   }
 
   isHorse(target: number): boolean {
@@ -621,7 +622,7 @@ class GameManager {
     const animName = Array.isArray(animTask.anim)
       ? animTask.anim[Math.floor(Math.random() * animTask.anim.length)]
       : animTask.anim;
-    // console.log(animName);
+    // Log(animName);
     if (animTask.speed) {
       console.warn('Deprecated: speed is no longer supported use blendInSpeed');
       animTask.blendInSpeed = animTask.speed;
@@ -690,7 +691,7 @@ class GameManager {
       if (animTask.entities) {
         this.handleAnimTaskEntities(animTask.dict, animName, animTask.entities, animTask.duration);
       }
-      // console.log('animTask.flags', animTask.flags);
+      // Log('animTask.flags', animTask.flags);
 
       if (animTask.speed) {
         console.warn('Deprecated: speed is no longer supported use blendInSpeed');
@@ -833,7 +834,7 @@ class GameManager {
       );
       if (anim.duration) {
         setTimeout(() => {
-          console.log(entityId, animName, anim.dict, 0);
+          Log(entityId, animName, anim.dict, 0);
           StopEntityAnim(entityId, animName, anim.dict, 0);
         }, anim.duration);
       }
@@ -933,7 +934,7 @@ class GameManager {
         2,
       ),
     );
-    console.log(animCoords, animRot);
+    Log(animCoords, animRot);
     return [animCoords, animRot];
   }
 

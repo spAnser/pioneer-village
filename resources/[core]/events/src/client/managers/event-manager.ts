@@ -1,3 +1,5 @@
+import { Log } from '@lib/client/comms/ui';
+
 export class EventManager {
   protected static instance: EventManager;
   protected events: Map<string, Map<string, Function>> = new Map();
@@ -14,9 +16,9 @@ export class EventManager {
     const eventsForType = this.events.get(event) || new Map();
 
     eventsForType.set(identifier, callback);
-    // console.log('eventsforType', eventsForType)
+    // Log('eventsforType', eventsForType)
     this.events.set(event, eventsForType);
-    // console.log('events: ', this.events.get(event));
+    // Log('events: ', this.events.get(event));
 
     return true;
   }
@@ -38,9 +40,9 @@ export class EventManager {
     if (!eventsForType) {
       return;
     }
-    console.log('events for type:', eventsForType);
+    Log('events for type:', eventsForType);
     for (const [ident, callback] of eventsForType.entries()) {
-      // console.log('calling callback', ...args);
+      // Log('calling callback', ...args);
       callback(...args);
     }
   }

@@ -17,7 +17,7 @@ export const onClientCall: onClientCall = (evtName, callback) => {
 
     emitNet(`rpc:${originResource}:response`, serverId, callId, success, response);
   });
-}
+};
 
 export const emitClient: emitClient = emitNet;
 export const onClient: onClient = onNet;
@@ -30,8 +30,8 @@ export const awaitClient: awaitClient = (evtName, serverId, ...args) => {
       resolve,
       reject,
       timeout: setTimeout(() => {
-        reject(new Error(`RPC call timeout to ${serverId} with event ${evtName}`))
-      }, 10e3)
+        reject(new Error(`RPC call timeout to ${serverId} with event ${evtName}`));
+      }, 10e3),
     });
   });
   promise.finally(() => {
@@ -52,4 +52,18 @@ onNet(`rpc:${resource}:response`, (cId: number, success: boolean, response: any)
   } else {
     reject(new Error(response));
   }
-})
+});
+
+// TODO: Replace this
+const DEV_ENV = true;
+export const LogToUI = (message: string, logToConsole = false) => {
+  if (logToConsole) {
+    console.log(message);
+  }
+  if (DEV_ENV) {
+    emitNet('server.log.message', -1, {
+      resource,
+      message,
+    });
+  }
+};

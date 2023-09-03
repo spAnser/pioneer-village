@@ -1,6 +1,7 @@
 import { Delay } from '@lib/functions';
 import { PVInit } from '@lib/client';
 import { PromptAttribute } from '@lib/flags/prompt-attribute';
+import { Log } from '@lib/client/comms/ui';
 
 // const temporaryPromptGroup = 3;
 // const showPromptGroup = 4;
@@ -29,7 +30,7 @@ class PromptManager {
     //       (prompt.mode === 'standard' && PromptHasStandardModeCompleted(prompt.id, 0)) ||
     //       (prompt.mode === 'hold' && PromptHasHoldModeCompleted(prompt.id))
     //     ) {
-    //       // console.log('Trigger', name + '::completed', prompt)
+    //       // Log('Trigger', name + '::completed', prompt)
     //       this.temporarilyDisablePrompts();
     //       const callback = this.promptCallbacks.get(name);
     //       if (callback) {
@@ -175,7 +176,7 @@ class PromptManager {
     this.prompts[name].enabled = false;
     emit('lua::prompts::prompt', name, { id, mode: this.prompts[name].mode, enabled: false });
     PromptSetEnabled(id, false);
-    console.log(`PromptSetEnabled(id, ${false});`);
+    Log(`PromptSetEnabled(id, ${false});`);
   }
 
   enable(name: string): void {
@@ -228,7 +229,7 @@ class PromptManager {
       lastGroup: temporaryPromptGroup,
     };
     emit('lua::prompts::prompt', name, { id, mode: 'standard', enabled: true });
-    console.log(`Created prompt: ^2${id} ${name}`);
+    Log(`Created prompt: ${id} ${name}`);
     return id;
   }
 

@@ -1,6 +1,7 @@
 import { Vector3 } from '@lib/math';
 import { Delay } from '@lib/functions';
 import { PVGame } from '@lib/client';
+import { Log } from '@lib/client/comms/ui';
 
 RegisterCommand(
   'tp_waypoint',
@@ -26,8 +27,8 @@ RegisterCommand(
     );
     FreezeEntityPosition(PVGame.mountPed() || PVGame.playerPed(), false);
 
-    console.log('waypoint', waypoint);
-    console.log('groundZ', groundZ);
+    Log('waypoint', waypoint);
+    Log('groundZ', groundZ);
 
     await Delay(1000);
     DoScreenFadeIn(500);
@@ -181,7 +182,7 @@ RegisterCommand(
     const coords = GetEntityCoords(playerPed, false);
     const heightAboveGround = GetEntityHeightAboveGround(playerPed);
 
-    console.log(`x: ${coords[0]}, y: ${coords[1]}, z: ${coords[2] - heightAboveGround}`);
+    Log(`x: ${coords[0]}, y: ${coords[1]}, z: ${coords[2] - heightAboveGround}`);
   },
   false,
 );

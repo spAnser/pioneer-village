@@ -1,13 +1,6 @@
 import './cleanup';
 import './crosshair';
-
-const DEBUG = false;
-
-const log = (...args: any[]) => {
-  if (DEBUG) {
-    console.log(...args);
-  }
-};
+import { Log } from '@lib/client/comms/ui';
 
 const callListeners: Map<string, Map<string, (...args: any[]) => any>> = new Map();
 const eventListeners: Map<string, Map<string, (...args: any[]) => any>> = new Map();
@@ -24,7 +17,7 @@ const onUICall: UI.onUICall = (evtName, callback) => {
     // already registed event. lets ignore.
     return;
   }
-  console.log(`registering listener ${resource}/${evtName}`);
+  Log(`registering listener ${resource}/${evtName}`);
   listeners.set(evtName, callback);
 };
 
@@ -119,7 +112,7 @@ on(
     let processed = false;
     let success = false;
     let response: any = null;
-    log(`Processing UI callback for ${evtName}`);
+    Log(`Processing UI callback for ${evtName}`);
 
     callListeners.forEach((listeners) => {
       if (processed) {
@@ -134,14 +127,14 @@ on(
       processed = true;
 
       (async () => {
-        log(`Attempting to resolve listener for ${evtName}`);
+        Log(`Attempting to resolve listener for ${evtName}`);
         try {
           response = await Promise.resolve(listener(...params));
           success = true;
         } catch (e: any) {
           response = (e && e.message) || `Failed to call ${evtName}`;
         }
-        log(`Response from ${evtName}, success: ${success}`);
+        Log(`Response from ${evtName}, success: ${success}`);
         cb({
           success,
           response,
@@ -179,7 +172,7 @@ RegisterCommand(
 
 onUI('form.answer', (formEvent) => {
   focusUI(false, false);
-  console.log('formEvent', formEvent);
+  Log('formEvent', formEvent);
 });
 
 RegisterCommand(
@@ -192,3 +185,12 @@ RegisterCommand(
 );
 
 RegisterKeyMapping('+openChat', 'Chat', 'keyboard', 't');
+
+// TODO: Replace this
+const DEV_ENV = true;
+onNet('server.log.message', (logData: { resource: string; message: string }) => {
+  Log('server.log.message', logData);
+  if (DEV_ENV) {
+    emitUI('log.message', logData, 'server');
+  }
+});

@@ -1,8 +1,9 @@
+import type { Socket } from 'socket.io-client';
+
 import { createRef } from 'preact';
 import { debounce } from 'lodash';
-import { Socket } from 'socket.io-client';
 
-import { emitClient, onClient } from '@lib/ui';
+import { onClient } from '@lib/ui';
 import UIComponent from '@uiLib/ui-component';
 import { uiSize } from '@uiLib/helpers';
 import theme from '@styled/theme';
@@ -194,7 +195,7 @@ export default class Chat extends UIComponent<UI.BaseProps, UI.Chat.State, {}> {
   render() {
     return (
       <Frame className={this.state.show ? 'active' : this.state.partialShow ? 'partial' : ''}>
-        <Messages ref={this.refMessages} onMousewheel={(e: WheelEvent) => this.handleMousewheel(e)}>
+        <Messages ref={this.refMessages} onMousewheel={this.handleMousewheel.bind(this)}>
           {this.state.messages.map((message) => (
             <Message style={this.getChannelStyle(message.channel)}>
               {message.channel && message.channel !== 'general' && (

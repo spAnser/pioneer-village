@@ -4,6 +4,7 @@ import TextureTypes from '../data/texture-types';
 import BaseOverlay from '../data/base-overlay';
 import OverlayInfo from '../data/overlay-info';
 import { paletteManager } from '../managers/palette-manager';
+import { Log } from '@lib/client/comms/ui';
 
 const TextureIDs: Map<number, number> = new Map();
 
@@ -30,7 +31,7 @@ RegisterCommand(
       textureSettings.normal[skinTone],
       textureSettings.material,
     );
-    console.log('textureId', textureId);
+    Log('textureId', textureId);
     TextureIDs.set(playerPed, textureId);
 
     const overlayId = AddTextureLayer(
@@ -42,7 +43,7 @@ RegisterCommand(
       BaseOverlay[0].tx_opacity,
       BaseOverlay[0].tx_unk,
     );
-    console.log('overlayId', overlayId);
+    Log('overlayId', overlayId);
 
     SetTextureLayerPallete(textureId, overlayId, ColorPalettes.metaped_tint_generic.hash);
     SetTextureLayerTint(
@@ -62,7 +63,7 @@ RegisterCommand(
     UpdatePedTexture(textureId);
 
     PVGame.finalizePedOutfit(playerPed);
-    console.log('DONE');
+    Log('DONE');
   },
   false,
 );
@@ -72,9 +73,9 @@ RegisterCommand(
   () => {
     const ped = PVGame.playerPed();
     const hatCategoryTint = paletteManager.getTintForCategory(ped, 'hats');
-    console.log('hatCategoryTint', hatCategoryTint);
+    Log('hatCategoryTint', hatCategoryTint);
     const coatCategoryTint = paletteManager.getTintForCategory(ped, 'coats');
-    console.log('coatCategoryTint', coatCategoryTint);
+    Log('coatCategoryTint', coatCategoryTint);
     emitUI('customization.state', { show: true, state: 'gender' });
     if (hatCategoryTint) {
       emitUI('customization.set-tint-by-category', 'hats', hatCategoryTint);
@@ -96,11 +97,11 @@ RegisterCommand(
   false,
 );
 
-// console.log('GetMetaPedAssetGuids', GetMetaPedAssetGuids(PVGame.playerPed(), 7));
+// Log('GetMetaPedAssetGuids', GetMetaPedAssetGuids(PVGame.playerPed(), 7));
 
 // @ts-ignore
 onUI('customization.tint-test', async (palette: string, tint0: number, tint1: number, tint2: number) => {
-  console.log('customization.tint-test', palette, tint0, tint1, tint2);
+  Log('customization.tint-test', palette, tint0, tint1, tint2);
 
   // const ped = 437506;
   // paletteManager.setTint(ped, palette, tint0, tint1, tint2);

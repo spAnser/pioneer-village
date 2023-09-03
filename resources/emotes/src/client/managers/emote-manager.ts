@@ -1,6 +1,7 @@
 import { PVGame } from '@lib/client';
 import { AnimFlag } from '@lib/flags';
 import { EmoteInterface, EMOTES } from '../data';
+import { Log } from '@lib/client/comms/ui';
 
 export class EmoteManager {
   protected static instance: EmoteManager;
@@ -39,10 +40,10 @@ export class EmoteManager {
     if (request === undefined) {
       // list all emotes
       const emotes = Object.keys(EMOTES);
-      console.log('Emote List: ', emotes);
+      Log('Emote List: ', emotes);
       return;
     }
-    console.log('Request: ', request.toLowerCase());
+    Log('Request: ', request.toLowerCase());
     if (request.toLowerCase() == 'c' || request.toLowerCase() == 'cancel') {
       this.cancelCurrentEmote();
     } else if (request.toLowerCase() in EMOTES) {
@@ -63,7 +64,7 @@ export class EmoteManager {
   }
 
   cancelCurrentEmote(): void {
-    console.log('Canceling emote');
+    Log('Canceling emote');
     ClearPedTasks(PVGame.playerPed());
     //ClearPedTasksImmediately(PVGame.playerPed, true, true)
   }
@@ -80,7 +81,7 @@ export class EmoteManager {
       return;
     }
     // Citizen.invokeNative('0xB31A277C1AC7B7FF', PVGame.playerPed, 0, 0, GetHashKey(emote.emote), true, true, false, false, false);
-    console.log('Emote: ', emote);
+    Log('Emote: ', emote);
     TaskPlayEmoteWithHash(
       PVGame.playerPed(),
       emote.category || 0,

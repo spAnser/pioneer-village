@@ -19,6 +19,7 @@ import { Vector3 } from '@lib/math';
 import { clamp, Delay, distanceVector, lerp } from '@lib/functions';
 import { DamageType, weapons } from '../data/weapons';
 import { AttachPoint, PedConfigFlag } from '@lib/flags';
+import { Log } from '@lib/client/comms/ui';
 
 const playerId = PlayerId();
 
@@ -216,7 +217,7 @@ export class HealthManager {
   }
 
   warmthTick(delta: number): void {
-    // console.log('LocalPlayer.state.temperature', LocalPlayer.state.temperature);
+    // Log('LocalPlayer.state.temperature', LocalPlayer.state.temperature);
     const targetWarmthLevel = Math.max(-1.0, lerp(10, 0, (this.temperature + 10) / 38));
     const warmthDelta = Math.min(Math.max(Math.abs(this.warmth - targetWarmthLevel), 0), 10);
     const isHot = this.warmth > targetWarmthLevel && warmthDelta > 3;
@@ -297,7 +298,7 @@ export class HealthManager {
         NetworkResurrectLocalPlayer(pCoords.x, pCoords.y, pCoords.z, pHeading, 0, false, 0, true);
         SetPedToRagdoll(this.playerPed, speed * 100, speed * 100);
         SetEntityVelocity(this.playerPed, velocity.x, velocity.y, velocity.z);
-        console.log('NetworkResurrectLocalPlayer');
+        Log('NetworkResurrectLocalPlayer');
         DecorSetInt(this.playerPed, 'CID', cid);
         DecorSetInt(this.playerPed, 'SEX', sex);
         DecorSetInt(this.playerPed, 'Inventory', inventory);
@@ -404,7 +405,7 @@ export class HealthManager {
           const chance = lerp(0.004, 0.0, boneHealth / 50.0);
           if (Math.random() < chance) {
             doScreenFx = true;
-            console.log('doScreenFx', doScreenFx);
+            Log('doScreenFx', doScreenFx);
           }
           if (boneHealth < 10.0 && !IsPedRagdoll(this.playerPed) && Math.random() < chance) {
             ragdollDuration = lerp(5000, 2000, boneHealth / 10.0);
@@ -438,7 +439,7 @@ export class HealthManager {
 
     if (doRagdoll) {
       SetPedToRagdoll(this.playerPed, ragdollDuration, ragdollDuration, 0, false, true, false);
-      console.log('doRagdoll');
+      Log('doRagdoll');
     }
 
     if (doScreenFx) {
@@ -472,7 +473,7 @@ export class HealthManager {
     this.stamina = 100.0;
     // SetAttributeCoreValue(this.playerPed, 1, this.stamina);
     for (const [boneName, boneInfo] of Object.entries(this.boneNames)) {
-      // console.log('set health/status', boneName, boneInfo.id);
+      // Log('set health/status', boneName, boneInfo.id);
       this.boneHealth.set(boneInfo.id, 100.0);
       this.boneStatus.set(boneInfo.id, {
         index: boneInfo.index,
@@ -576,7 +577,7 @@ export class HealthManager {
       return;
     }
 
-    // console.log(boneName, damagedBoneId, mpBoneHealth[boneName]);
+    // Log(boneName, damagedBoneId, mpBoneHealth[boneName]);
     const boneDamage = (1 + Math.random() * 2) * mpBoneHealth[boneName].multiplier * modifier;
     const newBoneHealth = boneHealth - boneDamage;
 
@@ -667,7 +668,7 @@ export class HealthManager {
     [boneName, boneId] = this.getRedirectBone(boneName, boneId);
     const currentDamaged = { [boneId]: true };
     let bones = { [boneName]: boneId };
-    console.log('boneName', boneName);
+    Log('boneName', boneName);
     for (let n = 0; n < 10; n++) {
       damage *= 0.666;
       if (damage >= 0.5) {
@@ -681,7 +682,7 @@ export class HealthManager {
               if (!currentDamaged[boneId]) {
                 currentDamaged[boneId] = true;
                 newBones[boneName] = boneId;
-                console.log(`Also Damage ${n} ${boneName} for: ${damage}`);
+                Log(`Also Damage ${n} ${boneName} for: ${damage}`);
                 this.checkForBoneDamage(damage, undefined, DamageType.FALL, undefined, undefined, boneId);
               }
             }
@@ -701,20 +702,20 @@ export class HealthManager {
       if (damageModifier > 3) {
         const newBones: Record<string, number> = {};
         for ([boneName, boneId] of Object.entries(bones)) {
-          // console.log(boneName, boneId);
+          // Log(boneName, boneId);
           const attachedTo = this.boneNames[boneName]?.attachedTo;
           if (attachedTo) {
             for (const attachedBoneName of attachedTo) {
               boneName = attachedBoneName;
               boneId = this.boneNames[attachedBoneName].id;
-              // console.log(`${n} ${boneName}`);
+              // Log(`${n} ${boneName}`);
               if (!currentDamaged[boneId]) {
                 currentDamaged[boneId] = true;
                 newBones[boneName] = boneId;
-                // console.log(
+                // Log(
                 //     `Also Damage ${n} ${boneName} for: ${(fallHeight + 1.0 - modifier) * (2.0 - modifier)}`,
                 // );
-                console.log(`Also Damage ${n} ${boneName} for: ${damageModifier}`);
+                Log(`Also Damage ${n} ${boneName} for: ${damageModifier}`);
                 this.checkForBoneDamage(damageModifier, undefined, DamageType.FALL, undefined, undefined, boneId);
               }
             }
@@ -874,7 +875,7 @@ export class HealthManager {
               const infectBoneStatus = this.boneStatus.get(infectBone.id);
 
               if (infectBoneStatus?.infected === false) {
-                console.log('Infect nearby bone:', infectBoneName);
+                Log('Infect nearby bone:', infectBoneName);
                 infectBoneStatus.infected = true;
               }
             }
@@ -993,15 +994,15 @@ export class HealthManager {
     SetPedDrunkness(this.playerPed, true, Math.min(this.alcoholContent.current, 0.999));
     // if (this.lastCustomWalk !== useCustomWalk) {
     //   this.lastCustomWalk = useCustomWalk;
-    //   // console.log(`SetPedDesiredLocoForModel(${this.playerPed}, 'default');`);
+    //   // Log(`SetPedDesiredLocoForModel(${this.playerPed}, 'default');`);
     //   if (useCustomWalk) {
     //     SetPedDesiredLocoForModel(this.playerPed, 'default');
     //     SetPedDesiredLocoMotionType(this.playerPed, useCustomWalk);
-    //     // console.log(`SetPedDesiredLocoMotionType(${this.playerPed}, ${useCustomWalk});`);
+    //     // Log(`SetPedDesiredLocoMotionType(${this.playerPed}, ${useCustomWalk});`);
     //   } else {
     //     ClearPedDesiredLocoForModel(this.playerPed);
     //     ClearPedDesiredLocoMotionType(this.playerPed);
-    //     // console.log(`ClearPedDesiredLocoMotionType(${this.playerPed});`);
+    //     // Log(`ClearPedDesiredLocoMotionType(${this.playerPed});`);
     //   }
     // }
   }
@@ -1040,8 +1041,8 @@ export class HealthManager {
       return;
     }
     let attackDistance = 0.0;
-    console.log('Attack distance:', attackDistance);
-    // console.log('handleEntityDamage', attacker, attacked, weaponHash, ammoHash, x, y, z);
+    Log('Attack distance:', attackDistance);
+    // Log('handleEntityDamage', attacker, attacked, weaponHash, ammoHash, x, y, z);
 
     const weaponStats = weapons[weaponHash] ?? weapons['DEFAULT'];
 
@@ -1051,7 +1052,7 @@ export class HealthManager {
       attackDistance = distanceVector(attackerCoord, attackedCoord);
     }
 
-    console.log(`Player hit by ${attacker} using ${weaponHash} ${weaponStats.name}`);
+    Log(`Player hit by ${attacker} using ${weaponHash} ${weaponStats.name}`);
 
     let damageModifier = weaponStats.modifier;
     let damageType = weaponStats.damageType;
@@ -1145,7 +1146,7 @@ export class HealthManager {
     const damagedByAnyVehicle = HasEntityBeenDamagedByAnyVehicle(this.playerPed);
     for (const [weaponHash, weaponName] of Object.entries(weapons)) {
         if (HasEntityBeenDamagedByWeapon(this.playerPed, weaponHash, 0)) {
-            console.log(0, weaponName);
+            Log(0, weaponName);
         }
     }
     if (damagedByAnyPed || damagedByAnyVehicle) {
@@ -1172,14 +1173,14 @@ export class HealthManager {
         // const byFire = HasEntityBeenDamagedByWeapon(this.playerPed, GetHashKey('WEAPON_FIRE'), 0);
         const isOnFire = IsEntityOnFire(this.playerPed);
 
-        // console.log('byMelee', byMelee);
-        // console.log('byGun', byGun);
-        // console.log('byFire', byFire);
-        // console.log('isOnFire', isOnFire);
+        // Log('byMelee', byMelee);
+        // Log('byGun', byGun);
+        // Log('byFire', byFire);
+        // Log('isOnFire', isOnFire);
 
         if (isOnFire) {
             this.burned += 1.0;
-            // console.log(this.burned);
+            // Log(this.burned);
         }
 
         let damageType = DamageType.DEFAULT;
@@ -1268,7 +1269,7 @@ export class HealthManager {
         this.ragdollLastDamagedBone = damagedBoneId;
       }
       const coords = Vector3.fromArray(GetEntityCoords(this.playerPed));
-      console.log('=== [JS] === Start Z: ', coords.z);
+      Log('=== [JS] === Start Z: ', coords.z);
       this.ragdollMaxZ = coords.z;
       this.ragdollLastZ = coords.z;
       this.isRagdolling = true;
@@ -1285,7 +1286,7 @@ export class HealthManager {
             this.ragdollDidDamage = true;
             const boneName = this.bones.get(damagedBoneId);
             if (boneName) {
-              console.log(`=== [JS] === Player hit bone ${boneName} for fall height of ${fallHeight}`);
+              Log(`=== [JS] === Player hit bone ${boneName} for fall height of ${fallHeight}`);
               this.checkForBoneDamage(fallHeight, true, DamageType.FALL);
               this.ragdollLastDamagedBone = damagedBoneId;
 
@@ -1298,7 +1299,7 @@ export class HealthManager {
         }
       } else if (this.isRagdolling) {
         if (!this.ragdollDidDamage) {
-          console.log('=== [JS] === Ragdoll ended and no damage occurred');
+          Log('=== [JS] === Ragdoll ended and no damage occurred');
         }
         const fallHeight = Math.abs(this.ragdollLastZ - coords.z);
         if (fallHeight > 4.0) {
@@ -1307,7 +1308,7 @@ export class HealthManager {
           this.ragdollDidDamage = true;
           const boneName = this.bones.get(damagedBoneId);
           if (boneName) {
-            console.log(`=== [JS] === Player hit bone ${boneName} for fall height of ${fallHeight}`);
+            Log(`=== [JS] === Player hit bone ${boneName} for fall height of ${fallHeight}`);
             this.checkForBoneDamage(fallHeight, true, DamageType.FALL);
 
             this.damageNearbyFromFall(boneName, damagedBoneId, fallHeight / 1.5);
@@ -1335,7 +1336,7 @@ export class HealthManager {
       // Ragdoll with ]
       const ragdollKeyDown = IsControlPressed(0, 'INPUT_FRONTEND_RS');
       if (ragdollKeyDown && this.canRagdollWithKey) {
-        console.log('Ragdoll Key Pressed');
+        Log('Ragdoll Key Pressed');
         SetPedToRagdoll(this.playerPed, 3000, 3000);
         this.canRagdollWithKey = false;
       } else if (!ragdollKeyDown && !this.canRagdollWithKey) {
@@ -1354,7 +1355,7 @@ export class HealthManager {
     const boneName = this.bones.get(damagedBoneId);
 
     if (boneName) {
-      console.log(`Player hit bone ${boneName} for fall height of ${fallHeight}`);
+      Log(`Player hit bone ${boneName} for fall height of ${fallHeight}`);
       this.checkForBoneDamage(fallHeight, true, DamageType.FALL);
       this.damageNearbyFromFall(boneName, damagedBoneId, fallHeight / 1.5);
     } else {
@@ -1369,7 +1370,7 @@ export class HealthManager {
         const boneStatus = this.boneStatus.get(bone.id);
         if (boneStatus && (boneStatus.shot > 0 || boneStatus.slash > 0 || boneStatus.burned) && !boneStatus.bandaged) {
           itemWasUsed = true;
-          console.log('Bandaging', name);
+          Log('Bandaging', name);
           boneStatus.bandaged = true;
           if (Math.random() < infectionChance) {
             boneStatus.infectedBySelf = true;
@@ -1389,7 +1390,7 @@ export class HealthManager {
         const boneStatus = this.boneStatus.get(bone.id);
         if (boneStatus?.broken && !boneStatus.stabilized) {
           itemWasUsed = true;
-          console.log('Splinting', name);
+          Log('Splinting', name);
           boneStatus.stabilized = true;
           break;
         }
@@ -1408,7 +1409,7 @@ export class HealthManager {
         const boneStatus = this.boneStatus.get(bone.id);
         if (boneStatus?.infected && !this.infectionStabilized) {
           itemWasUsed = true;
-          console.log('Anti-Infection', name);
+          Log('Anti-Infection', name);
           this.infectionStabilized = true;
           break;
         }

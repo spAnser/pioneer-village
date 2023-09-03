@@ -1,9 +1,10 @@
 import doorManager from '../managers/door-manager';
+import { Log } from '@lib/client/comms/ui';
 
 RegisterCommand(
   'door_closest',
   async () => {
-    console.log(doorManager.getClosestDoor());
+    Log(doorManager.getClosestDoor());
   },
   false,
 );

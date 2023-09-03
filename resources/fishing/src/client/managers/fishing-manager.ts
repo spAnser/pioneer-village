@@ -13,6 +13,7 @@ import {
   FishingStatus,
   FishSizeIndex,
 } from '../state/fishing-enums';
+import { Log } from '@lib/client/comms/ui';
 
 const weaponFishingrod = GetHashKey('WEAPON_FISHINGROD');
 
@@ -193,7 +194,7 @@ class FishingManager {
   }
 
   fishDecision(request: FishingRequest) {
-    console.log('fishDecision', request);
+    Log('fishDecision', request);
     const hookedFish = this.state.hookedEntity;
     this.madeDecision = true;
     PVPrompt.hide('fishing:keep-fish');
@@ -322,7 +323,7 @@ class FishingManager {
     // 1 Peds | 2 Vehicles | 3 Entities
     const itemsFound = FindObjectsInVolume(this.volumeArea, this.itemSet, 1);
 
-    // console.log('itemsFound', itemsFound);
+    // Log('itemsFound', itemsFound);
     if (itemsFound) {
       for (let i = itemsFound; i--; ) {
         const ped = GetIndexedItemInItemset(i, this.itemSet);
@@ -368,9 +369,9 @@ class FishingManager {
           this.splashAtFish(this.nibblingFish, (this.hookedFishInfo?.size ?? 4) + Math.random());
         }
 
-        console.log('Roll for Junk');
+        Log('Roll for Junk');
         if (Math.random() < this.junkChance) {
-          console.log('Caught Junk');
+          Log('Caught Junk');
           this.caughtJunk = true;
           SetEntityVisible(this.nibblingFish, false, false);
         }
@@ -478,7 +479,7 @@ class FishingManager {
 
     if (!this.caughtJunk && this.gameTimer - this.struggleStart > this.struggleDelay && this.nibblingFish) {
       this.state.shakeFightMultiplier = 5.0;
-      console.log('start struggle');
+      Log('start struggle');
       this.state.request = FishingRequest.FISH_STRUGGLING;
       this.struggleStart = this.gameTimer;
       this.isStruggling = true;
@@ -501,7 +502,7 @@ class FishingManager {
 
     if (this.isStruggling && this.gameTimer - this.struggleStart > this.struggleDuration && this.nibblingFish) {
       this.state.shakeFightMultiplier = 0;
-      console.log('stop struggle');
+      Log('stop struggle');
       this.state.request = FishingRequest.NONE;
       this.struggleStart = this.gameTimer;
       this.isStruggling = false;
@@ -533,7 +534,7 @@ class FishingManager {
         }
         SetEntityVisible(this.state.hookedEntity, false);
 
-        console.log('attached junk', this.attachedJunk, this.state.hookedEntity);
+        Log('attached junk', this.attachedJunk, this.state.hookedEntity);
         SetEntityHealth(this.state.hookedEntity, 0, this.playerPed);
         ChangeEntityHealth(this.state.hookedEntity, -200.0, this.playerPed, weaponFishingrod);
         PVGame.attachEntityToBoneIndex(
@@ -587,7 +588,7 @@ class FishingManager {
       duration: 3000,
     });
 
-    console.log('detach junk');
+    Log('detach junk');
     setImmediate(() => {
       DetachEntity(object, false, false);
       SetEntityCollision(object, true, true);
@@ -674,7 +675,7 @@ class FishingManager {
         !(keyAsNumber & FishingCodeSig.FISH_DIED_IN_UNHOOK) &&
         !(keyAsNumber & FishingCodeSig.IS_BOAT_FISHING)
       ) {
-        console.log(FishingCodeSig[keyAsNumber]);
+        Log(FishingCodeSig[keyAsNumber]);
       }
     });
 

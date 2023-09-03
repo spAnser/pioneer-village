@@ -9,24 +9,25 @@ const perform = (action: string, params: any = {}) =>
       'Content-Type': 'application/json; charset=UTF-8',
     },
     body: JSON.stringify(params),
-  }).then((resp: any) => resp.json())
+  }).then((resp: any) => resp.json());
 
-export const emitClient: UI.emitClient = (evtName, ...params) => perform('uiEvent', {
-  evtName,
-  params
-});
+export const emitClient: UI.emitClient = (evtName, ...params) =>
+  perform('uiEvent', {
+    evtName,
+    params,
+  });
 
 export const awaitClient: UI.awaitClient = async (evtName, ...params) => {
   console.log('performing ui request', evtName);
-  const { success, response} = await perform('uiRequest', {
+  const { success, response } = await perform('uiRequest', {
     evtName,
-    params
+    params,
   });
   if (!success) {
     throw new Error(response);
   }
   return response;
-}
+};
 
 export const onClient: UI.onClient = (evtName, callback) => {
   if (!eventListeners.has(evtName)) {
@@ -34,14 +35,14 @@ export const onClient: UI.onClient = (evtName, callback) => {
   }
   //@ts-ignore
   eventListeners.get(evtName)?.push(callback);
-}
+};
 
 export const onClientCall: UI.onClientCall = (evtName, callback) => {
   if (callListeners.has(evtName)) {
     throw new Error(`We already have an onClientCall registered for ${evtName}`);
   }
   callListeners.set(evtName, callback);
-}
+};
 
 //@ts-ignore
 window.addEventListener('message', async (msg: any) => {
@@ -53,7 +54,7 @@ window.addEventListener('message', async (msg: any) => {
       perform('uiResponse', {
         cId,
         success: false,
-        response: `Unable to find call listener for ${evtName}`
+        response: `Unable to find call listener for ${evtName}`,
       });
       return;
     }
@@ -68,7 +69,7 @@ window.addEventListener('message', async (msg: any) => {
     perform('uiResponse', {
       cId,
       success,
-      response
+      response,
     });
     return;
   }

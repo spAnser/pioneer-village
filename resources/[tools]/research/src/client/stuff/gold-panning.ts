@@ -14,9 +14,10 @@ import {
 import { AnimFlag } from '@lib/flags';
 import { Vector3 } from '@lib/math';
 import { Delay } from '@lib/functions';
+import { Log } from '@lib/client/comms/ui';
 
 // let bucket = PVGame.getChildEntity(1822722, 'bucket');
-// console.log('bucket', bucket);
+// Log('bucket', bucket);
 let bucket = 0;
 
 /*
@@ -60,7 +61,7 @@ on('gold:panning', async (goldCradleEntityId: number, parameters: any) => {
   SetEntityCollision(bucket, false, false);
 
   const pan = await PVGame.createObject(GetHashKey('P_CS_MININGPAN01X'), new Vector3(0, 0, 0), new Vector3(0, 0, 0));
-  // console.log('pan', pan);
+  // Log('pan', pan);
   PVGame.attachEntityToBoneName(pan, 'IK_R_HAND');
 
   // SetEntityCoords(PVGame.playerPed, coords.x, coords.y, coords.z, 0.0, 0.0, 0.0, false);
@@ -76,7 +77,7 @@ on('gold:panning', async (goldCradleEntityId: number, parameters: any) => {
       new Vector3(0, 0, 0),
       new Vector3(0, 0, 0),
     );
-    console.log('nuggetSize', nuggetSize, `P_GOLDNUGGET0${Math.ceil(4 - nuggetSize)}X`);
+    Log('nuggetSize', nuggetSize, `P_GOLDNUGGET0${Math.ceil(4 - nuggetSize)}X`);
 
     PVGame.attachEntityToBoneName(goldNugget, 'PH_R_HAND');
 
@@ -367,9 +368,7 @@ const returnBucket = async () => {
   const heading = GetEntityHeading(cradleEntity);
   const bucket = PVGame.getChildEntity(cradleEntity, 'bucket');
   FreezeEntityPosition(bucket, true);
-  console.log(
-    `SetEntityCoords(${bucket}, ${bucketCoords.x}, ${bucketCoords.y}, ${bucketCoords.z}, 0.0, 0.0, 0.0, false);`,
-  );
+  Log(`SetEntityCoords(${bucket}, ${bucketCoords.x}, ${bucketCoords.y}, ${bucketCoords.z}, 0.0, 0.0, 0.0, false);`);
   SetEntityCoords(bucket, bucketCoords.x, bucketCoords.y, bucketCoords.z, 0.0, 0.0, 0.0, false);
   SetEntityRotation(bucket, 0, 0, heading + 80, 2);
   await Delay(125);
@@ -438,10 +437,10 @@ const putdownBucket = async () => {
 };
 
 on('gold:panning:bucket-pickup', async (goldCradleEntityId: number, parameters: any) => {
-  console.log('gold:panning:bucket-pickup', goldCradleEntityId);
+  Log('gold:panning:bucket-pickup', goldCradleEntityId);
   cradleEntity = goldCradleEntityId;
   carryBucketEntity = PVGame.getChildEntity(goldCradleEntityId, 'bucket');
-  console.log('carryBucketEntity', carryBucketEntity);
+  Log('carryBucketEntity', carryBucketEntity);
   pickupBucket();
 });
 
@@ -576,7 +575,7 @@ RegisterCommand(
       },
       true,
     );
-    console.log('placed entity ids:', ids);
+    Log('placed entity ids:', ids);
   },
   false,
 );
@@ -585,7 +584,7 @@ RegisterCommand(
   'jcrun',
   async (source: number, args: string[]) => {
     const rtns = eval(args.join(' '));
-    console.log(rtns);
+    Log(rtns);
   },
   false,
 );

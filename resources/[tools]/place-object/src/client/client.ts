@@ -3,6 +3,7 @@ import './helpers';
 import { exports, PVInit, PVPrompt } from '@lib/client';
 
 import PlacementManager from './managers/placement-manager';
+import { Log } from '@lib/client/comms/ui';
 
 const placementManager = PlacementManager.getInstance();
 
@@ -10,8 +11,8 @@ RegisterCommand(
   'placeObject',
   async (source: number, args: string[]) => {
     const objects = await placementManager.queuePlaceObject(GetHashKey(args[0]), Number(args[1] || 1));
-    console.log('done placing objects');
-    console.log([...objects]);
+    Log('done placing objects');
+    Log(objects);
   },
   false,
 );
@@ -23,8 +24,8 @@ RegisterCommand(
     for (const arg of args) {
       allObjects.push(...(await placementManager.queuePlaceObject(GetHashKey(arg))));
     }
-    console.log('done placing objects');
-    console.log(allObjects);
+    Log('done placing objects');
+    Log(allObjects);
   },
   false,
 );
@@ -64,7 +65,7 @@ exports<'place-object'>('placeObjects', placeObjects);
 
 const registerPrompts = async () => {
   await PVInit.initializedResource('prompts');
-  console.log('place-object: registering prompts');
+  Log('place-object: registering prompts');
   PVPrompt.registerWithEvent('createHold', 'place-object::place', 0xcefd9220, 'Place Object');
 
   PVPrompt.registerWithEvent('createHold', 'place-object::ground', 0x760a9c6f, 'Un-Ground');

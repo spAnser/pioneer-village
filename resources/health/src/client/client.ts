@@ -8,7 +8,7 @@ import './misc/exports';
 import './misc/commands';
 
 import healthManager from './managers/health-manager';
-import { emitSocket } from '@lib/client/comms/ui';
+import { emitSocket, Log } from '@lib/client/comms/ui';
 
 const DEBUG = false;
 let characterSelected = false;
@@ -154,7 +154,7 @@ if (DEBUG) {
 // });
 
 onResourceInit('game', () => {
-  console.log('[HEALTH] onResourceInit(game)');
+  Log('[HEALTH] onResourceInit(game)');
   healthManager.init();
 
   SetAiMeleeWeaponDamageModifier(0.001);
@@ -185,7 +185,7 @@ onResourceInit('game', () => {
  */
 // setInterval(() => {
 //   const activePlayers = GetActivePlayers();
-//   console.log(activePlayers);
+//   Log(activePlayers);
 //
 //   for (const player of activePlayers) {
 //     const playerPed = GetPlayerPedScriptIndex(player);

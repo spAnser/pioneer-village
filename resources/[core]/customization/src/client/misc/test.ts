@@ -5,6 +5,7 @@ import horseDrawables from '../data/horse-drawables';
 import { PVBase, PVGame } from '@lib/client';
 import { Vector3 } from '@lib/math';
 import { Delay } from '@lib/functions';
+import { Log } from '@lib/client/comms/ui';
 
 const TagTypes = {
   ITEM_HAS_FOLDER_TAG: 1224357681,
@@ -26,17 +27,17 @@ RegisterCommand(
       const struct1 = new DataView(new ArrayBuffer(4));
       const struct2 = new DataView(new ArrayBuffer(4));
       const component = GetShopItemComponentAtIndex(entity, i, true, struct1, struct2);
-      console.log('struct1', struct1.getInt32(0, true));
-      console.log('struct2', struct2.getInt32(0, true));
+      Log('struct1', struct1.getInt32(0, true));
+      Log('struct2', struct2.getInt32(0, true));
       const componentCategory = GetPedComponentCategory(component, metaPedType, true);
       // if (componentCategory !== 1606587013) {
       //   continue
       // }
       components.push(component);
       if (componentCategories.has(componentCategory)) {
-        console.log(i, component, componentCategories.get(componentCategory));
+        Log(i, component, componentCategories.get(componentCategory));
       } else {
-        console.log(i, component, componentCategory, '=================');
+        Log(i, component, componentCategory, '=================');
       }
       const struct3 = new DataView(new ArrayBuffer(512));
       ItemdatabaseFilloutItemInfo(component, struct3); // _ITEM_DATABASE_FILLOUT_ITEM_INFO
@@ -44,7 +45,7 @@ RegisterCommand(
       // ItemdatabaseFilloutUiData(component, struct3);
       // for (const [tagHash, tagName] of itemTags.entries()) {
       //   if (ItemdatabaseDoesItemHaveTag(component, tagHash, TagTypes.ITEM_HAS_PROPERTY_TAG)) {
-      //     console.log('itemTag', tagHash, tagName);
+      //     Log('itemTag', tagHash, tagName);
       //   }
       // }
       const ints = [];
@@ -59,7 +60,7 @@ RegisterCommand(
           ints.push(intStr);
         }
       }
-      console.log(ints);
+      Log(ints);
       const struct4 = new DataView(new ArrayBuffer(8));
       ItemdatabaseFilloutTagData(component, struct3, struct4, 20); // _ITEM_DATABASE_FILLOUT_TAG_DATA
       const tagCount = struct4.getInt32(0, true);
@@ -69,14 +70,14 @@ RegisterCommand(
         const ret = Citizen.invokeNative('0x5A11D6EEA17165B0', component, var0, var1, 20) as boolean;
         if (ret) {
           const tagCount = var1.getUint32(0, true);
-          // console.log(tagCount, buf2hex(var0.buffer));
+          // Log(tagCount, buf2hex(var0.buffer));
           let offset = 8;
           for (let t = tagCount; t--; ) {
             const tagHash = var0.getInt32(offset, true);
             offset += 8;
             const tagCategory = var0.getInt32(offset, true);
             offset += 8;
-            console.log(`Tag${tagCount - t}:`, tagCategory, tagHash, itemTags.get(tagHash));
+            Log(`Tag${tagCount - t}:`, tagCategory, tagHash, itemTags.get(tagHash));
           }
         }
       }
@@ -95,9 +96,9 @@ RegisterCommand(
     for (let i = componentCount; i--; ) {
       const componentCategory = GetCategoryOfComponentAtIndex(entity, i);
       if (componentCategories.has(componentCategory)) {
-        console.log(i, componentCategories.get(componentCategory));
+        Log(i, componentCategories.get(componentCategory));
       } else {
-        console.log(i, componentCategory);
+        Log(i, componentCategory);
       }
     }
   },
@@ -113,9 +114,9 @@ RegisterCommand(
     for (let i = componentCount; i--; ) {
       const [drawable, albedo, normal, material] = GetMetaPedAssetGuids(entity, i);
       if (horseDrawables[drawable]) {
-        console.log(`guids[${i}]`, horseDrawables[drawable], drawable, albedo, normal, material);
+        Log(`guids[${i}]`, horseDrawables[drawable], drawable, albedo, normal, material);
       } else {
-        console.log(`guids[${i}]`, drawable, albedo, normal, material);
+        Log(`guids[${i}]`, drawable, albedo, normal, material);
       }
     }
   },
@@ -279,7 +280,7 @@ RegisterCommand(
 //     const forward = Vector3.fromArray(GetEntityForwardVector(PlayerPedId()));
 //     coords.add(forward.multiplyScalar(5));
 //     for (const model of horseModels) {
-//       console.log('model', model);
+//       Log('model', model);
 //       const horse = await PVGame.createPed(model, coords.x, coords.y, coords.z);
 //       await Delay(500);
 //
@@ -288,16 +289,16 @@ RegisterCommand(
 //       for (let i = componentCount; i--; ) {
 //         const [drawable, albedo, normal, material] = GetMetaPedAssetGuids(horse, i);
 //         if (horseDrawables[drawable]) {
-//           // console.log(`guids[${i}]`, horseDrawables[drawable], drawable, albedo, normal, material);
+//           // Log(`guids[${i}]`, horseDrawables[drawable], drawable, albedo, normal, material);
 //         } else if (drawable !== 505041967 && drawable !== 1410957448) {
-//           console.log(`guids[${i}]`, drawable, albedo, normal, material);
+//           Log(`guids[${i}]`, drawable, albedo, normal, material);
 //         }
 //       }
 //
 //       await Delay(125);
 //       PVBase.deleteEntity(horse);
 //     }
-//     console.log('! DONE !');
+//     Log('! DONE !');
 //   },
 //   false,
 // );

@@ -5,7 +5,7 @@ import gameManager from './managers/game-manager';
 import { spawnCharacters } from './controllers/character-select';
 
 import './exports';
-import { emitSocket } from '@lib/client/comms/ui';
+import { emitSocket, Log } from '@lib/client/comms/ui';
 
 let shouldHideLoadscreen = false;
 let firstRun = true;
@@ -83,8 +83,8 @@ const initTick = setTick(() => {
 });
 
 onUI('socket.connected', async () => {
-  console.log('socket.connected');
-  // console.log('socket.connected', PVGame.getCurrentCharacter(), !PVGame.getCurrentCharacter());
+  Log('socket.connected');
+  // Log('socket.connected', PVGame.getCurrentCharacter(), !PVGame.getCurrentCharacter());
   const character = PVGame.getCurrentCharacter();
   if (character) {
     const steamId = await PVGame.getPlayerSteamId();
@@ -96,7 +96,7 @@ onUI('socket.connected', async () => {
 
 on('game:client:new_character', async (characterData: Game.Character, faceData: Game.Face) => {
   DoScreenFadeOut(500);
-  console.log(characterData);
+  Log(characterData);
   await awaitUI('createCharacter', characterData, faceData);
   characterSelection();
   // TODO: This step will be unnecessary when custimization UI is ported to new UI system.

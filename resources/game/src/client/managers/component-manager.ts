@@ -1,3 +1,5 @@
+import { Log } from '@lib/client/comms/ui';
+
 const componentFiles = [
   '2886757168',
   'accessories',
@@ -96,7 +98,7 @@ class ComponentManager {
     //     this.components.set(componentData.component << 0, componentData);
     //   }
     // }
-    console.log(`Loaded ${this.components.size} components`);
+    Log(`Loaded ${this.components.size} components`);
   }
 
   getById(id: number): Component | undefined {

@@ -2,6 +2,7 @@ import { exports } from '@lib/client';
 
 import { Vector3 } from '@lib/math/vector3';
 import { emitUI } from '@lib/client';
+import { Log } from '@lib/client/comms/ui';
 
 let active = false;
 let lastFov = 0;
@@ -86,7 +87,7 @@ RegisterCommand(
   async (source: number, args: string[]) => {
     const model = GetHashKey(args[0]);
     if (!IsModelValid(model)) {
-      console.log('invalid model');
+      Log('invalid model');
       return;
     }
 
@@ -94,7 +95,7 @@ RegisterCommand(
     const coords = GetEntityCoords(PlayerPedId(), true);
     const entity = CreateObject(model, coords[0] + 1, coords[1], coords[2] - 1.0, true, true, false);
     SetEntityRotation(entity, 0.0, 0.0, 0.0, 2, false);
-    console.log('spawned', entity);
+    Log('spawned', entity);
   },
   false,
 );

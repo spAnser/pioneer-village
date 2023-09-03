@@ -4,6 +4,7 @@ import { AnimFlag } from '@lib/flags';
 import { Delay } from '@lib/functions';
 
 import healthManager from '../managers/health-manager';
+import { Log } from '@lib/client/comms/ui';
 
 RegisterCommand(
   'melee',
@@ -128,7 +129,7 @@ RegisterCommand(
 
       if (screenCoords[0]) {
         const boneStatus = healthManager.boneStatus.get(bone.id);
-        console.log('boneStatus', boneStatus);
+        Log('boneStatus', boneStatus);
         if (!boneStatus) {
           continue;
         }
@@ -148,7 +149,7 @@ RegisterCommand(
       }
     }
 
-    console.log({ show: true, entity: playerPed, boneStatus: uiBones });
+    Log({ show: true, entity: playerPed, boneStatus: uiBones });
 
     emitUI('doctor.state', { show: true, entity: playerPed, boneStatus: uiBones });
     focusUI(true, true);

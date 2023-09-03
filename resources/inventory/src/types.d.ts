@@ -17,6 +17,7 @@ declare namespace Inventory {
     OnlySmall = 1,
     OnlyFood = 2,
     OnlyAmmo = 4,
+    Clothing = 5,
   }
 
   interface Type {

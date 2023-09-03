@@ -16,7 +16,7 @@ export const onServerCall: onServerCall = (evtName, callback) => {
 
     emitNet(`rpc:${originResource}:response`, callId, success, response);
   });
-}
+};
 
 export const emitServer: emitServer = emitNet;
 export const onServer: onServer = onNet;
@@ -29,8 +29,8 @@ export const awaitServer: awaitServer = (evtName, ...args) => {
       resolve,
       reject,
       timeout: setTimeout(() => {
-        reject(new Error(`RPC call timeout to server with event ${evtName}`))
-      }, 10e3)
+        reject(new Error(`RPC call timeout to server with event ${evtName}`));
+      }, 10e3),
     });
   });
   promise.finally(() => {

@@ -1,3 +1,5 @@
+import { Log } from '@lib/client/comms/ui';
+
 export default class Horse {
   id: number;
   name: string;
@@ -66,6 +68,6 @@ export default class Horse {
   }
 
   save() {
-    console.log(`Saving Horse: ${this.name}`);
+    Log(`Saving Horse: ${this.name}`);
   }
 }

@@ -11,4 +11,13 @@ export default (prisma: PrismaClient) => {
       });
     });
   });
+
+  // setInterval(() => {
+  //   userNamespace.emit('chatMessage', {
+  //     channel: 'general',
+  //     sender: 'Server',
+  //     text: `Hello world! ${Math.random()}`,
+  //     id: 0,
+  //   });
+  // }, 1000);
 };

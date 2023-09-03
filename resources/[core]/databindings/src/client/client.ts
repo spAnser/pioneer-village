@@ -3,6 +3,7 @@ import { exports } from '@lib/client';
 import DataManager from './managers/data-manager';
 import { PVGame } from '@lib/client';
 import { Delay } from '@lib/functions';
+import { Log } from '@lib/client/comms/ui';
 
 const bindRootData: Databindings.bindRootData = (index, data) => {
   DataManager.bindRootData(index, data);
@@ -415,11 +416,7 @@ RegisterCommand(
       };
 
       for (const [key, value] of Object.entries(datas)) {
-        console.log(
-          `data[${key}]`,
-          value,
-          Object.keys(UIScriptEventType)[Object.values(UIScriptEventType).indexOf(value)],
-        );
+        Log(`data[${key}]`, value, Object.keys(UIScriptEventType)[Object.values(UIScriptEventType).indexOf(value)]);
       }
     }
   },

@@ -12,6 +12,8 @@ declare interface UISocketEvents {
   ['doors.set-door-state']: (doorHash: number, state: number) => void;
   ['character-client-update.getCharacter']: (character: string) => void;
   ['character-client-update.updateAttribute']: (attr: keyof CharacterData, newVal: any) => void;
+
+  ['log.message']: (data: UI.Log.Data) => void;
 }
 
 declare module '*.svg' {
@@ -361,6 +363,29 @@ declare namespace UI.CharacterSelect {
 
   interface State extends UI.BaseState {
     characters: CharacterData[];
+  }
+
+  type Event = Partial<State>;
+}
+
+declare namespace UI.Log {
+  type Data = { resource: string; message: string };
+
+  type Source = 'server' | 'client';
+
+  type LogData = {
+    source: Source;
+  } & Data;
+
+  type ColorData = { h: number; s: number; l: number; hsl: string };
+
+  interface State extends UI.BaseState {
+    autoScroll: boolean;
+    scrollOverride: number;
+    filter: Set<string>;
+    reverseFilter: Set<string>;
+    messages: LogData[];
+    colors: Record<string, ColorData>;
   }
 
   type Event = Partial<State>;

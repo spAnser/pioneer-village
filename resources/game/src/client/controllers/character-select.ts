@@ -5,7 +5,7 @@ import { PVBase, PVCamera } from '@lib/client';
 import { Vector3 } from '@lib/math/vector3';
 import { AnimFlag } from '@lib/flags';
 import { emitUI, onUI } from '@lib/client';
-import { emitSocket, focusUI } from '@lib/client/comms/ui';
+import { emitSocket, focusUI, Log } from '@lib/client/comms/ui';
 import { Delay } from '@lib/functions';
 
 import gameManager from '../managers/game-manager';
@@ -122,7 +122,7 @@ const cleanupCharacters = () => {
   });
   focusUI(false, false);
   PVCamera.setInactive('character-select', 0);
-  console.log([...spawnedPeds.values()]);
+  Log([...spawnedPeds.values()]);
   PVBase.deleteEntities([...spawnedPeds.values()]);
   spawnedPeds.clear();
 };
@@ -185,7 +185,7 @@ const spawnCharacter = async (
 
   await gameManager.pedIsReadyToRender(ped);
 
-  console.log('spawned', character.id, ped);
+  Log('spawned', character.id, ped);
 
   SetRandomOutfitVariation(ped, true);
   FreezeEntityPosition(ped, true);
@@ -271,7 +271,7 @@ export const spawnCharacters = async (characters: Game.Character[]): Promise<UI.
 let currentCharacter: Game.Character | undefined;
 
 onUI('character-select.choose', async (characterId) => {
-  console.log('character-select.choose', characterId);
+  Log('character-select.choose', characterId);
   const steam = await PVGame.getPlayerSteamId();
   const character = playerCharacters.get(characterId);
   if (!character) {
@@ -290,7 +290,7 @@ onUI('character-select.choose', async (characterId) => {
   cleanupCharacters();
 
   emit('game:character-selected', characterId);
-  // console.log('game:character-selected');
+  // Log('game:character-selected');
   await gameManager.collisionLoadedAtEntity(playerPed);
   await Delay(1000);
   await characterSpawn.setCoords(new Vector3().setFromArray([character.lastX, character.lastY, character.lastZ]));
@@ -298,7 +298,7 @@ onUI('character-select.choose', async (characterId) => {
 });
 
 onUI('character-select.create', () => {
-  // console.log('character-select.create');
+  // Log('character-select.create');
   emit('customization:client:character_creation');
   cleanupCharacters();
 });

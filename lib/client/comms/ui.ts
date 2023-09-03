@@ -87,3 +87,37 @@ on('onResourceStart', (resource: string) => {
   //@ts-ignore
   focusBuffer.forEach((params) => exports['ui'].focusBuffer(...params));
 });
+
+// TODO: Replace this
+const DEV_ENV = true;
+export const Log = (...messages: any[]) => {
+  if (DEV_ENV) {
+    emitUI('log.message', {
+      resource: GetCurrentResourceName(),
+      message: messages
+        .map((item) => {
+          if (typeof item === 'object') {
+            return JSON.stringify(item, null, 2);
+          }
+          return item;
+        })
+        .join(' '),
+    });
+  }
+};
+export const LogExtra = (...messages: any[]) => {
+  console.log(...messages);
+  if (DEV_ENV) {
+    emitUI('log.message', {
+      resource: GetCurrentResourceName(),
+      message: messages
+        .map((item) => {
+          if (typeof item === 'object') {
+            return JSON.stringify(item, null, 2);
+          }
+          return item;
+        })
+        .join(' '),
+    });
+  }
+};

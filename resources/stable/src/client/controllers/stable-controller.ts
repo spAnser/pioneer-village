@@ -1,6 +1,6 @@
 import Horse from '../classes/horse';
 import Stable from '../classes/stable';
-import { awaitUI } from '@lib/client/comms/ui';
+import { awaitUI, Log } from '@lib/client/comms/ui';
 import { onResourceInit, PVBase, PVGame, PVInit } from '@lib/client';
 import { Delay } from '@lib/functions';
 import { PedConfigFlag } from '@lib/flags';
@@ -39,16 +39,16 @@ class StableController {
   }
 
   async loadHorses(characterId: number) {
-    console.log('[STABLE] Load Horses Started');
+    Log('Load Horses Started');
     PVInit.register('stable::load-hoses', { reset: true });
     const horses = await awaitUI('stable.load-character-horses', characterId);
     for (const horse of horses) {
-      // console.log('horse', horse);
+      // Log('horse', horse);
       this._horses.set(horse.id, new Horse(horse));
       this._stabledHorses.set(horse.id, horse.stable || '');
     }
     PVInit.resolve('stable::load-hoses');
-    console.log('[STABLE] Load Horses Finished');
+    Log('Load Horses Finished');
   }
 
   addStable(data: Stable.Data): void {
@@ -71,7 +71,7 @@ class StableController {
 
   async enterStable(stableId: Stable.Id): Promise<void> {
     if (this._currentStable === stableId) {
-      console.log('[STABLE] Already in stable');
+      Log('Already in stable');
       return;
     }
 
@@ -80,7 +80,7 @@ class StableController {
     const stable = this.getById(stableId);
 
     if (!stable) {
-      console.log('[STABLE] Stable not found');
+      Log('Stable not found');
       return;
     }
 
@@ -90,15 +90,15 @@ class StableController {
 
     const characterId = PVGame.getCurrentCharacter().id;
 
-    console.log('characterId', characterId);
+    Log('characterId', characterId);
 
     if (!characterId) {
-      console.log('[STABLE] Character not found');
+      Log('Character not found');
       return;
     }
 
     await PVInit.initialized('stable::load-hoses');
-    console.log('[STABLE] Spawn Horses');
+    Log('Spawn Horses');
 
     const characterHorsePeds = stableHorsePeds.get(characterId) || new Set<number>();
 
@@ -193,12 +193,12 @@ class StableController {
     // }
     // this._spawningHorse.set(horse.id, true);
 
-    console.log('spawning horse', horse.name);
+    Log('spawning horse', horse.name);
 
     const playerPed = PVGame.playerPed();
     const characterId = PVGame.getCurrentCharacter()?.id;
     if (!characterId) {
-      console.log('Error no character');
+      Log('Error no character');
       return 0;
     }
 
@@ -239,7 +239,7 @@ class StableController {
       SetAttributePoints(horsePed, 7, horse.statBonding[characterId]);
     }
 
-    // console.log('spawnedHorse', horsePed);
+    // Log('spawnedHorse', horsePed);
 
     await Delay(1);
     await PVGame.pedIsReadyToRender(horsePed);
@@ -257,10 +257,10 @@ class StableController {
     await Delay(100);
 
     if (horse.gender === 'MALE') {
-      console.log('Set Horse Face Features to Male');
+      Log('Set Horse Face Features to Male');
       SetPedFaceFeature(horsePed, 0xa28b, 0.0); // Default
     } else if (horse.gender === 'FEMALE') {
-      console.log('Set Horse Face Features to Female');
+      Log('Set Horse Face Features to Female');
       SetPedFaceFeature(horsePed, 0xa28b, 1.0);
     }
     // HORSE_EQUIPMENT_MALE_GENITALS
@@ -271,9 +271,9 @@ class StableController {
     await Delay(50);
 
     for (const component of horse.components) {
-      // console.log('component', component);
+      // Log('component', component);
       const componentData = PVGame.getComponentById(component);
-      // console.log('componentData', componentData);
+      Log('componentData', componentData);
       ApplyShopItemToPed(horsePed, component, false, componentData?.isMp || false, false); // _SET_PED_COMPONENT_ENABLED
       await Delay(1);
     }

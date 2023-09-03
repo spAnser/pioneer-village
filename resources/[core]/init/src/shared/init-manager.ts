@@ -1,3 +1,5 @@
+import { Log } from '@lib/client/comms/ui';
+
 class InitManager {
   protected static instance: InitManager;
 
@@ -31,13 +33,13 @@ class InitManager {
     });
 
     on('onResourceStart', (resourceName: string) => {
-      console.log('!!!!!!!!!!!!!! onResourceStart', resourceName);
+      Log('onResourceStart', resourceName);
       this.registerResource(resourceName);
     });
 
     on('onResourceStop', (resourceName: string) => {
       if (!this._initializedResources.has(`${this._resourcePrefix}${resourceName}`)) {
-        console.log('!!!!!!!!!!!!!! onResourceStop', resourceName);
+        Log('onResourceStop', resourceName);
         this.rejectResource(resourceName);
         this.registerResource(resourceName, { reset: true });
       }
@@ -57,7 +59,7 @@ class InitManager {
         this._initializedRejector.set(name, reject);
       });
       promise.catch(() => {
-        console.log('[INIT] Catch', name);
+        Log('Catch', name);
       });
       this._initialized.set(name, promise);
 
@@ -89,7 +91,7 @@ class InitManager {
 
   resolve: Init.resolve = (name) => {
     if (this._initializedResolver.has(name)) {
-      console.log('[Init] Resolving', name);
+      Log('Resolving', name);
       // @ts-ignore
       this._initializedResolver.get(name)();
       this._initializedResolver.delete(name);
@@ -99,7 +101,7 @@ class InitManager {
   };
 
   resolveResource: Init.resolveResource = (resourceName) => {
-    console.log('!!!!!!!!!!!!!! resolveResource', resourceName);
+    Log('resolveResource', resourceName);
     this.resolve(`${this._resourcePrefix}${resourceName}`);
   };
 

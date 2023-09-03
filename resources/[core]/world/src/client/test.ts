@@ -2,9 +2,10 @@ import { Vector3 } from '@lib/math';
 import worldController from './controllers/world-controller';
 import { onResourceInit, PVGame, PVTarget } from '@lib/client';
 import { Delay } from '@lib/functions';
+import { Log } from '@lib/client/comms/ui';
 
 const registerTargets = () => {
-  console.log('register targets');
+  Log('register targets');
   PVTarget.AddTarget({
     id: 'open_cellar',
     type: 'model',
@@ -21,8 +22,8 @@ const registerTargets = () => {
     options: {
       distance: 3.0,
       isEnabled(data) {
-        // console.log('isEnabled', data);
-        // console.log('serial::cellar-door-open', worldController.stateBool.get('serial::cellar-door-open'));
+        // Log('isEnabled', data);
+        // Log('serial::cellar-door-open', worldController.stateBool.get('serial::cellar-door-open'));
         return !(worldController.stateBool.get('serial::cellar-door-open') || false);
       },
     },
@@ -43,8 +44,8 @@ const registerTargets = () => {
     options: {
       distance: 3.0,
       isEnabled(data) {
-        // console.log('isEnabled', data);
-        // console.log('serial::cellar-door-open', worldController.stateBool.get('serial::cellar-door-open'));
+        // Log('isEnabled', data);
+        // Log('serial::cellar-door-open', worldController.stateBool.get('serial::cellar-door-open'));
         return worldController.stateBool.get('serial::cellar-door-open') || false;
       },
     },
@@ -56,7 +57,7 @@ worldController.stateBool.set('serial::cellar-door-open', false);
 onResourceInit('target', registerTargets);
 
 on('world:client:open-cellar', (pEntity: number, pArgs: Record<string, any>) => {
-  console.log('world:client:open-cellar', pEntity, pArgs);
+  Log('world:client:open-cellar', pEntity, pArgs);
   worldController.stateBool.set('serial::cellar-door-open', true);
   const animDict = 'script_rc@sklr@ig@ig1_opendoor';
   const animOffset = { x: -0.03258881, y: -1.82538, z: 0.7651197 };
@@ -64,8 +65,8 @@ on('world:client:open-cellar', (pEntity: number, pArgs: Record<string, any>) => 
   const doorLeft = worldController.getEntity('serial::cellar-door-l');
   const doorRight = worldController.getEntity('serial::cellar-door-r');
 
-  console.log('doorLeft', doorLeft);
-  console.log('doorRight', doorRight);
+  Log('doorLeft', doorLeft);
+  Log('doorRight', doorRight);
 
   if (!doorLeft || !doorRight) {
     return;

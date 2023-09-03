@@ -1,5 +1,6 @@
 import { Vector3 } from '@lib/math/vector3';
 import { Delay } from '@lib/functions';
+import { Log } from '@lib/client/comms/ui';
 
 class CameraManager {
   protected static instance: CameraManager;
@@ -27,7 +28,7 @@ class CameraManager {
 
   destruct(): void {
     for (const [id, cam] of this.cameras.entries()) {
-      console.log(`Destroying camera ${id} (${cam})`);
+      Log(`Destroying camera ${id} (${cam})`);
       DestroyCam(cam, false);
       this.cameras.delete(id);
     }
@@ -36,7 +37,7 @@ class CameraManager {
   create(data: Camera.Data): number {
     const existingCamera = this.cameras.get(data.id);
     if (existingCamera) {
-      console.log(`Camera ${data.id} already exists`);
+      Log(`Camera ${data.id} already exists`);
       return existingCamera;
     }
 
@@ -48,11 +49,11 @@ class CameraManager {
       data._type = GetHashKey(data._type);
     }
     const camera = CreateCamera(data._type, false);
-    console.log(`CreateCamera(${data._type}, false) | ${camera}`);
+    Log(`CreateCamera(${data._type}, false) | ${camera}`);
     SetCamCoord(camera, data.coords.x, data.coords.y, data.coords.z);
     SetCamRot(camera, data.rot.x, data.rot.y, data.rot.z, 2);
     SetCamFov(camera, data.fov);
-    console.log(data.id, camera);
+    Log(data.id, camera);
     this.cameras.set(data.id, camera);
     return camera;
   }
@@ -107,7 +108,7 @@ class CameraManager {
     if (!this.has(id)) {
       return;
     }
-    console.log(`DestroyCam(${this.get(id)}, false);`);
+    Log(`DestroyCam(${this.get(id)}, false);`);
     DestroyCam(this.get(id), false);
     this.cameras.delete(id);
   }
@@ -117,7 +118,7 @@ class CameraManager {
       return;
     }
     const cam = this.get(id);
-    console.log(`SetCamActive(${cam}, true);`);
+    Log(`SetCamActive(${cam}, true);`);
     SetCamActive(cam, true);
     RenderScriptCams(true, easeTime > 0, easeTime, true, false, 0);
     this.activeCam = cam;
@@ -131,7 +132,7 @@ class CameraManager {
       return;
     }
     const cam = this.get(id);
-    console.log(`SetCamActive(${cam}, false);`);
+    Log(`SetCamActive(${cam}, false);`);
     SetCamActive(cam, false);
     RenderScriptCams(false, false, easeTime, false, false, 0);
     if (this.activeCam === cam) {

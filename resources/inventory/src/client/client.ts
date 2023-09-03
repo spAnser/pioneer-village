@@ -3,16 +3,17 @@ import items from '@lib/shared/items';
 import './keybinds';
 import './weapons';
 import { Delay } from '@lib/functions';
+import { Log } from '@lib/client/comms/ui';
 
 onUI('inventory.use-item', (itemData: UI.Inventory.ItemData) => {
-  // console.log(itemData);
+  // Log(itemData);
   const item = items[itemData.identifier];
   if (!item || !item.useEvent) {
     console.warn(`Item doesn't exist ${itemData.identifier}`);
     return;
   }
 
-  console.log('Emitting event', item.useEvent);
+  Log('Emitting event', item.useEvent);
   emit(item.useEvent, item, itemData);
 });
 
@@ -65,7 +66,7 @@ onUI('inventory.main-inventory', (data) => {
     const item = items[slot.identifier];
 
     if (!item) {
-      console.log(GetHashKey('PV_DOOR_KEY'), GetHashKey('PV_DOOR_KEY') >>> 0, slot.identifier);
+      Log(GetHashKey('PV_DOOR_KEY'), GetHashKey('PV_DOOR_KEY') >>> 0, slot.identifier);
       continue;
     }
 
