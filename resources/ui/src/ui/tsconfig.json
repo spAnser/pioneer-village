@@ -37,6 +37,7 @@
     "../../../*/rdr3-shared/types/*.d.ts",
     "../../../**/src/types.d.ts",
     "../../../**/src/client/types.d.ts",
-    "../../../../socket/src/types.d.ts"
+    "../../../../socket/src/types.d.ts",
+    "../../../../socket/src/types/*.d.ts"
   ]
 }

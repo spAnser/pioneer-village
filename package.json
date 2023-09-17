@@ -8,7 +8,7 @@
   },
   "scripts": {
     "download-server": "cd artifacts && node download.js",
-    "start": "./artifacts/6624/FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1436",
+    "start": "./artifacts/6624/FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1491",
     "watch": "lerna run watch --stream --parallel",
     "build": "lerna run build --stream --parallel",
     "prettier": "lerna run prettier --stream --parallel",

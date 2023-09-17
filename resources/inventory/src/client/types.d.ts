@@ -12,6 +12,11 @@ declare interface UIEvents {
   ['inventory.items']: (items: Record<number, Inventory.UIItem>) => void;
   ['inventory.use-slot']: (slot: number) => void;
   ['inventory.use-item']: (itemData: UI.Inventory.ItemData) => void;
+  ['inventory.clothing-change']: (equippedItems: UI.Inventory.ItemData[]) => void;
   ['inventory.main-inventory']: (data: UI.Inventory.LoadData) => void;
   ['inventory.target-inventory']: (data: UI.Inventory.LoadData) => void;
+}
+
+declare interface SocketForwardEvents {
+  ['inventory.item-wear']: (itemId: number) => void;
 }

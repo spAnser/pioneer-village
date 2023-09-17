@@ -11880,8 +11880,8 @@ global.N_0x0d7fd6a55fd63aef = function (p0, p1, p2) {
   return _in(0x0d7fd6a5, 0x5fd63aef, p0, p1, p2);
 };
 
-global.N_0x0d7ffa1b2f69ed82 = function (p0, p1, p2, p3) {
-  return _in(0x0d7ffa1b, 0x2f69ed82, p0, p1, p2, p3);
+global.RemoveShopItemFromPed = function (ped, componentHash, p2, p3) {
+  return _in(0x0d7ffa1b, 0x2f69ed82, ped, componentHash, p2, p3);
 };
 
 global.N_0x0db41d59e0f1502b = function (p0) {
@@ -15999,8 +15999,8 @@ global.N_0x59b57c4b06531e1e = function (p0, p1, p2, p3, p4, p5) {
   return _in(0x59b57c4b, 0x06531e1e, p0, p1, p2, p3, p4, p5, _r, _ri);
 };
 
-global.N_0x59bd177a1a48600a = function (p0, p1) {
-  return _in(0x59bd177a, 0x1a48600a, p0, p1);
+global.RefreshMetaPedShopItems = function (ped, p1) {
+  return _in(0x59bd177a, 0x1a48600a, ped, p1);
 };
 
 global.N_0x59c7ad6fea2ac449 = function (p0, p1, p2, p3) {
@@ -27572,8 +27572,8 @@ global.RemoveShockingEventSpawnBlockingAreas = function () {
   return _in(0xdb249021, 0x652420c5);
 };
 
-global.RemoveShopItemFromPedByCategory = function (p0, p1, p2, p3) {
-  return _in(0xdf631e4b, 0xce1b1fc4, p0, p1, p2, p3);
+global.RemoveShopItemFromPedByCategory = function (ped, componentCategory, p2, p3) {
+  return _in(0xdf631e4b, 0xce1b1fc4, ped, componentCategory, p2, p3);
 };
 
 /**

@@ -16,7 +16,7 @@ model Accounts {
   identifier_discord String?      @unique
   identifier_ip      String?
   createdAt          DateTime     @default(now())
-  updatedAt          DateTime     @updatedAt
+  updatedAt          DateTime?    @updatedAt
   bannedAt           DateTime?
   role               Role         @default(USER)
   characters         Characters[]
@@ -187,6 +187,7 @@ model Item {
   identifier  Int
   slot        Int?
   container   Container @relation(fields: [containerId], references: [id])
+  durability  Int?
 }
 
 model Door {

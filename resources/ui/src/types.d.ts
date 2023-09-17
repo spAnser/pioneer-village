@@ -4,7 +4,10 @@ declare interface UISocketEvents {
   inventoryLoad: (data: UI.Inventory.LoadData) => void;
   inventoryAdd: (data: UI.Inventory.AddData) => void;
   inventoryMove: (data: UI.Inventory.MoveData) => void;
+  inventoryWear: (itemId: number, change: number) => void;
   // inventoryRemove: (data: UI.Inventory.RemoveData) => void;
+  inventorySuccess: (data: UI.Inventory.SuccessFailData) => void;
+  inventoryFail: (data: UI.Inventory.SuccessFailData) => void;
 
   ['world.register-object']: (name: string, id: number) => void;
   ['world.unregister-object']: (name: string) => void;
@@ -305,6 +308,8 @@ declare namespace UI.Animations {
 
 declare namespace UI.Inventory {
   interface State extends UI.BaseState {
+    characterId: number;
+    clothingInventory: string;
     mainInventory: string;
     targetInventory: string;
     inventories: Map<string, LoadData>;
@@ -321,7 +326,7 @@ declare namespace UI.Inventory {
     identifier: number;
     ids: number[];
     metadatas: any[];
-    durability: number;
+    durabilities: (number | null)[];
     quantity: number;
   }
 
@@ -342,6 +347,7 @@ declare namespace UI.Inventory {
   }
 
   interface MoveData {
+    charRequestId: string;
     identifier: string;
     items: Record<string, ItemData>;
     emptySlots: number[];
@@ -350,6 +356,23 @@ declare namespace UI.Inventory {
   interface RemoveData {
     identifier: string;
     items: Record<string, ItemData>;
+  }
+
+  type RequestType = 'add' | 'stack' | 'move' | 'remove';
+
+  interface SuccessFailData {
+    identifier: string;
+    requestId: number;
+    requestType: RequestType;
+  }
+
+  type MoveOrFailData = MoveData | SuccessFailData;
+
+  interface MoveRequest {
+    sourceIdentifier: string;
+    oldSlot: number;
+    targetIdentifier: string;
+    newSlot: number;
   }
 }
 

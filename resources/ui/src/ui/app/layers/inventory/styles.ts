@@ -24,6 +24,7 @@ export const InventoryTooltip = styled.div`
   backdrop-filter: blur(${uiSize(4)});
 
   width: ${uiSize(298)};
+  user-select: none;
 
   &.below {
     transform: translateY(10vh) translateY(${uiSize(-8)});
@@ -60,127 +61,6 @@ export const InventoryTooltip = styled.div`
       background-color: rgba(${theme.colors.redGray12.rgb}, 0.75);
       border-radius: ${uiSize(4)};
     }
-  }
-`;
-
-const containerRowsColumns = () => {
-  let styles = '';
-
-  for (let n = 1; n < 4; n++) {
-    styles += `
-    &.rows--${n} {
-      height: calc(${n}0vh + ${uiSize(32)});
-    }
-`;
-  }
-
-  for (let n = 1; n < 8; n++) {
-    styles += `
-    &.columns--${n} {
-      width: calc(${n}0vh - ${uiSize(32)});
-    }
-`;
-  }
-
-  return styles;
-};
-
-export const InventoryContainer = styled.div`
-  position: absolute;
-  left: 50%;
-  width: calc(80vh - ${uiSize(32)});
-  height: calc(40vh + ${uiSize(32)});
-  transform: translateX(-50%);
-
-  border-radius: ${uiSize(4)};
-  background-color: rgba(${theme.colors.redGray12.rgb}, 0.95);
-
-  ${containerRowsColumns()};
-`;
-
-export const MainInventoryContainer = styled(InventoryContainer)`
-  bottom: ${uiSize(64)};
-`;
-
-const targetContainerRowsColumns = () => {
-  let styles = '';
-
-  for (let n = 1; n < 4; n++) {
-    styles += `
-    &.rows--${n} {
-      top: calc(${4 - n}0vh + ${uiSize(64)});
-    }
-`;
-  }
-
-  return styles;
-};
-
-export const TargetInventoryContainer = styled(InventoryContainer)`
-  top: ${uiSize(64)};
-
-  ${targetContainerRowsColumns()}
-`;
-
-export const InventoryDetailsStats = styled.div`
-  position: absolute;
-  height: ${uiSize(16)};
-  right: ${uiSize(16)};
-  left: ${uiSize(16)};
-  display: flex;
-  align-items: center;
-  gap: ${uiSize(6)};
-  color: ${theme.colors.white.hex};
-  white-space: nowrap;
-
-  font-family: 'Caveat', monospace;
-  font-size: ${uiSize(9)};
-
-  code {
-    font-family: 'Caveat', monospace;
-    opacity: 0.25;
-  }
-`;
-
-export const InventoryHeader = styled(InventoryDetailsStats)`
-  top: 0;
-`;
-
-export const InventoryFooter = styled(InventoryDetailsStats)`
-  bottom: 0;
-`;
-
-export const InventoryWrapper = styled.div`
-  user-select: none;
-  position: absolute;
-  top: ${uiSize(16)};
-  right: ${uiSize(7)};
-  bottom: ${uiSize(16)};
-  left: ${uiSize(16)};
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding-right: ${uiSize(7)};
-
-  display: flex;
-  gap: ${uiSize(2)};
-  flex-wrap: wrap;
-  align-content: flex-start;
-  justify-content: center;
-
-  &::-webkit-scrollbar {
-    width: ${uiSize(2)};
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: rgba(${theme.colors.white.rgb}, 0.5);
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: rgba(${theme.colors.white.rgb}, 0.75);
   }
 `;
 
@@ -221,6 +101,8 @@ export const InventorySlot = styled.div`
   border-radius: ${uiSize(4)};
   background-image: ${radialGradient('white', 0.025, 0.0125)};
   background-size: 100% 100%;
+
+  overflow: hidden;
 
   &:before {
     transition: 250ms ease;
@@ -325,6 +207,138 @@ export const InventorySlot = styled.div`
       text-align: center;
       color: ${theme.colors.red.hex};
     }
+  }
+`;
+
+const containerRowsColumns = () => {
+  let styles = '';
+
+  for (let n = 1; n < 4; n++) {
+    styles += `
+    &.rows--${n} {
+      height: calc(${n}0vh + ${uiSize(32)});
+    }
+`;
+  }
+
+  for (let n = 1; n < 8; n++) {
+    styles += `
+    &.columns--${n} {
+      width: calc(${n}0vh - ${uiSize(32)});
+    }
+`;
+  }
+
+  return styles;
+};
+
+export const InventoryContainer = styled.div`
+  position: absolute;
+  left: 50%;
+  width: calc(80vh - ${uiSize(32)});
+  height: calc(40vh + ${uiSize(32)});
+  transform: translateX(-50%);
+
+  border-radius: ${uiSize(4)};
+  background-color: rgba(${theme.colors.redGray12.rgb}, 0.95);
+
+  ${containerRowsColumns()};
+`;
+
+export const MainInventoryContainer = styled(InventoryContainer)`
+  bottom: ${uiSize(64)};
+`;
+
+export const ClothingInventoryContainer = styled(InventoryContainer)`
+  bottom: ${uiSize(64)};
+  width: calc(40vh);
+  height: calc(40vh + ${uiSize(32)});
+  transform: translateX(-100%) translateX(-40vh);
+
+  ${InventorySlot} {
+    width: calc(${(1 / 4) * 100}% - ${uiSize(2)});
+  }
+`;
+
+const targetContainerRowsColumns = () => {
+  let styles = '';
+
+  for (let n = 1; n < 4; n++) {
+    styles += `
+    &.rows--${n} {
+      top: calc(${4 - n}0vh + ${uiSize(64)});
+    }
+`;
+  }
+
+  return styles;
+};
+
+export const TargetInventoryContainer = styled(InventoryContainer)`
+  top: ${uiSize(64)};
+
+  ${targetContainerRowsColumns()}
+`;
+
+export const InventoryDetailsStats = styled.div`
+  position: absolute;
+  height: ${uiSize(16)};
+  right: ${uiSize(16)};
+  left: ${uiSize(16)};
+  display: flex;
+  align-items: center;
+  gap: ${uiSize(6)};
+  color: ${theme.colors.white.hex};
+  white-space: nowrap;
+
+  font-family: 'Caveat', monospace;
+  font-size: ${uiSize(9)};
+
+  code {
+    font-family: 'Caveat', monospace;
+    opacity: 0.25;
+  }
+`;
+
+export const InventoryHeader = styled(InventoryDetailsStats)`
+  top: 0;
+`;
+
+export const InventoryFooter = styled(InventoryDetailsStats)`
+  bottom: 0;
+`;
+
+export const InventoryWrapper = styled.div`
+  user-select: none;
+  position: absolute;
+  top: ${uiSize(16)};
+  right: ${uiSize(7)};
+  bottom: ${uiSize(16)};
+  left: ${uiSize(16)};
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: ${uiSize(7)};
+
+  display: flex;
+  gap: ${uiSize(2)};
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+
+  &::-webkit-scrollbar {
+    width: ${uiSize(2)};
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(${theme.colors.white.rgb}, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(${theme.colors.white.rgb}, 0.75);
   }
 `;
 

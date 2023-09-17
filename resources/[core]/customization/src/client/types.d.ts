@@ -56,6 +56,8 @@ declare namespace Customization {
     tint2: number,
   ) => void;
 
+  type EquipItems = (ped: number, items: UI.Inventory.ItemData[]) => void;
+
   interface ClientExports {
     getGuidsAtIndex: GetGuidsAtIndex;
     getDrawableAtIndex: GetDrawableAtIndex;
@@ -81,6 +83,7 @@ declare namespace Customization {
     getHorseDrawableAtIndex: GetHorseDrawableAtIndex;
     getIndexForHorsePart: GetIndexForHorsePart;
     setTintByHorsePart: SetTintByHorsePart;
+    equipItems: EquipItems;
   }
 }
 

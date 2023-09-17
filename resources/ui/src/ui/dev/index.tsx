@@ -79,6 +79,8 @@ const sendInventoryItems = () => {
       image: item.image,
       weight: item.weight,
       stackSize: item.stackSize,
+      maxDurability: item.maxDurability,
+      maxLife: item.maxLife,
     };
   }
 

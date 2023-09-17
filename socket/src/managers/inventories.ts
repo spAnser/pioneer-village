@@ -29,6 +29,7 @@ class Inventories {
     this.prisma = prisma;
 
     // await this.createInventory('character:1');
+    // await this.createInventory('clothing:1');
     // await this.createInventory('horse:1');
     // for (let n = 13; n--; ) {
     //   await this.prisma.item.createMany({
@@ -132,12 +133,13 @@ class Inventories {
         inventory.items[item.slot].quantity++;
         inventory.items[item.slot].ids.push(item.id);
         inventory.items[item.slot].metadatas.push(item.metadata);
+        inventory.items[item.slot].durabilities.push(item.durability);
       } else {
         inventory.items[item.slot] = {
           identifier: item.identifier,
           ids: [item.id],
           metadatas: [item.metadata],
-          durability: Math.max(0, Math.random() - 0.15), // TODO: Implement Durability
+          durabilities: [item.durability],
           quantity: 1,
         };
       }
@@ -150,7 +152,7 @@ class Inventories {
     const inventoryType = this.getInventoryType(inventory.identifier);
 
     const slots: Array<boolean | number> = new Array(inventoryType.slots).fill(false);
-    console.log('inventory.container.Item', inventory.container.Item);
+    // console.log('inventory.container.Item', inventory.container.Item);
     const slotCounts: Record<number, number> = {};
     for (const item of inventory.container.Item) {
       if (typeof item.slot !== 'number') {
@@ -160,8 +162,8 @@ class Inventories {
       slotCounts[item.slot] = (slotCounts[item.slot] || 0) + 1;
     }
 
-    console.log('slots', slots);
-    console.log('slotCounts', slotCounts);
+    // console.log('slots', slots);
+    // console.log('slotCounts', slotCounts);
 
     for (const s in slots) {
       const slot = Number(s);
@@ -176,11 +178,55 @@ class Inventories {
     return slots.indexOf(false);
   }
 
+  isAllowedInInventory(identifier: string, item: Inventory.Item): boolean {
+    const inventoryType = this.getInventoryType(identifier);
+    let isAllowed = false;
+    if (inventoryType.restrictions === 0 || inventoryType.restrictions & item.restriction) {
+      isAllowed = true;
+    }
+
+    return isAllowed;
+  }
+
+  async changeDurability(itemId: number, durability = -1): Promise<{ success: boolean; inventoryIdentifier?: string }> {
+    const item = await this.prisma.item.findUnique({
+      where: {
+        id: itemId,
+      },
+    });
+
+    if (!item || item.durability === null) {
+      return { success: false };
+    }
+
+    const inventory = await this.prisma.inventory.findUnique({
+      where: {
+        containerId: item?.containerId,
+      },
+    });
+
+    const newDurability = Math.max(item.durability + durability, 0);
+    const durabilityUpdate = await this.prisma.item.update({
+      where: {
+        id: itemId,
+      },
+      data: {
+        durability: newDurability,
+      },
+    });
+
+    return {
+      success: durabilityUpdate.durability === newDurability,
+      inventoryIdentifier: inventory?.identifier,
+    };
+  }
+
   async addItem(
     inventoryIdentifier: string,
     itemIdentifier: number,
     amount = 1,
     metadata: Record<string, any> = {},
+    durability: number | null = null,
   ): Promise<UI.Inventory.AddData | void> {
     try {
       const inventory = await this.getInventory(inventoryIdentifier);
@@ -208,6 +254,7 @@ class Inventories {
             slot,
             containerId: inventory.id,
             metadata,
+            durability,
           },
         });
         logInfo('item', item);
@@ -215,13 +262,14 @@ class Inventories {
         if (itemAddEvent.items[slot]) {
           itemAddEvent.items[slot].ids.push(item.id);
           itemAddEvent.items[slot].metadatas.push(metadata);
+          itemAddEvent.items[slot].durabilities.push(durability);
           itemAddEvent.items[slot].quantity++;
         } else {
           itemAddEvent.items[slot] = {
             identifier: itemIdentifier,
             ids: [item.id],
             metadatas: [metadata],
-            durability: Math.max(0, Math.random() - 0.15), // TODO: Implement Durability
+            durabilities: [durability],
             quantity: 1,
           };
         }
@@ -234,11 +282,13 @@ class Inventories {
   }
 
   async stackItem(
+    characterId: number,
+    requestId: number,
     oldIdentifier: string,
     oldSlot: number,
     newIdentifier: string,
     newSlot: number,
-  ): Promise<[UI.Inventory.MoveData, UI.Inventory.MoveData | null] | void> {
+  ): Promise<[UI.Inventory.MoveOrFailData, UI.Inventory.MoveOrFailData | null] | void> {
     try {
       const oldInventory = await this.getInventory(oldIdentifier);
       if (!oldInventory) {
@@ -291,19 +341,21 @@ class Inventories {
         }
 
         const eventOld: UI.Inventory.MoveData = {
+          charRequestId: `${characterId}:${requestId}`,
           identifier: oldIdentifier,
           items: {},
           emptySlots: [oldSlot],
         };
 
         const eventNew: UI.Inventory.MoveData = {
+          charRequestId: `${characterId}:${requestId}`,
           identifier: newIdentifier,
           items: {
             [newSlot]: {
               identifier: itemData.identifier,
               ids: newItemIds.concat(oldItemIds),
               metadatas: [...newItems.map((item) => item.metadata), ...oldItems.map((item) => item.metadata)],
-              durability: Math.max(0, Math.random() - 0.15), // TODO: Implement Durability
+              durabilities: [...newItems.map((item) => item.durability), ...oldItems.map((item) => item.durability)],
               quantity: newItemIds.length + oldItemIds.length,
             },
           },
@@ -334,13 +386,14 @@ class Inventories {
           return;
         }
         const eventOld: UI.Inventory.MoveData = {
+          charRequestId: `${characterId}:${requestId}`,
           identifier: oldIdentifier,
           items: {
             [oldSlot]: {
               identifier: itemData.identifier,
               ids: oldItemIdsLeft,
               metadatas: oldItemsLeft.map((item) => item.metadata),
-              durability: Math.max(0, Math.random() - 0.15), // TODO: Implement Durability
+              durabilities: oldItemsLeft.map((item) => item.durability),
               quantity: oldItemsLeft.length,
             },
           },
@@ -348,13 +401,17 @@ class Inventories {
         };
 
         const eventNew: UI.Inventory.MoveData = {
+          charRequestId: `${characterId}:${requestId}`,
           identifier: newIdentifier,
           items: {
             [newSlot]: {
               identifier: itemData.identifier,
               ids: newItemIds.concat(oldItemIdsMoved),
               metadatas: [...newItems.map((item) => item.metadata), ...oldItemsMoved.map((item) => item.metadata)],
-              durability: Math.max(0, Math.random() - 0.15), // TODO: Implement Durability
+              durabilities: [
+                ...newItems.map((item) => item.durability),
+                ...oldItemsMoved.map((item) => item.durability),
+              ],
               quantity: newItemIds.length + oldItemsMoved.length,
             },
           },
@@ -369,11 +426,13 @@ class Inventories {
   }
 
   async moveItem(
+    characterId: number,
+    requestId: number,
     oldIdentifier: string,
     oldSlot: number,
     newIdentifier: string,
     newSlot: number,
-  ): Promise<[UI.Inventory.MoveData, UI.Inventory.MoveData | null] | void> {
+  ): Promise<[UI.Inventory.MoveOrFailData, UI.Inventory.MoveOrFailData | null] | void> {
     try {
       const oldInventory = await this.getInventory(oldIdentifier);
       if (!oldInventory) {
@@ -397,6 +456,37 @@ class Inventories {
 
       logInfo('oldItemIds', oldItemIds);
       logInfo('newItemIds', newItemIds);
+
+      let isAllowed = true;
+      if (oldItems.length > 0) {
+        if (!this.isAllowedInInventory(newIdentifier, items[oldItems[0].identifier])) {
+          isAllowed = false;
+        }
+      }
+      if (newItems.length > 0) {
+        if (!this.isAllowedInInventory(newIdentifier, items[newItems[0].identifier])) {
+          isAllowed = false;
+        }
+      }
+
+      // logInfo('isAllowed', isAllowed);
+
+      if (!isAllowed) {
+        const oldEventFail: UI.Inventory.SuccessFailData = {
+          identifier: oldIdentifier,
+          requestId,
+          requestType: 'move',
+        };
+        let newEventFail: UI.Inventory.SuccessFailData | null = null;
+        if (oldIdentifier !== newIdentifier) {
+          newEventFail = {
+            identifier: newIdentifier,
+            requestId,
+            requestType: 'move',
+          };
+        }
+        return [oldEventFail, newEventFail];
+      }
 
       const oldSlotUpdate = await this.prisma.item.updateMany({
         where: {
@@ -433,7 +523,7 @@ class Inventories {
         },
       });
 
-      console.log('oldSlotItems', oldSlotItems);
+      logInfo('oldSlotItems', oldSlotItems);
 
       const oldItemUpdates: Record<string, UI.Inventory.ItemData> = {};
       const oldEmptySlots: number[] = [];
@@ -448,12 +538,13 @@ class Inventories {
             oldItemUpdates[item.slot].quantity++;
             oldItemUpdates[item.slot].ids.push(item.id);
             oldItemUpdates[item.slot].metadatas.push(item.metadata);
+            oldItemUpdates[item.slot].durabilities.push(item.durability);
           } else {
             oldItemUpdates[item.slot] = {
               identifier: item.identifier,
               ids: [item.id],
               metadatas: [item.metadata],
-              durability: Math.max(0, Math.random() - 0.15), // TODO: Implement Durability
+              durabilities: [item.durability],
               quantity: 1,
             };
           }
@@ -469,7 +560,7 @@ class Inventories {
         },
       });
 
-      console.log('newSlotItems', newSlotItems);
+      logInfo('newSlotItems', newSlotItems);
 
       const newItemUpdates: Record<string, UI.Inventory.ItemData> = {};
       const newEmptySlots: number[] = [];
@@ -484,12 +575,13 @@ class Inventories {
             newItemUpdates[item.slot].quantity++;
             newItemUpdates[item.slot].ids.push(item.id);
             newItemUpdates[item.slot].metadatas.push(item.metadata);
+            oldItemUpdates[item.slot].durabilities.push(item.durability);
           } else {
             newItemUpdates[item.slot] = {
               identifier: item.identifier,
               ids: [item.id],
               metadatas: [item.metadata],
-              durability: Math.max(0, Math.random() - 0.15), // TODO: Implement Durability
+              durabilities: [item.durability],
               quantity: 1,
             };
           }
@@ -499,6 +591,7 @@ class Inventories {
       }
 
       const eventOld: UI.Inventory.MoveData = {
+        charRequestId: `${characterId}:${requestId}`,
         identifier: oldIdentifier,
         items: oldItemUpdates,
         emptySlots: oldEmptySlots,
@@ -506,6 +599,7 @@ class Inventories {
 
       if (oldIdentifier !== newIdentifier) {
         const eventNew: UI.Inventory.MoveData = {
+          charRequestId: `${characterId}:${requestId}`,
           identifier: newIdentifier,
           items: newItemUpdates,
           emptySlots: newEmptySlots,

@@ -4,6 +4,20 @@ declare interface RPC {
 }
 
 declare namespace Game {
+  interface ClothingMetadata {
+    name: string;
+    category: string;
+    shopItem: string;
+    palette: string;
+    tint0: number;
+    tint1: number;
+    tint2: number;
+  }
+
+  type ClothingItemData = UI.Inventory.ItemData & {
+    metadatas: ClothingMetadata[];
+  };
+
   interface Character {
     id: number;
     accountId: number;
@@ -18,6 +32,7 @@ declare namespace Game {
     model: string;
     face: Face;
     components: number[];
+    clothing: ClothingItemData[];
   }
 
   interface Face {

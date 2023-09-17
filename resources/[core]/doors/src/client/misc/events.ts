@@ -3,6 +3,7 @@ import { PVBase, PVGame } from '@lib/client';
 import { Vector3 } from '@lib/math';
 import { Delay } from '@lib/functions';
 import { doorOpenAnim } from './anim-tasks';
+import { emitSocket } from '@lib/client/comms/ui';
 
 const toggleDoor = async (doorHash: number) => {
   if (Math.abs(DoorSystemGetOpenRatio(doorHash)) > 0.15) {
@@ -38,6 +39,7 @@ on('doors:client:toggle_door', async (item: Inventory.ItemBase, itemData: UI.Inv
       await toggleDoor(closestDoorHash);
     }
 
+    let keyWasUsed = false;
     for (const doorHashes of metadata.linkedDoors || []) {
       if (doorHashes.length === 0) {
         continue;
@@ -49,9 +51,14 @@ on('doors:client:toggle_door', async (item: Inventory.ItemBase, itemData: UI.Inv
         for (const doorHash of doorHashes) {
           if (doorManager.getDoorState(doorHash) === curState) {
             await doorManager.toggleDoorState(doorHash);
+            keyWasUsed = true;
           }
         }
       }
+    }
+
+    if (keyWasUsed) {
+      emitSocket('inventory.item-wear', itemData.ids[0]);
     }
   }
 });

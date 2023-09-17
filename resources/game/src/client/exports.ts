@@ -40,6 +40,14 @@ const setPedComponentsMp: Game.setPedComponentsMp = (ped, components) => {
   return gameManager.setPedComponentsMp(ped, components);
 };
 
+const removePedComponent: Game.removePedComponent = (ped, component) => {
+  return gameManager.removePedComponent(ped, component);
+};
+
+const removePedComponentCategory: Game.removePedComponentCategory = (ped, category) => {
+  return gameManager.removePedComponentCategory(ped, category);
+};
+
 const finalizePedOutfit: Game.finalizePedOutfit = (ped) => {
   return gameManager.finalizePedOutfit(ped);
 };
@@ -217,6 +225,8 @@ exports<'game'>('createObject', createObject);
 exports<'game'>('createPed', createPed);
 exports<'game'>('setPedComponents', setPedComponents);
 exports<'game'>('setPedComponentsMp', setPedComponentsMp);
+exports<'game'>('removePedComponent', removePedComponent);
+exports<'game'>('removePedComponentCategory', removePedComponentCategory);
 exports<'game'>('finalizePedOutfit', finalizePedOutfit);
 exports<'game'>('registerNetworkEntity', registerNetworkEntity);
 exports<'game'>('getNetworkControlOfEntity', getNetworkControlOfEntity);

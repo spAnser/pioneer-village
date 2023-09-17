@@ -14,3 +14,4 @@ export const PVKeymapper = exports['keymapper'];
 export const PVDatabindings = exports['databindings'];
 export const PVDoors = exports['doors'];
 export const PVZone = exports['zones'];
+export const PVCustomization = exports['customization'];

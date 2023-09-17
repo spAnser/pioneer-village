@@ -72,10 +72,13 @@ RegisterCommand(
   'overlay_ui',
   () => {
     const ped = PVGame.playerPed();
+
     const hatCategoryTint = paletteManager.getTintForCategory(ped, 'hats');
-    Log('hatCategoryTint', hatCategoryTint);
+    const hatCategoryIndex = paletteManager.getIndexForCategory(ped, 'hats');
+    Log('hatCategoryTint', hatCategoryIndex, hatCategoryTint);
     const coatCategoryTint = paletteManager.getTintForCategory(ped, 'coats');
-    Log('coatCategoryTint', coatCategoryTint);
+    const coatCategoryIndex = paletteManager.getIndexForCategory(ped, 'coats');
+    Log('coatCategoryTint', coatCategoryIndex, coatCategoryTint);
     emitUI('customization.state', { show: true, state: 'gender' });
     if (hatCategoryTint) {
       emitUI('customization.set-tint-by-category', 'hats', hatCategoryTint);
@@ -84,6 +87,13 @@ RegisterCommand(
       emitUI('customization.set-tint-by-category', 'coats', coatCategoryTint);
     }
     focusUI(true, true);
+
+    const categories: string[] = ['BOOTS', 'NECKWEAR', 'SHIRTS_FULL', 'VESTS', 'PANTS'];
+    for (const category of categories) {
+      const CategoryTint = paletteManager.getTintForCategory(ped, category);
+      const CategoryIndex = paletteManager.getIndexForCategory(ped, category);
+      Log('CategoryTint', category, CategoryIndex, CategoryTint);
+    }
   },
   false,
 );

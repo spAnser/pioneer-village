@@ -1,6 +1,6 @@
 import { shuffle } from 'lodash';
 
-import { PVGame, exports } from '@lib/client';
+import { PVGame, exports, PVCustomization } from '@lib/client';
 import { PVBase, PVCamera } from '@lib/client';
 import { Vector3 } from '@lib/math/vector3';
 import { AnimFlag } from '@lib/flags';
@@ -161,10 +161,12 @@ const skinPed = async (ped: number, character: Game.Character) => {
   // }
 
   await setPedOutfit(ped, character.components);
+  await PVCustomization.equipItems(ped, character.clothing);
 
-  setTimeout(() => {
-    setPedOutfit(ped, character.components);
-  }, 2500);
+  // setTimeout(() => {
+  //   setPedOutfit(ped, character.components);
+  //   PVCustomization.equipItems(ped, character.clothing);
+  // }, 2500);
 
   // if (character.wardrobe.face.overlays) {
   //     emit('customization:update_overlays', character.wardrobe.face.overlays);

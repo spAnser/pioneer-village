@@ -79,12 +79,12 @@ const TSOption = styled.div`
   gap: ${uiSize(3)};
 `;
 
-const scale = 5.3;
+const tsThumbScale = 5.3;
 const TSThumb = styled.div`
   image-rendering: pixelated;
-  width: ${uiSize(8 * scale)};
-  height: ${uiSize(8 * scale)};
-  background-size: ${uiSize(64 * scale)};
+  width: ${uiSize(8 * tsThumbScale)};
+  height: ${uiSize(8 * tsThumbScale)};
+  background-size: ${uiSize(64 * tsThumbScale)};
   transform: translateX(-50%);
   transform-origin: center top;
   position: absolute;
@@ -181,7 +181,9 @@ export default function TintSelector({ label, category, palette, tint0, tint1, t
                   backgroundImage: `url(https://p--v.b-cdn.net/customization/palettes/${
                     ColorPaletteNames[palette >>> 0]
                   }_thumbs.png)`,
-                  backgroundPosition: `-${uiSize((i % 8) * 8 * scale)} -${uiSize(Math.floor(i / 8) * 8 * scale)}`,
+                  backgroundPosition: `-${uiSize((i % 8) * 8 * tsThumbScale)} -${uiSize(
+                    Math.floor(i / 8) * 8 * tsThumbScale,
+                  )}`,
                 }}
                 onClick={() => setTints(i)}
               />

@@ -10,14 +10,15 @@ declare namespace Inventory {
     CONSUMABLE = 32,
     CARCASS = 64,
     KEY = 128,
+    CLOTHING = 256,
   }
 
   enum Restrictions {
     None = 0,
-    OnlySmall = 1,
-    OnlyFood = 2,
-    OnlyAmmo = 4,
-    Clothing = 5,
+    Small = 1,
+    Food = 2,
+    Ammo = 4,
+    Clothing = 8,
   }
 
   interface Type {
@@ -36,32 +37,40 @@ declare namespace Inventory {
     onUse: string;
   }
 
-  interface ItemBase {
+  type ItemBase = {
     identifier: number;
     image: string;
     name: string;
     description?: string;
     flags: ItemFlags;
+    restriction: Restrictions;
     stackSize: number;
     weight: number;
     decayRate?: number;
     useEvent?: string;
-  }
+    maxDurability?: number;
+    maxLife?: number;
+  };
 
-  interface ItemWeapon extends ItemBase {
+  // type ItemDurable = ItemBase & {
+  //   stackSize: 1;
+  //   maxDurability: number;
+  // }
+
+  type ItemWeapon = ItemBase & {
     weaponHash: number;
     weaponType: Weapon.Type;
-  }
+  };
 
-  interface ItemAmmo extends ItemBase {
+  type ItemAmmo = ItemBase & {
     ammoHash: number;
     ammoAmount: number;
-  }
+  };
 
-  interface ItemBait extends ItemBase {
+  type ItemBait = ItemBase & {
     bait: string;
     baitHash: number;
-  }
+  };
 
   type Item = ItemBase | ItemWeapon | ItemAmmo | ItemBait;
 
@@ -71,7 +80,10 @@ declare namespace Inventory {
     image: string;
     weight: number;
     stackSize: number;
+    maxDurability?: number;
+    maxLife?: number;
   };
+
   type UIItems = Record<number, UIItem>;
 }
 

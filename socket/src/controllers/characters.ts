@@ -2,7 +2,6 @@ import { PrismaClient } from '@prisma/client';
 import { serverNamespace, userNamespace } from '../server';
 import Characters, { GetFaceDataFromDatabase } from '../managers/characters';
 import Inventories from '../managers/inventories';
-import { verify } from 'jsonwebtoken';
 import { logGreen, logInfoC, logInfoS } from '../helpers/log';
 
 export default (prisma: PrismaClient, userAccessKey: string) => {
@@ -86,6 +85,8 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
         const prismaCharacters = await Characters.getCharacters(socket.data.user.userId);
 
         for (const character of prismaCharacters) {
+          const clothingInventory = await Inventories.getInventoryForUI(`clothing:${character.id}`);
+
           const face = GetFaceDataFromDatabase(character);
           characters.push({
             id: character.id,
@@ -101,6 +102,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
             model: character.model,
             face,
             components: character.components as number[],
+            clothing: Object.values(clothingInventory?.items || []),
           });
         }
 
