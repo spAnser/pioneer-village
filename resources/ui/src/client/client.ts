@@ -1,3 +1,4 @@
+import './auto-close-layers';
 import './cleanup';
 import './crosshair';
 import { Log } from '@lib/client/comms/ui';

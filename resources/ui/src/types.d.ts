@@ -102,7 +102,7 @@ declare namespace UI.Customization {
   }
 
   interface State extends UI.BaseState {
-    state: 'transition' | 'gender' | 'creation' | 'tailor' | 'barber';
+    state: globalThis.Customization.State;
     components: Record<string, any>;
     model: string | number;
     gender: 'male' | 'female';

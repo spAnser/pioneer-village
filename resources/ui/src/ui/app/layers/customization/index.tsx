@@ -4,83 +4,88 @@ import { Socket } from 'socket.io-client';
 
 import UIComponent from '@uiLib/ui-component';
 import { emitClient, LoadResourceJson, onClient } from '@lib/ui';
-import { ColorPalettes, ColorPaletteNames } from '@lib/shared/color-palettes';
 
 import { defaultOverlays } from './data';
-import { Container, Modal, ModalTitle } from './styled';
+import { Modal, ModalButton, ModalButtons, ModalContents, ModalTitle } from './styled';
 import StyleColorSelector from './components/StyleColorSelector';
 import { GenderSelect } from './components/Gender';
 import TintSelector from './components/TintSelector';
+import XYSlider from './components/XYSlider';
+
+import VenusMars from '@styled/fa5/duotone/venus-mars.svg';
+import InfoSquare from '@styled/fa5/duotone/info-square.svg';
+import Tshirt from '@styled/fa5/duotone/tshirt.svg';
+import Fingerprint from '@styled/fa5/duotone/fingerprint.svg';
 
 const componentFiles = [
   '2886757168',
   'accessories',
-  'ammo-pistols',
-  'ammo-rifles',
+  'ammo_pistols',
+  'ammo_rifles',
   'aprons',
   'armor',
   'badges',
-  'beards-chin',
-  'beards-chops',
-  'beards-complete',
-  'beards-mustache',
-  'belt-buckles',
+  'beards_chin',
+  'beards_chops',
+  'beards_complete',
+  'beards_mustache',
+  'belt_buckles',
   'belts',
-  'bodies-lower',
-  'bodies-upper',
-  'boot-accessories',
+  'bodies_lower',
+  'bodies_upper',
+  'boot_accessories',
   'boots',
   'chaps',
   'cloaks',
   'coats',
-  'coats-closed',
+  'coats_closed',
   'dresses',
   'eyes',
   'eyewear',
   'gauntlets',
   'gloves',
-  'gunbelt-accs',
+  'gunbelt_accs',
   'gunbelts',
   'hair',
-  'hair-accessories',
+  'hair_accessories',
   'hats',
   'heads',
-  'holsters-crossdraw',
-  'holsters-knife',
-  'holsters-left',
-  'holsters-right',
-  'horse-accessories',
-  'horse-bedrolls',
-  'horse-blankets',
-  'horse-bridles',
-  'horse-manes',
-  'horse-mustache',
-  'horse-saddlebags',
-  'horse-saddles',
-  'horse-shoes',
-  'horse-tails',
-  'jewelry-bracelets',
-  'jewelry-rings-left',
-  'jewelry-rings-right',
+  'holsters_crossdraw',
+  'holsters_knife',
+  'holsters_left',
+  'holsters_right',
+  'horse_accessories',
+  'horse_bedrolls',
+  'horse_blankets',
+  'horse_bridles',
+  'horse_manes',
+  'horse_mustache',
+  'horse_saddlebags',
+  'horse_saddles',
+  'horse_shoes',
+  'horse_tails',
+  'jewelry_bracelets',
+  'jewelry_rings_left',
+  'jewelry_rings_right',
   'loadouts',
   'masks',
-  'masks-large',
+  'masks_large',
   'neckties',
   'neckwear',
   'pants',
   'ponchos',
-  'saddle-horns',
-  'saddle-lanterns',
-  'saddle-stirrups',
+  'saddle_horns',
+  'saddle_lanterns',
+  'saddle_stirrups',
   'satchels',
-  'shirts-full',
+  'shirts_full',
   'skirts',
   'spats',
   'suspenders',
-  'talisman-belt',
-  'talisman-holster',
-  'talisman-satchel',
-  'talisman-wrist',
+  'talisman_belt',
+  'talisman_holster',
+  'talisman_satchel',
+  'talisman_wrist',
   'teeth',
   'vests',
 ];
@@ -96,22 +101,22 @@ const pedComponentCategories = [
   'badges',
   'belts',
   'belt_buckles',
-  'bodies_lower',
-  'bodies_upper',
+  // 'bodies_lower',
+  // 'bodies_upper',
   'boots',
   'boot_accessories',
   'chaps',
   'cloaks',
   'coats',
   'coats_closed',
-  'eyes',
+  // 'eyes',
   'eyewear',
   'gauntlets',
   'gloves',
   'gunbelts',
-  'hair',
+  // 'hair',
   'hats',
-  'heads',
+  // 'heads',
   'holsters_crossdraw',
   'holsters_knife',
   'holsters_left',
@@ -119,7 +124,7 @@ const pedComponentCategories = [
   'jewelry_bracelets',
   'jewelry_rings_left',
   'jewelry_rings_right',
-  'legs_accessories',
+  // 'legs_accessories',
   'loadouts',
   'masks',
   'masks_large',
@@ -144,33 +149,13 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
   ) {
     super();
 
-    const tints: Record<string, CustomizationPalette> = {};
-
-    for (const category of [...pedComponentCategories, ...horseComponentCategories]) {
-      tints[category] = {
-        palette: -1,
-        tint0: 0,
-        tint1: 0,
-        tint2: 0,
-      };
-    }
-
     this.state = {
       show: false,
       state: 'gender',
       components: {},
       model: '',
       gender: 'male',
-      currentComponents: {
-        boots: {
-          style: -1,
-          option: 0,
-        },
-        shirts: {
-          style: -1,
-          option: 0,
-        },
-      },
+      currentComponents: {},
       hiddenComponents: {},
       currentFaceOptions: {},
       currentBodyOptions: {},
@@ -183,7 +168,7 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
         month: 1,
         year: 1800,
       },
-      tints,
+      tints: {},
     };
 
     onClient('customization.state', (state) => {
@@ -194,7 +179,29 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
       this.setState({ tints: { ...this.state.tints, [category]: tint } });
     });
 
+    this.resetComponents();
     this.loadComponents();
+  }
+
+  async resetComponents() {
+    const tints: Record<string, CustomizationPalette> = {};
+    const currentComponents: Record<string, any> = {};
+
+    for (const category of [...pedComponentCategories, ...horseComponentCategories]) {
+      tints[category] = {
+        palette: -1,
+        tint0: 0,
+        tint1: 0,
+        tint2: 0,
+      };
+
+      currentComponents[category] = {
+        style: -1,
+        option: 0,
+      };
+    }
+
+    this.setState({ tints, currentComponents });
   }
 
   async loadComponents() {
@@ -207,7 +214,11 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
   }
 
   onEvent(event: UI.Customization.Event) {
+    console.log('setState', event);
     this.setState(event);
+    if (!event.show) {
+      this.resetComponents();
+    }
   }
 
   sendClientData = debounce((updateCategory: string) => {
@@ -233,9 +244,10 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
 
   setComponent(componentType: string, style: number, option: number) {
     console.log('component', componentType, style, option);
-    this.setState({ currentComponents: { ...this.state.currentComponents, [componentType]: { style, option } } });
+    const currentComponents = { ...this.state.currentComponents, [componentType]: { style, option } };
+    this.setState({ currentComponents });
     const components = [];
-    for (const [category, data] of Object.entries(this.state.currentComponents)) {
+    for (const [category, data] of Object.entries(currentComponents)) {
       if (data.style > -1) {
         const component = ComponentsData[category][data.style].components[data.option];
         components.push(component.component);
@@ -253,6 +265,11 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
   handleChooseGender(e: MouseEvent) {
     console.log('handleChooseGender');
     emitClient('customization.choose-gender');
+  }
+
+  handleSetState(state: Customization.State) {
+    console.log('handleSetState', state);
+    emitClient('customization.set-state', state);
   }
 
   render() {
@@ -274,42 +291,76 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
             />
           </>
         )}
-        {this.state.show && this.state.state === 'creation' && (
+        {this.state.show && this.state.state !== 'gender' && this.state.state !== 'transition' && (
           <>
             <Modal>
-              <ModalTitle>{`Information`}</ModalTitle>
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="date" />
+              {this.state.state === 'info' && (
+                <>
+                  <ModalContents>
+                    <input type="text" placeholder="First Name" />
+                    <input type="text" placeholder="Last Name" />
+                    <input type="date" />
+                    <XYSlider
+                      label="Test XY Grid"
+                      onChange={(xValue, yValue) => console.log('onChange', xValue, yValue)}
+                    />
+                  </ModalContents>
+                </>
+              )}
+              {this.state.state === 'body' && (
+                <>
+                  <ModalContents>
+                    <StyleColorSelector
+                      label={`Vests`}
+                      onChange={(style, option) => this.setComponent('vests', style, option)}
+                      components={ComponentsData.vests}
+                      gender={this.state.gender}
+                    />
+                  </ModalContents>
+                </>
+              )}
+              {this.state.state === 'clothing' && (
+                <>
+                  <ModalContents>
+                    {pedComponentCategories.map((category) => (
+                      <StyleColorSelector
+                        label={category}
+                        onChange={(style, option) => this.setComponent(category, style, option)}
+                        components={ComponentsData[category]}
+                        gender={this.state.gender}
+                      />
+                    ))}
+                    <pre>{JSON.stringify(this.state.currentComponents, null, 2)}</pre>
+                  </ModalContents>
+                </>
+              )}
+              <ModalButtons>
+                <ModalButton onClick={this.handleSetState.bind(this, 'gender')}>
+                  <VenusMars />
+                </ModalButton>
+                <ModalButton
+                  className={this.state.state === 'info' ? 'active' : ''}
+                  onClick={this.handleSetState.bind(this, 'info')}
+                >
+                  <InfoSquare />
+                </ModalButton>
+                <ModalButton
+                  className={this.state.state === 'body' ? 'active' : ''}
+                  onClick={this.handleSetState.bind(this, 'body')}
+                >
+                  <Fingerprint />
+                </ModalButton>
+                <ModalButton
+                  className={this.state.state === 'clothing' ? 'active' : ''}
+                  onClick={this.handleSetState.bind(this, 'clothing')}
+                >
+                  <Tshirt />
+                </ModalButton>
+              </ModalButtons>
             </Modal>
           </>
         )}
-        {this.state.show && this.state.state === 'tailor' && (
-          <>
-            <Modal>
-              <ModalTitle>{`Clothes`}</ModalTitle>
-              <StyleColorSelector
-                label={`Boots`}
-                onChange={(style, option) => this.setComponent('boots', style, option)}
-                components={ComponentsData.boots}
-                gender={this.state.gender}
-              />
-              <StyleColorSelector
-                label={`Shirts`}
-                onChange={(style, option) => this.setComponent('shirts', style, option)}
-                components={ComponentsData['shirts-full']}
-                gender={this.state.gender}
-              />
-              <pre>{JSON.stringify(this.state.currentComponents, null, 2)}</pre>
-            </Modal>
-          </>
-        )}
-        {this.state.show && (this.state.state === 'creation' || this.state.state === 'barber') && (
-          <>
-            <h1>Barber</h1>
-          </>
-        )}
-        {this.state.show && (
+        {this.state.show && false && (
           <>
             <Modal>
               <TintSelector

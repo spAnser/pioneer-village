@@ -17,13 +17,18 @@ const SCSTitle = styled.div`
 `;
 
 const SCSContent = styled.div`
-  transition: ${theme.transitionSpeed.fast};
-  height: 0;
+  display: grid;
+  transition: grid-template-rows ${theme.transitionSpeed.fast};
+  grid-template-rows: 0fr;
   overflow: hidden;
 
   &.active {
-    height: auto;
+    grid-template-rows: 1fr;
   }
+`;
+
+const SCSContentWrapper = styled.div`
+  overflow: hidden;
 `;
 
 const SCSSelector = styled.div`
@@ -74,7 +79,6 @@ interface Props {
 
 interface State {
   active: boolean;
-  contentHeight: number | string;
   currentStyle: number;
   currentOption: number;
   erroredImages: Set<number>;
@@ -88,7 +92,6 @@ export default class StyleColorSelector extends Component<Props, State> {
 
     this.state = {
       active: false,
-      contentHeight: 'auto',
       currentStyle: -1,
       currentOption: 0,
       erroredImages: new Set(),
@@ -100,7 +103,7 @@ export default class StyleColorSelector extends Component<Props, State> {
     if (newStyle === this.state.currentStyle) {
       return;
     }
-    this.setState({ currentStyle: newStyle, currentOption: 0, contentHeight: 'auto' });
+    this.setState({ currentStyle: newStyle, currentOption: 0 });
     this.props.onChange(newStyle, 0);
   }
 
@@ -109,7 +112,7 @@ export default class StyleColorSelector extends Component<Props, State> {
     if (newStyle === this.state.currentStyle) {
       return;
     }
-    this.setState({ currentStyle: newStyle, currentOption: 0, contentHeight: 'auto' });
+    this.setState({ currentStyle: newStyle, currentOption: 0 });
     this.props.onChange(newStyle, 0);
   }
 
@@ -120,67 +123,67 @@ export default class StyleColorSelector extends Component<Props, State> {
   }
 
   toggleContent() {
-    const contentHeight = this.refContent?.current?.scrollHeight || 'auto';
-    this.setState({ active: !this.state.active, contentHeight });
+    // const contentHeight = this.refContent?.current?.scrollHeight || 'auto';
+    this.setState({ active: !this.state.active });
   }
 
   render() {
     return (
       <SCSContainer>
         <SCSTitle onClick={this.toggleContent.bind(this)}>{this.props.label}</SCSTitle>
-        <SCSContent
-          ref={this.refContent}
-          style={{ height: this.state.active ? this.state.contentHeight : null }}
-          className={this.state.active ? 'active' : ''}
-        >
-          <SCSSelector>
-            <div
-              style={{ cursor: 'pointer', fontSize: uiSize(48), paddingRight: uiSize(8) }}
-              onClick={this.decrement.bind(this)}
-            >
-              &lt;
-            </div>
-            <p>
-              {this.state.currentStyle === -1 ? 'None' : this.props.components[this.state.currentStyle]?.name ?? 'Misc'}
-              <br />
-              {this.state.currentStyle + 1} of {this.props.components.length}
-            </p>
-            <div
-              style={{ cursor: 'pointer', fontSize: uiSize(48), paddingRight: uiSize(8) }}
-              onClick={this.increment.bind(this)}
-            >
-              &gt;
-            </div>
-          </SCSSelector>
-          <SCSOptions>
-            {this.props.components[this.state.currentStyle]?.components.map((component, index) => {
-              if (
-                (this.props.gender === 'male' && component.type === '1') ||
-                (this.props.gender === 'female' && component.type === '0')
-              ) {
-                return null;
-              }
-              return (
-                <SCSOption
-                  key={index}
-                  onClick={() => {
-                    this.setState({ currentOption: index });
-                    this.props.onChange(this.state.currentStyle, index);
-                  }}
-                  className={index === this.state.currentOption ? 'active' : ''}
-                >
-                  {this.state.erroredImages.has(component.component) ? (
-                    <span>{index + 1}</span>
-                  ) : (
-                    <img
-                      src={`https://p--v.b-cdn.net/swatches/components/${component.component}.png`}
-                      onError={() => this.optionError(component.component)}
-                    />
-                  )}
-                </SCSOption>
-              );
-            })}
-          </SCSOptions>
+        <SCSContent ref={this.refContent} className={this.state.active ? 'active' : ''}>
+          <SCSContentWrapper>
+            <SCSSelector>
+              <div
+                style={{ cursor: 'pointer', fontSize: uiSize(48), paddingRight: uiSize(8) }}
+                onClick={this.decrement.bind(this)}
+              >
+                &lt;
+              </div>
+              <p>
+                {this.state.currentStyle === -1
+                  ? 'None'
+                  : this.props.components[this.state.currentStyle]?.name ?? 'Misc'}
+                <br />
+                {this.state.currentStyle + 1} of {this.props.components.length}
+              </p>
+              <div
+                style={{ cursor: 'pointer', fontSize: uiSize(48), paddingRight: uiSize(8) }}
+                onClick={this.increment.bind(this)}
+              >
+                &gt;
+              </div>
+            </SCSSelector>
+            <SCSOptions>
+              {this.props.components[this.state.currentStyle]?.components.map((component, index) => {
+                if (
+                  (this.props.gender === 'male' && component.type === '1') ||
+                  (this.props.gender === 'female' && component.type === '0')
+                ) {
+                  return null;
+                }
+                return (
+                  <SCSOption
+                    key={index}
+                    onClick={() => {
+                      this.setState({ currentOption: index });
+                      this.props.onChange(this.state.currentStyle, index);
+                    }}
+                    className={index === this.state.currentOption ? 'active' : ''}
+                  >
+                    {this.state.erroredImages.has(component.component) ? (
+                      <span>{index + 1}</span>
+                    ) : (
+                      <img
+                        src={`https://p--v.b-cdn.net/swatches/components/${component.component}.png`}
+                        onError={() => this.optionError(component.component)}
+                      />
+                    )}
+                  </SCSOption>
+                );
+              })}
+            </SCSOptions>
+          </SCSContentWrapper>
         </SCSContent>
       </SCSContainer>
     );

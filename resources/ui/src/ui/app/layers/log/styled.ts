@@ -76,6 +76,11 @@ export const Item = styled.div`
 
   display: flex;
 
+  i,
+  span {
+    user-select: none;
+  }
+
   i {
     display: inline-block;
     padding: ${uiSize(5)} ${uiSize(5)};

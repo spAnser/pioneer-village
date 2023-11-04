@@ -1041,7 +1041,6 @@ export class HealthManager {
       return;
     }
     let attackDistance = 0.0;
-    Log('Attack distance:', attackDistance);
     // Log('handleEntityDamage', attacker, attacked, weaponHash, ammoHash, x, y, z);
 
     const weaponStats = weapons[weaponHash] ?? weapons['DEFAULT'];
@@ -1051,6 +1050,8 @@ export class HealthManager {
       const attackedCoord = Vector3.fromArray(GetEntityCoords(attacked));
       attackDistance = distanceVector(attackerCoord, attackedCoord);
     }
+
+    Log('Attack distance:', attackDistance);
 
     Log(`Player hit by ${attacker} using ${weaponHash} ${weaponStats.name}`);
 
