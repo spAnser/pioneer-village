@@ -117,6 +117,13 @@ function Target.Start(threadId)
 
 	exports.keymapper:RegisterKeyMapping("eye_target", "Eye Target", "keyboard", "LALT")
 	exports.keymapper:RegisterKeyMapping("eye_target:click", "Eye Target Use", "keyboard", "MOUSE1")
+
+	Wait(500)
+	Citizen.CreateThread(function()
+		Target(true)
+	end)
+	Wait(500)
+	Target(false)
 end
 
 --- @return table position
@@ -177,6 +184,31 @@ function Target:RayCast(map)
 		end
 	end
 end
+
+function Target.GetEntityPlayerIsLookingAt(distance, radius, flags, ignore)
+	self = Target
+
+	local position, direction = self:Direction()
+	local destination = position + distance * direction
+
+	local shapeTestSphere = StartShapeTestSweptSphere(position.x, position.y, position.z, destination.x, destination.y, destination.z, radius, flags, ignore or self.cache.ped, 7)
+
+	while true do
+		local retval, hit, endCoords, surfaceNormal, entityHit = GetShapeTestResult(shapeTestSphere)
+
+		if retval == 2 then
+			if hit == 1 then
+				return entityHit
+			else
+				break
+			end
+		end
+
+		Wait(0)
+	end
+end
+
+exports("GetEntityPlayerIsLookingAt", Target.GetEntityPlayerIsLookingAt)
 
 --- @param cache table cache data
 function Target.UpdateCache(cache)

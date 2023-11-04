@@ -1,5 +1,6 @@
 import { emitUI, focusUI, onUI, PVGame } from '@lib/client';
 
+import './stuff/animal';
 import './stuff/apple';
 import './stuff/gold-panning';
 import './stuff/instruments';

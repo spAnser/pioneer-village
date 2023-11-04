@@ -28057,6 +28057,10 @@ global.ResetPedLastVehicle = function (ped) {
   return _in(0xbb8de8cf, 0x6a8dd8bb, ped);
 };
 
+global.ResetPedModelPersonality = function (model) {
+  return _in(0x00000000, 0x79a12861, _ch(model));
+};
+
 global.ResetPedRagdollTimer = function (ped) {
   return _in(0x9fa4664c, 0xf62e47e8, ped);
 };
@@ -34562,8 +34566,8 @@ global.TaskLootNearestEntity = function (ped, x, y, z, p4, p5) {
   return _in(0xcf1501cb, 0xc4059412, ped, _fv(x), _fv(y), _fv(z), p4, _fv(p5));
 };
 
-global.TaskMelee = function (ped, p1, p2, p3, p4, p5, p6, p7) {
-  return _in(0x482c99d0, 0xb38d1b0a, ped, p1, p2, p3, p4, p5, p6, p7, _r);
+global.TaskMelee = function (ped, targetPed, attackHash, p3, p4, p5, p6, p7) {
+  return _in(0x482c99d0, 0xb38d1b0a, ped, targetPed, _ch(attackHash), p3, p4, _fv(p5), p6, _fv(p7), _r);
 };
 
 global.TaskMountAnimal = function (ped, p1, p2, p3, p4, p5, p6, p7) {

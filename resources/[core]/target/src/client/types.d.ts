@@ -42,8 +42,17 @@ declare namespace Target {
   }
 
   type AddTarget = (data: Target.Menu) => void;
+  type RemoveTarget = (id: string) => void;
+  type GetEntityPlayerIsLookingAt = (
+    distance: number,
+    radius: number,
+    flags: number,
+    ignore?: number,
+  ) => Promise<number>;
 
   type ClientExports = {
     AddTarget: AddTarget;
+    RemoveTarget: RemoveTarget;
+    GetEntityPlayerIsLookingAt: GetEntityPlayerIsLookingAt;
   };
 }

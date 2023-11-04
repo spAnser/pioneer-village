@@ -17733,6 +17733,8 @@ declare function ResetPedInVehicleContext(ped: number): void;
  */
 declare function ResetPedLastVehicle(ped: number): void;
 
+declare function ResetPedModelPersonality(model: number | string): void;
+
 declare function ResetPedRagdollTimer(ped: number): void;
 
 declare function ResetPedTexture(textureId: number): void;

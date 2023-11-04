@@ -1,4 +1,4 @@
-sInvokeNative = Citizen.InvokeNative
+InvokeNative = Citizen.InvokeNative
 IN = InvokeNative
 
 RegisterCommand('srun', function(source, args, rawCommand)
