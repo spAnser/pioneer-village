@@ -549,7 +549,7 @@ const app = new Vue({
             this.cameraRotZ = camZ;
             camera.rotation.set(
               THREE.MathUtils.degToRad(camX),
-              THREE.MathUtils.degToRad(camY > 0 ? -camZ : camZ),
+              THREE.MathUtils.degToRad(Math.abs(camY) >= (90 * Math.PI) / 180 ? -camZ : camZ),
               THREE.MathUtils.degToRad(camY),
             );
           }
