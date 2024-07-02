@@ -27,7 +27,7 @@
       "jsx": "react-jsx",
       "jsxImportSource": "preact",
       "module": "esnext",
-      "types": ["@citizenfx/client", "@types/node", "webpack-env"],
+      "types": ["@citizenfx/client", "@types/node"],
       "moduleResolution": "node",
       "downlevelIteration": true
   },

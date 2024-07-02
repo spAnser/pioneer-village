@@ -15,7 +15,8 @@
     "types": ["@types/node"],
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true
   },
   "exclude": [
     "node_modules"

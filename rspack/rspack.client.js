@@ -1,6 +1,5 @@
 const path = require('path');
-const HotReloadPlugin = require('./webpack.hot-reload');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const HotReloadPlugin = require('./rspack.hot-reload');
 
 module.exports = () => ({
   entry: path.resolve('./src/client/client.ts'),
@@ -9,11 +8,15 @@ module.exports = () => ({
       {
         test: /\.tsx?$/,
         exclude: [/node_modules/, /build/],
-        loader: 'esbuild-loader',
+        loader: 'builtin:swc-loader',
         options: {
-          loader: 'tsx',
-          target: 'es2017',
+          jsc: {
+            parser: {
+              syntax: 'typescript',
+            },
+          },
         },
+        type: 'javascript/auto',
       },
     ],
   },
@@ -23,7 +26,8 @@ module.exports = () => ({
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    plugins: [new TsconfigPathsPlugin({ configFile: path.resolve('./src/client/tsconfig.json') })],
+    // plugins: [new TsconfigPathsPlugin({ configFile: path.resolve('./src/client/tsconfig.json') })],
+    tsConfig: { configFile: path.resolve('./src/client/tsconfig.json') },
   },
   output: {
     path: path.resolve('./build'),

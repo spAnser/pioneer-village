@@ -58,7 +58,7 @@ export default class Target extends UIComponent<UI.BaseProps, UI.TargetLayer.Sta
   }
 
   getIcon(): { style?: 'light' | 'regular' | 'solid' | 'duotone'; icon: string } {
-    console.log(this.state.flag);
+    // console.log(this.state.flag);
     switch (this.state.flag) {
       case 'isHorse':
         return { style: 'solid', icon: 'horse-saddle' };

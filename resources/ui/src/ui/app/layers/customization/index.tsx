@@ -11,6 +11,7 @@ import StyleColorSelector from './components/StyleColorSelector';
 import { GenderSelect } from './components/Gender';
 import TintSelector from './components/TintSelector';
 import XYSlider from './components/XYSlider';
+import RangeSlider from './components/RangeSlider';
 
 import VenusMars from '@styled/fa5/duotone/venus-mars.svg';
 import InfoSquare from '@styled/fa5/duotone/info-square.svg';
@@ -139,6 +140,8 @@ const pedComponentCategories = [
   'suspenders',
   'vests',
 ];
+
+const bodyTypes = ['Skinny', 'Athletic', 'Average', 'Heavy', 'Brawny'];
 
 const horseComponentCategories = ['head', 'hand', 'hair', 'mane', 'teef', 'hair', 'mane'];
 
@@ -302,6 +305,11 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
                     <input type="date" />
                     <XYSlider
                       label="Test XY Grid"
+                      xMin={-1}
+                      xMax={1}
+                      yMin={-1}
+                      yMax={1}
+                      step={0.1}
                       onChange={(xValue, yValue) => console.log('onChange', xValue, yValue)}
                     />
                   </ModalContents>
@@ -310,12 +318,8 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
               {this.state.state === 'body' && (
                 <>
                   <ModalContents>
-                    <StyleColorSelector
-                      label={`Vests`}
-                      onChange={(style, option) => this.setComponent('vests', style, option)}
-                      components={ComponentsData.vests}
-                      gender={this.state.gender}
-                    />
+                    <RangeSlider onChange={console.log} label="Body Type" labels={bodyTypes} defaultValue={2} max={4} />
+                    <RangeSlider onChange={console.log} label={`Waist`} max={20} />
                   </ModalContents>
                 </>
               )}

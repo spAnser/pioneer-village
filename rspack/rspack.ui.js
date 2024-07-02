@@ -1,7 +1,6 @@
 const path = require('path');
-const HotReloadPlugin = require('./webpack.hot-reload');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const { ProvidePlugin } = require('webpack');
+const HotReloadPlugin = require('./rspack.hot-reload');
+const { ProvidePlugin } = require('@rspack/core');
 
 module.exports = () => ({
   entry: path.resolve('./src/ui/ui.ts'),
@@ -43,7 +42,8 @@ module.exports = () => ({
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    plugins: [new TsconfigPathsPlugin({ configFile: path.resolve('./src/ui/tsconfig.json') })],
+    // plugins: [new TsconfigPathsPlugin({ configFile: path.resolve('./src/ui/tsconfig.json') })],
+    tsConfig: { configFile: path.resolve('./src/ui/tsconfig.json') },
     alias: {
       react: 'preact/compat',
       'react-dom': 'preact/compat',

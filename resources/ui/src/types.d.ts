@@ -213,6 +213,24 @@ declare namespace UI.Notification {
   type Event = Partial<State>;
 }
 
+declare namespace UI.Interact {
+  interface POI {
+    id: string;
+    screenX: number;
+    screenY: number;
+    distance: number;
+    label: string;
+    key: string;
+  }
+
+  interface State extends UI.BaseState {
+    pois: POI[];
+    active: string | null;
+  }
+
+  type Event = Partial<State>;
+}
+
 declare namespace UI.TargetLayer {
   interface State extends UI.BaseState {
     active: boolean;
@@ -225,14 +243,14 @@ declare namespace UI.TargetLayer {
   type Event = Partial<State>;
 }
 
-declare namespace UI.Interact {
-  interface State extends UI.BaseState {
-    options: Record<string, string>;
-    context: any;
-  }
-
-  type Event = Partial<State>;
-}
+// declare namespace UI.Interact {
+//   interface State extends UI.BaseState {
+//     options: Record<string, string>;
+//     context: any;
+//   }
+//
+//   type Event = Partial<State>;
+// }
 
 declare namespace UI.ThreeJS {
   interface State extends UI.BaseState {

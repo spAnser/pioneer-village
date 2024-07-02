@@ -47,6 +47,8 @@ declare interface UIEvents {
     fgColor?: keyof UI.Theme['colors'],
     centered?: boolean,
   ) => void;
+  ['interact.pois']: (pois: UI.Interact.POI[]) => void;
+  ['interact.active']: (active: string | null) => void;
   ['chat.state']: (event: UI.Chat.Event) => void;
   ['threejs.state']: (event: UI.ThreeJS.Event) => void;
   ['animations.state']: (event: UI.Animations.Event) => void;

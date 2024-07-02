@@ -102,6 +102,13 @@ const YEndLabel = styled(YLabel)`
 interface Props {
   label: string;
   onChange: (xValue: number, yValue: number) => void;
+  xMin: number;
+  xMax: number;
+  yMin: number;
+  yMax: number;
+  step: number;
+  xDefaultValue?: number;
+  yDefaultValue?: number;
 }
 
 interface State {
@@ -109,11 +116,6 @@ interface State {
   active: boolean;
   xValue: number;
   yValue: number;
-  xMin: number;
-  xMax: number;
-  yMin: number;
-  yMax: number;
-  step: number;
 }
 
 export default class XYSlider extends Component<Props, State> {
@@ -123,19 +125,14 @@ export default class XYSlider extends Component<Props, State> {
   mouseupBinding = this.onmouseup.bind(this);
   mousemoveBinding = this.onmousemove.bind(this);
 
-  constructor() {
+  constructor(props: Props) {
     super();
 
     this.state = {
       isDragging: false,
       active: false,
-      xValue: 0,
-      yValue: 0,
-      xMin: -1,
-      xMax: 1,
-      yMin: -1,
-      yMax: 1,
-      step: 0.1,
+      xValue: props.xDefaultValue || 0,
+      yValue: props.yDefaultValue || 0,
     };
   }
 
@@ -172,15 +169,15 @@ export default class XYSlider extends Component<Props, State> {
     const xPos = (e.clientX - rect.left) / rect.width;
     const yPos = (e.clientY - rect.top) / rect.height;
 
-    let xValue = xPos * (this.state.xMax - this.state.xMin) + this.state.xMin;
-    let yValue = yPos * (this.state.yMax - this.state.yMin) + this.state.yMin;
+    let xValue = xPos * (this.props.xMax - this.props.xMin) + this.props.xMin;
+    let yValue = yPos * (this.props.yMax - this.props.yMin) + this.props.yMin;
 
-    const step = this.state.step;
+    const step = this.props.step;
     xValue = Math.round(xValue / step) * step;
     yValue = Math.round(yValue / step) * step;
 
-    xValue = clamp(xValue, this.state.xMin, this.state.xMax);
-    yValue = clamp(yValue, this.state.yMin, this.state.yMax);
+    xValue = clamp(xValue, this.props.xMin, this.props.xMax);
+    yValue = clamp(yValue, this.props.yMin, this.props.yMax);
 
     if (this.state.xValue !== xValue || this.state.yValue !== yValue) {
       this.setState({ xValue, yValue });
@@ -193,13 +190,13 @@ export default class XYSlider extends Component<Props, State> {
   }
 
   top() {
-    let value = (this.state.yValue - this.state.yMin) / (this.state.yMax - this.state.yMin);
+    let value = (this.state.yValue - this.props.yMin) / (this.props.yMax - this.props.yMin);
 
     return `${value * 100}%`;
   }
 
   left() {
-    let value = (this.state.xValue - this.state.xMin) / (this.state.xMax - this.state.xMin);
+    let value = (this.state.xValue - this.props.xMin) / (this.props.xMax - this.props.xMin);
 
     return `${value * 100}%`;
   }

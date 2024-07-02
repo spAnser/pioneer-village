@@ -11,6 +11,7 @@ export default class ThreeJS extends UIComponent<UI.BaseProps, UI.ThreeJS.State,
   scene: THREE.Scene;
   renderer: THREE.WebGLRenderer;
   cube: THREE.Mesh;
+  sprite: THREE.Sprite;
   lastTime: number;
 
   constructor() {
@@ -36,6 +37,12 @@ export default class ThreeJS extends UIComponent<UI.BaseProps, UI.ThreeJS.State,
     const material = new THREE.MeshNormalMaterial();
     this.cube = new THREE.Mesh(geometry, material);
     this.scene.add(this.cube);
+
+    const map = new THREE.TextureLoader().load('https://p--v.b-cdn.net/smear-1.png');
+    const material2 = new THREE.SpriteMaterial({ map });
+    this.sprite = new THREE.Sprite(material2);
+    this.sprite.scale.set(0.75, 0.18, 1);
+    this.scene.add(this.sprite);
 
     this.renderer = new THREE.WebGLRenderer({ alpha: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -83,6 +90,7 @@ export default class ThreeJS extends UIComponent<UI.BaseProps, UI.ThreeJS.State,
 
     this.cube.position.set(this.state.targetPosition.x, this.state.targetPosition.y, this.state.targetPosition.z);
     this.cube.rotation.set(this.state.targetRotation.x, this.state.targetRotation.y, this.state.targetRotation.z);
+    this.sprite.position.set(this.state.targetPosition.x, this.state.targetPosition.y, this.state.targetPosition.z);
   }
 
   handleAnimate(time: number) {
