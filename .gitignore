@@ -18,6 +18,7 @@ artifacts/*/
 **/.idea/php.xml
 **/.idea/yii2settings.xml
 **/.idea/jsLibraryMappings.xml
+**/.idea/git_toolbox_blame.xml
 **/.idea/git_toolbox_prj.xml
 **/.idea/discord.xml
 
