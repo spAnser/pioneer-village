@@ -42,7 +42,6 @@ module.exports = () => ({
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    // plugins: [new TsconfigPathsPlugin({ configFile: path.resolve('./src/ui/tsconfig.json') })],
     tsConfig: { configFile: path.resolve('./src/ui/tsconfig.json') },
     alias: {
       react: 'preact/compat',

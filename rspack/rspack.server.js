@@ -29,7 +29,6 @@ module.exports = () => ({
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    // plugins: [new TsconfigPathsPlugin({ configFile: path.resolve('./src/server/tsconfig.json') })],
     tsConfig: { configFile: path.resolve('./src/server/tsconfig.json') },
   },
   output: {
