@@ -1,5 +1,3 @@
-const client = require('../../rspack/rspack.client');
-const server = require('../../rspack/rspack.server');
-const ui = require('../../rspack/rspack.ui');
+const { clientServerUI } = require('../../rspack/rspack.options');
 
-module.exports = [client(), server(), ui()];
+module.exports = clientServerUI;

@@ -20,7 +20,7 @@ module.exports = () => ({
       },
     ],
   },
-  plugins: [new HotReloadPlugin()],
+  plugins: [new HotReloadPlugin('client')],
   optimization: {
     minimize: false,
   },

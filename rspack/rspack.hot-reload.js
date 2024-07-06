@@ -13,22 +13,23 @@ const findResourceName = (filePath) => {
 };
 
 class HotReloadPlugin {
-  constructor(address = '127.0.0.1', port = 30110, password = 'qwerty') {
+  constructor(source, address = '127.0.0.1', port = 30110, password = 'qwerty') {
+    this.source = source;
     this.chunkVersions = {};
-    this.ensureQueue = [];
+    this.restartQueue = [];
     this.running = false;
     this.address = address;
     this.port = port;
     this.password = password;
   }
-  async processEnsureQueue() {
-    if (this.running || this.ensureQueue.length === 0) {
+  async processRestartQueue() {
+    if (this.running || this.restartQueue.length === 0) {
       return;
     }
     this.running = true;
-    const resource = this.ensureQueue.shift();
+
+    const resource = this.restartQueue.shift();
     await new Promise((res) => setTimeout(res, 500));
-    // const command = `ensure ${resource}`;
     const command = `restart ${resource}`; // Using restart only restarts running resources
     let socketClosed = false;
     const connection = udp.createSocket('udp4');
@@ -39,9 +40,10 @@ class HotReloadPlugin {
     connection.on('error', function (err) {
       connection.close();
     });
+    console.log(`RCON [${this.source}] Restarting Resource: ${resource}`);
     const buffer = Buffer.alloc(11 + this.password.length + command.length);
     buffer.writeUInt32LE(0xffffffff, 0);
-    buffer.write('rcon ', 4);
+    buffer.write('rcon ', 4, 5);
     buffer.write(this.password, 9, this.password.length);
     buffer.write(' ', 9 + this.password.length, 1);
     buffer.write(command, 10 + this.password.length, command.length);
@@ -49,7 +51,6 @@ class HotReloadPlugin {
     connection.send(buffer, 0, buffer.length, this.port, this.address, () => {
       connection.close();
       this.running = false;
-      this.processEnsureQueue();
     });
     setTimeout(() => {
       if (!socketClosed) {
@@ -73,10 +74,10 @@ class HotReloadPlugin {
         return acc;
       }, new Set());
       resources.forEach((resource) => {
-        if (!this.ensureQueue.includes(resource)) {
-          this.ensureQueue.push(resource);
+        if (!this.restartQueue.includes(resource)) {
+          this.restartQueue.push(resource);
         }
-        this.processEnsureQueue();
+        this.processRestartQueue();
       });
       callback();
     });

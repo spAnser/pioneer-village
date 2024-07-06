@@ -23,7 +23,7 @@ module.exports = () => ({
   externalsPresets: {
     node: true,
   },
-  plugins: [new HotReloadPlugin()],
+  plugins: [new HotReloadPlugin('server')],
   optimization: {
     minimize: false,
   },

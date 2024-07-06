@@ -36,7 +36,10 @@ module.exports = () => ({
       },
     ],
   },
-  plugins: [new HotReloadPlugin(), new ProvidePlugin({ h: ['preact', 'h'], Fragment: ['preact/compat', 'Fragment'] })],
+  plugins: [
+    new HotReloadPlugin('ui'),
+    new ProvidePlugin({ h: ['preact', 'h'], Fragment: ['preact/compat', 'Fragment'] }),
+  ],
   optimization: {
     minimize: false,
   },

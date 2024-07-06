@@ -1,3 +1,3 @@
-const client = require('../../../rspack/rspack.client');
+const { client } = require('../../../rspack/rspack.options');
 
-module.exports = [client()];
+module.exports = client;
