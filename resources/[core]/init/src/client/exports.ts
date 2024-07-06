@@ -1,5 +1,5 @@
 import { exports } from '@lib/client';
-import { initManager } from '../shared/init-manager';
+import { initManager } from './managers/init-manager';
 
 const register: Init.register = (name, options) => {
   return initManager.register(name, options);
