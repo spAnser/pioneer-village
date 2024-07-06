@@ -367,8 +367,8 @@ class Characters {
   }
 
   startIntervals() {
-    const nowTime = Date.now();
     setInterval(async () => {
+      const nowTime = Date.now();
       for (const char of this.characters) {
         await this.updateDatabaseWithPlayerMetadata(char);
       }
