@@ -1,6 +1,7 @@
+import { Log } from '@lib/client/comms/ui';
+
 //@ts-ignore
 import Natives from './natives-db';
-import { Log } from '@lib/client/comms/ui';
 
 const HexToFloat32 = (str: string) => {
   const int = parseInt(str, 16);
@@ -17,32 +18,58 @@ const HexToFloat32 = (str: string) => {
   } else return 0;
 };
 
+const testNatives = (category: string, parameterCount: number, nativeArgs: any[], restrictUnnamed = true) => {
+  Log('==============');
+  Log(`Testing ${category} natives with ${parameterCount} parameters`);
+  for (const [native, data] of Object.entries<any>(Natives[category])) {
+    try {
+      if (restrictUnnamed && !data.name.startsWith('_0x')) {
+        continue;
+      }
+      if (data.params.length !== parameterCount || data.return_type === 'void') {
+        continue;
+      }
+      const rtn = Citizen.invokeNative(native, ...nativeArgs) as any;
+      if (rtn === nativeArgs[0] || rtn === false) continue;
+      if (data.return_type === 'float') {
+        Log(native, HexToFloat32(rtn.toString(16)), restrictUnnamed ? '' : data.name);
+      } else {
+        Log(native, rtn, restrictUnnamed ? '' : data.name);
+      }
+    } catch {}
+  }
+  Log('==============');
+};
+
+const parseArgs = (args: string[]) => {
+  return args.map((arg) => {
+    if (arg === 'true') return true;
+    if (arg === 'false') return false;
+    if (!isNaN(Number(arg))) return Number(arg);
+    return arg;
+  });
+};
+
 RegisterCommand(
   'test_natives',
-  async () => {
-    const restrictUnnamed = true;
+  async (source: number, args: string[]) => {
+    const category = args[0];
+    const parameterCount = Number(args[1] || 0);
+    const nativeArgs = parseArgs(args.slice(2));
+
+    testNatives(category, parameterCount, nativeArgs);
+  },
+  false,
+);
+
+RegisterCommand(
+  'test_natives_entity',
+  async (source: number, args: string[]) => {
     const category = 'ENTITY';
-    const parameterCount = 2;
-    const args = [PlayerPedId(), 0];
-    Log('==============');
-    for (const [native, data] of Object.entries<any>(Natives[category])) {
-      try {
-        if (restrictUnnamed && !data.name.startsWith('_0x')) {
-          continue;
-        }
-        if (data.params.length !== parameterCount || data.return_type === 'void') {
-          continue;
-        }
-        const rtn = Citizen.invokeNative(native, ...args) as any;
-        if (rtn === args[0] || rtn === false) continue;
-        if (data.return_type === 'float') {
-          Log(native, HexToFloat32(rtn.toString(16)), restrictUnnamed ? '' : data.name);
-        } else {
-          Log(native, rtn, restrictUnnamed ? '' : data.name);
-        }
-      } catch {}
-    }
-    Log('==============');
+    const parameterCount = Number(args[0] || 2);
+    const nativeArgs = [PlayerPedId(), 0];
+
+    testNatives(category, parameterCount, nativeArgs);
   },
   false,
 );
