@@ -35,7 +35,7 @@ CreateThread(function()
         local pedComponentCount = InvokeNative(0x90403E8107B60E81, cache.ped) -- _GET_NUM_COMPONENTS_IN_PED
 
         temperature.warmth = 0
-        temperature.temperature = floor(GetTemperatureAtCoords(pedCoords) + 0.5)
+        temperature.temperature = floor(GetTemperatureAtCoords(pedCoords.x, pedCoords.y, pedCoords.z) + 0.5)
 
         if pedComponentCount then
             for i = 0, pedComponentCount - 1 do

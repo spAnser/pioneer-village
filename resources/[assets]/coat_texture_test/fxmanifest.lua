@@ -4,3 +4,4 @@ rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aw
 version '1.0.0'
 
 lua54 'yes'
+use_experimental_fxv2_oal 'yes'
