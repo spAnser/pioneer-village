@@ -8065,7 +8065,7 @@ declare function N_0x0d5fdf0d36fa10cd(p0: number): void;
 
 declare function N_0x0d7fd6a55fd63aef(p0: number, p1: number, p2: number): void;
 
-declare function N_0x0d7ffa1b2f69ed82(p0: number, p1: number, p2: number, p3: number): void;
+declare function RemoveShopItemFromPed(ped: number, componentHash: number, p2: number, p3: boolean): void;
 
 declare function N_0x0db41d59e0f1502b(p0: number): void;
 
@@ -10490,7 +10490,7 @@ declare function N_0x59aea4dc640814b9(p0: number, p1: number): void;
 
 declare function N_0x59b57c4b06531e1e(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number): number;
 
-declare function N_0x59bd177a1a48600a(p0: number, p1: number): void;
+declare function RefreshMetaPedShopItems(ped: number, p1: number): void;
 
 declare function N_0x59c7ad6fea2ac449(p0: number, p1: number, p2: number, p3: number): void;
 
@@ -17385,7 +17385,7 @@ declare function RemoveShockingEvent(event: number): boolean;
 
 declare function RemoveShockingEventSpawnBlockingAreas(): void;
 
-declare function RemoveShopItemFromPedByCategory(p0: number, p1: number, p2: number, p3: number): void;
+declare function RemoveShopItemFromPedByCategory(ped: number, componentCategory: number, p2: number, p3: boolean): void;
 
 /**
  * Appears to remove stealth kill action from memory
@@ -17732,6 +17732,8 @@ declare function ResetPedInVehicleContext(ped: number): void;
  * Resets the value for the last vehicle driven by the Ped.
  */
 declare function ResetPedLastVehicle(ped: number): void;
+
+declare function ResetPedModelPersonality(model: number | string): void;
 
 declare function ResetPedRagdollTimer(ped: number): void;
 

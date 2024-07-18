@@ -4,8 +4,11 @@ declare namespace Customization {
   enum CreationState {
     None = -1,
     GenderSelection = 0,
-    ClothingSelection = 1,
+    NameSelection = 1,
+    ClothingSelection = 2,
   }
+
+  type State = 'transition' | 'gender' | 'info' | 'body' | 'clothing';
 
   type Guids = { drawable: number; albedo: number; normal: number; material: number };
   type Palette = { palette: number; tint0: number; tint1: number; tint2: number };

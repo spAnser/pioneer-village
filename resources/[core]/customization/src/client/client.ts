@@ -1,5 +1,6 @@
 import './misc/events';
 import './misc/commands';
+import './misc/exports';
 import './misc/test';
 
 // const strings = LoadResourceFile('research', 'files/strings.txt').split('\n');

@@ -8,6 +8,7 @@ declare namespace SocketServer {
       metadata: Record<string, any>,
       callback: (success: boolean) => void,
     ) => void;
+    ['inventory.item-wear']: (itemId: number) => void;
   }
 
   interface ServerEvents {
@@ -18,6 +19,7 @@ declare namespace SocketServer {
       metadata: Record<string, any>,
       callback: (success: boolean) => void,
     ) => void;
+    ['inventory.item-wear']: (itemId: number) => void;
   }
 
   interface Client {}
@@ -25,7 +27,20 @@ declare namespace SocketServer {
   interface ClientEvents {
     inventorySubscribe: (identifier: string) => void;
     inventoryUnsubscribe: (identifier: string) => void;
-    inventoryStack: (oldIdentifier: string, oldSlot: number, newIdentifier: string, newSlot: number) => void;
-    inventoryMove: (oldIdentifier: string, oldSlot: number, newIdentifier: string, newSlot: number) => void;
+    inventoryStack: (
+      requestId: number,
+      oldIdentifier: string,
+      oldSlot: number,
+      newIdentifier: string,
+      newSlot: number,
+    ) => void;
+    inventoryMove: (
+      requestId: number,
+      oldIdentifier: string,
+      oldSlot: number,
+      newIdentifier: string,
+      newSlot: number,
+    ) => void;
+    ['inventory.item-wear']: (itemId: number) => void;
   }
 }

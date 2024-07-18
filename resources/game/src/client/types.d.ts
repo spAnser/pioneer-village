@@ -21,6 +21,8 @@ declare namespace Game {
   ) => Promise<number>;
   type setPedComponents = (ped: number, components: number[]) => Promise<void>;
   type setPedComponentsMp = (ped: number, components: number[]) => Promise<void>;
+  type removePedComponent = (ped: number, component: number) => Promise<void>;
+  type removePedComponentCategory = (ped: number, category: number) => Promise<void>;
   type finalizePedOutfit = (ped: number) => void;
 
   type registerNetworkEntity = (entity: number) => Promise<void>;
@@ -88,6 +90,8 @@ declare namespace Game {
     createPed: createPed;
     setPedComponents: setPedComponents;
     setPedComponentsMp: setPedComponentsMp;
+    removePedComponent: removePedComponent;
+    removePedComponentCategory: removePedComponentCategory;
     finalizePedOutfit: finalizePedOutfit;
     registerNetworkEntity: registerNetworkEntity;
     getNetworkControlOfEntity: getNetworkControlOfEntity;

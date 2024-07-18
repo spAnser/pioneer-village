@@ -1,12 +1,33 @@
+import type { Socket } from 'socket.io';
+import type { DefaultEventsMap } from 'socket.io/dist/typed-events';
+
 import { PrismaClient } from '@prisma/client';
 import { serverNamespace, userNamespace } from '../server';
 import Inventories from '../managers/inventories';
-import { logGreen, logInfo, logInfoC, logInfoS } from '../helpers/log';
-import { yellow } from 'colors';
+import { logGreen, logInfoC, logInfoS } from '../helpers/log';
 
 export default (prisma: PrismaClient) => {
   Inventories.setDB(prisma);
   // inventoryTest(prisma);
+
+  const sendMoveOrFailData = (
+    socket: Socket<SocketServer.Client & SocketServer.ClientEvents, UISocketEvents, DefaultEventsMap, any>,
+    requestId: number,
+    requestType: UI.Inventory.RequestType,
+    event?: UI.Inventory.MoveOrFailData | null,
+  ) => {
+    if (!event) {
+      return;
+    }
+    if ('requestId' in event) {
+      // TODO: Verify this only sends to the original user. Not to the entire room.
+      socket.emit('inventoryFail', event);
+      logInfoC(`inventory:${event.identifier}`, 'inventoryFail', event);
+    } else {
+      socket.emit('inventorySuccess', { identifier: event.identifier, requestId, requestType });
+      userNamespace.to(`inventory:${event.identifier}`).emit('inventoryMove', event);
+    }
+  };
 
   serverNamespace.on('connection', (socket) => {
     logGreen('[Inventory] Game server connected');
@@ -36,6 +57,10 @@ export default (prisma: PrismaClient) => {
         cb(false);
       }
     });
+
+    socket.on('inventory.item-wear', async (itemId: number) => {
+      const success = await Inventories.changeDurability(itemId);
+    });
   });
 
   userNamespace.on('connection', (socket) => {
@@ -62,35 +87,53 @@ export default (prisma: PrismaClient) => {
       socket.leave(`inventory:${identifier}`);
     });
 
-    socket.on('inventoryStack', async (oldIdentifier, oldSlot, newIdentifier, newSlot) => {
+    socket.on('inventoryStack', async (requestId, oldIdentifier, oldSlot, newIdentifier, newSlot) => {
       logInfoC('inventoryStack', oldIdentifier, oldSlot, newIdentifier, newSlot);
 
-      const itemStackEvents = await Inventories.stackItem(oldIdentifier, oldSlot, newIdentifier, newSlot);
+      const itemStackEvents = await Inventories.stackItem(
+        socket.data.character.id,
+        requestId,
+        oldIdentifier,
+        oldSlot,
+        newIdentifier,
+        newSlot,
+      );
 
       if (itemStackEvents) {
         const [eventOld, eventNew] = itemStackEvents;
-        if (eventOld) {
-          userNamespace.to(`inventory:${eventOld.identifier}`).emit('inventoryMove', eventOld);
-        }
-        if (eventNew) {
-          userNamespace.to(`inventory:${eventNew.identifier}`).emit('inventoryMove', eventNew);
-        }
+        sendMoveOrFailData(socket, requestId, 'stack', eventOld);
+        sendMoveOrFailData(socket, requestId, 'stack', eventNew);
       }
     });
 
-    socket.on('inventoryMove', async (oldIdentifier, oldSlot, newIdentifier, newSlot) => {
-      logInfoC('inventoryMove', oldIdentifier, oldSlot, newIdentifier, newSlot);
+    socket.on('inventoryMove', async (requestId, oldIdentifier, oldSlot, newIdentifier, newSlot) => {
+      logInfoC('inventoryMove', requestId, oldIdentifier, oldSlot, newIdentifier, newSlot);
 
-      const itemMoveEvents = await Inventories.moveItem(oldIdentifier, oldSlot, newIdentifier, newSlot);
+      const itemMoveEvents = await Inventories.moveItem(
+        socket.data.character.id,
+        requestId,
+        oldIdentifier,
+        oldSlot,
+        newIdentifier,
+        newSlot,
+      );
 
       if (itemMoveEvents) {
         const [eventOld, eventNew] = itemMoveEvents;
-        if (eventOld) {
-          userNamespace.to(`inventory:${eventOld.identifier}`).emit('inventoryMove', eventOld);
-        }
-        if (eventNew) {
-          userNamespace.to(`inventory:${eventNew.identifier}`).emit('inventoryMove', eventNew);
-        }
+
+        sendMoveOrFailData(socket, requestId, 'move', eventOld);
+        sendMoveOrFailData(socket, requestId, 'move', eventNew);
+      }
+    });
+
+    socket.on('inventory.item-wear', async (itemId: number) => {
+      logInfoC('inventory.item-wear', itemId);
+      const wearAmount = -1;
+      const { success, inventoryIdentifier } = await Inventories.changeDurability(itemId, wearAmount);
+      logInfoC('success', success, itemId, inventoryIdentifier);
+
+      if (success && inventoryIdentifier) {
+        userNamespace.to(`inventory:${inventoryIdentifier}`).emit('inventoryWear', itemId, wearAmount);
       }
     });
   });

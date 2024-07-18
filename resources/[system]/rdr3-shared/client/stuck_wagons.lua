@@ -15,8 +15,17 @@ Citizen.CreateThread(function()
 
         for _,vehicle in pairs(vehicles) do
             if NetworkHasControlOfEntity(vehicle) then
-                local driver = Citizen.InvokeNative(0x2963B5C1637E8A27, 2794498) -- GET_DRIVER_OF_VEHICLE
-                if not driver or not IsPedAPlayer(driver) then
+                local seats = GetVehicleModelNumberOfSeats(GetEntityModel(vehicle))
+
+                local hasPlayerInVehicle = false
+                for i = 0, seats do
+                    local ped = GetPedInVehicleSeat(vehicle, i)
+                    if IsPedAPlayer(ped) then
+                        hasPlayerInVehicle = true
+                    end
+                end
+
+                if not hasPlayerInVehicle then
                     local isStuck = IsVehicleStuckTimerUp(vehicle, 3, 1000)
                     if isStuck then
                         local horse = Citizen.InvokeNative(0xA8BA0BAE0173457B, vehicle, 0) -- _GET_PED_IN_DRAFT_HARNESS

@@ -27,50 +27,55 @@ class CharacterSpawnManager {
     return CharacterSpawnManager.instance;
   }
 
-  public async setCoords(coords: Vector3) {
+  public async setCoords(coords: Vector3, doScenario = false) {
     ClearPedTasksImmediately(PVGame.playerPed());
     DoScreenFadeOut(500);
     await Delay(1000);
     this.coords = coords;
-    const scenarioFound = await this.getScenariosInArea();
 
-    await Delay(100);
-    if (!scenarioFound) {
-      SetEntityCoordsNoOffset(PVGame.playerPed(), this.coords.x, this.coords.y, this.coords.z, false, false, false);
-      const position = this.isPlayerInsideCity() ? 'city' : 'wilderness';
-      let scenario = 0;
-      if (position === 'wilderness') {
-        scenario = Citizen.invokeNative('0x569F1E1237508DEB', PVGame.playerPed(), Citizen.resultAsInteger());
-        if (scenario === 0) {
-          scenario = GetHashKey(WildernessScenarios[randomRange(1, WildernessScenarios.length)]);
-          Log('predetermined wilderness scenario', scenario);
+    if (doScenario) {
+      const scenarioFound = await this.getScenariosInArea();
+
+      await Delay(100);
+      if (!scenarioFound) {
+        SetEntityCoordsNoOffset(PVGame.playerPed(), this.coords.x, this.coords.y, this.coords.z, false, false, false);
+        const position = this.isPlayerInsideCity() ? 'city' : 'wilderness';
+        let scenario = 0;
+        if (position === 'wilderness') {
+          scenario = Citizen.invokeNative('0x569F1E1237508DEB', PVGame.playerPed(), Citizen.resultAsInteger());
+          if (scenario === 0) {
+            scenario = GetHashKey(WildernessScenarios[randomRange(1, WildernessScenarios.length)]);
+            Log('predetermined wilderness scenario', scenario);
+          } else {
+            Log('dynamic wilderness scenario', scenario);
+          }
         } else {
-          Log('dynamic wilderness scenario', scenario);
+          scenario = GetHashKey(CityScenarios[randomRange(1, CityScenarios.length)]);
+          Log('predetermined city scenario', scenario);
         }
-      } else {
-        scenario = GetHashKey(CityScenarios[randomRange(1, CityScenarios.length)]);
-        Log('predetermined city scenario', scenario);
-      }
 
-      await Delay(200);
-      // @ts-ignore
-      TaskStartScenarioInPlace(PVGame.playerPed(), scenario, 0, false, false, 0, -1.0, false);
-    } else {
-      Log('dynamic place scenario is now playing');
+        await Delay(200);
+        // @ts-ignore
+        TaskStartScenarioInPlace(PVGame.playerPed(), scenario, 0, false, false, 0, -1.0, false);
+      } else {
+        Log('dynamic place scenario is now playing');
+      }
     }
 
     await Delay(800);
     DoScreenFadeIn(500);
-    await Delay(800);
-    PVPrompt.show('character-spawn:cancel:task');
-    this.promptLoopRunning = true;
-    while (this.promptLoopRunning) {
-      const currentCoords = new Vector3().setFromArray(GetEntityCoords(PVGame.playerPed()));
-      if (currentCoords.getDistance(this.coords) >= 2.0) {
-        PVPrompt.hide('character-spawn:cancel:task');
-        this.promptLoopRunning = false;
+    if (doScenario) {
+      await Delay(800);
+      PVPrompt.show('character-spawn:cancel:task');
+      this.promptLoopRunning = true;
+      while (this.promptLoopRunning) {
+        const currentCoords = new Vector3().setFromArray(GetEntityCoords(PVGame.playerPed()));
+        if (currentCoords.getDistance(this.coords) >= 2.0) {
+          PVPrompt.hide('character-spawn:cancel:task');
+          this.promptLoopRunning = false;
+        }
+        await Delay(100);
       }
-      await Delay(100);
     }
   }
 

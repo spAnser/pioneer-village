@@ -19,6 +19,7 @@
     "./types.d.ts",
     "../../types.d.ts",
     "../../env.d.ts",
-    "../../resources/**/types.d.ts"
+    "../../resources/**/types.d.ts",
+    "../../resources/**/types/*.d.ts"
   ]
 }

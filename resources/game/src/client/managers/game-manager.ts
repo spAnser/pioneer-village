@@ -282,7 +282,7 @@ class GameManager {
     if (randomOutfit) {
       SetRandomOutfitVariation(ped, true);
     }
-    await this.pedIsReadyToRender(ped);
+    // await this.pedIsReadyToRender(ped);
     return ped;
   }
 
@@ -350,8 +350,25 @@ class GameManager {
     }
   }
 
+  async removePedComponent(ped: number, component: number): Promise<void> {
+    if (!IsEntityAPed(ped)) {
+      return;
+    }
+    RemoveShopItemFromPed(ped, component, 0, true);
+    await Delay(1);
+  }
+
+  async removePedComponentCategory(ped: number, category: number): Promise<void> {
+    if (!IsEntityAPed(ped)) {
+      return;
+    }
+    RemoveShopItemFromPedByCategory(ped, category, 0, false);
+    await Delay(1);
+  }
+
   finalizePedOutfit(ped: number): void {
     N_0x704c908e9c405136(ped);
+    N_0xaab86462966168ce(ped, true);
     UpdatePedVariation(ped, false, true, true, true, false);
   }
 

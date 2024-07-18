@@ -1,4 +1,4 @@
-import { initManager } from '../shared/init-manager';
+import { initManager } from './managers/init-manager';
 
 import './exports';
 

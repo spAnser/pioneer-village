@@ -10,14 +10,13 @@ export const Modal = styled.div`
   left: ${uiSize(1337)};
   width: ${uiSize(555.5)};
   height: ${uiSize(898)};
-  padding-left: ${uiSize(60)};
-  padding-right: ${uiSize(60)};
   background-image: url(https://p--v.b-cdn.net/customization/background.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   color: ${theme.colors.white.hex};
   font-family: 'Caveat', cursive;
+  user-select: none;
 
   input {
     width: 100%;
@@ -32,7 +31,12 @@ export const Modal = styled.div`
       border-bottom-color: ${theme.colors.white.hex};
     }
   }
+`;
 
+export const ModalContents = styled.div`
+  position: absolute;
+  inset: ${uiSize(75)} ${uiSize(60)} ${uiSize(60)};
+  //padding: ${uiSize(40)} ${uiSize(60)};
   overflow: auto;
 
   &::-webkit-scrollbar {
@@ -53,9 +57,39 @@ export const Modal = styled.div`
 `;
 
 export const ModalTitle = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   text-align: center;
   font-family: 'Homemade Apple', cursive;
   font-size: ${uiSize(50)};
   transform: translateY(-50%);
-  user-select: none;
+`;
+
+export const ModalButtons = styled.div`
+  position: absolute;
+  bottom: ${uiSize(40)};
+  right: ${uiSize(60)};
+  left: ${uiSize(30)};
+  transform: translateY(50%);
+  display: flex;
+  gap: ${uiSize(30)};
+  justify-content: space-between;
+`;
+
+export const ModalButton = styled.button`
+  padding: ${uiSize(10)} ${uiSize(20)};
+  background-color: transparent;
+  border: none;
+  color: ${theme.colors.white.hex};
+
+  &:hover,
+  &.active {
+    color: ${theme.colors.red.hex};
+  }
+
+  svg {
+    height: ${uiSize(32)};
+  }
 `;

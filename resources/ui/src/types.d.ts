@@ -4,7 +4,10 @@ declare interface UISocketEvents {
   inventoryLoad: (data: UI.Inventory.LoadData) => void;
   inventoryAdd: (data: UI.Inventory.AddData) => void;
   inventoryMove: (data: UI.Inventory.MoveData) => void;
+  inventoryWear: (itemId: number, change: number) => void;
   // inventoryRemove: (data: UI.Inventory.RemoveData) => void;
+  inventorySuccess: (data: UI.Inventory.SuccessFailData) => void;
+  inventoryFail: (data: UI.Inventory.SuccessFailData) => void;
 
   ['world.register-object']: (name: string, id: number) => void;
   ['world.unregister-object']: (name: string) => void;
@@ -99,7 +102,7 @@ declare namespace UI.Customization {
   }
 
   interface State extends UI.BaseState {
-    state: 'transition' | 'gender' | 'creation' | 'tailor' | 'barber';
+    state: globalThis.Customization.State;
     components: Record<string, any>;
     model: string | number;
     gender: 'male' | 'female';
@@ -210,6 +213,24 @@ declare namespace UI.Notification {
   type Event = Partial<State>;
 }
 
+declare namespace UI.Interact {
+  interface POI {
+    id: string;
+    screenX: number;
+    screenY: number;
+    distance: number;
+    label: string;
+    key: string;
+  }
+
+  interface State extends UI.BaseState {
+    pois: POI[];
+    active: string | null;
+  }
+
+  type Event = Partial<State>;
+}
+
 declare namespace UI.TargetLayer {
   interface State extends UI.BaseState {
     active: boolean;
@@ -222,14 +243,14 @@ declare namespace UI.TargetLayer {
   type Event = Partial<State>;
 }
 
-declare namespace UI.Interact {
-  interface State extends UI.BaseState {
-    options: Record<string, string>;
-    context: any;
-  }
-
-  type Event = Partial<State>;
-}
+// declare namespace UI.Interact {
+//   interface State extends UI.BaseState {
+//     options: Record<string, string>;
+//     context: any;
+//   }
+//
+//   type Event = Partial<State>;
+// }
 
 declare namespace UI.ThreeJS {
   interface State extends UI.BaseState {
@@ -305,6 +326,8 @@ declare namespace UI.Animations {
 
 declare namespace UI.Inventory {
   interface State extends UI.BaseState {
+    characterId: number;
+    clothingInventory: string;
     mainInventory: string;
     targetInventory: string;
     inventories: Map<string, LoadData>;
@@ -321,7 +344,7 @@ declare namespace UI.Inventory {
     identifier: number;
     ids: number[];
     metadatas: any[];
-    durability: number;
+    durabilities: (number | null)[];
     quantity: number;
   }
 
@@ -342,6 +365,7 @@ declare namespace UI.Inventory {
   }
 
   interface MoveData {
+    charRequestId: string;
     identifier: string;
     items: Record<string, ItemData>;
     emptySlots: number[];
@@ -350,6 +374,23 @@ declare namespace UI.Inventory {
   interface RemoveData {
     identifier: string;
     items: Record<string, ItemData>;
+  }
+
+  type RequestType = 'add' | 'stack' | 'move' | 'remove';
+
+  interface SuccessFailData {
+    identifier: string;
+    requestId: number;
+    requestType: RequestType;
+  }
+
+  type MoveOrFailData = MoveData | SuccessFailData;
+
+  interface MoveRequest {
+    sourceIdentifier: string;
+    oldSlot: number;
+    targetIdentifier: string;
+    newSlot: number;
   }
 }
 

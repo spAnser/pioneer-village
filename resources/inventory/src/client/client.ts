@@ -1,4 +1,4 @@
-import { emitUI, onUI, PVGame } from '@lib/client';
+import { emitUI, onUI, PVCustomization, PVGame } from '@lib/client';
 import items from '@lib/shared/items';
 import './keybinds';
 import './weapons';
@@ -26,6 +26,8 @@ const sendInventoryItems = () => {
       image: item.image,
       weight: item.weight,
       stackSize: item.stackSize,
+      maxDurability: item.maxDurability,
+      maxLife: item.maxLife,
     };
   }
 
@@ -34,7 +36,7 @@ const sendInventoryItems = () => {
 
 onNet('game:character-selected', (charId: number) => {
   sendInventoryItems();
-  emitUI('inventory.state', { mainInventory: `character:${charId}` });
+  emitUI('inventory.state', { clothingInventory: `clothing:${charId}`, mainInventory: `character:${charId}` });
 });
 
 const sendUIData = async () => {
@@ -42,7 +44,10 @@ const sendUIData = async () => {
   sendInventoryItems();
   const character = PVGame.getCurrentCharacter();
   if (character) {
-    emitUI('inventory.state', { mainInventory: `character:${character.id}` });
+    emitUI('inventory.state', {
+      clothingInventory: `clothing:${character.id}`,
+      mainInventory: `character:${character.id}`,
+    });
   }
 };
 
@@ -80,4 +85,10 @@ onUI('inventory.main-inventory', (data) => {
       }
     }
   }
+});
+
+onUI('inventory.clothing-change', async (equippedItems) => {
+  const playerPed = PVGame.playerPed();
+
+  PVCustomization.equipItems(playerPed, equippedItems);
 });

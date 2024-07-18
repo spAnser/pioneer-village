@@ -27,7 +27,7 @@
       "jsx": "react-jsx",
       "jsxImportSource": "preact",
       "module": "esnext",
-      "types": ["@citizenfx/client", "@types/node", "webpack-env"],
+      "types": ["@citizenfx/client", "@types/node"],
       "moduleResolution": "node",
       "downlevelIteration": true
   },
@@ -37,6 +37,7 @@
     "../../../*/rdr3-shared/types/*.d.ts",
     "../../../**/src/types.d.ts",
     "../../../**/src/client/types.d.ts",
-    "../../../../socket/src/types.d.ts"
+    "../../../../socket/src/types.d.ts",
+    "../../../../socket/src/types/*.d.ts"
   ]
 }

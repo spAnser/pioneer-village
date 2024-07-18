@@ -16,6 +16,26 @@ const GetHashKey = (text: string): number => {
   return hash;
 };
 
+const Minutes = (minutes: number): number => {
+  return 60 * minutes;
+};
+
+const Hours = (hours: number): number => {
+  return Minutes(60 * hours);
+};
+
+const Days = (days: number): number => {
+  return Hours(24 * days);
+};
+
+const Weeks = (weeks: number): number => {
+  return Days(7 * weeks);
+};
+
+const Months = (months: number): number => {
+  return Weeks(4 * months);
+};
+
 // Inventory.ItemFlags
 enum ItemFlags {
   MATERIAL = 1,
@@ -26,6 +46,15 @@ enum ItemFlags {
   CONSUMABLE = 32,
   CARCASS = 64,
   KEY = 128,
+  CLOTHING = 256,
+}
+
+enum Restrictions {
+  None = 0,
+  Small = 1,
+  Food = 2,
+  Ammo = 4,
+  Clothing = 8,
 }
 
 const WeaponType = {
@@ -43,6 +72,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'dollar',
     name: 'Dollar',
     flags: ItemFlags.CURRENCY,
+    restriction: Restrictions.Small,
     stackSize: 100,
     weight: 0.01,
   },
@@ -51,6 +81,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'quarter',
     name: 'Quarter',
     flags: ItemFlags.CURRENCY,
+    restriction: Restrictions.Small,
     stackSize: 100,
     weight: 0.01,
   },
@@ -59,6 +90,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'gold-bar',
     name: 'Gold Bar',
     flags: ItemFlags.CURRENCY + ItemFlags.MATERIAL,
+    restriction: Restrictions.None,
     stackSize: 1,
     weight: 5,
   },
@@ -70,6 +102,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'shovel',
     name: 'Shovel',
     flags: ItemFlags.TOOL,
+    restriction: Restrictions.None,
     stackSize: 1,
     weight: 4,
   },
@@ -78,6 +111,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'handcuffs',
     name: 'Handcuffs',
     flags: ItemFlags.TOOL,
+    restriction: Restrictions.None,
     stackSize: 1,
     weight: 2,
   },
@@ -89,6 +123,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'bow',
     name: 'Bow',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 3,
@@ -101,6 +136,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'arrow',
     name: 'Arrow',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 20,
     weight: 0.01,
     useEvent: 'inventory:client:equip_ammo',
@@ -115,6 +151,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'lasso',
     name: 'Lasso',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.2,
@@ -130,6 +167,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'knife',
     name: 'Knife',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.2,
@@ -142,6 +180,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'machete',
     name: 'Machete',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.2,
@@ -154,6 +193,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'torch',
     name: 'Torch',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 0.8,
@@ -166,6 +206,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'broken-sword',
     name: 'Broken Sword',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.2,
@@ -181,6 +222,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'lantern',
     name: 'Lantern',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 2.5,
@@ -196,6 +238,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'dynamite',
     name: 'Dynamite',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 6,
     weight: 1,
     useEvent: 'inventory:client:toggle_thrown',
@@ -208,6 +251,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'molotov',
     name: 'Molotov',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 3,
     weight: 1,
     useEvent: 'inventory:client:toggle_thrown',
@@ -223,6 +267,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'sniperrifle-carcano',
     name: 'Carcano Rifle',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 2.4,
@@ -235,6 +280,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'ammo-rifle',
     name: 'Rifle Ammo',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 20,
     weight: 0.01,
     useEvent: 'inventory:client:equip_ammo',
@@ -249,6 +295,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'rifle-varmint',
     name: 'Varmint Rifle',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 2.4,
@@ -261,6 +308,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'ammo-rifle-varmint',
     name: 'Varmint Rifle Ammo',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 20,
     weight: 0.01,
     useEvent: 'inventory:client:equip_ammo',
@@ -275,6 +323,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'pistol-semiauto',
     name: 'Semi-Auto Pistol',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.2,
@@ -287,6 +336,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'pistol-volcanic',
     name: 'Volcanic Pistol',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.3,
@@ -299,6 +349,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'ammo-pistol',
     name: 'Pistol Ammo',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 20,
     weight: 0.01,
     useEvent: 'inventory:client:equip_ammo',
@@ -313,6 +364,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'revolver-cattleman',
     name: 'Cattleman Revolver',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.3,
@@ -325,6 +377,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'revolver-schofield',
     name: 'Schofield Revolver',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.3,
@@ -337,6 +390,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'ammo-revolver',
     name: 'Revolver Ammo',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 20,
     weight: 0.01,
     useEvent: 'inventory:client:equip_ammo',
@@ -351,6 +405,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'repeater-carbine',
     name: 'Carbine Repeater',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 2.1,
@@ -363,6 +418,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'ammo-repeater',
     name: 'Repeater Ammo',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 20,
     weight: 0.01,
     useEvent: 'inventory:client:equip_ammo',
@@ -377,6 +433,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'shotgun-pump',
     name: 'Pump Action Shotgun',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.8,
@@ -389,6 +446,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'shotgun-doublebarrel',
     name: 'Double Barrel Shotgun',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.8,
@@ -401,6 +459,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'shotgun-repeating',
     name: 'Repeating Shotgun',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.8,
@@ -413,6 +472,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'shotgun-semiauto',
     name: 'Semi-Auto Shotgun',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.8,
@@ -425,6 +485,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'shotgun-sawedoff',
     name: 'Sawed-Off Shotgun',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.3,
@@ -437,6 +498,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'ammo-shotgun',
     name: 'Shotgun Ammo',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 20,
     weight: 0.01,
     useEvent: 'inventory:client:equip_ammo',
@@ -451,6 +513,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'fishingrod',
     name: 'Fishing Rod',
     flags: ItemFlags.WEAPON,
+    restriction: Restrictions.None,
     stackSize: 1,
     decayRate: 0.5,
     weight: 1.3,
@@ -463,6 +526,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'bait-worm',
     name: 'Bait Worm',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 10,
     weight: 0.1,
     useEvent: 'fishing:client:use_bait',
@@ -474,6 +538,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'bait-bread',
     name: 'Bait Bread',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 10,
     weight: 0.1,
     useEvent: 'fishing:client:use_bait',
@@ -485,6 +550,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'bait-Cheese',
     name: 'Bait Cheese',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 10,
     weight: 0.1,
     useEvent: 'fishing:client:use_bait',
@@ -496,6 +562,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'bait-corn',
     name: 'Bait Corn',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 10,
     weight: 0.1,
     useEvent: 'fishing:client:use_bait',
@@ -507,6 +574,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'bait-crawfish',
     name: 'Bait Crawfish',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 10,
     weight: 0.1,
     useEvent: 'fishing:client:use_bait',
@@ -518,6 +586,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'bait-cricket',
     name: 'Bait Cricket',
     flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
     stackSize: 10,
     weight: 0.1,
     useEvent: 'fishing:client:use_bait',
@@ -529,6 +598,7 @@ const items: Record<number, Inventory.Item> = {
     image: 'bass',
     name: 'Bass',
     flags: ItemFlags.MATERIAL + ItemFlags.CARCASS,
+    restriction: Restrictions.Food,
     stackSize: 1,
     decayRate: 0.2,
     weight: 1,
@@ -538,28 +608,73 @@ const items: Record<number, Inventory.Item> = {
     image: 'raw-meat',
     name: 'Raw Meat',
     flags: ItemFlags.MATERIAL + ItemFlags.CARCASS,
+    restriction: Restrictions.Food,
     stackSize: 1,
     decayRate: 0.2,
     weight: 1,
+    maxLife: Days(1),
   },
   [GetHashKey('PV_COOKED_MEAT')]: {
     identifier: GetHashKey('PV_COOKED_MEAT'),
     image: 'cooked-meat',
     name: 'Cooked Meat',
     flags: ItemFlags.MATERIAL + ItemFlags.CARCASS,
+    restriction: Restrictions.Food,
     stackSize: 1,
     decayRate: 0.2,
     weight: 1,
+    maxLife: Days(7),
   },
   [GetHashKey('PV_DOOR_KEY')]: {
     identifier: GetHashKey('PV_DOOR_KEY'),
     image: 'door-key',
     name: 'Door Key',
     flags: ItemFlags.KEY,
+    restriction: Restrictions.None,
     stackSize: 1,
     weight: 0.1,
     useEvent: 'doors:client:toggle_door',
+    maxDurability: 100,
+  },
+  [GetHashKey('PV_CLOTHING')]: {
+    identifier: GetHashKey('PV_CLOTHING'),
+    image: 'missing',
+    name: 'Clothing',
+    flags: ItemFlags.CLOTHING,
+    restriction: Restrictions.Clothing,
+    stackSize: 1,
+    weight: 2,
   },
 };
 
 export default items;
+
+/**
+
+ {
+   shopItem: 'CLOTHING_ITEM_M_HAT_006_TINT_005', // 1253035524
+   category: 'HATS', // -1725579161
+   palette: 'metaped_tint_horse_leather', //-1952348042
+   tint0: 107,
+   tint1: 132,
+   tint2: 255,
+ }
+
+[
+ 61606861,
+ -2045421226,
+ 1253035524,
+ 2036592873,
+ 879214843,
+ 2142227305,
+ -45967399,
+ 1707193846,
+ -457866027,
+ -2003481241,
+ -251978256,
+ 383947425,
+ 46507404,
+ 495640017
+]
+
+ */

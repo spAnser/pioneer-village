@@ -7,8 +7,4 @@ this_is_a_map 'yes'
 
 lua54 'yes'
 
-files {
-  'stream/character_selection_camp.ymap',
-}
-
 client_script './cl_main.lua'

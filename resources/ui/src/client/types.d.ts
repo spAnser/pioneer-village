@@ -47,6 +47,8 @@ declare interface UIEvents {
     fgColor?: keyof UI.Theme['colors'],
     centered?: boolean,
   ) => void;
+  ['interact.pois']: (pois: UI.Interact.POI[]) => void;
+  ['interact.active']: (active: string | null) => void;
   ['chat.state']: (event: UI.Chat.Event) => void;
   ['threejs.state']: (event: UI.ThreeJS.Event) => void;
   ['animations.state']: (event: UI.Animations.Event) => void;
@@ -63,6 +65,7 @@ declare interface UIEvents {
   ['customization.set-components']: (components: number[]) => void;
   ['customization.highlight']: (gender: 'male' | 'female') => void;
   ['customization.choose-gender']: () => void;
+  ['customization.set-state']: (state: Customization.State) => void;
 
   ['customization.set-tint-by-category']: (category: string, tint: Customization.Palette) => void;
   ['customization.remove-tint-by-category']: (category: string) => void;

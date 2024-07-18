@@ -1,9 +1,10 @@
 // Inventory.Restrictions
 enum Restrictions {
   None = 0,
-  OnlySmall = 1,
-  OnlyFood = 2,
-  OnlyAmmo = 4,
+  Small = 1,
+  Food = 2,
+  Ammo = 4,
+  Clothing = 8,
 }
 
 const InventoryTypes: Record<string, Inventory.Type> = {
@@ -11,6 +12,11 @@ const InventoryTypes: Record<string, Inventory.Type> = {
     slots: 16,
     maxWeight: 50,
     restrictions: Restrictions.None,
+  },
+  clothing: {
+    slots: 12,
+    maxWeight: 40,
+    restrictions: Restrictions.Clothing,
   },
   character: {
     slots: 48,
@@ -25,7 +31,7 @@ const InventoryTypes: Record<string, Inventory.Type> = {
   horse: {
     slots: 24,
     maxWeight: 100,
-    restrictions: Restrictions.OnlySmall,
+    restrictions: Restrictions.Small,
   },
   stash: {
     slots: 64,
@@ -35,7 +41,7 @@ const InventoryTypes: Record<string, Inventory.Type> = {
   paperBag: {
     slots: 8,
     maxWeight: 6,
-    restrictions: Restrictions.OnlySmall,
+    restrictions: Restrictions.Small,
   },
 };
 

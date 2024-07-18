@@ -14,11 +14,13 @@ import {
   InventoryFooter,
   InventoryHeader,
   InventoryGlobalStyle,
+  ClothingInventoryContainer,
 } from './styles';
 import { boolval } from '@lib/functions';
 import ProgressBar from '@styled/components/ProgressBar';
 import { uiSize } from '@uiLib/helpers';
-import theme from '@styled/theme';
+import { clamp } from '@lib/math';
+import styled from 'styled-components';
 
 const progressStyle = { position: 'absolute', left: 0, right: 0, overflow: 'hidden' };
 const progressStyleTop = { ...progressStyle, top: 0, borderTopLeftRadius: uiSize(4), borderTopRightRadius: uiSize(4) };
@@ -29,6 +31,29 @@ const progressStyleBottom = {
   borderBottomRightRadius: uiSize(4),
 };
 const progressStyleWeight = { overflow: 'hidden', width: '100%', borderRadius: uiSize(4) };
+
+let requestId = 0;
+
+const requests = new Map<number, UI.Inventory.MoveRequest>();
+
+const itsThumbScale = 1;
+const ITSThumbs = styled.div`
+  position: absolute;
+  top: ${uiSize(4)};
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  display: flex;
+  border-radius: ${uiSize(4)};
+`;
+const ITSThumb = styled.div`
+  image-rendering: pixelated;
+  width: ${uiSize(8 * itsThumbScale)};
+  height: ${uiSize(8 * itsThumbScale)};
+  background-size: ${uiSize(64 * itsThumbScale)};
+  filter: blur(${uiSize(3)});
+  transform: scale(1.25);
+`;
 
 export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.State, {}> {
   closeOnEscape = true;
@@ -48,6 +73,8 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
 
     this.state = {
       show: false,
+      characterId: 0,
+      clothingInventory: '',
       mainInventory: '',
       targetInventory: '',
       inventories: new Map(),
@@ -59,10 +86,16 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     };
 
     onClient('inventory.state', (event) => {
-      this.onEvent(event);
+      if (event.clothingInventory) {
+        context.socket.emit('inventorySubscribe', event.clothingInventory);
+      }
 
       if (event.mainInventory) {
         context.socket.emit('inventorySubscribe', event.mainInventory);
+
+        const [inventoryType, characterId] = event.mainInventory.split(':');
+
+        event.characterId = Number(characterId);
       }
 
       if (this.state.targetInventory && this.state.targetInventory !== event.targetInventory) {
@@ -72,6 +105,8 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
       if (event.targetInventory) {
         context.socket.emit('inventorySubscribe', event.targetInventory);
       }
+
+      this.onEvent(event);
     });
 
     onClient('inventory.items', (items) => {
@@ -85,6 +120,9 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     context.socket.on('inventoryLoad', this.eventLoad.bind(this));
     context.socket.on('inventoryAdd', this.eventAdd.bind(this));
     context.socket.on('inventoryMove', this.eventMove.bind(this));
+    context.socket.on('inventorySuccess', this.eventSuccess.bind(this));
+    context.socket.on('inventoryFail', this.eventFail.bind(this));
+    context.socket.on('inventoryWear', this.eventWear.bind(this));
   }
 
   componentDidMount() {
@@ -117,6 +155,10 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     }
     const slotItem = inventory.items[slot];
     if (!slotItem) {
+      return;
+    }
+
+    if (slotItem.durabilities && slotItem.durabilities[0] !== null && slotItem.durabilities[0] <= 0) {
       return;
     }
 
@@ -163,6 +205,11 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     if (this.state.targetInventory === data.identifier) {
       emitClient('inventory.target-inventory', data);
     }
+
+    if (`clothing:${this.state.characterId}` === data.identifier) {
+      emitClient('inventory.clothing-change', Object.values(data.items));
+    }
+
     this.setState({ inventories });
     this.computeInventoryWeight();
   }
@@ -190,7 +237,12 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
   }
 
   eventMove(data: UI.Inventory.MoveData) {
-    // console.log('[eventMove] data', data);
+    const [requestCharId, requestId] = data.charRequestId.split(':');
+
+    if (this.state.characterId === Number(requestCharId)) {
+      return;
+    }
+    console.log('[eventMove]', JSON.stringify(data, null, 2));
 
     const { inventories } = this.state;
     const inventory = inventories.get(data.identifier);
@@ -222,6 +274,74 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
       this.setState({ inventories });
       this.computeInventoryWeight();
     }
+
+    // Clothing Equipemnt Change
+    if (inventory && data.identifier === `clothing:${this.state.characterId}`) {
+      emitClient('inventory.clothing-change', Object.values(inventory.items));
+    }
+  }
+
+  eventSuccess(data: UI.Inventory.SuccessFailData) {
+    // console.log('[eventSuccess] data', JSON.stringify(data, null, 2));
+
+    requests.delete(data.requestId);
+  }
+
+  eventFail(data: UI.Inventory.SuccessFailData) {
+    // console.log('[eventFail] data', JSON.stringify(data, null, 2));
+    // TODO: Get Request and reverse move action
+
+    const request = requests.get(data.requestId);
+    if (!request) {
+      return;
+    }
+    requests.delete(data.requestId);
+    const { sourceIdentifier, oldSlot, targetIdentifier, newSlot } = request;
+    if (data.requestType === 'move') {
+      const { inventories } = this.state;
+      const sourceInventory = inventories.get(sourceIdentifier);
+      const targetInventory = inventories.get(targetIdentifier);
+      if (!sourceInventory || !targetInventory) {
+        return;
+      }
+      const oldItem = sourceInventory.items[oldSlot];
+      const newItem = targetInventory.items[newSlot];
+
+      if (oldItem) {
+        targetInventory.items[newSlot] = oldItem;
+      } else {
+        delete targetInventory.items[newSlot];
+      }
+
+      if (newItem) {
+        sourceInventory.items[oldSlot] = newItem;
+      } else {
+        delete sourceInventory.items[oldSlot];
+      }
+
+      this.setState({ inventories });
+      this.computeInventoryWeight();
+    }
+  }
+
+  eventWear(itemId: number, wearAmount: number) {
+    console.log('eventWear', itemId, wearAmount);
+    let itemChanged = false;
+    const { inventories } = this.state;
+    for (const inventory of inventories.values()) {
+      for (const item of Object.values(inventory.items)) {
+        if (item.ids.includes(itemId)) {
+          const oldDurability = item.durabilities[0] || 0;
+          const newDurability = clamp(oldDurability + wearAmount, 0, this.items[item.identifier].maxDurability || 1);
+
+          item.durabilities[0] = newDurability;
+          itemChanged = true;
+        }
+      }
+    }
+    if (itemChanged) {
+      this.setState({ inventories });
+    }
   }
 
   stackItem(sourceIdentifier: string, oldSlot: number, targetIdentifier: string, newSlot: number) {
@@ -232,7 +352,8 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     this.failedImages.delete(`${sourceIdentifier}::${oldSlot}`);
     this.failedImages.delete(`${targetIdentifier}::${newSlot}`);
 
-    this.context.socket.emit('inventoryStack', sourceIdentifier, oldSlot, targetIdentifier, newSlot);
+    this.context.socket.emit('inventoryStack', ++requestId, sourceIdentifier, oldSlot, targetIdentifier, newSlot);
+    requests.set(requestId, { sourceIdentifier, oldSlot, targetIdentifier, newSlot });
 
     const { inventories } = this.state;
     const sourceInventory = inventories.get(sourceIdentifier);
@@ -282,7 +403,8 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
 
             Not sure if this is needed I'm not seeing the requests being doubled up.
      */
-    this.context.socket.emit('inventoryMove', sourceIdentifier, oldSlot, targetIdentifier, newSlot);
+    this.context.socket.emit('inventoryMove', ++requestId, sourceIdentifier, oldSlot, targetIdentifier, newSlot);
+    requests.set(requestId, { sourceIdentifier, oldSlot, targetIdentifier, newSlot });
 
     const { inventories } = this.state;
     const sourceInventory = inventories.get(sourceIdentifier);
@@ -290,6 +412,8 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     if (!sourceInventory || !targetInventory) {
       return;
     }
+
+    // Move Item
     const oldItem = sourceInventory.items[oldSlot];
     const newItem = targetInventory.items[newSlot];
 
@@ -303,6 +427,16 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
       sourceInventory.items[oldSlot] = newItem;
     } else {
       delete sourceInventory.items[oldSlot];
+    }
+
+    // Clothing Equipemnt Change
+    if (sourceIdentifier !== targetIdentifier) {
+      if (sourceIdentifier === `clothing:${this.state.characterId}`) {
+        emitClient('inventory.clothing-change', Object.values(sourceInventory.items));
+      }
+      if (targetIdentifier === `clothing:${this.state.characterId}`) {
+        emitClient('inventory.clothing-change', Object.values(targetInventory.items));
+      }
     }
 
     this.setState({ inventories });
@@ -360,8 +494,12 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
 
       // Check if Source Item Still Exists
       if (sourceInventory?.items[oldSlot]?.identifier) {
+        const itemData = this.items[sourceInventory.items[oldSlot].identifier];
         // Check if Target is same and stack or move
-        if (sourceInventory?.items[oldSlot]?.identifier === targetInventory?.items[newSlot]?.identifier) {
+        if (
+          sourceInventory.items[oldSlot].identifier === targetInventory?.items[newSlot]?.identifier &&
+          itemData.stackSize > 1
+        ) {
           this.stackItem(dragItem.dataset.inventoryIdentifier, oldSlot, targetEl.dataset.inventoryIdentifier, newSlot);
         } else {
           this.moveItem(dragItem.dataset.inventoryIdentifier, oldSlot, targetEl.dataset.inventoryIdentifier, newSlot);
@@ -425,21 +563,49 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     this.setState({ tooltipItem: null });
   }
 
+  renderTint(palette: string, tint0: number, tint1: number, tint2: number) {
+    const tints = [tint0, tint0, tint0, tint0, tint1, tint1, tint2];
+
+    return (
+      <ITSThumbs>
+        {tints.map((tint, i) => (
+          <ITSThumb
+            key={i}
+            style={{
+              backgroundImage: `url(https://p--v.b-cdn.net/customization/palettes/${palette}_thumbs.png)`,
+              backgroundPosition: `-${uiSize((tint % 8) * 8 * itsThumbScale)} -${uiSize(
+                Math.floor(tint / 8) * 8 * itsThumbScale,
+              )}`,
+            }}
+          />
+        ))}
+      </ITSThumbs>
+    );
+  }
+
   renderItem(itemData: UI.Inventory.ItemData, i: number, identifier: string, inventory: UI.Inventory.LoadData) {
     const item = this.items[itemData.identifier];
 
     // console.log('[renderItem] itemData', itemData);
     // console.log('[renderItem] item', item);
 
+    let durabilityProgress = null;
+    if (item.maxDurability) {
+      const durability = itemData.durabilities[0] || 0;
+      durabilityProgress = durability / item.maxDurability;
+    }
+
+    const firstMetadata = itemData.metadatas[0];
+
     return (
       <>
-        {/*{itemData.durability <= 0 && (*/}
+        {/*{itemData.durabilities[0 <= 0 && (*/}
         {/*  <InventorySlotBackground style={{ backgroundColor: `rgba(${theme.colors.red.rgb}, 0.15)` }} />*/}
         {/*)}*/}
 
         {!this.failedImages.has(`${identifier}::${i}`) && (
           <img
-            src={`https://p--v.b-cdn.net/inventory/${item?.image}.png`}
+            src={`https://p--v.b-cdn.net/inventory/${firstMetadata?.image || item?.image}.png`}
             onError={(e) => {
               this.failedImages.add(`${identifier}::${i}`);
               // this.forceUpdate();
@@ -450,21 +616,41 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
         {this.failedImages.has(`${identifier}::${i}`) && <PlaceholderSvg text={item?.name} />}
         <span className="weight">{item?.weight * itemData.quantity}</span>
         <span className="quantity">x{itemData.quantity}</span>
-        <div style={progressStyleTop}>
-          <ProgressBar
-            progress={itemData.durability}
-            source="left"
-            color={itemData.durability > 0.6 ? 'green' : itemData.durability > 0.2 ? 'orange' : 'red'}
-            backgroundColor="transparent"
-            height={uiSize(2)}
-            width="100%"
-          />
-        </div>
+        {durabilityProgress !== null && (
+          <div style={progressStyleTop}>
+            <ProgressBar
+              progress={durabilityProgress}
+              source="left"
+              color={durabilityProgress > 0.6 ? 'green' : durabilityProgress > 0.2 ? 'orange' : 'red'}
+              backgroundColor="transparent"
+              height={uiSize(2)}
+              width="100%"
+            />
+          </div>
+        )}
+        {firstMetadata.palette &&
+          firstMetadata.palette !== 'NONE' &&
+          this.renderTint(
+            firstMetadata.palette,
+            firstMetadata.tint0 - 1,
+            firstMetadata.tint1 - 1,
+            firstMetadata.tint2 - 1,
+          )}
       </>
     );
   }
 
   renderSlot(i: number, identifier: string, inventory: UI.Inventory.LoadData) {
+    let isBroken = false;
+    if (i in inventory.items) {
+      const item = this.items[inventory.items[i]?.identifier];
+      if (item.maxDurability) {
+        const durability = inventory.items[i]?.durabilities[0] || 0;
+        if (durability <= 0) {
+          isBroken = true;
+        }
+      }
+    }
     return (
       <InventorySlot
         key={i}
@@ -474,7 +660,7 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
         data-inventory-identifier={identifier}
         data-slot={i}
         data-has-item={!!inventory.items[i]}
-        data-broken={inventory.items[i]?.durability <= 0}
+        data-broken={isBroken}
       >
         {inventory.items[i] && this.renderItem(inventory.items[i], i, identifier, inventory)}
       </InventorySlot>
@@ -483,8 +669,8 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
 
   renderInventory(identifier: string, inventory: UI.Inventory.LoadData) {
     const weight = this.state.inventoriesWeight.get(identifier) || 0;
-    const InventoryDetails = this.state.mainInventory === identifier ? InventoryHeader : InventoryFooter;
-    const InventoryStats = this.state.mainInventory === identifier ? InventoryFooter : InventoryHeader;
+    const InventoryDetails = this.state.targetInventory === identifier ? InventoryFooter : InventoryHeader;
+    const InventoryStats = this.state.targetInventory === identifier ? InventoryHeader : InventoryFooter;
     return (
       <>
         <InventoryDetails>
@@ -503,6 +689,7 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
         </InventoryDetails>
         <InventoryStats>
           <code>{identifier}</code>
+          {/*<div>Slots: {inventory.slots}</div>*/}
         </InventoryStats>
         <InventoryWrapper>
           {new Array(inventory.slots).fill(0).map((_, i) => this.renderSlot(i, identifier, inventory))}
@@ -521,10 +708,10 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
       return null;
     }
     let name = item.name;
-    console.log('itemData.metadatas', itemData.metadatas);
+    // console.log('itemData.metadatas', itemData.metadatas);
     if (itemData.metadatas?.length) {
       for (const metadata of itemData.metadatas) {
-        console.log('metadata', metadata);
+        // console.log('metadata', metadata);
         if (metadata.name) {
           name += ` (${metadata.name})`;
           break;
@@ -560,7 +747,7 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
   }
 
   render() {
-    const { mainInventory, targetInventory } = this.state;
+    const { clothingInventory, mainInventory, targetInventory } = this.state;
     const inventories = Object.fromEntries(this.state.inventories.entries());
 
     return (
@@ -577,6 +764,9 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
           <MainInventoryContainer>
             {inventories[mainInventory] && this.renderInventory(mainInventory, inventories[mainInventory])}
           </MainInventoryContainer>
+          <ClothingInventoryContainer>
+            {inventories[clothingInventory] && this.renderInventory(clothingInventory, inventories[clothingInventory])}
+          </ClothingInventoryContainer>
         </>
       )
     );
