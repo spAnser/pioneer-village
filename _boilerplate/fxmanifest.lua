@@ -11,6 +11,7 @@ server_scripts {
 }
 
 client_scripts {
-  "@rdr3-shared/client/rdr3_universal.js",
+  --"@rdr3-shared/client/rdr3_universal.js",
+  "@rdr3-shared/client/natives/*.js",
   "build/client.js"
 }
