@@ -6,7 +6,7 @@ import UIComponent from '@uiLib/ui-component';
 import { emitClient, LoadResourceJson, onClient } from '@lib/ui';
 
 import { defaultOverlays } from './data';
-import { Modal, ModalButton, ModalButtons, ModalContents, ModalTitle } from './styled';
+import { ModalButton, ModalButtons, ModalContents, ModalLeft, ModalRight, ModalTitle } from './styled';
 import StyleColorSelector from './components/StyleColorSelector';
 import { GenderSelect } from './components/Gender';
 import TintSelector from './components/TintSelector';
@@ -275,6 +275,16 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
     emitClient('customization.set-state', state);
   }
 
+  handleChangeBodyType(value: number) {
+    console.log('handleChangeBodyType', value);
+    emitClient('customization.set-body-type', value);
+  }
+
+  handleChangeWaist(value: number) {
+    console.log('handleChangeWasit', value);
+    emitClient('customization.set-waist', value);
+  }
+
   render() {
     return (
       <>
@@ -296,7 +306,7 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
         )}
         {this.state.show && this.state.state !== 'gender' && this.state.state !== 'transition' && (
           <>
-            <Modal>
+            <ModalRight>
               {this.state.state === 'info' && (
                 <>
                   <ModalContents>
@@ -318,8 +328,14 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
               {this.state.state === 'body' && (
                 <>
                   <ModalContents>
-                    <RangeSlider onChange={console.log} label="Body Type" labels={bodyTypes} defaultValue={2} max={4} />
-                    <RangeSlider onChange={console.log} label={`Waist`} max={20} />
+                    <RangeSlider
+                      onChange={this.handleChangeBodyType.bind(this)}
+                      label="Body Type"
+                      labels={bodyTypes}
+                      defaultValue={2}
+                      max={4}
+                    />
+                    <RangeSlider onChange={this.handleChangeWaist.bind(this)} label="Waist" max={20} />
                   </ModalContents>
                 </>
               )}
@@ -361,31 +377,33 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
                   <Tshirt />
                 </ModalButton>
               </ModalButtons>
-            </Modal>
+            </ModalRight>
           </>
         )}
-        {this.state.show && false && (
+        {this.state.show && true && (
           <>
-            <Modal>
-              <TintSelector
-                label="Hat Tint"
-                onChange={this.setTintByCategory.bind(this)}
-                category={'hats'}
-                palette={this.state.tints.hats.palette}
-                tint0={this.state.tints.hats.tint0}
-                tint1={this.state.tints.hats.tint1}
-                tint2={this.state.tints.hats.tint2}
-              />
-              <TintSelector
-                label="Coat Tint"
-                onChange={this.setTintByCategory.bind(this)}
-                category={'coats'}
-                palette={this.state.tints.coats.palette}
-                tint0={this.state.tints.coats.tint0}
-                tint1={this.state.tints.coats.tint1}
-                tint2={this.state.tints.coats.tint2}
-              />
-            </Modal>
+            <ModalLeft>
+              <ModalContents>
+                <TintSelector
+                  label="Hat Tint"
+                  onChange={this.setTintByCategory.bind(this)}
+                  category={'hats'}
+                  palette={this.state.tints.hats.palette}
+                  tint0={this.state.tints.hats.tint0}
+                  tint1={this.state.tints.hats.tint1}
+                  tint2={this.state.tints.hats.tint2}
+                />
+                <TintSelector
+                  label="Coat Tint"
+                  onChange={this.setTintByCategory.bind(this)}
+                  category={'coats'}
+                  palette={this.state.tints.coats.palette}
+                  tint0={this.state.tints.coats.tint0}
+                  tint1={this.state.tints.coats.tint1}
+                  tint2={this.state.tints.coats.tint2}
+                />
+              </ModalContents>
+            </ModalLeft>
           </>
         )}
       </>

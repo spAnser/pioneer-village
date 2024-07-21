@@ -17,6 +17,14 @@ declare namespace Customization {
   type GetTintForDrawable = (entity: number, drawable: number | string) => Palette | undefined;
   type GetIndexForCategory = (entity: number, category: number | string) => number;
   type GetTintForCategory = (entity: number, category: number | string) => Palette | undefined;
+  type SetTintForCategory = (
+    entity: number,
+    category: number | string,
+    palette: number | string,
+    tint0: number,
+    tint1: number,
+    tint2: number,
+  ) => void;
   type SetTintAtIndex = (
     entity: number,
     index: number,

@@ -13,28 +13,27 @@ RegisterCommand(
   async () => {
     const playerPed = PVGame.playerPed();
 
-    const isMale = IsPedMale(playerPed);
-
-    const textureSettings = isMale ? TextureTypes.male : TextureTypes.female;
-
     const oldTextureId = TextureIDs.get(playerPed);
     if (oldTextureId) {
-      ResetPedTexture_2(oldTextureId);
+      ClearPedTexture(oldTextureId);
       ReleaseTexture(oldTextureId);
       TextureIDs.delete(playerPed);
     }
 
-    const skinTone = 0;
+    const index = paletteManager.getIndexForCategory(playerPed, 'HEADS');
+    const { albedo, normal, material } = paletteManager.getGuidsAtIndex(playerPed, index);
 
-    const textureId = RequestTexture(
-      textureSettings.albedo[skinTone],
-      textureSettings.normal[skinTone],
-      textureSettings.material,
-    );
+    const textureId = RequestTexture(albedo, normal, material);
     Log('textureId', textureId);
     TextureIDs.set(playerPed, textureId);
 
-    const overlayId = AddTextureLayer(
+    // paletteManager.updateLayersForCategory(playerPed, 'HEADS', [
+    //     {OverlayInfo.eyebrows[0], color_type, opacity, unk, palette_hash, paleete_primary, palette_secondary, palette_teriatary},
+    // ])
+
+    // PED | TextureID | OverlayID[]
+
+    const layerId = AddTextureLayer(
       textureId,
       OverlayInfo.eyebrows[0].id,
       OverlayInfo.eyebrows[0].normal,
@@ -43,23 +42,24 @@ RegisterCommand(
       BaseOverlay[0].tx_opacity,
       BaseOverlay[0].tx_unk,
     );
-    Log('overlayId', overlayId);
+    Log('layerId', layerId);
 
-    SetTextureLayerPallete(textureId, overlayId, ColorPalettes.metaped_tint_generic.hash);
+    SetTextureLayerPallete(textureId, layerId, ColorPalettes.metaped_tint_generic.hash);
     SetTextureLayerTint(
       textureId,
-      overlayId,
-      BaseOverlay[0].palette_color_primary,
-      BaseOverlay[0].palette_color_secondary,
-      BaseOverlay[0].palette_color_tertiary,
+      layerId,
+      4, //BaseOverlay[0].palette_color_primary,
+      4, //BaseOverlay[0].palette_color_secondary,
+      3, //BaseOverlay[0].palette_color_tertiary,
     );
 
-    SetTextureLayerSheetGridIndex(textureId, overlayId, BaseOverlay[0].var);
-    SetTextureLayerAlpha(textureId, overlayId, BaseOverlay[0].opacity);
+    SetTextureLayerSheetGridIndex(textureId, layerId, BaseOverlay[0].var);
+    SetTextureLayerAlpha(textureId, layerId, 0.5); // BaseOverlay[0].opacity
+    SetTextureLayerRoughness(textureId, layerId, 0);
 
     await PVGame.waitTextureIsValid(textureId);
 
-    OverrideTextureOnPed(playerPed, GetHashKey('heads'), textureId);
+    ApplyTextureOnPed(playerPed, GetHashKey('heads'), textureId);
     UpdatePedTexture(textureId);
 
     PVGame.finalizePedOutfit(playerPed);

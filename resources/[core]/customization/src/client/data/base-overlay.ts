@@ -21,7 +21,7 @@ const BaseOverlay = [
     tx_id: 1,
     tx_normal: 0,
     tx_material: 0,
-    tx_color_type: 0,
+    tx_color_type: 1,
     tx_opacity: 1.0,
     tx_unk: 0,
     palette: 0,

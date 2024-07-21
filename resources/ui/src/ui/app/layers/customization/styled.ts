@@ -7,7 +7,6 @@ export const Container = styled.div``;
 export const Modal = styled.div`
   position: absolute;
   top: ${uiSize(91)}; // = (1080 - 898) / 2
-  left: ${uiSize(1337)};
   width: ${uiSize(555.5)};
   height: ${uiSize(898)};
   background-image: url(https://p--v.b-cdn.net/customization/background.webp);
@@ -33,11 +32,23 @@ export const Modal = styled.div`
   }
 `;
 
+export const ModalLeft = styled(Modal)`
+  right: ${uiSize(1337)};
+`;
+
+export const ModalRight = styled(Modal)`
+  left: ${uiSize(1337)};
+`;
+
 export const ModalContents = styled.div`
   position: absolute;
   inset: ${uiSize(75)} ${uiSize(60)} ${uiSize(60)};
   //padding: ${uiSize(40)} ${uiSize(60)};
   overflow: auto;
+
+  > * {
+    max-width: 99%;
+  }
 
   &::-webkit-scrollbar {
     width: ${uiSize(2)};

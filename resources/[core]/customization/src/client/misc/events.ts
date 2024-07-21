@@ -23,6 +23,14 @@ onUI('customization.set-state', (state) => {
   creationManager.setState(state);
 });
 
+onUI('customization.set-body-type', (bodyType) => {
+  creationManager.setBodyType(bodyType);
+});
+
+onUI('customization.set-waist', (waist) => {
+  creationManager.setWaist(waist);
+});
+
 RegisterCommand(
   'create_start',
   () => {
