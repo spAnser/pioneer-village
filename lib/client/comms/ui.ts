@@ -107,17 +107,5 @@ export const Log = (...messages: any[]) => {
 };
 export const LogExtra = (...messages: any[]) => {
   console.log(...messages);
-  if (DEV_ENV) {
-    emitUI('log.message', {
-      resource: GetCurrentResourceName(),
-      message: messages
-        .map((item) => {
-          if (typeof item === 'object') {
-            return JSON.stringify(item, null, 2);
-          }
-          return item;
-        })
-        .join(' '),
-    });
-  }
+  Log(...messages);
 };
