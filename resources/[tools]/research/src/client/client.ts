@@ -7,6 +7,7 @@ import './stuff/apple';
 import './stuff/gold-panning';
 import './stuff/instruments';
 import './stuff/police';
+import './stuff/side-saddle';
 
 import { AnimFlag } from '@lib/flags';
 

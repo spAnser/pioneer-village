@@ -148,7 +148,7 @@ class CameraManager {
       return;
     }
     const cam = this.get(id);
-    SetCamActiveWithInterp(cam, this.activeCam, duration, easeLocation, easeRotation);
+    SetCamActiveWithInterp(cam, this.activeCam, duration, easeLocation ? 1 : 0, easeRotation ? 1 : 0);
     this.activeCam = cam;
     await Delay(duration);
   }

@@ -44,6 +44,7 @@ declare namespace Game {
   type loadModel = (model: string | number) => Promise<void>;
   type requestTxd = (txd: string | number) => Promise<void>;
   type collisionLoadedAtEntity = (entity: number) => Promise<void>;
+  type equipMetaPedOutfit = (ped: number, outfit: number) => Promise<void>;
   type pedIsReadyToRender = (ped: number, delay?: number) => Promise<void>;
   type waitTextureIsValid = (textureId: number, delay?: number) => Promise<void>;
   type reachedCoords = (destCoords: Vector3Format, distance?: number, timeout?: number) => Promise<boolean>;
@@ -78,6 +79,8 @@ declare namespace Game {
   type vegAddVolume = (volume: number, modifierType: number, flags: number) => number;
   type vegRemoveAllSpheres = () => void;
 
+  type skinPed = (ped: number, character: Character) => Promise<void>;
+
   type playerServerId = number;
 
   type playerSteamId = string;
@@ -100,6 +103,7 @@ declare namespace Game {
     loadModel: loadModel;
     requestTxd: requestTxd;
     collisionLoadedAtEntity: collisionLoadedAtEntity;
+    equipMetaPedOutfit: equipMetaPedOutfit;
     pedIsReadyToRender: pedIsReadyToRender;
     waitTextureIsValid: waitTextureIsValid;
     reachedCoords: reachedCoords;
@@ -115,6 +119,8 @@ declare namespace Game {
     taskPlayAnimArrayNew: taskPlayAnimArrayNew;
     taskPlayAnimAdvArray: taskPlayAnimAdvArray;
     taskPlayEntityAnim: taskPlayEntityAnim;
+
+    skinPed: skinPed;
     getCurrentCharacter: () => Character;
 
     loadStream: loadStream;
@@ -179,7 +185,9 @@ declare namespace Anim {
     entities?: AdvTaskEntity[];
     blendInSpeed?: number;
     blendOutSpeed?: number;
+    // @deprecated use blendInSpeed
     speed?: number;
+    // @deprecated use blendOutSpeed
     speedMultiplier?: number;
   }
 

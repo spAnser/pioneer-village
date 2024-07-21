@@ -4513,7 +4513,7 @@ declare function GetPedDesiredMoveBlendRatio(ped: number): number;
  */
 declare function GetPedEyeColor(ped: number): number;
 
-declare function GetPedFaceFeature(ped: number, index: number): number;
+declare function GetCharExpression(ped: number, index: number): number;
 
 /**
  * A getter for [\_SET_PED_FACE_FEATURE](#\_0x71A5C1DBA060049E). Returns 0.0 if fails to get.
@@ -10142,7 +10142,14 @@ declare function N_0x4eccc2815ca79ae2(p0: number): number;
 
 declare function N_0x4eddd9e9ca5af985(p0: number): number;
 
-declare function N_0x4efc1f8ff1ad94de(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number): void;
+declare function SetTextureOutfitTints(
+  p0: number,
+  p1: number,
+  p2: number | string,
+  p3: number,
+  p4: number,
+  p5: number,
+): void;
 
 declare function N_0x4f0d2256aae94eda(p0: number): void;
 
@@ -10746,7 +10753,7 @@ declare function N_0x621d1b289caf5978(p0: number): number;
 
 declare function N_0x62377977e4f08668(p0: number): number;
 
-declare function N_0x6243635af2f1b826(p0: number, p1: number, p2: number, p3: number): number;
+declare function GetShopItemWearableStateByIndex(p0: number, p1: number, p2: boolean, p3: boolean): number;
 
 declare function N_0x627b68d9ce6ee8de(p0: number): number;
 
@@ -15868,7 +15875,7 @@ declare function N_0xffb520a3e16f7b7b(p0: number, p1: number): void;
 
 declare function N_0xffb99ffd17f65889(p0: number, p1: number): void;
 
-declare function N_0xffcc2db2d9953401(p0: number, p1: number, p2: number): number;
+declare function GetShopItemNumWearableStates(componentHash: number, isMpFemale: boolean, p2: boolean): number;
 
 declare function N_0xffddf802279be128(p0: number, p1: number, p2: number): void;
 
@@ -16775,7 +16782,7 @@ declare function OverrideSaveHouse(
   p7: number,
 ): boolean;
 
-declare function OverrideTextureOnPed(ped: number, componentHash: string | number, textureId: number): void;
+declare function ApplyTextureOnPed(ped: number, componentHash: string | number, textureId: number): void;
 
 declare function ParseddataIsFileLoaded(p0: number): boolean;
 

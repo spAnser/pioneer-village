@@ -289,14 +289,14 @@ export class HealthManager {
       const speed = GetEntitySpeed(this.playerPed);
       if (speed < 0.5 || IsEntityInWater(this.playerPed)) {
         const velocity = Vector3.fromArray(GetEntityVelocity(this.playerPed));
-        const pCoords = Vector3.fromArray(GetEntityCoords(this.playerPed));
+        const pCoords = Vector3.fromArray(GetEntityCoords(this.playerPed, false, false));
         const pHeading = GetEntityHeading(this.playerPed);
         const cid = DecorGetInt(this.playerPed, 'CID');
         const sex = DecorGetInt(this.playerPed, 'SEX');
         const inventory = DecorGetInt(this.playerPed, 'Inventory');
         // NetworkResurrectLocalPlayer(pCoords.x, pCoords.y, pCoords.z, pHeading, this.playerPed, true, 1, false);
         NetworkResurrectLocalPlayer(pCoords.x, pCoords.y, pCoords.z, pHeading, 0, false, 0, true);
-        SetPedToRagdoll(this.playerPed, speed * 100, speed * 100);
+        SetPedToRagdoll(this.playerPed, speed * 100, speed * 100, 0, false, false, 0);
         SetEntityVelocity(this.playerPed, velocity.x, velocity.y, velocity.z);
         Log('NetworkResurrectLocalPlayer');
         DecorSetInt(this.playerPed, 'CID', cid);
@@ -331,7 +331,7 @@ export class HealthManager {
     // SendNuiMessage(JSON.stringify({ action: 'update_health', health: boneHealthForUI }));
 
     if (this.health <= 0 || this.litersOfBlood <= 3) {
-      if (!GetPedConfigFlag(this.playerPed, PedConfigFlag.Knockedout) && !IsPedFatallyInjured(this.playerPed)) {
+      if (!GetPedConfigFlag(this.playerPed, PedConfigFlag.Knockedout, false) && !IsPedFatallyInjured(this.playerPed)) {
         SetCurrentPedWeapon(this.playerPed, `WEAPON_UNARMED`, true, AttachPoint.MainHand, false, false);
         SetCurrentPedWeapon(this.playerPed, `WEAPON_UNARMED`, true, AttachPoint.OffHand, false, false);
         ClearPedTasksImmediately(this.playerPed);
@@ -339,7 +339,7 @@ export class HealthManager {
         SetPedConfigFlag(this.playerPed, PedConfigFlag.Unk_170, true);
         TaskKnockedOut(this.playerPed, 30.0, true);
       }
-    } else if (GetPedConfigFlag(this.playerPed, PedConfigFlag.Knockedout)) {
+    } else if (GetPedConfigFlag(this.playerPed, PedConfigFlag.Knockedout, false)) {
       SetPedConfigFlag(this.playerPed, PedConfigFlag.DisableMelee, false);
       SetPedConfigFlag(this.playerPed, PedConfigFlag.Unk_170, false);
       ClearPedTasks(this.playerPed);
@@ -401,7 +401,7 @@ export class HealthManager {
             AnimpostfxPlay('PlayerRPGCoreDeadEye');
           }
           const strength = lerp(1.0, 0.0, boneHealth / 50.0);
-          N_0xcab4dd2d5b2b7246('PlayerRPGCoreDeadEye', strength);
+          AnimpostfxSetStrength('PlayerRPGCoreDeadEye', strength);
           const chance = lerp(0.004, 0.0, boneHealth / 50.0);
           if (Math.random() < chance) {
             doScreenFx = true;
@@ -425,7 +425,7 @@ export class HealthManager {
         AnimpostfxPlay('PlayerRPGCoreDeadEye');
       }
       const strength = lerp(1.0, 0.0, (this.litersOfBlood - 4.0) / 0.75);
-      N_0xcab4dd2d5b2b7246('PlayerRPGCoreDeadEye', strength);
+      AnimpostfxSetStrength('PlayerRPGCoreDeadEye', strength);
       const chance = lerp(0.004, 0.0, (this.litersOfBlood - 4.0) / 0.75);
 
       if (Math.random() < chance) {
@@ -806,7 +806,7 @@ export class HealthManager {
           this.litersOfBlood -= bloodToRemove;
           if (Math.random() < Math.min(bloodToRemove * 100, 0.1)) {
             setImmediate(() => {
-              SetPedWoundEffect(
+              SetPedActivateWoundEffect(
                 this.playerPed,
                 2,
                 bone.id,
@@ -827,7 +827,7 @@ export class HealthManager {
         }
       } else {
         // stopBoneBleeding(bone.id)
-        RemovePedWoundEffect(this.playerPed, 0);
+        UpdatePedWoundEffect(this.playerPed, 0);
       }
       if (currentBoneStatus.broken && currentBoneStatus.stabilized) {
         baseMultiplier += 0.25;

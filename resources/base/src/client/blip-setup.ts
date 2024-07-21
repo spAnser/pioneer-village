@@ -11,7 +11,9 @@ const createBlip = (blip: Base.BlipData) => {
   } else {
     BlipAddModifier(blipId, BlipColors.WHITE);
   }
-  SetBlipNameFromPlayerString(blipId, blip.name);
+  // TODO: Update to SetBlipName ???
+  // SetBlipNameFromPlayerString(blipId, blip.name);
+  SetBlipName(blipId, blip.name);
 };
 
 setTimeout(() => {

@@ -304,7 +304,16 @@ end
 function GetServeCoordsFromLook()
     local camCoords = GetGameplayCamCoord()
     local targetCoords = camCoords + (CameraForwardVec() * 10.0)
-    local shapeTest = StartShapeTestRay(camCoords, targetCoords, 1 + 8 + 16 + 32 + 64 + 128, ghostItem)
+    local shapeTest = StartShapeTestRay(
+        camCoords.x,
+        camCoords.y,
+        camCoords.z,
+        targetCoords.x,
+        targetCoords.y,
+        targetCoords.z,
+        1 + 8 + 16 + 32 + 64 + 128,
+        ghostItem
+    )
     local rtnVal, hit, endCoords, surfaceNormal, entityHit = GetShapeTestResult(shapeTest)
     if hit > 0 then
         return endCoords
@@ -367,7 +376,7 @@ Citizen.CreateThread(function()
                         end
                     end
                     if entityHit == 0 then
-                        SetEntityCoords(ghostItem, curServeCoords, 0.0, 0.0, 0.0, false)
+                        SetEntityCoords(ghostItem, curServeCoords.x, curServeCoords.y, curServeCoords.z, 0.0, 0.0, 0.0, false)
                         showServePrompt = true
                     else
                         showServePrompt = false
@@ -727,7 +736,7 @@ Citizen.CreateThread(function()
             PROMPT.showAtEntity(restockNutsPromptName, 'Almonds', entityHit)
 
             -- SCENARIO
-            --local scenario = Citizen.InvokeNative(0xF533D68FF970D190, coords, GetHashKey('PROP_PLAYER_EAT_ALMONDS_COUNTER'), 2.0)
+            --local scenario = Citizen.InvokeNative(0xF533D68FF970D190, coords.x, coords.y, coords.z, GetHashKey('PROP_PLAYER_EAT_ALMONDS_COUNTER'), 2.0)
             --print('scenario', scenario)
 
             --if not Citizen.InvokeNative(0x974DA3408DEC4E79, scenario) then

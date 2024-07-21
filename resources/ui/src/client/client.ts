@@ -185,7 +185,8 @@ RegisterCommand(
   false,
 );
 
-RegisterKeyMapping('+openChat', 'Chat', 'keyboard', 't');
+// Citizen.invokeNativeByHash(0x00000000, 0xd7664fd1, '+openChat', 'Chat', 'keyboard', 't');
+// RegisterKeyMapping('+openChat', 'Chat', 'keyboard', 't');
 
 // TODO: Replace this
 const DEV_ENV = true;

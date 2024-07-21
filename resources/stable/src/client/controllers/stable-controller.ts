@@ -266,7 +266,7 @@ class StableController {
     // HORSE_EQUIPMENT_MALE_GENITALS
     // HORSE_EQUIPMENT_FEMALE_GENITALS
     await Delay(1);
-    N_0x704c908e9c405136(horsePed); // FIX_OUTFIT
+    N_0x704C908E9C405136(horsePed); // FIX_OUTFIT
 
     await Delay(50);
 
@@ -278,8 +278,8 @@ class StableController {
       await Delay(1);
     }
     await Delay(1);
-    N_0x704c908e9c405136(horsePed); // FIX_OUTFIT
-    N_0xaab86462966168ce(horsePed, true);
+    N_0x704C908E9C405136(horsePed); // FIX_OUTFIT
+    N_0xAAB86462966168CE(horsePed, true);
     await Delay(1);
     UpdatePedVariation(horsePed, false, true, true, true, false); // _UPDATE_PED_VARIATION
     SetModelAsNoLongerNeeded(horse.model);

@@ -43,7 +43,7 @@ class PromptManager {
       if (resourceName === GetCurrentResourceName()) {
         // clearInterval(this.promptInterval);
         for (const prompt of Object.values(this.prompts)) {
-          PromptDelete(prompt.id);
+          UiPromptDelete(prompt.id);
         }
       }
     });
@@ -79,7 +79,7 @@ class PromptManager {
 
   createFromRegistered(name: string): void {
     if (this.prompts[name]) {
-      PromptDelete(this.prompts[name].id);
+      UiPromptDelete(this.prompts[name].id);
       delete this.prompts[name];
     }
     const registeredPrompt = this.registeredPrompts.get(name);
@@ -112,7 +112,7 @@ class PromptManager {
   show(name: string, label: string | null = null): void {
     setImmediate(() => {
       let prompt = this.prompts[name];
-      if (!prompt || !PromptIsValid(prompt.id)) {
+      if (!prompt || !UiPromptIsValid(prompt.id)) {
         if (this.registeredPrompts.has(name)) {
           this.createFromRegistered(name);
         } else {
@@ -126,15 +126,15 @@ class PromptManager {
       }
 
       if (prompt.lastGroup !== showPromptGroup) {
-        PromptRemoveGroup(prompt.id, prompt.lastGroup);
-        // PromptSetGroup(prompt.id, temporaryPromptGroup, 0);
+        UiPromptRemoveGroup(prompt.id, prompt.lastGroup);
+        // UiPromptSetGroup(prompt.id, temporaryPromptGroup, 0);
       }
       // ClearSameKeyPrompts(prompt, showPromptGroup)
       this.prompts[name].lastGroup = showPromptGroup;
-      PromptSetGroup(prompt.id, showPromptGroup, 0);
+      UiPromptSetGroup(prompt.id, showPromptGroup, 0);
       // if (!IsPedInMeleeCombat(PVGame.playerPed())) {
       //   const labelVar = VarString(10, 'LITERAL_STRING', label);
-      //   PromptSetActiveGroupThisFrame(showPromptGroup, labelVar, 1, 0, 0, 0);
+      //   UiPromptSetActiveGroupThisFrame(showPromptGroup, labelVar, 1, 0, 0, 0);
       // }
       emit('lua::prompts::show', name);
     });
@@ -146,25 +146,25 @@ class PromptManager {
       return;
     }
 
-    if (!PromptIsEnabled(prompt.id)) {
-      PromptSetEnabled(prompt.id, true);
+    if (!UiPromptIsEnabled(prompt.id)) {
+      UiPromptSetEnabled(prompt.id, true);
       await Delay(1);
     }
     if (prompt && prompt.lastGroup !== temporaryPromptGroup) {
-      PromptRemoveGroup(prompt.id, prompt.lastGroup);
+      UiPromptRemoveGroup(prompt.id, prompt.lastGroup);
     }
     this.prompts[name].lastGroup = temporaryPromptGroup;
-    PromptSetGroup(prompt.id, temporaryPromptGroup, 0);
+    UiPromptSetGroup(prompt.id, temporaryPromptGroup, 0);
     emit('lua::prompts::hide', name);
   }
 
   async temporarilyDisablePrompts(duration = 1000): Promise<void> {
     for (const prompt of Object.values(this.prompts)) {
-      PromptSetEnabled(prompt.id, false);
+      UiPromptSetEnabled(prompt.id, false);
     }
     await Delay(duration);
     for (const prompt of Object.values(this.prompts)) {
-      PromptSetEnabled(prompt.id, prompt.enabled);
+      UiPromptSetEnabled(prompt.id, prompt.enabled);
     }
   }
 
@@ -175,7 +175,7 @@ class PromptManager {
     const id = this.prompts[name].id;
     this.prompts[name].enabled = false;
     emit('lua::prompts::prompt', name, { id, mode: this.prompts[name].mode, enabled: false });
-    PromptSetEnabled(id, false);
+    UiPromptSetEnabled(id, false);
     Log(`PromptSetEnabled(id, ${false});`);
   }
 
@@ -186,7 +186,7 @@ class PromptManager {
     const id = this.prompts[name].id;
     this.prompts[name].enabled = true;
     emit('lua::prompts::prompt', name, { id, mode: this.prompts[name].mode, enabled: true });
-    PromptSetEnabled(id, true);
+    UiPromptSetEnabled(id, true);
   }
 
   updatePromptText(name: string, text: string | number): void {
@@ -195,29 +195,29 @@ class PromptManager {
     }
     const id = this.prompts[name].id;
     this.prompts[name].label = text;
-    text = VarString(10, 'LITERAL_STRING', text);
-    PromptSetText(id, text);
+    text = VarString(10, 'LITERAL_STRING', text.toString());
+    UiPromptSetText(id, text);
   }
 
   create(name: string, key: number, text: string, duration = 1000, enabled = true, visible = true): number {
     let id;
     if (this.prompts[name] && this.prompts[name].id) {
       id = this.prompts[name].id;
-      PromptSetStandardMode(id, false);
-      PromptSetHoldMode(id, 0);
+      UiPromptSetStandardMode(id, false);
+      UiPromptSetHoldMode(id, 0);
     } else {
-      id = PromptRegisterBegin();
+      id = UiPromptRegisterBegin();
     }
-    PromptSetControlAction(id, key);
-    PromptSetText(id, VarString(10, 'LITERAL_STRING', text));
-    PromptSetEnabled(id, enabled);
-    PromptSetVisible(id, visible);
-    PromptSetStandardMode(id, true);
-    PromptSetAttribute(id, PromptAttribute._0xA9F5CB58, true);
+    UiPromptSetControlAction(id, key);
+    UiPromptSetText(id, VarString(10, 'LITERAL_STRING', text));
+    UiPromptSetEnabled(id, enabled);
+    UiPromptSetVisible(id, visible);
+    UiPromptSetStandardMode(id, true);
+    UiPromptSetAttribute(id, PromptAttribute._0xA9F5CB58, true);
 
-    PromptSetGroup(id, temporaryPromptGroup, 0);
+    UiPromptSetGroup(id, temporaryPromptGroup, 0);
     if (!this.prompts[name]) {
-      PromptRegisterEnd(id);
+      UiPromptRegisterEnd(id);
     }
     this.prompts[name] = {
       id: id,
@@ -236,8 +236,8 @@ class PromptManager {
   createHold(name: string, key: number, text: string, duration = 1000, enabled = true, visible = true): number {
     const id = this.create(name, key, text, duration, enabled, visible);
 
-    PromptSetStandardMode(id, false);
-    PromptSetHoldMode(id, 1);
+    UiPromptSetStandardMode(id, false);
+    UiPromptSetHoldMode(id, 1);
 
     this.prompts[name].mode = 'hold';
     emit('lua::prompts::prompt', name, { id, mode: 'hold', enabled: true });
@@ -252,13 +252,13 @@ class PromptManager {
     }
     const prompt = this.prompts[name];
 
-    const promptGroup = PromptGetGroupIdForTargetEntity(entity);
+    const promptGroup = UiPromptGetGroupIdForTargetEntity(entity);
 
     if (promptGroup && promptGroup !== prompt.lastGroup) {
       if (prompt.lastGroup) {
-        PromptRemoveGroup(prompt.id, prompt.lastGroup);
+        UiPromptRemoveGroup(prompt.id, prompt.lastGroup);
       }
-      PromptSetGroup(prompt.id, promptGroup, 0);
+      UiPromptSetGroup(prompt.id, promptGroup, 0);
       prompt.lastGroup = promptGroup;
       // @ts-ignore
       // PromptSetAmbientGroupThisFrame(entity, 1.5, 1, 1, 0, 'Beer', 0);
@@ -275,11 +275,11 @@ class PromptManager {
       return;
     }
 
-    const promptGroup = PromptGetGroupIdForTargetEntity(entity);
+    const promptGroup = UiPromptGetGroupIdForTargetEntity(entity);
 
     if (promptGroup) {
-      PromptRemoveGroup(prompt.id, promptGroup);
-      PromptSetGroup(prompt.id, temporaryPromptGroup, 0);
+      UiPromptRemoveGroup(prompt.id, promptGroup);
+      UiPromptSetGroup(prompt.id, temporaryPromptGroup, 0);
       prompt.lastGroup = temporaryPromptGroup;
     }
   }

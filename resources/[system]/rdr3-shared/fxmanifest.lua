@@ -14,7 +14,7 @@ files {
 client_script {
   'client/IPL.lua',
   'client/stuck_wagons.lua',
-  'client/rdr3_universal.js',
+  --'client/rdr3_universal.js',
+  'client/rdr3_natives.js',
   --'client/log-component-names.js',
 }
-
