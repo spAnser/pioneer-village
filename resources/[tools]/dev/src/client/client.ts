@@ -3,6 +3,14 @@ import { Delay } from '@lib/functions';
 import { PVGame } from '@lib/client';
 import { Log } from '@lib/client/comms/ui';
 
+const teleport = async (x: number, y: number, z: number) => {
+  DoScreenFadeOut(500);
+  await Delay(500);
+  SetEntityCoords(PVGame.mountPed() || PVGame.playerPed(), x, y, z, true, false, false, true);
+  await Delay(1000);
+  DoScreenFadeIn(500);
+};
+
 RegisterCommand(
   'tp_waypoint',
   async () => {
@@ -36,17 +44,23 @@ RegisterCommand(
   false,
 );
 
+RegisterCommand(
+  'tp',
+  async (src: number, args: string[], raw: any) => {
+    let [x, y, z] = args.map((c) => parseFloat(c.replace(/,/g, '')) || 0);
+
+    if (x === undefined || y === undefined || z === undefined) return Log('Invalid coords.');
+
+    teleport(x, y, z);
+
+    Log('Coords', x, y, z);
+  },
+  false,
+);
+
 /**
  * Teleport to Towns
  */
-
-const teleport = async (x: number, y: number, z: number) => {
-  DoScreenFadeOut(500);
-  await Delay(500);
-  SetEntityCoords(PVGame.mountPed() || PVGame.playerPed(), x, y, z, true, false, false, true);
-  await Delay(1000);
-  DoScreenFadeIn(500);
-};
 
 RegisterCommand(
   'tp_valentine',
