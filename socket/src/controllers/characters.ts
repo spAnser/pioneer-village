@@ -117,6 +117,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
       const character = await Characters.createCharacter(socket.data.user.userId, characterData, faceData);
       if (character) {
         await Inventories.createInventory(`character:${character.id}`);
+        await Inventories.createInventory(`clothing:${character.id}`);
       }
       cb();
     });
