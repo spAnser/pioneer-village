@@ -37,7 +37,11 @@ class HotReloadPlugin {
     connection.on('close', () => {
       socketClosed = true;
     });
+    // connection.on('message', (msg) => {
+    //   console.log(`RCON [${this.source}] Message: ${msg}`);
+    // });
     connection.on('error', function (err) {
+      // console.log(`RCON [${this.source}] Error: ${err}`);
       connection.close();
     });
     console.log(`RCON [${this.source}] Restarting Resource: ${resource}`);
