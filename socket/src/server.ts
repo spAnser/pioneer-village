@@ -33,7 +33,7 @@ const io = new Server(server);
 
 export default server;
 
-export const serverNamespace: Namespace<SocketServer.Server & SocketServer.ServerEvents, SocketEvents> = io
+export const serverNamespace: Namespace<SocketServer.Server & SocketServer.ServerEvents, SocketServer.SocketEvents> = io
   .of('/server')
   .use(requireServerKey)
   .use(logAll);

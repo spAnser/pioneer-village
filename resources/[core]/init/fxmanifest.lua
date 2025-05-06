@@ -5,6 +5,7 @@ version '1.0.0'
 
 lua54 'yes'
 use_experimental_fxv2_oal 'yes'
+node_version '22'
 
 server_scripts {
   "build/server.js"

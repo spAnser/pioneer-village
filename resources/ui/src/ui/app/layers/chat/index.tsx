@@ -37,7 +37,7 @@ export default class Chat extends UIComponent<UI.BaseProps, UI.Chat.State, {}> {
         },
         '/emote': {
           description: 'Play an emote animation',
-          children: ['sit', 'sit2', 'sit3', 'sit4', 'sit5', 'sit6', 'dance', 'dance2', 'dance3'],
+          children: ['sit1', 'sit2', 'sit3', 'sit4', 'sit5', 'dance', 'dance2', 'dance3'],
         },
         '/me': {
           description: 'Show me popup on character.',
@@ -195,7 +195,7 @@ export default class Chat extends UIComponent<UI.BaseProps, UI.Chat.State, {}> {
   render() {
     return (
       <Frame className={this.state.show ? 'active' : this.state.partialShow ? 'partial' : ''}>
-        <Messages ref={this.refMessages} onMousewheel={this.handleMousewheel.bind(this)}>
+        <Messages ref={this.refMessages} onWheel={this.handleMousewheel.bind(this)}>
           {this.state.messages.map((message) => (
             <Message style={this.getChannelStyle(message.channel)}>
               {message.channel && message.channel !== 'general' && (

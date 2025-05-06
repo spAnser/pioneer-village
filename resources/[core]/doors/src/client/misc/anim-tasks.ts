@@ -19,5 +19,7 @@ export const doorOpenAnim: Anim.Task = {
 
     await Delay(2000);
     PVBase.deleteEntity(key);
+
+    await PVGame.loadModel('p_jaildoor01x', 10);
   },
 };

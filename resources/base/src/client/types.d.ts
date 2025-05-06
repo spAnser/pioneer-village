@@ -3,7 +3,7 @@ declare interface ClientExports {
 }
 
 declare namespace Base {
-  type getNetworkControlOfEntity = (entity: number) => void;
+  type getNetworkControlOfEntity = (entity: number) => Promise<void>;
   type deleteEntity = (entity: number) => void;
   type deleteEntities = (entities: number[]) => void;
 

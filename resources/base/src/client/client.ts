@@ -5,7 +5,7 @@ import './blip-setup';
 import './door-register';
 import './characterData';
 
-const getNetworkControlOfEntity: Base.getNetworkControlOfEntity = async (entity: number): Promise<void> => {
+const getNetworkControlOfEntity: Base.getNetworkControlOfEntity = async (entity) => {
   do {
     NetworkRequestControlOfEntity(entity);
     await Delay(5);

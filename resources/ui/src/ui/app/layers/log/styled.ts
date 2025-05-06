@@ -144,11 +144,15 @@ export const FilterItem = styled.div`
     width: ${uiSize(10)};
     height: ${uiSize(14)};
 
-    color: ${theme.colors.white.hex};
+    color: ${theme.colors.black.hex};
   }
 
-  &:has(svg) {
+  &.red {
     background-color: ${theme.colors.red.hex};
+
+    svg {
+      color: ${theme.colors.white.hex};
+    }
   }
 
   &.inactive {

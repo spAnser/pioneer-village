@@ -104,8 +104,8 @@ RegisterCommand(
   false,
 );
 
-const loadModel: Game.loadModel = (model) => {
-  return gameManager.loadModel(model);
+const loadModel: Game.loadModel = (model, delay) => {
+  return gameManager.loadModel(model, delay);
 };
 
 const requestTxd: Game.requestTxd = (txd) => {

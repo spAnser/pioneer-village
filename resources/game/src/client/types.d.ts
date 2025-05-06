@@ -41,7 +41,7 @@ declare namespace Game {
     offset?: Vector3Format,
     rotation?: Vector3Format,
   ) => void;
-  type loadModel = (model: string | number) => Promise<void>;
+  type loadModel = (model: string | number, delay?: number) => Promise<void>;
   type requestTxd = (txd: string | number) => Promise<void>;
   type collisionLoadedAtEntity = (entity: number) => Promise<void>;
   type equipMetaPedOutfit = (ped: number, outfit: number) => Promise<void>;

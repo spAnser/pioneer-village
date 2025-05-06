@@ -1,4 +1,4 @@
-import { PVGame, emitUI, focusUI } from '@lib/client';
+import { PVGame, emitUI, focusUI, onUI } from '@lib/client';
 
 import { AnimFlag } from '@lib/flags';
 import { Delay } from '@lib/functions';
@@ -69,7 +69,7 @@ RegisterCommand(
 
     FreezeEntityPosition(playerPed, true);
     SetEntityCollision(playerPed, false, false);
-    SetEntityCoords(playerPed, -286.2163391113281, 816.0573120117188, 119.1258642578125, 0.0, 0.0, 0.0, false);
+    SetEntityCoords(playerPed, -286.2163391113281, 816.0573120117188, 119.1258642578125, false, false, false, false);
     SetEntityHeading(playerPed, 98.1);
 
     PVGame.taskPlayAnim({
@@ -90,68 +90,79 @@ RegisterCommand(
   false,
 );
 
+const bones = [
+  'SKEL_HEAD',
+  'SKEL_L_CALF',
+  'SKEL_L_CLAVICLE',
+  'SKEL_L_FOOT',
+  'SKEL_L_FOREARM',
+  'SKEL_L_HAND',
+  'SKEL_L_THIGH',
+  'SKEL_L_UPPERARM',
+  'SKEL_NECK1',
+  'SKEL_PENIS00',
+  'SKEL_R_CALF',
+  'SKEL_R_CLAVICLE',
+  'SKEL_R_FOOT',
+  'SKEL_R_FOREARM',
+  'SKEL_R_HAND',
+  'SKEL_R_THIGH',
+  'SKEL_R_UPPERARM',
+  'SKEL_SPINE4',
+];
+
+const getUIBones = (ped = PlayerPedId()): [number, UI.Doctor.BoneStatus[]] => {
+  const uiBones: UI.Doctor.BoneStatus[] = [];
+
+  for (const boneName of bones) {
+    const bone = healthManager.boneNames[boneName];
+    if (!bone) {
+      continue;
+    }
+    const coords = GetPedBoneCoords(ped, bone.id, 0.0, 0.0, 0.0);
+    const screenCoords = GetScreenCoordFromWorldCoord(coords[0], coords[1], coords[2]);
+
+    if (screenCoords[0]) {
+      const boneStatus = healthManager.boneStatus.get(bone.id);
+      // Log('boneStatus', boneStatus);
+      if (!boneStatus) {
+        continue;
+      }
+      uiBones.push({
+        coords: { x: screenCoords[1] * 100, y: screenCoords[2] * 100 },
+        name: boneName,
+        health: healthManager.boneHealth.get(bone.id) ?? 100,
+        broken: boneStatus.broken,
+        wound: boneStatus.slash,
+        burned: boneStatus.burned,
+        infection: boneStatus.infection,
+      });
+    }
+  }
+
+  return [ped, uiBones];
+};
+
 RegisterCommand(
   'inspect',
   async (source: number, args: any[], rawCommand: string) => {
     // const playerPed = 643074;
-    const playerPed = PlayerPedId();
 
-    const bones = [
-      'SKEL_HEAD',
-      'SKEL_L_CALF',
-      'SKEL_L_CLAVICLE',
-      'SKEL_L_FOOT',
-      'SKEL_L_FOREARM',
-      'SKEL_L_HAND',
-      'SKEL_L_THIGH',
-      'SKEL_L_UPPERARM',
-      'SKEL_NECK1',
-      'SKEL_PENIS00',
-      'SKEL_R_CALF',
-      'SKEL_R_CLAVICLE',
-      'SKEL_R_FOOT',
-      'SKEL_R_FOREARM',
-      'SKEL_R_HAND',
-      'SKEL_R_THIGH',
-      'SKEL_R_UPPERARM',
-      'SKEL_SPINE4',
-    ];
+    const [entity, uiBones] = getUIBones();
 
-    const uiBones: UI.Doctor.BoneStatus[] = [];
+    // const update = setInterval(() => {
+    //   Log('Update');
+    //   const [entity, uiBones] = getUIBones();
+    //   emitUI('doctor.state', { entity: entity, boneStatus: uiBones });
+    // }, 1000);
 
-    for (const boneName of bones) {
-      const bone = healthManager.boneNames[boneName];
-      if (!bone) {
-        continue;
-      }
-      const coords = GetPedBoneCoords(playerPed, bone.id, 0.0, 0.0, 0.0);
-      const screenCoords = GetScreenCoordFromWorldCoord(coords[0], coords[1], coords[2]);
+    // onUI('nui.close', () => {
+    //   clearInterval(update);
+    // });
 
-      if (screenCoords[0]) {
-        const boneStatus = healthManager.boneStatus.get(bone.id);
-        Log('boneStatus', boneStatus);
-        if (!boneStatus) {
-          continue;
-        }
-        uiBones.push({
-          coords: { x: screenCoords[1] * 100, y: screenCoords[2] * 100 },
-          name: boneName
-            .replace(/(SKEL_|[0-9])/g, '')
-            .replace('L_', 'Left ')
-            .replace('R_', 'Right ')
-            .toLowerCase(),
-          health: healthManager.boneHealth.get(bone.id) ?? 100,
-          broken: boneStatus.broken,
-          wound: boneStatus.slash,
-          burned: boneStatus.burned,
-          infection: boneStatus.infection,
-        });
-      }
-    }
+    // Log({ show: true, entity, boneStatus: uiBones });
 
-    Log({ show: true, entity: playerPed, boneStatus: uiBones });
-
-    emitUI('doctor.state', { show: true, entity: playerPed, boneStatus: uiBones });
+    emitUI('doctor.state', { show: true, entity, boneStatus: uiBones });
     focusUI(true, true);
   },
   false,
@@ -166,7 +177,7 @@ RegisterCommand(
     const y = -1230.1536865234375;
     const z = 49.3677978515625;
 
-    SetEntityCoords(playerPed, x, y, z, 0.0, 0.0, 0.0, false);
+    SetEntityCoords(playerPed, x, y, z, false, false, false, false);
     SetEntityHeading(playerPed, 95.116);
 
     PVGame.taskPlayAnim({

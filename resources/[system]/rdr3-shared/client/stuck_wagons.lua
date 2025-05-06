@@ -1,6 +1,10 @@
 function deleteVehicle(entity)
     if entity and IsEntityAVehicle(entity) then
         print('Deleting Stuck Vehicle: ' .. entity)
+        exports['ui']:emitUI('log.message', {
+            resource = GetCurrentResourceName(),
+            message = 'Deleting Stuck Vehicle: ' .. entity,
+        })
         SetEntityAsMissionEntity(entity, true, true)
 
         local seats = GetVehicleModelNumberOfSeats(GetEntityModel(vehicle))
