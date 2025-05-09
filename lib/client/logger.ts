@@ -1,0 +1,23 @@
+import { LoggerBase, LogLevel } from '@lib/shared/logger';
+import { emitUI } from './comms/ui';
+
+// TODO: Replace this
+const DEV_ENV = true;
+export class Logger extends LoggerBase {
+  logMessages(level: LogLevel, messages: any[]): void {
+    if (!DEV_ENV) return;
+
+    emitUI('log.message', {
+      resource: GetCurrentResourceName(),
+      level,
+      message: messages
+        .map((item) => {
+          if (typeof item === 'object') {
+            return JSON.stringify(item, null, 2);
+          }
+          return item;
+        })
+        .join(' '),
+    });
+  }
+}

@@ -18,6 +18,7 @@ import { Frame, Item, List, Filter, FilterItem } from './styled';
 import { debounce } from 'lodash';
 import { createRef } from 'preact';
 import { Delay } from '@lib/functions';
+import { LogLevel } from '@lib/shared/logger';
 
 export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
   refLog = createRef<HTMLDivElement>();
@@ -36,6 +37,7 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
       scrollOverride: 0,
       filter: new Set(),
       reverseFilter: new Set(),
+      levelFilter: 0,
       messages: [],
       colors: {},
     };
@@ -73,11 +75,16 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
         {
           source,
           resource: data.resource,
+          level: data.level,
           message: data.message,
         },
       ],
       colors,
     });
+  }
+
+  setMinLevel(level: number) {
+    this.setState({ levelFilter: level });
   }
 
   randomizeColors() {
@@ -203,11 +210,14 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
     return 'inactive';
   }
 
-  shouldShow(resource: string) {
-    if (this.state.filter.size > 0 && !this.state.filter.has(resource)) {
+  shouldShow(log: UI.Log.Data) {
+    if (this.state.filter.size > 0 && !this.state.filter.has(log.resource)) {
       return false;
     }
-    if (this.state.reverseFilter.has(resource)) {
+    if (this.state.reverseFilter.has(log.resource)) {
+      return false;
+    }
+    if (log.level < this.state.levelFilter) {
       return false;
     }
     return true;
@@ -227,8 +237,8 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
         <Frame ref={this.refLog}>
           <List id="log" className={this.state.show ? 'active' : undefined} onWheel={this.handleMousewheel.bind(this)}>
             {this.state.messages.map(
-              ({ source, resource, message }) =>
-                this.shouldShow(resource) && (
+              ({ source, resource, message, level }) =>
+                this.shouldShow({ resource, message, level }) && (
                   <Item>
                     <i data-source={source}>
                       {source === 'server' && <Server />} {source === 'client' && <Desktop />}
@@ -281,6 +291,20 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
                 {resource}
               </FilterItem>
             ))}
+          </Filter>
+        )}
+        {this.state.show && (
+          <Filter>
+            {Object.values(LogLevel)
+              .filter((value) => typeof value === 'number')
+              .map((level) => (
+                <FilterItem
+                  className={this.state.levelFilter === level ? 'active' : ''}
+                  onClick={() => this.setMinLevel(level as LogLevel)}
+                >
+                  {LogLevel[level as LogLevel]}
+                </FilterItem>
+              ))}
           </Filter>
         )}
       </>
