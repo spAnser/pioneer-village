@@ -8,7 +8,7 @@ declare namespace SocketServer {
       metadata: Record<string, any>,
       callback: (success: boolean) => void,
     ) => void;
-    ['inventory.item-wear']: (itemId: number) => void;
+    ['inventory.item-wear']: (itemId: number, callback: (success: boolean) => void) => void;
   }
 
   interface ServerEvents {

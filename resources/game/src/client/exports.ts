@@ -104,8 +104,8 @@ RegisterCommand(
   false,
 );
 
-const loadModel: Game.loadModel = (model) => {
-  return gameManager.loadModel(model);
+const loadModel: Game.loadModel = (model, delay) => {
+  return gameManager.loadModel(model, delay);
 };
 
 const requestTxd: Game.requestTxd = (txd) => {
@@ -114,6 +114,10 @@ const requestTxd: Game.requestTxd = (txd) => {
 
 const collisionLoadedAtEntity: Game.collisionLoadedAtEntity = (entity) => {
   return gameManager.collisionLoadedAtEntity(entity);
+};
+
+const equipMetaPedOutfit: Game.equipMetaPedOutfit = (ped, outfit) => {
+  return gameManager.equipMetaPedOutfit(ped, outfit);
 };
 
 const pedIsReadyToRender: Game.pedIsReadyToRender = (ped, delay) => {
@@ -235,6 +239,7 @@ exports<'game'>('attachEntityToBoneName', attachEntityToBoneName);
 exports<'game'>('loadModel', loadModel);
 exports<'game'>('requestTxd', requestTxd);
 exports<'game'>('collisionLoadedAtEntity', collisionLoadedAtEntity);
+exports<'game'>('equipMetaPedOutfit', equipMetaPedOutfit);
 exports<'game'>('pedIsReadyToRender', pedIsReadyToRender);
 exports<'game'>('waitTextureIsValid', waitTextureIsValid);
 exports<'game'>('reachedCoords', reachedCoords);

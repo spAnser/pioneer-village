@@ -8,8 +8,12 @@ import { Log } from '@lib/client/comms/ui';
 onUI('inventory.use-item', (itemData: UI.Inventory.ItemData) => {
   // Log(itemData);
   const item = items[itemData.identifier];
-  if (!item || !item.useEvent) {
+  if (!item) {
     console.warn(`Item doesn't exist ${itemData.identifier}`);
+    return;
+  }
+  if (!item.useEvent) {
+    console.warn(`Item doesn't have useEvent ${itemData.identifier}`);
     return;
   }
 

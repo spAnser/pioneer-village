@@ -189,7 +189,7 @@ class FishingManager {
   removeBait() {
     if (this.currentBait) {
       this.currentBait = undefined;
-      N_0x9b0c7fa063e67629(PlayerPedId(), 'p_fishHook02x', false, true);
+      SetFishingBait(PlayerPedId(), 'p_fishHook02x', false, true);
     }
   }
 
@@ -255,12 +255,12 @@ class FishingManager {
   }
 
   getState() {
-    N_0xf3735acd11acd500(this.playerPed, this.state.getState());
+    GetTaskFishing(this.playerPed, this.state.getState());
   }
 
   setState() {
     if (this.state.modified) {
-      N_0xf3735acd11acd501(this.playerPed, this.state.getState());
+      SetTaskFishing(this.playerPed, this.state.getState());
       this.state.modified = false;
     }
   }
@@ -283,8 +283,18 @@ class FishingManager {
         0,
         0,
       );
-      N_0xdcf5ba95bbf0faba(this.splashSoundId, 'VFX_SPLASH', fishCoords.x, fishCoords.y, fishCoords.z, 0, 0, 0, 1);
-      N_0x503703ec1781b7d6(this.splashSoundId, 'FishSize', 1.0);
+      PlaySoundFromPositionWithId(
+        this.splashSoundId,
+        'VFX_SPLASH',
+        fishCoords.x,
+        fishCoords.y,
+        fishCoords.z,
+        0,
+        0,
+        0,
+        1,
+      );
+      SetVariableOnSoundWithId(this.splashSoundId, 'FishSize', 1.0);
     }
   }
 
@@ -349,9 +359,9 @@ class FishingManager {
         // SetEntityAsMissionEntity(this.nibblingFish, true, true);
         SetEntityInvincible(this.nibblingFish, true);
         SetPedConfigFlag(this.nibblingFish, PedConfigFlag.Unk_17, true);
-        N_0x1f298c7bd30d1240(this.playerPed);
+        N_0x1F298C7BD30D1240(this.playerPed);
         ClearPedTasksImmediately(this.nibblingFish, false, true);
-        N_0x1a52076d26e09004(this.playerPed, this.nibblingFish); // _PED_FISHINGROD_HOOK_ENTITY
+        PedFishingrodHookEntity(this.playerPed, this.nibblingFish); // _PED_FISHINGROD_HOOK_ENTITY
 
         this.state.request = FishingRequest.FISH_HOOKED;
         this.state.hookedEntity = this.nibblingFish;

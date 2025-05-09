@@ -64,7 +64,7 @@ function DestoryCameras()
         if not IsEntityVisible(player) then
             FreezeEntityPosition(player, false)
             SetEntityVisible(player, true)
-            SetEntityCoords(player, playerOriginalCoords)
+            SetEntityCoords(player, playerOriginalCoords.x, playerOriginalCoords.y, playerOriginalCoords.z)
         end
     end
 end
@@ -476,7 +476,7 @@ Citizen.CreateThread(function()
         if spawnGhost then
             local hit, endCoords, entityHit, _ = screenToWorld(1 + 16 + 32 + 64 + 256, spawnGhost)
             if hit then
-                SetEntityCoords(spawnGhost, endCoords)
+                SetEntityCoords(spawnGhost, endCoords.x, endCoords.y, endCoords.z)
             end
         end
     end

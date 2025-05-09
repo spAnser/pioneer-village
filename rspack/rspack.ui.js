@@ -11,16 +11,39 @@ module.exports = () => ({
   },
   module: {
     rules: [
+      // {
+      //   test: /\.tsx?$/,
+      //   exclude: [/node_modules/, /build/],
+      //   loader: 'esbuild-loader',
+      //   options: {
+      //     loader: 'tsx',
+      //     target: 'es2017',
+      //     jsxFactory: 'h',
+      //     jsxFragment: 'Fragment',
+      //   },
+      // },
       {
         test: /\.tsx?$/,
         exclude: [/node_modules/, /build/],
-        loader: 'esbuild-loader',
-        options: {
-          loader: 'tsx',
-          target: 'es2017',
-          jsxFactory: 'h',
-          jsxFragment: 'Fragment',
+        use: {
+          loader: 'builtin:swc-loader',
+          options: {
+            jsc: {
+              parser: {
+                syntax: 'typescript',
+                tsx: true,
+              },
+              transform: {
+                react: {
+                  development: process.env.NODE_ENV === 'development',
+                  runtime: 'automatic',
+                  importSource: 'preact',
+                },
+              },
+            },
+          },
         },
+        type: 'javascript/auto',
       },
       {
         test: /\.s[ac]ss$/i,

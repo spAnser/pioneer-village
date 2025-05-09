@@ -69,7 +69,7 @@ class CharacterSpawnManager {
       PVPrompt.show('character-spawn:cancel:task');
       this.promptLoopRunning = true;
       while (this.promptLoopRunning) {
-        const currentCoords = new Vector3().setFromArray(GetEntityCoords(PVGame.playerPed()));
+        const currentCoords = new Vector3().setFromArray(GetEntityCoords(PVGame.playerPed(), false, false));
         if (currentCoords.getDistance(this.coords) >= 2.0) {
           PVPrompt.hide('character-spawn:cancel:task');
           this.promptLoopRunning = false;
@@ -119,9 +119,9 @@ class CharacterSpawnManager {
         finalScenarios[index].coords.x,
         finalScenarios[index].coords.y,
         finalScenarios[index].coords.z,
-        0.0,
-        0.0,
-        0.0,
+        false,
+        false,
+        false,
         false,
       );
     } else {

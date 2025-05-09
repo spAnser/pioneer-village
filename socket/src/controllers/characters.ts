@@ -8,13 +8,14 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
   Characters.setDB(prisma);
 
   serverNamespace.on('connection', (socket) => {
-    logGreen('[Characters] Game server connected');
+    logGreen('[Characters]', 'Game server connected');
 
     socket.on('character-update.last-position', async (serverId, coords) => {
       const selectedCharacter = Characters.getActiveCharacterForServerId(serverId);
       if (selectedCharacter !== undefined) {
         logInfoS(
-          `[Characters] Player ${serverId} updated character ${
+          '[Characters]',
+          `Player ${serverId} updated character ${
             selectedCharacter.id
           } and set last position ${JSON.stringify(coords)}`,
         );
@@ -24,7 +25,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
 
     socket.on('character-event.disconnected', (serverId) => {
       Characters.setCharacterAsNoLongerActive(serverId);
-      logInfoS(`[Characters] character ${serverId} was just disconnected and performed character cleanup`);
+      logInfoS('[Characters]', `Player ${serverId} was just disconnected and performed character cleanup`);
     });
 
     socket.on('character-get.food-drink', async (charId, cb) => {
@@ -32,7 +33,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
         cb(0, 0);
       } else {
         const result = await Characters.getCharacterFoodAndDrink(charId);
-        logInfoS('character-get.food-drink', charId, JSON.stringify(result));
+        logInfoS('[Characters]', 'character-get.food-drink', charId, JSON.stringify(result));
         if (!result) {
           cb(0, 0);
         } else {
@@ -117,6 +118,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
       const character = await Characters.createCharacter(socket.data.user.userId, characterData, faceData);
       if (character) {
         await Inventories.createInventory(`character:${character.id}`);
+        await Inventories.createInventory(`clothing:${character.id}`);
       }
       cb();
     });
@@ -146,8 +148,8 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
 
     socket.on('character-update.food-drink', async (food, drink) => {
       if (!socket.data.character || !socket.data.character.id) return;
-      await Characters.updateLocalCharacterAtributeWithCharId(socket.data.character.id, 'food', food);
-      await Characters.updateLocalCharacterAtributeWithCharId(socket.data.character.id, 'drink', drink);
+      Characters.updateLocalCharacterAtributeWithCharId(socket.data.character.id, 'food', food);
+      Characters.updateLocalCharacterAtributeWithCharId(socket.data.character.id, 'drink', drink);
       logInfoC('character-update.food-drink', food, drink, socket.data.character.id);
     });
 

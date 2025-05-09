@@ -1,10 +1,12 @@
-declare interface ServerExports {
-  base: Base.ServerExports;
-}
+declare namespace SocketServer {
+  interface ServerExports {
+    base: Base.ServerExports;
+  }
 
-declare interface SocketEvents {
-  test: (one: string) => void;
-  ['player-management.kick']: (serverId: number, reason: string) => void;
+  interface SocketEvents {
+    test: (one: string) => void;
+    ['player-management.kick']: (serverId: number, reason: string) => void;
+  }
 }
 
 declare namespace Base {
@@ -28,7 +30,10 @@ declare namespace Base {
     ...params: DropLastParam<SocketServer.Server[T]>
   ) => Promise<Parameters<LastParam<SocketServer.Server[T]>>[0]>;
 
-  type onSocket = <T extends keyof SocketEvents>(evtName: T, callback: SocketEvents[T]) => void;
+  type onSocket = <T extends keyof SocketServer.SocketEvents>(
+    evtName: T,
+    callback: SocketServer.SocketEvents[T],
+  ) => void;
 
   type PlayerInfo = {
     serverId: number;

@@ -5,7 +5,7 @@ import './blip-setup';
 import './door-register';
 import './characterData';
 
-const getNetworkControlOfEntity: Base.getNetworkControlOfEntity = async (entity: number): Promise<void> => {
+const getNetworkControlOfEntity: Base.getNetworkControlOfEntity = async (entity) => {
   do {
     NetworkRequestControlOfEntity(entity);
     await Delay(5);
@@ -37,7 +37,7 @@ const deleteEntity: Base.deleteEntity = async (entity: number): Promise<void> =>
     SetEntityAsMissionEntity(entity, false, false);
 
     await Delay(5);
-    SetEntityCoords(entity, -10000.0, -10000.0, 0.0, 0.0, 0.0, 0.0, false);
+    SetEntityCoords(entity, -10000.0, -10000.0, 0.0, false, false, false, false);
   }
 };
 

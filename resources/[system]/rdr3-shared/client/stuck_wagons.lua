@@ -1,8 +1,25 @@
 function deleteVehicle(entity)
     if entity and IsEntityAVehicle(entity) then
         print('Deleting Stuck Vehicle: ' .. entity)
+        exports['ui']:emitUI('log.message', {
+            resource = GetCurrentResourceName(),
+            message = 'Deleting Stuck Vehicle: ' .. entity,
+        })
         SetEntityAsMissionEntity(entity, true, true)
-        DeletePed(entity)
+
+        local seats = GetVehicleModelNumberOfSeats(GetEntityModel(vehicle))
+
+        for i = 0, seats do
+            local ped = GetPedInVehicleSeat(vehicle, i)
+            if not IsPedAPlayer(ped) then
+                SetEntityAsMissionEntity(ped, true, true)
+                DeletePed(ped)
+                DeleteEntity(ped)
+            end
+        end
+
+        DeleteVehicleLanterns(entity)
+        DeleteVehicle(entity)
         DeleteEntity(entity)
     end
 end
@@ -43,11 +60,7 @@ Citizen.CreateThread(function()
                                 if movingVehicles[vehicle] then
                                     local oldCoords = movingVehicles[vehicle]
                                     local coords = GetEntityCoords(vehicle)
-                                    if
-                                    math.floor(coords.x) == math.floor(oldCoords.x) and
-                                            math.floor(coords.y) == math.floor(oldCoords.y) and
-                                            math.floor(coords.z) == math.floor(oldCoords.z)
-                                    then
+                                    if #(coords - oldCoords) < 1 then
                                         deleteVehicle(vehicle)
                                     end
                                     movingVehicles[vehicle] = nil

@@ -243,6 +243,16 @@ declare namespace UI.TargetLayer {
   type Event = Partial<State>;
 }
 
+declare namespace UI.TelegramLayer {
+  interface State extends UI.BaseState {
+    message: string;
+    sender: string;
+    header: string;
+  }
+
+  type Event = Partial<State>;
+}
+
 // declare namespace UI.Interact {
 //   interface State extends UI.BaseState {
 //     options: Record<string, string>;

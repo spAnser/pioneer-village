@@ -12,7 +12,7 @@ class PaletteManager {
   }
 
   getGuidsAtIndex: Customization.GetGuidsAtIndex = (entity, index) => {
-    const [drawable, albedo, normal, material] = GetMetaPedAssetGuids(entity, index);
+    const [_, drawable, albedo, normal, material] = GetMetaPedAssetGuids(entity, index);
     return { drawable, albedo, normal, material };
   };
 
@@ -33,7 +33,7 @@ class PaletteManager {
   };
 
   getTintAtIndex: Customization.GetTintAtIndex = (entity, index) => {
-    const [palette, tint0, tint1, tint2] = GetMetaPedAssetTint(entity, index);
+    const [_, palette, tint0, tint1, tint2] = GetMetaPedAssetTint(entity, index);
     return { palette, tint0, tint1, tint2 };
   };
 
@@ -88,7 +88,8 @@ class PaletteManager {
 
     const componentCount = GetNumComponentsInPed(entity);
     for (let index = componentCount; index--; ) {
-      if (GetCategoryOfComponentAtIndex(entity, index) === category) {
+      // GetCategoryOfComponentAtIndex
+      if (GetShopItemCategoryAtIndex(entity, index, 0) === category) {
         return index;
       }
     }
@@ -100,6 +101,21 @@ class PaletteManager {
     if (typeof category === 'string') {
       category = GetHashKey(category);
     }
+
+    const index = this.getIndexForCategory(entity, category);
+    if (index === -1) {
+      return;
+    }
+
+    return this.getTintAtIndex(entity, index);
+  };
+
+  setTintForCategory: Customization.SetTintForCategory = (entity, category, palette, tint0, tint1, tint2) => {
+    if (typeof category === 'string') {
+      category = GetHashKey(category);
+    }
+
+    SetTextureOutfitTints(entity, category, palette, tint0, tint1, tint2);
 
     const index = this.getIndexForCategory(entity, category);
     if (index === -1) {

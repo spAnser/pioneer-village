@@ -77,8 +77,46 @@ export const DoctorCircle = styled.div`
 
     opacity: 0;
 
-    circle {
-      transition: 2500ms linear;
+    &.slowest {
+      circle {
+        transition: 7500ms linear;
+      }
+    }
+
+    &.slower {
+      circle {
+        transition: 2000ms linear;
+      }
+    }
+
+    &.slow {
+      circle {
+        transition: 1500ms linear;
+      }
+    }
+
+    &.normal {
+      circle {
+        transition: 1250ms linear;
+      }
+    }
+
+    &.fast {
+      circle {
+        transition: 1000ms linear;
+      }
+    }
+
+    &.faster {
+      circle {
+        transition: 750ms linear;
+      }
+    }
+
+    &.fastest {
+      circle {
+        transition: 500ms linear;
+      }
     }
   }
 

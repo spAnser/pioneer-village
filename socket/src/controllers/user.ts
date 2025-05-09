@@ -8,7 +8,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
   Accounts.setDB(prisma);
 
   serverNamespace.on('connection', (socket) => {
-    logGreen('[User] Game server connected');
+    logGreen('[User]', 'Game server connected');
 
     socket.on('connectedPlayers', (players) => {});
 
@@ -20,7 +20,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
     socket.on('generateJWT', async (serverId, _identifiers, cb) => {
       // do a db query using identifiers.
       const account = await Accounts.getOrCreate(_identifiers);
-      logInfoS('account', account);
+      logInfoS('[User]', 'account', account);
       const token = sign(
         {
           serverId,
@@ -30,7 +30,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
         { expiresIn: '1 day' },
       );
 
-      logInfoS('token', token);
+      logInfoS('[User]', 'token', token);
 
       cb(token);
     });

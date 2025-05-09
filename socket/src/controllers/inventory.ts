@@ -30,10 +30,10 @@ export default (prisma: PrismaClient) => {
   };
 
   serverNamespace.on('connection', (socket) => {
-    logGreen('[Inventory] Game server connected');
+    logGreen('[Inventory]', 'Game server connected');
 
     socket.on('createInventory', (identifier, inventoryType, cb) => {
-      logInfoS('createInventory', identifier, inventoryType);
+      logInfoS('[Inventory]', 'createInventory', identifier, inventoryType);
       try {
         Inventories.createInventory(identifier);
         cb(true);

@@ -21,6 +21,7 @@ const HexToFloat32 = (str: string) => {
 const testNatives = (category: string, parameterCount: number, nativeArgs: any[], restrictUnnamed = true) => {
   Log('==============');
   Log(`Testing ${category} natives with ${parameterCount} parameters`);
+  Log(`Args`, nativeArgs);
   for (const [native, data] of Object.entries<any>(Natives[category])) {
     try {
       if (restrictUnnamed && !data.name.startsWith('_0x')) {
@@ -29,12 +30,14 @@ const testNatives = (category: string, parameterCount: number, nativeArgs: any[]
       if (data.params.length !== parameterCount || data.return_type === 'void') {
         continue;
       }
+      Log('--------------');
+      Log('run', data.name);
       const rtn = Citizen.invokeNative(native, ...nativeArgs) as any;
       if (rtn === nativeArgs[0] || rtn === false) continue;
       if (data.return_type === 'float') {
-        Log(native, HexToFloat32(rtn.toString(16)), restrictUnnamed ? '' : data.name);
+        Log('rtn', HexToFloat32(rtn.toString(16)));
       } else {
-        Log(native, rtn, restrictUnnamed ? '' : data.name);
+        Log('rtn', rtn);
       }
     } catch {}
   }

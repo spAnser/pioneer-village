@@ -53,6 +53,15 @@ export const seedDB = async (prisma: PrismaClient) => {
             },
           });
 
+          await prisma.inventory.create({
+            data: {
+              identifier: `clothing:${character.id}`,
+              container: {
+                create: {},
+              },
+            },
+          });
+
           if (data.horses) {
             for (const horseData of data.horses) {
               const horse = await prisma.horses.create({

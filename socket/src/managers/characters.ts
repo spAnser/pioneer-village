@@ -221,6 +221,7 @@ class Characters {
       return finalData as unknown as CharacterHealthMetadata;
     } else {
       logInfoS(
+        '[Characters]',
         'Attempted to find character',
         characterId,
         'health metadata but database returned a null value. Returning defaults',
@@ -242,6 +243,8 @@ class Characters {
     await this.updateCharacterCurrencies(character.id, character.currencies);
     await this.updateCharacterHealthMetadata(character.id, character.healthMetadata);
     await this.updateCharacterFoodAndDrink(character.id, character.food, character.drink);
+
+    return true;
   }
 
   async getCharacterCurrencies(charId: number): Promise<CharacterCurrencies | undefined> {
@@ -276,7 +279,7 @@ class Characters {
   setCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number): boolean {
     let character = this.getActiveCharacterForCharacterId(characterId);
     if (!character) {
-      logInfoS('Attempted to get character', characterId, 'but is offline aborting');
+      logInfoS('[Characters]', 'Attempted to get character', characterId, 'but is offline aborting');
       return false;
     }
     character.currencies[type] = amount;
@@ -287,7 +290,7 @@ class Characters {
   addCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number): boolean {
     let character = this.getActiveCharacterForCharacterId(characterId);
     if (!character) {
-      logInfoS('Attempted to get character', characterId, 'but is offline aborting');
+      logInfoS('[Characters]', 'Attempted to get character', characterId, 'but is offline aborting');
       return false;
     }
     character.currencies[type] += amount;
@@ -298,7 +301,7 @@ class Characters {
   removeCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number) {
     let character = this.getActiveCharacterForCharacterId(characterId);
     if (!character) {
-      logInfoS('Attempted to get character', characterId, 'but is offline aborting');
+      logInfoS('[Characters]', 'Attempted to get character', characterId, 'but is offline aborting');
       return false;
     }
     character.currencies[type] -= amount;
@@ -367,19 +370,47 @@ class Characters {
   }
 
   startIntervals() {
-    setInterval(async () => {
-      const nowTime = Date.now();
-      for (const char of this.characters) {
-        await this.updateDatabaseWithPlayerMetadata(char);
-      }
-      logInfoS(
-        '[Characters] Information of',
-        this.characters.length,
-        'character(s) has been saved. It took:',
-        Date.now() - nowTime,
-        'ms',
-      );
-    }, 2 * 60 * 1000);
+    setInterval(
+      async () => {
+        const nowTime = Date.now();
+        let saved = 0;
+        let failed = 0;
+        for (const char of this.characters) {
+          if (!char) return;
+          const success = await this.updateDatabaseWithPlayerMetadata(char);
+          if (success) {
+            saved++;
+          } else {
+            failed++;
+          }
+        }
+        logInfoS(
+          '[Characters]',
+          'Information of',
+          this.characters.filter(Boolean).length,
+          'character(s) has been saved. It took:',
+          Date.now() - nowTime,
+          'ms',
+          `Saved: ${saved}, Failed: ${failed}`,
+        );
+
+        // logInfoS(
+        //   '[Characters]',
+        //   this.characters.map((c) => ({
+        //     id: c.id,
+        //     firstName: c.firstName,
+        //     lastName: c.lastName,
+        //     source: c.source,
+        //     model: c.model,
+        //     lastX: c.lastX,
+        //     lastY: c.lastY,
+        //     lastZ: c.lastZ,
+        //     userId: c.userId,
+        //   })),
+        // );
+      },
+      2 * 60 * 1000,
+    );
   }
 }
 

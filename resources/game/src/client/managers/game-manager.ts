@@ -198,7 +198,7 @@ class GameManager {
       SetEntityAsMissionEntity(entity, false, false);
 
       await Delay(5);
-      SetEntityCoords(entity, -10000.0, -10000.0, 0.0, 0.0, 0.0, 0.0, false);
+      SetEntityCoords(entity, -10000.0, -10000.0, 0.0, false, false, false, false);
     }
   }
 
@@ -330,6 +330,11 @@ class GameManager {
     return this.playerPed;
   }
 
+  async equipMetaPedOutfit(ped: number, outfit: number): Promise<void> {
+    EquipMetaPedOutfit(ped, outfit);
+    await Delay(1);
+  }
+
   async setPedComponents(ped: number, components: number[]): Promise<void> {
     if (!IsEntityAPed(ped)) {
       return;
@@ -367,8 +372,11 @@ class GameManager {
   }
 
   finalizePedOutfit(ped: number): void {
-    N_0x704c908e9c405136(ped);
-    N_0xaab86462966168ce(ped, true);
+    // Update this with a check for if they have an ammo belt???
+    RemoveTagFromMetaPed(ped, GetHashKey('AMMO_PISTOLS'), 0);
+
+    // N_0x704C908E9C405136(ped);
+    N_0xAAB86462966168CE(ped, true);
     UpdatePedVariation(ped, false, true, true, true, false);
   }
 
@@ -639,6 +647,7 @@ class GameManager {
     const animName = Array.isArray(animTask.anim)
       ? animTask.anim[Math.floor(Math.random() * animTask.anim.length)]
       : animTask.anim;
+    Log(`Playing Animation: ${animTask.dict} - ${animName}`);
     // Log(animName);
     if (animTask.speed) {
       console.warn('Deprecated: speed is no longer supported use blendInSpeed');
@@ -833,10 +842,10 @@ class GameManager {
       const animName = Array.isArray(anim.anim) ? anim.anim[Math.floor(Math.random() * anim.anim.length)] : anim.anim;
       const entityId = typeof anim.obj === 'function' ? anim.obj() : anim.obj;
       if (anim.position) {
-        SetEntityCoords(entityId, anim.position.x, anim.position.y, anim.position.z, 0, 0, 0, false);
+        SetEntityCoords(entityId, anim.position.x, anim.position.y, anim.position.z, false, false, false, false);
       }
       if (anim.rotation) {
-        SetEntityRotation(entityId, anim.rotation.x, anim.rotation.y, anim.rotation.z, 0);
+        SetEntityRotation(entityId, anim.rotation.x, anim.rotation.y, anim.rotation.z, 0, false);
       }
       PlayEntityAnim(
         entityId,
@@ -1010,7 +1019,16 @@ class GameManager {
           const addAnimTaskDict = addAnimTask.dict ?? animTask.dict;
           const [addAnimCoords, addAnimRot] = this.getAnimOffset(addAnimTaskDict, addAnimTaskAnim, coords, rotation);
           if (addAnimTask.updatePosition) {
-            SetEntityCoords(addAnimTaskObj, addAnimCoords.x, addAnimCoords.y, addAnimCoords.z, 0.0, 0.0, 0.0, false);
+            SetEntityCoords(
+              addAnimTaskObj,
+              addAnimCoords.x,
+              addAnimCoords.y,
+              addAnimCoords.z,
+              false,
+              false,
+              false,
+              false,
+            );
             SetEntityRotation(addAnimTaskObj, addAnimRot.x, addAnimRot.y, addAnimRot.z, 2, true);
           }
           PlayEntityAnim(
@@ -1045,6 +1063,7 @@ class GameManager {
     }
     await this.loadModel(model);
     const objectId = CreateObjectNoOffset(model, coord.x, coord.y, coord.z, network, true, false, false);
+    Log('gameManager.createObject', objectId);
     SetEntityRotation(objectId, rotation.x, rotation.y, rotation.z, 0, false);
     return objectId;
   }

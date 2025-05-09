@@ -10,6 +10,37 @@ import Fire from '@styled/fa5/solid/fire.svg';
 
 import Circle from './icon/circle';
 
+const SPEEDS = {
+  slowest: 7500,
+  slower: 2000,
+  slow: 1500,
+  normal: 1250,
+  fast: 1000,
+  faster: 750,
+  fastest: 500,
+};
+
+const boneInspectSpeed: Record<string, keyof typeof SPEEDS> = {
+  SKEL_HEAD: 'slower',
+  SKEL_L_CALF: 'fast',
+  SKEL_L_CLAVICLE: 'normal',
+  SKEL_L_FOOT: 'normal',
+  SKEL_L_FOREARM: 'fastest',
+  SKEL_L_HAND: 'fast',
+  SKEL_L_THIGH: 'slow',
+  SKEL_L_UPPERARM: 'faster',
+  SKEL_NECK1: 'slower',
+  SKEL_PENIS00: 'slowest',
+  SKEL_R_CALF: 'fast',
+  SKEL_R_CLAVICLE: 'normal',
+  SKEL_R_FOOT: 'normal',
+  SKEL_R_FOREARM: 'fastest',
+  SKEL_R_HAND: 'fast',
+  SKEL_R_THIGH: 'slow',
+  SKEL_R_UPPERARM: 'faster',
+  SKEL_SPINE4: 'slower',
+};
+
 export default class Doctor extends UIComponent<UI.BaseProps, UI.Doctor.State, {}> {
   closeOnEscape = true;
 
@@ -56,12 +87,17 @@ export default class Doctor extends UIComponent<UI.BaseProps, UI.Doctor.State, {
         inspecting: index,
       });
 
+      console.log('bone', bone);
+      const speed = SPEEDS[boneInspectSpeed[bone.name]] || 500;
+
+      console.log('speed', speed);
+
       setTimeout(() => {
         this.setState({
           inspecting: -1,
           inspected: newInspected,
         });
-      }, 2500);
+      }, speed);
     }
   }
 
@@ -87,10 +123,14 @@ export default class Doctor extends UIComponent<UI.BaseProps, UI.Doctor.State, {
               className={b === this.state.inspecting ? 'inspecting' : this.state.inspected[b] ? 'inspected' : ''}
               style={{ top: `${bone.coords.y}vh`, left: `${bone.coords.x}vw` }}
               onClick={() => this.inspect(b)}
-              data-name={bone.name}
+              data-name={bone.name
+                .replace(/(SKEL_|[0-9])/g, '')
+                .replace('L_', 'Left ')
+                .replace('R_', 'Right ')
+                .toLowerCase()}
             >
               <Circle
-                className="borderCircle"
+                className={`borderCircle ${boneInspectSpeed[bone.name]}`}
                 percentage={this.state.inspected[b] ? bone.health : 0}
                 color={this.boneHealthColor(b, bone)}
               />

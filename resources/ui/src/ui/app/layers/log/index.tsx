@@ -7,6 +7,12 @@ import Server from '@styled/fa5/solid/server.svg';
 import Desktop from '@styled/fa5/solid/desktop.svg';
 import Info from '@styled/fa5/solid/info.svg';
 import TrashAlt from '@styled/fa5/solid/trash-alt.svg';
+import DiceOne from '@styled/fa5/solid/dice-one.svg';
+import DiceTwo from '@styled/fa5/solid/dice-two.svg';
+import DiceThree from '@styled/fa5/solid/dice-three.svg';
+import DiceFour from '@styled/fa5/solid/dice-four.svg';
+import DiceFive from '@styled/fa5/solid/dice-five.svg';
+import DiceSix from '@styled/fa5/solid/dice-six.svg';
 
 import { Frame, Item, List, Filter, FilterItem } from './styled';
 import { debounce } from 'lodash';
@@ -72,6 +78,16 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
       ],
       colors,
     });
+  }
+
+  randomizeColors() {
+    const colors = this.state.colors;
+
+    for (const resource of Object.keys(this.state.colors)) {
+      colors[resource] = this.randomColor();
+    }
+
+    this.setState({ colors });
   }
 
   randomColor(): UI.Log.ColorData {
@@ -198,10 +214,18 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
   }
 
   render() {
+    const randomDice = () => {
+      const dice = [DiceOne, DiceTwo, DiceThree, DiceFour, DiceFive, DiceSix];
+      const random = Math.floor(Math.random() * 6);
+      return dice[random];
+    };
+
+    const Dice = randomDice();
+
     return (
       <>
         <Frame ref={this.refLog}>
-          <List id="log" className={this.state.show ? 'active' : null} onMousewheel={this.handleMousewheel.bind(this)}>
+          <List id="log" className={this.state.show ? 'active' : undefined} onWheel={this.handleMousewheel.bind(this)}>
             {this.state.messages.map(
               ({ source, resource, message }) =>
                 this.shouldShow(resource) && (
@@ -227,6 +251,9 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
         {this.state.show && (
           <Filter>
             <FilterItem>
+              <Dice className="dice" onClick={() => this.randomizeColors()} />
+            </FilterItem>
+            <FilterItem className="red">
               <TrashAlt onClick={() => this.setState({ messages: [] })} />
             </FilterItem>
             <FilterItem

@@ -17,7 +17,7 @@ class VegModifierManager {
     if (!DoesEntityExist(entity)) {
       return 0;
     }
-    const coords = Vector3.fromArray(GetEntityCoords(entity));
+    const coords = Vector3.fromArray(GetEntityCoords(entity, false, false));
 
     const id = AddVegModifierSphere(coords.x, coords.y, coords.z, radius, modifierType, flags, 0);
     this.sphereIds.add(id);

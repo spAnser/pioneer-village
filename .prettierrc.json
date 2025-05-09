@@ -4,5 +4,8 @@
   "semi": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "importOrder": ["^@lib/(.*)$", "^@styled/(.*)$", "^@uiLib/(.*)$", "^@prisma/(.*)$", "^@/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

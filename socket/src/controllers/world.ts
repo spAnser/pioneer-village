@@ -55,9 +55,9 @@ export default (prisma: PrismaClient) => {
         const id = objects.get(name);
         if (id) {
           // logInfoC('netIdExists', id);
-          serverNamespace.emit('netIdExists', id, (exists) => {
-            // logInfoC('exists', exists);
-            if (exists) {
+          serverNamespace.timeout(250).emit('netIdExists', id, (err, responses) => {
+            logInfoC('exists', err, responses);
+            if (responses.includes(true)) {
               cb(false);
             } else {
               cb(true);

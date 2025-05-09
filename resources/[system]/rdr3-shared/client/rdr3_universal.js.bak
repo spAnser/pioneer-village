@@ -6339,8 +6339,8 @@ global.GetPedEyeColor = function (ped) {
   return _in(0x00000000, 0xa47b860f, ped, _r, _ri);
 };
 
-global.GetPedFaceFeature = function (ped, index) {
-  return _in(0xfd1ba1ee, 0xf7985bb8, ped, index, _r, _ri);
+global.GetCharExpression = function (ped, index) {
+  return _in(0xfd1ba1ee, 0xf7985bb8, ped, index, _r, _rf);
 };
 
 /**
@@ -15448,8 +15448,8 @@ global.N_0x4eddd9e9ca5af985 = function (p0) {
   return _in(0x4eddd9e9, 0xca5af985, p0, _r, _ri);
 };
 
-global.N_0x4efc1f8ff1ad94de = function (p0, p1, p2, p3, p4, p5) {
-  return _in(0x4efc1f8f, 0xf1ad94de, p0, p1, p2, p3, p4, p5);
+global.SetTextureOutfitTints = function (p0, p1, p2, p3, p4, p5) {
+  return _in(0x4efc1f8f, 0xf1ad94de, p0, p1, _ch(p2), p3, p4, p5);
 };
 
 global.N_0x4f0d2256aae94eda = function (p0) {
@@ -16442,8 +16442,8 @@ global.N_0x62377977e4f08668 = function (p0) {
   return _in(0x62377977, 0xe4f08668, p0, _r, _ri);
 };
 
-global.N_0x6243635af2f1b826 = function (p0, p1, p2, p3) {
-  return _in(0x6243635a, 0xf2f1b826, p0, p1, p2, p3, _r, _ri);
+global.GetShopItemWearableStateByIndex = function (componentHash, index, isMpFemale, p3) {
+  return _in(0x6243635a, 0xf2f1b826, _ch(componentHash), index, isMpFemale, p3, _r, _ri);
 };
 
 global.N_0x627b68d9ce6ee8de = function (p0) {
@@ -25321,8 +25321,8 @@ global.N_0xffb99ffd17f65889 = function (p0, p1) {
   return _in(0xffb99ffd, 0x17f65889, p0, p1);
 };
 
-global.N_0xffcc2db2d9953401 = function (p0, p1, p2) {
-  return _in(0xffcc2db2, 0xd9953401, p0, p1, p2, _r, _ri);
+global.GetShopItemNumWearableStates = function (componentHash, isMpFemale, p2) {
+  return _in(0xffcc2db2, 0xd9953401, _ch(componentHash), isMpFemale, p2, _r, _ri);
 };
 
 global.N_0xffddf802279be128 = function (p0, p1, p2) {
@@ -26713,7 +26713,7 @@ global.OverrideSaveHouse = function (p0, p1, p2, p3, p4, p5, p6, p7) {
   return _in(0xb2c69e11, 0xa37b5af0, p0, _fv(p1), _fv(p2), _fv(p3), _fv(p4), p5, _fv(p6), _fv(p7), _r);
 };
 
-global.OverrideTextureOnPed = function (ped, componentHash, textureId) {
+global.ApplyTextureOnPed = function (ped, componentHash, textureId) {
   return _in(0x0b46e257, 0x61519058, ped, _ch(componentHash), textureId);
 };
 

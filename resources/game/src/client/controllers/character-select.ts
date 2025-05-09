@@ -128,7 +128,7 @@ const cleanupCharacters = () => {
 };
 
 const setPedOutfit = async (ped: number, components: number[]) => {
-  const currentComponentCount = GetNumComponentsInPed(ped);
+  let currentComponentCount = GetNumComponentsInPed(ped);
   for (let n = currentComponentCount; n--; ) {
     const component = GetShopItemComponentAtIndex(
       ped,
@@ -138,7 +138,7 @@ const setPedOutfit = async (ped: number, components: number[]) => {
       new DataView(new ArrayBuffer(255)),
     );
     if (!components.includes(component)) {
-      const componentCategory = GetPedComponentCategory(component, 0, true);
+      const componentCategory = GetShopItemComponentCategory(component, 0, true);
       RemoveTagFromMetaPed(ped, componentCategory, 0); // _SET_PED_COMPONENT_DISABLED
       await Delay(1);
     }
@@ -149,7 +149,7 @@ const setPedOutfit = async (ped: number, components: number[]) => {
     ApplyShopItemToPed(ped, component, false, true, false); // _SET_PED_COMPONENT_ENABLED
     await Delay(1);
   }
-  N_0x704c908e9c405136(ped); // Fix clothing???
+  N_0x704C908E9C405136(ped); // Fix clothing???
   UpdatePedVariation(ped, false, true, true, true, false);
   await Delay(1);
 };
@@ -173,6 +173,8 @@ const skinPed = async (ped: number, character: Game.Character) => {
   // }
 };
 
+exports<'game'>('skinPed', skinPed);
+
 const spawnCharacter = async (
   character: Game.Character,
   x: number,
@@ -184,6 +186,7 @@ const spawnCharacter = async (
 
   await gameManager.loadModel(modelHash);
   const ped = CreatePed(modelHash, x, y, z, h, false, false, false, false);
+  Log(`Creating ped with model: ${modelHash} @ ${x}, ${y}, ${z} (${ped})`);
 
   await gameManager.pedIsReadyToRender(ped);
 
@@ -218,11 +221,8 @@ export const spawnCharacters = async (characters: Game.Character[]): Promise<UI.
     rot: cameraRotation.toObject(),
     fov: 50,
   });
-
   PVCamera.setActive('character-select', 0);
-
   const uiCharacters: UI.CharacterSelect.CharacterData[] = [];
-
   const shuffledSpots = shuffle(characterSpots);
   for (const character of characters) {
     const spot = shuffledSpots.pop();
@@ -235,10 +235,8 @@ export const spawnCharacters = async (characters: Game.Character[]): Promise<UI.
       continue;
     }
     const { position, rotation, animation, objects, screenOffset } = spot;
-
     const characterPed = await spawnCharacter(character, position.x, position.y, position.z, rotation.z);
     spawnedPeds.add(characterPed);
-
     if (objects) {
       for (const object of objects) {
         const { model, attach } = object;
@@ -287,7 +285,7 @@ onUI('character-select.choose', async (characterId) => {
   await Delay(500);
   await skinPed(playerPed, character);
   await Delay(500);
-  SetEntityCoords(playerPed, character.lastX, character.lastY, character.lastZ - 1.0, 0, 0, 0, false);
+  SetEntityCoords(playerPed, character.lastX, character.lastY, character.lastZ - 1.0, false, false, false, false);
 
   cleanupCharacters();
 
