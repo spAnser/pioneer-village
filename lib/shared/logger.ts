@@ -7,9 +7,9 @@ export enum LogLevel {
 }
 
 export abstract class LoggerBase {
-  private static instance: LoggerBase;
+  protected static instance: LoggerBase;
 
-  constructor(private readonly name?: string) {}
+  constructor(protected readonly name?: string) {}
 
   abstract logMessages(level: LogLevel, messages: any[]): void;
 
