@@ -148,7 +148,7 @@ RegisterCommand(
   async (source: number, args: any[], rawCommand: string) => {
     // const playerPed = 643074;
 
-    const [entity, uiBones] = getUIBones();
+    const [entity, uiBones] = getUIBones(PlayerPedId());
 
     // const update = setInterval(() => {
     //   Log('Update');

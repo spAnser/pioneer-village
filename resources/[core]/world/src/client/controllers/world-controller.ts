@@ -21,7 +21,7 @@ class WorldController {
   networkObjects: Map<string, number> = new Map();
   activeObjects: Map<string, number> = new Map();
 
-  protected interval: NodeJS.Timer;
+  protected interval: CitizenTimer;
 
   protected receivedNetworkObjects = false;
 

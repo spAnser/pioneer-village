@@ -4,11 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "data": {
-    "serverVersion": "14158"
+    "serverVersion": "14862"
   },
   "scripts": {
     "download-server": "cd artifacts && node download.js",
-    "start": "./artifacts/14158/FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1491",
+    "start": "./artifacts/14862/FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1491",
     "watch": "lerna run watch --stream --parallel",
     "build": "lerna run build --stream --parallel",
     "prettier": "lerna run prettier --stream --parallel",
@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "7zip": "^0.0.6",
-    "@citizenfx/client": "2.0.14158-1",
-    "@citizenfx/server": "2.0.14158-1",
+    "@citizenfx/client": "2.0.14862-1",
+    "@citizenfx/server": "2.0.14862-1",
     "@rspack/cli": "^1.2.8",
     "@rspack/core": "^1.2.8",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
@@ -27,6 +27,7 @@
     "@types/jsonwebtoken": "^9.0.2",
     "@types/lodash": "^4.14.178",
     "@types/node": "^22.10.10",
+    "@types/object-hash": "^3.0.6",
     "@types/styled-components": "^5.1.21",
     "@types/three": "^0.137.0",
     "chalk": "^4",
@@ -51,9 +52,9 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "@nativewrappers/redm": "^0.0.103",
     "@prisma/client": "5",
     "@socket.io/redis-adapter": "^7.1.0",
-    "@types/object-hash": "^2.2.1",
     "bufferutil": "^4.0.6",
     "canvas": "^3.1.0",
     "colors": "^1.4.0",

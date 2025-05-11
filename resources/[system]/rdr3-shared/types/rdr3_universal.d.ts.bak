@@ -12550,7 +12550,7 @@ declare function N_0x9b6a58fdb0024f12(p0: number, p1: number): void;
  */
 declare function N_0x9b8d5d4cb8af58b3(effectNameHash: string | number): void;
 
-declare function GetCategoryOfComponentAtIndex(ped: number, index: number, p2?: number): number;
+declare function Citizen.invokeNative('0x9b90842304c938a7', ped: number, index: number, p2?: number): number;
 
 declare function N_0x9b9b9fa0ea283e3d(p0: number, p1: number): void;
 

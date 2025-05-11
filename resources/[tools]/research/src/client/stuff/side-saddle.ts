@@ -99,12 +99,15 @@ import { Log } from '@lib/client/comms/ui';
 // veh_horseback@seat_saddle@female@normal@walk@2h/turn_l2.clip
 // veh_horseback@seat_saddle@female@normal@walk@2h/turn_r2.clip
 
-const sideSaddle: 'left' | 'right' | false = 'left';
+const sideSaddle: 'left' | 'right' | false = 'right';
 
-const animDict = 'veh_horseback@seat_rear@female@%side%@normal@%speed%';
+// const animDict = 'veh_horseback@seat_rear@female@%side%@normal@%speed%';
+const animDict = 'veh_horseback@seat_saddle@female@normal@%speed%';
 
 let lastDict = '';
 let lastAnim = '';
+
+const flags = AnimFlag.REPEAT + AnimFlag.ENABLE_PLAYER_CONTROL + AnimFlag.CANCELABLE;
 
 setInterval(async () => {
   if (!sideSaddle) {
@@ -114,16 +117,22 @@ setInterval(async () => {
   if (GetMount(PlayerPedId())) {
     const speed = Vector3.fromArray(GetEntitySpeedVector(GetMount(PlayerPedId()), true));
 
-    Log('speed', speed);
+    // Log('speed', speed);
 
     let animSpeed = 'idle';
     let anim = 'idle';
 
-    if (speed.y > 2) {
-      animSpeed = 'canter';
+    if (speed.y > 6) {
+      animSpeed = 'trot_fast@2h';
       anim = 'move';
-    } else if (speed.y > 5) {
-      animSpeed = 'gallop';
+    } else if (speed.y > 4) {
+      animSpeed = 'trot@2h';
+      anim = 'move';
+    } else if (speed.y > 2) {
+      animSpeed = 'trot_slow@2h';
+      anim = 'move';
+    } else if (speed.y > 1) {
+      animSpeed = 'walk@2h';
       anim = 'move';
     }
 
@@ -137,9 +146,12 @@ setInterval(async () => {
 
     const dict = animDict.replace('%side%', sideSaddle).replace('%speed%', animSpeed);
 
-    if (lastDict === dict && lastAnim === anim) {
+    // if (lastDict === dict && lastAnim === anim) {
+    if (IsEntityPlayingAnim(PlayerPedId(), dict, anim, flags)) {
       return;
     }
+
+    Log(dict, anim);
 
     lastDict = dict;
     lastAnim = anim;
@@ -147,17 +159,18 @@ setInterval(async () => {
     // PVGame.taskPlayAnim({
     //   dict,
     //   anim,
-    //   flags: AnimFlag.REPEAT + AnimFlag.ENABLE_PLAYER_CONTROL + AnimFlag.CANCELABLE,
+    //   flags,
     // });
     //
     // await Delay(10);
 
     PVGame.taskPlayAnim({
-      dict: 'veh_horseback@seat_saddle@female@normal@walk@2h',
-      anim: 'move',
-      flags: AnimFlag.REPEAT + AnimFlag.CANCELABLE,
+      dict,
+      anim,
+      flags,
     });
   } else if (lastDict || lastAnim) {
+    Log('stop anim', lastDict, lastAnim);
     StopAnimTask(PlayerPedId(), lastDict, lastAnim, 1);
     lastDict = '';
     lastAnim = '';

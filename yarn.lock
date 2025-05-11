@@ -900,15 +900,15 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@citizenfx/client@2.0.14158-1":
-  version "2.0.14158-1"
-  resolved "https://registry.yarnpkg.com/@citizenfx/client/-/client-2.0.14158-1.tgz#56913a3a13ddc68291e578b04d7edaa047438d4d"
-  integrity sha512-eSXFcwsELqfkukmSfNAABUSdxNGTjUwU6pfTQOzkd4tXdTnkaSsIT0UJTe14sZt/74Ts93Wmp6IP1d1B82co0w==
+"@citizenfx/client@2.0.14862-1":
+  version "2.0.14862-1"
+  resolved "https://registry.yarnpkg.com/@citizenfx/client/-/client-2.0.14862-1.tgz#c91d2ff45f0a791893c2935743e3e1461c74aa4f"
+  integrity sha512-nW726EKaKoNr3Z4n+9FgNnrEvKaNjJWe/LrOQ5Jwr+dxqYltfzT47VNleYNoj8LMYbe4WTjVotIq+KvYbmrKpg==
 
-"@citizenfx/server@2.0.14158-1":
-  version "2.0.14158-1"
-  resolved "https://registry.yarnpkg.com/@citizenfx/server/-/server-2.0.14158-1.tgz#cd78036ad6ed825eb71541cf784213160a481e8b"
-  integrity sha512-3D3iC++/uETL+6nYiIjA+qYGv7BjNwIrTuKPb4RN8eCNIFtO8mYFG7bZBjKWZvNQs8vxTiKXUp9gxhpcgy+kww==
+"@citizenfx/server@2.0.14862-1":
+  version "2.0.14862-1"
+  resolved "https://registry.yarnpkg.com/@citizenfx/server/-/server-2.0.14862-1.tgz#bc584a52cedf815d11fdd85cb5c15172642f26e9"
+  integrity sha512-I6XnxIGBhskPe9S+q1OQLDqs6TYw1RhX06K6jUg+n0hGITYools6VBIIhdPe2uUlHA+76qJajQlV9ONeR3mDig==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
@@ -1947,6 +1947,11 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@nativewrappers/redm@^0.0.103":
+  version "0.0.103"
+  resolved "https://registry.yarnpkg.com/@nativewrappers/redm/-/redm-0.0.103.tgz#f9ae11af9d2338967d67c1ada2dbbf246d84385f"
+  integrity sha512-mv8BkLsYWZaHV+VRC9Bc5go8oWg4eEzCV8kP4TPdcsxE3pERXY7tICLl3ZgBdZCTug2KXBOpz18r5Dhhq8MD5w==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -2666,10 +2671,10 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.4.tgz#56e2cc26c397c038fab0e3a917a12d5c5909e901"
   integrity sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==
 
-"@types/object-hash@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@types/object-hash/-/object-hash-2.2.1.tgz#67c169f8f033e0b62abbf81df2d00f4598d540b9"
-  integrity sha512-i/rtaJFCsPljrZvP/akBqEwUP2y5cZLOmvO+JaYnz01aPknrQ+hB5MRcO7iqCUsFaYfTG8kGfKUyboA07xeDHQ==
+"@types/object-hash@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@types/object-hash/-/object-hash-3.0.6.tgz#25c052428199d374ef723b7b0ed44b5bfe1b3029"
+  integrity sha512-fOBV8C1FIu2ELinoILQ+ApxcUKz4ngq+IWUYrxSGjXzzjUALijilampwkMgEtJ+h2njAW3pi853QpzNVCHB73w==
 
 "@types/parse-json@^4.0.0":
   version "4.0.2"

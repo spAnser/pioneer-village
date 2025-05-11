@@ -21,6 +21,8 @@ export interface WeaponStats {
   modifier: number;
   damageType: DamageType;
   effectiveRange?: EffectiveRange;
+  randomBone?: boolean;
+  specificBone?: string[];
 }
 
 export const weapons: Record<string, WeaponStats> = {
@@ -604,7 +606,49 @@ export const weapons: Record<string, WeaponStats> = {
     damageType: DamageType.EXPLOSIVE,
   },
   [GetHashKey('WEAPON_UNARMED')]: { name: 'WEAPON_UNARMED', modifier: 1.0, damageType: DamageType.DEFAULT },
-  [GetHashKey('WEAPON_WOLF')]: { name: 'WEAPON_WOLF', modifier: 1.0, damageType: DamageType.SHARP },
-  [GetHashKey('WEAPON_WOLF_MEDIUM')]: { name: 'WEAPON_WOLF_MEDIUM', modifier: 1.0, damageType: DamageType.SHARP },
-  [GetHashKey('WEAPON_WOLF_SMALL')]: { name: 'WEAPON_WOLF_SMALL', modifier: 1.0, damageType: DamageType.SHARP },
+  [GetHashKey('WEAPON_WOLF')]: {
+    name: 'WEAPON_WOLF',
+    modifier: 1.0,
+    damageType: DamageType.SHARP,
+    specificBone: [
+      'SKEL_L_HAND',
+      'SKEL_L_FOREARM',
+      'SKEL_L_UPPERARM',
+      'SKEL_L_THIGH',
+      'SKEL_R_HAND',
+      'SKEL_R_FOREARM',
+      'SKEL_R_UPPERARM',
+      'SKEL_R_THIGH',
+    ],
+  },
+  [GetHashKey('WEAPON_WOLF_MEDIUM')]: {
+    name: 'WEAPON_WOLF_MEDIUM',
+    modifier: 1.0,
+    damageType: DamageType.SHARP,
+    specificBone: [
+      'SKEL_L_HAND',
+      'SKEL_L_FOREARM',
+      'SKEL_L_UPPERARM',
+      'SKEL_L_THIGH',
+      'SKEL_R_HAND',
+      'SKEL_R_FOREARM',
+      'SKEL_R_UPPERARM',
+      'SKEL_R_THIGH',
+    ],
+  },
+  [GetHashKey('WEAPON_WOLF_SMALL')]: {
+    name: 'WEAPON_WOLF_SMALL',
+    modifier: 1.0,
+    damageType: DamageType.SHARP,
+    specificBone: [
+      'SKEL_L_HAND',
+      'SKEL_L_FOREARM',
+      'SKEL_L_UPPERARM',
+      'SKEL_L_THIGH',
+      'SKEL_R_HAND',
+      'SKEL_R_FOREARM',
+      'SKEL_R_UPPERARM',
+      'SKEL_R_THIGH',
+    ],
+  },
 };

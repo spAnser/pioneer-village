@@ -113,6 +113,7 @@ declare function Entity(entity: number): EntityInterface;
 declare var GlobalState: StateBagInterface;
 declare function Player(entity: number | string): EntityInterface;
 
+// @ts-ignore
 declare var exports: any;
 
 declare var source: number;

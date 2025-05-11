@@ -42,6 +42,7 @@ class CharacterSpawnManager {
         const position = this.isPlayerInsideCity() ? 'city' : 'wilderness';
         let scenario = 0;
         if (position === 'wilderness') {
+          // GetActiveDynamicScenario
           scenario = Citizen.invokeNative('0x569F1E1237508DEB', PVGame.playerPed(), Citizen.resultAsInteger());
           if (scenario === 0) {
             scenario = GetHashKey(WildernessScenarios[randomRange(1, WildernessScenarios.length)]);

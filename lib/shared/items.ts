@@ -1,17 +1,17 @@
 const GetHashKey = (text: string): number => {
   const keyLowered = text.toLowerCase();
-  const length = text.length;
-  let hash, i;
+  const length = keyLowered.length;
+  let hash = 0;
 
-  for (hash = i = 0; i < length; i++) {
-    hash += keyLowered.charCodeAt(i);
-    hash += hash << 10;
-    hash ^= hash >>> 6;
+  for (let i = 0; i < length; i++) {
+    hash = (hash + keyLowered.charCodeAt(i)) | 0;
+    hash = (hash + (hash << 10)) | 0;
+    hash = (hash ^ (hash >>> 6)) | 0;
   }
 
-  hash += hash << 3;
-  hash ^= hash >>> 11;
-  hash += hash << 15;
+  hash = (hash + (hash << 3)) | 0;
+  hash = (hash ^ (hash >>> 11)) | 0;
+  hash = (hash + (hash << 15)) | 0;
 
   return hash;
 };
@@ -520,6 +520,7 @@ const items: Record<number, Inventory.Item> = {
     useEvent: 'inventory:client:toggle_weapon',
     weaponHash: GetHashKey('WEAPON_FISHINGROD'),
     weaponType: WeaponType.NO_AMMO,
+    maxDurability: 100,
   },
   [GetHashKey('PV_BAIT_WORM')]: {
     identifier: GetHashKey('PV_BAIT_WORM'),

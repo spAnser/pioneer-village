@@ -1,4 +1,3 @@
-import Timer = NodeJS.Timer;
 import { Vector3 } from '@lib/math/vector3';
 import { AnimFlag } from '@lib/flags';
 import { Delay } from '@lib/functions';
@@ -15,7 +14,7 @@ class GameManager {
     return GameManager.instance;
   }
 
-  _interval: Timer;
+  _interval: CitizenTimer;
 
   protected _playerId: number = PlayerId();
   protected _playerPed: number = PlayerPedId();
@@ -376,7 +375,9 @@ class GameManager {
     RemoveTagFromMetaPed(ped, GetHashKey('AMMO_PISTOLS'), 0);
 
     // N_0x704C908E9C405136(ped);
-    N_0xAAB86462966168CE(ped, true);
+
+    // SetActiveMetaPedComponentsUpdated
+    Citizen.invokeNative('0xaab86462966168ce', ped, true);
     UpdatePedVariation(ped, false, true, true, true, false);
   }
 
@@ -908,7 +909,7 @@ class GameManager {
         for (const addAnimTask of animTask.additional) {
           PlayEntityAnim(
             typeof addAnimTask.obj === 'function' ? addAnimTask.obj() : addAnimTask.obj,
-            addAnimTask.suffix ? `${animTask.anim}${addAnimTask.suffix}` : addAnimTask.anim ?? '',
+            addAnimTask.suffix ? `${animTask.anim}${addAnimTask.suffix}` : (addAnimTask.anim ?? ''),
             addAnimTask.dict ?? animTask.dict,
             1.0,
             addAnimTask.loop ?? false,
@@ -991,8 +992,8 @@ class GameManager {
         ((animTask?.flags ?? 0) & AnimFlag.OFFSET_POSITION) === AnimFlag.OFFSET_POSITION
           ? [coords, rotation]
           : l === 0
-          ? this.getAnimOffset(animTask.dict, animName, coords, rotation)
-          : [Vector3.fromArray(GetEntityCoords(animPed, false)), Vector3.fromArray(GetEntityRotation(animPed, 2))];
+            ? this.getAnimOffset(animTask.dict, animName, coords, rotation)
+            : [Vector3.fromArray(GetEntityCoords(animPed, false)), Vector3.fromArray(GetEntityRotation(animPed, 2))];
       TaskPlayAnimAdvanced(
         animPed,
         animTask.dict,
@@ -1015,7 +1016,9 @@ class GameManager {
       if (animTask.additional) {
         for (const addAnimTask of animTask.additional) {
           const addAnimTaskObj = typeof addAnimTask.obj === 'function' ? addAnimTask.obj() : addAnimTask.obj;
-          const addAnimTaskAnim = addAnimTask.suffix ? `${animTask.anim}${addAnimTask.suffix}` : addAnimTask.anim ?? '';
+          const addAnimTaskAnim = addAnimTask.suffix
+            ? `${animTask.anim}${addAnimTask.suffix}`
+            : (addAnimTask.anim ?? '');
           const addAnimTaskDict = addAnimTask.dict ?? animTask.dict;
           const [addAnimCoords, addAnimRot] = this.getAnimOffset(addAnimTaskDict, addAnimTaskAnim, coords, rotation);
           if (addAnimTask.updatePosition) {

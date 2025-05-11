@@ -89,7 +89,8 @@ class PaletteManager {
     const componentCount = GetNumComponentsInPed(entity);
     for (let index = componentCount; index--; ) {
       // GetCategoryOfComponentAtIndex
-      if (GetShopItemCategoryAtIndex(entity, index, 0) === category) {
+      // @ts-ignore
+      if (Citizen.invokeNative('0x9b90842304c938a7', entity, index, 0) === category) {
         return index;
       }
     }

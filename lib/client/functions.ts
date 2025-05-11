@@ -27,14 +27,14 @@ export const DrawTxt = (
   font = 0,
 ) => {
   const str = VarString(10, 'LITERAL_STRING', rawString);
-  SetTextScale(1, size);
+  BgSetTextScale(1, size);
   BgSetTextColor(Math.floor(r), Math.floor(g), Math.floor(b), Math.floor(a));
   SetTextCentre(centre);
   if (enableShadow) {
     SetTextDropshadow(1, 0, 0, 0, 255);
   }
   SetTextFontForCurrentCommand(font);
-  DisplayText(str, x, y);
+  BgDisplayText(str, x, y);
 };
 
 export const TxtAtWorldCoord = (x: number, y: number, z: number, txt: string, size: number, font = 0, alpha = 255) => {

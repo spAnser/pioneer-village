@@ -74,6 +74,7 @@ RegisterCommand(
       if (ItemdatabaseIsKeyValid(component, 0)) {
         const var0 = new DataView(new ArrayBuffer(4 * 256));
         const var1 = new DataView(new ArrayBuffer(4));
+        // ItemdatabaseFilloutTagData
         const ret = Citizen.invokeNative('0x5A11D6EEA17165B0', component, var0, var1, 20) as boolean;
         if (ret) {
           const tagCount = var1.getUint32(0, true);
@@ -101,7 +102,8 @@ RegisterCommand(
 
     const components = [];
     for (let i = componentCount; i--; ) {
-      const componentCategory = GetShopItemCategoryAtIndex(entity, i, false);
+      // GetCategoryOfComponentAtIndex
+      const componentCategory = Citizen.invokeNative('0x9b90842304c938a7', entity, i, false);
       if (componentCategories.has(componentCategory)) {
         Log(i, componentCategories.get(componentCategory));
       } else {

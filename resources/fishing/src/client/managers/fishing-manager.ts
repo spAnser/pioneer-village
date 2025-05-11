@@ -17,6 +17,17 @@ import { Log } from '@lib/client/comms/ui';
 
 const weaponFishingrod = GetHashKey('WEAPON_FISHINGROD');
 
+Log(GetTaskFishing);
+Log(SetTaskFishing);
+
+// global.GetTaskFishing = function (ped, p1) {
+//   return Citizen.invokeNative('0xf3735acd11acd500', ped, p1, Citizen.returnResultAnyway());
+// };
+//
+// global.SetTaskFishing = function (ped, p1) {
+//   return Citizen.invokeNative('0xf3735acd11acd501', ped, p1, Citizen.returnResultAnyway());
+// };
+
 class FishingManager {
   protected static instance: FishingManager;
 
@@ -255,11 +266,13 @@ class FishingManager {
   }
 
   getState() {
+    // Log('GetTaskFishing', GetTaskFishing);
     GetTaskFishing(this.playerPed, this.state.getState());
   }
 
   setState() {
     if (this.state.modified) {
+      Log('SetTaskFishing', SetTaskFishing);
       SetTaskFishing(this.playerPed, this.state.getState());
       this.state.modified = false;
     }
@@ -267,7 +280,7 @@ class FishingManager {
 
   splashAtFish(fish: number, scale: number) {
     if (DoesEntityExist(fish)) {
-      const fishCoords = Vector3.fromArray(GetEntityCoords(fish));
+      const fishCoords = Vector3.fromArray(GetEntityCoords(fish, false, false));
       // fishCoords.add(new Vector3(0.0, 0.0, 0.25));
       UseParticleFxAsset('scr_mg_fishing');
       StartNetworkedParticleFxNonLoopedAtCoord(
@@ -279,9 +292,9 @@ class FishingManager {
         0.0,
         Math.random() * 360.0,
         scale,
-        0,
-        0,
-        0,
+        false,
+        false,
+        false,
       );
       PlaySoundFromPositionWithId(
         this.splashSoundId,
@@ -290,11 +303,11 @@ class FishingManager {
         fishCoords.y,
         fishCoords.z,
         0,
+        false,
         0,
-        0,
-        1,
+        true,
       );
-      SetVariableOnSoundWithId(this.splashSoundId, 'FishSize', 1.0);
+      SetVariableOnSound(this.splashSoundId, 'FishSize', 1.0);
     }
   }
 
@@ -313,9 +326,9 @@ class FishingManager {
       0.0,
       Math.random() * 360.0,
       scale,
-      0,
-      0,
-      0,
+      false,
+      false,
+      false,
     );
   }
 
@@ -331,7 +344,7 @@ class FishingManager {
     SetVolumeScale(this.volumeArea, this.range, this.range, this.range);
     // SetVolumeCoords(this.volumeArea, hookCoords.x, hookCoords.y, hookCoords.z - this.range / 2);
     // 1 Peds | 2 Vehicles | 3 Entities
-    const itemsFound = FindObjectsInVolume(this.volumeArea, this.itemSet, 1);
+    const itemsFound = GetEntitiesInVolume(this.volumeArea, this.itemSet, 1);
 
     // Log('itemsFound', itemsFound);
     if (itemsFound) {
@@ -353,12 +366,13 @@ class FishingManager {
     ClearItemset(this.itemSet);
 
     if (this.isNibbling && this.nibblingFish) {
+      Log('this.isNibbling', this.isNibbling, this.nibblingFish);
       if (this.state.codeSig & FishingCodeSig.FLICK_BAIT) {
         this.isNibbling = false;
 
         // SetEntityAsMissionEntity(this.nibblingFish, true, true);
         SetEntityInvincible(this.nibblingFish, true);
-        SetPedConfigFlag(this.nibblingFish, PedConfigFlag.Unk_17, true);
+        SetPedConfigFlag(this.nibblingFish, PedConfigFlag.DontActivateRagdollFromExplosions, true);
         N_0x1F298C7BD30D1240(this.playerPed);
         ClearPedTasksImmediately(this.nibblingFish, false, true);
         PedFishingrodHookEntity(this.playerPed, this.nibblingFish); // _PED_FISHINGROD_HOOK_ENTITY

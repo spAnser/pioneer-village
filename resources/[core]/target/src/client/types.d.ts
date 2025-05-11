@@ -41,7 +41,7 @@ declare namespace Target {
     options: Options;
   }
 
-  type AddTarget = (data: Target.Menu) => void;
+  type AddTarget = (data: Target.Menu) => string;
   type RemoveTarget = (id: string) => void;
   type GetEntityPlayerIsLookingAt = (
     distance: number,

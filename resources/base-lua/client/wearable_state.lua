@@ -227,7 +227,7 @@ if Config.DevMode then
                     table.insert(componentsWithWearableState,
                         {
                             componentHash = componentHash,
-                            componentCategory = GetCategoryOfComponentAtIndex(ped, componentIndex),
+                            componentCategory = Citizen.invokeNative('0x9b90842304c938a7', ped, componentIndex),
                             wearableStates = wearableStates
                         })
                 end
@@ -317,7 +317,7 @@ if Config.DevMode then
         return Citizen.InvokeNative(0x77BA37622E22023B, ped, index, bool, struct1, struct2)
     end
 
-    function GetCategoryOfComponentAtIndex(ped, componentIndex)
+    function Citizen.invokeNative('0x9b90842304c938a7', ped, componentIndex)
         return Citizen.InvokeNative(0x9b90842304c938a7, ped, componentIndex, 0) -- _GET_CATEGORY_OF_COMPONENT_AT_INDEX
     end
 

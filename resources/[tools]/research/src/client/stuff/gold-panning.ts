@@ -53,8 +53,8 @@ on('gold:panning', async (goldCradleEntityId: number, parameters: any) => {
   // const bucket = await PVGame.createObject(GetHashKey('P_CS_BUCKET01X'), bucketCoords, new Vector3(0, 0, heading - 15));
   const bucket = PVGame.getChildEntity(goldCradleEntityId, 'bucket');
   Entity(bucket).state.set('hasWater', false, true);
-  SetEntityCoords(bucket, bucketCoords.x, bucketCoords.y, bucketCoords.z, 0.0, 0.0, 0.0, false);
-  SetEntityRotation(bucket, 0, 0, heading - 15, 2);
+  SetEntityCoords(bucket, bucketCoords.x, bucketCoords.y, bucketCoords.z, false, false, false, false);
+  SetEntityRotation(bucket, 0, 0, heading - 15, 2, false);
   TaskGoToCoordAnyMeans(PVGame.playerPed(), animCoords.x, animCoords.y, animCoords.z, 1.5, 0, false, 0, 0);
   await PVGame.reachedCoords(animCoords, 0.75);
   await Delay(250);
@@ -233,6 +233,9 @@ let carryBucketTick: number;
 let carryBucketEntity: number;
 let cradleEntity: number;
 
+PVGame.clearAnimWalk();
+PVHealth.clearWalkSpeed();
+
 const bucketWalk = () => {
   const isMale = IsPedMale(PVGame.playerPed());
   PVGame.setAnimWalk({
@@ -369,8 +372,8 @@ const returnBucket = async () => {
   const bucket = PVGame.getChildEntity(cradleEntity, 'bucket');
   FreezeEntityPosition(bucket, true);
   Log(`SetEntityCoords(${bucket}, ${bucketCoords.x}, ${bucketCoords.y}, ${bucketCoords.z}, 0.0, 0.0, 0.0, false);`);
-  SetEntityCoords(bucket, bucketCoords.x, bucketCoords.y, bucketCoords.z, 0.0, 0.0, 0.0, false);
-  SetEntityRotation(bucket, 0, 0, heading + 80, 2);
+  SetEntityCoords(bucket, bucketCoords.x, bucketCoords.y, bucketCoords.z, false, false, false, false);
+  SetEntityRotation(bucket, 0, 0, heading + 80, 2, false);
   await Delay(125);
   SetEntityCollision(bucket, false, false);
 
@@ -456,7 +459,7 @@ on('gold:panning:teardown', async (goldCradleEntityId: number, parameters: any) 
 
 RegisterCommand('returnbucket', () => forceReturnBucket(), false);
 
-const registerTargets = () => {
+const registerTargets = async () => {
   PVTarget.AddTarget({
     id: 'gold_panning',
     type: 'model',

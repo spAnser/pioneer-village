@@ -266,7 +266,7 @@ class StableController {
     // HORSE_EQUIPMENT_MALE_GENITALS
     // HORSE_EQUIPMENT_FEMALE_GENITALS
     await Delay(1);
-    N_0x704C908E9C405136(horsePed); // FIX_OUTFIT
+    Citizen.invokeNative('0x704c908e9c405136', horsePed); // FIX_OUTFIT
 
     await Delay(50);
 
@@ -278,23 +278,25 @@ class StableController {
       await Delay(1);
     }
     await Delay(1);
-    N_0x704C908E9C405136(horsePed); // FIX_OUTFIT
-    N_0xAAB86462966168CE(horsePed, true);
+    Citizen.invokeNative('0x704c908e9c405136', horsePed); // FIX_OUTFIT
+    // SetActiveMetaPedComponentsUpdated
+    Citizen.invokeNative('0xaab86462966168ce', horsePed, true);
     await Delay(1);
     UpdatePedVariation(horsePed, false, true, true, true, false); // _UPDATE_PED_VARIATION
     SetModelAsNoLongerNeeded(horse.model);
     await Delay(50);
 
-    // Citizen.invokeNative('0xD2CB0FB0FDCB473D', gameManager.playerId, horsePed) // _SET_PED_AS_SADDLE_HORSE_FOR_PLAYER
-    // Citizen.invokeNative('0xE6D4E435B56D5BD0', gameManager.playerId, horsePed) // _SET_PLAYER_N*
+    // Citizen.invokeNative('0xD2CB0FB0FDCB473D', gameManager.playerId, horsePed) // SetPedAsSaddleHorseForPlayer
+    // Citizen.invokeNative('0xE6D4E435B56D5BD0', gameManager.playerId, horsePed) // SetPlayerOwnsMount
     SetPedRelationshipGroupHash(horsePed, GetPedRelationshipGroupHash(horsePed));
+    //SetPedOwnsAnimal
     Citizen.invokeNative('0x931B241409216C1F', playerPed, horsePed);
 
     if (options.local) {
       NetworkSetEntityInvisibleToNetwork(horsePed, true);
     } else {
       await PVGame.registerNetworkEntity(horsePed);
-      // SET_PED_MOOD_TOWARDS_PED
+      // SetPedMotivation
       // for (let n = 10; n--; ) {
       //   Citizen.invokeNative('0x06D26A96CA1BCA75', horsePed, n, 0.0, gameManager.playerPed)
       // }

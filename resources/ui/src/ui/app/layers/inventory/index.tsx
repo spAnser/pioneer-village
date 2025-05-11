@@ -586,11 +586,14 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
   renderItem(itemData: UI.Inventory.ItemData, i: number, identifier: string, inventory: UI.Inventory.LoadData) {
     const item = this.items[itemData.identifier];
 
-    // console.log('[renderItem] itemData', itemData);
-    // console.log('[renderItem] item', item);
+    // if (!item) {
+    //   console.log('[renderItem] this.items', this.items);
+    //   console.log('[renderItem] itemData', itemData);
+    //   console.log('[renderItem] item', item);
+    // }
 
     let durabilityProgress = null;
-    if (item.maxDurability) {
+    if (item?.maxDurability) {
       const durability = itemData.durabilities[0] || 0;
       durabilityProgress = durability / item.maxDurability;
     }
@@ -644,7 +647,7 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
     let isBroken = false;
     if (i in inventory.items) {
       const item = this.items[inventory.items[i]?.identifier];
-      if (item.maxDurability) {
+      if (item?.maxDurability) {
         const durability = inventory.items[i]?.durabilities[0] || 0;
         if (durability <= 0) {
           isBroken = true;
@@ -656,7 +659,7 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
         key={i}
         onMouseEnter={this.onmouseenter.bind(this)}
         onMouseLeave={this.onmouseleave.bind(this)}
-        onMousedown={this.onmousedown}
+        onMouseDown={this.onmousedown}
         data-inventory-identifier={identifier}
         data-slot={i}
         data-has-item={!!inventory.items[i]}

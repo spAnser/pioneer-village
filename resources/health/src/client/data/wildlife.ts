@@ -698,13 +698,13 @@ export const wildlife: Record<number, WildifeInfo> = {
   [GetHashKey('A_C_WOLF')]: { name: 'A_C_WOLF', modifier: 5.0, damageType: DamageType.SHARP, infectious: 0.0 },
   [GetHashKey('A_C_WOLF_MEDIUM')]: {
     name: 'A_C_WOLF_MEDIUM',
-    modifier: 5.0,
+    modifier: 4.5,
     damageType: DamageType.SHARP,
     infectious: 0.0,
   },
   [GetHashKey('A_C_WOLF_SMALL')]: {
     name: 'A_C_WOLF_SMALL',
-    modifier: 5.0,
+    modifier: 4.0,
     damageType: DamageType.SHARP,
     infectious: 0.0,
   },

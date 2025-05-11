@@ -2,6 +2,7 @@ import { PVBase, PVGame, PVKeymapper } from '@lib/client';
 import { AnimFlag } from '@lib/flags';
 import { Delay } from '@lib/functions';
 import { Vector3 } from '@lib/math';
+import { Log } from '@lib/client/comms/ui';
 
 let isWhistling = false;
 
@@ -12,7 +13,7 @@ const whistle = async (): Promise<void> => {
   const playerPed = PlayerPedId();
   const [ret, weaponHash] = GetCurrentPedWeapon(playerPed, false, 0, false);
   SetCurrentPedWeapon(playerPed, GetHashKey('WEAPON_UNARMED'), true);
-  const whistleObj = await PVGame.createObject('p_whistle01x');
+  const whistleObj = await PVGame.createObject('p_whistle01x', undefined, undefined, false);
   PVGame.attachEntityToBoneName(whistleObj, 'IK_R_HAND', undefined, new Vector3(-0.1, 0, 0), new Vector3(0, 90, 0));
   PVGame.taskPlayAnim({
     dict: 'amb_rest@world_human_smoke_cigar@male_a@idle_a',
@@ -35,3 +36,9 @@ const whistle = async (): Promise<void> => {
 RegisterCommand('+whistle', whistle, false);
 
 PVKeymapper.RegisterKeyMapping('whistle', 'Police Whistle', 'keyboard', 'J');
+
+if (typeof PrepareSoundset !== 'undefined') {
+  Log('PrepareSoundset', PrepareSoundset);
+} else {
+  Log('PrepareSoundset is undefined');
+}

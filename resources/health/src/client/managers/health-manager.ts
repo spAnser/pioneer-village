@@ -296,7 +296,7 @@ export class HealthManager {
         const inventory = DecorGetInt(this.playerPed, 'Inventory');
         // NetworkResurrectLocalPlayer(pCoords.x, pCoords.y, pCoords.z, pHeading, this.playerPed, true, 1, false);
         NetworkResurrectLocalPlayer(pCoords.x, pCoords.y, pCoords.z, pHeading, 0, false, 0, true);
-        SetPedToRagdoll(this.playerPed, speed * 100, speed * 100, 0, false, false, 0);
+        SetPedToRagdoll(this.playerPed, speed * 100, speed * 100, 0, false, false, false);
         SetEntityVelocity(this.playerPed, velocity.x, velocity.y, velocity.z);
         Log('NetworkResurrectLocalPlayer');
         DecorSetInt(this.playerPed, 'CID', cid);
@@ -336,12 +336,12 @@ export class HealthManager {
         SetCurrentPedWeapon(this.playerPed, `WEAPON_UNARMED`, true, AttachPoint.OffHand, false, false);
         ClearPedTasksImmediately(this.playerPed);
         SetPedConfigFlag(this.playerPed, PedConfigFlag.DisableMelee, true);
-        SetPedConfigFlag(this.playerPed, PedConfigFlag.Unk_170, true);
+        SetPedConfigFlag(this.playerPed, PedConfigFlag.DisableGrappleByAi, true);
         TaskKnockedOut(this.playerPed, 30.0, true);
       }
     } else if (GetPedConfigFlag(this.playerPed, PedConfigFlag.Knockedout, false)) {
       SetPedConfigFlag(this.playerPed, PedConfigFlag.DisableMelee, false);
-      SetPedConfigFlag(this.playerPed, PedConfigFlag.Unk_170, false);
+      SetPedConfigFlag(this.playerPed, PedConfigFlag.DisableGrappleByAi, false);
       ClearPedTasks(this.playerPed);
       SetPedToRagdoll(this.playerPed, 0, 0, 1, false, true, false);
     }
@@ -494,10 +494,10 @@ export class HealthManager {
     }
   }
 
-  randomBone(): number {
+  randomBone(onlyBones?: string[]): number {
     const boneIds = [];
     for (const [boneId, boneName] of this.bones.entries()) {
-      if (boneName.startsWith('SKEL_')) {
+      if (boneName.startsWith('SKEL_') && (!onlyBones || onlyBones.includes(boneName))) {
         boneIds.push(boneId);
       }
     }
@@ -1016,6 +1016,15 @@ export class HealthManager {
     y: number,
     z: number,
   ): void {
+    Log('handleDamageEvent', {
+      attacker,
+      attacked,
+      weaponHash,
+      ammoHash,
+      x,
+      y,
+      z,
+    });
     if (
       attacker === this.playerPed &&
       weaponHash === GetHashKey('WEAPON_UNARMED') &&
@@ -1046,8 +1055,8 @@ export class HealthManager {
     const weaponStats = weapons[weaponHash] ?? weapons['DEFAULT'];
 
     if (weaponStats.effectiveRange) {
-      const attackerCoord = Vector3.fromArray(GetEntityCoords(attacker));
-      const attackedCoord = Vector3.fromArray(GetEntityCoords(attacked));
+      const attackerCoord = Vector3.fromArray(GetEntityCoords(attacker, false, false));
+      const attackedCoord = Vector3.fromArray(GetEntityCoords(attacked, false, false));
       attackDistance = distanceVector(attackerCoord, attackedCoord);
     }
 
@@ -1105,7 +1114,19 @@ export class HealthManager {
       }
     }
 
-    this.checkForBoneDamage(damageModifier, false, damageType, infect, infectionMultiplier);
+    let boneOverride: number | undefined;
+
+    if (weaponStats.randomBone) {
+      boneOverride = this.randomBone();
+      Log(`Random damage to ${boneOverride}`);
+    }
+
+    if (weaponStats.specificBone) {
+      boneOverride = this.randomBone(weaponStats.specificBone);
+      Log(`Specific damage from [${weaponStats.specificBone.join(', ')}] to ${boneOverride}`);
+    }
+
+    this.checkForBoneDamage(damageModifier, false, damageType, infect, infectionMultiplier, boneOverride);
     ClearEntityLastDamageEntity(this.playerPed);
   }
 

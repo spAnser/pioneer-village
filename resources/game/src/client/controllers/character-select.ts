@@ -149,7 +149,7 @@ const setPedOutfit = async (ped: number, components: number[]) => {
     ApplyShopItemToPed(ped, component, false, true, false); // _SET_PED_COMPONENT_ENABLED
     await Delay(1);
   }
-  N_0x704C908E9C405136(ped); // Fix clothing???
+  Citizen.invokeNative('0x704c908e9c405136', ped); // Fix clothing???
   UpdatePedVariation(ped, false, true, true, true, false);
   await Delay(1);
 };

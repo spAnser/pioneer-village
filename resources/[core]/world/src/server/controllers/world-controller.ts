@@ -21,7 +21,7 @@ class WorldController {
   networkObjects: Map<string, number> = new Map();
   activeObjects: Map<string, number> = new Map();
 
-  protected interval: NodeJS.Timer;
+  protected interval: CitizenTimer;
 
   protected receivedNetworkObjects = false;
 
@@ -37,6 +37,7 @@ class WorldController {
 
   async serverObjects(): Promise<void> {
     const serverObjects = await awaitSocket('world.registered-objects');
+    console.log('serverObjects', serverObjects);
     for (const [name, id] of Object.entries(serverObjects)) {
       console.log('NetworkDoesNetworkIdExist(id)', name, NetworkGetEntityFromNetworkId(id) !== 0);
       if (NetworkGetEntityFromNetworkId(id) !== 0) {

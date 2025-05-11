@@ -4,6 +4,7 @@ import { Delay } from '@lib/functions';
 import './blip-setup';
 import './door-register';
 import './characterData';
+import { Log } from '@lib/client/comms/ui';
 
 const getNetworkControlOfEntity: Base.getNetworkControlOfEntity = async (entity) => {
   do {
@@ -14,26 +15,46 @@ const getNetworkControlOfEntity: Base.getNetworkControlOfEntity = async (entity)
 
 const deleteEntity: Base.deleteEntity = async (entity: number): Promise<void> => {
   if (!DoesEntityExist(entity)) {
+    Log(`Entity doesn't exist ${entity}`);
     return;
   }
   if (NetworkGetEntityIsNetworked(entity)) {
+    Log(`Requesting control ${entity}`);
     await getNetworkControlOfEntity(entity);
+  }
+
+  const attachedEntity = GetEntityAttachedTo(entity);
+  if (attachedEntity) {
+    DetachEntity(entity, true, false);
   }
 
   await Delay(5);
   SetEntityAsMissionEntity(entity, true, true);
 
-  await Delay(5);
-  if (IsEntityAPed(entity)) {
-    DeletePed(entity);
-  }
+  // await Delay(5);
+  // if (IsEntityAPed(entity)) {
+  //   Log(`DeletePed(${entity})`);
+  //   DeletePed(entity);
+  // }
+  //
+  // await Delay(5);
+  // if (IsEntityAnObject(entity)) {
+  //   Log(`DeleteObject(${entity})`);
+  //   DeleteObject(entity);
+  // }
+  //
+  // if (!DoesEntityExist(entity)) {
+  //   Log(`Entity doesn't exist ${entity}`);
+  //   return;
+  // }
 
   await Delay(5);
-  // console.log(`DeleteEntity(${entity})`);
+  Log(`DeleteEntity(${entity})`);
   DeleteEntity(entity);
 
   await Delay(10);
   if (DoesEntityExist(entity)) {
+    Log(`Entity Still exists: ${entity}`);
     SetEntityAsMissionEntity(entity, false, false);
 
     await Delay(5);

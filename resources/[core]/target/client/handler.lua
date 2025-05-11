@@ -63,26 +63,33 @@ function Target.Start(threadId)
 	self.class = {}
 
 	setmetatable(self.targets, {
-		__call = function(self,data)
-			for k,v in pairs(self) do
-				local this = v(data)
+		__call = function(self, data)
+			local matched = {}
 
+			for _, v in pairs(self) do
+				local this = v(data)
 				if this then
-					return this
+					table.insert(matched, this)
 				end
 			end
+
+			return matched
 		end
 	})
 
 	setmetatable(self.zones, {
-		__call = function(self,data)
-			for k,v in pairs(self) do
+		__call = function(self, data)
+			local matchedZones = {}
+
+			for _, v in pairs(self) do
 				local this = v(data)
 
 				if this then
-					return this
+					table.insert(matchedZones, this)
 				end
 			end
+
+			return matchedZones
 		end
 	})
 
@@ -252,13 +259,15 @@ function Target:Enable(state)
 			end
 
 			if dstCheck then
-				local this = self.targets(data)
+				local targets = self.targets(data)
 
-				if this then
-					--SendNuiMessage({ontarget = true})
+				if targets and #targets > 0 then
 					exports['ui']:emitUI('target.state', { active = true, type = data.type, flag = flag })
 
 					self:DisablePlayerFiring()
+
+					-- Collect all the actions from matching targets
+					local allActions = {}
 
 					while self.active do
 						Wait(0)
@@ -268,23 +277,35 @@ function Target:Enable(state)
 							break
 						end
 
-						if self.click and this(data) then
+						if self.click then
 							self.click = false
-
-							--SetNuiFocus(true, true)
 							SetCursorLocation(0.5, 0.5)
-							--SendNuiMessage(json.encode(this.data)) -- Data sent when registering the target
-							exports['ui']:emitUI('target.state', { context = _entity, type = data.type, actions = this.data })
+
+							-- Collect actions from each valid target
+							for _, target in ipairs(targets) do
+								if target(data) then
+									-- Append actions from each matched target
+									for _, action in ipairs(target.data) do
+										table.insert(allActions, action)
+									end
+								end
+							end
+
+							-- Only emit once with all actions gathered
+							exports['ui']:emitUI('target.state', {
+								context = _entity,
+								type = data.type,
+								actions = allActions
+							})
 							exports['ui']:focusUI(true, true)
 						end
 					end
 
 					self:DisablePlayerFiring()
-
-					--SendNuiMessage({ontarget = false})
 					exports['ui']:emitUI('target.state', { active = false, type = -1, flag = '' })
 				end
 			end
+
 		end
 
 		hit, coords, entity = self:RayCast(true)
@@ -300,19 +321,19 @@ function Target:Enable(state)
 			local dstCheck = data.distance <= self.distance
 
 			if dstCheck then
-				local this = self.zones(data)
+				local matchingZones = self.zones(data)
 
-				if this then
-					--SendNuiMessage({ontarget = true})
-					exports['ui']:emitUI('target.state', { active = true })
+				if matchingZones and #matchingZones > 0 then
+					exports['ui']:emitUI('target.state', { active = true })  -- Show target state
 
 					self:DisablePlayerFiring()
+
+					local allActions = {}  -- Collect all actions from matching zones
 
 					while self.active do
 						Wait(0)
 
 						local _hit, _coords, _entity = self:RayCast(true)
-
 						self.cache.pedCoords = GetEntityCoords(self.cache.ped)
 
 						local data = {
@@ -320,24 +341,36 @@ function Target:Enable(state)
 							distance = #(self.cache.pedCoords - coords)
 						}
 
-						if _hit ~= 1 or not this(data) then
+						-- If no hit or the entity is not in any of the matching zones, exit the loop
+						if _hit ~= 1 or not matchingZones[1](data) then
 							break
 						end
 
-						if self.click and this(data) then
+						-- Iterate over all matching zones
+						for _, zone in ipairs(matchingZones) do
+							if zone(data) then
+								-- Collect actions from each valid zone
+								for _, action in ipairs(zone.data) do
+									table.insert(allActions, action)
+								end
+							end
+						end
+
+						if self.click then
+							self.click = false
 							local clickTime = GetGameTimer()
 
+							-- Wait for click, then process the actions
 							while self.click and GetGameTimer() - clickTime < 10000 do
 								Wait(0)
 							end
 
-							self.click = false
-
+							-- If clicked within time limit, emit UI with collected actions
 							if GetGameTimer() - clickTime < 10000 then
-								--SetNuiFocus(true, true)
 								SetCursorLocation(0.5, 0.5)
-								--SendNuiMessage(json.encode(this.data)) -- Data sent when registering the target
-								exports['ui']:emitUI('target.state', { show = false, context = 'zone', actions = this.data })
+
+								-- Send the collected actions for all matching zones
+								exports['ui']:emitUI('target.state', { show = false, context = 'zone', actions = allActions })
 								exports['ui']:focusUI(true, true)
 							end
 						end
@@ -345,7 +378,7 @@ function Target:Enable(state)
 
 					self:DisablePlayerFiring()
 
-					--SendNuiMessage({ontarget = false})
+					-- Hide target state when done
 					exports['ui']:emitUI('target.state', { active = false, type = -1, flag = '' })
 				end
 			end
@@ -383,12 +416,15 @@ function Target.AddTarget(data)
 	self = Target
 
 	while not self.ready do
+		print("waiting for keymapper to start")
 		Wait(1000)
 	end
 
 	--local key = ("%s_%s"):format(data.type:lower(), tlen(self.targets))
 	local key = data.id:lower()
 	print(key)
+
+	print("Targets Length: " .. tlen(self.targets))
 
 	self.targets[key] = data
 
@@ -403,21 +439,23 @@ function Target.AddTarget(data)
 
 		setmetatable(self.targets[key],{
 			__call = function(self,data)
-				if data.distance > self.options.distance then
-					return false
-				end
+				local rtn = false
 
-				if self.options.isEnabled and not self.options.isEnabled(data) then
+				if data.distance > self.options.distance then
 					return false
 				end
 
 				for k,v in pairs(self.group) do
 					if Target.class(data.model, v) then
-						return self
+						rtn = self
 					end
 				end
 
-				return false
+				if rtn and rtn.options and rtn.options.isEnabled and not rtn.options.isEnabled(data) then
+					return false
+				end
+
+				return rtn
 			end
 		})
 	elseif data.type == "model" then
@@ -435,19 +473,25 @@ function Target.AddTarget(data)
 
 		setmetatable(self.targets[key],{
 			__call = function(self,data)
+				local rtn = false
+
 				if data.distance > self.options.distance then
 					return false
 				end
 
-				if self.options.isEnabled and not self.options.isEnabled(data) then
+				if self.group[data.model] then
+					rtn = self
+				end
+
+				--print("------------------------------")
+				--print(json.encode(self))
+				--print(json.encode(rtn))
+				--print("------------------------------")
+				if rtn and rtn.options and rtn.options.isEnabled and not rtn.options.isEnabled(data) then
 					return false
 				end
 
-				if self.group[data.model] then
-					return self
-				end
-
-				return false
+				return rtn
 			end
 		})
 	elseif data.type == "entity" then
@@ -467,19 +511,21 @@ function Target.AddTarget(data)
 
 		setmetatable(self.targets[key],{
 			__call = function(self,data)
+				local rtn = false
+
 				if data.distance > self.options.distance then
 					return false
 				end
 
-				if self.options.isEnabled and not self.options.isEnabled(data) then
+				if self.group[data.entity] then
+					rtn = self
+				end
+
+				if rtn and rtn.options and rtn.options.isEnabled and not rtn.options.isEnabled(data) then
 					return false
 				end
 
-				if self.group[data.entity] then
-					return self
-				end
-
-				return false
+				return rtn
 			end
 		})
 	elseif data.type == "zone" then
@@ -499,21 +545,23 @@ function Target.AddTarget(data)
 
 		setmetatable(self.zones[key],{
 			__call = function(self,data)
-				if data.distance > self.options.distance then
-					return false
-				end
+				local rtn = false
 
-				if self.options.isEnabled and not self.options.isEnabled(data) then
+				if data.distance > self.options.distance then
 					return false
 				end
 
 				for k,v in ipairs(self.group) do
 					if exports.plouffe_zones:AreCoordsInZone(data.coords,v) then
-						return self
+						rtn = self
 					end
 				end
 
-				return false
+				if rtn and rtn.options and rtn.options.isEnabled and not rtn.options.isEnabled(data) then
+					return false
+				end
+
+				return rtn
 			end
 		})
 	end
@@ -600,6 +648,7 @@ CreateThread(function()
 			end
 		}
 	})
+	print('flagKey: ' .. flagKey)
 	Target.AddTarget({
 		id = 'coach',
 		type = 'flag',

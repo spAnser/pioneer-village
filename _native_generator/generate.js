@@ -29,7 +29,7 @@ const NATIVE_VAR_STRING = {
   variadic: true,
 };
 
-const AllowPointerAsArg = ['Any*', 'const char*'];
+const AllowPointerAsArg = ['Any*', 'const char*', 'char*', 'Entity*'];
 
 const typeMap = {
   Any: 'any',
@@ -37,11 +37,13 @@ const typeMap = {
   char: 'string',
   'const char': 'string | number',
   'const char*': 'string | number',
+  'char*': 'string | number',
   int: 'number',
   float: 'number',
   BOOL: 'boolean',
   Object: 'number',
   'Object*': 'number',
+  'Entity*': 'Entity',
 };
 
 const jsDocTypeMap = {
@@ -72,12 +74,11 @@ const jsDocTypeMap = {
   Volume: 'number',
 };
 
-const customNameMap = {
-  _0x9B90842304C938A7: '_GET_SHOP_ITEM_CATEGORY_AT_INDEX',
-};
+const customNameMap = {};
 
 const filterParamPointers = (param) => !param.type.includes('*') || AllowPointerAsArg.includes(param.type);
-const keepParamPointers = (param) => param.type.includes('*') && !AllowPointerAsArg.includes(param.type);
+const keepParamPointers = (param) =>
+  param.type.includes('*') && param.type !== 'char*' && !AllowPointerAsArg.includes(param.type);
 
 const renameParamMap = {
   var: 'value',
@@ -112,10 +113,11 @@ const wrapParam = (param, type) => {
       return '_v';
     case 'float*':
       return '_f';
+    case 'Entity*':
+      return `_ii(${param})`;
     case 'int*':
     case 'Blip*':
     case 'Cam*':
-    case 'Entity*':
     case 'FireId*':
     case 'Hash*':
     case 'Interior*':
@@ -249,10 +251,35 @@ const jsDocParams = (native) => {
 
       return ` * @param {${jsDocMap(type)}} ${camelCase(param.name)}`;
     })
-    .join('\n');
+    .join('\n  ');
 };
 
 const jsFuncs = [];
+
+const tsDefs = [];
+
+/*
+
+type NativeArgumentMap = {
+  '0x503703EC1781B7D6': [soundId: number, variableValue: number];
+};
+
+type NativeHashes = keyof NativeArgumentMap;
+
+interface CitizenNamespace {
+  invokeNative<T extends NativeHashes>(hash: T, ...args: NativeArgumentMap[T]): any;
+}
+
+declare const Citizen: CitizenNamespace;
+
+const SET_VARIABLE_ON_SOUND_NAME = '0x503703EC1781B7D6';
+
+*/
+
+const NativeArgMap = [];
+// const NamedHashesClient = [];
+// const NamedHashesServer = [];
+const NamedHashes = [];
 
 for (const namespace of Object.keys(rdr3natives)) {
   const keys = Object.keys(rdr3natives[namespace]);
@@ -261,11 +288,11 @@ for (const namespace of Object.keys(rdr3natives)) {
 
   for (const key of keys) {
     try {
-      const nativeHash = key.replace('0x', '').toLowerCase();
-      const hex2 = nativeHash.slice(-8);
-      const hex1 = nativeHash.replace(hex2, '');
+      // const nativeHash = key.replace('0x', '').toLowerCase();
+      // const hex2 = nativeHash.slice(-8);
+      // const hex1 = nativeHash.replace(hex2, '');
 
-      const hexes = `0x${hex1}, 0x${hex2 || 0}`;
+      // const hexes = `0x${hex1}, 0x${hex2 || 0}`;
 
       let native = rdr3natives[namespace][key];
       if (native.name === 'VAR_STRING') {
@@ -287,6 +314,7 @@ for (const namespace of Object.keys(rdr3natives)) {
       const params = native.params.map(renameParam).map((param) => {
         return `${wrapParam(param.name, param.type)}`;
       });
+
       const paramsArgs = native.params
         .filter(filterParamPointers)
         .map(renameParam)
@@ -303,10 +331,15 @@ for (const namespace of Object.keys(rdr3natives)) {
 
       const returnType = getReturnType(native).replace(/Hash/g, 'number');
 
+      // let jsFunc = `global.${name} = function (${paramsArgs}) {
+      //   return _inh(${hexes}${paramsCall ? `, ${paramsCall}` : ''}${
+      //     native.return_type === 'void' ? '' : getReturnParams(native)
+      //   });
+      // };`;
       let jsFunc = `global.${name} = function (${paramsArgs}) {
-  return _in(${hexes}${paramsCall ? `, ${paramsCall}` : ''}${
-        native.return_type === 'void' ? '' : getReturnParams(native)
-      });
+  return Citizen.invokeNative('${key.toLowerCase()}'${paramsCall ? `, ${paramsCall}` : ''}${
+    native.return_type === 'void' ? '' : getReturnParams(native)
+  });
 };`;
 
       let comment = '';
@@ -316,16 +349,16 @@ for (const namespace of Object.keys(rdr3natives)) {
           .replace(/\/\*/g, '|*')
           .replace(/\*\//g, '*|')
           .split('\n')
-          .map((line) => ` * ${line}`)
+          .map((line) => `   * ${line}`)
           .join('\n');
       }
 
       const jsDoc = `/**
- * ${native.name}${comment ? '\n' + comment : ''}
- *
-${jsDocParams(native)}
- * @return {${jsDocMap(returnType)}}
- */`;
+   * ${native.name}${comment ? '\n' + comment : ''}
+   *
+  ${jsDocParams(native)}
+   * @return {${jsDocMap(returnType)}}
+   */`;
 
       jsFunc = `${jsDoc}\n${jsFunc}`;
 
@@ -337,6 +370,16 @@ ${jsDocParams(native)}
       jsFuncs.push(jsFunc);
 
       tsDefs.push(tsDef);
+
+      // TODO: NEW STUFF
+
+      let lowerKey = key.toLowerCase();
+      // NativeArgMap.push(`${jsDoc}\n  '${lowerKey}': [${native.params.map(typeDefParams).filter(Boolean).join(', ')}]`);
+      // TODO: Maybe an option with just the name in JSdoc for easier searching
+      NativeArgMap.push(`'${lowerKey}': [${native.params.map(typeDefParams).filter(Boolean).join(', ')}]`);
+
+      // const SET_VARIABLE_ON_SOUND_NAME = '0x503703EC1781B7D6';
+      NamedHashes.push(`${jsDoc}\nexport const ${native.name} = '${lowerKey}';`);
     } catch (e) {
       console.log(e);
       console.log(key, rdr3natives[namespace][key]);
@@ -348,3 +391,19 @@ ${jsDocParams(native)}
 }
 
 fs.writeFileSync(`${pathToRDR3Shared}/client/rdr3_natives.js`, jsFuncs.join('\n\n'));
+
+// TODO : TESTING
+const NativeArgumentMap = `type NativeArgumentMap = {
+  ${NativeArgMap.join('\n  ')}
+}
+
+type NativeHashes = keyof NativeArgumentMap;
+
+interface CitizenNamespace {
+  invokeNative<T extends NativeHashes>(hash: T, ...args: NativeArgumentMap[T]): any;
+}
+
+declare const Citizen: CitizenNamespace;`;
+
+fs.writeFileSync(`${pathToRDR3Shared}/types/rdr3-natives.d.ts`, NativeArgumentMap);
+fs.writeFileSync(`../lib/shared/named_hashes.ts`, NamedHashes.join('\n'));
