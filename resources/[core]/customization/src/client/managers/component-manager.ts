@@ -3,6 +3,8 @@ import { Delay } from '@lib/functions';
 import componentCategories from '../data/component-categories';
 import wearableStates from '../data/wearable-states';
 import { paletteManager } from './palette-manager';
+import { AttachPoint } from '@lib/flags';
+import PVItems from '@lib/shared/items';
 
 const BASE_HASH = GetHashKey('BASE');
 
@@ -74,7 +76,10 @@ class ComponentManager {
     PVGame.finalizePedOutfit(ped);
     await PVGame.pedIsReadyToRender(ped, 5);
 
+    let lanternOnHip = false;
     for (const item of items) {
+      const itemData = PVItems[item.identifier];
+
       for (const metadata of item.metadatas) {
         if (metadata.palette === 'NONE') {
           continue;
@@ -88,6 +93,15 @@ class ComponentManager {
           metadata.tint2,
         );
       }
+
+      if ('weaponHash' in itemData && itemData.weaponHash) {
+        lanternOnHip = true;
+        SetCurrentPedWeapon(PVGame.playerPed(), itemData.weaponHash, true, AttachPoint.Hip, false, false);
+      }
+    }
+
+    if (!lanternOnHip) {
+      SetCurrentPedWeapon(PVGame.playerPed(), GetHashKey('WEAPON_UNARMED'), true, AttachPoint.Hip, false, false);
     }
 
     PVGame.finalizePedOutfit(ped);

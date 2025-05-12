@@ -194,12 +194,13 @@ export default class Inventories extends UIComponent<UI.BaseProps, UI.Inventory.
   }
 
   eventLoad(data: UI.Inventory.LoadData) {
-    // console.log('[eventLoad] data', data);
+    console.log('[eventLoad]', data?.identifier);
     const inventories = this.state.inventories;
     inventories.set(data.identifier, data);
 
     if (this.state.mainInventory === data.identifier) {
-      emitClient('inventory.main-inventory', data);
+      console.log(this.state.inventories);
+      emitClient('inventory.main-inventory', data, inventories.get(this.state.clothingInventory));
     }
 
     if (this.state.targetInventory === data.identifier) {

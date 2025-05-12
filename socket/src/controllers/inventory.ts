@@ -126,6 +126,7 @@ export default (prisma: PrismaClient) => {
       }
     });
 
+    // This removes durability from an item
     socket.on('inventory.item-wear', async (itemId: number) => {
       logInfoC('inventory.item-wear', itemId);
       const wearAmount = -1;

@@ -63,7 +63,7 @@ const WeaponType = {
   THROWN: 2,
 };
 
-const items: Record<number, Inventory.Item> = {
+const PVItems: Record<number, Inventory.Item> = {
   /**
    * Currency
    */
@@ -222,12 +222,38 @@ const items: Record<number, Inventory.Item> = {
     image: 'lantern',
     name: 'Lantern',
     flags: ItemFlags.WEAPON,
-    restriction: Restrictions.None,
+    restriction: Restrictions.Clothing,
     stackSize: 1,
     decayRate: 0.5,
     weight: 2.5,
     useEvent: 'inventory:client:toggle_weapon',
     weaponHash: GetHashKey('WEAPON_MELEE_LANTERN'),
+    weaponType: WeaponType.NO_AMMO,
+  },
+  [GetHashKey('PV_MELEE_DAVY_LANTERN')]: {
+    identifier: GetHashKey('PV_MELEE_DAVY_LANTERN'),
+    image: 'lantern_davy',
+    name: 'Davy Lantern',
+    flags: ItemFlags.WEAPON,
+    restriction: Restrictions.Clothing,
+    stackSize: 1,
+    decayRate: 0.5,
+    weight: 2.5,
+    useEvent: 'inventory:client:toggle_weapon',
+    weaponHash: GetHashKey('WEAPON_MELEE_DAVY_LANTERN'),
+    weaponType: WeaponType.NO_AMMO,
+  },
+  [GetHashKey('PV_MELEE_LANTERN_ELECTRIC')]: {
+    identifier: GetHashKey('PV_MELEE_LANTERN_ELECTRIC'),
+    image: 'lantern_electric',
+    name: 'Electric Lantern',
+    flags: ItemFlags.WEAPON,
+    restriction: Restrictions.Clothing,
+    stackSize: 1,
+    decayRate: 0.5,
+    weight: 2.5,
+    useEvent: 'inventory:client:toggle_weapon',
+    weaponHash: GetHashKey('WEAPON_MELEE_LANTERN_ELECTRIC'),
     weaponType: WeaponType.NO_AMMO,
   },
   /**
@@ -648,7 +674,7 @@ const items: Record<number, Inventory.Item> = {
   },
 };
 
-export default items;
+export default PVItems;
 
 /**
 

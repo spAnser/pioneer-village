@@ -1,5 +1,5 @@
 import { emitUI, onUI, PVCustomization, PVGame } from '@lib/client';
-import items from '@lib/shared/items';
+import PVItems from '@lib/shared/items';
 import './keybinds';
 import './weapons';
 import { Delay } from '@lib/functions';
@@ -7,7 +7,7 @@ import { Log } from '@lib/client/comms/ui';
 
 onUI('inventory.use-item', (itemData: UI.Inventory.ItemData) => {
   // Log(itemData);
-  const item = items[itemData.identifier];
+  const item = PVItems[itemData.identifier];
   if (!item) {
     console.warn(`Item doesn't exist ${itemData.identifier}`);
     return;
@@ -23,7 +23,7 @@ onUI('inventory.use-item', (itemData: UI.Inventory.ItemData) => {
 
 const sendInventoryItems = () => {
   const uiItems: Inventory.UIItems = {};
-  for (const item of Object.values(items)) {
+  for (const item of Object.values(PVItems)) {
     uiItems[item.identifier] = {
       name: item.name,
       description: item.description || '',
@@ -68,11 +68,11 @@ if (GetResourceState('ui') === 'started') {
 
 const noHolsterWeapons = [GetHashKey('WEAPON_MELEE_TORCH'), GetHashKey('WEAPON_MELEE_TORCH_CROWD')];
 
-onUI('inventory.main-inventory', (data) => {
+const processItemData = (items: Record<string, UI.Inventory.ItemData>) => {
   const playerPed = PVGame.playerPed();
-  RemoveAllPedWeapons(playerPed, true, true);
-  for (const slot of Object.values(data.items)) {
-    const item = items[slot.identifier];
+
+  for (const slot of Object.values(items)) {
+    const item = PVItems[slot.identifier];
 
     if (!item) {
       Log(GetHashKey('PV_DOOR_KEY'), GetHashKey('PV_DOOR_KEY') >>> 0, slot.identifier);
@@ -89,9 +89,23 @@ onUI('inventory.main-inventory', (data) => {
       }
     }
   }
+};
+
+onUI('inventory.main-inventory', (data, clothingData) => {
+  const playerPed = PVGame.playerPed();
+
+  // Log('inventory.main-inventory', data);
+  // Log('inventory.main-inventory clothing', clothingData);
+  RemoveAllPedWeapons(playerPed, true, true);
+
+  processItemData(data.items);
+  if (clothingData?.items) {
+    processItemData(clothingData.items);
+  }
 });
 
 onUI('inventory.clothing-change', async (equippedItems) => {
+  Log('inventory.clothing-change', equippedItems);
   const playerPed = PVGame.playerPed();
 
   PVCustomization.equipItems(playerPed, equippedItems);

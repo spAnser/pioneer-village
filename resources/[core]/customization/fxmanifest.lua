@@ -10,5 +10,6 @@ server_scripts {
 }
 
 client_scripts {
+  "@rdr3-shared/client/rdr3_natives.js",
   "build/client.js"
 }

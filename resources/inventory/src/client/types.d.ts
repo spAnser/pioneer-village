@@ -13,7 +13,7 @@ declare interface UIEvents {
   ['inventory.use-slot']: (slot: number) => void;
   ['inventory.use-item']: (itemData: UI.Inventory.ItemData) => void;
   ['inventory.clothing-change']: (equippedItems: UI.Inventory.ItemData[]) => void;
-  ['inventory.main-inventory']: (data: UI.Inventory.LoadData) => void;
+  ['inventory.main-inventory']: (data: UI.Inventory.LoadData, clothingData?: UI.Inventory.LoadData) => void;
   ['inventory.target-inventory']: (data: UI.Inventory.LoadData) => void;
 }
 

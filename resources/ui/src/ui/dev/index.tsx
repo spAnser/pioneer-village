@@ -1,7 +1,7 @@
 import { io } from 'socket.io-client';
 
 import App from '../app';
-import items from '@lib/shared/items';
+import PVItems from '@lib/shared/items';
 
 const socketServerUri = process.env.SOCKET_SERVER_CONNECTION as string;
 const socketServerKey = process.env.SOCKET_SERVER_KEY as string;
@@ -72,7 +72,7 @@ window.addEventListener('keyup', (e) => {
 
 const sendInventoryItems = () => {
   const uiItems: Inventory.UIItems = {};
-  for (const item of Object.values(items)) {
+  for (const item of Object.values(PVItems)) {
     uiItems[item.identifier] = {
       name: item.name,
       description: item.description || '',

@@ -8,7 +8,7 @@ type PrismaInventoryWithContainerAndItems = PrismaInventory & { container: Prism
 
 import { PrismaClient, Prisma } from '@prisma/client';
 import { logInfo } from '../helpers/log';
-import items from '../../../lib/shared/items';
+import PVItems from '../../../lib/shared/items';
 import InventoryTypes from '../../../lib/shared/inventory-types';
 const tenDollars = new Array(10).fill({ identifier: 'PV_DOLLAR'.GetHashKey(), slot: 0 });
 
@@ -170,7 +170,7 @@ class Inventories {
       if (slots[slot] === false) {
         continue;
       }
-      if (slots[slot] === itemIdentifier && slotCounts[slot] < items[itemIdentifier].stackSize) {
+      if (slots[slot] === itemIdentifier && slotCounts[slot] < PVItems[itemIdentifier].stackSize) {
         return slot;
       }
     }
@@ -181,6 +181,11 @@ class Inventories {
   isAllowedInInventory(identifier: string, item: Inventory.Item): boolean {
     const inventoryType = this.getInventoryType(identifier);
     let isAllowed = false;
+    console.log('inventoryType', inventoryType);
+    console.log('identifier', identifier);
+    console.log('item', item);
+    console.log(inventoryType.restrictions, item.restriction);
+    console.log(inventoryType.restrictions & item.restriction);
     if (inventoryType.restrictions === 0 || inventoryType.restrictions & item.restriction) {
       isAllowed = true;
     }
@@ -321,7 +326,7 @@ class Inventories {
         return;
       }
 
-      const itemData = items[oldItems[0].identifier];
+      const itemData = PVItems[oldItems[0].identifier];
 
       if (oldItems.length + newItems.length <= itemData.stackSize) {
         const oldSlotUpdate = await this.prisma.item.updateMany({
@@ -459,12 +464,12 @@ class Inventories {
 
       let isAllowed = true;
       if (oldItems.length > 0) {
-        if (!this.isAllowedInInventory(newIdentifier, items[oldItems[0].identifier])) {
+        if (!this.isAllowedInInventory(newIdentifier, PVItems[oldItems[0].identifier])) {
           isAllowed = false;
         }
       }
       if (newItems.length > 0) {
-        if (!this.isAllowedInInventory(newIdentifier, items[newItems[0].identifier])) {
+        if (!this.isAllowedInInventory(newIdentifier, PVItems[newItems[0].identifier])) {
           isAllowed = false;
         }
       }
