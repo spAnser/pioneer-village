@@ -250,11 +250,11 @@ export default class Log extends UIComponent<UI.BaseProps, UI.Log.State, {}> {
         </Frame>
         {this.state.show && (
           <Filter>
-            <FilterItem>
-              <Dice className="dice" onClick={() => this.randomizeColors()} />
-            </FilterItem>
             <FilterItem className="red">
               <TrashAlt onClick={() => this.setState({ messages: [] })} />
+            </FilterItem>
+            <FilterItem>
+              <Dice className="dice" onClick={() => this.randomizeColors()} />
             </FilterItem>
             <FilterItem
               className={

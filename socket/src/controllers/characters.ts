@@ -166,19 +166,32 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
           stamina,
           litersOfBlood,
         };
-        Characters.updateLocalCharacterAtributeWithCharId(socket.data.character, 'healthMetadata', metadata);
+
         logInfoC(
           'character-update.health-status',
           socket.data.character.id,
-          JSON.stringify(boneHealth),
-          JSON.stringify(boneStatus),
+          // JSON.stringify(boneHealth, null, 2),
+          // JSON.stringify(boneStatus, null, 2),
           sick,
           activeTonic,
           health,
           stamina,
           litersOfBlood,
         );
+
+        Characters.updateLocalCharacterAtributeWithCharId(socket.data.character.id, 'healthMetadata', metadata);
+        Characters.updateCharacterHealthMetadata(socket.data.character.id, metadata);
       },
     );
   });
 };
+
+// declare interface CharacterHealthMetadata {
+//   health: number;
+//   stamina: number;
+//   boneHealth: any[];
+//   boneStatus: any[];
+//   sick: boolean;
+//   activeTonic: boolean;
+//   litersOfBlood: number;
+// }

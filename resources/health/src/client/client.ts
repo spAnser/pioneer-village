@@ -34,7 +34,7 @@ const boneNames: string[] = [
   'SKEL_R_FOOT',
 ];
 
-onNet('game:character-selected', async (charId: number) => {
+const handleCharacterSelected = async (charId: number) => {
   healthManager.checkUpdatePed();
   characterSelected = true;
 
@@ -44,14 +44,35 @@ onNet('game:character-selected', async (charId: number) => {
   emitUI('hud.state', { food: food, drink: drink });
 
   const healthMetadata = await awaitServer('health.getHealthMetadata', charId);
+  Log('healthMetadata', healthMetadata);
   healthManager.health = healthMetadata.health;
   healthManager.stamina = healthMetadata.stamina;
   healthManager.litersOfBlood = healthMetadata.litersOfBlood;
-  healthManager.boneStatus = new Map(healthMetadata.boneStatus);
-  healthManager.boneHealth = new Map(healthMetadata.boneHealth);
+  if (healthMetadata.boneStatus.length !== 0) {
+    healthManager.boneStatus = new Map(healthMetadata.boneStatus);
+  }
+  if (healthMetadata.boneHealth.length !== 0) {
+    healthManager.boneHealth = new Map(healthMetadata.boneHealth);
+  }
   healthManager.sick = healthMetadata.sick;
   healthManager.activeTonic = healthMetadata.activeTonic;
-});
+
+  for (const [boneId, boneStatus] of healthManager.boneStatus) {
+    if (boneStatus.broken) {
+      healthManager.hasBrokenBone = true;
+    }
+    if ((boneStatus.shot > 0 || boneStatus.slash > 0) && !boneStatus.bandaged) {
+      healthManager.isBleeding = true;
+    }
+  }
+};
+
+if (PVGame.getCurrentCharacter()) {
+  const charId = PVGame.getCurrentCharacter().id;
+  handleCharacterSelected(charId);
+}
+
+onNet('game:character-selected', handleCharacterSelected);
 
 if (DEBUG) {
   setTick(() => {
@@ -153,32 +174,44 @@ if (DEBUG) {
 //   }
 // });
 
-onResourceInit('game', () => {
-  Log('[HEALTH] onResourceInit(game)');
-  healthManager.init();
+let interval: CitizenTimer;
+
+const initHealth = async () => {
+  if (interval) {
+    clearInterval(interval);
+  }
+  // Log('[HEALTH] onResourceInit(game)');
+  Log('[HEALTH] Character Selected');
+  await healthManager.init();
 
   SetAiMeleeWeaponDamageModifier(0.001);
   SetAiWeaponDamageModifier(0.001);
 
-  setInterval(() => {
-    if (!characterSelected && !DEBUG) return;
-    emitSocket(
-      'character-update.food-drink',
-      parseInt(healthManager.food.toFixed(2)),
-      parseInt(healthManager.water.toFixed(2)),
-    );
-    emitSocket(
-      'character-update.health-status',
-      Array.from(healthManager.boneHealth.entries()),
-      Array.from(healthManager.boneStatus.entries()),
-      healthManager.sick,
-      healthManager.activeTonic,
-      healthManager.health,
-      healthManager.stamina,
-      healthManager.litersOfBlood,
-    );
-  }, 5 * 60 * 60 * 1000); // every 5 minutes
-});
+  interval = setInterval(
+    () => {
+      if (!characterSelected && !DEBUG) return;
+      emitSocket(
+        'character-update.food-drink',
+        parseInt(healthManager.food.toFixed(2)),
+        parseInt(healthManager.water.toFixed(2)),
+      );
+      emitSocket(
+        'character-update.health-status',
+        Array.from(healthManager.boneHealth.entries()),
+        Array.from(healthManager.boneStatus.entries()),
+        healthManager.sick,
+        healthManager.activeTonic,
+        healthManager.health,
+        healthManager.stamina,
+        healthManager.litersOfBlood,
+      );
+    },
+    5 * 60 * 60 * 1000,
+  ); // every 5 minutes
+};
+
+onResourceInit('game', initHealth);
+onNet('game:character-selected', initHealth);
 
 /*
  * TODO: Move to a different resource

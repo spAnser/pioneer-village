@@ -1,4 +1,4 @@
-import { emitUI } from '@lib/client';
+import { emitUI, PVGame } from '@lib/client';
 import { mpMaleBoneNames, mpMaleBones } from '../data/bones-mp-male';
 import { mpFemaleBoneNames, mpFemaleBones } from '../data/bones-mp-female';
 import {
@@ -19,7 +19,7 @@ import { Vector3 } from '@lib/math';
 import { clamp, Delay, distanceVector, lerp } from '@lib/functions';
 import { DamageType, weapons } from '../data/weapons';
 import { AttachPoint, PedConfigFlag } from '@lib/flags';
-import { Log } from '@lib/client/comms/ui';
+import { emitSocket, Log } from '@lib/client/comms/ui';
 
 const playerId = PlayerId();
 
@@ -40,6 +40,7 @@ const handShakeSkels = [
 let lastHandShake = 0.0;
 
 const TickDelay = 2500;
+const TickDelaySync = 30000;
 const TempChangPerSecond = 1 / (60 * 5); // 1 degree in 5 Minutes
 
 const FoodLength = 60 * 60 * 2; // 2 Hours
@@ -61,6 +62,7 @@ export class HealthManager {
   initialized = false;
   // tick: number;
   interval: NodeJS.Timeout | undefined;
+  intervalSync: NodeJS.Timeout | undefined;
   playerPed: number = 0;
   isRagdolling: boolean = false;
   _isBleeding: boolean = false;
@@ -122,14 +124,18 @@ export class HealthManager {
     // ClearPedDesiredLocoMotionType(this.playerPed);
   }
 
-  init() {
+  async init() {
     if (this.initialized) {
       return;
     }
+    // if (this.interval) {
+    //   clearInterval(this.interval);
+    // }
     this.initialized = true;
     emitUI('hud.state', { bleeding: false, brokenBone: false });
 
     this.checkUpdatePed();
+    await Delay(50);
     this.resetHealth();
 
     on('saloon::client::alcohol-content', (current: number, target: number) => {
@@ -173,6 +179,30 @@ export class HealthManager {
       await Delay(50);
       emitUI('hud.state', { food: this.food, drink: this.water });
     }, TickDelay);
+
+    // This is the health metadata object
+    //     {
+    //   health: number;
+    //   stamina: number;
+    //   boneHealth: any[];
+    //   boneStatus: any[];
+    //   sick: boolean;
+    //   activeTonic: boolean;
+    //   litersOfBlood: number;
+    // }
+
+    this.intervalSync = setInterval(async () => {
+      emitSocket(
+        'character-update.health-status',
+        [...this.boneHealth.entries()],
+        [...this.boneStatus.entries()],
+        this.sick,
+        this.activeTonic,
+        this.health,
+        this.stamina,
+        this.litersOfBlood,
+      );
+    }, TickDelaySync);
   }
 
   get isBleeding() {
@@ -453,8 +483,10 @@ export class HealthManager {
 
   checkUpdatePed(): void {
     const playerPed = PlayerPedId();
+    Log(this.playerPed, playerPed, this.playerPed !== playerPed);
     if (this.playerPed !== playerPed) {
       this.playerPed = playerPed;
+      Log('isPedMale', IsPedMale(playerPed));
       if (IsPedMale(playerPed)) {
         this.bones = mpMaleBones;
         this.boneNames = mpMaleBoneNames;
@@ -462,6 +494,9 @@ export class HealthManager {
         this.bones = mpFemaleBones;
         this.boneNames = mpFemaleBoneNames;
       }
+
+      // Log('this.bones', this.bones);
+      // Log('this.boneNames', this.boneNames);
 
       for (const [boneName, boneInfo] of Object.entries(this.boneNames)) {
         boneInfo.index = GetEntityBoneIndexByName(this.playerPed, boneName);

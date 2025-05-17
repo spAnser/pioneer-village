@@ -114,9 +114,14 @@ const bones = [
 const getUIBones = (ped = PlayerPedId()): [number, UI.Doctor.BoneStatus[]] => {
   const uiBones: UI.Doctor.BoneStatus[] = [];
 
+  // Log('ped', ped);
+  // Log('bones', bones);
+  // Log('healthManager.boneStatus', [...healthManager.boneStatus.entries()]);
+
   for (const boneName of bones) {
     const bone = healthManager.boneNames[boneName];
     if (!bone) {
+      // Log('bone not found', boneName);
       continue;
     }
     const coords = GetPedBoneCoords(ped, bone.id, 0.0, 0.0, 0.0);
@@ -126,8 +131,10 @@ const getUIBones = (ped = PlayerPedId()): [number, UI.Doctor.BoneStatus[]] => {
       const boneStatus = healthManager.boneStatus.get(bone.id);
       // Log('boneStatus', boneStatus);
       if (!boneStatus) {
+        // Log('boneStatus missing?', boneStatus);
         continue;
       }
+      // Log('boneStatus', boneStatus);
       uiBones.push({
         coords: { x: screenCoords[1] * 100, y: screenCoords[2] * 100 },
         name: boneName,
@@ -148,14 +155,14 @@ RegisterCommand(
   async (source: number, args: any[], rawCommand: string) => {
     // const playerPed = 643074;
 
-    const [entity, uiBones] = getUIBones(PlayerPedId());
+    const [entity, uiBones] = getUIBones();
 
     // const update = setInterval(() => {
     //   Log('Update');
     //   const [entity, uiBones] = getUIBones();
     //   emitUI('doctor.state', { entity: entity, boneStatus: uiBones });
     // }, 1000);
-
+    //
     // onUI('nui.close', () => {
     //   clearInterval(update);
     // });

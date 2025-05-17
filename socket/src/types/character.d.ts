@@ -6,7 +6,6 @@ declare namespace SocketServer {
     ['character-event.disconnected']: (serverId: number) => void;
     ['character-get.food-drink']: (charId: number, cb: (food: number, drink: number) => void) => void;
     ['character-get.health-metadata']: (charId: number, cb: (metadata: CharacterHealthMetadata) => void) => void;
-    ['character-get.currencies']: (serverId: number, cb: (currencies: CharacterCurrencies) => void) => void;
   }
 
   interface Client {}
@@ -18,8 +17,8 @@ declare namespace SocketServer {
     ['character-select.choose']: (characterId: number, steam: Game.playerSteamId) => void;
     ['character-update.food-drink']: (food: number, water: number) => void;
     ['character-update.health-status']: (
-      boneHealth: Map<number, number>,
-      boneStatus: Map<number, Health.BoneStatus>,
+      boneHealth: [number, number][],
+      boneStatus: [number, Health.BoneStatus][],
       sick: boolean,
       activeTonic: boolean,
       health: number,

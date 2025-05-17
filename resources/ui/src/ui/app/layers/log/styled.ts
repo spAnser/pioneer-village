@@ -21,7 +21,7 @@ export const Frame = styled.div`
   }
 
   &::-webkit-scrollbar {
-    width: ${uiSize(2)};
+    width: ${uiSize(4)};
   }
 
   &::-webkit-scrollbar-track {
@@ -29,11 +29,12 @@ export const Frame = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(${theme.colors.black.rgb}, 0.5);
+    background: rgba(${theme.colors.black.rgb}, 0.7);
+    border-radius: ${uiSize(2)};
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: rgba(${theme.colors.black.rgb}, 0.75);
+    background: rgba(${theme.colors.black.rgb}, 0.9);
   }
 
   &:not(:hover),
