@@ -3,7 +3,7 @@ export default class FishingState {
   modified: boolean = false;
 
   constructor() {
-    this.data = new DataView(new ArrayBuffer(0xe0));
+    this.data = new DataView(new ArrayBuffer(0xf0));
   }
 
   getState(): DataView {

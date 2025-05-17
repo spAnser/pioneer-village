@@ -17,9 +17,6 @@ import { Log } from '@lib/client/comms/ui';
 
 const weaponFishingrod = GetHashKey('WEAPON_FISHINGROD');
 
-Log(GetTaskFishing);
-Log(SetTaskFishing);
-
 // global.GetTaskFishing = function (ped, p1) {
 //   return Citizen.invokeNative('0xf3735acd11acd500', ped, p1, Citizen.returnResultAnyway());
 // };
@@ -177,6 +174,12 @@ class FishingManager {
         this.gameTimer = timer;
         this.update();
       });
+      // setTimeout(() => {
+      //   Log('FishingManager', 'startFishing');
+      //   for (let i = 0; i < 0xf0; i += 4) {
+      //     Log(i, this.state.theData.getInt32(i, true), this.state.theData.getFloat32(i, true));
+      //   }
+      // }, 1000);
     }
   }
 
@@ -272,7 +275,7 @@ class FishingManager {
 
   setState() {
     if (this.state.modified) {
-      Log('SetTaskFishing', SetTaskFishing);
+      // Log('SetTaskFishing', SetTaskFishing);
       SetTaskFishing(this.playerPed, this.state.getState());
       this.state.modified = false;
     }
