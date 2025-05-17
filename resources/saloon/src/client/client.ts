@@ -3,8 +3,6 @@ import saloonController from './controllers/saloon-controller';
 import { Delay } from '@lib/functions';
 import { Log } from '@lib/client/comms/ui';
 
-global.playerPed = PlayerPedId();
-
 RegisterCommand(
   'saloonTest',
   async () => {
@@ -100,8 +98,16 @@ EAT_STEW_BOWL_CHAIR_EAT_TRANS
 EAT_STEW_BOWL_TABLE_EAT_TRANS
  */
 
+// function                       (ped, propNameGxt, prop, propId, itemInteractionState, p5, p6, p7) {
+// TaskItemInteraction_2 function (ped, propNameGxt, prop, propId, itemInteractionState, p5, p6, p7) {
+//   return Citizen.invokeNative('0x72f52aa2d2b172cc', ped, _ch(propNameGxt), prop, _ch(propId), _ch(itemInteractionState), p5, p6, _fv(p7));
+// 	return _in               (0x72f52aa2, 0xd2b172cc, ped, _ch(propNameGxt), prop, _ch(propId), _ch(itemInteractionState), p5, p6, _fv(p7));
+// }
+
 const pickupItem = async (entityId: number, networkId: number) => {
   Log('pickupItem', entityId, networkId);
+
+  const playerPed = PVGame.playerPed();
 
   const propId = GetHashKey('P_BOTTLEBEER01X_PH_R_HAND');
   const itemInteractionState = GetHashKey('DRINK_BOTTLE@Bottle_Cylinder_D1-55_H18_Neck_A8_B1-8_UNCORK');
@@ -165,6 +171,7 @@ on('events_manager:itemInteraction', async (state: boolean, interactionHash: num
   }
 });
 
+const playerPed = PVGame.playerPed();
 // SetPedBlackboardBool(playerPed, 'MP_Style_Default', false, -1);
 // SetPedBlackboardBool(playerPed, 'MP_Style_Casual', false, -1);
 // SetPedBlackboardBool(playerPed, 'MP_Style_Crazy', false, -1);
@@ -201,6 +208,7 @@ on('events_manager:itemInteraction', async (state: boolean, interactionHash: num
 RegisterCommand(
   'bb_bool',
   async (src: number, args: string[]) => {
+    const playerPed = PVGame.playerPed();
     const name = args[0];
     const value = args[1] === 'true';
     SetPedBlackboardBool(playerPed, name, value, -1);
@@ -214,6 +222,7 @@ RegisterCommand(
 RegisterCommand(
   'bb_float',
   async (src: number, args: string[]) => {
+    const playerPed = PVGame.playerPed();
     const name = args[0];
     const value = Number(args[1]);
     SetPedBlackboardFloat(playerPed, name, value, -1);
@@ -227,6 +236,7 @@ RegisterCommand(
 RegisterCommand(
   'bb_int',
   async (src: number, args: string[]) => {
+    const playerPed = PVGame.playerPed();
     const name = args[0];
     const value = Number(args[1]);
     SetPedBlackboardInt(playerPed, name, value, -1);
@@ -240,6 +250,7 @@ RegisterCommand(
 RegisterCommand(
   'bb_hash',
   async (src: number, args: string[]) => {
+    const playerPed = PVGame.playerPed();
     const name = args[0];
     const value = args[1];
     SetPedBlackboardHash(playerPed, name, value, -1);
