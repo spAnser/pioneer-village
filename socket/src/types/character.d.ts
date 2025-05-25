@@ -25,6 +25,8 @@ declare namespace SocketServer {
       stamina: number,
       litersOfBlood: number,
     ) => void;
+
+    ['customization.finalize']: (json: string) => void;
   }
 }
 

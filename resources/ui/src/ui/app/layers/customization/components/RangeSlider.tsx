@@ -64,7 +64,7 @@ export default class XYSlider extends Component<Props, State> {
   }
 
   updateValue(e: InputEvent) {
-    const value = parseInt((e.target as HTMLInputElement).value);
+    const value = Number((e.target as HTMLInputElement).value);
     this.setState({ value });
     this.props.onChange(value);
   }

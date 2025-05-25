@@ -13,6 +13,49 @@ enum CreationState {
   ClothingSelection = 2,
 }
 
+const faceFeatures: Record<string, number> = {
+  headWidth: 0x84d6,
+  eyebrowHeight: 0x3303,
+  eyebrowWidth: 0x2ff9,
+  eyebrowDepth: 0x4ad1,
+  earsWidth: 0xc04f,
+  earsAngle: 0xb6ce,
+  earsHeight: 0x2844,
+  earlobeSize: 0xed30,
+  cheekBoneHeight: 0x6a0b,
+  cheekBoneWidth: 0xabcf,
+  cheekBoneDepth: 0x358d,
+  jawHeight: 0x8d0a,
+  jawWidth: 0xebae,
+  jawDepth: 0x1df6,
+  chinHeight: 0x3c0f,
+  chinWidth: 0xc3b2,
+  chinDepth: 0xe323,
+  eyelidHeight: 0x8b2b,
+  eyelidWidth: 0x1b6b,
+  eyesDepth: 0xee44,
+  eyesAngle: 0xd266,
+  eyesDistance: 0xa54e,
+  eyesHeight: 0xddfb,
+  noseWidth: 0x6e7f,
+  noseSize: 0x3471,
+  noseHeight: 0x03f5,
+  noseAngle: 0x34b1,
+  noseCurvature: 0xf156,
+  nostrilsDistance: 0x561e,
+  mouthWidth: 0xf065,
+  mouthDepth: 0xaa69,
+  mouthXPos: 0x7ac3,
+  mouthYPos: 0x410d,
+  upperLipHeight: 0x1a00,
+  upperLipWidth: 0x91c1,
+  upperLipDepth: 0xc375,
+  lowerLipHeight: 0xbb4d,
+  lowerLipWidth: 0xb0b0,
+  lowerLipDepth: 0x5d16,
+  horseGender: 0xa28b,
+};
+
 class CreationManager {
   protected static instance: CreationManager;
 
@@ -247,6 +290,16 @@ class CreationManager {
         this.currentState = CreationState.GenderSelection;
         PVBase.deleteEntity(this.chosen);
         break;
+      case 'head':
+        PVCamera.interpolate('CreationFace', 750);
+        emitUI('customization.state', { state });
+        break;
+      case 'info':
+      case 'body':
+      case 'clothing':
+        PVCamera.interpolate('CreationDressing', 750);
+        emitUI('customization.state', { state });
+        break;
       default:
         emitUI('customization.state', { state });
         break;
@@ -284,6 +337,7 @@ class CreationManager {
     this.female = await PVGame.createPed('mp_female', -558.5, -3776.9, 237.66, 90, true);
     await PVGame.pedIsReadyToRender(this.female);
     await PVGame.setPedComponentsMp(this.female, this.femaleComponents);
+    // await PVGame.removePedComponent(this.female, GetHashKey('CLOTHING_ITEM_F_PANTS_000_TINT_001'));
 
     UpdateShopItemWearableState(
       this.female,
@@ -360,6 +414,28 @@ class CreationManager {
       await PVGame.pedIsReadyToRender(this.chosen);
       PVGame.finalizePedOutfit(this.chosen);
     }
+  }
+
+  async setFaceOption(option: string, value: number) {
+    if (option in faceFeatures) {
+      const feature = faceFeatures[option];
+      SetCharExpression(this.chosen, feature, value);
+      UpdatePedVariation(this.chosen, false, true, true, true, false);
+    }
+  }
+
+  async setFaceOptions(options: Record<string, number>) {
+    if (this.currentState !== CreationState.NameSelection) {
+      return;
+    }
+    Log('setFaceOptions', options);
+    for (const [option, value] of Object.entries(options)) {
+      if (option in faceFeatures) {
+        const feature = faceFeatures[option];
+        SetCharExpression(this.chosen, feature, value);
+      }
+    }
+    UpdatePedVariation(this.chosen, false, true, true, true, false);
   }
 
   async setComponents(components: number[]) {

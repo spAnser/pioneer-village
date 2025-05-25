@@ -17,6 +17,8 @@ import VenusMars from '@styled/fa5/duotone/venus-mars.svg';
 import InfoSquare from '@styled/fa5/duotone/info-square.svg';
 import Tshirt from '@styled/fa5/duotone/tshirt.svg';
 import Fingerprint from '@styled/fa5/duotone/fingerprint.svg';
+import Save from '@styled/fa5/duotone/save.svg';
+import HeadSide from '@styled/fa5/duotone/head-side.svg';
 
 const componentFiles = [
   '2886757168',
@@ -145,9 +147,9 @@ const bodyTypes = ['Skinny', 'Athletic', 'Average', 'Heavy', 'Brawny'];
 
 const horseComponentCategories = ['head', 'hand', 'hair', 'mane', 'teef', 'hair', 'mane'];
 
-export default class Customization extends UIComponent<UI.BaseProps, UI.Customization.State, {}> {
+export default class Customization extends UIComponent<UI.Customization.Props, UI.Customization.State, {}> {
   constructor(
-    props: UI.BaseProps,
+    props: UI.Customization.Props,
     context: { socket: Socket<UISocketEvents, SocketServer.Client & SocketServer.ClientEvents> },
   ) {
     super();
@@ -166,11 +168,7 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
       currentWhistle: {},
       firstName: '',
       lastName: '',
-      dateOfBirth: {
-        day: 1,
-        month: 1,
-        year: 1800,
-      },
+      dateOfBirth: '',
       tints: {},
     };
 
@@ -272,7 +270,13 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
 
   handleSetState(state: Customization.State) {
     console.log('handleSetState', state);
-    emitClient('customization.set-state', state);
+    if (state === 'finalize') {
+      console.log(this.state);
+      console.log(this.props.socket.emit);
+      this.props.socket.emit('customization.finalize', JSON.stringify(this.state));
+    } else {
+      emitClient('customization.set-state', state);
+    }
   }
 
   handleChangeBodyType(value: number) {
@@ -283,6 +287,34 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
   handleChangeWaist(value: number) {
     console.log('handleChangeWasit', value);
     emitClient('customization.set-waist', value);
+  }
+
+  updateFirstName(target: HTMLInputElement) {
+    console.log('updateFirstName', target.value);
+    this.setState({ firstName: target.value });
+  }
+
+  updateLastName(target: HTMLInputElement) {
+    console.log('updateLastName', target.value);
+    this.setState({ lastName: target.value });
+  }
+
+  updateDateOfBirth(target: HTMLInputElement) {
+    console.log('updateDateOfBirth', target.value);
+    this.setState({ dateOfBirth: target.value });
+  }
+
+  handleFaceChange(option: string, value: number, option2?: string, value2?: number) {
+    console.log('handleFaceChange', option, value, option2, value2);
+    this.setState((prevState) => {
+      const currentFaceOptions = { ...prevState.currentFaceOptions, [option]: value };
+      if (option2 && value2 !== undefined) {
+        currentFaceOptions[option2] = value2;
+      }
+      return { currentFaceOptions };
+    });
+
+    emitClient('customization.set-face-option', this.state.currentFaceOptions);
   }
 
   render() {
@@ -310,9 +342,17 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
               {this.state.state === 'info' && (
                 <>
                   <ModalContents>
-                    <input type="text" placeholder="First Name" />
-                    <input type="text" placeholder="Last Name" />
-                    <input type="date" />
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      onChange={(e) => this.updateFirstName(e.target as HTMLInputElement)}
+                    />
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      onChange={(e) => this.updateLastName(e.target as HTMLInputElement)}
+                    />
+                    <input type="date" onChange={(e) => this.updateDateOfBirth(e.target as HTMLInputElement)} />
                     <XYSlider
                       label="Test XY Grid"
                       xMin={-1}
@@ -325,17 +365,48 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
                   </ModalContents>
                 </>
               )}
+              {this.state.state === 'head' && (
+                <>
+                  <RangeSlider
+                    label="Head Width"
+                    min={-2}
+                    max={3}
+                    step={0.1}
+                    onChange={(value) => this.handleFaceChange('headWidth', value)}
+                  />
+                  <XYSlider
+                    label="Cheek Bone"
+                    xMin={-4}
+                    xMax={3.5}
+                    yMin={-2.5}
+                    yMax={2.5}
+                    step={0.1}
+                    onChange={(xValue, yValue) =>
+                      this.handleFaceChange('cheekBoneWidth', xValue, 'cheekBoneHeight', yValue)
+                    }
+                  />
+                  <RangeSlider
+                    label="Cheek Depth"
+                    min={-2.5}
+                    max={2.5}
+                    step={0.1}
+                    onChange={(value) => {
+                      this.handleFaceChange('cheekBoneDepth', value);
+                    }}
+                  />
+                </>
+              )}
               {this.state.state === 'body' && (
                 <>
                   <ModalContents>
                     <RangeSlider
-                      onChange={this.handleChangeBodyType.bind(this)}
                       label="Body Type"
                       labels={bodyTypes}
                       defaultValue={2}
                       max={4}
+                      onChange={this.handleChangeBodyType.bind(this)}
                     />
-                    <RangeSlider onChange={this.handleChangeWaist.bind(this)} label="Waist" max={20} />
+                    <RangeSlider label="Waist" max={20} onChange={this.handleChangeWaist.bind(this)} />
                   </ModalContents>
                 </>
               )}
@@ -371,23 +442,32 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
                   <Fingerprint />
                 </ModalButton>
                 <ModalButton
+                  className={this.state.state === 'head' ? 'active' : ''}
+                  onClick={this.handleSetState.bind(this, 'head')}
+                >
+                  <HeadSide />
+                </ModalButton>
+                <ModalButton
                   className={this.state.state === 'clothing' ? 'active' : ''}
                   onClick={this.handleSetState.bind(this, 'clothing')}
                 >
                   <Tshirt />
                 </ModalButton>
+                <ModalButton onClick={this.handleSetState.bind(this, 'finalize')}>
+                  <Save />
+                </ModalButton>
               </ModalButtons>
             </ModalRight>
           </>
         )}
-        {this.state.show && true && (
+        {this.state.show && false && (
           <>
             <ModalLeft>
               <ModalContents>
                 <TintSelector
                   label="Hat Tint"
                   onChange={this.setTintByCategory.bind(this)}
-                  category={'hats'}
+                  category="hats"
                   palette={this.state.tints.hats.palette}
                   tint0={this.state.tints.hats.tint0}
                   tint1={this.state.tints.hats.tint1}
@@ -396,7 +476,7 @@ export default class Customization extends UIComponent<UI.BaseProps, UI.Customiz
                 <TintSelector
                   label="Coat Tint"
                   onChange={this.setTintByCategory.bind(this)}
-                  category={'coats'}
+                  category="coats"
                   palette={this.state.tints.coats.palette}
                   tint0={this.state.tints.coats.tint0}
                   tint1={this.state.tints.coats.tint1}

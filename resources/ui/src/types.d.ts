@@ -108,17 +108,13 @@ declare namespace UI.Customization {
     gender: 'male' | 'female';
     currentComponents: Record<string, any>;
     hiddenComponents: Record<string, any>;
-    currentFaceOptions: Record<string, any>;
+    currentFaceOptions: Record<string, number>;
     currentBodyOptions: Record<string, any>;
     currentOverlays: Record<string, any>;
     currentWhistle: Record<string, any>;
     firstName: string;
     lastName: string;
-    dateOfBirth: {
-      day: number;
-      month: number;
-      year: number;
-    };
+    dateOfBirth: string;
     tints: Record<string, CustomizationPalette>;
   }
 

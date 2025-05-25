@@ -31,6 +31,20 @@ onUI('customization.set-waist', (waist) => {
   creationManager.setWaist(waist);
 });
 
+onUI('customization.set-face-option', (options) => {
+  Log(options);
+  creationManager.setFaceOptions(options);
+});
+
+RegisterCommand(
+  'set_face_option',
+  async (source: number, args: string[]) => {
+    SetCharExpression(PlayerPedId(), Number(args[0]), Number(args[1]));
+    UpdatePedVariation(PlayerPedId(), false, true, true, true, false);
+  },
+  false,
+);
+
 RegisterCommand(
   'create_start',
   () => {

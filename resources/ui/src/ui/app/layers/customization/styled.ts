@@ -101,6 +101,6 @@ export const ModalButton = styled.button`
   }
 
   svg {
-    height: ${uiSize(32)};
+    height: ${uiSize(24)};
   }
 `;

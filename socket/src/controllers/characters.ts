@@ -80,6 +80,11 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
   userNamespace.on('connection', (socket) => {
     logInfoC('user connected', socket.data);
 
+    socket.on('customization.finalize', async (json) => {
+      const data = JSON.parse(json);
+      logInfoC('[Characters]', 'customization.finalize', data);
+    });
+
     socket.on('getCharacters', async (cb) => {
       try {
         const characters: Game.Character[] = [];

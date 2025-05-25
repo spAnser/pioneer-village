@@ -7,6 +7,7 @@ import { Catcher } from './catcher';
 import { Button } from '@styled/core';
 import { Socket } from 'socket.io-client';
 
+// @ts-expect-error
 const requiredLayers = require.context('./layers', true, /index\.tsx$/);
 const layers: any[] = [];
 for (const layer of requiredLayers.keys()) {
@@ -50,7 +51,7 @@ export default class App extends Component<UI.App.Props, UI.App.State> {
         )}
         <Catcher reloadWindow={this.state.isFramed}>
           {layers.map((layer: any) => (
-            <layer.default />
+            <layer.default socket={this.props.socket} />
           ))}
         </Catcher>
       </div>

@@ -68,6 +68,7 @@ declare interface UIEvents {
   ['customization.set-state']: (state: Customization.State) => void;
   ['customization.set-body-type']: (bodyType: number) => void;
   ['customization.set-waist']: (waist: number) => void;
+  ['customization.set-face-option']: (faceOptions: Record<string, number>) => void;
 
   ['customization.set-tint-by-category']: (category: string, tint: Customization.Palette) => void;
   ['customization.remove-tint-by-category']: (category: string) => void;
