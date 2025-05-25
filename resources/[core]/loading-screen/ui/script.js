@@ -1,7 +1,41 @@
 console.log('Loading Screen Script Loaded');
 
+let curEventType = '';
+let curLoadFraction = 0;
+
 window.addEventListener('message', function (event) {
-  console.log(event, event.data);
+  // console.log(event, event.data);
+  console.log('============================');
+  console.log(JSON.stringify(event.data));
+  const { type: eventType, loadFraction, eventName, message } = event.data;
+  if (eventType) {
+    console.log('eventType', eventType);
+
+    if (curEventType !== eventType) {
+      console.log(`Event type changed from ${curEventType} to ${eventType}`);
+      console.log(`Load fraction: ${curLoadFraction}`);
+    }
+
+    curEventType = eventType;
+  }
+  if (loadFraction) {
+    curLoadFraction = loadFraction;
+    const progressBar = document.getElementById('progress');
+    progressBar.style.width = `${curLoadFraction * 100}%`;
+
+    if (curLoadFraction >= 1) {
+      progressBar.classList.add('hide');
+    }
+  }
+  if (eventName) {
+    console.log('eventName', eventName);
+  }
+  if (message) {
+    console.log('message', message);
+  }
+
+  const progressText = document.getElementById('progress-text');
+  progressText.textContent = `${curEventType} | ${Math.round(curLoadFraction * 100)}%`;
   // var item = event.data;
   // if (item.type === 'loading_info') {
   //   if (item.status == true) {
@@ -31,7 +65,7 @@ window.addEventListener('message', function (event) {
 
 setTimeout(() => {
   const interval = setInterval(() => {
-    fetch('//game/loadscreen-shutdown-check', {
+    fetch('https://game/loadscreen-shutdown-check', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json; charset=UTF-8' },
     })

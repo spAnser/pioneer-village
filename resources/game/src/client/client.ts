@@ -58,6 +58,7 @@ const characterSelection = async () => {
 
   NetworkSetFriendlyFireOption(true);
   ShutdownLoadingScreen();
+  ShutdownLoadingScreenNui();
 
   await loadedIn();
   await Delay(1000);

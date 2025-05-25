@@ -11,5 +11,5 @@ files {
 
 ui_page 'ui/index.html'
 loadscreen 'ui/index.html'
-loadscreen_cursor 'yes'
+--loadscreen_cursor 'yes'
 loadscreen_manual_shutdown 'yes'

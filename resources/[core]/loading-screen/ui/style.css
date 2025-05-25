@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Homemade+Apple&display=swap');
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: transparent;
   overflow: hidden;
+  font-family: 'Homemade Apple', cursive;
 }
 body.hidden {
   pointer-events: none;
 }
-body.hidden .wrapper {
+body.hidden .wrapper,
+body.hidden .loading-bar {
   opacity: 0;
   pointer-events: none;
 }
@@ -21,7 +23,6 @@ body.hidden .wrapper {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Homemade Apple', cursive;
   color: #fff;
   pointer-events: none;
   z-index: 10000;
@@ -34,4 +35,40 @@ h1 {
 
 p {
   font-size: 1.481vh;
+}
+
+.loading-bar {
+  pointer-events: none;
+  position: absolute;
+  z-index: 10001;
+  bottom: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  width: 1000px;
+  max-width: 85vw;
+  height: 10px;
+  padding: 1px;
+  transition: 2s;
+}
+
+.loading-bar.hide {
+  opacity: 0;
+}
+
+.loading-bar-progress {
+  background-color: #fff;
+  height: 8px;
+  width: 0;
+  max-width: 100%;
+}
+
+.loading-bar-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(1vh);
+  color: #aaa;
+  font-size: 1.25vh;
+  font-family: Caveat;
 }
