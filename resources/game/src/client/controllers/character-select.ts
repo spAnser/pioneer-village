@@ -314,4 +314,16 @@ on('onResourceStop', (resourceName: string) => {
   }
 });
 
+RegisterCommand(
+  'reset_ped',
+  async () => {
+    if (!currentCharacter) return;
+
+    const playerPed = await gameManager.setPlayerModel(GetHashKey(currentCharacter.model));
+    await Delay(500);
+    await skinPed(playerPed, currentCharacter);
+  },
+  false,
+);
+
 exports<'game'>('getCurrentCharacter', () => currentCharacter);
