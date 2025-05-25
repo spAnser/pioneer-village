@@ -483,7 +483,7 @@ export class HealthManager {
 
   checkUpdatePed(): void {
     const playerPed = PlayerPedId();
-    Log(this.playerPed, playerPed, this.playerPed !== playerPed);
+    // Log(this.playerPed, playerPed, this.playerPed !== playerPed);
     if (this.playerPed !== playerPed) {
       this.playerPed = playerPed;
       Log('isPedMale', IsPedMale(playerPed));
