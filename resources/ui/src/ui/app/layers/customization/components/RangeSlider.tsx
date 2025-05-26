@@ -29,6 +29,26 @@ const RContainer = styled.div`
       background-color: ${theme.colors.white.hex};
     }
   }
+
+  &.vertical {
+    input {
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  &.head-width {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.cheek-depth {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const RTitle = styled.div`
@@ -44,6 +64,8 @@ interface Props {
   min?: number;
   max: number;
   step?: number;
+  className?: string;
+  vertical?: boolean;
 }
 
 interface State {
@@ -71,7 +93,7 @@ export default class XYSlider extends Component<Props, State> {
 
   render() {
     return (
-      <RContainer>
+      <RContainer className={[this.props.className, this.props.vertical && 'vertical'].join(' ')}>
         <RTitle>
           {this.props.label}
           {this.props.labels && `: ${this.props.labels[this.state.value]}`}

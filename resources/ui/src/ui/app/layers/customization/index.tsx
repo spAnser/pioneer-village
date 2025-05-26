@@ -243,10 +243,11 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
     this.sendClientData(category);
   }
 
-  setComponent(componentType: string, style: number, option: number) {
-    console.log('component', componentType, style, option);
-    const currentComponents = { ...this.state.currentComponents, [componentType]: { style, option } };
-    this.setState({ currentComponents });
+  getComponentArray(currentComponents?: Record<string, any>) {
+    if (!currentComponents) {
+      currentComponents = this.state.currentComponents;
+    }
+
     const components = [];
     for (const [category, data] of Object.entries(currentComponents)) {
       if (data.style > -1) {
@@ -254,6 +255,17 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
         components.push(component.component);
       }
     }
+
+    return components;
+  }
+
+  setComponent(componentType: string, style: number, option: number) {
+    console.log('component', componentType, style, option);
+    const currentComponents = { ...this.state.currentComponents, [componentType]: { style, option } };
+    this.setState({ currentComponents });
+
+    const components = this.getComponentArray(currentComponents);
+
     console.log('customization.set-components', components);
     emitClient('customization.set-components', components);
   }
@@ -268,12 +280,45 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
     emitClient('customization.choose-gender');
   }
 
+  getComponentDataArray() {
+    const comp = {
+      name: 'Paisley Vest',
+      tint0: 16,
+      tint1: 21,
+      tint2: 20,
+      palette: 'metaped_tint_generic',
+      category: 'VESTS',
+      shopItem: 'CLOTHING_ITEM_M_VEST_000_TINT_001',
+    };
+
+    const currentComponents = this.state.currentComponents;
+
+    const components: Record<string, any> = {};
+    for (const [category, data] of Object.entries(currentComponents)) {
+      if (data.style > -1) {
+        const component = ComponentsData[category][data.style].components[data.option];
+        components[category] = {
+          name: component.name,
+          // tint0: comp.tint0,
+          // tint1: comp.tint1,
+          // tint2: comp.tint2,
+          // palette: comp.palette,
+          category: category.toUpperCase(),
+          shopItem: component.name || component.component,
+        };
+      }
+    }
+
+    return components;
+  }
+
   handleSetState(state: Customization.State) {
     console.log('handleSetState', state);
     if (state === 'finalize') {
       console.log(this.state);
       console.log(this.props.socket.emit);
-      this.props.socket.emit('customization.finalize', JSON.stringify(this.state));
+      const state = { ...this.state, currentComponents: this.getComponentDataArray(), tints: {}, currentOverlays: {} };
+      this.props.socket.emit('customization.finalize', JSON.stringify(state));
     } else {
       emitClient('customization.set-state', state);
     }
@@ -373,6 +418,7 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
                     max={3}
                     step={0.1}
                     onChange={(value) => this.handleFaceChange('headWidth', value)}
+                    className="head-width"
                   />
                   <XYSlider
                     label="Cheek Bone"
@@ -384,6 +430,7 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
                     onChange={(xValue, yValue) =>
                       this.handleFaceChange('cheekBoneWidth', xValue, 'cheekBoneHeight', yValue)
                     }
+                    className="cheek-bone"
                   />
                   <RangeSlider
                     label="Cheek Depth"
@@ -393,6 +440,8 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
                     onChange={(value) => {
                       this.handleFaceChange('cheekBoneDepth', value);
                     }}
+                    className="cheek-depth"
+                    vertical={true}
                   />
                 </>
               )}

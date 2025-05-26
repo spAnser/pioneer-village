@@ -81,7 +81,7 @@ class ComponentManager {
       const itemData = PVItems[item.identifier];
 
       for (const metadata of item.metadatas) {
-        if (metadata.palette === 'NONE') {
+        if (!metadata.palette || metadata.palette === 'NONE') {
           continue;
         }
         paletteManager.setTintByCategory(

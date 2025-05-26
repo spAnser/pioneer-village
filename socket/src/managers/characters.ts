@@ -143,15 +143,53 @@ class Characters {
     }
   }
 
+  /**
+
+export type Prisma.AccountsCreateNestedOneWithoutCharactersInput = {
+  create?: XOR<AccountsCreateWithoutCharactersInput, AccountsUncheckedCreateWithoutCharactersInput>
+  connectOrCreate?: AccountsCreateOrConnectWithoutCharactersInput
+  connect?: AccountsWhereUniqueInput
+}
+
+export type Prisma.CharactersCreateInput = {
+  firstName: string
+  lastName: string
+  dateOfBirth: Date | string
+  createdAt?: Date | string
+  deletedAt?: Date | string | null
+  lastX?: Decimal | DecimalJsLike | number | string
+  lastY?: Decimal | DecimalJsLike | number | string
+  lastZ?: Decimal | DecimalJsLike | number | string
+  food?: Decimal | DecimalJsLike | number | string
+  drink?: Decimal | DecimalJsLike | number | string
+  currencies?: JsonNullValueInput | InputJsonValue
+  healthMetadata?: JsonNullValueInput | InputJsonValue
+  components?: JsonNullValueInput | InputJsonValue
+  model?: string
+  whistle?: JsonNullValueInput | InputJsonValue
+  brand?: BrandsCreateNestedOneWithoutOwnerInput
+  account: AccountsCreateNestedOneWithoutCharactersInput
+  face?: FacesCreateNestedOneWithoutCharacterInput
+  horses?: HorsesCreateNestedManyWithoutOwnerInput
+  livestock?: LivestockCreateNestedOneWithoutOwnerInput
+  outfits?: OutfitsCreateNestedManyWithoutCharacterInput
+}
+
+   */
+
   async createCharacter(
     ownerId: number,
-    characterData: Game.Character,
+    characterData: Omit<Game.Character, 'accountId' | 'id' | 'createdAt' | 'face'>,
     faceData: Game.Face,
   ): Promise<PrismaCharacterWithFace | null> {
-    // @ts-ignore
-    characterData.dateOfBirth = new Date(characterData.dateOfBirth);
-    // @ts-ignore
-    const character = await this.prisma.characters.create({ data: { ...characterData, accountId: ownerId } });
+    console.log('ownerId', ownerId);
+    const character = await this.prisma.characters.create({
+      data: {
+        accountId: ownerId,
+        ...characterData,
+        dateOfBirth: new Date(characterData.dateOfBirth),
+      },
+    });
     await this.prisma.faces.create({ data: { ...faceData, characterId: character.id } });
     return this.prisma.characters.findFirst({ where: { id: character.id }, include: { face: true } });
   }

@@ -11,6 +11,13 @@ const XYContainer = styled.div`
   padding-bottom: 20px;
   font-size: ${uiSize(18)};
   user-select: none;
+
+  &.cheek-bone {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const XYTitle = styled.div`
@@ -30,8 +37,8 @@ const XYContents = styled.div`
 
 const XYGrid = styled.div`
   position: relative;
-  width: ${uiSize(256)};
-  height: ${uiSize(256)};
+  width: 50%;
+  aspect-ratio: 1;
 
   border: 2px solid ${theme.colors.white.hex};
 
@@ -109,6 +116,7 @@ interface Props {
   step: number;
   xDefaultValue?: number;
   yDefaultValue?: number;
+  className?: string;
 }
 
 interface State {
@@ -152,6 +160,16 @@ export default class XYSlider extends Component<Props, State> {
   }
 
   onmousedown(e: MouseEvent) {
+    if (e.button === 2) {
+      this.setState({
+        xValue: this.props.xDefaultValue || 0,
+        yValue: this.props.yDefaultValue || 0,
+      });
+      this.props.onChange(this.props.xDefaultValue || 0, this.props.yDefaultValue || 0);
+      return;
+    }
+    if (e.button !== 0) return;
+
     const target = e.target as HTMLElement;
     this.setState({ isDragging: true });
     this.onmousemove(e, true);
@@ -203,7 +221,7 @@ export default class XYSlider extends Component<Props, State> {
 
   render() {
     return (
-      <XYContainer>
+      <XYContainer className={this.props.className}>
         <XYTitle onClick={this.toggleContent.bind(this)}>{this.props.label}</XYTitle>
         <XYContents ref={this.refContent} className={this.state.active ? 'active' : ''}>
           <XYGrid ref={this.refGrid} onMousedown={this.onmousedown.bind(this)}>

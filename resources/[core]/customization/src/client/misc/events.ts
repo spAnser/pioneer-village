@@ -39,8 +39,9 @@ onUI('customization.set-face-option', (options) => {
 RegisterCommand(
   'set_face_option',
   async (source: number, args: string[]) => {
-    SetCharExpression(PlayerPedId(), Number(args[0]), Number(args[1]));
-    UpdatePedVariation(PlayerPedId(), false, true, true, true, false);
+    const ped = args[2] ? Number(args[2]) : PlayerPedId();
+    SetCharExpression(ped, Number(args[0]), Number(args[1]));
+    UpdatePedVariation(ped, false, true, true, true, false);
   },
   false,
 );

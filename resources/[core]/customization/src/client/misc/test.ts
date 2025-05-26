@@ -192,30 +192,65 @@ RegisterCommand(
 );
 
 const expressions = [
-  10726, // horse body size
-  3015, // horse muscles
-  18278, // horse belly size / y pos
-  60649, // horse belly x pos
-  42991, // horse base of neck height
-  26839, // horse neck thickness
-  15833, // shoulder height - humans and horses
-  41478, // back width / chest size/width - humans and horses
-  62347, // horse butt size
-  11904, // horse rear back height
-  36550, // horse thighs
-  8420, // forearms for humans / front legs for horses
-  16934, // horse hind legs
-  60975, // horse ankles
-  39436, // horse hooves
-  48003, // horse head size
-  1589, // horse under jaw sagging
-  62196, // horse nose bridge depth
+  55682,
   52553,
   3437,
   9584,
   16009,
   38169,
   9586,
+  43894,
+  55710,
+  55711,
+
+  10726, // horse body size
+  3015, // horse muscles
+  18278, // horse belly size / y pos
+  60649, // horse belly x pos
+  42991, // horse base of neck height
+  26839, // horse neck thickness
+  62347, // horse butt size
+  11904, // horse rear back height
+  36550, // horse thighs
+  16934, // horse hind legs
+  60975, // horse ankles
+  39436, // horse hooves
+  48003, // horse head size
+  1589, // horse under jaw sagging
+  62196, // horse nose bridge depth
+  3054, // horse nose length
+  55026, // horse forehead height
+  23050, // horse right ear size
+  22538, // horse left ear size
+  22549, // horse nose size
+  29982, // horse nose bridge height
+  36120, // horse right nostril size
+  35608, // horse left nostril size
+  43213, // horse head width
+  2075, // horse throat size
+  34850, // horse right eye size
+  17697, // horse right eye forward/backward
+  17698, // horse right eye height
+  34338, // horse left eye size
+  17185, // horse left eye forward/backward
+  17186, // horse left eye height
+  9675, // horse hooves length
+  8147, // horse muscle tone / veins
+  57577, // horse belly size
+  10002, // horse neck height
+  63348, // horse belly size
+  19812, // horse left ear forward/backward
+  19813, // horse left ear x pos
+  19780, // horse right ear forward/backward
+  19781, // horse right ear x pos
+  54287, // horse tail angle
+  26933, // horse knee and hock size
+  41611, // horse gender (0.0 = male, 1.0 = female)
+
+  15833, // shoulder height - humans and horses
+  41478, // back width / chest size/width - humans and horses
+  8420, // forearms for humans / front legs for horses
+
   18046, // shoulder blades / back muscles
   46032, // arms size
   27779, // chest
@@ -278,40 +313,9 @@ const expressions = [
   52902, // left eyelid open/close
   36277, // neck width
   60890, // neck depth
-  3054, // horse nose length
-  55026, // horse forehead height
-  23050, // horse right ear size
-  22538, // horse left ear size
-  22549, // horse nose size
-  29982, // horse nose bridge height
-  36120, // horse right nostril size
-  35608, // horse left nostril size
-  43213, // horse head width
-  2075, // horse throat size
-  34850, // horse right eye size
-  17697, // horse right eye forward/backward
-  17698, // horse right eye height
-  34338, // horse left eye size
-  17185, // horse left eye forward/backward
-  17186, // horse left eye height
-  9675, // horse hooves length
-  43894,
-  55710,
-  55711,
   33485, // anterior trapezius
-  8147, // horse muscle tone / veins
-  57577, // horse belly size
-  10002, // horse neck height
-  63348, // horse belly size
-  19812, // horse left ear forward/backward
-  19813, // horse left ear x pos
-  19780, // horse right ear forward/backward
-  19781, // horse right ear x pos
-  54287, // horse tail angle
-  26933, // horse knee and hock size
   46240, // chest height, females only
   8991, // butt/hip size, females only
-  41611, // horse gender (0.0 = male, 1.0 = female)
 
   // ------------------
   2007, // BodyWeight
@@ -461,8 +465,8 @@ RegisterCommand(
 
     await Delay(50);
 
-    const range = 2500;
-    const start = 2500 * mul;
+    const range = 10000;
+    const start = 10000 * mul;
     const end = Math.min(start + range, 0xffff);
     console.log(start, '-', end);
     for (let n = start; n <= end; n++) {

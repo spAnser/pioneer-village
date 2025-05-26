@@ -83,6 +83,33 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
     socket.on('customization.finalize', async (json) => {
       const data = JSON.parse(json);
       logInfoC('[Characters]', 'customization.finalize', data);
+
+      const character = await Characters.createCharacter(
+        socket.data.user.userId,
+        {
+          firstName: data.firstName,
+          lastName: data.lastName,
+          dateOfBirth: data.dateOfBirth,
+          lastX: 0,
+          lastY: 0,
+          lastZ: 0,
+          model: data.model || data.gender === 'female' ? 'MP_FEMALE' : 'MP_MALE',
+          components: [], // data.components
+          clothing: data.clothing,
+        },
+        data.currentFaceOptions,
+      );
+
+      if (character) {
+        await Inventories.createInventory(`character:${character.id}`);
+        const clothingInv = await Inventories.createInventory(`clothing:${character.id}`);
+
+        if (clothingInv) {
+          for (const [category, item] of Object.entries<Record<string, any>>(data.currentComponents)) {
+            await Inventories.addItem(clothingInv.identifier, -1007727220, 1, item);
+          }
+        }
+      }
     });
 
     socket.on('getCharacters', async (cb) => {

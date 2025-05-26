@@ -56,6 +56,39 @@ const faceFeatures: Record<string, number> = {
   horseGender: 0xa28b,
 };
 
+/**
+headWidth
+
+eyebrowHeight|eyebrowWidth|eyebrowDepth
+
+earsWidth|earsAngle|earsHeight|earlobeSize
+
+cheekBoneHeight|cheekBoneWidth|cheekBoneDepth
+
+jawHeight|jawWidth|jawDepth
+
+chinHeight|chinWidth|chinDepth
+
+eyelidHeight|eyelidWidth|eyesDepth|eyesAngle|eyesDistance|eyesHeight
+
+noseWidth|noseSize|noseHeight|noseAngle|noseCurvature|nostrilsDistance
+
+mouthWidth|mouthDepth|mouthXPos|mouthYPos
+
+upperLipHeight|upperLipWidth|upperLipDepth|lowerLipHeight|lowerLipWidth|lowerLipDepth
+
+
+              headWidth
+          _____________________
+        /                       \
+       |                        |
+       |   eyebrow    eyelid    |
+   ear /|                       |\
+      | |             cheek    | |
+
+
+ */
+
 class CreationManager {
   protected static instance: CreationManager;
 

@@ -59,9 +59,9 @@ class Inventories {
     return false;
   }
 
-  async createInventory(identifier: string): Promise<void> {
+  async createInventory(identifier: string): Promise<PrismaInventory | undefined> {
     try {
-      await this.prisma.inventory.create({
+      return this.prisma.inventory.create({
         data: {
           identifier,
           container: {
@@ -257,7 +257,7 @@ class Inventories {
           data: {
             identifier: itemIdentifier,
             slot,
-            containerId: inventory.id,
+            containerId: inventory.containerId,
             metadata,
             durability,
           },
