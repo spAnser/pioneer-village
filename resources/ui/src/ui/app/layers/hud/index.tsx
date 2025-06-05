@@ -147,7 +147,7 @@ export default class HUD extends UIComponent<UI.BaseProps, UI.HUD.State, {}> {
             >
               <BoneBreak />
             </ProgressIcon>
-            <AnimInfection className={this.state.infection > 50 ? 'active' : null}>
+            <AnimInfection className={this.state.infection > 50 ? 'active' : undefined}>
               <ProgressIcon
                 width={32}
                 height={32}
