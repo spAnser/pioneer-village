@@ -86,3 +86,11 @@ RegisterCommand(
   },
   false,
 );
+
+RegisterCommand(
+  'daytime',
+  () => {
+    NetworkClockTimeOverride(12, 0, 0, 60000, false);
+  },
+  false,
+);

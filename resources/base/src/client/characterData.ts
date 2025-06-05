@@ -5,7 +5,7 @@ let character: CharacterData | null = null;
 
 onUI('character-client-update.getCharacter', (pCharacter) => {
   character = JSON.parse(pCharacter) as CharacterData;
-  Log('character-client-update.getCharacter', character);
+  // Log('character-client-update.getCharacter', character);
 });
 
 onUI('character-client-update.updateAttribute', (attribute, newVal) => {
