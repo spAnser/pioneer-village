@@ -70,12 +70,12 @@ Citizen.CreateThread(function()
         Wait(100) -- Should be fine could be reduced if we get prompts not triggering.
         for name,prompt in pairs(prompts) do
             if
-              (prompt.mode == 'standard' and PromptHasStandardModeCompleted(prompt.id, 0))
-              or
-              (prompt.mode == 'hold' and PromptHasHoldModeCompleted(prompt.id))
+                (prompt.mode == 'standard' and PromptHasStandardModeCompleted(prompt.id, 0))
+                or
+                (prompt.mode == 'hold' and PromptHasHoldModeCompleted(prompt.id))
             then
-              TemporarilyDisablePrompts()
-              TriggerEvent('lua::' .. name .. '::completed')
+                TemporarilyDisablePrompts()
+                TriggerEvent('lua::' .. name .. '::completed')
             end
         end
     end

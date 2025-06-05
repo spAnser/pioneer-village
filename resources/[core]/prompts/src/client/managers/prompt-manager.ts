@@ -62,19 +62,20 @@ class PromptManager {
     visible = true,
   ): void {
     if (!this.registeredPrompts.has(name)) {
+      // Register a new prompt
       this.promptCallbacks.set(name, callback);
       this.registeredPrompts.set(name, [promptType, name, key, label, duration, enabled, visible]);
       this.createFromRegistered(name);
+      on(`lua::${name}::completed`, () => {
+        const callback = this.promptCallbacks.get(name);
+        if (callback) {
+          callback();
+        }
+      });
     } else {
+      // Update the callback if it already exists
       this.promptCallbacks.set(name, callback);
     }
-
-    on(`lua::${name}::completed`, () => {
-      const callback = this.promptCallbacks.get(name);
-      if (callback) {
-        callback();
-      }
-    });
   }
 
   createFromRegistered(name: string): void {

@@ -193,12 +193,6 @@ RegisterCommand(
 
 const expressions = [
   55682,
-  52553,
-  3437,
-  9584,
-  16009,
-  38169,
-  9586,
   43894,
   55710,
   55711,
@@ -318,6 +312,13 @@ const expressions = [
   8991, // butt/hip size, females only
 
   // ------------------
+  // Hat adjustments can make you bald somewhat so make sure you have a hat on
+  9584, // Hat Rotation
+  9586, // Hat Angle Forward/Backward
+  3437, // Hat Angle Left/Right
+  52553, // Hat x pos
+  16009, // Hat y pos
+  38169, // Hat z pos
   2007, // BodyWeight
 
   65374, // Muscles | BodyWeight increases when negative
