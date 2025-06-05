@@ -3,11 +3,18 @@ declare interface ClientExports {
 }
 
 declare namespace PlaceObject {
+  type EntityDOF = {
+    expression?: 0 | 1 | 2;
+    name: string;
+    value: number;
+  };
+
   interface SubItem {
     name: string;
     model: string;
     offset: Vector3Format;
     offsetHeading: number;
+    dof?: EntityDOF;
   }
 
   interface Advanced {
@@ -21,9 +28,10 @@ declare namespace PlaceObject {
     model: number;
     amount: number;
     groundOnly: boolean;
+    dof?: EntityDOF;
   }
 
-  type placeObject = (model: string, amount?: number, groundOnly?: boolean) => Promise<number[]>;
+  type placeObject = (model: string, amount?: number, groundOnly?: boolean, dof?: EntityDOF) => Promise<number[]>;
   type placeObjectAdvanced = (data: Advanced, groundOnly?: boolean) => Promise<number[]>;
   type placeObjects = (objects: ObjectPlacement[]) => Promise<number[]>;
 

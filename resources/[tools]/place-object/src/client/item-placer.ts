@@ -1,6 +1,7 @@
 import { Vector3 } from '@lib/math';
 import { PVGame, PVPrompt } from '@lib/client';
 import { VegModifierFlag, VegModifierType } from '@lib/flags/veg-modifiers';
+import { Log } from '@lib/client/comms/ui';
 
 export default class ItemPlacer {
   ghostItem: number = 0;
@@ -199,6 +200,7 @@ export default class ItemPlacer {
       targetCoords.z - 1.5,
       1 + 16 + 32 + 64 + 128,
       this.ghostItem,
+      0,
     );
     const [rtnVal, hit, endCoords, surfaceNormal, entityHit] = GetShapeTestResult(shapeTest);
     const hitCoords = Vector3.fromArray(endCoords);
@@ -320,6 +322,18 @@ export default class ItemPlacer {
       }
       Entity(objectId).state.set(subItem.name, subObjectId, false);
       Entity(objectId).state.set(`${subItem.name}NetId`, NetworkGetNetworkIdFromEntity(subObjectId), true);
+
+      Log(subObjectId, subItem.dof?.expression || 0, subItem.dof?.name, subItem.dof?.value);
+
+      if (subItem.dof) {
+        Citizen.invokeNative(
+          '0x669655FFB29EF1A9',
+          subObjectId,
+          subItem.dof.expression || 0,
+          subItem.dof.name,
+          subItem.dof.value,
+        );
+      }
     }
 
     this.placedObjects.push(objectId);

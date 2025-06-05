@@ -79,6 +79,10 @@ on('onResourceStart', (resource: string) => {
   }
 });
 
+on('onResourceStop', (resource: string) => {
+  placementManager.cleanup();
+});
+
 if (GetResourceState('prompts') === 'started') {
   registerPrompts();
 }

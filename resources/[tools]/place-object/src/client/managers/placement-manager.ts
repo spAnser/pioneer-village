@@ -82,4 +82,14 @@ export default class PlacementManager {
     this.itemPlacers.delete(this.curId);
     return items;
   }
+
+  cleanup(): void {
+    for (const itemPlacer of this.itemPlacers.values()) {
+      itemPlacer.destroy();
+    }
+    this.itemPlacers.clear();
+    this.finishedPlacement.clear();
+    this.isPlacingItem = false;
+    this.curId = 0;
+  }
 }
