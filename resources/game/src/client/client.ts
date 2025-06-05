@@ -43,10 +43,16 @@ const characterSelection = async () => {
     // Game acts weird with the first ped created so lets spawn some trash ones to start.
     male = await gameManager.createPed('MP_MALE', spawnCoords.x, spawnCoords.y, spawnCoords.z);
     female = await gameManager.createPed('MP_FEMALE', spawnCoords.x, spawnCoords.y, spawnCoords.z);
-    await Delay(5000);
+    await Delay(2500);
   }
 
   const characters = await awaitUI('getCharacters');
+
+  if (firstRun) {
+    // Females for some reason spawn with a broken head, so we need to delete them and spawn new ones.
+    await spawnCharacters(characters);
+    await Delay(2500);
+  }
 
   const uiCharacters = await spawnCharacters(characters);
 

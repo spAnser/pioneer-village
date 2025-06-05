@@ -64,7 +64,7 @@ declare namespace Game {
     animTasks: Anim.AdvTask[],
     freeze?: boolean,
     animPed?: number,
-  ) => void;
+  ) => Promise<void>;
   type taskPlayEntityAnim = (anims: Anim.EntityTask[]) => void;
 
   type loadStream = (streamSet: string, streamName: string, delay?: number, maxTries?: number) => Promise<boolean>;

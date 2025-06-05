@@ -535,6 +535,7 @@ class GameManager {
   }
 
   setAnimWalk(animWalk: Anim.Walk): void {
+    // TODO: Implement sub object animations
     this.clearAnimWalk();
     let isStanding = false;
     let isWalking = false;
