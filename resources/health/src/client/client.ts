@@ -41,10 +41,10 @@ const handleCharacterSelected = async (charId: number) => {
   const { food, drink } = await awaitServer('health.getFoodAndDrink', charId);
   healthManager.food = food;
   healthManager.water = drink;
-  emitUI('hud.state', { food: food, drink: drink });
+  emitUI('hud.state', { food, drink });
 
   const healthMetadata = await awaitServer('health.getHealthMetadata', charId);
-  Log('healthMetadata', healthMetadata);
+  // Log('healthMetadata', healthMetadata);
   healthManager.health = healthMetadata.health;
   healthManager.stamina = healthMetadata.stamina;
   healthManager.litersOfBlood = healthMetadata.litersOfBlood;

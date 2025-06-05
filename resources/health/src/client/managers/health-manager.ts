@@ -177,7 +177,7 @@ export class HealthManager {
       await Delay(150);
       this.checkWalkCycle();
       await Delay(50);
-      emitUI('hud.state', { food: this.food, drink: this.water });
+      emitUI('hud.state', { food: this.food, drink: this.water, isCold: this.isCold, isHot: this.isHot });
     }, TickDelay);
 
     // This is the health metadata object
@@ -242,14 +242,35 @@ export class HealthManager {
       this.water -= WaterPerSecond * delta * 2;
     }
 
+    // Log('foodWaterTick', this.food, this.water, this.isCold, this.isHot);
+
     this.food = clamp(this.food, 0, 100);
     this.water = clamp(this.water, 0, 100);
   }
 
+  getWarmthTarget(temp: number): number {
+    const min_temp = -10;
+    const max_temp = 25;
+    const min_warmth = 10;
+    const max_warmth = 0;
+
+    // Calculate percentage within the temperature range
+    const percent = (temp - min_temp) / (max_temp - min_temp);
+
+    // Use lerp to calculate the corresponding warmth target
+    const warmth = lerp(min_warmth, max_warmth, percent);
+
+    return warmth;
+  }
+
   warmthTick(delta: number): void {
-    // Log('LocalPlayer.state.temperature', LocalPlayer.state.temperature);
-    const targetWarmthLevel = Math.max(-1.0, lerp(10, 0, (this.temperature + 10) / 38));
+    // const targetWarmthLevel = Math.max(-1.0, lerp(10, 3, (this.temperature + 10) / 38));
+    this.temperature = LocalPlayer.state.temperature.temperature;
+    this.warmth = LocalPlayer.state.temperature.warmth;
+
+    const targetWarmthLevel = this.getWarmthTarget(this.temperature);
     const warmthDelta = Math.min(Math.max(Math.abs(this.warmth - targetWarmthLevel), 0), 10);
+    // Log('LocalPlayer.state.temperature', { ...LocalPlayer.state.temperature, targetWarmthLevel, warmthDelta });
     const isHot = this.warmth > targetWarmthLevel && warmthDelta > 3;
     const isCold = this.warmth < targetWarmthLevel && warmthDelta > 4;
 
