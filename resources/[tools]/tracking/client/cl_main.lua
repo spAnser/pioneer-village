@@ -914,7 +914,6 @@ RegisterCommand("delete_entity", function(source, args, rawCommand)
         local entity_id = tonumber(args[1])
         if entity_id then
             SetEntityAsMissionEntity(entity_id, true, true)
-            DeletePed(entity_id)
             DeleteEntity(entity_id)
         end
     end)

@@ -18,7 +18,6 @@ import { Log } from '@lib/client/comms/ui';
 
 // let bucket = PVGame.getChildEntity(1822722, 'bucket');
 // Log('bucket', bucket);
-let bucket = 0;
 
 /*
 pinId = InvokeNative(0x6F3068258A499E52, `P_DOOR_VAL_BARN_L`, -361.6891, 785.3472, 115.2065, 7)
@@ -84,6 +83,8 @@ on('gold:panning', async (goldCradleEntityId: number, parameters: any) => {
     SetEntityAlpha(goldNugget, 0, false);
   }
 
+  const coords = PVGame.playerCoords();
+
   const animDict = 'script_re@gold_panner@gold_success';
   await PVGame.taskPlayAnimAdvArray(
     Vector3.fromArray(GetEntityCoords(goldCradleEntityId, false, false)),
@@ -103,7 +104,18 @@ on('gold:panning', async (goldCradleEntityId: number, parameters: any) => {
               position: Vector3.fromArray(GetEntityCoords(goldCradleEntityId, false, false)),
               rotation: Vector3.fromArray(GetEntityRotation(goldCradleEntityId, 0)),
             },
+            {
+              obj: goldCradleEntityId,
+              dict: animDict,
+              anim: 'pour_bucket_goldstand',
+              flags: AnimFlag.OFFSET_POSITION_ENTITY + AnimFlag.UNK_IS_ENTITY,
+              position: Vector3.fromArray(GetEntityCoords(goldCradleEntityId, false, false)),
+              rotation: Vector3.fromArray(GetEntityRotation(goldCradleEntityId, 0)),
+            },
           ]);
+        },
+        onEnd() {
+          Citizen.invokeNative('0x669655FFB29EF1A9', carryBucketEntity, 0, 'bucket_fill', 0);
         },
       },
       {
@@ -139,51 +151,6 @@ on('gold:panning', async (goldCradleEntityId: number, parameters: any) => {
       },
     ],
   );
-  /*
-    await PVGame.taskPlayAnimArrayNew([
-        {
-            dict: animDict,
-            anim: 'pour_bucket',
-            async onStart() {
-                PVGame.taskPlayEntityAnim([
-                    {
-                        obj: bucket,
-                        dict: animDict,
-                        anim: 'pour_bucket_bucket',
-                        flags: AnimFlag.UNK_IS_ENTITY,
-                    },
-                ]);
-            },
-        },
-        {
-            dict: animDict,
-            anim: ['search01', 'search02', 'search03', 'search04'],
-        },
-        {
-            dict: animDict,
-            anim: ['panning_idle', 'panning_idle_02', 'pile_of_nothing'],
-            flags: AnimFlag.REPEAT,
-            duration: 5000,
-        },
-        {
-            dict: animDict,
-            anim: ['search01', 'search02', 'search03', 'search04'],
-        },
-        {
-            dict: animDict,
-            anim: success ? ['success_front', 'success_back', 'success_walk_r', 'success_walk_back'] : 'fail',
-            duration: 5000,
-            async onStart() {
-                if (success) {
-                    SetEntityAlpha(goldNugget, 255, false);
-                    await Delay(2000);
-                } else {
-                    await Delay(4500);
-                }
-                DetachEntity(pan, true, true);
-            },
-        },
-    ]);*/
 
   await Delay(1000);
   if (success && goldNugget) {
@@ -255,6 +222,7 @@ const bucketWalk = () => {
 };
 
 const fillBucket = async () => {
+  Log('fillBucket');
   const isMale = IsPedMale(PVGame.playerPed());
   PVGame.clearAnimWalk();
 
@@ -267,6 +235,9 @@ const fillBucket = async () => {
       dict: `amb_work@world_human_bucket_fill@${isMale ? 'male_b' : 'female_a'}@stand_enter_withprop`,
       anim: 'enter_back_lf',
       flags: AnimFlag.STOP_LAST_FRAME,
+      onEnd: () => {
+        Citizen.invokeNative('0x669655FFB29EF1A9', carryBucketEntity, 0, 'bucket_fill', 0.5 + Math.random() * 0.49999);
+      },
     },
     {
       dict: `amb_work@world_human_bucket_fill@${isMale ? 'male_b' : 'female_a'}@stand_exit_withprop`,
@@ -281,6 +252,7 @@ const fillBucket = async () => {
     new Vector3(0.53, 0.0, -0.2),
     new Vector3(0.0, -70.0, 0.0),
   );
+
   bucketWalk();
 };
 
@@ -360,6 +332,8 @@ const pickupBucket = async () => {
 };
 
 const returnBucket = async () => {
+  const heading = GetEntityHeading(cradleEntity);
+  Log('returnBucket', cradleEntity, carryBucketEntity);
   DetachEntity(carryBucketEntity, false, false);
   let bucketOffset = new Vector3(0.825, -0.333, -0.065);
   if (IsPedMale(PVGame.playerPed())) {
@@ -368,14 +342,14 @@ const returnBucket = async () => {
   const bucketCoords = Vector3.fromArray(
     GetOffsetFromEntityInWorldCoords(cradleEntity, bucketOffset.x, bucketOffset.y, bucketOffset.z),
   );
-  const heading = GetEntityHeading(cradleEntity);
-  const bucket = PVGame.getChildEntity(cradleEntity, 'bucket');
-  FreezeEntityPosition(bucket, true);
-  Log(`SetEntityCoords(${bucket}, ${bucketCoords.x}, ${bucketCoords.y}, ${bucketCoords.z}, 0.0, 0.0, 0.0, false);`);
-  SetEntityCoords(bucket, bucketCoords.x, bucketCoords.y, bucketCoords.z, false, false, false, false);
-  SetEntityRotation(bucket, 0, 0, heading + 80, 2, false);
+  FreezeEntityPosition(carryBucketEntity, true);
+  Log(
+    `SetEntityCoords(${carryBucketEntity}, ${bucketCoords.x}, ${bucketCoords.y}, ${bucketCoords.z}, 0.0, 0.0, 0.0, false);`,
+  );
+  SetEntityCoords(carryBucketEntity, bucketCoords.x, bucketCoords.y, bucketCoords.z, false, false, false, false);
+  SetEntityRotation(carryBucketEntity, 0, 0, heading + 80, 2, false);
   await Delay(125);
-  SetEntityCollision(bucket, false, false);
+  SetEntityCollision(carryBucketEntity, false, false);
 
   carryBucketEntity = 0;
   cradleEntity = 0;
@@ -408,7 +382,7 @@ const putdownBucket = async () => {
       onStart() {
         SetEntityNoCollisionEntity(carryBucketEntity, PVGame.playerPed(), false);
         DetachEntity(carryBucketEntity, false, false);
-        SetEntityCollision(bucket, false, false);
+        SetEntityCollision(carryBucketEntity, false, false);
         PVGame.taskPlayEntityAnim([
           {
             obj: carryBucketEntity,
@@ -448,6 +422,8 @@ on('gold:panning:bucket-pickup', async (goldCradleEntityId: number, parameters: 
 });
 
 on('gold:panning:bucket-putdown', async (goldCradleEntityId: number, parameters: any) => {
+  cradleEntity = goldCradleEntityId;
+  carryBucketEntity = PVGame.getChildEntity(goldCradleEntityId, 'bucket');
   putdownBucket();
 });
 
@@ -566,13 +542,18 @@ RegisterCommand(
         subItems: [
           {
             name: 'bucket',
-            model: 'P_CS_BUCKET01X',
+            model: 'p_bucket03x', // p_bucket03x | P_CS_BUCKET01X
             offset: {
               x: 0.825,
               y: -0.333,
               z: -0.065,
             },
             offsetHeading: 80,
+            dof: {
+              expression: 0,
+              name: 'bucket_fill',
+              value: 0,
+            },
           },
         ],
       },
@@ -582,6 +563,17 @@ RegisterCommand(
   },
   false,
 );
+
+/*
+TODO: This might fix P_CS_BUCKET01X to be actually empty???
+{
+    dict: 'amb_wander@code_human_bucket_wander@empty@es_jack@base',
+    anim: 'base_bucket',
+    flags: AnimFlag.UNK_IS_ENTITY,
+    blendInSpeed: 1,
+    blendOutSpeed: -1,
+}
+ */
 
 RegisterCommand(
   'jcrun',
