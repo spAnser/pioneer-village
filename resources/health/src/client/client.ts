@@ -34,6 +34,11 @@ const boneNames: string[] = [
   'SKEL_R_FOOT',
 ];
 
+// Log('getWarmthTarget(-10)', healthManager.getWarmthTarget(-10));
+// Log('getWarmthTarget(0)', healthManager.getWarmthTarget(0));
+// Log('getWarmthTarget(15)', healthManager.getWarmthTarget(15));
+// Log('getWarmthTarget(38)', healthManager.getWarmthTarget(38));
+
 const handleCharacterSelected = async (charId: number) => {
   healthManager.checkUpdatePed();
   characterSelected = true;
