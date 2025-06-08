@@ -94,10 +94,11 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
           lastY: 0,
           lastZ: 0,
           model: data.model || data.gender === 'female' ? 'MP_FEMALE' : 'MP_MALE',
-          components: [], // data.components
+          components: Object.values(data.components), // [],
           clothing: data.clothing,
         },
         data.currentFaceOptions,
+        data.currentFaceFeatures,
       );
 
       if (character) {

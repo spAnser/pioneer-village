@@ -266,9 +266,6 @@ const expressions = [
   27147, // cheekbones height
   43983, // cheekbones width
   13709, // cheekbones depth
-  36106, // jaw height
-  60334, // jaw width
-  7670, // jaw depth
   15375, // chin height
   50098, // chin width
   58147, // chin depth
@@ -294,15 +291,20 @@ const expressions = [
   47949, // lower lip height
   45232, // lower lip width
   23830, // lower lip depth
+  36106, // jaw height
+  60334, // jaw width
+  7670, // jaw depth
   55182, // jaw y pos
+
   57350, // mouth corner left width
   40950, // mouth corner left depth
   46661, // mouth corner left height
-  22344, // mouth corner left lips distance
-  60292, // mouth corner right width
-  49299, // mouth corner right depth
-  55718, // mouth corner right height
-  9423, // mouth corner right lips distance
+  22344, // mouth corner left upper lip distance
+  60292, // mouth corner right upper lip distance
+  49299, // mouth corner right height
+  9423, // mouth corner right depth
+  55718, // mouth corner right width
+
   22421, // right eyelid open/close
   52902, // left eyelid open/close
   36277, // neck width
@@ -319,8 +321,8 @@ const expressions = [
   52553, // Hat x pos
   16009, // Hat y pos
   38169, // Hat z pos
-  2007, // BodyWeight
 
+  2007, // BodyWeight
   65374, // Muscles | BodyWeight increases when negative
   50957, // Shoulder Size females only
 
@@ -420,6 +422,17 @@ RegisterCommand(
     UpdatePedVariation(ped, false, true, true, true, false);
 
     console.log('done');
+  },
+  false,
+);
+
+RegisterCommand(
+  'setExpression',
+  async (source: number, args: string[]) => {
+    const ped = args[2] ? Number(args[2]) : PlayerPedId();
+    SetPedFaceFeature(ped, Number(args[0]), Number(args[1]));
+    console.log(`SetPedFaceFeature(${ped}, ${Number(args[0])}, ${Number(args[1])})`);
+    UpdatePedVariation(ped, false, true, true, true, false);
   },
   false,
 );

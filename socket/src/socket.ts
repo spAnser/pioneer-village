@@ -31,6 +31,15 @@ import { seedDB } from './seed';
 
 const { DATABASE_URL, SOCKET_PORT } = process.env;
 
+// import { drizzle } from 'drizzle-orm/node-postgres';
+// const db = drizzle(DATABASE_URL);
+//
+// (async () => {
+//   const result = await db.execute('');
+//
+//   console.log('result', result);
+// })();
+
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();

@@ -109,6 +109,7 @@ declare namespace UI.Customization {
     currentComponents: Record<string, any>;
     hiddenComponents: Record<string, any>;
     currentFaceOptions: Record<string, number>;
+    currentFaceFeatures: Record<string, number>;
     currentBodyOptions: Record<string, any>;
     currentOverlays: Record<string, any>;
     currentWhistle: Record<string, any>;

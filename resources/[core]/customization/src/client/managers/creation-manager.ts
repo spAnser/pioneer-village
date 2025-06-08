@@ -1,10 +1,14 @@
 import { emitUI, focusUI, PVBase, PVCamera, PVGame } from '@lib/client';
-import { Delay } from '@lib/functions';
+import { debounce, Delay } from '@lib/functions';
 import { PedMotionState } from '@lib/flags/ped-motion-state';
 import { Log } from '@lib/client/comms/ui';
 import { componentManager } from './component-manager';
 import waists from '../data/waists';
 import bodyTypes from '../data/body-types';
+import skinTones from '../data/skin-tones';
+import heads from '../data/heads';
+import teeth from '../data/teeth';
+import { AnimFlag } from '@lib/flags/anim-flag';
 
 enum CreationState {
   None = -1,
@@ -89,6 +93,17 @@ upperLipHeight|upperLipWidth|upperLipDepth|lowerLipHeight|lowerLipWidth|lowerLip
 
  */
 
+type BaseComponents = {
+  body?: number;
+  waist?: number;
+  teeth?: number;
+  upperBody?: number;
+  lowerBody?: number;
+  eyes?: number;
+  head?: number;
+  hair?: number;
+};
+
 class CreationManager {
   protected static instance: CreationManager;
 
@@ -101,54 +116,76 @@ class CreationManager {
 
   private currentState: Customization.CreationState = CreationState.None;
 
-  private maleComponents = [
-    bodyTypes[2].hash,
-    waists[0],
+  private maleComponents: BaseComponents = {
+    body: bodyTypes[2].hash,
+    // waist: waists[0],
     // 1537699023, // Prison Shirt
     // 560337648, // Prison Pants
     // -1136463505, // Darned Stockings
     // 1963778820, // Darned Stockings Blue
-    GetHashKey('CLOTHING_ITEM_M_TEETH_000'),
+    teeth: GetHashKey('CLOTHING_ITEM_M_TEETH_000'),
     // GetHashKey('CLOTHING_M_SEASON3_NIGHTGOWN_001_TINT_001'),
     // GetHashKey('CLOTHING_ITEM_M_SHIRT_000_TINT_001'),
     // GetHashKey('CLOTHING_ITEM_M_PANTS_000_TINT_001'),
-    GetHashKey('CLOTHING_ITEM_M_BODIES_UPPER_001_V_001'),
-    GetHashKey('CLOTHING_ITEM_M_BODIES_LOWER_001_V_001'),
-    GetHashKey('CLOTHING_ITEM_M_EYES_001_TINT_001'),
-    GetHashKey('CLOTHING_ITEM_M_HEAD_001_V_001'),
-    GetHashKey('CLOTHING_ITEM_M_HAIR_001_BLONDE'),
-  ];
-  private femaleComponents = [
-    bodyTypes[2].hash,
-    waists[0],
+    upperBody: GetHashKey('CLOTHING_ITEM_M_BODIES_UPPER_001_V_001'),
+    lowerBody: GetHashKey('CLOTHING_ITEM_M_BODIES_LOWER_001_V_001'),
+    eyes: GetHashKey('CLOTHING_ITEM_M_EYES_001_TINT_001'),
+    head: GetHashKey('CLOTHING_ITEM_M_HEAD_001_V_001'),
+    hair: GetHashKey('CLOTHING_ITEM_M_HAIR_001_BLONDE'),
+  };
+  private femaleComponents: BaseComponents = {
+    body: bodyTypes[2].hash,
+    // waist: waists[0],
     // 1790080661, // Prison Shirt
     // 1975258357, // Prison Pants
     // -755702786, // Darned Stockings
     // -864332025, // Darned Stockings Blue
-    GetHashKey('CLOTHING_ITEM_F_TEETH_000'),
+    teeth: GetHashKey('CLOTHING_ITEM_F_TEETH_000'),
     // GetHashKey('CLOTHING_F_SEASON3_NIGHTGOWN_001_TINT_001'),
     // GetHashKey('CLOTHING_ITEM_F_SHIRT_000_TINT_001'),
     // GetHashKey('CLOTHING_ITEM_F_PANTS_000_TINT_001'),
-    GetHashKey('CLOTHING_ITEM_F_BODIES_UPPER_001_V_001'),
-    GetHashKey('CLOTHING_ITEM_F_BODIES_LOWER_001_V_001'),
-    GetHashKey('CLOTHING_ITEM_F_EYES_001_TINT_001'),
-    GetHashKey('CLOTHING_ITEM_F_HEAD_001_V_001'),
-    GetHashKey('CLOTHING_ITEM_F_HAIR_001_BLONDE'),
-  ];
+    upperBody: GetHashKey('CLOTHING_ITEM_F_BODIES_UPPER_001_V_001'),
+    lowerBody: GetHashKey('CLOTHING_ITEM_F_BODIES_LOWER_001_V_001'),
+    eyes: GetHashKey('CLOTHING_ITEM_F_EYES_001_TINT_001'),
+    head: GetHashKey('CLOTHING_ITEM_F_HEAD_001_V_001'),
+    hair: GetHashKey('CLOTHING_ITEM_F_HAIR_001_BLONDE'),
+  };
+
+  private chosenComponents: BaseComponents = {};
+
+  private chosenSkinTones = skinTones.male;
+  private chosenHeads = heads.male;
+
+  private chosenSkinTone = 0;
+  private chosenHead = 0;
 
   private male = 0;
   private female = 0;
   private chosen = 0;
 
   private currentGender: 'male' | 'female' = 'male';
+  private wasRunning = false;
 
   constructor() {
     on('onResourceStop', (resourceName: string) => {
       console.log('onResourceStop', resourceName);
-      if (resourceName !== GetCurrentResourceName()) {
+      if (resourceName !== GetCurrentResourceName() && resourceName !== 'ui') {
         return;
       }
+      if (resourceName === 'ui') {
+        if (this.currentState !== CreationState.None) {
+          this.wasRunning = true;
+        }
+      }
       this.destroy();
+    });
+
+    on('onResourceStart', async (resourceName: string) => {
+      if (resourceName === 'ui' && this.wasRunning) {
+        await Delay(1000); // Wait for UI to be ready
+        this.wasRunning = false;
+        this.start();
+      }
     });
   }
 
@@ -166,6 +203,10 @@ class CreationManager {
 
     this.currentState = CreationState.None;
     this.currentGender = 'male';
+  }
+
+  getChosen() {
+    return this.chosen;
   }
 
   async start() {
@@ -286,6 +327,9 @@ class CreationManager {
 
   async chooseGender() {
     emitUI('customization.state', { state: 'transition' });
+    this.chosenComponents = this.currentGender === 'male' ? this.maleComponents : this.femaleComponents;
+    this.chosenSkinTones = this.currentGender === 'male' ? skinTones.male : skinTones.female;
+    this.chosenHeads = this.currentGender === 'male' ? heads.male : heads.female;
     this.chosen = await PVGame.createPed(
       this.currentGender === 'male' ? 'mp_male' : 'mp_female',
       -558.5,
@@ -294,6 +338,7 @@ class CreationManager {
       90,
       true,
     );
+    console.log('Create Chosen Ped', this.male);
     await PVGame.pedIsReadyToRender(this.chosen);
     // await PVGame.setPedComponentsMp(this.chosen, this.maleComponents);
     ClonePedToTarget(this.currentGender === 'male' ? this.male : this.female, this.chosen);
@@ -302,10 +347,13 @@ class CreationManager {
     Log('Create Chosen Ped', this.chosen);
     ForcePedMotionState(this.chosen, PedMotionState.DoNothing, false, 0, false);
     TaskForceMotionState(this.chosen, PedMotionState.DoNothing, false);
+
+    this.freezeChosen();
+
     // FreezeEntityPosition(this.chosen, true);
     await PVCamera.interpolate('CreationTransition', 1500);
     await PVCamera.interpolate('CreationDressing', 750);
-    emitUI('customization.state', { state: 'info' });
+    emitUI('customization.state', { state: 'info', components: this.chosenComponents });
     this.currentState = CreationState.NameSelection;
   }
 
@@ -342,7 +390,7 @@ class CreationManager {
   private async createMFPeds() {
     this.male = await PVGame.createPed('mp_male', -558.5, -3775.45, 237.66, 90, true);
     await PVGame.pedIsReadyToRender(this.male);
-    await PVGame.setPedComponentsMp(this.male, this.maleComponents);
+    await PVGame.setPedComponentsMp(this.male, Object.values(this.maleComponents));
     await PVGame.removePedComponentCategory(this.male, GetHashKey('PANTS'));
     UpdateShopItemWearableState(
       this.male,
@@ -369,7 +417,7 @@ class CreationManager {
 
     this.female = await PVGame.createPed('mp_female', -558.5, -3776.9, 237.66, 90, true);
     await PVGame.pedIsReadyToRender(this.female);
-    await PVGame.setPedComponentsMp(this.female, this.femaleComponents);
+    await PVGame.setPedComponentsMp(this.female, Object.values(this.femaleComponents));
     // await PVGame.removePedComponent(this.female, GetHashKey('CLOTHING_ITEM_F_PANTS_000_TINT_001'));
 
     UpdateShopItemWearableState(
@@ -405,11 +453,33 @@ class CreationManager {
     this.chosen = 0;
   }
 
-  rotateChosen(heading: number) {
+  private freezeChosen = debounce(1500, () => {
+    PVGame.playAnimTask(
+      {
+        dict: 'amb_misc@world_human_door_knock@male_a@stand_exit',
+        anim: 'exit_front',
+        flags: AnimFlag.STOP_LAST_FRAME + AnimFlag.ENABLE_PLAYER_CONTROL,
+        delta: 1,
+        blendInSpeed: 1,
+        blendOutSpeed: -1,
+      },
+      this.chosen,
+    );
+  });
+
+  private unfreezeChosen() {
+    StopAnimTask(this.chosen, 'amb_misc@world_human_door_knock@male_a@stand_exit', 'exit_front', -8.0);
+  }
+
+  async rotateChosen(heading: number) {
     if (this.currentState !== CreationState.NameSelection) {
       return;
     }
+
+    this.unfreezeChosen();
+    await Delay(100);
     SetPedDesiredHeading(this.chosen, heading);
+    this.freezeChosen();
   }
 
   chooseCamera(camera: 'body' | 'face') {
@@ -423,6 +493,87 @@ class CreationManager {
     }
   }
 
+  setUIComponents() {
+    emitUI('customization.state', { components: this.chosenComponents });
+  }
+
+  async setSkinTone(skinTone: number, updatePed = true) {
+    if (this.currentState !== CreationState.NameSelection) {
+      return;
+    }
+
+    const bodyTypeIndex = Object.entries(bodyTypes).findIndex(
+      ([key, value]) => value.hash === this.chosenComponents.body,
+    );
+
+    Log('setSkinTone', skinTone);
+    if (skinTone >= 0 && skinTone < this.chosenSkinTones.length) {
+      this.chosenSkinTone = skinTone;
+      this.chosenComponents.upperBody = this.chosenSkinTones[skinTone][bodyTypeIndex].upperBody;
+      this.chosenComponents.lowerBody = this.chosenSkinTones[skinTone][bodyTypeIndex].lowerBody;
+      await PVGame.setPedComponentsMp(this.chosen, Object.values(this.chosenSkinTones[skinTone][bodyTypeIndex]));
+
+      this.setHead(this.chosenHead, false);
+
+      if (updatePed) {
+        await PVGame.pedIsReadyToRender(this.chosen);
+        PVGame.finalizePedOutfit(this.chosen);
+        this.setUIComponents();
+      }
+    }
+  }
+
+  async setHead(headIndex: number, updatePed = true) {
+    if (this.currentState !== CreationState.NameSelection) {
+      return;
+    }
+    Log('setHead', headIndex);
+
+    if (headIndex >= 0 && headIndex < this.chosenHeads[this.chosenSkinTone].length) {
+      this.chosenHead = headIndex;
+
+      const head = this.chosenHeads[this.chosenSkinTone][headIndex];
+      console.log('head', head);
+
+      this.chosenComponents.head = head;
+
+      await PVGame.setPedComponentsMp(this.chosen, [head]);
+
+      if (updatePed) {
+        await PVGame.pedIsReadyToRender(this.chosen);
+        PVGame.finalizePedOutfit(this.chosen);
+        this.setUIComponents();
+      }
+    }
+  }
+
+  clearTeethAnim = debounce(10_000, () => {
+    ClearFacialIdleAnimOverride(this.chosen);
+    SetFacialIdleAnimOverride(this.chosen, 'portrait_normal', 'face_human@gen_male@portrait');
+    ClearFacialIdleAnimOverride(this.chosen);
+  });
+
+  async setTeeth(teethIndex: number) {
+    if (this.currentState !== CreationState.NameSelection) {
+      return;
+    }
+
+    const teethOptions = teeth[this.currentGender === 'male' ? 'male' : 'female'];
+
+    ClearFacialIdleAnimOverride(this.chosen);
+    SetFacialIdleAnimOverride(this.chosen, 'Face_Dentistry_Loop', 'FACE_HUMAN@GEN_MALE@BASE');
+    this.clearTeethAnim();
+
+    Log('setTeeth', teethIndex);
+    if (teethIndex >= 0 && teethIndex < teethOptions.length) {
+      this.chosenComponents.teeth = teethOptions[teethIndex];
+      await PVGame.setPedComponentsMp(this.chosen, [this.chosenComponents.teeth]);
+      await PVGame.pedIsReadyToRender(this.chosen);
+      PVGame.finalizePedOutfit(this.chosen);
+      this.setUIComponents();
+    }
+  }
+
   async setBodyType(bodyType: number) {
     if (this.currentState !== CreationState.NameSelection) {
       return;
@@ -430,9 +581,12 @@ class CreationManager {
 
     if (bodyType in bodyTypes) {
       Log('setBodyType', bodyTypes[bodyType]);
+      this.chosenComponents.body = bodyTypes[bodyType].hash;
+      this.setSkinTone(this.chosenSkinTone, false);
       await PVGame.equipMetaPedOutfit(this.chosen, bodyTypes[bodyType].hash);
       await PVGame.pedIsReadyToRender(this.chosen);
       PVGame.finalizePedOutfit(this.chosen);
+      this.setUIComponents();
     }
   }
 
@@ -468,6 +622,15 @@ class CreationManager {
         SetCharExpression(this.chosen, feature, value);
       }
     }
+    UpdatePedVariation(this.chosen, false, true, true, true, false);
+  }
+
+  async setFaceFeature(feature: number, value: number) {
+    if (this.currentState !== CreationState.NameSelection) {
+      return;
+    }
+    Log('setFaceFeature', feature, value);
+    SetPedFaceFeature(this.chosen, feature, value);
     UpdatePedVariation(this.chosen, false, true, true, true, false);
   }
 

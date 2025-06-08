@@ -79,6 +79,8 @@ declare namespace Game {
     overlays: Record<string, any>;
   }
 
+  type FaceFeatures = Record<string, number>;
+
   interface Outfit {
     id: number;
     name: string;

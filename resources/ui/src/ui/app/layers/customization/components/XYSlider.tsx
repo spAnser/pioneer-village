@@ -28,7 +28,6 @@ const XYContents = styled.div`
   display: none;
   justify-content: center;
   align-items: center;
-  padding: ${uiSize(32)};
 
   &.active {
     display: flex;
@@ -67,43 +66,6 @@ const XYGridMarker = styled.div`
   background-color: ${theme.colors.white.hex};
   border-radius: 50%;
   transform: translate(-50%, -50%);
-`;
-
-const XYLabel = styled.div`
-  position: absolute;
-  font-size: ${uiSize(16)};
-  width: 100%;
-  text-align: center;
-`;
-
-const XLabel = styled(XYLabel)`
-  left: 50%;
-  transform: translateX(-50%);
-`;
-
-const YLabel = styled(XYLabel)`
-  transform: translateY(-100%) rotateZ(-90deg);
-`;
-
-const XStartLabel = styled(XLabel)`
-  top: -${uiSize(32)};
-  transform-origin: center bottom;
-`;
-const XEndLabel = styled(XLabel)`
-  bottom: -${uiSize(32)};
-  transform-origin: center top;
-`;
-const YStartLabel = styled(YLabel)`
-  top: 0;
-  left: calc(-100% - ${uiSize(16)});
-
-  transform-origin: right bottom;
-`;
-const YEndLabel = styled(YLabel)`
-  top: 100%;
-  right: calc(-100% - ${uiSize(32)});
-
-  transform-origin: left bottom;
 `;
 
 interface Props {
@@ -155,7 +117,6 @@ export default class XYSlider extends Component<Props, State> {
   }
 
   toggleContent() {
-    // const contentHeight = this.refContent?.current?.scrollHeight || 'auto';
     this.setState({ active: !this.state.active });
   }
 
@@ -170,7 +131,7 @@ export default class XYSlider extends Component<Props, State> {
     }
     if (e.button !== 0) return;
 
-    const target = e.target as HTMLElement;
+    // const target = e.target as HTMLElement;
     this.setState({ isDragging: true });
     this.onmousemove(e, true);
   }
@@ -203,6 +164,7 @@ export default class XYSlider extends Component<Props, State> {
       this.props.onChange(xValue, yValue);
     }
   }
+
   onmouseup(e: MouseEvent) {
     this.setState({ isDragging: false });
   }
@@ -224,11 +186,7 @@ export default class XYSlider extends Component<Props, State> {
       <XYContainer className={this.props.className}>
         <XYTitle onClick={this.toggleContent.bind(this)}>{this.props.label}</XYTitle>
         <XYContents ref={this.refContent} className={this.state.active ? 'active' : ''}>
-          <XYGrid ref={this.refGrid} onMousedown={this.onmousedown.bind(this)}>
-            <XStartLabel>X Start Axis</XStartLabel>
-            <XEndLabel>X End Axis</XEndLabel>
-            <YStartLabel>Y Start Axis</YStartLabel>
-            <YEndLabel>Y End Axis</YEndLabel>
+          <XYGrid ref={this.refGrid} onMouseDown={this.onmousedown.bind(this)}>
             <XYGridMarker style={{ top: this.top(), left: this.left() }} />
           </XYGrid>
         </XYContents>

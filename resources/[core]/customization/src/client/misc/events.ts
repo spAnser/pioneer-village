@@ -23,6 +23,19 @@ onUI('customization.set-state', (state) => {
   creationManager.setState(state);
 });
 
+onUI('customization.set-skin-tone', (skinTone) => {
+  creationManager.setSkinTone(skinTone);
+});
+
+onUI('customization.set-head', (head) => {
+  creationManager.setHead(head);
+});
+
+onUI('customization.set-teeth', (teeth) => {
+  Log('customization.set-teeth', teeth);
+  creationManager.setTeeth(teeth);
+});
+
 onUI('customization.set-body-type', (bodyType) => {
   creationManager.setBodyType(bodyType);
 });
@@ -36,11 +49,21 @@ onUI('customization.set-face-option', (options) => {
   creationManager.setFaceOptions(options);
 });
 
+onUI('customization.set-face-feature', (feature, value) => {
+  Log('customization.set-face-feature', feature, value);
+  creationManager.setFaceFeature(feature, value);
+});
+
+onUI('customization.rotate-chosen', (rotation) => {
+  creationManager.rotateChosen(rotation);
+});
+
 RegisterCommand(
   'set_face_option',
   async (source: number, args: string[]) => {
     const ped = args[2] ? Number(args[2]) : PlayerPedId();
     SetCharExpression(ped, Number(args[0]), Number(args[1]));
+    console.log(`SetCharExpression(${ped}, ${Number(args[0])}, ${Number(args[1])})`);
     UpdatePedVariation(ped, false, true, true, true, false);
   },
   false,

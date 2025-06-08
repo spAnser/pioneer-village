@@ -104,3 +104,11 @@ export const ModalButton = styled.button`
     height: ${uiSize(24)};
   }
 `;
+
+export const BottomControls = styled.div`
+  position: absolute;
+  bottom: ${uiSize(16)};
+  width: 25vw;
+  left: 50%;
+  transform: translateX(-50%);
+`;

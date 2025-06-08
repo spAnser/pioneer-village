@@ -49,6 +49,31 @@ const RContainer = styled.div`
     left: 75%;
     transform: translate(-50%, -50%);
   }
+
+  &.rotation {
+    border-top: none;
+    padding: 0;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .markers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: ${uiSize(10)};
+    font-size: ${uiSize(14)};
+    font-weight: bold;
+    color: ${theme.colors.gray50.hex};
+    width: calc(100% + ${uiSize(70)});
+    margin-left: -${uiSize(35)};
+
+    span {
+      width: 100%;
+      text-align: center;
+    }
+  }
 `;
 
 const RTitle = styled.div`
@@ -56,17 +81,18 @@ const RTitle = styled.div`
   margin-bottom: ${uiSize(10)};
 `;
 
-interface Props {
-  label: string;
+type Props = {
+  label?: string;
   labels?: string[];
-  onChange: (value: number) => void;
+  labelsAlt?: string[];
   defaultValue?: number;
   min?: number;
   max: number;
   step?: number;
   className?: string;
   vertical?: boolean;
-}
+  onChange: (value: number) => void;
+};
 
 interface State {
   isDragging: boolean;
@@ -91,13 +117,26 @@ export default class XYSlider extends Component<Props, State> {
     this.props.onChange(value);
   }
 
+  onMouseDown = (e: MouseEvent) => {
+    if (e.button === 2) {
+      const value = this.props.defaultValue || 0;
+      console.log('value', value);
+      this.setState({ value });
+      this.props.onChange(value);
+      return;
+    }
+    if (e.button !== 0) return;
+  };
+
   render() {
     return (
       <RContainer className={[this.props.className, this.props.vertical && 'vertical'].join(' ')}>
-        <RTitle>
-          {this.props.label}
-          {this.props.labels && `: ${this.props.labels[this.state.value]}`}
-        </RTitle>
+        {(this.props.label || this.props.labels) && (
+          <RTitle>
+            {this.props.label}
+            {this.props.labels && `: ${this.props.labels[this.state.value]}`}
+          </RTitle>
+        )}
         <input
           type="range"
           onChange={this.updateValue.bind(this)}
@@ -105,7 +144,15 @@ export default class XYSlider extends Component<Props, State> {
           min={this.props.min || 0}
           max={this.props.max}
           step={this.props.step || 1}
+          onMouseDown={this.onMouseDown.bind(this)}
         />
+        {this.props.labelsAlt && (
+          <div className="markers">
+            {this.props.labelsAlt.map((label, index) => (
+              <span key={index}>{label}</span>
+            ))}
+          </div>
+        )}
       </RContainer>
     );
   }

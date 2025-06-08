@@ -181,6 +181,7 @@ export type Prisma.CharactersCreateInput = {
     ownerId: number,
     characterData: Omit<Game.Character, 'accountId' | 'id' | 'createdAt' | 'face'>,
     faceData: Game.Face,
+    faceFeatures?: Game.FaceFeatures, // TODO: Make this required
   ): Promise<PrismaCharacterWithFace | null> {
     console.log('ownerId', ownerId);
     const character = await this.prisma.characters.create({
@@ -188,6 +189,7 @@ export type Prisma.CharactersCreateInput = {
         accountId: ownerId,
         ...characterData,
         dateOfBirth: new Date(characterData.dateOfBirth),
+        // features: JSON.stringify(faceFeatures),
       },
     });
     await this.prisma.faces.create({ data: { ...faceData, characterId: character.id } });

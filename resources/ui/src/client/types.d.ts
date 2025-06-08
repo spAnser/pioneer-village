@@ -66,9 +66,14 @@ declare interface UIEvents {
   ['customization.highlight']: (gender: 'male' | 'female') => void;
   ['customization.choose-gender']: () => void;
   ['customization.set-state']: (state: Customization.State) => void;
+  ['customization.set-skin-tone']: (skinTone: number) => void;
+  ['customization.set-head']: (head: number) => void;
+  ['customization.set-teeth']: (head: number) => void;
   ['customization.set-body-type']: (bodyType: number) => void;
   ['customization.set-waist']: (waist: number) => void;
+  ['customization.set-face-feature']: (feature: number, value: number) => void;
   ['customization.set-face-option']: (faceOptions: Record<string, number>) => void;
+  ['customization.rotate-chosen']: (rotation: number) => void;
 
   ['customization.set-tint-by-category']: (category: string, tint: Customization.Palette) => void;
   ['customization.remove-tint-by-category']: (category: string) => void;
