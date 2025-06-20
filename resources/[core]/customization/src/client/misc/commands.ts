@@ -1,12 +1,31 @@
 import { emitUI, focusUI, onUI, PVGame } from '@lib/client';
 import { ColorPalettes } from '@lib/shared/color-palettes';
-import TextureTypes from '../data/texture-types';
 import BaseOverlay from '../data/base-overlay';
 import OverlayInfo from '../data/overlay-info';
 import { paletteManager } from '../managers/palette-manager';
 import { Log } from '@lib/client/comms/ui';
+import { creationManager } from '../managers/creation-manager';
 
 const TextureIDs: Map<number, number> = new Map();
+
+RegisterCommand(
+  'overlay_test',
+  () => {
+    const overlay: Customization.Overlay = {
+      id: 'mp_u_faov_eyebrow_m_000',
+      opacity: 0.99,
+      palette: {
+        palette: 1,
+        tint0: 2,
+        tint1: 3,
+        tint2: 4,
+      },
+    };
+
+    creationManager.setOverlays(PVGame.playerPed(), [overlay]);
+  },
+  false,
+);
 
 RegisterCommand(
   'overlay',
@@ -22,6 +41,7 @@ RegisterCommand(
 
     const index = paletteManager.getIndexForCategory(playerPed, 'HEADS');
     const { albedo, normal, material } = paletteManager.getGuidsAtIndex(playerPed, index);
+    Log('heads guids', index, albedo, normal, material);
 
     const textureId = RequestTexture(albedo, normal, material);
     Log('textureId', textureId);
@@ -33,14 +53,23 @@ RegisterCommand(
 
     // PED | TextureID | OverlayID[]
 
+    const baseOverlay = creationManager.getBaseOverlay('eyebrows');
+    const overlayInfo = creationManager.getOverlayInfo('mp_u_faov_eyebrow_m_000');
+
+    Log('addLayer', textureId, baseOverlay, overlayInfo);
+
+    if (!baseOverlay || !overlayInfo) {
+      return;
+    }
+
     const layerId = AddTextureLayer(
       textureId,
-      OverlayInfo.eyebrows[0].id,
-      OverlayInfo.eyebrows[0].normal,
-      OverlayInfo.eyebrows[0].ma,
-      BaseOverlay[0].tx_color_type,
-      BaseOverlay[0].tx_opacity,
-      BaseOverlay[0].tx_unk,
+      overlayInfo.id,
+      overlayInfo.normal || 0,
+      overlayInfo.ma || 0,
+      baseOverlay.tx_color_type,
+      baseOverlay.tx_opacity,
+      baseOverlay.tx_unk,
     );
     Log('layerId', layerId);
 
@@ -48,13 +77,13 @@ RegisterCommand(
     SetTextureLayerTint(
       textureId,
       layerId,
-      4, //BaseOverlay[0].palette_color_primary,
-      4, //BaseOverlay[0].palette_color_secondary,
-      3, //BaseOverlay[0].palette_color_tertiary,
+      0, //baseOverlay.palette_color_primary,
+      0, //baseOverlay.palette_color_secondary,
+      0, //baseOverlay.palette_color_tertiary,
     );
 
-    SetTextureLayerSheetGridIndex(textureId, layerId, BaseOverlay[0].var);
-    SetTextureLayerAlpha(textureId, layerId, 0.5); // BaseOverlay[0].opacity
+    SetTextureLayerSheetGridIndex(textureId, layerId, baseOverlay.var);
+    SetTextureLayerAlpha(textureId, layerId, 0.9999); // baseOverlay.opacity
     SetTextureLayerRoughness(textureId, layerId, 0);
 
     await PVGame.waitTextureIsValid(textureId);

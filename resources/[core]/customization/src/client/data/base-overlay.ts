@@ -1,5 +1,5 @@
-const BaseOverlay = [
-  {
+const BaseOverlay: Record<string, Customization.BaseOverlayItem> = {
+  eyebrows: {
     name: 'eyebrows',
     visibility: 0,
     tx_id: 1,
@@ -15,7 +15,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 0.99,
   },
-  {
+  scars: {
     name: 'scars',
     visibility: 0,
     tx_id: 1,
@@ -31,7 +31,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  eyeliners: {
     name: 'eyeliners',
     visibility: 0,
     tx_id: 1,
@@ -47,7 +47,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  lipsticks: {
     name: 'lipsticks',
     visibility: 0,
     tx_id: 1,
@@ -63,7 +63,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  acne: {
     name: 'acne',
     visibility: 0,
     tx_id: 1,
@@ -79,7 +79,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  shadows: {
     name: 'shadows',
     visibility: 0,
     tx_id: 1,
@@ -95,7 +95,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  beardstabble: {
     name: 'beardstabble',
     visibility: 0,
     tx_id: 1,
@@ -111,7 +111,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  paintedmasks: {
     name: 'paintedmasks',
     visibility: 0,
     tx_id: 1,
@@ -127,7 +127,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  ageing: {
     name: 'ageing',
     visibility: 0,
     tx_id: 1,
@@ -143,7 +143,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  blush: {
     name: 'blush',
     visibility: 0,
     tx_id: 1,
@@ -159,7 +159,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  complex: {
     name: 'complex',
     visibility: 0,
     tx_id: 1,
@@ -175,7 +175,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  disc: {
     name: 'disc',
     visibility: 0,
     tx_id: 1,
@@ -191,7 +191,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  foundation: {
     name: 'foundation',
     visibility: 0,
     tx_id: 1,
@@ -207,7 +207,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  freckles: {
     name: 'freckles',
     visibility: 0,
     tx_id: 1,
@@ -223,7 +223,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  grime: {
     name: 'grime',
     visibility: 0,
     tx_id: 1,
@@ -239,7 +239,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  hair: {
     name: 'hair',
     visibility: 0,
     tx_id: 1,
@@ -255,7 +255,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  moles: {
     name: 'moles',
     visibility: 0,
     tx_id: 1,
@@ -271,7 +271,7 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-  {
+  spots: {
     name: 'spots',
     visibility: 0,
     tx_id: 1,
@@ -287,6 +287,6 @@ const BaseOverlay = [
     var: 0,
     opacity: 1.0,
   },
-];
+};
 
 export default BaseOverlay;

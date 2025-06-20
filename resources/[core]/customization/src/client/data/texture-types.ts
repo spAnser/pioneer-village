@@ -1,3 +1,20 @@
+/**
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ * DONT USE
+ */
+
 const TextureTypes = {
   male: {
     albedo: [

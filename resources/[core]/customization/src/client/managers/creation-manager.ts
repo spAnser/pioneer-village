@@ -9,6 +9,9 @@ import skinTones from '../data/skin-tones';
 import heads from '../data/heads';
 import teeth from '../data/teeth';
 import { AnimFlag } from '@lib/flags/anim-flag';
+import BaseOverlay from '../data/base-overlay';
+import OverlayInfo from '../data/overlay-info';
+import { paletteManager } from './palette-manager';
 
 enum CreationState {
   None = -1,
@@ -418,7 +421,7 @@ class CreationManager {
     this.female = await PVGame.createPed('mp_female', -558.5, -3776.9, 237.66, 90, true);
     await PVGame.pedIsReadyToRender(this.female);
     await PVGame.setPedComponentsMp(this.female, Object.values(this.femaleComponents));
-    // await PVGame.removePedComponent(this.female, GetHashKey('CLOTHING_ITEM_F_PANTS_000_TINT_001'));
+    await PVGame.removePedComponent(this.female, GetHashKey('CLOTHING_ITEM_F_PANTS_000_TINT_001'));
 
     UpdateShopItemWearableState(
       this.female,
@@ -643,6 +646,139 @@ class CreationManager {
     await PVGame.setPedComponentsMp(this.chosen, components);
     await PVGame.pedIsReadyToRender(this.chosen);
     PVGame.finalizePedOutfit(this.chosen);
+  }
+
+  getBaseOverlay(name: string): Customization.BaseOverlayItem | undefined {
+    if (name in BaseOverlay) {
+      return BaseOverlay[name];
+    }
+  }
+
+  getOverlayInfo(id: string | number): UI.Customization.OverlayJsonData | undefined {
+    if (typeof id === 'string') {
+      id = GetHashKey(id);
+    }
+    for (const [category, overlays] of Object.entries(OverlayInfo)) {
+      if (overlays.length > 0) {
+        for (const overlay of overlays) {
+          if (overlay.id === id) {
+            return overlay;
+          }
+        }
+      }
+    }
+  }
+
+  addLayer(textureId: number, overlay: Customization.Overlay) {
+    // TODO: Add a way to adjust category
+    const baseOverlay = this.getBaseOverlay('eyebrows');
+    const overlayInfo = this.getOverlayInfo(overlay.id);
+
+    Log('addLayer', textureId, overlay, baseOverlay, overlayInfo);
+
+    if (!baseOverlay || !overlayInfo) {
+      return;
+    }
+
+    const layerId = AddTextureLayer(
+      textureId,
+      overlayInfo.id,
+      overlayInfo.normal || 0,
+      overlayInfo.ma || 0,
+      baseOverlay.tx_color_type,
+      overlay.opacity,
+      baseOverlay.tx_unk,
+    );
+    Log('layerId', layerId);
+    if (layerId === -1) {
+      return;
+    }
+
+    if (overlay.palette) {
+      SetTextureLayerPallete(textureId, layerId, overlay.palette.palette);
+      SetTextureLayerTint(textureId, layerId, overlay.palette.tint0, overlay.palette.tint1, overlay.palette.tint2);
+    }
+
+    SetTextureLayerSheetGridIndex(textureId, layerId, baseOverlay.var);
+    SetTextureLayerAlpha(textureId, layerId, overlay.opacity);
+    if ('roughness' in overlay && overlay.roughness !== undefined) {
+      SetTextureLayerRoughness(textureId, layerId, overlay.roughness);
+    }
+  }
+
+  async setOverlays(ped: number, overlays: Customization.Overlay[]) {
+    Log('setOverlays', overlays);
+    await this.releasePedTextures(ped, true);
+
+    const textureIds: number[] = [];
+
+    const index = paletteManager.getIndexForCategory(ped, 'HEADS');
+    const { albedo, normal, material } = paletteManager.getGuidsAtIndex(ped, index);
+    Log('heads guids', index, albedo, normal, material);
+
+    const textureId = RequestTexture(albedo, normal, material);
+    Log('textureId', textureId);
+    await this.textureId(textureId, 1, 25);
+    textureIds.push(textureId);
+
+    for (const overlay of overlays) {
+      this.addLayer(textureId, overlay);
+    }
+
+    await PVGame.waitTextureIsValid(textureId);
+    ApplyTextureOnPed(ped, GetHashKey('heads'), textureId);
+    UpdatePedTexture(textureId);
+
+    this.setPedTextures(ped, textureIds);
+
+    await PVGame.pedIsReadyToRender(ped);
+    PVGame.finalizePedOutfit(ped);
+    Log('DONE');
+  }
+
+  // Stuff to maybe move to PVGame
+
+  setPedTextures(ped: number, texturesIds: number[]) {
+    const textureIdsString = texturesIds.join(',');
+    // Log('setPedTextures', ped, textureIdsString);
+    Entity(ped).state.set('textures', textureIdsString, false);
+  }
+
+  getPedTextures(ped: number): number[] {
+    const textures = Entity(ped).state.textures || '';
+    // Log('getPedTextures', ped, textures);
+    if (typeof textures === 'string') {
+      return textures.split(',').map((id) => parseInt(id, 10));
+    }
+    return [];
+  }
+
+  async releasePedTextures(ped: number, awaitRemoval = false) {
+    const pedTextures = this.getPedTextures(ped);
+    // Log('releasePedTextures', ped, pedTextures);
+    for (const textureId of pedTextures) {
+      // Log('Removing texture', textureId);
+      RemoveTexture(textureId);
+      if (awaitRemoval) {
+        await this.textureId(textureId, false, 25);
+      }
+    }
+    this.setPedTextures(ped, []);
+  }
+
+  async textureId(textureId: number, exists: 1 | false = 1, delay = 125): Promise<boolean> {
+    return new Promise((resolve) => {
+      if (DoesTextureExist(textureId) === exists) {
+        resolve(true);
+      } else {
+        const interval = setInterval(() => {
+          if (DoesTextureExist(textureId) === exists) {
+            resolve(true);
+            clearInterval(interval);
+          }
+        }, delay);
+      }
+    });
   }
 }
 

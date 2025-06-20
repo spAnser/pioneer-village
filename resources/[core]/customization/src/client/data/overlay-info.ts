@@ -1,4 +1,4 @@
-const OverlayInfo = {
+const OverlayInfo: Record<string, UI.Customization.OverlayJsonData[]> = {
   eyebrows: [
     {
       id: GetHashKey('mp_u_faov_eyebrow_m_000'),

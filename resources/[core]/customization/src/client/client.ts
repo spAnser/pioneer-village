@@ -3,8 +3,6 @@ import './misc/commands';
 import './misc/exports';
 import './misc/test';
 
-import { creationManager } from './managers/creation-manager';
-
 // const strings = LoadResourceFile('research', 'files/strings.txt').split('\n');
 //
 // const find = [
@@ -115,3 +113,7 @@ import { creationManager } from './managers/creation-manager';
 // MotionState_StealthCrouch_RunStart,
 // MotionState_StealthCrouch_Run,
 // MotionState_StealthCrouch_RunStop,
+
+// AddStateBagChangeHandler('textures', '', (bagName: string, key: string, value: string) => {
+//   Log('Textures state changed', bagName, key, value);
+// });

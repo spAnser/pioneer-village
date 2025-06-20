@@ -1,5 +1,6 @@
 import { PVGame } from '@lib/client';
 import horseDrawables from '../data/horse-drawables';
+import { Log } from '@lib/client/comms/ui';
 
 class PaletteManager {
   protected static instance: PaletteManager;
@@ -82,6 +83,8 @@ class PaletteManager {
   };
 
   getIndexForCategory: Customization.GetIndexForCategory = (entity, category) => {
+    Log('getIndexForCategory', entity, category);
+
     if (typeof category === 'string') {
       category = GetHashKey(category);
     }

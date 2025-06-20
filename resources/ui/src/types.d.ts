@@ -139,6 +139,20 @@ declare namespace UI.Customization {
     name: string;
     components: ComponentJsonData[];
   }
+
+  interface OverlayJsonData {
+    id: number | string;
+    albedo: number | string;
+    normal?: number | string;
+    ma?: number | string;
+    name?: string;
+    type?: '0' | '1';
+  }
+
+  interface OverlayJson {
+    name: string;
+    components: OverlayJsonData[];
+  }
 }
 
 declare namespace UI.HUD {
