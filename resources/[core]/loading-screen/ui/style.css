@@ -72,3 +72,14 @@ p {
   font-size: 1.25vh;
   font-family: Caveat;
 }
+
+
+.loading-bar-sub-text {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(3vh);
+  color: #aaa;
+  font-size: 1.125vh;
+  font-family: Caveat;
+}

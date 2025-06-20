@@ -7,6 +7,10 @@ window.addEventListener('message', function (event) {
   // console.log(event, event.data);
   console.log('============================');
   console.log(JSON.stringify(event.data));
+
+  const progress = document.getElementById('progress');
+  progress.classList.remove('hide');
+
   const { type: eventType, loadFraction, eventName, message } = event.data;
   if (eventType) {
     console.log('eventType', eventType);
@@ -20,22 +24,22 @@ window.addEventListener('message', function (event) {
   }
   if (loadFraction) {
     curLoadFraction = loadFraction;
-    const progressBar = document.getElementById('progress');
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.classList.remove('hide');
     progressBar.style.width = `${curLoadFraction * 100}%`;
-
-    if (curLoadFraction >= 1) {
-      progressBar.classList.add('hide');
-    }
   }
   if (eventName) {
     console.log('eventName', eventName);
   }
   if (message) {
     console.log('message', message);
+    const progressSubText = document.getElementById('progress-sub-text');
+    progressSubText.textContent = message;
   }
 
   const progressText = document.getElementById('progress-text');
   progressText.textContent = `${curEventType} | ${Math.round(curLoadFraction * 100)}%`;
+
   // var item = event.data;
   // if (item.type === 'loading_info') {
   //   if (item.status == true) {
