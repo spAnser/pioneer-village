@@ -1,15 +1,11 @@
-import {
-  Container as PrismaContainer,
-  Inventory as PrismaInventory,
-  Item as PrismaItem,
-} from '../../../node_modules/.prisma/client/index';
-
-type PrismaInventoryWithContainerAndItems = PrismaInventory & { container: PrismaContainer & { Item: PrismaItem[] } };
-
-import { PrismaClient, Prisma } from '@prisma/client';
+import { eq, inArray } from 'drizzle-orm';
+import { db } from '../db/connection';
+import { inventory, container, item, type Inventory, type Container, type Item } from '../db/schema';
 import { logInfo } from '../helpers/log';
 import PVItems from '../../../lib/shared/items';
 import InventoryTypes from '../../../lib/shared/inventory-types';
+
+type InventoryWithContainerAndItems = Inventory & { container: Container & { items: Item[] } };
 const tenDollars = new Array(10).fill({ identifier: 'PV_DOLLAR'.GetHashKey(), slot: 0 });
 
 const startingInventory = [...tenDollars];
@@ -17,81 +13,77 @@ const startingInventory = [...tenDollars];
 class Inventories {
   static readonly instance: Inventories = new Inventories();
 
-  prisma: PrismaClient;
-
   constructor() {
     if (Inventories.instance) {
       throw new Error('Error: Instantiation failed: Use Inventories.Instance instead of new.');
     }
   }
 
-  async setDB(prisma: PrismaClient) {
-    this.prisma = prisma;
-
-    // await this.createInventory('character:1');
-    // await this.createInventory('clothing:1');
-    // await this.createInventory('horse:1');
-    // for (let n = 13; n--; ) {
-    //   await this.prisma.item.createMany({
-    //     data: [
-    //       {
-    //         identifier: 'PV_RAW_MEAT'.GetHashKey(),
-    //         slot: 1,
-    //         containerId: 1,
-    //       },
-    //     ],
-    //   });
-    // }
-    // for (let n = 5; n--; ) {
-    //   await this.prisma.item.createMany({
-    //     data: [
-    //       {
-    //         identifier: 'PV_COOKED_MEAT'.GetHashKey(),
-    //         slot: 3,
-    //         containerId: 1,
-    //       },
-    //     ],
-    //   });
-    // }
-  }
-
   async hasInventory(ownerId: number, type: number): Promise<boolean> {
     return false;
   }
 
-  async createInventory(identifier: string): Promise<PrismaInventory | undefined> {
+  async createInventory(identifier: string): Promise<Inventory | undefined> {
     try {
-      return this.prisma.inventory.create({
-        data: {
-          identifier,
-          container: {
-            create: {
-              Item: {
-                create: identifier.startsWith('character:') ? startingInventory : [],
-              },
-            },
-          },
-        },
-      });
+      // Create container first
+      const newContainer = await db.insert(container).values({}).returning();
+      
+      // Create inventory
+      const newInventory = await db.insert(inventory).values({
+        identifier,
+        containerId: newContainer[0].id,
+      }).returning();
+
+      // Add starting items if it's a character inventory
+      if (identifier.startsWith('character:')) {
+        for (const startingItem of startingInventory) {
+          await db.insert(item).values({
+            identifier: startingItem.identifier,
+            slot: startingItem.slot,
+            containerId: newContainer[0].id,
+          });
+        }
+      }
+
+      return newInventory[0];
     } catch (error) {
       console.error(error);
     }
   }
 
-  async getInventory(identifier: string): Promise<PrismaInventoryWithContainerAndItems | null> {
+  async getInventory(identifier: string): Promise<InventoryWithContainerAndItems | null> {
     try {
-      return await this.prisma.inventory.findFirst({
-        where: {
-          identifier,
+      const inventoryResult = await db
+        .select()
+        .from(inventory)
+        .leftJoin(container, eq(inventory.containerId, container.id))
+        .where(eq(inventory.identifier, identifier))
+        .limit(1);
+
+      if (inventoryResult.length === 0) {
+        return null;
+      }
+
+      const inventoryData = inventoryResult[0].Inventory;
+      const containerData = inventoryResult[0].Container;
+
+      if (!inventoryData || !containerData) {
+        return null;
+      }
+
+      // Get items for this container
+      const items = await db
+        .select()
+        .from(item)
+        .where(eq(item.containerId, containerData.id));
+
+      return {
+        ...inventoryData,
+        container: {
+          ...containerData,
+          items,
         },
-        include: {
-          container: {
-            include: {
-              Item: true,
-            },
-          },
-        },
-      });
+      };
     } catch (error) {
       console.error(error);
       return null;
@@ -113,57 +105,53 @@ class Inventories {
       return;
     }
     const inventoryType = this.getInventoryType(dbInventory.identifier);
-    const inventory: UI.Inventory.LoadData = {
+    const inventoryUI: UI.Inventory.LoadData = {
       identifier: dbInventory.identifier,
       slots: inventoryType.slots,
       maxWeight: inventoryType.maxWeight,
       container: {
-        locked: dbInventory.container.locked,
-        sealed: dbInventory.container.sealed,
+        locked: dbInventory.container.locked || false,
+        sealed: dbInventory.container.sealed || 'NONE',
       },
       items: {},
     };
 
-    for (const item of dbInventory.container.Item) {
-      // logInfo('item', item);
-      if (item.slot === null || item.slot === undefined) {
+    for (const inventoryItem of dbInventory.container.items) {
+      // logInfo('item', inventoryItem);
+      if (inventoryItem.slot === null || inventoryItem.slot === undefined) {
         continue;
       }
-      if (inventory.items[item.slot]) {
-        inventory.items[item.slot].quantity++;
-        inventory.items[item.slot].ids.push(item.id);
-        inventory.items[item.slot].metadatas.push(item.metadata);
-        inventory.items[item.slot].durabilities.push(item.durability);
+      if (inventoryUI.items[inventoryItem.slot]) {
+        inventoryUI.items[inventoryItem.slot].quantity++;
+        inventoryUI.items[inventoryItem.slot].ids.push(inventoryItem.id);
+        inventoryUI.items[inventoryItem.slot].metadatas.push(inventoryItem.metadata);
+        inventoryUI.items[inventoryItem.slot].durabilities.push(inventoryItem.durability);
       } else {
-        inventory.items[item.slot] = {
-          identifier: item.identifier,
-          ids: [item.id],
-          metadatas: [item.metadata],
-          durabilities: [item.durability],
+        inventoryUI.items[inventoryItem.slot] = {
+          identifier: inventoryItem.identifier,
+          ids: [inventoryItem.id],
+          metadatas: [inventoryItem.metadata],
+          durabilities: [inventoryItem.durability],
           quantity: 1,
         };
       }
     }
 
-    return inventory;
+    return inventoryUI;
   }
 
-  findSlotForItem(inventory: PrismaInventoryWithContainerAndItems, itemIdentifier: number) {
+  findSlotForItem(inventory: InventoryWithContainerAndItems, itemIdentifier: number) {
     const inventoryType = this.getInventoryType(inventory.identifier);
 
     const slots: Array<boolean | number> = new Array(inventoryType.slots).fill(false);
-    // console.log('inventory.container.Item', inventory.container.Item);
     const slotCounts: Record<number, number> = {};
-    for (const item of inventory.container.Item) {
-      if (typeof item.slot !== 'number') {
+    for (const inventoryItem of inventory.container.items) {
+      if (typeof inventoryItem.slot !== 'number') {
         continue;
       }
-      slots[item.slot] = item.identifier;
-      slotCounts[item.slot] = (slotCounts[item.slot] || 0) + 1;
+      slots[inventoryItem.slot] = inventoryItem.identifier;
+      slotCounts[inventoryItem.slot] = (slotCounts[inventoryItem.slot] || 0) + 1;
     }
-
-    // console.log('slots', slots);
-    // console.log('slotCounts', slotCounts);
 
     for (const s in slots) {
       const slot = Number(s);
@@ -178,52 +166,48 @@ class Inventories {
     return slots.indexOf(false);
   }
 
-  isAllowedInInventory(identifier: string, item: Inventory.Item): boolean {
+  isAllowedInInventory(identifier: string, inventoryItem: Inventory.Item): boolean {
     const inventoryType = this.getInventoryType(identifier);
     let isAllowed = false;
-    console.log('inventoryType', inventoryType);
-    console.log('identifier', identifier);
-    console.log('item', item);
-    console.log(inventoryType.restrictions, item.restriction);
-    console.log(inventoryType.restrictions & item.restriction);
-    if (inventoryType.restrictions === 0 || inventoryType.restrictions & item.restriction) {
+    if (inventoryType.restrictions === 0 || inventoryType.restrictions & inventoryItem.restriction) {
       isAllowed = true;
     }
-
     return isAllowed;
   }
 
   async changeDurability(itemId: number, durability = -1): Promise<{ success: boolean; inventoryIdentifier?: string }> {
-    const item = await this.prisma.item.findUnique({
-      where: {
-        id: itemId,
-      },
-    });
+    try {
+      const itemResult = await db
+        .select()
+        .from(item)
+        .where(eq(item.id, itemId))
+        .limit(1);
 
-    if (!item || item.durability === null) {
+      if (itemResult.length === 0 || itemResult[0].durability === null) {
+        return { success: false };
+      }
+
+      const inventoryResult = await db
+        .select()
+        .from(inventory)
+        .where(eq(inventory.containerId, itemResult[0].containerId))
+        .limit(1);
+
+      const newDurability = Math.max((itemResult[0].durability || 0) + durability, 0);
+      const durabilityUpdate = await db
+        .update(item)
+        .set({ durability: newDurability })
+        .where(eq(item.id, itemId))
+        .returning();
+
+      return {
+        success: durabilityUpdate.length > 0 && durabilityUpdate[0].durability === newDurability,
+        inventoryIdentifier: inventoryResult[0]?.identifier,
+      };
+    } catch (error) {
+      console.error(error);
       return { success: false };
     }
-
-    const inventory = await this.prisma.inventory.findUnique({
-      where: {
-        containerId: item?.containerId,
-      },
-    });
-
-    const newDurability = Math.max(item.durability + durability, 0);
-    const durabilityUpdate = await this.prisma.item.update({
-      where: {
-        id: itemId,
-      },
-      data: {
-        durability: newDurability,
-      },
-    });
-
-    return {
-      success: durabilityUpdate.durability === newDurability,
-      inventoryIdentifier: inventory?.identifier,
-    };
   }
 
   async addItem(
@@ -234,13 +218,13 @@ class Inventories {
     durability: number | null = null,
   ): Promise<UI.Inventory.AddData | void> {
     try {
-      const inventory = await this.getInventory(inventoryIdentifier);
+      const inventoryData = await this.getInventory(inventoryIdentifier);
 
-      if (!inventory) {
+      if (!inventoryData) {
         throw new Error('Inventory not found');
       }
 
-      const slot = this.findSlotForItem(inventory, itemIdentifier);
+      const slot = this.findSlotForItem(inventoryData, itemIdentifier);
       logInfo('slot', slot, slot > -1);
 
       if (slot < 0) {
@@ -253,26 +237,25 @@ class Inventories {
       };
 
       for (let n = amount; n--; ) {
-        const item = await this.prisma.item.create({
-          data: {
-            identifier: itemIdentifier,
-            slot,
-            containerId: inventory.containerId,
-            metadata,
-            durability,
-          },
-        });
-        logInfo('item', item);
+        const newItem = await db.insert(item).values({
+          identifier: itemIdentifier,
+          slot,
+          containerId: inventoryData.containerId,
+          metadata,
+          durability,
+        }).returning();
+
+        logInfo('item', newItem[0]);
 
         if (itemAddEvent.items[slot]) {
-          itemAddEvent.items[slot].ids.push(item.id);
+          itemAddEvent.items[slot].ids.push(newItem[0].id);
           itemAddEvent.items[slot].metadatas.push(metadata);
           itemAddEvent.items[slot].durabilities.push(durability);
           itemAddEvent.items[slot].quantity++;
         } else {
           itemAddEvent.items[slot] = {
             identifier: itemIdentifier,
-            ids: [item.id],
+            ids: [newItem[0].id],
             metadatas: [metadata],
             durabilities: [durability],
             quantity: 1,
@@ -295,138 +278,124 @@ class Inventories {
     newSlot: number,
   ): Promise<[UI.Inventory.MoveOrFailData, UI.Inventory.MoveOrFailData | null] | void> {
     try {
+      // Get both inventories
       const oldInventory = await this.getInventory(oldIdentifier);
-      if (!oldInventory) {
-        return;
-      }
-      let newInventory;
-      if (newIdentifier === oldIdentifier) {
-        newInventory = oldInventory;
-      } else {
-        newInventory = await this.getInventory(newIdentifier);
-      }
-      if (!newInventory) {
-        return;
-      }
+      const newInventory = await this.getInventory(newIdentifier);
 
-      const oldItems = oldInventory.container.Item.filter((item) => item.slot === oldSlot);
-      const oldItemIds = oldItems.map((item) => item.id);
-
-      const newItems = newInventory.container.Item.filter((item) => item.slot === newSlot);
-      const newItemIds = newItems.map((item) => item.id);
-
-      logInfo('oldItemIds', oldItemIds);
-      logInfo('newItemIds', newItemIds);
-
-      if (oldItemIds.length === 0 || newItemIds.length === 0) {
-        return;
+      if (!oldInventory || !newInventory) {
+        return [
+          {
+            identifier: oldIdentifier,
+            requestId,
+            requestType: 'stack',
+          } as UI.Inventory.SuccessFailData,
+          null,
+        ];
       }
 
-      if (oldItems[0].identifier !== newItems[0].identifier) {
-        return;
+      // Find the item to move from old slot
+      const oldItem = oldInventory.container.items.find(
+        (itm) => itm.slot === oldSlot && itm.deletedAt === null
+      );
+
+      if (!oldItem) {
+        return [
+          {
+            identifier: oldIdentifier,
+            requestId,
+            requestType: 'stack',
+          } as UI.Inventory.SuccessFailData,
+          null,
+        ];
       }
 
-      const itemData = PVItems[oldItems[0].identifier];
+      // Find existing item in new slot
+      const existingItem = newInventory.container.items.find(
+        (itm) => itm.slot === newSlot && itm.deletedAt === null
+      );
 
-      if (oldItems.length + newItems.length <= itemData.stackSize) {
-        const oldSlotUpdate = await this.prisma.item.updateMany({
-          where: {
-            id: {
-              in: oldItemIds,
-            },
-          },
-          data: {
-            slot: newSlot,
-            containerId: newInventory.containerId,
-          },
-        });
+      if (!existingItem || existingItem.identifier !== oldItem.identifier) {
+        return [
+          {
+            identifier: oldIdentifier,
+            requestId,
+            requestType: 'stack',
+          } as UI.Inventory.SuccessFailData,
+          null,
+        ];
+      }
 
-        if (oldSlotUpdate.count === 0) {
-          return;
-        }
+      // Check if items can be stacked
+      const itemData = PVItems[oldItem.identifier];
+      if (!itemData || itemData.stackSize <= 1) {
+        return [
+          {
+            identifier: oldIdentifier,
+            requestId,
+            requestType: 'stack',
+          } as UI.Inventory.SuccessFailData,
+          null,
+        ];
+      }
 
-        const eventOld: UI.Inventory.MoveData = {
-          charRequestId: `${characterId}:${requestId}`,
+      // Count existing items in the new slot
+      const existingCount = newInventory.container.items.filter(
+        (itm) => itm.slot === newSlot && itm.deletedAt === null
+      ).length;
+
+      if (existingCount >= itemData.stackSize) {
+        return [
+          {
+            identifier: oldIdentifier,
+            requestId,
+            requestType: 'stack',
+          } as UI.Inventory.SuccessFailData,
+          null,
+        ];
+      }
+
+      // Move the item by updating its slot and container
+      await db
+        .update(item)
+        .set({
+          slot: newSlot,
+          containerId: newInventory.containerId,
+        })
+        .where(eq(item.id, oldItem.id));
+
+      // Return success events as MoveData
+      return [
+        {
+          charRequestId: requestId.toString(),
           identifier: oldIdentifier,
           items: {},
           emptySlots: [oldSlot],
-        };
-
-        const eventNew: UI.Inventory.MoveData = {
-          charRequestId: `${characterId}:${requestId}`,
+        } as UI.Inventory.MoveData,
+        {
+          charRequestId: requestId.toString(),
           identifier: newIdentifier,
           items: {
             [newSlot]: {
-              identifier: itemData.identifier,
-              ids: newItemIds.concat(oldItemIds),
-              metadatas: [...newItems.map((item) => item.metadata), ...oldItems.map((item) => item.metadata)],
-              durabilities: [...newItems.map((item) => item.durability), ...oldItems.map((item) => item.durability)],
-              quantity: newItemIds.length + oldItemIds.length,
+              identifier: oldItem.identifier,
+              ids: [oldItem.id],
+              metadatas: [oldItem.metadata],
+              durabilities: [oldItem.durability],
+              quantity: 1,
             },
           },
           emptySlots: [],
-        };
-
-        return [eventOld, eventNew];
-      } else {
-        const diff = itemData.stackSize - newItems.length;
-        const oldItemsMoved = oldItems.slice(0, diff);
-        const oldItemsLeft = oldItems.slice(diff);
-        const oldItemIdsMoved = oldItemIds.slice(0, diff);
-        const oldItemIdsLeft = oldItemIds.slice(diff);
-
-        const oldSlotUpdate = await this.prisma.item.updateMany({
-          where: {
-            id: {
-              in: oldItemIdsMoved,
-            },
-          },
-          data: {
-            slot: newSlot,
-            containerId: newInventory.containerId,
-          },
-        });
-
-        if (oldSlotUpdate.count === 0) {
-          return;
-        }
-        const eventOld: UI.Inventory.MoveData = {
-          charRequestId: `${characterId}:${requestId}`,
-          identifier: oldIdentifier,
-          items: {
-            [oldSlot]: {
-              identifier: itemData.identifier,
-              ids: oldItemIdsLeft,
-              metadatas: oldItemsLeft.map((item) => item.metadata),
-              durabilities: oldItemsLeft.map((item) => item.durability),
-              quantity: oldItemsLeft.length,
-            },
-          },
-          emptySlots: [],
-        };
-
-        const eventNew: UI.Inventory.MoveData = {
-          charRequestId: `${characterId}:${requestId}`,
-          identifier: newIdentifier,
-          items: {
-            [newSlot]: {
-              identifier: itemData.identifier,
-              ids: newItemIds.concat(oldItemIdsMoved),
-              metadatas: [...newItems.map((item) => item.metadata), ...oldItemsMoved.map((item) => item.metadata)],
-              durabilities: [
-                ...newItems.map((item) => item.durability),
-                ...oldItemsMoved.map((item) => item.durability),
-              ],
-              quantity: newItemIds.length + oldItemsMoved.length,
-            },
-          },
-          emptySlots: [],
-        };
-
-        return [eventOld, eventNew];
-      }
+        } as UI.Inventory.MoveData,
+      ];
     } catch (error) {
-      console.error(error);
+      console.error('Error in stackItem:', error);
+      return [
+        {
+          identifier: oldIdentifier,
+          requestId,
+          requestType: 'stack',
+        } as UI.Inventory.SuccessFailData,
+        null,
+      ];
     }
   }
 
@@ -439,208 +408,165 @@ class Inventories {
     newSlot: number,
   ): Promise<[UI.Inventory.MoveOrFailData, UI.Inventory.MoveOrFailData | null] | void> {
     try {
+      // Get both inventories
       const oldInventory = await this.getInventory(oldIdentifier);
-      if (!oldInventory) {
-        return;
+      const newInventory = await this.getInventory(newIdentifier);
+
+      if (!oldInventory || !newInventory) {
+        return [
+          {
+            identifier: oldIdentifier,
+            requestId,
+            requestType: 'move',
+          } as UI.Inventory.SuccessFailData,
+          null,
+        ];
       }
-      let newInventory;
-      if (newIdentifier === oldIdentifier) {
-        newInventory = oldInventory;
+
+      // Find the item to move from old slot
+      const oldItem = oldInventory.container.items.find(
+        (itm) => itm.slot === oldSlot && itm.deletedAt === null
+      );
+
+      if (!oldItem) {
+        return [
+          {
+            identifier: oldIdentifier,
+            requestId,
+            requestType: 'move',
+          } as UI.Inventory.SuccessFailData,
+          null,
+        ];
+      }
+
+      // Check if item is allowed in new inventory
+      const itemData = PVItems[oldItem.identifier];
+      if (!itemData || !this.isAllowedInInventory(newIdentifier, itemData)) {
+        return [
+          {
+            identifier: oldIdentifier,
+            requestId,
+            requestType: 'move',
+          } as UI.Inventory.SuccessFailData,
+          null,
+        ];
+      }
+
+      // Check if new slot is occupied
+      const existingItem = newInventory.container.items.find(
+        (itm) => itm.slot === newSlot && itm.deletedAt === null
+      );
+
+      if (existingItem) {
+        // Swap items if both slots are occupied
+        await db
+          .update(item)
+          .set({
+            slot: oldSlot,
+            containerId: oldInventory.containerId,
+          })
+          .where(eq(item.id, existingItem.id));
+
+        await db
+          .update(item)
+          .set({
+            slot: newSlot,
+            containerId: newInventory.containerId,
+          })
+          .where(eq(item.id, oldItem.id));
+
+        return [
+          {
+            charRequestId: requestId.toString(),
+            identifier: oldIdentifier,
+            items: {
+              [oldSlot]: {
+                identifier: existingItem.identifier,
+                ids: [existingItem.id],
+                metadatas: [existingItem.metadata],
+                durabilities: [existingItem.durability],
+                quantity: 1,
+              },
+            },
+            emptySlots: [],
+          } as UI.Inventory.MoveData,
+          {
+            charRequestId: requestId.toString(),
+            identifier: newIdentifier,
+            items: {
+              [newSlot]: {
+                identifier: oldItem.identifier,
+                ids: [oldItem.id],
+                metadatas: [oldItem.metadata],
+                durabilities: [oldItem.durability],
+                quantity: 1,
+              },
+            },
+            emptySlots: [],
+          } as UI.Inventory.MoveData,
+        ];
       } else {
-        newInventory = await this.getInventory(newIdentifier);
+        // Simple move to empty slot
+        await db
+          .update(item)
+          .set({
+            slot: newSlot,
+            containerId: newInventory.containerId,
+          })
+          .where(eq(item.id, oldItem.id));
+
+        return [
+          {
+            charRequestId: requestId.toString(),
+            identifier: oldIdentifier,
+            items: {},
+            emptySlots: [oldSlot],
+          } as UI.Inventory.MoveData,
+          {
+            charRequestId: requestId.toString(),
+            identifier: newIdentifier,
+            items: {
+              [newSlot]: {
+                identifier: oldItem.identifier,
+                ids: [oldItem.id],
+                metadatas: [oldItem.metadata],
+                durabilities: [oldItem.durability],
+                quantity: 1,
+              },
+            },
+            emptySlots: [],
+          } as UI.Inventory.MoveData,
+        ];
       }
-      if (!newInventory) {
-        return;
-      }
-
-      const oldItems = oldInventory.container.Item.filter((item) => item.slot === oldSlot);
-      const oldItemIds = oldItems.map((item) => item.id);
-
-      const newItems = newInventory.container.Item.filter((item) => item.slot === newSlot);
-      const newItemIds = newItems.map((item) => item.id);
-
-      logInfo('oldItemIds', oldItemIds);
-      logInfo('newItemIds', newItemIds);
-
-      let isAllowed = true;
-      if (oldItems.length > 0) {
-        if (!this.isAllowedInInventory(newIdentifier, PVItems[oldItems[0].identifier])) {
-          isAllowed = false;
-        }
-      }
-      if (newItems.length > 0) {
-        if (!this.isAllowedInInventory(newIdentifier, PVItems[newItems[0].identifier])) {
-          isAllowed = false;
-        }
-      }
-
-      // logInfo('isAllowed', isAllowed);
-
-      if (!isAllowed) {
-        const oldEventFail: UI.Inventory.SuccessFailData = {
+    } catch (error) {
+      console.error('Error in moveItem:', error);
+      return [
+        {
           identifier: oldIdentifier,
           requestId,
           requestType: 'move',
-        };
-        let newEventFail: UI.Inventory.SuccessFailData | null = null;
-        if (oldIdentifier !== newIdentifier) {
-          newEventFail = {
-            identifier: newIdentifier,
-            requestId,
-            requestType: 'move',
-          };
-        }
-        return [oldEventFail, newEventFail];
-      }
-
-      const oldSlotUpdate = await this.prisma.item.updateMany({
-        where: {
-          id: {
-            in: oldItemIds,
-          },
-        },
-        data: {
-          slot: newSlot,
-          containerId: newInventory.containerId,
-        },
-      });
-
-      const newSlotUpdate = await this.prisma.item.updateMany({
-        where: {
-          id: {
-            in: newItemIds,
-          },
-        },
-        data: {
-          slot: oldSlot,
-          containerId: oldInventory.containerId,
-        },
-      });
-
-      if (oldSlotUpdate.count === 0 && newSlotUpdate.count === 0) {
-        return;
-      }
-
-      const oldSlotItems = await this.prisma.item.findMany({
-        where: {
-          containerId: oldInventory.containerId,
-          slot: oldSlot,
-        },
-      });
-
-      logInfo('oldSlotItems', oldSlotItems);
-
-      const oldItemUpdates: Record<string, UI.Inventory.ItemData> = {};
-      const oldEmptySlots: number[] = [];
-
-      if (oldSlotItems.length) {
-        for (const item of oldSlotItems) {
-          // logInfo('item', item);
-          if (item.slot === null || item.slot === undefined) {
-            continue;
-          }
-          if (oldItemUpdates[item.slot]) {
-            oldItemUpdates[item.slot].quantity++;
-            oldItemUpdates[item.slot].ids.push(item.id);
-            oldItemUpdates[item.slot].metadatas.push(item.metadata);
-            oldItemUpdates[item.slot].durabilities.push(item.durability);
-          } else {
-            oldItemUpdates[item.slot] = {
-              identifier: item.identifier,
-              ids: [item.id],
-              metadatas: [item.metadata],
-              durabilities: [item.durability],
-              quantity: 1,
-            };
-          }
-        }
-      } else {
-        oldEmptySlots.push(oldSlot);
-      }
-
-      const newSlotItems = await this.prisma.item.findMany({
-        where: {
-          containerId: newInventory.containerId,
-          slot: newSlot,
-        },
-      });
-
-      logInfo('newSlotItems', newSlotItems);
-
-      const newItemUpdates: Record<string, UI.Inventory.ItemData> = {};
-      const newEmptySlots: number[] = [];
-
-      if (newSlotItems.length) {
-        for (const item of newSlotItems) {
-          // logInfo('item', item);
-          if (item.slot === null || item.slot === undefined) {
-            continue;
-          }
-          if (newItemUpdates[item.slot]) {
-            newItemUpdates[item.slot].quantity++;
-            newItemUpdates[item.slot].ids.push(item.id);
-            newItemUpdates[item.slot].metadatas.push(item.metadata);
-            oldItemUpdates[item.slot].durabilities.push(item.durability);
-          } else {
-            newItemUpdates[item.slot] = {
-              identifier: item.identifier,
-              ids: [item.id],
-              metadatas: [item.metadata],
-              durabilities: [item.durability],
-              quantity: 1,
-            };
-          }
-        }
-      } else {
-        newEmptySlots.push(newSlot);
-      }
-
-      const eventOld: UI.Inventory.MoveData = {
-        charRequestId: `${characterId}:${requestId}`,
-        identifier: oldIdentifier,
-        items: oldItemUpdates,
-        emptySlots: oldEmptySlots,
-      };
-
-      if (oldIdentifier !== newIdentifier) {
-        const eventNew: UI.Inventory.MoveData = {
-          charRequestId: `${characterId}:${requestId}`,
-          identifier: newIdentifier,
-          items: newItemUpdates,
-          emptySlots: newEmptySlots,
-        };
-
-        return [eventOld, eventNew];
-      }
-
-      eventOld.items = {
-        ...oldItemUpdates,
-        ...newItemUpdates,
-      };
-      eventOld.emptySlots = [...oldEmptySlots, ...newEmptySlots];
-
-      return [eventOld, null];
-    } catch (error) {
-      console.error(error);
+        } as UI.Inventory.SuccessFailData,
+        null,
+      ];
     }
   }
 
   async hasDoorKey(identifier: string, doorHash: number): Promise<boolean> {
-    const inventory = await this.getInventory(identifier);
-    if (inventory) {
-      for (const item of inventory.container.Item) {
-        if (item.identifier === 'PV_DOOR_KEY'.GetHashKey()) {
-          if (item?.metadata && typeof item?.metadata === 'object' && !Array.isArray(item?.metadata)) {
-            const metadata = item.metadata as Prisma.JsonObject;
+    const inventoryData = await this.getInventory(identifier);
+    if (inventoryData) {
+      for (const inventoryItem of inventoryData.container.items) {
+        if (inventoryItem.identifier === 'PV_DOOR_KEY'.GetHashKey()) {
+          if (inventoryItem?.metadata && typeof inventoryItem?.metadata === 'object' && !Array.isArray(inventoryItem?.metadata)) {
+            const metadata = inventoryItem.metadata as Record<string, any>;
             if (metadata?.doorHash === doorHash) {
               return true;
             }
-            if (metadata?.doorHashes && (metadata?.doorHashes as Prisma.JsonArray).includes(doorHash)) {
+            if (metadata?.doorHashes && Array.isArray(metadata?.doorHashes) && metadata?.doorHashes.includes(doorHash)) {
               return true;
             }
             if (metadata?.linkedDoors) {
-              for (const linkedDoorHashes of metadata?.linkedDoors as Prisma.JsonArray) {
-                if ((linkedDoorHashes as Prisma.JsonArray).includes(doorHash)) {
+              for (const linkedDoorHashes of metadata?.linkedDoors as any[]) {
+                if (Array.isArray(linkedDoorHashes) && linkedDoorHashes.includes(doorHash)) {
                   return true;
                 }
               }

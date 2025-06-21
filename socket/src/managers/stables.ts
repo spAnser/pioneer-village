@@ -1,12 +1,12 @@
-import { Horses as PrismaHorses } from '../../../node_modules/.prisma/client/index';
-
-import { PrismaClient } from '@prisma/client';
+import { eq } from 'drizzle-orm';
+import { db } from '../db/connection';
+import { horses, brands, type Horse } from '../db/schema';
 import { logInfo } from '../helpers/log';
+
+type HorseWithBrand = Horse & { brand?: typeof brands.$inferSelect | null };
 
 class Stables {
   static readonly instance: Stables = new Stables();
-
-  prisma: PrismaClient;
 
   constructor() {
     if (Stables.instance) {
@@ -14,21 +14,17 @@ class Stables {
     }
   }
 
-  async setDB(prisma: PrismaClient) {
-    this.prisma = prisma;
-  }
+  async loadCharacterHorses(characterId: number): Promise<HorseWithBrand[]> {
+    const result = await db
+      .select()
+      .from(horses)
+      .leftJoin(brands, eq(horses.brandId, brands.id))
+      .where(eq(horses.ownerId, characterId));
 
-  async loadCharacterHorses(characterId: number): Promise<PrismaHorses[]> {
-    return await this.prisma.horses.findMany({
-      where: {
-        owner: {
-          id: characterId,
-        },
-      },
-      include: {
-        brand: true,
-      },
-    });
+    return result.map(row => ({
+      ...row.Horses,
+      brand: row.Brands,
+    }));
   }
 }
 

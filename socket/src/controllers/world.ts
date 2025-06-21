@@ -1,9 +1,7 @@
-import { PrismaClient } from '@prisma/client';
-
 import { serverNamespace, userNamespace } from '../server';
 import { logInfoC, logInfoS } from '../helpers/log';
 
-export default (prisma: PrismaClient) => {
+export default () => {
   const claimed: Set<string> = new Set();
   const objects: Map<string, number> = new Map();
 

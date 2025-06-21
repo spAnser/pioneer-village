@@ -1,53 +1,55 @@
-import { PrismaClient, Characters as PrismaCharacter, Faces as PrismaFace, Prisma } from '@prisma/client';
+import { eq, and } from 'drizzle-orm';
+import { db } from '../db/connection';
+import { characters, faces, accounts, type Character, type Face, type NewCharacter, type NewFace } from '../db/schema';
 import { logInfoC, logInfoS } from '../helpers/log';
 import { Socket } from 'socket.io';
 import { JSONObject } from 'three/examples/jsm/loaders/IFCLoader';
 
-type PrismaCharacterWithFace = PrismaCharacter & { face: PrismaFace | null };
+type CharacterWithFace = Character & { face: Face | null };
 
-export const GetFaceDataFromDatabase = (result: PrismaCharacterWithFace): Game.Face => {
+export const GetFaceDataFromDatabase = (result: CharacterWithFace): Game.Face => {
   // NOTE: There are defaults just in case, but they should never really not exist in the DB
   return {
     id: result.face?.id || 0,
-    noseHeight: result.face?.noseHeight.toNumber() || 0,
-    lowerLipWidth: result.face?.lowerLipWidth.toNumber() || 0,
-    upperLipHeight: result.face?.upperLipHeight.toNumber() || 0,
-    earlobeSize: result.face?.earlobeSize.toNumber() || 0,
-    lowerLipHeight: result.face?.lowerLipHeight.toNumber() || 0,
-    eyebrowHeight: result.face?.eyebrowHeight.toNumber() || 0,
-    jawHeight: result.face?.jawHeight.toNumber() || 0,
-    eyesDistance: result.face?.eyesDistance.toNumber() || 0,
-    mouthDepth: result.face?.mouthDepth.toNumber() || 0,
-    mouthWidth: result.face?.mouthWidth.toNumber() || 0,
-    noseCurvature: result.face?.noseCurvature.toNumber() || 0,
-    eyebrowDepth: result.face?.eyebrowDepth.toNumber() || 0,
-    earsHeight: result.face?.earsHeight.toNumber() || 0,
-    noseSize: result.face?.noseSize.toNumber() || 0,
-    headWidth: result.face?.headWidth.toNumber() || 0,
-    eyelidWidth: result.face?.eyelidWidth.toNumber() || 0,
-    mouthYPos: result.face?.mouthYPos.toNumber() || 0,
-    earsWidth: result.face?.earsWidth.toNumber() || 0,
-    jawWidth: result.face?.jawWidth.toNumber() || 0,
-    nostrilsDistance: result.face?.nostrilsDistance.toNumber() || 0,
-    noseWidth: result.face?.noseWidth.toNumber() || 0,
-    eyesHeight: result.face?.eyesHeight.toNumber() || 0,
-    chinHeight: result.face?.chinHeight.toNumber() || 0,
-    upperLipWidth: result.face?.upperLipWidth.toNumber() || 0,
-    eyebrowWidth: result.face?.eyebrowWidth.toNumber() || 0,
-    cheekBoneWidth: result.face?.cheekBoneWidth.toNumber() || 0,
-    chinWidth: result.face?.chinWidth.toNumber() || 0,
-    eyesAngle: result.face?.eyesAngle.toNumber() || 0,
-    earsAngle: result.face?.earsAngle.toNumber() || 0,
-    jawDepth: result.face?.jawDepth.toNumber() || 0,
-    eyelidHeight: result.face?.eyelidHeight.toNumber() || 0,
-    cheekBoneHeight: result.face?.cheekBoneHeight.toNumber() || 0,
-    chinDepth: result.face?.chinDepth.toNumber() || 0,
-    cheekBoneDepth: result.face?.cheekBoneDepth.toNumber() || 0,
-    upperLipDepth: result.face?.upperLipDepth.toNumber() || 0,
-    noseAngle: result.face?.noseAngle.toNumber() || 0,
-    mouthXPos: result.face?.mouthXPos.toNumber() || 0,
-    lowerLipDepth: result.face?.lowerLipDepth.toNumber() || 0,
-    eyesDepth: result.face?.eyesDepth.toNumber() || 0,
+    noseHeight: Number(result.face?.noseHeight || '0'),
+    lowerLipWidth: Number(result.face?.lowerLipWidth || '0'),
+    upperLipHeight: Number(result.face?.upperLipHeight || '0'),
+    earlobeSize: Number(result.face?.earlobeSize || '0'),
+    lowerLipHeight: Number(result.face?.lowerLipHeight || '0'),
+    eyebrowHeight: Number(result.face?.eyebrowHeight || '0'),
+    jawHeight: Number(result.face?.jawHeight || '0'),
+    eyesDistance: Number(result.face?.eyesDistance || '0'),
+    mouthDepth: Number(result.face?.mouthDepth || '0'),
+    mouthWidth: Number(result.face?.mouthWidth || '0'),
+    noseCurvature: Number(result.face?.noseCurvature || '0'),
+    eyebrowDepth: Number(result.face?.eyebrowDepth || '0'),
+    earsHeight: Number(result.face?.earsHeight || '0'),
+    noseSize: Number(result.face?.noseSize || '0'),
+    headWidth: Number(result.face?.headWidth || '0'),
+    eyelidWidth: Number(result.face?.eyelidWidth || '0'),
+    mouthYPos: Number(result.face?.mouthYPos || '0'),
+    earsWidth: Number(result.face?.earsWidth || '0'),
+    jawWidth: Number(result.face?.jawWidth || '0'),
+    nostrilsDistance: Number(result.face?.nostrilsDistance || '0'),
+    noseWidth: Number(result.face?.noseWidth || '0'),
+    eyesHeight: Number(result.face?.eyesHeight || '0'),
+    chinHeight: Number(result.face?.chinHeight || '0'),
+    upperLipWidth: Number(result.face?.upperLipWidth || '0'),
+    eyebrowWidth: Number(result.face?.eyebrowWidth || '0'),
+    cheekBoneWidth: Number(result.face?.cheekBoneWidth || '0'),
+    chinWidth: Number(result.face?.chinWidth || '0'),
+    eyesAngle: Number(result.face?.eyesAngle || '0'),
+    earsAngle: Number(result.face?.earsAngle || '0'),
+    jawDepth: Number(result.face?.jawDepth || '0'),
+    eyelidHeight: Number(result.face?.eyelidHeight || '0'),
+    cheekBoneHeight: Number(result.face?.cheekBoneHeight || '0'),
+    chinDepth: Number(result.face?.chinDepth || '0'),
+    cheekBoneDepth: Number(result.face?.cheekBoneDepth || '0'),
+    upperLipDepth: Number(result.face?.upperLipDepth || '0'),
+    noseAngle: Number(result.face?.noseAngle || '0'),
+    mouthXPos: Number(result.face?.mouthXPos || '0'),
+    lowerLipDepth: Number(result.face?.lowerLipDepth || '0'),
+    eyesDepth: Number(result.face?.eyesDepth || '0'),
     overlays: (result.face?.overlays as Record<string, any>) || {},
   };
 };
@@ -57,8 +59,6 @@ class Characters {
 
   characters: CharacterData[] = [];
 
-  prisma: PrismaClient;
-
   constructor() {
     if (Characters.instance) {
       throw new Error('Error: Instantiation failed: Use Characters.Instance instead of new.');
@@ -66,47 +66,69 @@ class Characters {
     this.startIntervals();
   }
 
-  async setDB(prisma: PrismaClient) {
-    this.prisma = prisma;
-  }
+  async getCharacters(accountId: number): Promise<CharacterWithFace[]> {
+    const result = await db
+      .select()
+      .from(characters)
+      .leftJoin(faces, eq(characters.id, faces.characterId))
+      .where(eq(characters.accountId, accountId));
 
-  async getCharacters(accountId: number): Promise<PrismaCharacterWithFace[]> {
-    return this.prisma.characters.findMany({ where: { accountId }, include: { face: true } });
+    return result.map((row) => ({
+      ...row.Characters,
+      face: row.Faces,
+    }));
   }
 
   private async getCharacter(charId: number): Promise<CharacterData | undefined> {
-    const result = await this.prisma.characters.findFirst({ where: { id: charId }, include: { face: true } });
-    if (!result) return;
-    const face = GetFaceDataFromDatabase(result);
+    const result = await db
+      .select()
+      .from(characters)
+      .leftJoin(faces, eq(characters.id, faces.characterId))
+      .where(eq(characters.id, charId))
+      .limit(1);
+
+    if (result.length === 0) return;
+
+    const row = result[0];
+    const characterData = row.Characters;
+    const faceData = row.Faces;
+
+    const characterWithFace: CharacterWithFace = {
+      ...characterData,
+      face: faceData,
+    };
+
+    const face = GetFaceDataFromDatabase(characterWithFace);
+
     return {
-      id: result.id,
-      accountId: result.accountId,
-      firstName: result.firstName,
-      lastName: result.lastName,
-      dateOfBirth: result.dateOfBirth.toISOString(),
-      createdAt: result.createdAt.toISOString(),
-      deletedAt: result.deletedAt?.toISOString(),
-      lastX: result.lastX.toNumber(),
-      lastY: result.lastY.toNumber(),
-      lastZ: result.lastZ.toNumber(),
-      model: result.model,
-      food: result.food.toNumber(),
-      drink: result.drink.toNumber(),
+      id: characterData.id,
+      accountId: characterData.accountId,
+      firstName: characterData.firstName,
+      lastName: characterData.lastName,
+      dateOfBirth: characterData.dateOfBirth?.toISOString() || '',
+      createdAt: characterData.createdAt?.toISOString() || '',
+      deletedAt: characterData.deletedAt?.toISOString(),
+      lastX: Number(characterData.lastX || '0'),
+      lastY: Number(characterData.lastY || '0'),
+      lastZ: Number(characterData.lastZ || '0'),
+      model: characterData.model || 'mp_male',
+      food: Number(characterData.food || '100'),
+      drink: Number(characterData.drink || '100'),
       currencies: {
-        dollars: (result.currencies as JSONObject).dollars,
-        gold: (result.currencies as JSONObject).gold,
+        dollars: (characterData.currencies as Record<string, number>)?.dollars || 20,
+        gold: (characterData.currencies as Record<string, number>)?.gold || 0,
       },
       healthMetadata: {
-        health: (result.healthMetadata as JSONObject).health,
-        stamina: (result.healthMetadata as JSONObject).stamina,
-        litersOfBlood: (result.healthMetadata as JSONObject).litersOfBlood,
-        boneHealth: (result.healthMetadata as JSONObject).boneHealth,
-        activeTonic: (result.healthMetadata as JSONObject).activeTonic,
-        sick: (result.healthMetadata as JSONObject).sick,
-        boneStatus: (result.healthMetadata as JSONObject).boneStatus,
+        health: Number((characterData.healthMetadata as Record<string, unknown>)?.health) || 100,
+        stamina: Number((characterData.healthMetadata as Record<string, unknown>)?.stamina) || 100,
+        litersOfBlood: Number((characterData.healthMetadata as Record<string, unknown>)?.litersOfBlood) || 5,
+        boneHealth: ((characterData.healthMetadata as Record<string, unknown>)?.boneHealth as unknown[]) || [],
+        activeTonic: Boolean((characterData.healthMetadata as Record<string, unknown>)?.activeTonic) || false,
+        sick: Boolean((characterData.healthMetadata as Record<string, unknown>)?.sick) || false,
+        boneStatus: ((characterData.healthMetadata as Record<string, unknown>)?.boneStatus as unknown[]) || [],
       },
       face,
-      components: result.components as number[],
+      components: (characterData.components as number[]) || [],
       source: -1,
       socket: null,
       steamId: '',
@@ -179,87 +201,169 @@ export type Prisma.CharactersCreateInput = {
 
   async createCharacter(
     ownerId: number,
-    characterData: Omit<Game.Character, 'accountId' | 'id' | 'createdAt' | 'face'>,
+    characterData: Omit<Game.Character, 'accountId' | 'id' | 'createdAt' | 'face'>, // Using any to avoid type conflicts between Game.Character and our schema
     faceData: Game.Face,
-    faceFeatures?: Game.FaceFeatures, // TODO: Make this required
-  ): Promise<PrismaCharacterWithFace | null> {
+    faceFeatures?: Game.FaceFeatures,
+  ): Promise<CharacterWithFace | null> {
     console.log('ownerId', ownerId);
-    const character = await this.prisma.characters.create({
-      data: {
-        accountId: ownerId,
-        ...characterData,
-        dateOfBirth: new Date(characterData.dateOfBirth),
-        // features: JSON.stringify(faceFeatures),
+
+    const newCharacter: NewCharacter = {
+      accountId: ownerId,
+      firstName: characterData.firstName,
+      lastName: characterData.lastName,
+      dateOfBirth: new Date(characterData.dateOfBirth),
+      lastX: characterData.lastX?.toString() || '0.0',
+      lastY: characterData.lastY?.toString() || '0.0',
+      lastZ: characterData.lastZ?.toString() || '0.0',
+      food: '100.0',
+      drink: '100.0',
+      currencies: { dollars: 20, gold: 0 },
+      healthMetadata: {
+        health: 100,
+        stamina: 100,
+        litersOfBlood: 5,
+        boneHealth: [],
+        activeTonic: false,
+        sick: false,
+        boneStatus: [],
       },
-    });
-    await this.prisma.faces.create({ data: { ...faceData, characterId: character.id } });
-    return this.prisma.characters.findFirst({ where: { id: character.id }, include: { face: true } });
+      components: characterData.components || [],
+      model: characterData.model || 'mp_male',
+      whistle: characterData.whistle || { pitch: 0.5, shape: 5, clarity: 0.5 },
+      features: faceFeatures || {},
+    };
+
+    const character = await db.insert(characters).values(newCharacter).returning();
+
+    if (character.length === 0) return null;
+
+    const newFace: NewFace = {
+      characterId: character[0].id,
+      noseHeight: faceData.noseHeight?.toString() || '0.0',
+      lowerLipWidth: faceData.lowerLipWidth?.toString() || '0.0',
+      upperLipHeight: faceData.upperLipHeight?.toString() || '0.0',
+      earlobeSize: faceData.earlobeSize?.toString() || '0.0',
+      lowerLipHeight: faceData.lowerLipHeight?.toString() || '0.0',
+      eyebrowHeight: faceData.eyebrowHeight?.toString() || '0.0',
+      jawHeight: faceData.jawHeight?.toString() || '0.0',
+      eyesDistance: faceData.eyesDistance?.toString() || '0.0',
+      mouthDepth: faceData.mouthDepth?.toString() || '0.0',
+      mouthWidth: faceData.mouthWidth?.toString() || '0.0',
+      noseCurvature: faceData.noseCurvature?.toString() || '0.0',
+      eyebrowDepth: faceData.eyebrowDepth?.toString() || '0.0',
+      earsHeight: faceData.earsHeight?.toString() || '0.0',
+      noseSize: faceData.noseSize?.toString() || '0.0',
+      headWidth: faceData.headWidth?.toString() || '0.0',
+      eyelidWidth: faceData.eyelidWidth?.toString() || '0.0',
+      mouthYPos: faceData.mouthYPos?.toString() || '0.0',
+      earsWidth: faceData.earsWidth?.toString() || '0.0',
+      jawWidth: faceData.jawWidth?.toString() || '0.0',
+      nostrilsDistance: faceData.nostrilsDistance?.toString() || '0.0',
+      noseWidth: faceData.noseWidth?.toString() || '0.0',
+      eyesHeight: faceData.eyesHeight?.toString() || '0.0',
+      chinHeight: faceData.chinHeight?.toString() || '0.0',
+      upperLipWidth: faceData.upperLipWidth?.toString() || '0.0',
+      eyebrowWidth: faceData.eyebrowWidth?.toString() || '0.0',
+      cheekBoneWidth: faceData.cheekBoneWidth?.toString() || '0.0',
+      chinWidth: faceData.chinWidth?.toString() || '0.0',
+      eyesAngle: faceData.eyesAngle?.toString() || '0.0',
+      earsAngle: faceData.earsAngle?.toString() || '0.0',
+      jawDepth: faceData.jawDepth?.toString() || '0.0',
+      eyelidHeight: faceData.eyelidHeight?.toString() || '0.0',
+      cheekBoneHeight: faceData.cheekBoneHeight?.toString() || '0.0',
+      chinDepth: faceData.chinDepth?.toString() || '0.0',
+      cheekBoneDepth: faceData.cheekBoneDepth?.toString() || '0.0',
+      upperLipDepth: faceData.upperLipDepth?.toString() || '0.0',
+      noseAngle: faceData.noseAngle?.toString() || '0.0',
+      mouthXPos: faceData.mouthXPos?.toString() || '0.0',
+      lowerLipDepth: faceData.lowerLipDepth?.toString() || '0.0',
+      eyesDepth: faceData.eyesDepth?.toString() || '0.0',
+      overlays: faceData.overlays || {},
+    };
+
+    await db.insert(faces).values(newFace);
+
+    // Return the character with face
+    const result = await db
+      .select()
+      .from(characters)
+      .leftJoin(faces, eq(characters.id, faces.characterId))
+      .where(eq(characters.id, character[0].id))
+      .limit(1);
+
+    if (result.length === 0) return null;
+
+    return {
+      ...result[0].Characters,
+      face: result[0].Faces,
+    };
   }
 
   async setLastCoords(characterId: number, coords: Vector3Format) {
-    await this.prisma.characters.update({
-      where: {
-        id: characterId,
-      },
-      data: {
+    await db
+      .update(characters)
+      .set({
         lastX: coords.x.toFixed(3), // Limit the coords to 3 decimal places because more are useless
         lastY: coords.y.toFixed(3),
         lastZ: coords.z.toFixed(3),
-      },
-    });
+      })
+      .where(eq(characters.id, characterId));
+
     this.updateLocalCharacterAtributeWithCharId(characterId, 'lastX', coords.x.toFixed(3));
     this.updateLocalCharacterAtributeWithCharId(characterId, 'lastY', coords.y.toFixed(3));
     this.updateLocalCharacterAtributeWithCharId(characterId, 'lastZ', coords.z.toFixed(3));
   }
 
   private async updateCharacterFoodAndDrink(characterId: number, food: number, drink: number) {
-    await this.prisma.characters.update({
-      where: {
-        id: characterId,
-      },
-      data: {
-        food,
-        drink,
-      },
-    });
+    await db
+      .update(characters)
+      .set({
+        food: food.toString(),
+        drink: drink.toString(),
+      })
+      .where(eq(characters.id, characterId));
   }
 
   async getCharacterFoodAndDrink(characterId: number) {
-    return this.prisma.characters.findFirst({
-      where: {
-        id: characterId,
-      },
-      select: {
-        food: true,
-        drink: true,
-      },
-    });
+    const result = await db
+      .select({
+        food: characters.food,
+        drink: characters.drink,
+      })
+      .from(characters)
+      .where(eq(characters.id, characterId))
+      .limit(1);
+
+    if (result.length === 0) return null;
+
+    return {
+      food: result[0].food,
+      drink: result[0].drink,
+    };
   }
 
   async updateCharacterHealthMetadata(characterId: number, metadata: CharacterHealthMetadata) {
-    return this.prisma.characters.update({
-      where: {
-        id: characterId,
-      },
-      data: {
+    const result = await db
+      .update(characters)
+      .set({
         healthMetadata: metadata as any,
-      },
-    });
+      })
+      .where(eq(characters.id, characterId))
+      .returning();
+
+    return result[0];
   }
 
   async getCharacterHealthMetadata(characterId: number): Promise<CharacterHealthMetadata | undefined> {
-    const result = await this.prisma.characters.findFirst({
-      where: {
-        id: characterId,
-      },
-      select: {
-        healthMetadata: true,
-      },
-    });
-    if (result && result.healthMetadata) {
-      let finalData = result.healthMetadata as Prisma.JsonObject;
-      return finalData as unknown as CharacterHealthMetadata;
-    } else {
+    const result = await db
+      .select({
+        healthMetadata: characters.healthMetadata,
+      })
+      .from(characters)
+      .where(eq(characters.id, characterId))
+      .limit(1);
+
+    if (result.length === 0 || !result[0].healthMetadata) {
       logInfoS(
         '[Characters]',
         'Attempted to find character',
@@ -276,6 +380,8 @@ export type Prisma.CharactersCreateInput = {
         boneStatus: [],
       };
     }
+
+    return result[0].healthMetadata as unknown as CharacterHealthMetadata;
   }
 
   private async updateDatabaseWithPlayerMetadata(character: CharacterData) {
@@ -288,31 +394,31 @@ export type Prisma.CharactersCreateInput = {
   }
 
   async getCharacterCurrencies(charId: number): Promise<CharacterCurrencies | undefined> {
-    const result = await this.prisma.characters.findFirst({
-      where: {
-        id: charId,
-      },
-      select: {
-        currencies: true,
-      },
-    });
-    if (result && result.currencies) {
-      return result.currencies as unknown as CharacterCurrencies;
-    } else {
+    const result = await db
+      .select({
+        currencies: characters.currencies,
+      })
+      .from(characters)
+      .where(eq(characters.id, charId))
+      .limit(1);
+
+    if (result.length === 0 || !result[0].currencies) {
       return undefined;
     }
+
+    return result[0].currencies as unknown as CharacterCurrencies;
   }
 
   async updateCharacterCurrencies(characterId: number, currencies: CharacterCurrencies) {
-    return this.prisma.characters.update({
-      where: {
-        id: characterId,
-      },
-      data: {
-        // @ts-ignore
-        currencies: currencies,
-      },
-    });
+    const result = await db
+      .update(characters)
+      .set({
+        currencies: currencies as any,
+      })
+      .where(eq(characters.id, characterId))
+      .returning();
+
+    return result[0];
   }
 
   // Start of money management
@@ -382,31 +488,28 @@ export type Prisma.CharactersCreateInput = {
   }
 
   async doesPlayerOwnCharacter(characterId: number, steamId: string): Promise<boolean> {
-    const accountResult = await this.prisma.accounts.findFirst({
-      where: {
-        identifier_steam: steamId,
-      },
-      select: {
-        id: true,
-      },
-    });
+    const accountResult = await db
+      .select({
+        id: accounts.id,
+      })
+      .from(accounts)
+      .where(eq(accounts.identifier_steam, steamId))
+      .limit(1);
 
-    if (!accountResult || !accountResult.id) {
+    if (accountResult.length === 0) {
       return false;
     }
 
-    const accountId = accountResult.id;
-    const charactersResult = await this.prisma.characters.findFirst({
-      where: {
-        accountId: accountId,
-        id: characterId,
-      },
-      select: {
-        id: true,
-      },
-    });
+    const accountId = accountResult[0].id;
+    const charactersResult = await db
+      .select({
+        id: characters.id,
+      })
+      .from(characters)
+      .where(and(eq(characters.accountId, accountId), eq(characters.id, characterId)))
+      .limit(1);
 
-    return !(!charactersResult || !charactersResult.id);
+    return charactersResult.length > 0;
   }
 
   startIntervals() {

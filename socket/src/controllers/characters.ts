@@ -1,11 +1,9 @@
-import { PrismaClient } from '@prisma/client';
 import { serverNamespace, userNamespace } from '../server';
 import Characters, { GetFaceDataFromDatabase } from '../managers/characters';
 import Inventories from '../managers/inventories';
 import { logGreen, logInfoC, logInfoS } from '../helpers/log';
 
-export default (prisma: PrismaClient, userAccessKey: string) => {
-  Characters.setDB(prisma);
+export default (userAccessKey: string) => {
 
   serverNamespace.on('connection', (socket) => {
     logGreen('[Characters]', 'Game server connected');
@@ -37,7 +35,7 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
         if (!result) {
           cb(0, 0);
         } else {
-          cb(result.food.toNumber(), result.drink.toNumber());
+          cb(Number(result.food || '0'), Number(result.drink || '0'));
         }
       }
     });
@@ -127,13 +125,13 @@ export default (prisma: PrismaClient, userAccessKey: string) => {
             accountId: character.accountId,
             firstName: character.firstName,
             lastName: character.lastName,
-            dateOfBirth: character.dateOfBirth.toISOString(),
-            createdAt: character.createdAt.toISOString(),
+            dateOfBirth: character.dateOfBirth?.toISOString() || '',
+            createdAt: character.createdAt?.toISOString() || '',
             deletedAt: character.deletedAt?.toISOString(),
-            lastX: character.lastX.toNumber(),
-            lastY: character.lastY.toNumber(),
-            lastZ: character.lastZ.toNumber(),
-            model: character.model,
+            lastX: Number(character.lastX || '0'),
+            lastY: Number(character.lastY || '0'),
+            lastZ: Number(character.lastZ || '0'),
+            model: character.model || 'mp_male',
             face,
             components: character.components as number[],
             clothing: Object.values(clothingInventory?.items || []),

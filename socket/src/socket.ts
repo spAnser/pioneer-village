@@ -40,19 +40,17 @@ const { DATABASE_URL, SOCKET_PORT } = process.env;
 //   console.log('result', result);
 // })();
 
-import { PrismaClient } from '@prisma/client';
+import { db } from './db/connection';
 
-const prisma = new PrismaClient();
+seedDB();
 
-seedDB(prisma);
-
-UserController(prisma, userAccessKey);
-CharacterController(prisma, userAccessKey);
-ChatController(prisma);
-DoorController(prisma);
-InventoryController(prisma);
-StableController(prisma);
-WorldController(prisma);
+UserController(userAccessKey);
+CharacterController(userAccessKey);
+ChatController();
+DoorController();
+InventoryController();
+StableController();
+WorldController();
 
 server.listen(Number(SOCKET_PORT), () => {
   const serverAddress = server.address();

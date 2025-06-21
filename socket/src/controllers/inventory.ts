@@ -1,13 +1,11 @@
 import type { Socket } from 'socket.io';
 import type { DefaultEventsMap } from 'socket.io/dist/typed-events';
 
-import { PrismaClient } from '@prisma/client';
 import { serverNamespace, userNamespace } from '../server';
 import Inventories from '../managers/inventories';
 import { logGreen, logInfoC, logInfoS } from '../helpers/log';
 
-export default (prisma: PrismaClient) => {
-  Inventories.setDB(prisma);
+export default () => {
   // inventoryTest(prisma);
 
   const sendMoveOrFailData = (

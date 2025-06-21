@@ -1,7 +1,6 @@
-import { PrismaClient } from '@prisma/client';
 import { userNamespace } from '../server';
 
-export default (prisma: PrismaClient) => {
+export default () => {
   userNamespace.on('connection', (socket) => {
     socket.on('chatSend', (chatMessage) => {
       userNamespace.emit('chatMessage', {

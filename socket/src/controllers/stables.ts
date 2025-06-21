@@ -1,11 +1,8 @@
-import { PrismaClient } from '@prisma/client';
-
 import { serverNamespace, userNamespace } from '../server';
 import Stables from '../managers/stables';
 import { logInfoC, logInfoS } from '../helpers/log';
 
-export default (prisma: PrismaClient) => {
-  Stables.setDB(prisma);
+export default () => {
 
   serverNamespace.on('connection', (socket) => {
     //
@@ -16,39 +13,39 @@ export default (prisma: PrismaClient) => {
       logInfoC('stable.load-character-horses', characterId);
 
       const horses: Horse.Data[] = [];
-      for (const prismaHorse of await Stables.loadCharacterHorses(characterId)) {
+      for (const drizzleHorse of await Stables.loadCharacterHorses(characterId)) {
         const horse: Horse.Data = {
-          id: prismaHorse.id,
-          name: prismaHorse.name,
-          ownerId: prismaHorse.ownerId,
-          stable: prismaHorse.stable,
-          brandId: prismaHorse.brandId,
-          breeds: JSON.parse(JSON.stringify(prismaHorse.breeds || {})),
-          components: prismaHorse.components,
-          model: prismaHorse.model,
-          gender: prismaHorse.gender,
-          age: prismaHorse.age,
-          weight: prismaHorse.weight.toNumber(),
-          food: prismaHorse.food.toNumber(),
-          water: prismaHorse.water.toNumber(),
-          health: prismaHorse.health.toNumber(),
-          cleanliness: prismaHorse.cleanliness.toNumber(),
-          neuteredFixed: prismaHorse.neuteredFixed,
-          statOffRoad: prismaHorse.statOffRoad,
-          statHealth: prismaHorse.statHealth,
-          statEndurance: prismaHorse.statEndurance,
-          statFertility: prismaHorse.statFertility,
-          statHandling: prismaHorse.statHandling,
-          statSpeed: prismaHorse.statSpeed,
-          statAcceleration: prismaHorse.statAcceleration,
-          statBonding: JSON.parse(JSON.stringify(prismaHorse.statBonding || {})),
-          hooves: prismaHorse.hooves.toNumber(),
-          horseshoes: prismaHorse.horseshoes.toNumber(),
-          metadata: JSON.parse(JSON.stringify(prismaHorse.metadata || {})),
-          lastX: prismaHorse.lastX.toNumber(),
-          lastY: prismaHorse.lastY.toNumber(),
-          lastZ: prismaHorse.lastZ.toNumber(),
-          createdAt: prismaHorse.createdAt.toISOString(),
+          id: drizzleHorse.id,
+          name: drizzleHorse.name,
+          ownerId: drizzleHorse.ownerId,
+          stable: drizzleHorse.stable,
+          brandId: drizzleHorse.brandId,
+          breeds: JSON.parse(JSON.stringify(drizzleHorse.breeds || {})),
+          components: drizzleHorse.components,
+          model: drizzleHorse.model,
+          gender: drizzleHorse.gender,
+          age: drizzleHorse.age,
+          weight: Number(drizzleHorse.weight || '0'),
+          food: Number(drizzleHorse.food || '0'),
+          water: Number(drizzleHorse.water || '0'),
+          health: Number(drizzleHorse.health || '0'),
+          cleanliness: Number(drizzleHorse.cleanliness || '0'),
+          neuteredFixed: drizzleHorse.neuteredFixed || false,
+          statOffRoad: drizzleHorse.statOffRoad,
+          statHealth: drizzleHorse.statHealth,
+          statEndurance: drizzleHorse.statEndurance,
+          statFertility: drizzleHorse.statFertility,
+          statHandling: drizzleHorse.statHandling,
+          statSpeed: drizzleHorse.statSpeed,
+          statAcceleration: drizzleHorse.statAcceleration,
+          statBonding: JSON.parse(JSON.stringify(drizzleHorse.statBonding || {})),
+          hooves: Number(drizzleHorse.hooves || '0'),
+          horseshoes: Number(drizzleHorse.horseshoes || '0'),
+          metadata: JSON.parse(JSON.stringify(drizzleHorse.metadata || {})),
+          lastX: Number(drizzleHorse.lastX || '0'),
+          lastY: Number(drizzleHorse.lastY || '0'),
+          lastZ: Number(drizzleHorse.lastZ || '0'),
+          createdAt: drizzleHorse.createdAt?.toISOString() || new Date().toISOString(),
         };
         horses.push(horse);
       }

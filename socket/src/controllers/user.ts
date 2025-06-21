@@ -1,11 +1,9 @@
-import { PrismaClient } from '@prisma/client';
 import { sign } from 'jsonwebtoken';
 import { serverNamespace, userNamespace } from '../server';
 import Accounts from '../managers/accounts';
 import { logGreen, logInfoC, logInfoS } from '../helpers/log';
 
-export default (prisma: PrismaClient, userAccessKey: string) => {
-  Accounts.setDB(prisma);
+export default (userAccessKey: string) => {
 
   serverNamespace.on('connection', (socket) => {
     logGreen('[User]', 'Game server connected');

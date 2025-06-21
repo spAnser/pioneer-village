@@ -1,4 +1,6 @@
-import { PrismaClient } from '@prisma/client';
+import { eq } from 'drizzle-orm';
+import { db } from '../db/connection';
+import { door } from '../db/schema';
 
 import { serverNamespace, userNamespace } from '../server';
 import { logInfo, logInfoC, logInfoS } from '../helpers/log';
@@ -7,15 +9,15 @@ import Inventories from '../managers/inventories';
 
 // TODO: Ability to re-key doors via a version number or something.
 
-export default (prisma: PrismaClient) => {
+export default () => {
   const DoorState = new Map<number, number>();
 
-  prisma.door.findMany().then((doors) => {
+  db.select().from(door).then((doors) => {
     // logInfo('[doors]', doors);
 
-    for (const door of doors) {
-      DoorState.set(door.hash << 0, door.state);
-      // logInfo('[Door State]', door.hash, door.hash >>> 0, door.state);
+    for (const doorRecord of doors) {
+      DoorState.set(doorRecord.hash << 0, doorRecord.state || -1);
+      // logInfo('[Door State]', doorRecord.hash, doorRecord.hash >>> 0, doorRecord.state);
     }
   });
 
@@ -39,11 +41,9 @@ export default (prisma: PrismaClient) => {
       }
 
       if (currentDoorState === undefined) {
-        await prisma.door.create({
-          data: {
-            hash: doorHash << 0,
-            state,
-          },
+        await db.insert(door).values({
+          hash: doorHash << 0,
+          state,
         });
       }
 
