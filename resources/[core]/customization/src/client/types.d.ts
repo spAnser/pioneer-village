@@ -9,7 +9,7 @@ declare namespace Customization {
   type GetNormalAtIndex = (entity: number, index: number) => number;
   type GetMaterialAtIndex = (entity: number, index: number) => number;
   type GetTintAtIndex = (entity: number, index: number) => Palette;
-  type GetPaletteAtIndex = (entity: number, index: number) => number;
+  type GetPaletteAtIndex = (entity: number, index: number) => string | number;
   type GetTint0AtIndex = (entity: number, index: number) => number;
   type GetTint1AtIndex = (entity: number, index: number) => number;
   type GetTint2AtIndex = (entity: number, index: number) => number;

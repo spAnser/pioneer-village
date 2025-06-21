@@ -107,17 +107,17 @@ const TSRadio = styled.label`
   }
 `;
 
-interface Props {
+type Props = Customization.Palette & {
   label: string;
   category: string;
-  palette: number;
-  tint0: number;
-  tint1: number;
-  tint2: number;
   onChange: (category: string, tint: Customization.Palette) => void;
-}
+};
 
 export default function TintSelector({ label, category, palette, tint0, tint1, tint2, onChange }: Props) {
+  if (typeof palette === 'string') {
+    palette = palette.GetHashKey();
+  }
+
   const handleTint0Change = (target: HTMLInputElement) => {
     onChange(category, { palette, tint0: Number(target.value), tint1, tint2 });
   };
@@ -134,7 +134,7 @@ export default function TintSelector({ label, category, palette, tint0, tint1, t
     onChange(category, { palette: -1, tint0, tint1, tint2 });
   };
 
-  const setPalette = (palette: Customization.Palettes) => {
+  const setPalette = (palette: Customization.PaletteNames) => {
     onChange(category, { palette: ColorPalettes[palette].hash, tint0, tint1, tint2 });
   };
 
@@ -155,7 +155,7 @@ export default function TintSelector({ label, category, palette, tint0, tint1, t
           <input type="radio" name="palette" value={0} checked={palette === -1} onClick={() => removePalette()} />
           None
         </TSPalette>
-        {Object.keys(ColorPalettes).map((p: Customization.Palettes) => {
+        {Object.keys(ColorPalettes).map((p: Customization.PaletteNames) => {
           return (
             <TSPalette>
               <input

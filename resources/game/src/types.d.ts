@@ -18,6 +18,12 @@ declare namespace Game {
     metadatas: ClothingMetadata[];
   };
 
+  type WhistleData = {
+    pitch: number;
+    shape: number;
+    clarity: number;
+  };
+
   interface Character {
     id: number;
     accountId: number;
@@ -30,6 +36,7 @@ declare namespace Game {
     lastY: number;
     lastZ: number;
     model: string;
+    whistle?: WhistleData;
     face: Face;
     components: number[];
     clothing: ClothingItemData[];

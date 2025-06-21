@@ -7,6 +7,24 @@ import { Catcher } from './catcher';
 import { Button } from '@styled/core';
 import { Socket } from 'socket.io-client';
 
+String.prototype.GetHashKey = function (this: string): number {
+  const keyLowered = this.toLowerCase();
+  const length = this.length;
+  let hash, i;
+
+  for (hash = i = 0; i < length; i++) {
+    hash += keyLowered.charCodeAt(i);
+    hash += hash << 10;
+    hash ^= hash >>> 6;
+  }
+
+  hash += hash << 3;
+  hash ^= hash >>> 11;
+  hash += hash << 15;
+
+  return hash;
+};
+
 // @ts-expect-error
 const requiredLayers = require.context('./layers', true, /index\.tsx$/);
 const layers: any[] = [];

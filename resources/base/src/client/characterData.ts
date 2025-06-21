@@ -12,11 +12,11 @@ onUI('character-client-update.updateAttribute', (attribute, newVal) => {
   if (!character) return;
   (character[attribute] as any) = newVal;
 
-  Log(
-    'character-client-update.updateAttribute',
-    attribute,
-    typeof newVal === 'object' ? JSON.stringify(newVal, null, 2) : newVal,
-  );
+  // Log(
+  //   'character-client-update.updateAttribute',
+  //   attribute,
+  //   typeof newVal === 'object' ? JSON.stringify(newVal, null, 2) : newVal,
+  // );
 });
 
 const getCurrentCharacter = (): CharacterData | null => {

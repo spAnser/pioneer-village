@@ -46,6 +46,16 @@ const categories = [
   'SPATS',
   'SUSPENDERS',
   'VESTS',
+  'HORSE_ACCESSORIES',
+  'HORSE_BEDROLLS',
+  'HORSE_BLANKETS',
+  'HORSE_BRIDLES',
+  'HORSE_MANES',
+  'HORSE_MUSTACHE',
+  'HORSE_SADDLEBAGS',
+  'HORSE_SADDLES',
+  'HORSE_SHOES',
+  'HORSE_TAILS',
 ];
 
 for (const category of categories) {

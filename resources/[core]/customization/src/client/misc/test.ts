@@ -8,6 +8,7 @@ import { Vector3 } from '@lib/math';
 import { Delay } from '@lib/functions';
 import { Log } from '@lib/client/comms/ui';
 import { componentManager } from '../managers/component-manager';
+import { paletteManager } from '../managers/palette-manager';
 
 const TagTypes = {
   ITEM_HAS_FOLDER_TAG: 1224357681,
@@ -29,23 +30,36 @@ RegisterCommand(
       const struct1 = new DataView(new ArrayBuffer(4));
       const struct2 = new DataView(new ArrayBuffer(4));
       const component = GetShopItemComponentAtIndex(entity, i, true, struct1, struct2);
-      Log('struct1', struct1.getInt32(0, true));
-      const wearableState = struct2.getInt32(0, true);
-      if (wearableStates.has(wearableState)) {
-        Log('wearableState', wearableStates.get(wearableState));
-      } else {
-        Log('wearableState', wearableState, `0x${(wearableState >>> 0).toString(16)}`);
-      }
       const componentCategory = GetShopItemComponentCategory(component, metaPedType, true);
       // if (componentCategory !== 1606587013) {
       //   continue
       // }
       components.push(component);
+      Log('--------=================--------');
       if (componentCategories.has(componentCategory)) {
         Log(i, component, componentCategories.get(componentCategory));
+      } else if (component === 0 && componentCategory === 0) {
+        Log(i, 'Unset Component');
       } else {
         Log(i, component, componentCategory, '=================');
       }
+
+      const struct1Value = struct1.getInt32(0, true);
+      if (struct1Value) {
+        Log('struct1', struct1Value);
+      }
+      const wearableState = struct2.getInt32(0, true);
+      if (wearableStates.has(wearableState)) {
+        Log('wearableState', wearableStates.get(wearableState));
+      } else if (wearableState !== 0) {
+        Log('wearableState', wearableState, `0x${(wearableState >>> 0).toString(16)}`);
+      }
+
+      const palette = paletteManager.getTintAtIndex(entity, i);
+      if (palette.palette !== 0) {
+        Log('palette', palette.palette, palette.tint0, palette.tint1, palette.tint2);
+      }
+
       const struct3 = new DataView(new ArrayBuffer(512));
       ItemdatabaseFilloutItemInfo(component, struct3); // _ITEM_DATABASE_FILLOUT_ITEM_INFO
 
@@ -67,7 +81,9 @@ RegisterCommand(
           ints.push(intStr);
         }
       }
-      Log(ints);
+      if (ints.length > 0) {
+        Log('ints', ints);
+      }
       // const struct4 = new DataView(new ArrayBuffer(8));
       const [_, tagCount] = ItemdatabaseFilloutTagData(component, struct3, 20); // _ITEM_DATABASE_FILLOUT_TAG_DATA
       // const tagCount = struct4.getInt32(0, true);
@@ -103,7 +119,7 @@ RegisterCommand(
     const components = [];
     for (let i = componentCount; i--; ) {
       // GetCategoryOfComponentAtIndex
-      const componentCategory = Citizen.invokeNative('0x9b90842304c938a7', entity, i, false);
+      const componentCategory = Citizen.invokeNative('0x9b90842304c938a7', entity, i, false) as number;
       if (componentCategories.has(componentCategory)) {
         Log(i, componentCategories.get(componentCategory));
       } else {

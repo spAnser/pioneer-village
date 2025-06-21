@@ -654,7 +654,7 @@ class CreationManager {
     }
   }
 
-  getOverlayInfo(id: string | number): UI.Customization.OverlayJsonData | undefined {
+  getOverlayInfo(id: string | number): [string, UI.Customization.OverlayJsonData] | [] {
     if (typeof id === 'string') {
       id = GetHashKey(id);
     }
@@ -662,17 +662,23 @@ class CreationManager {
       if (overlays.length > 0) {
         for (const overlay of overlays) {
           if (overlay.id === id) {
-            return overlay;
+            Log('getOverlayInfo', id, overlay);
+            return [category, overlay];
           }
         }
       }
     }
+
+    return [];
   }
 
   addLayer(textureId: number, overlay: Customization.Overlay) {
-    // TODO: Add a way to adjust category
-    const baseOverlay = this.getBaseOverlay('eyebrows');
-    const overlayInfo = this.getOverlayInfo(overlay.id);
+    const [overlayCategory, overlayInfo] = this.getOverlayInfo(overlay.id);
+    if (!overlayCategory || !overlayInfo) {
+      Log('Overlay not found', overlay.id);
+      return;
+    }
+    const baseOverlay = this.getBaseOverlay(overlayCategory);
 
     Log('addLayer', textureId, overlay, baseOverlay, overlayInfo);
 
@@ -689,6 +695,9 @@ class CreationManager {
       overlay.opacity,
       baseOverlay.tx_unk,
     );
+    Log(
+      `AddTextureLayer(${textureId}, ${overlayInfo.id}, ${overlayInfo.normal || 0}, ${overlayInfo.ma || 0}, ${baseOverlay.tx_color_type}, ${overlay.opacity}, ${baseOverlay.var});`,
+    );
     Log('layerId', layerId);
     if (layerId === -1) {
       return;
@@ -696,18 +705,25 @@ class CreationManager {
 
     if (overlay.palette) {
       SetTextureLayerPallete(textureId, layerId, overlay.palette.palette);
+      Log(`SetTextureLayerPallete(${textureId}, ${layerId}, ${overlay.palette.palette});`);
       SetTextureLayerTint(textureId, layerId, overlay.palette.tint0, overlay.palette.tint1, overlay.palette.tint2);
+      Log(
+        `SetTextureLayerTint(${textureId}, ${layerId}, ${overlay.palette.tint0}, ${overlay.palette.tint1}, ${overlay.palette.tint2});`,
+      );
     }
 
     SetTextureLayerSheetGridIndex(textureId, layerId, baseOverlay.var);
+    Log(`SetTextureLayerSheetGridIndex(${textureId}, ${layerId}, ${baseOverlay.var});`);
     SetTextureLayerAlpha(textureId, layerId, overlay.opacity);
+    Log(`SetTextureLayerAlpha(${textureId}, ${layerId}, ${overlay.opacity});`);
     if ('roughness' in overlay && overlay.roughness !== undefined) {
       SetTextureLayerRoughness(textureId, layerId, overlay.roughness);
+      Log(`SetTextureLayerRoughness(${textureId}, ${layerId}, ${overlay.roughness});`);
     }
   }
 
-  async setOverlays(ped: number, overlays: Customization.Overlay[]) {
-    Log('setOverlays', overlays);
+  async setOverlays(overlays: Customization.Overlay[], ped: number = this.chosen) {
+    Log('setOverlays', ped, overlays);
     await this.releasePedTextures(ped, true);
 
     const textureIds: number[] = [];
@@ -726,10 +742,10 @@ class CreationManager {
     }
 
     await PVGame.waitTextureIsValid(textureId);
-    ApplyTextureOnPed(ped, GetHashKey('heads'), textureId);
+    ApplyTextureOnPed(ped, GetHashKey('HEADS'), textureId);
     UpdatePedTexture(textureId);
 
-    this.setPedTextures(ped, textureIds);
+    this.setPedTextures(textureIds, ped);
 
     await PVGame.pedIsReadyToRender(ped);
     PVGame.finalizePedOutfit(ped);
@@ -738,13 +754,13 @@ class CreationManager {
 
   // Stuff to maybe move to PVGame
 
-  setPedTextures(ped: number, texturesIds: number[]) {
+  setPedTextures(texturesIds: number[], ped: number = this.chosen) {
     const textureIdsString = texturesIds.join(',');
     // Log('setPedTextures', ped, textureIdsString);
     Entity(ped).state.set('textures', textureIdsString, false);
   }
 
-  getPedTextures(ped: number): number[] {
+  getPedTextures(ped: number = this.chosen): number[] {
     const textures = Entity(ped).state.textures || '';
     // Log('getPedTextures', ped, textures);
     if (typeof textures === 'string') {
@@ -753,7 +769,7 @@ class CreationManager {
     return [];
   }
 
-  async releasePedTextures(ped: number, awaitRemoval = false) {
+  async releasePedTextures(ped: number = this.chosen, awaitRemoval = false) {
     const pedTextures = this.getPedTextures(ped);
     // Log('releasePedTextures', ped, pedTextures);
     for (const textureId of pedTextures) {
@@ -763,7 +779,7 @@ class CreationManager {
         await this.textureId(textureId, false, 25);
       }
     }
-    this.setPedTextures(ped, []);
+    this.setPedTextures([], ped);
   }
 
   async textureId(textureId: number, exists: 1 | false = 1, delay = 125): Promise<boolean> {

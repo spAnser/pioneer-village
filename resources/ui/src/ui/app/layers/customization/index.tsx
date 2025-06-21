@@ -19,6 +19,7 @@ import Tshirt from '@styled/fa5/duotone/tshirt.svg';
 import Child from '@styled/fa5/duotone/child.svg';
 import Save from '@styled/fa5/duotone/save.svg';
 import HeadSide from '@styled/fa5/duotone/head-side.svg';
+import OverlaySelector from './components/OverlaySelector';
 
 const componentFiles = [
   '2886757168',
@@ -620,12 +621,22 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
                       step={0.1}
                       onChange={(xValue, yValue) => console.log('onChange', xValue, yValue)}
                     />
+                    {/*<TintSelector*/}
+                    {/*  label="Hat Tint"*/}
+                    {/*  onChange={this.setTintByCategory.bind(this)}*/}
+                    {/*  category="hats"*/}
+                    {/*  palette={this.state.tints.hats.palette}*/}
+                    {/*  tint0={this.state.tints.hats.tint0}*/}
+                    {/*  tint1={this.state.tints.hats.tint1}*/}
+                    {/*  tint2={this.state.tints.hats.tint2}*/}
+                    {/*/>*/}
                   </ModalContents>
                 </>
               )}
               {this.state.state === 'head' && (
                 <>
                   <ModalContents>
+                    <OverlaySelector overlays={overlays} />
                     <RangeSlider label="Head" min={0} max={19} onChange={this.handleChangeHead.bind(this)} />
                     <RangeSlider
                       label="Teeth"

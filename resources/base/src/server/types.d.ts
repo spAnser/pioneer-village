@@ -1,8 +1,8 @@
-declare namespace SocketServer {
-  interface ServerExports {
-    base: Base.ServerExports;
-  }
+interface ServerExports {
+  base: Base.ServerExports;
+}
 
+declare namespace SocketServer {
   interface SocketEvents {
     test: (one: string) => void;
     ['player-management.kick']: (serverId: number, reason: string) => void;

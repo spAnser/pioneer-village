@@ -5,6 +5,7 @@ import OverlayInfo from '../data/overlay-info';
 import { paletteManager } from '../managers/palette-manager';
 import { Log } from '@lib/client/comms/ui';
 import { creationManager } from '../managers/creation-manager';
+import PaletteOptions from '../../shared/palette-options';
 
 const TextureIDs: Map<number, number> = new Map();
 
@@ -12,20 +13,39 @@ RegisterCommand(
   'overlay_test',
   () => {
     const overlay: Customization.Overlay = {
+      // id: 'mp_u_faov_eyebrow_m_000',
+      // id: 'mp_u_faov_ageing_000',
       id: 'mp_u_faov_eyebrow_m_000',
       opacity: 0.99,
-      palette: {
-        palette: 1,
-        tint0: 2,
-        tint1: 3,
-        tint2: 4,
-      },
+      // palette: {
+      //   palette: 'metaped_tint_makeup',
+      //   tint0: 41,
+      //   tint1: 41,
+      //   tint2: 41,
+      // },
     };
 
-    creationManager.setOverlays(PVGame.playerPed(), [overlay]);
+    creationManager.setOverlays([overlay], PlayerPedId());
   },
   false,
 );
+
+onUI('overlay.test.thing', (overlay: UI.Customization.OverlayJsonData) => {
+  Log('overlay.test.thing', overlay);
+
+  creationManager.setOverlays([
+    {
+      id: overlay.id,
+      opacity: 0.99,
+      // palette: {
+      //   palette: 'metaped_tint_makeup',
+      //   tint0: 41,
+      //   tint1: 41,
+      //   tint2: 41,
+      // },
+    },
+  ]);
+});
 
 RegisterCommand(
   'overlay',
@@ -53,10 +73,17 @@ RegisterCommand(
 
     // PED | TextureID | OverlayID[]
 
-    const baseOverlay = creationManager.getBaseOverlay('eyebrows');
-    const overlayInfo = creationManager.getOverlayInfo('mp_u_faov_eyebrow_m_000');
+    const overlay = {
+      id: 'mp_u_faov_eyebrow_m_000',
+    };
+    const [overlayCategory, overlayInfo] = creationManager.getOverlayInfo(overlay.id);
+    if (!overlayCategory || !overlayInfo) {
+      Log('Overlay not found', overlay.id);
+      return;
+    }
+    const baseOverlay = creationManager.getBaseOverlay(overlayCategory);
 
-    Log('addLayer', textureId, baseOverlay, overlayInfo);
+    Log('addLayer', textureId, overlay, baseOverlay, overlayInfo);
 
     if (!baseOverlay || !overlayInfo) {
       return;

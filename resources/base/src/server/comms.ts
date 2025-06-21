@@ -4,7 +4,7 @@ import { io, Socket } from 'socket.io-client';
 
 const socketListeners: Map<string, Map<string, any>> = new Map();
 
-const client: Socket<SocketEvents, SocketServer.Server> = io(process.env.SOCKET_SERVER_CONNECTION, {
+const client: Socket<SocketServer.SocketEvents, SocketServer.Server> = io(process.env.SOCKET_SERVER_CONNECTION, {
   autoConnect: false,
   transports: ['websocket'],
   auth: {
@@ -17,7 +17,11 @@ client.on('connect_error', (err) => {
 });
 
 client.on('disconnect', () => {
-  console.log('why we disconnect?');
+  console.log('Disconnected from socket server');
+});
+
+client.on('connect', () => {
+  console.log('Connected to socket server');
 });
 
 setImmediate(() => {
@@ -46,14 +50,14 @@ export const onSocket: Base.onSocket = (evtName, callback) => {
     return;
   }
   listeners.set(evtName, callback);
-  client.on(evtName as keyof SocketEvents, callback);
+  client.on(evtName as keyof SocketServer.SocketEvents, callback);
 };
 
 on('onResourceStop', (resource: string) => {
   const listeners = socketListeners.get(resource);
   if (listeners) {
     listeners.forEach((callback, evtName) => {
-      client.off(evtName as keyof SocketEvents, callback);
+      client.off(evtName as keyof SocketServer.SocketEvents, callback);
     });
   }
 });

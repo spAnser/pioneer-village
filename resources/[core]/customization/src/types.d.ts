@@ -16,60 +16,8 @@ declare namespace Customization {
     normal: number;
     material: number;
   };
-  type Palette = {
-    palette: number;
-    tint0: number;
-    tint1: number;
-    tint2: number;
-  };
-  type Overlay = {
-    id: number | string;
-    opacity: number;
-    roughness?: number;
-    palette: Palette;
-  };
 
-  type OverlayCategories =
-    | 'eyebrows'
-    | 'scars'
-    | 'eyeliners'
-    | 'lipsticks'
-    | 'acne'
-    | 'shadows'
-    | 'beardstabble'
-    | 'paintedmasks'
-    | 'ageing'
-    | 'blush'
-    | 'complex'
-    | 'disc'
-    | 'foundation'
-    | 'freckles'
-    | 'grime'
-    | 'hair'
-    | 'moles'
-    | 'spots'
-    | string;
-
-  type BaseOverlayItem = {
-    name: OverlayCategories;
-    visibility: number;
-    tx_id: number;
-    tx_normal: number;
-    tx_material: number;
-    tx_color_type: number;
-    tx_opacity: number;
-    tx_unk: number;
-    palette: number;
-    palette_color_primary: number;
-    palette_color_secondary: number;
-    palette_color_tertiary: number;
-    var: number;
-    opacity: number;
-  };
-
-  type PaletteData = { hash: number; count: number };
-
-  type Palettes =
+  type PaletteNames =
     | 'metaped_tint_animal'
     | 'metaped_tint_combined'
     | 'metaped_tint_combined_leather'
@@ -123,4 +71,57 @@ declare namespace Customization {
     | 'task'
     | 'teef'
     | 'uppr';
+
+  type Palette = {
+    palette: number | PaletteNames | string;
+    tint0: number;
+    tint1: number;
+    tint2: number;
+  };
+  type Overlay = {
+    id: number | string;
+    opacity: number;
+    roughness?: number;
+    palette?: Palette;
+  };
+
+  type OverlayCategories =
+    | 'eyebrows'
+    | 'scars'
+    | 'eyeliners'
+    | 'lipsticks'
+    | 'acne'
+    | 'shadows'
+    | 'beardstabble'
+    | 'paintedmasks'
+    | 'ageing'
+    | 'blush'
+    | 'complex'
+    | 'disc'
+    | 'foundation'
+    | 'freckles'
+    | 'grime'
+    | 'hair'
+    | 'moles'
+    | 'spots'
+    | string;
+
+  type BaseOverlayItem = {
+    name: OverlayCategories;
+    visibility: number;
+    tx_id: number;
+    tx_normal: number;
+    tx_material: number;
+    tx_color_type: number;
+    tx_opacity: number;
+    tx_unk: number;
+    palette: number;
+    palette_color_primary: number;
+    palette_color_secondary: number;
+    palette_color_tertiary: number;
+    var: number;
+    opacity: number;
+  };
+
+  type PaletteData = { hash: number; count: number };
 }

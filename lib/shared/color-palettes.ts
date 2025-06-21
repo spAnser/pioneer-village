@@ -1,4 +1,4 @@
-const ColorPalettes: Record<Customization.Palettes, Customization.PaletteData> = {
+const ColorPalettes: Record<Customization.PaletteNames, Customization.PaletteData> = {
   metaped_tint_animal: {
     hash: 0x9ac34f34,
     count: 255, // 256
@@ -98,7 +98,7 @@ const ColorPalettes: Record<Customization.Palettes, Customization.PaletteData> =
   // metaped_tint_swatch_003: 0x37cd36d4,
 };
 
-const ColorPaletteNames: Record<number, Customization.Palettes> = {
+const ColorPaletteNames: Record<number, Customization.PaletteNames> = {
   [0x9ac34f34 >>> 0]: 'metaped_tint_animal',
   [0x6765bc15 >>> 0]: 'metaped_tint_combined',
   [0xf509c745 >>> 0]: 'metaped_tint_combined_leather',
