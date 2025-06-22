@@ -13,15 +13,15 @@ RegisterCommand(
   'overlay_test',
   () => {
     const overlay: Customization.Overlay = {
-      // id: 'mp_u_faov_eyebrow_m_000',
-      // id: 'mp_u_faov_ageing_000',
       id: 'mp_u_faov_eyebrow_m_000',
+      // id: 'mp_u_faov_ageing_000',
+      // id: 1502980719,
       opacity: 0.99,
       // palette: {
       //   palette: 'metaped_tint_makeup',
-      //   tint0: 41,
-      //   tint1: 41,
-      //   tint2: 41,
+      //   tint0: 0,
+      //   tint1: 20,
+      //   tint2: 40,
       // },
     };
 
@@ -30,21 +30,10 @@ RegisterCommand(
   false,
 );
 
-onUI('overlay.test.thing', (overlay: UI.Customization.OverlayJsonData) => {
-  Log('overlay.test.thing', overlay);
+onUI('customization.set-layers', (layers: UI.Customization.LayerData[]) => {
+  Log('overlaycustomization.set-layers', layers);
 
-  creationManager.setOverlays([
-    {
-      id: overlay.id,
-      opacity: 0.99,
-      // palette: {
-      //   palette: 'metaped_tint_makeup',
-      //   tint0: 41,
-      //   tint1: 41,
-      //   tint2: 41,
-      // },
-    },
-  ]);
+  creationManager.setOverlays(layers);
 });
 
 RegisterCommand(

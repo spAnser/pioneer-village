@@ -111,7 +111,7 @@ declare namespace UI.Customization {
     currentFaceOptions: Record<string, number>;
     currentFaceFeatures: Record<string, number>;
     currentBodyOptions: Record<string, any>;
-    currentOverlays: Record<string, any>;
+    currentLayers: any[];
     currentWhistle: Record<string, any>;
     firstName: string;
     lastName: string;
@@ -151,8 +151,17 @@ declare namespace UI.Customization {
 
   interface OverlayJson {
     name: string;
+    canUsePalette: boolean;
     components: OverlayJsonData[];
   }
+
+  type LayerData = {
+    uid: string;
+    id: string;
+    opacity: number;
+    roughness?: number;
+    palette?: CustomizationPalette;
+  };
 }
 
 declare namespace UI.HUD {

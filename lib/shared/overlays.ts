@@ -57,7 +57,7 @@ export const defaultOverlays = {
     palette: 0,
     paletteP: 0,
   },
-  beardstabble: {
+  beards: {
     id: -1,
     opacity: 100,
     palette: 0,
@@ -78,7 +78,16 @@ export const defaultOverlays = {
     palette: 0,
     paletteP: 0,
   },
-  shadows: {
+  eyeshadows: {
+    id: -1,
+    opacity: 100,
+    variation: 0,
+    palette: 0,
+    paletteP: 0,
+    paletteS: 0,
+    paletteT: 0,
+  },
+  masks: {
     id: -1,
     opacity: 100,
     variation: 0,

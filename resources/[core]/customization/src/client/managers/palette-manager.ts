@@ -83,7 +83,7 @@ class PaletteManager {
   };
 
   getIndexForCategory: Customization.GetIndexForCategory = (entity, category) => {
-    Log('getIndexForCategory', entity, category);
+    // Log('getIndexForCategory', entity, category);
 
     if (typeof category === 'string') {
       category = GetHashKey(category);

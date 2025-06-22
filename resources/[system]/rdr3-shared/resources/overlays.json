@@ -1,0 +1,963 @@
+{
+    "eyebrows": {
+        "name": "eyebrows",
+        "canUsePalette":  true,
+        "components": [
+            {
+                "id": "mp_u_faov_eyebrow_m_000",
+                "albedo": "mp_u_faov_eyebrow_m_000_ab",
+                "normal": "mp_u_faov_eyebrow_m_000_nm",
+                "ma": "mp_u_faov_eyebrow_m_000_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_001",
+                "albedo": "mp_u_faov_eyebrow_m_001_ab",
+                "normal": "mp_u_faov_eyebrow_m_001_nm",
+                "ma": "mp_u_faov_eyebrow_m_001_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_002",
+                "albedo": "mp_u_faov_eyebrow_m_002_ab",
+                "normal": "mp_u_faov_eyebrow_m_002_nm",
+                "ma": "mp_u_faov_eyebrow_m_002_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_003",
+                "albedo": "mp_u_faov_eyebrow_m_003_ab",
+                "normal": "mp_u_faov_eyebrow_m_003_nm",
+                "ma": "mp_u_faov_eyebrow_m_003_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_004",
+                "albedo": "mp_u_faov_eyebrow_m_004_ab",
+                "normal": "mp_u_faov_eyebrow_m_004_nm",
+                "ma": "mp_u_faov_eyebrow_m_004_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_005",
+                "albedo": "mp_u_faov_eyebrow_m_005_ab",
+                "normal": "mp_u_faov_eyebrow_m_005_nm",
+                "ma": "mp_u_faov_eyebrow_m_005_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_006",
+                "albedo": "mp_u_faov_eyebrow_m_006_ab",
+                "normal": "mp_u_faov_eyebrow_m_006_nm",
+                "ma": "mp_u_faov_eyebrow_m_006_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_007",
+                "albedo": "mp_u_faov_eyebrow_m_007_ab",
+                "normal": "mp_u_faov_eyebrow_m_007_nm",
+                "ma": "mp_u_faov_eyebrow_m_007_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_008",
+                "albedo": "mp_u_faov_eyebrow_m_008_ab",
+                "normal": "mp_u_faov_eyebrow_m_008_nm",
+                "ma": "mp_u_faov_eyebrow_m_008_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_009",
+                "albedo": "mp_u_faov_eyebrow_m_009_ab",
+                "normal": "mp_u_faov_eyebrow_m_009_nm",
+                "ma": "mp_u_faov_eyebrow_m_009_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_010",
+                "albedo": "mp_u_faov_eyebrow_m_010_ab",
+                "normal": "mp_u_faov_eyebrow_m_010_nm",
+                "ma": "mp_u_faov_eyebrow_m_010_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_011",
+                "albedo": "mp_u_faov_eyebrow_m_011_ab",
+                "normal": "mp_u_faov_eyebrow_m_011_nm",
+                "ma": "mp_u_faov_eyebrow_m_011_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_012",
+                "albedo": "mp_u_faov_eyebrow_m_012_ab",
+                "normal": "mp_u_faov_eyebrow_m_012_nm",
+                "ma": "mp_u_faov_eyebrow_m_012_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_013",
+                "albedo": "mp_u_faov_eyebrow_m_013_ab",
+                "normal": "mp_u_faov_eyebrow_m_013_nm",
+                "ma": "mp_u_faov_eyebrow_m_013_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_014",
+                "albedo": "mp_u_faov_eyebrow_m_014_ab",
+                "normal": "mp_u_faov_eyebrow_m_014_nm",
+                "ma": "mp_u_faov_eyebrow_m_014_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_m_015",
+                "albedo": "mp_u_faov_eyebrow_m_015_ab",
+                "normal": "mp_u_faov_eyebrow_m_015_nm",
+                "ma": "mp_u_faov_eyebrow_m_015_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_f_000",
+                "albedo": "mp_u_faov_eyebrow_f_000_ab",
+                "normal": "mp_u_faov_eyebrow_f_000_nm",
+                "ma": "mp_u_faov_eyebrow_f_000_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_f_001",
+                "albedo": "mp_u_faov_eyebrow_f_001_ab",
+                "normal": "mp_u_faov_eyebrow_f_001_nm",
+                "ma": "mp_u_faov_eyebrow_f_001_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_f_002",
+                "albedo": "mp_u_faov_eyebrow_f_002_ab",
+                "normal": "mp_u_faov_eyebrow_f_002_nm",
+                "ma": "mp_u_faov_eyebrow_f_002_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_f_003",
+                "albedo": "mp_u_faov_eyebrow_f_003_ab",
+                "normal": "mp_u_faov_eyebrow_f_003_nm",
+                "ma": "mp_u_faov_eyebrow_f_003_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_f_004",
+                "albedo": "mp_u_faov_eyebrow_f_004_ab",
+                "normal": "mp_u_faov_eyebrow_f_004_nm",
+                "ma": "mp_u_faov_eyebrow_f_004_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_f_005",
+                "albedo": "mp_u_faov_eyebrow_f_005_ab",
+                "normal": "mp_u_faov_eyebrow_f_005_nm",
+                "ma": "mp_u_faov_eyebrow_f_005_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_f_006",
+                "albedo": "mp_u_faov_eyebrow_f_006_ab",
+                "normal": "mp_u_faov_eyebrow_f_006_nm",
+                "ma": "mp_u_faov_eyebrow_f_006_ab"
+            },
+            {
+                "id": "mp_u_faov_eyebrow_f_007",
+                "albedo": "mp_u_faov_eyebrow_f_007_ab",
+                "normal": "mp_u_faov_eyebrow_f_007_nm",
+                "ma": "mp_u_faov_eyebrow_f_007_ab"
+            }
+        ]
+    },
+    "scars": {
+        "name": "scars",
+        "canUsePalette": false,
+        "components": [
+            {
+                "id": "mp_u_faov_scar_000",
+                "albedo": "mp_u_faov_scar_000_ab",
+                "normal": "mp_u_faov_scar_000_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_001",
+                "albedo": "mp_u_faov_scar_001_ab",
+                "normal": "mp_u_faov_scar_001_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_002",
+                "albedo": "mp_u_faov_scar_002_ab",
+                "normal": "mp_u_faov_scar_002_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_003",
+                "albedo": "mp_u_faov_scar_003_ab",
+                "normal": "mp_u_faov_scar_003_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_004",
+                "albedo": "mp_u_faov_scar_004_ab",
+                "normal": "mp_u_faov_scar_004_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_005",
+                "albedo": "mp_u_faov_scar_005_ab",
+                "normal": "mp_u_faov_scar_005_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_006",
+                "albedo": "mp_u_faov_scar_006_ab",
+                "normal": "mp_u_faov_scar_006_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_007",
+                "albedo": "mp_u_faov_scar_007_ab",
+                "normal": "mp_u_faov_scar_007_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_008",
+                "albedo": "mp_u_faov_scar_008_ab",
+                "normal": "mp_u_faov_scar_008_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_009",
+                "albedo": "mp_u_faov_scar_009_ab",
+                "normal": "mp_u_faov_scar_009_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_010",
+                "albedo": "mp_u_faov_scar_010_ab",
+                "normal": "mp_u_faov_scar_010_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_011",
+                "albedo": "mp_u_faov_scar_011_ab",
+                "normal": "mp_u_faov_scar_011_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_012",
+                "albedo": "mp_u_faov_scar_012_ab",
+                "normal": "mp_u_faov_scar_012_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_013",
+                "albedo": "mp_u_faov_scar_013_ab",
+                "normal": "mp_u_faov_scar_013_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_014",
+                "albedo": "mp_u_faov_scar_014_ab",
+                "normal": "mp_u_faov_scar_014_nm"
+            },
+            {
+                "id": "mp_u_faov_scar_015",
+                "albedo": "mp_u_faov_scar_015_ab",
+                "normal": "mp_u_faov_scar_015_nm"
+            }
+        ]
+    },
+    "eyeliners": {
+        "name": "eyeliners",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_eyeliner_000",
+                "albedo": "mp_u_faov_eyeliner_000_ab",
+                "ma": "mp_u_faov_eyeliner_000_ma"
+            }
+        ]
+    },
+    "lipsticks": {
+        "name": "lipsticks",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_lipstick_000",
+                "albedo": "mp_u_faov_lipstick_000_ab",
+                "normal": "mp_u_faov_lipstick_000_nm",
+                "ma": "mp_u_faov_lipstick_000_ma"
+            }
+        ]
+    },
+    "acne": {
+        "name": "acne",
+        "canUsePalette": false,
+        "components": [
+            {
+                "id": "mp_u_faov_acne_000",
+                "albedo": "mp_u_faov_acne_000_ab",
+                "normal": "mp_u_faov_acne_000_nm"
+            }
+        ]
+    },
+    "eyeshadows": {
+        "name": "eyeshadows",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_eyeshadow_000",
+                "albedo": "mp_u_faov_eyeshadow_000_ab",
+                "ma": "mp_u_faov_eyeshadow_000_ma"
+            }
+        ]
+    },
+    "beards": {
+        "name": "beards",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_beard_000",
+                "albedo": "mp_u_faov_beard_000_ab",
+                "normal": "mp_u_faov_beard_000_nm",
+                "ma": "mp_u_faov_beard_000_ma"
+            }
+        ]
+    },
+    "masks": {
+        "name": "masks",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_masks_000",
+                "albedo": "mp_u_faov_masks_000_ab"
+            }
+        ]
+    },
+    "ageing": {
+        "name": "ageing",
+        "canUsePalette": false,
+        "components": [
+            {
+                "id": "mp_u_faov_ageing_000",
+                "albedo": "mp_u_faov_ageing_000_ab",
+                "normal": "mp_u_faov_ageing_000_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_001",
+                "albedo": "mp_u_faov_ageing_001_ab",
+                "normal": "mp_u_faov_ageing_001_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_002",
+                "albedo": "mp_u_faov_ageing_002_ab",
+                "normal": "mp_u_faov_ageing_002_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_003",
+                "albedo": "mp_u_faov_ageing_003_ab",
+                "normal": "mp_u_faov_ageing_003_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_004",
+                "albedo": "mp_u_faov_ageing_004_ab",
+                "normal": "mp_u_faov_ageing_004_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_005",
+                "albedo": "mp_u_faov_ageing_005_ab",
+                "normal": "mp_u_faov_ageing_005_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_006",
+                "albedo": "mp_u_faov_ageing_006_ab",
+                "normal": "mp_u_faov_ageing_006_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_007",
+                "albedo": "mp_u_faov_ageing_007_ab",
+                "normal": "mp_u_faov_ageing_007_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_008",
+                "albedo": "mp_u_faov_ageing_008_ab",
+                "normal": "mp_u_faov_ageing_008_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_009",
+                "albedo": "mp_u_faov_ageing_009_ab",
+                "normal": "mp_u_faov_ageing_009_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_010",
+                "albedo": "mp_u_faov_ageing_010_ab",
+                "normal": "mp_u_faov_ageing_010_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_011",
+                "albedo": "mp_u_faov_ageing_011_ab",
+                "normal": "mp_u_faov_ageing_011_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_012",
+                "albedo": "mp_u_faov_ageing_012_ab",
+                "normal": "mp_u_faov_ageing_012_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_013",
+                "albedo": "mp_u_faov_ageing_013_ab",
+                "normal": "mp_u_faov_ageing_013_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_014",
+                "albedo": "mp_u_faov_ageing_014_ab",
+                "normal": "mp_u_faov_ageing_014_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_015",
+                "albedo": "mp_u_faov_ageing_015_ab",
+                "normal": "mp_u_faov_ageing_015_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_016",
+                "albedo": "mp_u_faov_ageing_016_ab",
+                "normal": "mp_u_faov_ageing_016_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_016",
+                "albedo": "mp_u_faov_ageing_016_ab",
+                "normal": "mp_u_faov_ageing_016_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_018",
+                "albedo": "mp_u_faov_ageing_018_ab",
+                "normal": "mp_u_faov_ageing_018_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_019",
+                "albedo": "mp_u_faov_ageing_019_ab",
+                "normal": "mp_u_faov_ageing_019_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_020",
+                "albedo": "mp_u_faov_ageing_020_ab",
+                "normal": "mp_u_faov_ageing_020_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_021",
+                "albedo": "mp_u_faov_ageing_021_ab",
+                "normal": "mp_u_faov_ageing_021_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_022",
+                "albedo": "mp_u_faov_ageing_022_ab",
+                "normal": "mp_u_faov_ageing_022_nm"
+            },
+            {
+                "id": "mp_u_faov_ageing_023",
+                "albedo": "mp_u_faov_ageing_023_ab",
+                "normal": "mp_u_faov_ageing_023_nm"
+            }
+        ]
+    },
+    "blush": {
+        "name": "blush",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_blush_000",
+                "albedo": "mp_u_faov_blush_000_ab"
+            },
+            {
+                "id": "mp_u_faov_blush_001",
+                "albedo": "mp_u_faov_blush_001_ab"
+            },
+            {
+                "id": "mp_u_faov_blush_002",
+                "albedo": "mp_u_faov_blush_002_ab"
+            },
+            {
+                "id": "mp_u_faov_blush_003",
+                "albedo": "mp_u_faov_blush_003_ab"
+            }
+        ]
+    },
+    "complex": {
+        "name": "complex",
+        "canUsePalette": false,
+        "components": [
+            {
+                "id": "mp_u_faov_complex_000",
+                "albedo": "mp_u_faov_complex_000_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_001",
+                "albedo": "mp_u_faov_complex_001_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_002",
+                "albedo": "mp_u_faov_complex_002_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_003",
+                "albedo": "mp_u_faov_complex_003_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_004",
+                "albedo": "mp_u_faov_complex_004_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_005",
+                "albedo": "mp_u_faov_complex_005_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_006",
+                "albedo": "mp_u_faov_complex_006_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_007",
+                "albedo": "mp_u_faov_complex_007_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_008",
+                "albedo": "mp_u_faov_complex_008_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_009",
+                "albedo": "mp_u_faov_complex_009_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_010",
+                "albedo": "mp_u_faov_complex_010_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_011",
+                "albedo": "mp_u_faov_complex_011_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_012",
+                "albedo": "mp_u_faov_complex_012_ab"
+            },
+            {
+                "id": "mp_u_faov_complex_013",
+                "albedo": "mp_u_faov_complex_013_ab"
+            }
+        ]
+    },
+    "disc": {
+        "name": "disc",
+        "canUsePalette": false,
+        "components": [
+            {
+                "id": "mp_u_faov_disc_000",
+                "albedo": "mp_u_faov_disc_000_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_001",
+                "albedo": "mp_u_faov_disc_001_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_002",
+                "albedo": "mp_u_faov_disc_002_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_003",
+                "albedo": "mp_u_faov_disc_003_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_004",
+                "albedo": "mp_u_faov_disc_004_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_005",
+                "albedo": "mp_u_faov_disc_005_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_006",
+                "albedo": "mp_u_faov_disc_006_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_007",
+                "albedo": "mp_u_faov_disc_007_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_008",
+                "albedo": "mp_u_faov_disc_008_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_009",
+                "albedo": "mp_u_faov_disc_009_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_010",
+                "albedo": "mp_u_faov_disc_010_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_011",
+                "albedo": "mp_u_faov_disc_011_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_012",
+                "albedo": "mp_u_faov_disc_012_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_013",
+                "albedo": "mp_u_faov_disc_013_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_014",
+                "albedo": "mp_u_faov_disc_014_ab"
+            },
+            {
+                "id": "mp_u_faov_disc_015",
+                "albedo": "mp_u_faov_disc_015_ab"
+            }
+        ]
+    },
+    "foundation": {
+        "name": "foundation",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_foundation_000",
+                "albedo": "mp_u_faov_foundation_000_ab",
+                "ma": "mp_u_faov_foundation_000_ma"
+            }
+        ]
+    },
+    "freckles": {
+        "name": "freckles",
+        "canUsePalette": false,
+        "components": [
+            {
+                "id": "mp_u_faov_freckles_000",
+                "albedo": "mp_u_faov_freckles_000_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_001",
+                "albedo": "mp_u_faov_freckles_001_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_002",
+                "albedo": "mp_u_faov_freckles_002_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_003",
+                "albedo": "mp_u_faov_freckles_003_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_004",
+                "albedo": "mp_u_faov_freckles_004_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_005",
+                "albedo": "mp_u_faov_freckles_005_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_006",
+                "albedo": "mp_u_faov_freckles_006_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_007",
+                "albedo": "mp_u_faov_freckles_007_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_008",
+                "albedo": "mp_u_faov_freckles_008_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_009",
+                "albedo": "mp_u_faov_freckles_009_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_010",
+                "albedo": "mp_u_faov_freckles_010_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_011",
+                "albedo": "mp_u_faov_freckles_011_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_012",
+                "albedo": "mp_u_faov_freckles_012_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_013",
+                "albedo": "mp_u_faov_freckles_013_ab"
+            },
+            {
+                "id": "mp_u_faov_freckles_014",
+                "albedo": "mp_u_faov_freckles_014_ab"
+            }
+        ]
+    },
+    "grime": {
+        "name": "grime",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_grime_000",
+                "albedo": "mp_u_faov_grime_000_ab",
+                "normal": "mp_u_faov_grime_000_nm",
+                "ma": "mp_u_faov_grime_000_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_001",
+                "albedo": "mp_u_faov_grime_001_ab",
+                "normal": "mp_u_faov_grime_001_nm",
+                "ma": "mp_u_faov_grime_001_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_002",
+                "albedo": "mp_u_faov_grime_002_ab",
+                "normal": "mp_u_faov_grime_002_nm",
+                "ma": "mp_u_faov_grime_002_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_003",
+                "albedo": "mp_u_faov_grime_003_ab",
+                "normal": "mp_u_faov_grime_003_nm",
+                "ma": "mp_u_faov_grime_003_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_004",
+                "albedo": "mp_u_faov_grime_004_ab",
+                "normal": "mp_u_faov_grime_004_nm",
+                "ma": "mp_u_faov_grime_004_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_005",
+                "albedo": "mp_u_faov_grime_005_ab",
+                "normal": "mp_u_faov_grime_005_nm",
+                "ma": "mp_u_faov_grime_005_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_006",
+                "albedo": "mp_u_faov_grime_006_ab",
+                "normal": "mp_u_faov_grime_006_nm",
+                "ma": "mp_u_faov_grime_006_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_007",
+                "albedo": "mp_u_faov_grime_007_ab",
+                "normal": "mp_u_faov_grime_007_nm",
+                "ma": "mp_u_faov_grime_007_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_008",
+                "albedo": "mp_u_faov_grime_008_ab",
+                "normal": "mp_u_faov_grime_008_nm",
+                "ma": "mp_u_faov_grime_008_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_009",
+                "albedo": "mp_u_faov_grime_009_ab",
+                "normal": "mp_u_faov_grime_009_nm",
+                "ma": "mp_u_faov_grime_009_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_010",
+                "albedo": "mp_u_faov_grime_010_ab",
+                "normal": "mp_u_faov_grime_010_nm",
+                "ma": "mp_u_faov_grime_010_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_011",
+                "albedo": "mp_u_faov_grime_011_ab",
+                "normal": "mp_u_faov_grime_011_nm",
+                "ma": "mp_u_faov_grime_011_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_012",
+                "albedo": "mp_u_faov_grime_012_ab",
+                "normal": "mp_u_faov_grime_012_nm",
+                "ma": "mp_u_faov_grime_012_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_013",
+                "albedo": "mp_u_faov_grime_013_ab",
+                "normal": "mp_u_faov_grime_013_nm",
+                "ma": "mp_u_faov_grime_013_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_014",
+                "albedo": "mp_u_faov_grime_014_ab",
+                "normal": "mp_u_faov_grime_014_nm",
+                "ma": "mp_u_faov_grime_014_ma"
+            },
+            {
+                "id": "mp_u_faov_grime_015",
+                "albedo": "mp_u_faov_grime_015_ab",
+                "normal": "mp_u_faov_grime_015_nm",
+                "ma": "mp_u_faov_grime_015_ma"
+            }
+        ]
+    },
+    "hair": {
+        "name": "hair",
+        "canUsePalette": true,
+        "components": [
+            {
+                "id": "mp_u_faov_m_hair_000",
+                "albedo": "mp_u_faov_m_hair_000_ab",
+                "normal": "mp_u_faov_m_hair_000_nm",
+                "ma": "mp_u_faov_m_hair_000_ma"
+            },
+            {
+                "id": "mp_u_faov_m_hair_002",
+                "albedo": "mp_u_faov_m_hair_002_ab",
+                "ma": "mp_u_faov_m_hair_002_ma"
+            },
+            {
+                "id": "mp_u_faov_m_hair_009",
+                "albedo": "mp_u_faov_m_hair_009_ab",
+                "ma": "mp_u_faov_m_hair_009_ma"
+            },
+            {
+                "id": "mp_u_faov_m_hair_shared_000",
+                "albedo": "mp_u_faov_m_hair_shared_000_ab",
+                "ma": "mp_u_faov_m_hair_shared_000_ma"
+            }
+        ]
+    },
+    "moles": {
+        "name": "moles",
+        "canUsePalette": false,
+        "components": [
+            {
+                "id": "mp_u_faov_moles_000",
+                "albedo": "mp_u_faov_moles_000_ab",
+                "normal": "mp_u_faov_moles_000_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_001",
+                "albedo": "mp_u_faov_moles_001_ab",
+                "normal": "mp_u_faov_moles_001_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_002",
+                "albedo": "mp_u_faov_moles_002_ab",
+                "normal": "mp_u_faov_moles_002_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_003",
+                "albedo": "mp_u_faov_moles_003_ab",
+                "normal": "mp_u_faov_moles_003_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_004",
+                "albedo": "mp_u_faov_moles_004_ab",
+                "normal": "mp_u_faov_moles_004_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_005",
+                "albedo": "mp_u_faov_moles_005_ab",
+                "normal": "mp_u_faov_moles_005_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_006",
+                "albedo": "mp_u_faov_moles_006_ab",
+                "normal": "mp_u_faov_moles_006_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_007",
+                "albedo": "mp_u_faov_moles_007_ab",
+                "normal": "mp_u_faov_moles_007_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_008",
+                "albedo": "mp_u_faov_moles_008_ab",
+                "normal": "mp_u_faov_moles_008_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_009",
+                "albedo": "mp_u_faov_moles_009_ab",
+                "normal": "mp_u_faov_moles_009_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_010",
+                "albedo": "mp_u_faov_moles_010_ab",
+                "normal": "mp_u_faov_moles_010_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_011",
+                "albedo": "mp_u_faov_moles_011_ab",
+                "normal": "mp_u_faov_moles_011_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_012",
+                "albedo": "mp_u_faov_moles_012_ab",
+                "normal": "mp_u_faov_moles_012_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_013",
+                "albedo": "mp_u_faov_moles_013_ab",
+                "normal": "mp_u_faov_moles_013_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_014",
+                "albedo": "mp_u_faov_moles_014_ab",
+                "normal": "mp_u_faov_moles_014_nm"
+            },
+            {
+                "id": "mp_u_faov_moles_015",
+                "albedo": "mp_u_faov_moles_015_ab",
+                "normal": "mp_u_faov_moles_015_nm"
+            }
+        ]
+    },
+    "spots": {
+        "name": "spots",
+        "canUsePalette": false,
+        "components": [
+            {
+                "id": "mp_u_faov_spots_000",
+                "albedo": "mp_u_faov_spots_000_ab",
+                "normal": "mp_u_faov_spots_000_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_001",
+                "albedo": "mp_u_faov_spots_001_ab",
+                "normal": "mp_u_faov_spots_001_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_002",
+                "albedo": "mp_u_faov_spots_002_ab",
+                "normal": "mp_u_faov_spots_002_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_003",
+                "albedo": "mp_u_faov_spots_003_ab",
+                "normal": "mp_u_faov_spots_003_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_004",
+                "albedo": "mp_u_faov_spots_004_ab",
+                "normal": "mp_u_faov_spots_004_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_005",
+                "albedo": "mp_u_faov_spots_005_ab",
+                "normal": "mp_u_faov_spots_005_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_006",
+                "albedo": "mp_u_faov_spots_006_ab",
+                "normal": "mp_u_faov_spots_006_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_007",
+                "albedo": "mp_u_faov_spots_007_ab",
+                "normal": "mp_u_faov_spots_007_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_008",
+                "albedo": "mp_u_faov_spots_008_ab",
+                "normal": "mp_u_faov_spots_008_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_009",
+                "albedo": "mp_u_faov_spots_009_ab",
+                "normal": "mp_u_faov_spots_009_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_010",
+                "albedo": "mp_u_faov_spots_010_ab",
+                "normal": "mp_u_faov_spots_010_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_011",
+                "albedo": "mp_u_faov_spots_011_ab",
+                "normal": "mp_u_faov_spots_011_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_012",
+                "albedo": "mp_u_faov_spots_012_ab",
+                "normal": "mp_u_faov_spots_012_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_013",
+                "albedo": "mp_u_faov_spots_013_ab",
+                "normal": "mp_u_faov_spots_013_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_014",
+                "albedo": "mp_u_faov_spots_014_ab",
+                "normal": "mp_u_faov_spots_014_nm"
+            },
+            {
+                "id": "mp_u_faov_spots_015",
+                "albedo": "mp_u_faov_spots_015_ab",
+                "normal": "mp_u_faov_spots_015_nm"
+            }
+        ]
+    }
+}

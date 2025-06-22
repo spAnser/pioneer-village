@@ -5,7 +5,6 @@ import { Socket } from 'socket.io-client';
 import UIComponent from '@uiLib/ui-component';
 import { emitClient, LoadResourceJson, onClient } from '@lib/ui';
 
-import { defaultOverlays } from './data';
 import { ModalButton, ModalButtons, ModalContents, ModalLeft, ModalRight, BottomControls, ModalTitle } from './styled';
 import StyleColorSelector from './components/StyleColorSelector';
 import { GenderSelect } from './components/Gender';
@@ -95,6 +94,7 @@ const componentFiles = [
 ];
 
 const ComponentsData: Record<string, UI.Customization.ComponentJson[]> = {};
+const OverlaysData: Record<string, UI.Customization.OverlayJson> = {};
 
 const pedComponentCategories = [
   'hats',
@@ -140,182 +140,6 @@ const teethTypes = [
   'The Yokel',
 ];
 
-const overlays: Record<string, UI.Customization.OverlayJson> = {
-  eyebrows: {
-    name: 'Eyebrows',
-    components: [
-      {
-        id: 'mp_u_faov_eyebrow_m_000',
-        albedo: 'mp_u_faov_eyebrow_m_000_ab',
-        normal: 'mp_u_faov_eyebrow_m_000_nm',
-        ma: 'mp_u_faov_eyebrow_m_000_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_001',
-        albedo: 'mp_u_faov_eyebrow_m_001_ab',
-        normal: 'mp_u_faov_eyebrow_m_001_nm',
-        ma: 'mp_u_faov_eyebrow_m_001_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_002',
-        albedo: 'mp_u_faov_eyebrow_m_002_ab',
-        normal: 'mp_u_faov_eyebrow_m_002_nm',
-        ma: 'mp_u_faov_eyebrow_m_002_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_003',
-        albedo: 'mp_u_faov_eyebrow_m_003_ab',
-        normal: 'mp_u_faov_eyebrow_m_003_nm',
-        ma: 'mp_u_faov_eyebrow_m_003_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_004',
-        albedo: 'mp_u_faov_eyebrow_m_004_ab',
-        normal: 'mp_u_faov_eyebrow_m_004_nm',
-        ma: 'mp_u_faov_eyebrow_m_004_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_005',
-        albedo: 'mp_u_faov_eyebrow_m_005_ab',
-        normal: 'mp_u_faov_eyebrow_m_005_nm',
-        ma: 'mp_u_faov_eyebrow_m_005_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_006',
-        albedo: 'mp_u_faov_eyebrow_m_006_ab',
-        normal: 'mp_u_faov_eyebrow_m_006_nm',
-        ma: 'mp_u_faov_eyebrow_m_006_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_007',
-        albedo: 'mp_u_faov_eyebrow_m_007_ab',
-        normal: 'mp_u_faov_eyebrow_m_007_nm',
-        ma: 'mp_u_faov_eyebrow_m_007_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_008',
-        albedo: 'mp_u_faov_eyebrow_m_008_ab',
-        normal: 'mp_u_faov_eyebrow_m_008_nm',
-        ma: 'mp_u_faov_eyebrow_m_008_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_009',
-        albedo: 'mp_u_faov_eyebrow_m_009_ab',
-        normal: 'mp_u_faov_eyebrow_m_009_nm',
-        ma: 'mp_u_faov_eyebrow_m_009_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_010',
-        albedo: 'mp_u_faov_eyebrow_m_010_ab',
-        normal: 'mp_u_faov_eyebrow_m_010_nm',
-        ma: 'mp_u_faov_eyebrow_m_010_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_011',
-        albedo: 'mp_u_faov_eyebrow_m_011_ab',
-        normal: 'mp_u_faov_eyebrow_m_011_nm',
-        ma: 'mp_u_faov_eyebrow_m_011_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_012',
-        albedo: 'mp_u_faov_eyebrow_m_012_ab',
-        normal: 'mp_u_faov_eyebrow_m_012_nm',
-        ma: 'mp_u_faov_eyebrow_m_012_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_013',
-        albedo: 'mp_u_faov_eyebrow_m_013_ab',
-        normal: 'mp_u_faov_eyebrow_m_013_nm',
-        ma: 'mp_u_faov_eyebrow_m_013_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_014',
-        albedo: 'mp_u_faov_eyebrow_m_014_ab',
-        normal: 'mp_u_faov_eyebrow_m_014_nm',
-        ma: 'mp_u_faov_eyebrow_m_014_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_m_015',
-        albedo: 'mp_u_faov_eyebrow_m_015_ab',
-        normal: 'mp_u_faov_eyebrow_m_015_nm',
-        ma: 'mp_u_faov_eyebrow_m_015_ma',
-        type: '0',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_f_000',
-        albedo: 'mp_u_faov_eyebrow_f_000_ab',
-        normal: 'mp_u_faov_eyebrow_f_000_nm',
-        ma: 'mp_u_faov_eyebrow_f_000_ma',
-        type: '1',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_f_001',
-        albedo: 'mp_u_faov_eyebrow_f_001_ab',
-        normal: 'mp_u_faov_eyebrow_f_001_nm',
-        ma: 'mp_u_faov_eyebrow_f_001_ma',
-        type: '1',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_f_002',
-        albedo: 'mp_u_faov_eyebrow_f_002_ab',
-        normal: 'mp_u_faov_eyebrow_f_002_nm',
-        ma: 'mp_u_faov_eyebrow_f_002_ma',
-        type: '1',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_f_003',
-        albedo: 'mp_u_faov_eyebrow_f_003_ab',
-        normal: 'mp_u_faov_eyebrow_f_003_nm',
-        ma: 'mp_u_faov_eyebrow_f_003_ma',
-        type: '1',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_f_004',
-        albedo: 'mp_u_faov_eyebrow_f_004_ab',
-        normal: 'mp_u_faov_eyebrow_f_004_nm',
-        ma: 'mp_u_faov_eyebrow_f_004_ma',
-        type: '1',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_f_005',
-        albedo: 'mp_u_faov_eyebrow_f_005_ab',
-        normal: 'mp_u_faov_eyebrow_f_005_nm',
-        ma: 'mp_u_faov_eyebrow_f_005_ma',
-        type: '1',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_f_006',
-        albedo: 'mp_u_faov_eyebrow_f_006_ab',
-        normal: 'mp_u_faov_eyebrow_f_006_nm',
-        ma: 'mp_u_faov_eyebrow_f_006_ma',
-        type: '1',
-      },
-      {
-        id: 'mp_u_faov_eyebrow_f_007',
-        albedo: 'mp_u_faov_eyebrow_f_007_ab',
-        normal: 'mp_u_faov_eyebrow_f_007_nm',
-        ma: 'mp_u_faov_eyebrow_f_007_ma',
-        type: '1',
-      },
-    ],
-  },
-};
-
 const horseComponentCategories = ['head', 'hand', 'hair', 'mane', 'teef', 'hair', 'mane'];
 
 export default class Customization extends UIComponent<UI.Customization.Props, UI.Customization.State, {}> {
@@ -336,7 +160,7 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
       currentFaceOptions: {},
       currentFaceFeatures: {},
       currentBodyOptions: {},
-      currentOverlays: defaultOverlays,
+      currentLayers: [],
       currentWhistle: {},
       firstName: '',
       lastName: '',
@@ -383,6 +207,17 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
         'rdr3-shared',
         `components-ui/${componentFile}.json`,
       )) as UI.Customization.ComponentJson[];
+    }
+
+    const overlays = (await LoadResourceJson('rdr3-shared', 'resources/overlays.json')) as Record<
+      string,
+      UI.Customization.OverlayJson
+    >;
+
+    console.log('overlays', overlays);
+
+    for (const [category, overlayData] of Object.entries(overlays)) {
+      OverlaysData[category] = overlayData;
     }
   }
 
@@ -502,7 +337,7 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
     if (state === 'finalize') {
       console.log(this.state);
       console.log(this.props.socket.emit);
-      const state = { ...this.state, currentComponents: this.getComponentDataArray(), tints: {}, currentOverlays: {} };
+      const state = { ...this.state, currentComponents: this.getComponentDataArray(), tints: {}, currentLayers: [] };
       // TODO: Send current body/head components and face features
       console.log(JSON.stringify(state, null, 2));
       this.props.socket.emit('customization.finalize', JSON.stringify(state));
@@ -576,6 +411,12 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
     emitClient('customization.rotate-chosen', value);
   }
 
+  changeLayers(layers: UI.Customization.LayerData[]) {
+    console.log('changeLayers', layers);
+    this.setState({ currentLayers: layers });
+    emitClient('customization.set-layers', layers);
+  }
+
   render() {
     return (
       <>
@@ -624,7 +465,7 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
                     {/*<TintSelector*/}
                     {/*  label="Hat Tint"*/}
                     {/*  onChange={this.setTintByCategory.bind(this)}*/}
-                    {/*  category="hats"*/}
+                    {/*  identifier="hats"*/}
                     {/*  palette={this.state.tints.hats.palette}*/}
                     {/*  tint0={this.state.tints.hats.tint0}*/}
                     {/*  tint1={this.state.tints.hats.tint1}*/}
@@ -636,7 +477,7 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
               {this.state.state === 'head' && (
                 <>
                   <ModalContents>
-                    <OverlaySelector overlays={overlays} />
+                    <OverlaySelector onChange={this.changeLayers.bind(this)} overlays={OverlaysData} />
                     <RangeSlider label="Head" min={0} max={19} onChange={this.handleChangeHead.bind(this)} />
                     <RangeSlider
                       label="Teeth"
@@ -973,7 +814,7 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
                 <TintSelector
                   label="Hat Tint"
                   onChange={this.setTintByCategory.bind(this)}
-                  category="hats"
+                  identifier="hats"
                   palette={this.state.tints.hats.palette}
                   tint0={this.state.tints.hats.tint0}
                   tint1={this.state.tints.hats.tint1}
@@ -982,7 +823,7 @@ export default class Customization extends UIComponent<UI.Customization.Props, U
                 <TintSelector
                   label="Coat Tint"
                   onChange={this.setTintByCategory.bind(this)}
-                  category="coats"
+                  identifier="coats"
                   palette={this.state.tints.coats.palette}
                   tint0={this.state.tints.coats.tint0}
                   tint1={this.state.tints.coats.tint1}

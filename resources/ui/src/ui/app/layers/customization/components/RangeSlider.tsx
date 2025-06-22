@@ -30,6 +30,15 @@ const RContainer = styled.div`
     }
   }
 
+  &.layer {
+    border: none;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: ${uiSize(16)};
+  }
+
   &.vertical {
     input {
       transform: rotateZ(-90deg);
@@ -79,6 +88,11 @@ const RContainer = styled.div`
 const RTitle = styled.div`
   font-size: ${uiSize(32)};
   margin-bottom: ${uiSize(10)};
+
+  .layer & {
+    font-size: ${uiSize(18)};
+    margin-bottom: 0;
+  }
 `;
 
 type Props = {

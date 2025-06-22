@@ -108,43 +108,43 @@ const TSRadio = styled.label`
 `;
 
 type Props = Customization.Palette & {
-  label: string;
-  category: string;
-  onChange: (category: string, tint: Customization.Palette) => void;
+  label?: string;
+  identifier: string;
+  onChange: (identifier: string, tint: Customization.Palette) => void;
 };
 
-export default function TintSelector({ label, category, palette, tint0, tint1, tint2, onChange }: Props) {
+export default function TintSelector({ label, identifier, palette, tint0, tint1, tint2, onChange }: Props) {
   if (typeof palette === 'string') {
     palette = palette.GetHashKey();
   }
 
   const handleTint0Change = (target: HTMLInputElement) => {
-    onChange(category, { palette, tint0: Number(target.value), tint1, tint2 });
+    onChange(identifier, { palette, tint0: Number(target.value), tint1, tint2 });
   };
 
   const handleTint1Change = (target: HTMLInputElement) => {
-    onChange(category, { palette, tint0, tint1: Number(target.value), tint2 });
+    onChange(identifier, { palette, tint0, tint1: Number(target.value), tint2 });
   };
 
   const handleTint2Change = (target: HTMLInputElement) => {
-    onChange(category, { palette, tint0, tint1, tint2: Number(target.value) });
+    onChange(identifier, { palette, tint0, tint1, tint2: Number(target.value) });
   };
 
   const removePalette = () => {
-    onChange(category, { palette: -1, tint0, tint1, tint2 });
+    onChange(identifier, { palette: -1, tint0, tint1, tint2 });
   };
 
   const setPalette = (palette: Customization.PaletteNames) => {
-    onChange(category, { palette: ColorPalettes[palette].hash, tint0, tint1, tint2 });
+    onChange(identifier, { palette: ColorPalettes[palette].hash, tint0, tint1, tint2 });
   };
 
   const setTints = (value: number) => {
-    onChange(category, { palette, tint0: value, tint1: value, tint2: value });
+    onChange(identifier, { palette, tint0: value, tint1: value, tint2: value });
   };
 
   return (
     <TSContainer>
-      <h1>{label}</h1>
+      {label && <h1>{label}</h1>}
 
       <h2>Presets</h2>
       {/* TODO */}
@@ -160,7 +160,7 @@ export default function TintSelector({ label, category, palette, tint0, tint1, t
             <TSPalette>
               <input
                 type="radio"
-                name={`palette-${category}`}
+                name={`palette-${identifier}`}
                 value={ColorPalettes[p].hash}
                 checked={ColorPalettes[p].hash === palette >>> 0}
                 onClick={() => setPalette(p)}
@@ -186,11 +186,13 @@ export default function TintSelector({ label, category, palette, tint0, tint1, t
                   )}`,
                 }}
                 onClick={() => setTints(i)}
-              />
+              >
+                {i}
+              </TSThumb>
               <TSRadio>
                 <input
                   type="radio"
-                  name={`primary-${category}`}
+                  name={`primary-${identifier}`}
                   value={i}
                   checked={tint0 === i}
                   onChange={(e) => handleTint0Change(e.target as HTMLInputElement)}
@@ -200,7 +202,7 @@ export default function TintSelector({ label, category, palette, tint0, tint1, t
               <TSRadio>
                 <input
                   type="radio"
-                  name={`secondary-${category}`}
+                  name={`secondary-${identifier}`}
                   value={i}
                   checked={tint1 === i}
                   onChange={(e) => handleTint1Change(e.target as HTMLInputElement)}
@@ -210,7 +212,7 @@ export default function TintSelector({ label, category, palette, tint0, tint1, t
               <TSRadio>
                 <input
                   type="radio"
-                  name={`tertiary-${category}`}
+                  name={`tertiary-${identifier}`}
                   value={i}
                   checked={tint2 === i}
                   onChange={(e) => handleTint2Change(e.target as HTMLInputElement)}

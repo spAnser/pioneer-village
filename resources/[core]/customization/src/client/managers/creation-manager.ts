@@ -340,8 +340,9 @@ class CreationManager {
       237.66,
       90,
       true,
+      true,
     );
-    console.log('Create Chosen Ped', this.male);
+    NetworkSetEntityOnlyExistsForParticipants(this.chosen, true);
     await PVGame.pedIsReadyToRender(this.chosen);
     // await PVGame.setPedComponentsMp(this.chosen, this.maleComponents);
     ClonePedToTarget(this.currentGender === 'male' ? this.male : this.female, this.chosen);
@@ -662,7 +663,7 @@ class CreationManager {
       if (overlays.length > 0) {
         for (const overlay of overlays) {
           if (overlay.id === id) {
-            Log('getOverlayInfo', id, overlay);
+            // Log('getOverlayInfo', id, overlay);
             return [category, overlay];
           }
         }
@@ -675,12 +676,12 @@ class CreationManager {
   addLayer(textureId: number, overlay: Customization.Overlay) {
     const [overlayCategory, overlayInfo] = this.getOverlayInfo(overlay.id);
     if (!overlayCategory || !overlayInfo) {
-      Log('Overlay not found', overlay.id);
+      // Log('Overlay not found', overlay.id);
       return;
     }
     const baseOverlay = this.getBaseOverlay(overlayCategory);
 
-    Log('addLayer', textureId, overlay, baseOverlay, overlayInfo);
+    // Log('addLayer', textureId, overlay, baseOverlay, overlayInfo);
 
     if (!baseOverlay || !overlayInfo) {
       return;
@@ -693,47 +694,53 @@ class CreationManager {
       overlayInfo.ma || 0,
       baseOverlay.tx_color_type,
       overlay.opacity,
-      baseOverlay.tx_unk,
+      baseOverlay.var,
     );
-    Log(
-      `AddTextureLayer(${textureId}, ${overlayInfo.id}, ${overlayInfo.normal || 0}, ${overlayInfo.ma || 0}, ${baseOverlay.tx_color_type}, ${overlay.opacity}, ${baseOverlay.var});`,
-    );
-    Log('layerId', layerId);
+    // Log(
+    //   `AddTextureLayer(${textureId}, ${overlayInfo.id}, ${overlayInfo.normal || 0}, ${overlayInfo.ma || 0}, ${baseOverlay.tx_color_type}, ${overlay.opacity}, ${baseOverlay.var});`,
+    // );
+    // Log('layerId', layerId);
     if (layerId === -1) {
       return;
     }
 
+    Citizen.invokeNative('0xFC23348F0F4E245F', textureId, layerId, 3.5, 2.5);
+
     if (overlay.palette) {
       SetTextureLayerPallete(textureId, layerId, overlay.palette.palette);
-      Log(`SetTextureLayerPallete(${textureId}, ${layerId}, ${overlay.palette.palette});`);
+      // Log(`SetTextureLayerPallete(${textureId}, ${layerId}, ${overlay.palette.palette});`);
       SetTextureLayerTint(textureId, layerId, overlay.palette.tint0, overlay.palette.tint1, overlay.palette.tint2);
-      Log(
-        `SetTextureLayerTint(${textureId}, ${layerId}, ${overlay.palette.tint0}, ${overlay.palette.tint1}, ${overlay.palette.tint2});`,
-      );
+      // Log(
+      //   `SetTextureLayerTint(${textureId}, ${layerId}, ${overlay.palette.tint0}, ${overlay.palette.tint1}, ${overlay.palette.tint2});`,
+      // );
     }
 
-    SetTextureLayerSheetGridIndex(textureId, layerId, baseOverlay.var);
-    Log(`SetTextureLayerSheetGridIndex(${textureId}, ${layerId}, ${baseOverlay.var});`);
-    SetTextureLayerAlpha(textureId, layerId, overlay.opacity);
-    Log(`SetTextureLayerAlpha(${textureId}, ${layerId}, ${overlay.opacity});`);
+    // SetTextureLayerMod(textureId, layerId, overlayInfo.id, 5, 0);
+    // SetTextureLayerMod(textureId, layerId, overlayInfo.id, 5, 1);
+    // SetTextureLayerMod(textureId, layerId, overlayInfo.id, 5, 2);
+
     if ('roughness' in overlay && overlay.roughness !== undefined) {
       SetTextureLayerRoughness(textureId, layerId, overlay.roughness);
-      Log(`SetTextureLayerRoughness(${textureId}, ${layerId}, ${overlay.roughness});`);
+      // Log(`SetTextureLayerRoughness(${textureId}, ${layerId}, ${overlay.roughness});`);
     }
+    SetTextureLayerSheetGridIndex(textureId, layerId, baseOverlay.var);
+    // Log(`SetTextureLayerSheetGridIndex(${textureId}, ${layerId}, ${baseOverlay.var});`);
+    SetTextureLayerAlpha(textureId, layerId, overlay.opacity);
+    // Log(`SetTextureLayerAlpha(${textureId}, ${layerId}, ${overlay.opacity});`);
   }
 
   async setOverlays(overlays: Customization.Overlay[], ped: number = this.chosen) {
-    Log('setOverlays', ped, overlays);
+    // Log('setOverlays', ped, overlays);
     await this.releasePedTextures(ped, true);
 
     const textureIds: number[] = [];
 
     const index = paletteManager.getIndexForCategory(ped, 'HEADS');
     const { albedo, normal, material } = paletteManager.getGuidsAtIndex(ped, index);
-    Log('heads guids', index, albedo, normal, material);
+    // Log('heads guids', index, albedo, normal, material);
 
     const textureId = RequestTexture(albedo, normal, material);
-    Log('textureId', textureId);
+    // Log('textureId', textureId);
     await this.textureId(textureId, 1, 25);
     textureIds.push(textureId);
 
@@ -749,7 +756,7 @@ class CreationManager {
 
     await PVGame.pedIsReadyToRender(ped);
     PVGame.finalizePedOutfit(ped);
-    Log('DONE');
+    // Log('DONE');
   }
 
   // Stuff to maybe move to PVGame
