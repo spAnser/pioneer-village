@@ -440,7 +440,7 @@ declare namespace UI.CharacterSelect {
 }
 
 declare namespace UI.Log {
-  type Data = { resource: string; message: string };
+  type Data = { resource: string; message: string; level: number };
 
   type Source = 'server' | 'client';
 
@@ -455,6 +455,7 @@ declare namespace UI.Log {
     scrollOverride: number;
     filter: Set<string>;
     reverseFilter: Set<string>;
+    levelFilter: number;
     messages: LogData[];
     colors: Record<string, ColorData>;
   }

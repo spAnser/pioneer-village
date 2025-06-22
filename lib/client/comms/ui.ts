@@ -1,3 +1,5 @@
+import { Logger } from '../logger';
+
 const eventListenerRegistry: Set<[string, any]> = new Set();
 const rpcBuffer: Set<[string, any]> = new Set();
 const emitBuffer: Set<any[]> = new Set();
@@ -88,24 +90,10 @@ on('onResourceStart', (resource: string) => {
   focusBuffer.forEach((params) => exports['ui'].focusBuffer(...params));
 });
 
-// TODO: Replace this
-const DEV_ENV = true;
 export const Log = (...messages: any[]) => {
-  if (DEV_ENV) {
-    emitUI('log.message', {
-      resource: GetCurrentResourceName(),
-      message: messages
-        .map((item) => {
-          if (typeof item === 'object') {
-            return JSON.stringify(item, null, 2);
-          }
-          return item;
-        })
-        .join(' '),
-    });
-  }
+  Logger.log(messages);
 };
 export const LogExtra = (...messages: any[]) => {
   console.log(...messages);
-  Log(...messages);
+  Logger.log(messages);
 };
