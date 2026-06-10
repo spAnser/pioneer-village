@@ -230,8 +230,9 @@ RegisterCommand(
     const playerPed = PlayerPedId();
     const coords = GetEntityCoords(playerPed, false);
     const heightAboveGround = GetEntityHeightAboveGround(playerPed);
+    const heading = GetEntityHeading(playerPed);
 
-    console.log(`x: ${coords[0]}, y: ${coords[1]}, z: ${coords[2] - heightAboveGround}`);
+    console.log(`x: ${coords[0]}, y: ${coords[1]}, z: ${coords[2] - heightAboveGround}, w: ${heading}`);
   },
   false,
 );

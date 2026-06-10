@@ -32,6 +32,21 @@ export const permissionTypeEnum = pgEnum('PermissionType', ['JOB', 'TASK']);
 export const repeatTypeEnum = pgEnum('RepeatType', ['COOLDOWN', 'BURST', 'WINDOW', 'UNLIMITED']);
 export const pregnantEnum = pgEnum('PregnantStatus', ['ACTIVE', 'BIRTHED', 'LOST']);
 export const pigeonStateEnum = pgEnum('PigeonState', ['DELIVERING', 'WAITING_REPLY', 'RETURNING']);
+export const transferStatusEnum = pgEnum('TransferStatus', ['PENDING', 'COMPLETED', 'CANCELLED']);
+export const loanStatusEnum = pgEnum('LoanStatus', ['ACTIVE', 'DEFAULTED', 'REPAID']);
+export const bankTxTypeEnum = pgEnum('BankTxType', [
+  'DEPOSIT',
+  'WITHDRAWAL',
+  'WIRE_OUT',
+  'WIRE_IN',
+  'WIRE_FEE',
+  'INTEREST',
+  'LOAN_CREDIT',
+  'LOAN_REPAYMENT',
+  'LOAN_INTEREST',
+  'SAFETY_BOX_FEE',
+  'ROBBERY_LOSS',
+]);
 
 // Tables
 export const AccountsSchema = pgTable('Accounts', {
@@ -349,6 +364,76 @@ export const JobPaySlipsSchema = pgTable('JobPaySlips', {
   metadata: json('metadata').default('{}'),
 });
 
+// Banking Tables
+export const BankAccountsSchema = pgTable('BankAccounts', {
+  id: serial('id').primaryKey(),
+  characterId: integer('characterId').notNull(),
+  bankId: varchar('bankId').notNull(),
+  balance: decimal('balance').default('0.00').notNull(),
+  createdAt: timestamp('createdAt').defaultNow(),
+  updatedAt: timestamp('updatedAt'),
+});
+
+export const BankTransfersSchema = pgTable('BankTransfers', {
+  id: serial('id').primaryKey(),
+  fromCharacterId: integer('fromCharacterId').notNull(),
+  toCharacterId: integer('toCharacterId').notNull(),
+  fromBankId: varchar('fromBankId').notNull(),
+  toBankId: varchar('toBankId').notNull(),
+  amount: decimal('amount').notNull(),
+  fee: decimal('fee').notNull(),
+  status: transferStatusEnum('status').default('PENDING').notNull(),
+  scheduledAt: timestamp('scheduledAt').notNull(),
+  completedAt: timestamp('completedAt'),
+  createdAt: timestamp('createdAt').defaultNow(),
+});
+
+export const BankVaultsSchema = pgTable('BankVaults', {
+  id: serial('id').primaryKey(),
+  bankId: varchar('bankId').unique().notNull(),
+  vaultBalance: decimal('vaultBalance').default('0.00').notNull(),
+  lastRobbedAt: timestamp('lastRobbedAt'),
+  robberyCount: integer('robberyCount').default(0).notNull(),
+  reputationScore: smallint('reputationScore').default(100).notNull(),
+  updatedAt: timestamp('updatedAt'),
+});
+
+export const BankLoansSchema = pgTable('BankLoans', {
+  id: serial('id').primaryKey(),
+  characterId: integer('characterId').notNull(),
+  bankId: varchar('bankId').notNull(),
+  principal: decimal('principal').notNull(),
+  outstanding: decimal('outstanding').notNull(),
+  collateralItemId: integer('collateralItemId'),
+  issuedAt: timestamp('issuedAt').defaultNow(),
+  dueAt: timestamp('dueAt').notNull(),
+  missedPayments: smallint('missedPayments').default(0).notNull(),
+  status: loanStatusEnum('status').default('ACTIVE').notNull(),
+});
+
+export const BankSafetyBoxesSchema = pgTable('BankSafetyBoxes', {
+  id: serial('id').primaryKey(),
+  characterId: integer('characterId').notNull(),
+  bankId: varchar('bankId').notNull(),
+  inventoryId: integer('inventoryId'),
+  rentedAt: timestamp('rentedAt').defaultNow(),
+  nextDueAt: timestamp('nextDueAt').notNull(),
+  weeklyFee: decimal('weeklyFee').default('10.00').notNull(),
+  active: boolean('active').default(true).notNull(),
+});
+
+export const BankTransactionsSchema = pgTable('BankTransactions', {
+  id: serial('id').primaryKey(),
+  characterId: integer('characterId').notNull(),
+  bankId: varchar('bankId').notNull(),
+  type: bankTxTypeEnum('type').notNull(),
+  amount: decimal('amount').notNull(),
+  balanceAfter: decimal('balanceAfter').notNull(),
+  relatedId: integer('relatedId'),
+  note: varchar('note'),
+  createdAt: timestamp('createdAt').defaultNow().notNull(),
+});
+
 // Relations
 export const accountsRelations = relations(AccountsSchema, ({ many }) => ({
   characters: many(CharactersSchema),
@@ -518,6 +603,45 @@ export const jobPaySlipsRelations = relations(JobPaySlipsSchema, ({ one }) => ({
   }),
 }));
 
+export const bankAccountsRelations = relations(BankAccountsSchema, ({ one }) => ({
+  character: one(CharactersSchema, {
+    fields: [BankAccountsSchema.characterId],
+    references: [CharactersSchema.id],
+  }),
+}));
+
+export const bankTransfersFromRelations = relations(BankTransfersSchema, ({ one }) => ({
+  fromCharacter: one(CharactersSchema, {
+    fields: [BankTransfersSchema.fromCharacterId],
+    references: [CharactersSchema.id],
+  }),
+  toCharacter: one(CharactersSchema, {
+    fields: [BankTransfersSchema.toCharacterId],
+    references: [CharactersSchema.id],
+  }),
+}));
+
+export const bankLoansRelations = relations(BankLoansSchema, ({ one }) => ({
+  character: one(CharactersSchema, {
+    fields: [BankLoansSchema.characterId],
+    references: [CharactersSchema.id],
+  }),
+}));
+
+export const bankSafetyBoxesRelations = relations(BankSafetyBoxesSchema, ({ one }) => ({
+  character: one(CharactersSchema, {
+    fields: [BankSafetyBoxesSchema.characterId],
+    references: [CharactersSchema.id],
+  }),
+}));
+
+export const bankTransactionsRelations = relations(BankTransactionsSchema, ({ one }) => ({
+  character: one(CharactersSchema, {
+    fields: [BankTransactionsSchema.characterId],
+    references: [CharactersSchema.id],
+  }),
+}));
+
 // Type exports for use in application
 export type AccountSchemaType = typeof AccountsSchema.$inferSelect;
 export type NewAccountSchemaType = typeof AccountsSchema.$inferInsert;
@@ -561,3 +685,15 @@ export type JobPaySlipSchemaType = typeof JobPaySlipsSchema.$inferSelect;
 export type NewJobPaySlipSchemaType = typeof JobPaySlipsSchema.$inferInsert;
 export type PigeonDeliverySchemaType = typeof PigeonDeliveriesSchema.$inferSelect;
 export type NewPigeonDeliverySchemaType = typeof PigeonDeliveriesSchema.$inferInsert;
+export type BankAccountSchemaType = typeof BankAccountsSchema.$inferSelect;
+export type NewBankAccountSchemaType = typeof BankAccountsSchema.$inferInsert;
+export type BankTransferSchemaType = typeof BankTransfersSchema.$inferSelect;
+export type NewBankTransferSchemaType = typeof BankTransfersSchema.$inferInsert;
+export type BankVaultSchemaType = typeof BankVaultsSchema.$inferSelect;
+export type NewBankVaultSchemaType = typeof BankVaultsSchema.$inferInsert;
+export type BankLoanSchemaType = typeof BankLoansSchema.$inferSelect;
+export type NewBankLoanSchemaType = typeof BankLoansSchema.$inferInsert;
+export type BankSafetyBoxSchemaType = typeof BankSafetyBoxesSchema.$inferSelect;
+export type NewBankSafetyBoxSchemaType = typeof BankSafetyBoxesSchema.$inferInsert;
+export type BankTransactionSchemaType = typeof BankTransactionsSchema.$inferSelect;
+export type NewBankTransactionSchemaType = typeof BankTransactionsSchema.$inferInsert;

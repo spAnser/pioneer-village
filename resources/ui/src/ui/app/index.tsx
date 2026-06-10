@@ -4,6 +4,7 @@ import { Socket } from 'socket.io-client';
 import { emitClient, onClient } from '@lib/ui';
 
 import App from './app';
+import BankingController from './controllers/banking';
 import BaseController from './controllers/base';
 import CarrierPigeonsController from './controllers/carrier-birds';
 import CharacterSelectController from './controllers/character-select';
@@ -77,6 +78,7 @@ export default (socket: Socket<UISocketEvents, SocketServer.Client & SocketServe
   InventoryController(socket);
   JobsController(socket);
   CarrierPigeonsController(socket);
+  BankingController(socket);
   StableController(socket);
   WeatherController(socket);
   BaseController(socket);
