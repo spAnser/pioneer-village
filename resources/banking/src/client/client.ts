@@ -1,14 +1,34 @@
-import { PVGame } from '@lib/client';
-import { awaitUI } from '@lib/client/comms/ui';
+import { PVBase, PVGame } from '@lib/client';
+import { awaitUI, emitUI, focusUI } from '@lib/client/comms/ui';
+import { BlipModifiers, BlipSprites } from '@lib/shared/blips';
 
 import BankData from '../shared/data/bankData';
 import bankController from './controllers/bank-controller';
 import './events';
-import './tellers';
+import './minerals';
+import { despawnTeller, despawnTellers, spawnTeller } from './tellers';
 import './targets';
 import './zones';
 
 console.log('[Banking] Client loaded');
+
+for (const bank of BankData) {
+  PVBase.blipRegister(`bank:${bank.identifier}`, {
+    label: bank.name,
+    sprite: BlipSprites.PROC_BANK,
+    modifiers: [BlipModifiers.GREEN],
+    coords: bank.tellerPosition,
+  });
+}
+
+on('onResourceStop', (resourceName: string) => {
+  if (resourceName === GetCurrentResourceName()) {
+    for (const bank of BankData) {
+      PVBase.blipUnregister(`bank:${bank.identifier}`);
+    }
+    despawnTellers();
+  }
+});
 
 // ── Debug helpers ────────────────────────────────────────────────────────────
 
@@ -239,6 +259,103 @@ RegisterCommand(
     const current = bankController.currentBank;
     if (current) bankController.clearCurrentBank(current);
     console.log('[Banking] Current bank cleared.');
+  },
+  false,
+);
+
+// /bankUI [tab] [bankId] — open the banking UI for testing without needing a teller
+// tab: deposit | withdraw | wire | loan | repay  (default: deposit)
+// bankId: valentine | rhodes | blackwater | saint_denis | annesburg | strawberry | tumbleweed  (default: current zone, then first bank)
+RegisterCommand(
+  'bankUI',
+  async (_source: number, args: string[]) => {
+    const validTabs = ['deposit', 'withdraw', 'wire', 'loan', 'repay'] as const;
+    type Tab = (typeof validTabs)[number];
+
+    const tab: Tab = validTabs.includes(args[0] as Tab) ? (args[0] as Tab) : 'deposit';
+    let resolvedBankId: Bank.Id = (args[1] as Bank.Id) ?? BankData[0].identifier;
+    if (!args[1]) {
+      const [px, py, pz] = GetEntityCoords(PlayerPedId(), true);
+      const nearby = BankData.find((b) => {
+        const dx = px - b.tellerPosition.x;
+        const dy = py - b.tellerPosition.y;
+        const dz = pz - b.tellerPosition.z;
+        return Math.sqrt(dx * dx + dy * dy + dz * dz) <= 20;
+      });
+      if (nearby) resolvedBankId = nearby.identifier;
+    }
+    const bankId = resolvedBankId;
+    const bankData = BankData.find((b) => b.identifier === bankId);
+
+    if (!bankData) {
+      console.log(`[Banking:bankUI] Unknown bankId "${bankId}". Valid: ${BankData.map((b) => b.identifier).join(', ')}`);
+      return;
+    }
+
+    const characterId = charId();
+    const character = PVGame.getCurrentCharacter();
+    const [loans] = await Promise.all([
+      bankController.getLoans(characterId),
+      bankController.loadAccounts(characterId),
+    ]);
+    const cashOnPerson = PVBase.getCurrentCharacter()?.currencies?.dollars ?? 0;
+    const account = bankController.getAccount(bankId);
+
+    emitUI('banking.open', {
+      tab,
+      bankId,
+      bankName: bankData.name,
+      characterId,
+      characterName: character ? `${character.firstName} ${character.lastName}` : 'Debug Character',
+      cashOnPerson,
+      currentBalance: account?.balance ?? 0,
+      loans,
+    });
+
+    focusUI(true, true);
+    console.log(`[Banking:bankUI] Opened UI — tab: ${tab}, bank: ${bankData.name}`);
+  },
+  false,
+);
+
+// /bankUIClose — close the banking UI
+RegisterCommand(
+  'bankUIClose',
+  () => {
+    emitUI('banking.close');
+    focusUI(false, false);
+    console.log('[Banking:bankUIClose] UI closed.');
+  },
+  false,
+);
+
+// /bankSpawnTeller [bankId] — force-spawn a teller locally (despawns first if already present)
+RegisterCommand(
+  'bankSpawnTeller',
+  async (_source: number, args: string[]) => {
+    const bankId = (args[0] as Bank.Id) ?? bankController.currentBank;
+    if (!bankId) {
+      console.log('Usage: /bankSpawnTeller [bankId]');
+      console.log('Banks:', BankData.map((b) => b.identifier).join(', '));
+      return;
+    }
+    despawnTeller(bankId);
+    await spawnTeller(bankId);
+  },
+  false,
+);
+
+// /bankDespawnTeller [bankId] — despawn a teller locally
+RegisterCommand(
+  'bankDespawnTeller',
+  (_source: number, args: string[]) => {
+    const bankId = (args[0] as Bank.Id) ?? bankController.currentBank;
+    if (!bankId) {
+      console.log('Usage: /bankDespawnTeller [bankId]');
+      console.log('Banks:', BankData.map((b) => b.identifier).join(', '));
+      return;
+    }
+    despawnTeller(bankId);
   },
   false,
 );
