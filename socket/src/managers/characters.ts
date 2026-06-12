@@ -570,11 +570,12 @@ export type Prisma.CharactersCreateInput = {
       .where(eq(CharactersSchema.id, characterId))
       .returning();
 
+    logInfoS('[Characters] updateCharacterCurrencies', characterId, '->', JSON.stringify(result[0]?.currencies));
     return result[0];
   }
 
   // Start of money management
-  setCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number): boolean {
+  async setCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number): Promise<boolean> {
     let character = this.getActiveCharacterForCharacterId(characterId);
     if (!character) {
       logInfoS('[Characters]', 'Attempted to get character', characterId, 'but is offline aborting');
@@ -582,10 +583,11 @@ export type Prisma.CharactersCreateInput = {
     }
     character.currencies[type] = amount;
     this.updateLocalCharacterAtributeWithCharId(characterId, 'currencies', character.currencies);
+    await this.updateCharacterCurrencies(characterId, character.currencies);
     return true;
   }
 
-  addCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number): boolean {
+  async addCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number): Promise<boolean> {
     let character = this.getActiveCharacterForCharacterId(characterId);
     if (!character) {
       logInfoS('[Characters]', 'Attempted to get character', characterId, 'but is offline aborting');
@@ -593,10 +595,11 @@ export type Prisma.CharactersCreateInput = {
     }
     character.currencies[type] += amount;
     this.updateLocalCharacterAtributeWithCharId(characterId, 'currencies', character.currencies);
+    await this.updateCharacterCurrencies(characterId, character.currencies);
     return true;
   }
 
-  removeCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number) {
+  async removeCharacterCurrency(characterId: number, type: keyof CharacterCurrencies, amount: number) {
     let character = this.getActiveCharacterForCharacterId(characterId);
     if (!character) {
       logInfoS('[Characters]', 'Attempted to get character', characterId, 'but is offline aborting');
@@ -607,6 +610,7 @@ export type Prisma.CharactersCreateInput = {
       return false;
     } else {
       this.updateLocalCharacterAtributeWithCharId(characterId, 'currencies', character.currencies);
+      await this.updateCharacterCurrencies(characterId, character.currencies);
       return true;
     }
   }

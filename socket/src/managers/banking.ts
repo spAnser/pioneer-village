@@ -1,31 +1,43 @@
 import { and, eq, lte, sql } from 'drizzle-orm';
 
+import {
+  DAILY_BUDGET_BY_BANK,
+  MINERALS,
+  PRICE_DECAY_PER_PCT,
+  PRICE_MULTIPLIER_MIN,
+  PRICE_RECOVERY_PER_HOUR,
+} from '../../../resources/banking/src/shared/data/mineralConfig';
 import { db } from '../db/connection';
 import {
   BankAccountsSchema,
   BankLoansSchema,
+  BankMineralBudgetsSchema,
   BankSafetyBoxesSchema,
   BankTransactionsSchema,
   BankTransfersSchema,
   BankVaultsSchema,
-  CharactersSchema,
 } from '../db/schema';
 
 type BankTxType = typeof BankTransactionsSchema.$inferInsert['type'];
 import { logInfo } from '../helpers';
 import Characters from './characters';
+import Inventories from './inventories';
 
-const WIRE_FEE_FLAT = 5;
-const WIRE_FEE_PCT = 0.02;
-const WIRE_DELAY_MS = 30 * 60 * 1000; // 30 minutes
-const INTEREST_RATE = 0.002; // 0.2% per tick
-const ROBBERY_PLAYER_SHARE = 0.15; // 15% of stolen comes from players
-const ROBBERY_MAX_PLAYER_PCT = 0.05; // cap at 5% of individual balance
-const ROBBERY_COOLDOWN_MS = 2 * 60 * 60 * 1000; // 2 hours
-const REPUTATION_ROBBERY_PENALTY = 20;
-const REPUTATION_RECOVERY_RATE = 2;
-const SAFETY_BOX_WEEKLY_FEE = 10;
-const LOAN_DAILY_INTEREST = 0.01;
+const WIRE_FEE_FLAT = 5; // flat fee charged on every wire transfer
+const WIRE_FEE_PCT = 0.02; // 2% of transfer amount added on top of the flat fee
+const WIRE_MAX_AMOUNT = 100; // maximum amount that can be sent in a single wire transfer
+const WIRE_DELAY_MS = 30 * 60 * 1000; // 30 minutes — delay before a wire transfer is completed
+const LOAN_MAX_AMOUNT = 100; // maximum amount a player can borrow in a single loan
+const LOAN_VAULT_FLOOR = 500; // minimum vault balance; funds below this cannot be lent out or stolen
+const INTEREST_RATE = 0.002; // 0.2% per tick applied to player account balances
+const VAULT_INTEREST_RATE = 0.001; // 0.1% per tick used to replenish the vault balance over time
+const ROBBERY_PLAYER_SHARE = 0.15; // 15% of robbed funds are drawn from player accounts rather than the vault
+const ROBBERY_MAX_PLAYER_PCT = 0.05; // maximum 5% that can be taken from any single player's balance during a robbery
+const ROBBERY_COOLDOWN_MS = 2 * 60 * 60 * 1000; // 2 hours — minimum time between robberies at the same bank
+const REPUTATION_ROBBERY_PENALTY = 20; // reputation points deducted from a player who robs a bank
+const REPUTATION_RECOVERY_RATE = 2; // reputation points restored per tick after a robbery penalty
+const SAFETY_BOX_WEEKLY_FEE = 10; // weekly fee charged to players renting a safety deposit box
+const LOAN_DAILY_INTEREST = 0.01; // 1% daily interest charged on outstanding loan balances
 
 class Banking {
   static readonly instance: Banking = new Banking();
@@ -104,11 +116,23 @@ class Banking {
     if (amount <= 0) return { success: false, newBalance: 0, message: 'Invalid amount' };
 
     const character = Characters.getActiveCharacterForCharacterId(characterId);
-    if (!character || character.currencies.dollars < amount) {
+    if (!character) {
       return { success: false, newBalance: 0, message: 'Insufficient on-hand cash' };
     }
 
-    const removed = Characters.removeCharacterCurrency(characterId, 'dollars', amount);
+    // Sync in-memory currencies from DB in case they diverged
+    const freshCurrencies = await Characters.getCharacterCurrencies(characterId);
+    if (freshCurrencies) {
+      character.currencies.dollars = Number(freshCurrencies.dollars);
+    }
+
+    if (character.currencies.dollars < amount) {
+      return { success: false, newBalance: 0, message: 'Insufficient on-hand cash' };
+    }
+
+    const dollarsBefore = character.currencies.dollars;
+    const removed = await Characters.removeCharacterCurrency(characterId, 'dollars', amount);
+    logInfo(`[Banking] Deposit deduct: char ${characterId} dollars before=${dollarsBefore} amount=${amount} removed=${removed} dollarsAfter=${character.currencies.dollars}`);
     if (!removed) return { success: false, newBalance: 0, message: 'Failed to deduct cash' };
 
     const account = await this.getOrCreateAccount(characterId, bankId);
@@ -150,7 +174,7 @@ class Banking {
       .set({ vaultBalance: sql`${BankVaultsSchema.vaultBalance} - ${amount}`, updatedAt: new Date() })
       .where(eq(BankVaultsSchema.bankId, bankId));
 
-    Characters.addCharacterCurrency(characterId, 'dollars', amount);
+    await Characters.addCharacterCurrency(characterId, 'dollars', amount);
 
     await this.logTransaction(characterId, bankId, 'WITHDRAWAL', amount, newBalance);
     logInfo(`[Banking] Withdraw: char ${characterId} -$${amount} at ${bankId}. New balance: $${newBalance}`);
@@ -167,8 +191,9 @@ class Banking {
     amount: number,
   ): Promise<{ success: boolean; fee: number; availableAt: string; message?: string }> {
     if (amount <= 0) return { success: false, fee: 0, availableAt: '', message: 'Invalid amount' };
+    if (amount > WIRE_MAX_AMOUNT) return { success: false, fee: 0, availableAt: '', message: `Wire transfers are capped at $${WIRE_MAX_AMOUNT}` };
 
-    const fee = Math.ceil(WIRE_FEE_FLAT + amount * WIRE_FEE_PCT);
+    const fee = Math.round((WIRE_FEE_FLAT + amount * WIRE_FEE_PCT) * 100) / 100;
     const total = amount + fee;
 
     const account = await this.getOrCreateAccount(fromCharacterId, fromBankId);
@@ -300,9 +325,11 @@ class Banking {
 
     let remaining = stolenAmount;
     const vaultFloat = Number(vault.vaultBalance);
+    // Robberies cannot drain the vault below the loan reserve floor
+    const robbableVault = Math.max(0, vaultFloat - LOAN_VAULT_FLOOR);
 
-    // Drain void first
-    const fromVoid = Math.min(vaultFloat * (1 - ROBBERY_PLAYER_SHARE), remaining);
+    // Drain vault first (up to robbable portion)
+    const fromVoid = Math.min(robbableVault * (1 - ROBBERY_PLAYER_SHARE), remaining);
     remaining -= fromVoid;
 
     // Remainder comes proportionally from player accounts
@@ -334,7 +361,7 @@ class Banking {
       }
     }
 
-    const newVaultBalance = Math.max(0, vaultFloat - fromVoid);
+    const newVaultBalance = Math.max(LOAN_VAULT_FLOOR, vaultFloat - fromVoid);
     const newRep = Math.max(0, vault.reputationScore - REPUTATION_ROBBERY_PENALTY);
 
     await db
@@ -371,9 +398,21 @@ class Banking {
     dueAt: Date,
   ): Promise<{ success: boolean; loanId?: number; message?: string }> {
     if (principal <= 0) return { success: false, message: 'Invalid amount' };
+    if (principal > LOAN_MAX_AMOUNT) return { success: false, message: `Loans are capped at $${LOAN_MAX_AMOUNT}` };
+
+    // One active loan per bank per character
+    const existingLoans = await db
+      .select({ id: BankLoansSchema.id })
+      .from(BankLoansSchema)
+      .where(and(eq(BankLoansSchema.characterId, characterId), eq(BankLoansSchema.bankId, bankId), eq(BankLoansSchema.status, 'ACTIVE')))
+      .limit(1);
+    if (existingLoans.length > 0) {
+      return { success: false, message: 'You must settle your current loan before taking another' };
+    }
 
     const vault = await this.getOrCreateVault(bankId);
-    if (Number(vault.vaultBalance) < principal) {
+    const lendableBalance = Number(vault.vaultBalance) - LOAN_VAULT_FLOOR;
+    if (lendableBalance < principal) {
       return { success: false, message: 'Bank does not have sufficient funds to issue this loan' };
     }
 
@@ -448,6 +487,22 @@ class Banking {
 
       const loanAccount = await this.getOrCreateAccount(loan.characterId, loan.bankId);
       await this.logTransaction(loan.characterId, loan.bankId, 'LOAN_INTEREST', daily, Number(loanAccount.balance), loan.id, `daily interest on loan`);
+    }
+  }
+
+  async applyVaultInterest(): Promise<void> {
+    const vaults = await db.select().from(BankVaultsSchema);
+    for (const vault of vaults) {
+      const balance = Number(vault.vaultBalance);
+      if (balance <= 0) continue;
+      const rate = VAULT_INTEREST_RATE * (vault.reputationScore / 100);
+      const gain = Math.floor(balance * rate * 100) / 100;
+      if (gain < 0.01) continue;
+      await db
+        .update(BankVaultsSchema)
+        .set({ vaultBalance: sql`${BankVaultsSchema.vaultBalance} + ${gain}`, updatedAt: new Date() })
+        .where(eq(BankVaultsSchema.bankId, vault.bankId));
+      logInfo(`[Banking] Vault replenished at ${vault.bankId}: +$${gain.toFixed(2)} (rep ${vault.reputationScore}/100, rate ${(rate * 100).toFixed(3)}%)`);
     }
   }
 
@@ -543,6 +598,194 @@ class Banking {
       .where(conditions)
       .orderBy(sql`${BankTransactionsSchema.createdAt} DESC`)
       .limit(Math.min(limit, 200));
+  }
+
+  // ── Mineral purchasing ───────────────────────────────────────────────────
+
+  private async getOrCreateMineralBudget(bankId: string) {
+    const existing = await db
+      .select()
+      .from(BankMineralBudgetsSchema)
+      .where(eq(BankMineralBudgetsSchema.bankId, bankId))
+      .limit(1);
+
+    if (existing.length) return existing[0];
+
+    const dailyLimit = DAILY_BUDGET_BY_BANK[bankId] ?? 2000;
+    const resetAt = this.nextMidnight();
+
+    const inserted = await db
+      .insert(BankMineralBudgetsSchema)
+      .values({
+        bankId,
+        dailyLimit: String(dailyLimit),
+        spentToday: '0.00',
+        priceMultiplier: '1.00',
+        resetAt,
+      })
+      .returning();
+
+    return inserted[0];
+  }
+
+  private nextMidnight(): Date {
+    const d = new Date();
+    d.setUTCHours(24, 0, 0, 0);
+    return d;
+  }
+
+  async getMineralPrices(bankId: string): Promise<{
+    prices: { itemIdentifier: string; label: string; pricePerUnit: number }[];
+    budget: { bankId: string; dailyLimit: number; spentToday: number; budgetRemaining: number; priceMultiplier: number; resetAt: string };
+  }> {
+    const budget = await this.getOrCreateMineralBudget(bankId);
+    const multiplier = Number(budget.priceMultiplier);
+
+    const prices = MINERALS.map((m) => ({
+      itemIdentifier: m.itemIdentifier,
+      label: m.label,
+      pricePerUnit: Math.round(m.basePricePerUnit * multiplier * 100) / 100,
+    }));
+
+    const dailyLimit = Number(budget.dailyLimit);
+    const spentToday = Number(budget.spentToday);
+
+    return {
+      prices,
+      budget: {
+        bankId,
+        dailyLimit,
+        spentToday,
+        budgetRemaining: Math.max(0, dailyLimit - spentToday),
+        priceMultiplier: multiplier,
+        resetAt: budget.resetAt.toISOString(),
+      },
+    };
+  }
+
+  async sellMinerals(
+    characterId: number,
+    bankId: string,
+    items: { itemIdentifier: string; itemIds: number[]; quantity: number }[],
+  ): Promise<{ success: boolean; payout: number; budgetRemaining: number; message?: string }> {
+    if (!items.length) return { success: false, payout: 0, budgetRemaining: 0, message: 'No items provided' };
+
+    const budget = await this.getOrCreateMineralBudget(bankId);
+    const dailyLimit = Number(budget.dailyLimit);
+    const spentToday = Number(budget.spentToday);
+    const budgetRemaining = Math.max(0, dailyLimit - spentToday);
+
+    if (budgetRemaining <= 0) {
+      return { success: false, payout: 0, budgetRemaining: 0, message: 'This bank has reached its daily purchasing limit. Try another bank.' };
+    }
+
+    const multiplier = Number(budget.priceMultiplier);
+
+    // Calculate payout, capped to remaining budget
+    let totalPayout = 0;
+    const validatedItems: { itemIdentifier: string; itemIds: number[]; quantity: number; unitPrice: number }[] = [];
+
+    for (const sellItem of items) {
+      const def = MINERALS.find((m) => m.itemIdentifier === sellItem.itemIdentifier);
+      if (!def) continue;
+      if (sellItem.quantity <= 0 || sellItem.itemIds.length !== sellItem.quantity) continue;
+
+      const unitPrice = Math.round(def.basePricePerUnit * multiplier * 100) / 100;
+      const linePayout = unitPrice * sellItem.quantity;
+      totalPayout += linePayout;
+      validatedItems.push({ ...sellItem, unitPrice });
+    }
+
+    if (totalPayout <= 0 || !validatedItems.length) {
+      return { success: false, payout: 0, budgetRemaining, message: 'No valid mineral items to sell' };
+    }
+
+    // Cap payout to budget
+    const cappedPayout = Math.min(totalPayout, budgetRemaining);
+    const payoutRatio = cappedPayout / totalPayout;
+
+    // Remove items from inventory proportionally (best-effort: remove what fits)
+    const inventoryIdentifier = `character:${characterId}`;
+    let actualPayout = 0;
+
+    for (const sellItem of validatedItems) {
+      const scaledQty = Math.floor(sellItem.quantity * payoutRatio);
+      const qtyToRemove = scaledQty > 0 ? scaledQty : (actualPayout < cappedPayout ? sellItem.quantity : 0);
+      if (qtyToRemove <= 0) continue;
+
+      let removed = 0;
+      for (const itemId of sellItem.itemIds.slice(0, qtyToRemove)) {
+        const result = await Inventories.removeItem(itemId);
+        if (result) {
+          removed++;
+          actualPayout += sellItem.unitPrice;
+        }
+      }
+
+      if (removed === 0) continue;
+    }
+
+    if (actualPayout <= 0) {
+      return { success: false, payout: 0, budgetRemaining, message: 'Failed to remove items from inventory' };
+    }
+
+    actualPayout = Math.round(actualPayout * 100) / 100;
+
+    // Give player cash
+    await Characters.addCharacterCurrency(characterId, 'dollars', actualPayout);
+
+    // Update budget: deduct spent, decay multiplier proportional to purchase size
+    const newSpent = spentToday + actualPayout;
+    const pctOfLimit = actualPayout / dailyLimit;
+    const decay = pctOfLimit * PRICE_DECAY_PER_PCT * 100;
+    const newMultiplier = Math.max(PRICE_MULTIPLIER_MIN, multiplier - decay);
+
+    await db
+      .update(BankMineralBudgetsSchema)
+      .set({
+        spentToday: String(newSpent),
+        priceMultiplier: String(Math.round(newMultiplier * 10000) / 10000),
+        updatedAt: new Date(),
+      })
+      .where(eq(BankMineralBudgetsSchema.bankId, bankId));
+
+    // Log transaction
+    const account = await this.getOrCreateAccount(characterId, bankId);
+    await this.logTransaction(characterId, bankId, 'MINERAL_SALE', actualPayout, Number(account.balance), undefined, `mineral sale at ${bankId}`);
+
+    logInfo(`[Banking] Mineral sale: char ${characterId} sold $${actualPayout} worth at ${bankId}. Budget remaining: $${Math.max(0, dailyLimit - newSpent).toFixed(2)}`);
+
+    return {
+      success: true,
+      payout: actualPayout,
+      budgetRemaining: Math.max(0, dailyLimit - newSpent),
+    };
+  }
+
+  async recoverMineralPrices(): Promise<void> {
+    await db
+      .update(BankMineralBudgetsSchema)
+      .set({
+        priceMultiplier: sql`LEAST(1.0, ${BankMineralBudgetsSchema.priceMultiplier} + ${PRICE_RECOVERY_PER_HOUR})`,
+        updatedAt: new Date(),
+      });
+    logInfo('[Banking] Mineral price multipliers recovered');
+  }
+
+  async resetMineralBudgets(): Promise<void> {
+    const now = new Date();
+    const resetAt = this.nextMidnight();
+
+    await db
+      .update(BankMineralBudgetsSchema)
+      .set({
+        spentToday: '0.00',
+        priceMultiplier: '1.00',
+        resetAt,
+        updatedAt: now,
+      });
+
+    logInfo('[Banking] Mineral budgets reset for new day');
   }
 }
 

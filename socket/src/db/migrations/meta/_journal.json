@@ -36,6 +36,13 @@
       "when": 1779406558952,
       "tag": "0004_absurd_pestilence",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1781132723357,
+      "tag": "0006_friendly_moira_mactaggert",
+      "breakpoints": true
     }
   ]
 }

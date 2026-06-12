@@ -3,9 +3,20 @@ declare namespace SocketIn {
   interface FromGameServer {
     ['banking.rob-bank']: (bankId: string, stolenAmount: number, callback?: (result: { success: boolean; message?: string }) => void) => void;
     ['banking.apply-interest']: (callback?: () => void) => void;
+    ['banking.apply-vault-interest']: (callback?: () => void) => void;
     ['banking.apply-loan-interest']: (callback?: () => void) => void;
     ['banking.recover-reputation']: (callback?: () => void) => void;
     ['banking.charge-safety-boxes']: (callback?: () => void) => void;
+    ['banking.recover-mineral-prices']: (callback?: () => void) => void;
+    ['banking.reset-mineral-budgets']: (callback?: () => void) => void;
+    // Server export bridge — called via awaitSocket from other FXServer resources
+    ['banking.server.get-accounts']: (characterId: number, callback?: (accounts: BankAccount.Data[]) => void) => void;
+    ['banking.server.deposit']: (characterId: number, bankId: string, amount: number, callback?: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
+    ['banking.server.withdraw']: (characterId: number, bankId: string, amount: number, callback?: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
+    ['banking.server.wire-transfer']: (fromCharacterId: number, toCharacterId: number, fromBankId: string, toBankId: string, amount: number, callback?: (result: { success: boolean; fee: number; availableAt: string; message?: string }) => void) => void;
+    ['banking.server.get-transactions']: (characterId: number, bankId: string | null, limit: number, callback?: (transactions: BankTransaction.Data[]) => void) => void;
+    ['banking.server.get-loans']: (characterId: number, callback?: (loans: BankLoan.Data[]) => void) => void;
+    ['banking.server.get-bank-info']: (bankId: string, callback?: (info: { reputationScore: number; interestRate: number; vaultBalance: number } | null) => void) => void;
   }
 
   interface FromClient {
@@ -21,6 +32,8 @@ declare namespace SocketIn {
     ['banking.rent-safety-box']: (characterId: number, bankId: string, callback: (result: { success: boolean; boxId?: number; message?: string }) => void) => void;
     ['banking.get-safety-box']: (characterId: number, bankId: string, callback: (box: BankSafetyBox.Data | null) => void) => void;
     ['banking.get-transactions']: (characterId: number, bankId: string | null, limit: number, callback: (transactions: BankTransaction.Data[]) => void) => void;
+    ['banking.get-mineral-prices']: (bankId: string, callback: (result: { prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data }) => void) => void;
+    ['banking.sell-minerals']: (characterId: number, bankId: string, items: { itemIdentifier: string; itemIds: number[]; quantity: number }[], callback: (result: { success: boolean; payout: number; budgetRemaining: number; message?: string }) => void) => void;
   }
 }
 

@@ -46,6 +46,7 @@ export const bankTxTypeEnum = pgEnum('BankTxType', [
   'LOAN_INTEREST',
   'SAFETY_BOX_FEE',
   'ROBBERY_LOSS',
+  'MINERAL_SALE',
 ]);
 
 // Tables
@@ -434,6 +435,16 @@ export const BankTransactionsSchema = pgTable('BankTransactions', {
   createdAt: timestamp('createdAt').defaultNow().notNull(),
 });
 
+export const BankMineralBudgetsSchema = pgTable('BankMineralBudgets', {
+  id: serial('id').primaryKey(),
+  bankId: varchar('bankId').notNull(),
+  dailyLimit: decimal('dailyLimit').notNull(),
+  spentToday: decimal('spentToday').default('0.00').notNull(),
+  priceMultiplier: decimal('priceMultiplier').default('1.00').notNull(),
+  resetAt: timestamp('resetAt').notNull(),
+  updatedAt: timestamp('updatedAt'),
+});
+
 // Relations
 export const accountsRelations = relations(AccountsSchema, ({ many }) => ({
   characters: many(CharactersSchema),
@@ -697,3 +708,5 @@ export type BankSafetyBoxSchemaType = typeof BankSafetyBoxesSchema.$inferSelect;
 export type NewBankSafetyBoxSchemaType = typeof BankSafetyBoxesSchema.$inferInsert;
 export type BankTransactionSchemaType = typeof BankTransactionsSchema.$inferSelect;
 export type NewBankTransactionSchemaType = typeof BankTransactionsSchema.$inferInsert;
+export type BankMineralBudgetSchemaType = typeof BankMineralBudgetsSchema.$inferSelect;
+export type NewBankMineralBudgetSchemaType = typeof BankMineralBudgetsSchema.$inferInsert;
