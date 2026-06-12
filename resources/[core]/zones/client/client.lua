@@ -2,7 +2,6 @@
 local glm = require 'glm'
 
 -- Configuration variables
-local DEBUG = true -- Enable/disable debug visualization of zones
 local LOOP_DELAY = 250 -- Milliseconds between zone check iterations (lower = more responsive, higher = better performance)
 
 -- Storage tables for zone management
@@ -371,7 +370,7 @@ Citizen.CreateThread(function()
                     InZones[zoneName] = true -- Mark as inside zone
                     InZonesTimeEnter[zoneName] = nil -- Clear entry timer
                     TriggerEvent('zones::' .. zoneName .. '::enter') -- Fire enter event
-                    if DEBUG then
+                    if debugRender then
                         print('Entered Zone', zoneName)
                     end
                 end
@@ -387,7 +386,7 @@ Citizen.CreateThread(function()
                     InZones[zoneName] = nil -- Mark as outside zone
                     InZonesTimeExit[zoneName] = nil -- Clear exit timer
                     TriggerEvent('zones::' .. zoneName .. '::exit') -- Fire exit event
-                    if DEBUG then
+                    if debugRender then
                         print('Left Zone', zoneName)
                     end
                 end
@@ -406,47 +405,33 @@ end)
 
 
 -- DEBUG VISUALIZATION
--- Renders zone boundaries when DEBUG mode is enabled
--- Only draws zones that have debug flag set to true
-if DEBUG then
-    Citizen.CreateThread(function()
-        Wait(500) -- Small delay to ensure zones are loaded
-        while true do
-            local playerCoords = GetEntityCoords(PlayerPedId(), false)
-            -- Loop through all zones and draw those with debug enabled
-            for _, zone in pairs(Zones) do
-                if zone.data.debug then
-                    if zone.polygon then
-                        -- Draw polygon/box zones by connecting vertices with walls
-                        local corner = zone.polygon
-                        for k, point in pairs(corner) do
-                            -- Connect current point to next point (or first point if at end)
-                            local secondPoint = corner[1] -- Default to first point for closing the shape
-                            if k < #corner then
-                                secondPoint = corner[k + 1] -- Use next point if not at end
-                            end
+-- Renders zone boundaries for all zones when debug rendering is active.
+-- Toggled at runtime with /zonedebug — no restart required.
+local debugRender = false
 
-                            DrawWall(point, secondPoint, zone.data.minZ, zone.data.maxZ, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, zone.data.debugColor.a)
-                            --if #(playerCoords - point) < 2500.0 then
-                            --    -- Draw a vertical wall between the two points
-                            --    -- Black color (0,0,0) with 50% transparency (128)
-                            --    DrawWall(point, secondPoint, zone.data.minZ, zone.data.maxZ, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, zone.data.debugColor.a)
-                            --end
-                            --if #(playerCoords - point) < 2000.0 then
-                            --    DrawLine(point.x * 1.0, point.y * 1.0, zone.data.debugColor.a + 150.01, secondPoint.x * 1.0, secondPoint.y * 1.0, zone.data.debugColor.a + 150.01, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, 255) -- Draw line between corners
-                            --end
-                        end
-                    elseif zone.type == 'sphere' then
-                        -- Draw sphere zones using the sphere marker
-                        local x = zone.data.coords.x
-                        local y = zone.data.coords.y
-                        local z = zone.data.coords.z
-                        -- Black color (0,0,0) with 50% transparency (128)
-                        DrawSphere(x, y, z, zone.data.radius, 0, 0, 0, 128)
+RegisterCommand('zonedebug', function()
+    debugRender = not debugRender
+    print('[Zones] Debug rendering ' .. (debugRender and 'ON' or 'OFF'))
+end, false)
+
+Citizen.CreateThread(function()
+    while true do
+        if debugRender then
+            for _, zone in pairs(Zones) do
+                if zone.polygon then
+                    local corner = zone.polygon
+                    local color = zone.data.debugColor or { r = 255, g = 0, b = 255, a = 128 }
+                    for k, point in pairs(corner) do
+                        local secondPoint = k < #corner and corner[k + 1] or corner[1]
+                        DrawWall(point, secondPoint, zone.data.minZ, zone.data.maxZ, color.r, color.g, color.b, color.a)
                     end
+                elseif zone.type == 'sphere' then
+                    DrawSphere(zone.data.coords.x, zone.data.coords.y, zone.data.coords.z, zone.data.radius, 255, 0, 255, 128)
                 end
             end
-            Wait(0) -- Run every frame for smooth visualization
+            Wait(0)
+        else
+            Wait(500)
         end
-    end)
-end
+    end
+end)
