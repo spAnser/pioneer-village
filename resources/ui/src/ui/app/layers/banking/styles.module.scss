@@ -1,0 +1,642 @@
+@use '../../styles/mixins.module.scss' as mixins;
+
+// ─── Palette ────────────────────────────────────────────────────────────────
+$parchment: #E9DDC0;
+$parchment-dark: #DDCDA8;
+$ink: #2A2018;
+$ink-soft: #4A3B2C;
+$seal: #7E2B20;
+$brass: #9C7C3C;
+$note-green: #4A5D45;
+$table: #171210;
+
+// ─── SVG filter references (defined inline in the component) ────────────────
+// tornpaper, grain, inkpress, specks, drybrush are applied via filter: url(#id)
+
+// ─── Overlay ────────────────────────────────────────────────────────────────
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  font-family: 'IM Fell English', serif;
+  color: $ink;
+}
+
+// ─── Table surface behind the document ──────────────────────────────────────
+.tableWrap {
+  background: $table;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(156, 124, 60, 0.10), transparent 60%),
+    repeating-linear-gradient(90deg, rgba(0,0,0,.25) 0 2px, transparent 2px 90px);
+  padding: mixins.uiSize(48) mixins.uiSize(20);
+  min-width: mixins.uiSize(680);
+  max-width: mixins.uiSize(720);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// ─── Masthead ────────────────────────────────────────────────────────────────
+.masthead {
+  text-align: center;
+  color: $parchment;
+  margin-bottom: mixins.uiSize(24);
+}
+.mastheadEst {
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(11);
+  letter-spacing: 0.35em;
+  color: $brass;
+  text-transform: uppercase;
+  filter: url(#inkpress);
+}
+.mastheadTitle {
+  font-family: 'Rye', serif;
+  font-size: mixins.uiSize(36);
+  letter-spacing: 0.04em;
+  margin: mixins.uiSize(4) 0;
+  text-shadow: 0 mixins.uiSize(2) 0 rgba(0,0,0,0.6);
+  filter: url(#drybrush);
+}
+.mastheadSub {
+  font-style: italic;
+  font-size: mixins.uiSize(13);
+  color: #B8A37E;
+  filter: url(#inkpress);
+}
+.rule {
+  width: mixins.uiSize(220);
+  height: mixins.uiSize(2);
+  margin: mixins.uiSize(10) auto 0;
+  background: linear-gradient(90deg, transparent, $brass 20%, $brass 80%, transparent);
+}
+
+// ─── Tabs ────────────────────────────────────────────────────────────────────
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: mixins.uiSize(8);
+  flex-wrap: wrap;
+  margin-bottom: mixins.uiSize(28);
+}
+.tab {
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(12);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #C9B68C;
+  background: #241B14;
+  border: 1px solid #4A3B2C;
+  padding: mixins.uiSize(8) mixins.uiSize(18);
+  cursor: pointer;
+  transition: all 0.18s ease;
+
+  &:hover {
+    color: $parchment;
+    border-color: $brass;
+  }
+  &.tabActive {
+    color: $ink;
+    background: $parchment;
+    border-color: $parchment;
+    box-shadow: 0 mixins.uiSize(3) 0 $brass;
+  }
+}
+
+// ─── Document shell ──────────────────────────────────────────────────────────
+.doc {
+  width: mixins.uiSize(580);
+  position: relative;
+  padding: mixins.uiSize(8);
+  filter: drop-shadow(0 mixins.uiSize(18) mixins.uiSize(30) rgba(0,0,0,0.65));
+  animation: slideup 0.3s ease both;
+
+  // fine dark grain sitting ON the ink
+  &::before {
+    content: '';
+    position: absolute;
+    inset: mixins.uiSize(10);
+    z-index: 2;
+    pointer-events: none;
+    filter: url(#grain);
+    opacity: 0.3;
+    mix-blend-mode: multiply;
+  }
+  // parchment specks breaking ink coverage
+  &::after {
+    content: '';
+    position: absolute;
+    inset: mixins.uiSize(10);
+    z-index: 2;
+    pointer-events: none;
+    filter: url(#specks);
+    opacity: 0.6;
+  }
+}
+
+@keyframes slideup {
+  from { opacity: 0; transform: translateY(mixins.uiSize(12)); }
+  to   { opacity: 1; transform: none; }
+}
+
+.paper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: $parchment;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(74,59,44,.10) 27px 28px),
+    radial-gradient(ellipse 220px 160px at 12% 8%, rgba(122,86,40,.22), rgba(122,86,40,.10) 55%, transparent 72%),
+    radial-gradient(ellipse 420px 200px at 60% 104%, rgba(96,66,30,.26), rgba(96,66,30,.08) 60%, transparent 75%),
+    radial-gradient(ellipse at 45% 35%, rgba(255,250,235,.40), transparent 55%),
+    radial-gradient(ellipse 160px 300px at 101% 60%, rgba(74,52,24,.28), transparent 70%),
+    radial-gradient(circle 5px at 81% 22%, rgba(110,70,30,.35), transparent 70%),
+    radial-gradient(circle 3px at 86% 26%, rgba(110,70,30,.30), transparent 70%),
+    radial-gradient(circle 4px at 23% 78%, rgba(110,70,30,.30), transparent 70%),
+    radial-gradient(circle 6px at 30% 84%, rgba(110,70,30,.22), transparent 70%),
+    radial-gradient(circle 3px at 64% 90%, rgba(110,70,30,.30), transparent 70%),
+    radial-gradient(circle 4px at 9% 45%, rgba(110,70,30,.26), transparent 70%);
+  box-shadow:
+    inset 0 0 60px rgba(74,52,24,.30),
+    inset 0 0 8px rgba(74,52,24,.35),
+    inset 30px 30px 50px -30px rgba(60,40,18,.45),
+    inset -34px -28px 55px -30px rgba(60,40,18,.5);
+  filter: url(#tornpaper);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(178deg, transparent 49.55%, rgba(60,42,20,.22) 49.9%, rgba(255,250,235,.30) 50.15%, transparent 50.55%),
+      linear-gradient(91deg, transparent 32.6%, rgba(60,42,20,.14) 32.95%, rgba(255,250,235,.22) 33.15%, transparent 33.5%);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    filter: url(#grain);
+    opacity: 0.62;
+    mix-blend-mode: multiply;
+  }
+}
+
+.docInner {
+  position: relative;
+  z-index: 1;
+  border: 2px solid rgba(42,32,24,.78);
+  outline: 1px solid rgba(42,32,24,.5);
+  outline-offset: 3px;
+  padding: mixins.uiSize(24) mixins.uiSize(28) mixins.uiSize(28);
+  filter: url(#inkpress);
+  text-shadow: 0 0 0.8px rgba(42,32,24,.45), 0.4px 0.3px 0 rgba(42,32,24,.18);
+
+  &::before {
+    content: '❦';
+    position: absolute;
+    font-size: mixins.uiSize(14);
+    color: $ink-soft;
+    top: mixins.uiSize(6);
+    left: mixins.uiSize(8);
+  }
+  &::after {
+    content: '❦';
+    position: absolute;
+    font-size: mixins.uiSize(14);
+    color: $ink-soft;
+    bottom: mixins.uiSize(6);
+    right: mixins.uiSize(8);
+    transform: rotate(180deg);
+  }
+}
+
+// ─── Wax seal ────────────────────────────────────────────────────────────────
+.wax {
+  position: absolute;
+  right: mixins.uiSize(22);
+  top: mixins.uiSize(-16);
+  width: mixins.uiSize(56);
+  height: mixins.uiSize(56);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #A33B2C, $seal 60%, #4D1812);
+  box-shadow: 0 mixins.uiSize(4) mixins.uiSize(10) rgba(0,0,0,.45), inset 0 0 0 mixins.uiSize(4) rgba(0,0,0,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Rye', serif;
+  color: #E3B9A8;
+  font-size: mixins.uiSize(18);
+  transform: rotate(-8deg);
+  z-index: 2;
+}
+
+// ─── Document header ─────────────────────────────────────────────────────────
+.docHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: mixins.uiSize(10);
+  border-bottom: 2px solid $ink;
+  padding-bottom: mixins.uiSize(10);
+  margin-bottom: mixins.uiSize(16);
+}
+.bankName {
+  font-family: 'Rye', serif;
+  font-size: mixins.uiSize(18);
+  line-height: 1.1;
+  filter: url(#drybrush);
+  small {
+    display: block;
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: mixins.uiSize(11);
+    color: $ink-soft;
+    margin-top: mixins.uiSize(2);
+    letter-spacing: 0.05em;
+  }
+}
+.docNo {
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(11);
+  text-align: right;
+  color: $seal;
+  b {
+    display: block;
+    font-size: mixins.uiSize(14);
+    color: $ink;
+  }
+}
+
+// ─── Document title ──────────────────────────────────────────────────────────
+.docTitle {
+  text-align: center;
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(14);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin: 0 0 mixins.uiSize(18);
+  span {
+    border-bottom: 1px solid $ink;
+    border-top: 1px solid $ink;
+    padding: mixins.uiSize(3) mixins.uiSize(12);
+    display: inline-block;
+  }
+}
+
+// ─── Fields ──────────────────────────────────────────────────────────────────
+.field {
+  margin-bottom: mixins.uiSize(16);
+  label {
+    display: block;
+    font-family: 'Special Elite', monospace;
+    font-size: mixins.uiSize(9);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $ink-soft;
+    margin-bottom: mixins.uiSize(3);
+  }
+  input, select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $ink-soft;
+    font-family: 'IM Fell English', serif;
+    font-size: mixins.uiSize(17);
+    color: $ink;
+    padding: mixins.uiSize(3) mixins.uiSize(2);
+    border-radius: 0;
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid $seal;
+    }
+    &::placeholder {
+      color: #A08F6E;
+      font-style: italic;
+    }
+    option {
+      background: $parchment;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  gap: mixins.uiSize(20);
+  .field { flex: 1; }
+}
+
+.amountWrap {
+  display: flex;
+  align-items: baseline;
+  gap: mixins.uiSize(5);
+  border-bottom: 1px solid $ink-soft;
+  &:focus-within { border-bottom: 2px solid $seal; }
+  .cur {
+    font-family: 'Rye', serif;
+    font-size: mixins.uiSize(20);
+    color: $note-green;
+  }
+  input {
+    border: none !important;
+    font-family: 'Special Elite', monospace !important;
+    font-size: mixins.uiSize(22) !important;
+    letter-spacing: 0.06em;
+  }
+}
+
+.denoms {
+  display: flex;
+  gap: mixins.uiSize(6);
+  margin-top: mixins.uiSize(8);
+  flex-wrap: wrap;
+}
+.denom {
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(11);
+  cursor: pointer;
+  border: 1px solid $note-green;
+  color: $note-green;
+  background: rgba(74,93,69,.07);
+  padding: mixins.uiSize(4) mixins.uiSize(10);
+  transition: all 0.15s;
+  &:hover {
+    background: $note-green;
+    color: $parchment;
+  }
+}
+
+// ─── Ledger ──────────────────────────────────────────────────────────────────
+.ledger {
+  border: 1px solid $ink-soft;
+  margin: mixins.uiSize(4) 0 mixins.uiSize(18);
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(12);
+}
+.ledgerRow {
+  display: flex;
+  justify-content: space-between;
+  padding: mixins.uiSize(6) mixins.uiSize(12);
+  border-bottom: 1px dashed rgba(74,59,44,.4);
+  &:last-child {
+    border-bottom: none;
+    background: rgba(74,59,44,.08);
+  }
+  .lab {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: mixins.uiSize(10);
+    color: $ink-soft;
+    align-self: center;
+  }
+  .val { font-size: mixins.uiSize(14); }
+  .valGreen { color: $note-green; }
+  .valRed { color: $seal; }
+}
+
+// ─── Buttons ─────────────────────────────────────────────────────────────────
+.actions {
+  display: flex;
+  gap: mixins.uiSize(12);
+  align-items: center;
+  margin-top: mixins.uiSize(18);
+}
+.btnSeal {
+  flex: 1;
+  cursor: pointer;
+  border: none;
+  background: $seal;
+  color: $parchment;
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(13);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: mixins.uiSize(12) mixins.uiSize(16);
+  box-shadow: 0 mixins.uiSize(3) 0 #4D1812, inset 0 0 0 1px rgba(233,221,192,.35), inset 0 0 mixins.uiSize(18) rgba(0,0,0,.25);
+  transition: transform 0.1s, box-shadow 0.1s;
+  &:hover { filter: brightness(1.08); }
+  &:active {
+    transform: translateY(mixins.uiSize(2));
+    box-shadow: 0 mixins.uiSize(1) 0 #4D1812, inset 0 0 0 1px rgba(233,221,192,.35);
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover { filter: none; }
+  }
+}
+.btnGhost {
+  background: none;
+  border: 1px solid $ink-soft;
+  color: $ink-soft;
+  cursor: pointer;
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(11);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: mixins.uiSize(11) mixins.uiSize(18);
+  transition: all 0.15s;
+  &:hover {
+    border-color: $ink;
+    color: $ink;
+  }
+}
+
+.tellerNote {
+  font-style: italic;
+  font-size: mixins.uiSize(12);
+  color: $ink-soft;
+  margin-top: mixins.uiSize(12);
+  text-align: center;
+}
+
+// ─── Telegraph strip ──────────────────────────────────────────────────────────
+.tgStrip {
+  background: #F2E9D2;
+  border: 1px solid $ink-soft;
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(13);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: mixins.uiSize(10) mixins.uiSize(12);
+  margin-bottom: mixins.uiSize(16);
+  color: $ink;
+  box-shadow: 2px 2px 0 rgba(0,0,0,.12);
+  .morse {
+    display: block;
+    font-size: mixins.uiSize(9);
+    letter-spacing: 0.45em;
+    color: $brass;
+    margin-top: mixins.uiSize(5);
+  }
+}
+
+// ─── Interest note ────────────────────────────────────────────────────────────
+.interestNote {
+  display: flex;
+  gap: mixins.uiSize(8);
+  align-items: center;
+  border: 1px dashed $seal;
+  padding: mixins.uiSize(8) mixins.uiSize(12);
+  margin-bottom: mixins.uiSize(16);
+  .pct {
+    font-family: 'Rye', serif;
+    font-size: mixins.uiSize(26);
+    color: $seal;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  p {
+    font-size: mixins.uiSize(12);
+    font-style: italic;
+    color: $ink-soft;
+    line-height: 1.45;
+  }
+}
+
+// ─── Loan term selector ───────────────────────────────────────────────────────
+.terms {
+  display: flex;
+  gap: mixins.uiSize(6);
+  margin-top: mixins.uiSize(6);
+}
+.term {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid $ink-soft;
+  background: transparent;
+  padding: mixins.uiSize(8) mixins.uiSize(4);
+  font-family: 'Special Elite', monospace;
+  transition: all 0.15s;
+  color: $ink;
+  .d { font-size: mixins.uiSize(15); }
+  .l {
+    font-size: mixins.uiSize(8);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $ink-soft;
+  }
+  &:hover { border-color: $ink; }
+  &.termSel {
+    background: $ink;
+    color: $parchment;
+    .l { color: $parchment-dark; }
+  }
+}
+
+// ─── Loan selector (repay) ────────────────────────────────────────────────────
+.loanItem {
+  border: 1px solid $ink-soft;
+  padding: mixins.uiSize(8) mixins.uiSize(12);
+  margin-bottom: mixins.uiSize(8);
+  cursor: pointer;
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(11);
+  transition: all 0.15s;
+  &:hover { border-color: $ink; }
+  &.loanItemSel {
+    background: rgba(42,32,24,.08);
+    border-color: $ink;
+  }
+  .loanBank { font-size: mixins.uiSize(13); letter-spacing: 0.05em; }
+  .loanDetail { color: $ink-soft; margin-top: mixins.uiSize(2); }
+}
+
+// ─── Status feedback ──────────────────────────────────────────────────────────
+.feedback {
+  margin-top: mixins.uiSize(10);
+  text-align: center;
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(12);
+  letter-spacing: 0.1em;
+  &.feedbackOk { color: $note-green; }
+  &.feedbackErr { color: $seal; }
+}
+
+// ─── Loading spinner ──────────────────────────────────────────────────────────
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+// ─── Stains & smudges ────────────────────────────────────────────────────────
+.stain {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+.stainRing {
+  width: mixins.uiSize(120);
+  height: mixins.uiSize(110);
+  border-radius: 50%;
+  background: radial-gradient(ellipse, transparent 55%, rgba(98,58,18,.30) 60%, rgba(98,58,18,.10) 64%, rgba(98,58,18,.34) 67%, transparent 71%);
+  transform: rotate(-6deg) scaleX(1.08);
+  filter: blur(0.4px);
+  &::after {
+    content: '';
+    position: absolute;
+    width: mixins.uiSize(26);
+    height: mixins.uiSize(18);
+    left: 12%;
+    bottom: mixins.uiSize(-4);
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(98,58,18,.20), transparent 70%);
+  }
+}
+.stainBlot {
+  width: mixins.uiSize(70);
+  height: mixins.uiSize(55);
+  border-radius: 48% 62% 55% 45%/55% 45% 60% 50%;
+  background: radial-gradient(ellipse at 40% 40%, rgba(42,32,24,.30), rgba(42,32,24,.10) 60%, transparent 75%);
+  filter: blur(1px);
+}
+.stainSmudge {
+  width: mixins.uiSize(140);
+  height: mixins.uiSize(34);
+  border-radius: 50%;
+  background: linear-gradient(90deg, transparent, rgba(54,40,26,.18) 30%, rgba(54,40,26,.26) 50%, rgba(54,40,26,.12) 75%, transparent);
+  filter: blur(2.5px);
+  transform: rotate(-3deg);
+}
+.stainThumb {
+  width: mixins.uiSize(42);
+  height: mixins.uiSize(54);
+  border-radius: 50% 50% 46% 54%/60% 60% 40% 40%;
+  background: repeating-radial-gradient(ellipse at 50% 45%, rgba(50,36,22,.16) 0 1.5px, transparent 1.5px 3.5px);
+  filter: blur(0.6px);
+  transform: rotate(18deg);
+  opacity: 0.85;
+}
+
+// ─── APPROVED stamp (loan panel) ─────────────────────────────────────────────
+.stamp {
+  position: absolute;
+  right: mixins.uiSize(26);
+  bottom: mixins.uiSize(88);
+  font-family: 'Special Elite', monospace;
+  font-size: mixins.uiSize(22);
+  letter-spacing: 0.18em;
+  color: $seal;
+  border: 3px double $seal;
+  padding: mixins.uiSize(6) mixins.uiSize(16);
+  transform: rotate(-11deg);
+  opacity: 0.78;
+  pointer-events: none;
+  filter: url(#drybrush);
+  -webkit-mask:
+    repeating-linear-gradient(45deg, #000 0 3px, rgba(0,0,0,.6) 3px 5px),
+    radial-gradient(ellipse at 30% 60%, #000 55%, rgba(0,0,0,.35));
+  -webkit-mask-composite: source-in;
+  mask:
+    repeating-linear-gradient(45deg, #000 0 3px, rgba(0,0,0,.6) 3px 5px),
+    radial-gradient(ellipse at 30% 60%, #000 55%, rgba(0,0,0,.35));
+  mask-composite: intersect;
+}

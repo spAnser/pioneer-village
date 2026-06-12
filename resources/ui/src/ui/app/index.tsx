@@ -15,6 +15,7 @@ import JobsController from './controllers/jobs';
 import StableController from './controllers/stable';
 import WeatherController from './controllers/weather';
 import animationsStore from './stores/animations-store';
+import bankingStore from './stores/banking-store';
 import birdStore from './stores/bird-store';
 import characterSelectStore from './stores/character-select-store';
 import chatStore from './stores/chat-store';
@@ -33,6 +34,7 @@ import threejsStore from './stores/threejs-store';
 export default (socket: Socket<UISocketEvents, SocketServer.Client & SocketServer.ClientEvents>) => {
   // Initialize all stores before rendering
   animationsStore.initialize(socket);
+  bankingStore.initialize(socket);
   birdStore.initialize(socket);
   characterSelectStore.initialize(socket);
   chatStore.initialize(socket);

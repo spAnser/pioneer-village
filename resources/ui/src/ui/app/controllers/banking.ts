@@ -18,6 +18,8 @@ export default (socket: Socket<SocketIO.Events, SocketIn.FromClient & SocketOut.
     'banking.rent-safety-box',
     'banking.get-safety-box',
     'banking.get-transactions',
+    'banking.get-mineral-prices',
+    'banking.sell-minerals',
   ];
 
   for (const forward of forwards) {

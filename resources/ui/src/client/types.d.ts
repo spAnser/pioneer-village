@@ -141,5 +141,19 @@ declare namespace ClientIn {
 
     // Notification events
     ['notification.state']: (state: UI.Notification.State) => void;
+
+    // Banking events
+    ['banking.open']: (data: {
+      tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay';
+      bankId: string;
+      bankName: string;
+      characterId: number;
+      characterName: string;
+      cashOnPerson: number;
+      currentBalance: number;
+      loans: BankLoan.Data[];
+    }) => void;
+    ['banking.close']: () => void;
+    ['banking.update-balance']: (data: { balance: number; cashOnPerson?: number }) => void;
   }
 }
