@@ -1,64 +1,25 @@
 import { emitSocket } from '@lib/server';
 import { LogToUI } from '@lib/server/comms/client';
 
-import BankData from '../shared/data/bankData';
 
-// ── Teller NPC spawning ───────────────────────────────────────────────────────
-// Tellers are spawned client-side by the first player to connect (so that
-// PVGame.createPed can handle model loading). The spawning client sends net IDs
-// back to the server, which stores them and broadcasts to all current/future clients.
-
-const tellerNetIds: Map<string, number> = new Map();
-let tellerSpawnerSource: number | null = null;
-
-on('playerConnecting', () => {
-  // Nominate the first connecting player as the teller spawner if not yet done
-  // and tellers haven't been spawned yet.
-  if (tellerNetIds.size === 0 && tellerSpawnerSource === null) {
-    const source = (global as any).source as number;
-    tellerSpawnerSource = source;
-    // Give the client time to fully load before asking it to spawn
-    setTimeout(() => {
-      emitNet('banking:spawn-tellers', source, BankData.map((b) => ({
-        identifier: b.identifier,
-        model: b.tellerModel,
-        x: b.tellerPosition.x,
-        y: b.tellerPosition.y,
-        z: b.tellerPosition.z,
-        w: b.tellerPosition.w,
-      })));
-    }, 5000);
-  }
-});
-
-// Spawning client reports back with { bankId -> netId }
-onNet('banking:tellers-spawned', (netIdMap: Record<string, number>) => {
-  for (const [bankId, netId] of Object.entries(netIdMap)) {
-    tellerNetIds.set(bankId, netId);
-  }
-  LogToUI(`[Banking] ${tellerNetIds.size} teller(s) registered. Broadcasting to all clients.`);
-  emitNet('banking:tellers-ready', -1, Object.fromEntries(tellerNetIds));
-});
-
-// Any client that connects after the initial spawn requests the stored net IDs
-onNet('banking:request-tellers', () => {
-  const source = (global as any).source as number;
-  if (tellerNetIds.size > 0) {
-    emitNet('banking:tellers-ready', source, Object.fromEntries(tellerNetIds));
-  }
-});
-
-const INTEREST_INTERVAL_MS = 60 * 60 * 1000;       // 1 hour
-const REPUTATION_INTERVAL_MS = 6 * 60 * 60 * 1000;  // 6 hours
-const TRANSFER_CHECK_MS = 60 * 1000;                  // 1 minute
+const INTEREST_INTERVAL_MS = 60 * 60 * 1000;           // 1 hour
+const VAULT_INTEREST_INTERVAL_MS = 5 * 60 * 1000;      // 5 minutes
+const REPUTATION_INTERVAL_MS = 6 * 60 * 60 * 1000;     // 6 hours
+const TRANSFER_CHECK_MS = 60 * 1000;                    // 1 minute
 const LOAN_INTEREST_INTERVAL_MS = 24 * 60 * 60 * 1000; // 24 hours
-const SAFETY_BOX_CHECK_MS = 60 * 60 * 1000;           // 1 hour
+const SAFETY_BOX_CHECK_MS = 60 * 60 * 1000;             // 1 hour
+const MINERAL_PRICE_RECOVERY_MS = 60 * 60 * 1000;       // 1 hour
 
 // ── Interest tick ────────────────────────────────────────────────────────────
 setInterval(() => {
   LogToUI('[Banking] Applying interest to all accounts...');
   emitSocket('banking.apply-interest');
 }, INTEREST_INTERVAL_MS);
+
+// ── Vault replenishment tick ──────────────────────────────────────────────────
+setInterval(() => {
+  emitSocket('banking.apply-vault-interest');
+}, VAULT_INTEREST_INTERVAL_MS);
 
 // ── Reputation recovery tick ─────────────────────────────────────────────────
 setInterval(() => {
@@ -85,6 +46,26 @@ setInterval(() => {
   LogToUI('[Banking] Charging overdue safety boxes...');
   emitSocket('banking.charge-safety-boxes');
 }, SAFETY_BOX_CHECK_MS);
+
+// ── Mineral price recovery tick ───────────────────────────────────────────────
+setInterval(() => {
+  emitSocket('banking.recover-mineral-prices');
+}, MINERAL_PRICE_RECOVERY_MS);
+
+// ── Mineral daily budget reset (schedules itself to fire at each UTC midnight) ─
+function scheduleMidnightReset() {
+  const now = new Date();
+  const midnight = new Date();
+  midnight.setUTCHours(24, 0, 0, 0);
+  const msUntilMidnight = midnight.getTime() - now.getTime();
+
+  setTimeout(() => {
+    LogToUI('[Banking] Resetting mineral budgets for new day...');
+    emitSocket('banking.reset-mineral-budgets');
+    scheduleMidnightReset();
+  }, msUntilMidnight);
+}
+scheduleMidnightReset();
 
 // ── Bank robbery hook ─────────────────────────────────────────────────────────
 // Called by an external heist/job resource: emitNet('banking:rob-bank', bankId, stolenAmount)

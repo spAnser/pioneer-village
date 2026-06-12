@@ -10,14 +10,14 @@ declare namespace Bank {
     | 'SAINT_DENIS'
     | 'ANNESBURG'
     | 'STRAWBERRY'
-    | 'TUMBLEWEED';
+    | 'TUMBLEWEED'
+    | 'ARMIDILLO';
 
   interface Data {
     identifier: Id;
     name: string;
     type: Type;
     zones: Record<string, Vector2Format[]>;
-    counterPosition: Vector4Format;
     vaultPosition: Vector4Format;
     tellerPosition: Vector4Format;
     tellerModel: string;
@@ -78,6 +78,25 @@ declare namespace BankLoan {
   }
 }
 
+declare namespace BankMineralPrice {
+  interface Data {
+    itemIdentifier: string;
+    label: string;
+    pricePerUnit: number;
+  }
+}
+
+declare namespace BankMineralBudget {
+  interface Data {
+    bankId: Bank.Id;
+    dailyLimit: number;
+    spentToday: number;
+    budgetRemaining: number;
+    priceMultiplier: number;
+    resetAt: string;
+  }
+}
+
 declare namespace BankTransaction {
   type Type =
     | 'DEPOSIT'
@@ -90,7 +109,8 @@ declare namespace BankTransaction {
     | 'LOAN_REPAYMENT'
     | 'LOAN_INTEREST'
     | 'SAFETY_BOX_FEE'
-    | 'ROBBERY_LOSS';
+    | 'ROBBERY_LOSS'
+    | 'MINERAL_SALE';
 
   interface Data {
     id: number;
@@ -132,11 +152,30 @@ declare namespace ClientRPC {
     ['banking.rent-safety-box']: (characterId: number, bankId: Bank.Id) => { success: boolean; boxId?: number; message?: string };
     ['banking.get-safety-box']: (characterId: number, bankId: Bank.Id) => BankSafetyBox.Data | null;
     ['banking.get-transactions']: (characterId: number, bankId: Bank.Id | null, limit: number) => BankTransaction.Data[];
+    ['banking.get-mineral-prices']: (bankId: Bank.Id) => { prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data };
+    ['banking.sell-minerals']: (
+      characterId: number,
+      bankId: Bank.Id,
+      items: { itemIdentifier: string; itemIds: number[]; quantity: number }[],
+    ) => { success: boolean; payout: number; budgetRemaining: number; message?: string };
   }
 }
 
 declare namespace ClientIn {
-  interface FromSocket {}
+  interface FromSocket {
+    ['banking.open']: (data: {
+      tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay';
+      bankId: Bank.Id;
+      bankName: string;
+      characterId: number;
+      characterName: string;
+      cashOnPerson: number;
+      currentBalance: number;
+      loans: BankLoan.Data[];
+    }) => void;
+    ['banking.close']: () => void;
+    ['banking.update-balance']: (data: { balance: number; cashOnPerson?: number }) => void;
+  }
 }
 
 declare namespace ClientOut {

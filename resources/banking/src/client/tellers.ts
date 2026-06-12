@@ -1,22 +1,10 @@
-import { PVGame } from '@lib/client';
+import { PVGame, PVTarget } from '@lib/client';
+import { SET_ENTITY_CAN_BE_TARGETED_WITHOUT_LOS } from '@lib/shared/named_hashes';
 
-// bankId -> local entity handle (resolved from server net ID)
+import BankData from '../shared/data/bankData';
+import bankController from './controllers/bank-controller';
+
 export const tellerPeds: Map<Bank.Id, number> = new Map();
-
-// Resolves once all teller peds are ready for targeting
-let _tellersReadyResolve: () => void;
-export const tellersReady: Promise<void> = new Promise((resolve) => {
-  _tellersReadyResolve = resolve;
-});
-
-interface TellerSpawnRequest {
-  identifier: string;
-  model: number;
-  x: number;
-  y: number;
-  z: number;
-  w: number;
-}
 
 const applyTellerBehaviour = (ped: number): void => {
   SetEntityInvincible(ped, true);
@@ -25,61 +13,78 @@ const applyTellerBehaviour = (ped: number): void => {
   SetPedFleeAttributes(ped, 0, false);
   SetPedCombatAttributes(ped, 17, true);
   SetEntityAsMissionEntity(ped, true, true);
+  SetPedConfigFlag(ped, 276, true); // TargettableWithNoLos
+  Citizen.invokeNative(SET_ENTITY_CAN_BE_TARGETED_WITHOUT_LOS, ped, true);
+  
   TaskStartScenarioInPlace(ped, 'WORLD_HUMAN_STAND_IMPATIENT', 0, true, false, 0, -1.0, false);
 };
 
-// Server nominates this client to spawn all tellers
-onNet('banking:spawn-tellers', async (banks: TellerSpawnRequest[]) => {
-  const netIdMap: Record<string, number> = {};
+const tellerTargetId = (bankId: Bank.Id) => `banking::teller_${bankId}`;
 
-  for (const bank of banks) {
-    const ped = await PVGame.createPed(bank.model, bank.x, bank.y, bank.z, bank.w, false, true);
-    if (!ped || !DoesEntityExist(ped)) {
-      console.warn(`[Banking] Failed to spawn teller for ${bank.identifier}`);
-      continue;
-    }
+const registerTellerTarget = (bankId: Bank.Id, ped: number): void => {
+  PVTarget.AddTarget({
+    id: tellerTargetId(bankId),
+    // type: 'model',
+    // group: ['s_m_m_bankclerk_01'],
+    type: 'entity',
+    group: [ped],
+    data: [
+      { id: `banking::deposit_${bankId}`,      label: 'Banking',           icon: 'coins',                   event: 'banking:client:deposit',           parameters: { bankId } },
+      // { id: `banking::withdraw_${bankId}`,     label: 'Withdraw',          icon: 'wallet',                  event: 'banking:client:withdraw',          parameters: { bankId } },
+      // { id: `banking::wire_${bankId}`,         label: 'Wire Transfer',     icon: 'arrow-right-arrow-left',  event: 'banking:client:wire',              parameters: { bankId } },
+      { id: `banking::collect_${bankId}`,      label: 'Collect Transfers', icon: 'inbox',                   event: 'banking:client:collect-transfers', parameters: { bankId } },
+      // { id: `banking::loan_${bankId}`,         label: 'Request Loan',      icon: 'handshake',               event: 'banking:client:loan',              parameters: { bankId } },
+      // { id: `banking::repay_${bankId}`,        label: 'Repay Loan',        icon: 'money-bill',              event: 'banking:client:repay-loan',        parameters: { bankId } },
+      { id: `banking::safetybox_${bankId}`,    label: 'Safety Box',        icon: 'vault',                   event: 'banking:client:safety-box',        parameters: { bankId } },
+      // { id: `banking::info_${bankId}`,         label: 'Bank Info',         icon: 'info',                    event: 'banking:client:bank-info',         parameters: { bankId } },
+      { id: `banking::sellminerals_${bankId}`, label: 'Sell Minerals',     icon: 'gem',                     event: 'banking:client:sell-minerals',     parameters: { bankId } },
+    ],
+    options: {
+      distance: 14.0,
+      losCheck: false,
+      throttle: 1_000,
+      isEnabled() {
+        return bankController.currentBank === bankId;
+      },
+    },
+  });
+};
 
-    applyTellerBehaviour(ped);
+export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
+  if (tellerPeds.has(bankId)) return;
 
-    const netId = NetworkGetNetworkIdFromEntity(ped);
-    netIdMap[bank.identifier] = netId;
-    tellerPeds.set(bank.identifier as Bank.Id, ped);
-    console.log(`[Banking] Spawned teller for ${bank.identifier} (ped: ${ped}, netId: ${netId})`);
+  const bank = BankData.find((b) => b.identifier === bankId);
+  if (!bank) return;
+
+  const { x, y, z, w } = bank.tellerPosition;
+  const ped = await PVGame.createPed(bank.tellerModel, x, y, z, w, true, false);
+  if (!ped || !DoesEntityExist(ped)) {
+    console.warn(`[Banking] Failed to spawn teller for ${bankId}`);
+    return;
   }
 
-  // Report net IDs back to server
-  emitNet('banking:tellers-spawned', netIdMap);
-  _tellersReadyResolve();
-});
+  applyTellerBehaviour(ped);
+  tellerPeds.set(bankId, ped);
+  registerTellerTarget(bankId, ped);
+  console.log(`[Banking] Spawned local teller for ${bankId} (ped: ${ped})`);
+};
 
-// All other clients receive net IDs from server and resolve peds locally
-onNet('banking:tellers-ready', async (netIdMap: Record<string, number>) => {
-  // Skip if this client was the spawner (already has peds from spawn-tellers handler)
-  if (tellerPeds.size > 0) return;
+export const despawnTeller = (bankId: Bank.Id): void => {
+  const ped = tellerPeds.get(bankId);
+  if (!ped) return;
 
-  for (const [bankId, netId] of Object.entries(netIdMap)) {
-    let ped = 0;
-    for (let i = 0; i < 50; i++) {
-      ped = NetworkGetEntityFromNetworkId(netId);
-      if (ped && DoesEntityExist(ped)) break;
-      await Delay(100);
-    }
+  PVTarget.RemoveTarget(tellerTargetId(bankId));
 
-    if (!ped || !DoesEntityExist(ped)) {
-      console.warn(`[Banking] Could not resolve teller netId ${netId} for ${bankId}`);
-      continue;
-    }
-
-    applyTellerBehaviour(ped);
-    tellerPeds.set(bankId as Bank.Id, ped);
-    console.log(`[Banking] Teller ready at ${bankId} (ped: ${ped}, netId: ${netId})`);
+  if (DoesEntityExist(ped)) {
+    SetEntityAsMissionEntity(ped, false, true);
+    DeletePed(ped);
   }
+  tellerPeds.delete(bankId);
+  console.log(`[Banking] Despawned local teller for ${bankId}`);
+};
 
-  _tellersReadyResolve();
-});
-
-// Request net IDs if this client connects after initial spawn
-on('onClientResourceStart', (resourceName: string) => {
-  if (resourceName !== GetCurrentResourceName()) return;
-  emitNet('banking:request-tellers');
-});
+export const despawnTellers = (): void => {
+  for (const [bankId] of tellerPeds) {
+    despawnTeller(bankId);
+  }
+};

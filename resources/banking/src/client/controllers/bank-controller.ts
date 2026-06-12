@@ -142,6 +142,18 @@ class BankController {
     return awaitUI('banking.get-transactions', characterId, bankId, limit);
   }
 
+  async getMineralPrices(bankId: Bank.Id): Promise<{ prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data }> {
+    return awaitUI('banking.get-mineral-prices', bankId);
+  }
+
+  async sellMinerals(
+    characterId: number,
+    bankId: Bank.Id,
+    items: { itemIdentifier: string; itemIds: number[]; quantity: number }[],
+  ): Promise<{ success: boolean; payout: number; budgetRemaining: number; message?: string }> {
+    return awaitUI('banking.sell-minerals', characterId, bankId, items);
+  }
+
   get currentBank(): Bank.Id | null {
     return this._currentBank;
   }
