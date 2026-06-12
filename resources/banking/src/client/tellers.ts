@@ -1,6 +1,4 @@
 import { PVGame, PVTarget } from '@lib/client';
-import { SET_ENTITY_CAN_BE_TARGETED_WITHOUT_LOS } from '@lib/shared/named_hashes';
-
 import BankData from '../shared/data/bankData';
 import bankController from './controllers/bank-controller';
 
@@ -13,21 +11,21 @@ const applyTellerBehaviour = (ped: number): void => {
   SetPedFleeAttributes(ped, 0, false);
   SetPedCombatAttributes(ped, 17, true);
   SetEntityAsMissionEntity(ped, true, true);
-  SetPedConfigFlag(ped, 276, true); // TargettableWithNoLos
-  Citizen.invokeNative(SET_ENTITY_CAN_BE_TARGETED_WITHOUT_LOS, ped, true);
-  
-  TaskStartScenarioInPlace(ped, 'WORLD_HUMAN_STAND_IMPATIENT', 0, true, false, 0, -1.0, false);
+  TaskStartScenarioInPlace(ped, 'WORLD_HUMAN_VAL_BANKTELLER', 0, true, false, 0, -1.0, false);
 };
 
 const tellerTargetId = (bankId: Bank.Id) => `banking::teller_${bankId}`;
 
-const registerTellerTarget = (bankId: Bank.Id, ped: number): void => {
+const registerTellerTarget = (bankId: Bank.Id): void => {
+  const bank = BankData.find((b) => b.identifier === bankId);
+  if (!bank) return;
+
+  const { x, y, z } = bank.tellerPosition;
+
   PVTarget.AddTarget({
     id: tellerTargetId(bankId),
-    // type: 'model',
-    // group: ['s_m_m_bankclerk_01'],
-    type: 'entity',
-    group: [ped],
+    type: 'point',
+    group: [{ x, y, z: z + 1.3 }],
     data: [
       // Note: We default banking action to be a deposit as it's the most common.
       // Players can then tab-click to switch to other actions, which is a more intuitive flow than showing all options upfront in the PVTarget menu.
@@ -37,9 +35,10 @@ const registerTellerTarget = (bankId: Bank.Id, ped: number): void => {
       { id: `banking::sellminerals_${bankId}`, label: 'Sell Minerals',     icon: 'gem',   event: 'banking:client:sell-minerals',     parameters: { bankId } },
     ],
     options: {
-      distance: 14.0,
+      distance: 2.5,
       losCheck: false,
       throttle: 1_000,
+      screenThreshold: 0.12,
       isEnabled() {
         return bankController.currentBank === bankId;
       },
@@ -62,7 +61,7 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
 
   applyTellerBehaviour(ped);
   tellerPeds.set(bankId, ped);
-  registerTellerTarget(bankId, ped);
+  registerTellerTarget(bankId);
   console.log(`[Banking] Spawned local teller for ${bankId} (ped: ${ped})`);
 };
 
