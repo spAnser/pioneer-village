@@ -29,15 +29,12 @@ const registerTellerTarget = (bankId: Bank.Id, ped: number): void => {
     type: 'entity',
     group: [ped],
     data: [
-      { id: `banking::deposit_${bankId}`,      label: 'Banking',           icon: 'coins',                   event: 'banking:client:deposit',           parameters: { bankId } },
-      // { id: `banking::withdraw_${bankId}`,     label: 'Withdraw',          icon: 'wallet',                  event: 'banking:client:withdraw',          parameters: { bankId } },
-      // { id: `banking::wire_${bankId}`,         label: 'Wire Transfer',     icon: 'arrow-right-arrow-left',  event: 'banking:client:wire',              parameters: { bankId } },
-      { id: `banking::collect_${bankId}`,      label: 'Collect Transfers', icon: 'inbox',                   event: 'banking:client:collect-transfers', parameters: { bankId } },
-      // { id: `banking::loan_${bankId}`,         label: 'Request Loan',      icon: 'handshake',               event: 'banking:client:loan',              parameters: { bankId } },
-      // { id: `banking::repay_${bankId}`,        label: 'Repay Loan',        icon: 'money-bill',              event: 'banking:client:repay-loan',        parameters: { bankId } },
-      { id: `banking::safetybox_${bankId}`,    label: 'Safety Box',        icon: 'vault',                   event: 'banking:client:safety-box',        parameters: { bankId } },
-      // { id: `banking::info_${bankId}`,         label: 'Bank Info',         icon: 'info',                    event: 'banking:client:bank-info',         parameters: { bankId } },
-      { id: `banking::sellminerals_${bankId}`, label: 'Sell Minerals',     icon: 'gem',                     event: 'banking:client:sell-minerals',     parameters: { bankId } },
+      // Note: We default banking action to be a deposit as it's the most common.
+      // Players can then tab-click to switch to other actions, which is a more intuitive flow than showing all options upfront in the PVTarget menu.
+      { id: `banking::deposit_${bankId}`,      label: 'Banking',           icon: 'coins', event: 'banking:client:deposit',           parameters: { bankId } },
+      { id: `banking::collect_${bankId}`,      label: 'Collect Transfers', icon: 'inbox', event: 'banking:client:collect-transfers', parameters: { bankId } },
+      { id: `banking::safetybox_${bankId}`,    label: 'Safety Box',        icon: 'vault', event: 'banking:client:safety-box',        parameters: { bankId } },
+      { id: `banking::sellminerals_${bankId}`, label: 'Sell Minerals',     icon: 'gem',   event: 'banking:client:sell-minerals',     parameters: { bankId } },
     ],
     options: {
       distance: 14.0,
