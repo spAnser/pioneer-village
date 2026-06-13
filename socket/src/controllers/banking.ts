@@ -142,7 +142,9 @@ export default () => {
   });
 
   userNamespace.on('connection', (socket) => {
-    onClientEvent(socket, 'banking.get-accounts', async (characterId, cb) => {
+    onClientEvent(socket, 'banking.get-accounts', async (cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb([]);
       logInfoC('banking.get-accounts', characterId);
       const accounts = await Banking.getCharacterAccounts(characterId);
       cb(
@@ -156,25 +158,33 @@ export default () => {
       );
     });
 
-    onClientEvent(socket, 'banking.deposit', async (characterId, bankId, amount, cb) => {
+    onClientEvent(socket, 'banking.deposit', async (bankId, amount, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb({ success: false, newBalance: 0, message: 'No character selected' });
       logInfoC('banking.deposit', characterId, bankId, amount);
       const result = await Banking.deposit(characterId, bankId, amount);
       cb(result);
     });
 
-    onClientEvent(socket, 'banking.withdraw', async (characterId, bankId, amount, cb) => {
+    onClientEvent(socket, 'banking.withdraw', async (bankId, amount, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb({ success: false, newBalance: 0, message: 'No character selected' });
       logInfoC('banking.withdraw', characterId, bankId, amount);
       const result = await Banking.withdraw(characterId, bankId, amount);
       cb(result);
     });
 
-    onClientEvent(socket, 'banking.wire-transfer', async (fromCharacterId, toCharacterId, fromBankId, toBankId, amount, cb) => {
+    onClientEvent(socket, 'banking.wire-transfer', async (toCharacterId, fromBankId, toBankId, amount, cb) => {
+      const fromCharacterId = socket.data.character?.id;
+      if (!fromCharacterId) return cb({ success: false, fee: 0, availableAt: '', message: 'No character selected' });
       logInfoC('banking.wire-transfer', fromCharacterId, '->', toCharacterId, fromBankId, '->', toBankId, amount);
       const result = await Banking.initiateWire(fromCharacterId, toCharacterId, fromBankId, toBankId, amount);
       cb(result);
     });
 
-    onClientEvent(socket, 'banking.collect-transfers', async (characterId, cb) => {
+    onClientEvent(socket, 'banking.collect-transfers', async (cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb({ collected: 0, total: 0 });
       logInfoC('banking.collect-transfers', characterId);
       const result = await Banking.collectPendingTransfers(characterId);
       cb(result);
@@ -186,19 +196,25 @@ export default () => {
       cb(info);
     });
 
-    onClientEvent(socket, 'banking.take-loan', async (characterId, bankId, principal, collateralItemId, dueAt, cb) => {
+    onClientEvent(socket, 'banking.take-loan', async (bankId, principal, collateralItemId, dueAt, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb({ success: false, message: 'No character selected' });
       logInfoC('banking.take-loan', characterId, bankId, principal);
       const result = await Banking.takeLoan(characterId, bankId, principal, collateralItemId, new Date(dueAt));
       cb(result);
     });
 
-    onClientEvent(socket, 'banking.repay-loan', async (characterId, loanId, amount, cb) => {
+    onClientEvent(socket, 'banking.repay-loan', async (loanId, amount, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb({ success: false, outstanding: 0, message: 'No character selected' });
       logInfoC('banking.repay-loan', characterId, loanId, amount);
       const result = await Banking.repayLoan(characterId, loanId, amount);
       cb(result);
     });
 
-    onClientEvent(socket, 'banking.get-loans', async (characterId, cb) => {
+    onClientEvent(socket, 'banking.get-loans', async (cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb([]);
       logInfoC('banking.get-loans', characterId);
       const loans = await Banking.getCharacterLoans(characterId);
       cb(
@@ -217,13 +233,17 @@ export default () => {
       );
     });
 
-    onClientEvent(socket, 'banking.rent-safety-box', async (characterId, bankId, cb) => {
+    onClientEvent(socket, 'banking.rent-safety-box', async (bankId, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb({ success: false, message: 'No character selected' });
       logInfoC('banking.rent-safety-box', characterId, bankId);
       const result = await Banking.rentSafetyBox(characterId, bankId);
       cb(result);
     });
 
-    onClientEvent(socket, 'banking.get-safety-box', async (characterId, bankId, cb) => {
+    onClientEvent(socket, 'banking.get-safety-box', async (bankId, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb(null);
       logInfoC('banking.get-safety-box', characterId, bankId);
       const box = await Banking.getSafetyBox(characterId, bankId);
       cb(
@@ -242,7 +262,9 @@ export default () => {
       );
     });
 
-    onClientEvent(socket, 'banking.get-transactions', async (characterId, bankId, limit, cb) => {
+    onClientEvent(socket, 'banking.get-transactions', async (bankId, limit, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb([]);
       logInfoC('banking.get-transactions', characterId, bankId, limit);
       const rows = await Banking.getTransactions(characterId, bankId, limit || 50);
       cb(
@@ -266,7 +288,9 @@ export default () => {
       cb(result);
     });
 
-    onClientEvent(socket, 'banking.sell-minerals', async (characterId, bankId, items, cb) => {
+    onClientEvent(socket, 'banking.sell-minerals', async (bankId, items, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb({ success: false, payout: 0, budgetRemaining: 0, message: 'No character selected' });
       logInfoC('banking.sell-minerals', characterId, bankId, items.length, 'item lines');
       const result = await Banking.sellMinerals(characterId, bankId, items);
       cb(result);

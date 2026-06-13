@@ -140,21 +140,20 @@ declare namespace BankSafetyBox {
 
 declare namespace ClientRPC {
   interface Socket {
-    ['banking.get-accounts']: (characterId: number) => BankAccount.Data[];
-    ['banking.deposit']: (characterId: number, bankId: Bank.Id, amount: number) => { success: boolean; newBalance: number; message?: string };
-    ['banking.withdraw']: (characterId: number, bankId: Bank.Id, amount: number) => { success: boolean; newBalance: number; message?: string };
-    ['banking.wire-transfer']: (fromCharacterId: number, toCharacterId: number, fromBankId: Bank.Id, toBankId: Bank.Id, amount: number) => { success: boolean; fee: number; availableAt: string; message?: string };
-    ['banking.collect-transfers']: (characterId: number) => { collected: number; total: number };
+    ['banking.get-accounts']: () => BankAccount.Data[];
+    ['banking.deposit']: (bankId: Bank.Id, amount: number) => { success: boolean; newBalance: number; message?: string };
+    ['banking.withdraw']: (bankId: Bank.Id, amount: number) => { success: boolean; newBalance: number; message?: string };
+    ['banking.wire-transfer']: (toCharacterId: number, fromBankId: Bank.Id, toBankId: Bank.Id, amount: number) => { success: boolean; fee: number; availableAt: string; message?: string };
+    ['banking.collect-transfers']: () => { collected: number; total: number };
     ['banking.get-bank-info']: (bankId: Bank.Id) => Bank.Info | null;
-    ['banking.take-loan']: (characterId: number, bankId: Bank.Id, principal: number, collateralItemId: number | null, dueAt: string) => { success: boolean; loanId?: number; message?: string };
-    ['banking.repay-loan']: (characterId: number, loanId: number, amount: number) => { success: boolean; outstanding: number; message?: string };
-    ['banking.get-loans']: (characterId: number) => BankLoan.Data[];
-    ['banking.rent-safety-box']: (characterId: number, bankId: Bank.Id) => { success: boolean; boxId?: number; message?: string };
-    ['banking.get-safety-box']: (characterId: number, bankId: Bank.Id) => BankSafetyBox.Data | null;
-    ['banking.get-transactions']: (characterId: number, bankId: Bank.Id | null, limit: number) => BankTransaction.Data[];
+    ['banking.take-loan']: (bankId: Bank.Id, principal: number, collateralItemId: number | null, dueAt: string) => { success: boolean; loanId?: number; message?: string };
+    ['banking.repay-loan']: (loanId: number, amount: number) => { success: boolean; outstanding: number; message?: string };
+    ['banking.get-loans']: () => BankLoan.Data[];
+    ['banking.rent-safety-box']: (bankId: Bank.Id) => { success: boolean; boxId?: number; message?: string };
+    ['banking.get-safety-box']: (bankId: Bank.Id) => BankSafetyBox.Data | null;
+    ['banking.get-transactions']: (bankId: Bank.Id | null, limit: number) => BankTransaction.Data[];
     ['banking.get-mineral-prices']: (bankId: Bank.Id) => { prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data };
     ['banking.sell-minerals']: (
-      characterId: number,
       bankId: Bank.Id,
       items: { itemIdentifier: string; itemIds: number[]; quantity: number }[],
     ) => { success: boolean; payout: number; budgetRemaining: number; message?: string };

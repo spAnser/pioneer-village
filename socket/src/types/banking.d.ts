@@ -21,20 +21,20 @@ declare namespace SocketIn {
   }
 
   interface FromClient {
-    ['banking.get-accounts']: (characterId: number, callback: (accounts: BankAccount.Data[]) => void) => void;
-    ['banking.deposit']: (characterId: number, bankId: string, amount: number, callback: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
-    ['banking.withdraw']: (characterId: number, bankId: string, amount: number, callback: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
-    ['banking.wire-transfer']: (fromCharacterId: number, toCharacterId: number, fromBankId: string, toBankId: string, amount: number, callback: (result: { success: boolean; fee: number; availableAt: string; message?: string }) => void) => void;
-    ['banking.collect-transfers']: (characterId: number, callback: (result: { collected: number; total: number }) => void) => void;
+    ['banking.get-accounts']: (callback: (accounts: BankAccount.Data[]) => void) => void;
+    ['banking.deposit']: (bankId: string, amount: number, callback: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
+    ['banking.withdraw']: (bankId: string, amount: number, callback: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
+    ['banking.wire-transfer']: (toCharacterId: number, fromBankId: string, toBankId: string, amount: number, callback: (result: { success: boolean; fee: number; availableAt: string; message?: string }) => void) => void;
+    ['banking.collect-transfers']: (callback: (result: { collected: number; total: number }) => void) => void;
     ['banking.get-bank-info']: (bankId: string, callback: (info: { reputationScore: number; interestRate: number; vaultBalance: number } | null) => void) => void;
-    ['banking.take-loan']: (characterId: number, bankId: string, principal: number, collateralItemId: number | null, dueAt: string, callback: (result: { success: boolean; loanId?: number; message?: string }) => void) => void;
-    ['banking.repay-loan']: (characterId: number, loanId: number, amount: number, callback: (result: { success: boolean; outstanding: number; message?: string }) => void) => void;
-    ['banking.get-loans']: (characterId: number, callback: (loans: BankLoan.Data[]) => void) => void;
-    ['banking.rent-safety-box']: (characterId: number, bankId: string, callback: (result: { success: boolean; boxId?: number; message?: string }) => void) => void;
-    ['banking.get-safety-box']: (characterId: number, bankId: string, callback: (box: BankSafetyBox.Data | null) => void) => void;
-    ['banking.get-transactions']: (characterId: number, bankId: string | null, limit: number, callback: (transactions: BankTransaction.Data[]) => void) => void;
+    ['banking.take-loan']: (bankId: string, principal: number, collateralItemId: number | null, dueAt: string, callback: (result: { success: boolean; loanId?: number; message?: string }) => void) => void;
+    ['banking.repay-loan']: (loanId: number, amount: number, callback: (result: { success: boolean; outstanding: number; message?: string }) => void) => void;
+    ['banking.get-loans']: (callback: (loans: BankLoan.Data[]) => void) => void;
+    ['banking.rent-safety-box']: (bankId: string, callback: (result: { success: boolean; boxId?: number; message?: string }) => void) => void;
+    ['banking.get-safety-box']: (bankId: string, callback: (box: BankSafetyBox.Data | null) => void) => void;
+    ['banking.get-transactions']: (bankId: string | null, limit: number, callback: (transactions: BankTransaction.Data[]) => void) => void;
     ['banking.get-mineral-prices']: (bankId: string, callback: (result: { prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data }) => void) => void;
-    ['banking.sell-minerals']: (characterId: number, bankId: string, items: { itemIdentifier: string; itemIds: number[]; quantity: number }[], callback: (result: { success: boolean; payout: number; budgetRemaining: number; message?: string }) => void) => void;
+    ['banking.sell-minerals']: (bankId: string, items: { itemIdentifier: string; itemIds: number[]; quantity: number }[], callback: (result: { success: boolean; payout: number; budgetRemaining: number; message?: string }) => void) => void;
   }
 }
 

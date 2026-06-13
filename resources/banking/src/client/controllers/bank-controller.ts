@@ -32,7 +32,7 @@ class BankController {
   }
 
   async loadAccounts(characterId: number): Promise<void> {
-    const accounts = await awaitUI('banking.get-accounts', characterId);
+    const accounts = await awaitUI('banking.get-accounts');
     this._accounts.clear();
     for (const data of accounts) {
       this._accounts.set(data.bankId, new Account(data));
@@ -49,7 +49,7 @@ class BankController {
   }
 
   async deposit(characterId: number, bankId: Bank.Id, amount: number): Promise<{ success: boolean; newBalance: number; message?: string }> {
-    const result = await awaitUI('banking.deposit', characterId, bankId, amount);
+    const result = await awaitUI('banking.deposit', bankId, amount);
     if (result.success) {
       const account = this._accounts.get(bankId);
       if (account) {
@@ -60,7 +60,7 @@ class BankController {
   }
 
   async withdraw(characterId: number, bankId: Bank.Id, amount: number): Promise<{ success: boolean; newBalance: number; message?: string }> {
-    const result = await awaitUI('banking.withdraw', characterId, bankId, amount);
+    const result = await awaitUI('banking.withdraw', bankId, amount);
     if (result.success) {
       const account = this._accounts.get(bankId);
       if (account) {
@@ -77,7 +77,7 @@ class BankController {
     toBankId: Bank.Id,
     amount: number,
   ): Promise<{ success: boolean; fee: number; availableAt: string; message?: string }> {
-    const result = await awaitUI('banking.wire-transfer', fromCharacterId, toCharacterId, fromBankId, toBankId, amount);
+    const result = await awaitUI('banking.wire-transfer', toCharacterId, fromBankId, toBankId, amount);
     if (result.success) {
       const account = this._accounts.get(fromBankId);
       if (account) {
@@ -88,7 +88,7 @@ class BankController {
   }
 
   async collectTransfers(characterId: number): Promise<{ collected: number; total: number }> {
-    const result = await awaitUI('banking.collect-transfers', characterId);
+    const result = await awaitUI('banking.collect-transfers');
     if (result.collected > 0) {
       await this.loadAccounts(characterId);
     }
@@ -106,7 +106,7 @@ class BankController {
     collateralItemId: number | null,
     dueAt: string,
   ): Promise<{ success: boolean; loanId?: number; message?: string }> {
-    const result = await awaitUI('banking.take-loan', characterId, bankId, principal, collateralItemId, dueAt);
+    const result = await awaitUI('banking.take-loan', bankId, principal, collateralItemId, dueAt);
     if (result.success) {
       await this.loadAccounts(characterId);
     }
@@ -114,7 +114,7 @@ class BankController {
   }
 
   async repayLoan(characterId: number, loanId: number, amount: number): Promise<{ success: boolean; outstanding: number; message?: string }> {
-    const result = await awaitUI('banking.repay-loan', characterId, loanId, amount);
+    const result = await awaitUI('banking.repay-loan', loanId, amount);
     if (result.success) {
       await this.loadAccounts(characterId);
     }
@@ -122,12 +122,12 @@ class BankController {
   }
 
   async getLoans(characterId: number): Promise<BankLoan.Data[]> {
-    this._loans = await awaitUI('banking.get-loans', characterId);
+    this._loans = await awaitUI('banking.get-loans');
     return this._loans;
   }
 
   async rentSafetyBox(characterId: number, bankId: Bank.Id): Promise<{ success: boolean; boxId?: number; message?: string }> {
-    const result = await awaitUI('banking.rent-safety-box', characterId, bankId);
+    const result = await awaitUI('banking.rent-safety-box', bankId);
     if (result.success) {
       await this.loadAccounts(characterId);
     }
@@ -135,11 +135,11 @@ class BankController {
   }
 
   async getSafetyBox(characterId: number, bankId: Bank.Id): Promise<BankSafetyBox.Data | null> {
-    return awaitUI('banking.get-safety-box', characterId, bankId);
+    return awaitUI('banking.get-safety-box', bankId);
   }
 
   async getTransactions(characterId: number, bankId: Bank.Id | null, limit: number = 50): Promise<BankTransaction.Data[]> {
-    return awaitUI('banking.get-transactions', characterId, bankId, limit);
+    return awaitUI('banking.get-transactions', bankId, limit);
   }
 
   async getMineralPrices(bankId: Bank.Id): Promise<{ prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data }> {
@@ -151,7 +151,7 @@ class BankController {
     bankId: Bank.Id,
     items: { itemIdentifier: string; itemIds: number[]; quantity: number }[],
   ): Promise<{ success: boolean; payout: number; budgetRemaining: number; message?: string }> {
-    return awaitUI('banking.sell-minerals', characterId, bankId, items);
+    return awaitUI('banking.sell-minerals', bankId, items);
   }
 
   get currentBank(): Bank.Id | null {
