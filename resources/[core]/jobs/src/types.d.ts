@@ -99,6 +99,7 @@ declare namespace Jobs {
     amount: string;
     reason: string;
     jobHandle: string;
+    bankId: string;
     redeemed: boolean | null;
     redeemedAt: Date | null;
     createdAt: Date | null;

@@ -6,6 +6,7 @@ import bankController from './controllers/bank-controller';
 import { despawnTeller, spawnTeller } from './tellers';
 
 const registerBankZones = async () => {
+  console.log('[Banking] Registering bank zones...');
   for (const bank of BankData) {
     addZone({
       _type: 'poly',

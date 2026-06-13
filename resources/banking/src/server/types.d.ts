@@ -12,6 +12,7 @@ declare namespace Banking {
     getTransactions: (characterId: number, bankId: Bank.Id | null, limit?: number) => Promise<BankTransaction.Data[]>;
     getLoans: (characterId: number) => Promise<BankLoan.Data[]>;
     getBankInfo: (bankId: Bank.Id) => Promise<Bank.Info | null>;
+    redeemJobPaySlip: (characterId: number, paySlipId: number, bankId: Bank.Id) => Promise<{ success: boolean; amount: number; message?: string }>;
   }
 }
 

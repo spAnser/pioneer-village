@@ -1,5 +1,6 @@
 import { logInfoC, logInfoS, onClientEvent, onServerEvent } from '../helpers';
 import Banking from '../managers/banking';
+import jobSystemManager from '../managers/jobs';
 import { serverNamespace, userNamespace } from '../server';
 
 export default () => {
@@ -78,6 +79,17 @@ export default () => {
       logInfoS('banking.server.get-bank-info', bankId);
       const info = await Banking.getBankInfo(bankId);
       cb?.(info);
+    });
+
+    onServerEvent(socket, 'banking.server.redeem-job-pay-slip', async (characterId, paySlipId, bankId, cb) => {
+      logInfoS('banking.server.redeem-job-pay-slip', characterId, paySlipId, bankId);
+      const redeemResult = await jobSystemManager.redeemPaySlip(paySlipId, characterId, bankId);
+      if (!redeemResult.success) {
+        cb?.({ success: false, amount: 0, message: redeemResult.message });
+        return;
+      }
+      const depositResult = await Banking.deposit(characterId, bankId, redeemResult.amount);
+      cb?.({ success: depositResult.success, amount: redeemResult.amount, message: depositResult.message });
     });
 
     onServerEvent(socket, 'banking.rob-bank', async (bankId, stolenAmount, cb) => {

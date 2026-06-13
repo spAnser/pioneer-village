@@ -359,6 +359,7 @@ export const JobPaySlipsSchema = pgTable('JobPaySlips', {
   amount: decimal('amount').notNull(),
   reason: varchar('reason').notNull(),
   jobHandle: varchar('jobHandle').notNull(),
+  bankId: varchar('bankId').notNull().default(''),
   redeemed: boolean('redeemed').default(false),
   redeemedAt: timestamp('redeemedAt'),
   createdAt: timestamp('createdAt').defaultNow(),

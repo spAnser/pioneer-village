@@ -43,6 +43,7 @@ declare namespace SocketIn {
       callback: (result: { success: boolean; payment?: number }) => void,
     ) => void;
     ['jobs.get-pay-slips']: (callback: (slips: Jobs.PaySlip[]) => void) => void;
+    ['jobs.redeem-pay-slip']: (paySlipId: number, bankId: string, callback: (result: { success: boolean; amount?: number; message?: string }) => void) => void;
   }
 }
 
@@ -62,5 +63,6 @@ declare namespace SocketOut {
     'jobs.task-started': (characterId: number, taskId: number) => void;
     'jobs.task-completed': (characterId: number, taskId: number, payment: number) => void;
     'jobs.permission-granted': (characterId: number, type: string, typeId: number) => void;
+    'jobs.pay-slip-redeemed': (characterId: number, paySlipId: number, amount: number, newBalance: number) => void;
   }
 }

@@ -17,6 +17,7 @@ declare namespace SocketIn {
     ['banking.server.get-transactions']: (characterId: number, bankId: string | null, limit: number, callback?: (transactions: BankTransaction.Data[]) => void) => void;
     ['banking.server.get-loans']: (characterId: number, callback?: (loans: BankLoan.Data[]) => void) => void;
     ['banking.server.get-bank-info']: (bankId: string, callback?: (info: { reputationScore: number; interestRate: number; vaultBalance: number } | null) => void) => void;
+    ['banking.server.redeem-job-pay-slip']: (characterId: number, paySlipId: number, bankId: string, callback?: (result: { success: boolean; amount: number; message?: string }) => void) => void;
   }
 
   interface FromClient {

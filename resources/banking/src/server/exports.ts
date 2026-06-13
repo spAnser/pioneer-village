@@ -84,6 +84,15 @@ const getBankInfo: Banking.ServerExports['getBankInfo'] = async (bankId) => {
   }
 };
 
+const redeemJobPaySlip: Banking.ServerExports['redeemJobPaySlip'] = async (characterId, paySlipId, bankId) => {
+  try {
+    return await awaitSocket('banking.server.redeem-job-pay-slip', characterId, paySlipId, bankId);
+  } catch (error) {
+    console.log(`[Banking] redeemJobPaySlip failed:`, characterId, paySlipId, bankId, error);
+    return { success: false, amount: 0, message: 'Socket error' };
+  }
+};
+
 exports<'banking'>('getAccounts', getAccounts);
 exports<'banking'>('getBalance', getBalance);
 exports<'banking'>('deposit', deposit);
@@ -92,3 +101,4 @@ exports<'banking'>('wireTransfer', wireTransfer);
 exports<'banking'>('getTransactions', getTransactions);
 exports<'banking'>('getLoans', getLoans);
 exports<'banking'>('getBankInfo', getBankInfo);
+exports<'banking'>('redeemJobPaySlip', redeemJobPaySlip);
