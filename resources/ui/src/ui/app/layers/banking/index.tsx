@@ -66,7 +66,7 @@ function DepositPanel({ state, onClose }: { state: ReturnType<typeof bankingStor
     setFeedback(null);
     try {
       const result: { success: boolean; newBalance: number; message?: string } =
-        await bankingStore.call('banking.deposit', state.characterId, state.bankId, numeric);
+        await bankingStore.call('banking.deposit', state.bankId, numeric);
       if (result.success) {
         bankingStore.updateState({ currentBalance: result.newBalance, cashOnPerson: state.cashOnPerson - numeric });
         setFeedback({ msg: `Deposited $${fmt(numeric)} — new balance $${fmt(result.newBalance)}`, ok: true });
@@ -157,7 +157,7 @@ function WithdrawPanel({ state, onClose }: { state: ReturnType<typeof bankingSto
     setFeedback(null);
     try {
       const result: { success: boolean; newBalance: number; message?: string } =
-        await bankingStore.call('banking.withdraw', state.characterId, state.bankId, numeric);
+        await bankingStore.call('banking.withdraw', state.bankId, numeric);
       if (result.success) {
         bankingStore.updateState({ currentBalance: result.newBalance, cashOnPerson: state.cashOnPerson + numeric });
         setFeedback({ msg: `Withdrew $${fmt(numeric)} — remaining balance $${fmt(result.newBalance)}`, ok: true });
@@ -255,7 +255,7 @@ function WirePanel({ state, onClose }: { state: ReturnType<typeof bankingStore.g
     setFeedback(null);
     try {
       const result: { success: boolean; fee: number; availableAt: string; message?: string } =
-        await bankingStore.call('banking.wire-transfer', state.characterId, parseInt(toCharId), state.bankId, toBankId, numeric);
+        await bankingStore.call('banking.wire-transfer', parseInt(toCharId), state.bankId, toBankId, numeric);
       if (result.success) {
         bankingStore.updateState({ currentBalance: state.currentBalance - numeric - result.fee });
         setFeedback({ msg: `Wire sent! Available ${new Date(result.availableAt).toLocaleString()}`, ok: true });
@@ -368,7 +368,7 @@ function LoanPanel({ state, onClose }: { state: ReturnType<typeof bankingStore.g
     const dueAt = new Date(Date.now() + term * 7 * 24 * 60 * 60 * 1000).toISOString();
     try {
       const result: { success: boolean; loanId?: number; message?: string } =
-        await bankingStore.call('banking.take-loan', state.characterId, state.bankId, principal, null, dueAt);
+        await bankingStore.call('banking.take-loan', state.bankId, principal, null, dueAt);
       if (result.success) {
         bankingStore.updateState({ currentBalance: state.currentBalance + principal });
         setApproved(true);
@@ -479,7 +479,7 @@ function RepayPanel({ state, onClose }: { state: ReturnType<typeof bankingStore.
     setFeedback(null);
     try {
       const result: { success: boolean; outstanding: number; message?: string } =
-        await bankingStore.call('banking.repay-loan', state.characterId, selectedLoanId, numeric);
+        await bankingStore.call('banking.repay-loan', selectedLoanId, numeric);
       if (result.success) {
         bankingStore.updateState({
           currentBalance: state.currentBalance - numeric,
