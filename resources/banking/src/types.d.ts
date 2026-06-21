@@ -145,7 +145,6 @@ declare namespace ClientRPC {
     ['banking.withdraw']: (bankId: Bank.Id, amount: number) => { success: boolean; newBalance: number; message?: string };
     ['banking.wire-transfer']: (toCharacterId: number, fromBankId: Bank.Id, toBankId: Bank.Id, amount: number) => { success: boolean; fee: number; availableAt: string; message?: string };
     ['banking.collect-transfers']: () => { collected: number; total: number };
-    ['banking.get-bank-info']: (bankId: Bank.Id) => Bank.Info | null;
     ['banking.take-loan']: (bankId: Bank.Id, principal: number, collateralItemId: number | null, dueAt: string) => { success: boolean; loanId?: number; message?: string };
     ['banking.repay-loan']: (loanId: number, amount: number) => { success: boolean; outstanding: number; message?: string };
     ['banking.get-loans']: () => BankLoan.Data[];

@@ -2,7 +2,7 @@ import { PedManager, PVTarget, type PedReactionConfig } from '@lib/client';
 import BankData from '../shared/data/bankData';
 import bankController from './controllers/bank-controller';
 
-const tellerManager = new PedManager();
+const tellerManager = PedManager.getInstance();
 
 const tellerTargetId = (bankId: Bank.Id) => `banking::teller_${bankId}`;
 
@@ -38,7 +38,7 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
   const bank = BankData.find((b) => b.identifier === bankId);
   if (!bank) return;
 
-  const ped = await tellerManager.spawn(bankId, {
+  const ped = await tellerManager.spawn(tellerTargetId(bankId), {
     model: bank.tellerModel,
     position: bank.tellerPosition,
     freeze: true,
@@ -48,7 +48,7 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
     // Ambient speech fires on a random interval independently of the routine.
     speech: {
       ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
-      lines: ['HOWS_IT_GOING', 'WELCOME'],
+      names: ['HOWS_IT_GOING', 'WELCOME'],
       params: 'speech_params_standard',
       intervalMs: [15_000, 45_000],
     },
@@ -61,7 +61,7 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
       { type: 'scenario', name: 'WORLD_HUMAN_VAL_BANKTELLER', duration: 10_000 },
       { type: 'anim',     dict: 'script_common@jail_cell@unlock@key', anim: 'action_mp_female', duration: 2_000 },
       { type: 'speech',   ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'UNAUTHORIZED_AREA', params: 'speech_params_force' },
-      { type: 'wait',     ms: 2_000 },
+      { type: 'wait',     ms: 30_000 },
     ],
     reactions: [
       // Teller reacts when they personally are attacked.

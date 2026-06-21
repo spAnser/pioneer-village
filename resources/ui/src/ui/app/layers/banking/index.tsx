@@ -107,7 +107,7 @@ function DepositPanel({ state, onClose }: { state: ReturnType<typeof bankingStor
             inputMode="decimal"
             placeholder="0.00"
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, '').replace(/^(\d*\.?\d*).*$/, '$1'))}
           />
         </div>
         <div className={styles.denoms}>
@@ -196,7 +196,7 @@ function WithdrawPanel({ state, onClose }: { state: ReturnType<typeof bankingSto
             inputMode="decimal"
             placeholder="0.00"
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, '').replace(/^(\d*\.?\d*).*$/, '$1'))}
           />
         </div>
         <div className={styles.denoms}>
@@ -293,7 +293,7 @@ function WirePanel({ state, onClose }: { state: ReturnType<typeof bankingStore.g
             inputMode="numeric"
             placeholder="Character ID"
             value={toCharId}
-            onChange={(e) => setToCharId(e.target.value)}
+            onChange={(e) => setToCharId(e.target.value.replace(/\D/g, ''))}
           />
         </div>
         <div className={styles.field}>
@@ -316,7 +316,7 @@ function WirePanel({ state, onClose }: { state: ReturnType<typeof bankingStore.g
             inputMode="decimal"
             placeholder="0.00"
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, '').replace(/^(\d*\.?\d*).*$/, '$1'))}
           />
         </div>
       </div>
@@ -408,7 +408,7 @@ function LoanPanel({ state, onClose }: { state: ReturnType<typeof bankingStore.g
             inputMode="decimal"
             placeholder="0.00"
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
+            onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, '').replace(/^(\d*\.?\d*).*$/, '$1'))}
           />
         </div>
       </div>
@@ -541,7 +541,7 @@ function RepayPanel({ state, onClose }: { state: ReturnType<typeof bankingStore.
                     inputMode="decimal"
                     placeholder="0.00"
                     value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
+                    onChange={(e) => setAmount(e.target.value.replace(/[^0-9.]/g, '').replace(/^(\d*\.?\d*).*$/, '$1'))}
                   />
                 </div>
                 <div className={styles.denoms}>
@@ -587,10 +587,16 @@ function SvgFilters() {
           <feColorMatrix type="matrix" values="0 0 0 0 0.36  0 0 0 0 0.28  0 0 0 0 0.18  0 0 0 0.18 0"/>
         </filter>
         <filter id="inkpress" x="-3%" y="-3%" width="106%" height="106%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.011 0.019" numOctaves={3} seed={11} result="warp"/>
-          <feDisplacementMap in="SourceGraphic" in2="warp" scale={2} xChannelSelector="R" yChannelSelector="G" result="warped"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.025" numOctaves={3} seed={11} result="warp"/>
+          <feDisplacementMap in="SourceGraphic" in2="warp" scale={4} xChannelSelector="R" yChannelSelector="G" result="warped"/>
           <feTurbulence type="fractalNoise" baseFrequency="0.32" numOctaves={2} seed={5} result="rough"/>
-          <feDisplacementMap in="warped" in2="rough" scale={0.8} xChannelSelector="R" yChannelSelector="G"/>
+          <feDisplacementMap in="warped" in2="rough" scale={1.5} xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        <filter id="handline" x="-4%" y="-80%" width="108%" height="260%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.006 0.04" numOctaves={4} seed={33} result="warp"/>
+          <feDisplacementMap in="SourceGraphic" in2="warp" scale={5} xChannelSelector="R" yChannelSelector="G" result="warped"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.45 0.08" numOctaves={2} seed={17} result="rough"/>
+          <feDisplacementMap in="warped" in2="rough" scale={2} xChannelSelector="R" yChannelSelector="G"/>
         </filter>
         <filter id="specks">
           <feTurbulence type="fractalNoise" baseFrequency="0.45" numOctaves={3} seed={9} stitchTiles="stitch"/>
@@ -598,9 +604,9 @@ function SvgFilters() {
         </filter>
         <filter id="drybrush" x="-5%" y="-5%" width="110%" height="110%">
           <feTurbulence type="fractalNoise" baseFrequency="0.09 0.05" numOctaves={3} seed={14} result="w"/>
-          <feDisplacementMap in="SourceGraphic" in2="w" scale={3} result="d"/>
+          <feDisplacementMap in="SourceGraphic" in2="w" scale={1.5} result="d"/>
           <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves={2} seed={21} result="r"/>
-          <feDisplacementMap in="d" in2="r" scale={2.2}/>
+          <feDisplacementMap in="d" in2="r" scale={1.1}/>
         </filter>
       </defs>
     </svg>

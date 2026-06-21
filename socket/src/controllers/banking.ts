@@ -190,12 +190,6 @@ export default () => {
       cb(result);
     });
 
-    socket.on('banking.get-bank-info', async (bankId, cb) => {
-      logInfoC('banking.get-bank-info', bankId);
-      const info = await Banking.getBankInfo(bankId);
-      cb(info);
-    });
-
     socket.on('banking.take-loan', async (bankId, principal, collateralItemId, dueAt, cb) => {
       const characterId = socket.data.character?.id;
       if (!characterId) return cb({ success: false, message: 'No character selected' });

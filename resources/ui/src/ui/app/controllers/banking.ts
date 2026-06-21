@@ -11,7 +11,6 @@ export default (socket: Socket<SocketIO.Events, SocketIn.FromClient & SocketOut.
     'banking.withdraw',
     'banking.wire-transfer',
     'banking.collect-transfers',
-    'banking.get-bank-info',
     'banking.take-loan',
     'banking.repay-loan',
     'banking.get-loans',

@@ -73,6 +73,7 @@ $table: #171210;
   height: mixins.uiSize(2);
   margin: mixins.uiSize(10) auto 0;
   background: linear-gradient(90deg, transparent, $brass 20%, $brass 80%, transparent);
+  filter: url(#handline);
 }
 
 // ─── Tabs ────────────────────────────────────────────────────────────────────
@@ -243,6 +244,7 @@ $table: #171210;
   border-bottom: 2px solid $ink;
   padding-bottom: mixins.uiSize(10);
   margin-bottom: mixins.uiSize(16);
+  filter: url(#handline);
 }
 .bankName {
   font-family: 'Rye', serif;
@@ -284,6 +286,7 @@ $table: #171210;
     border-top: 1px solid $ink;
     padding: mixins.uiSize(3) mixins.uiSize(12);
     display: inline-block;
+    filter: url(#handline);
   }
 }
 

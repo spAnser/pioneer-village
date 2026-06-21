@@ -1,4 +1,4 @@
-import { PVBase, PVGame } from '@lib/client';
+import { PVBase, PVGame, PedManager } from '@lib/client';
 import { emitUI, focusUI } from '@lib/client/comms/ui';
 
 import BankData from '../shared/data/bankData';
@@ -59,13 +59,29 @@ on('banking:client:collect-transfers', async (_entity: number, pArgs: Record<str
 
   const characterId = PVGame.characterId();
   const result = await bankController.collectTransfers(characterId);
+  const pm = PedManager.getInstance();
 
   if (result.collected > 0) {
     const account = bankController.getAccount(bankId);
     emitUI('banking.update-balance', { balance: account?.balance ?? 0 });
     console.log(`[Banking] Collected ${result.collected} transfer(s) totalling $${result.total}`);
+    pm.playSpeech(`banking::teller_${bankId}`, {
+      ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
+      names: ["COME_SEE_THIS"],
+      params: 'speech_params_force',
+      intervalMs: [0, 0],
+    });
   } else {
     console.log('[Banking] No pending transfers ready to collect.');
+    pm.playSpeech(`banking::teller_${bankId}`, {
+      // ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
+      // names: ['NO_IDEA'],
+      // names: ['HAND_OVER_MONEY'],
+      ref:'0083_U_M_O_BLWGENERALSTOREOWNER_01',
+      names: ['REFUSE_OFFER', 'FAREWELL_NO_SALE', 'GENERIC_BUY_RESPONSE'],
+      params: 'speech_params_force',
+      intervalMs: [0, 0],
+    });
   }
 });
 

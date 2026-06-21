@@ -95,10 +95,6 @@ class BankController {
     return result;
   }
 
-  async getBankInfo(bankId: Bank.Id): Promise<Bank.Info | null> {
-    return awaitUI('banking.get-bank-info', bankId);
-  }
-
   async takeLoan(
     characterId: number,
     bankId: Bank.Id,

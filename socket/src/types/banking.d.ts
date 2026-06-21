@@ -26,7 +26,6 @@ declare namespace SocketIn {
     ['banking.withdraw']: (bankId: string, amount: number, callback: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
     ['banking.wire-transfer']: (toCharacterId: number, fromBankId: string, toBankId: string, amount: number, callback: (result: { success: boolean; fee: number; availableAt: string; message?: string }) => void) => void;
     ['banking.collect-transfers']: (callback: (result: { collected: number; total: number }) => void) => void;
-    ['banking.get-bank-info']: (bankId: string, callback: (info: { reputationScore: number; interestRate: number; vaultBalance: number } | null) => void) => void;
     ['banking.take-loan']: (bankId: string, principal: number, collateralItemId: number | null, dueAt: string, callback: (result: { success: boolean; loanId?: number; message?: string }) => void) => void;
     ['banking.repay-loan']: (loanId: number, amount: number, callback: (result: { success: boolean; outstanding: number; message?: string }) => void) => void;
     ['banking.get-loans']: (callback: (loans: BankLoan.Data[]) => void) => void;
