@@ -88,4 +88,5 @@ declare interface PVCharacterData {
   socket: any;
   userId: number;
   offline: boolean;
+  role: 'USER' | 'DEVELOPER' | 'ADMIN';
 }

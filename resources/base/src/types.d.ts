@@ -44,4 +44,5 @@ declare interface CharacterData {
   source: number;
   userId: number;
   offline: boolean;
+  role: 'USER' | 'DEVELOPER' | 'ADMIN';
 }

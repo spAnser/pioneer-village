@@ -3,12 +3,25 @@ declare interface ClientExports {
 }
 
 declare namespace Doors {
+  type HookType =
+    | 'beforeUnlock'
+    | 'afterUnlock'
+    | 'beforeLock'
+    | 'afterLock'
+    | 'onInteract'
+    | 'onLockpick';
+
+  type HookCallback = (doorHash: number) => boolean | void | Promise<boolean | void>;
+
   type LockDoor = (doorHash: number) => void;
   type UnlockDoor = (doorHash: number) => void;
   type SetDoorState = (doorHash: number, state: number) => void;
   type GetClosestDoor = () => number | null;
   type GetClosestDoorToCoords = (coords: Vector3Format) => number | null;
   type CloseDoor = (doorHash: number, durationMultiplier?: number) => void;
+  type AttemptLockpick = (doorHash: number) => void;
+  /** Register a hook callback for a door. Returns an unregister function. */
+  type OnDoorHook = (id: string, type: HookType, doorHash: number, fn: HookCallback) => () => void;
 
   interface ClientExports {
     lockDoor: LockDoor;
@@ -17,6 +30,8 @@ declare namespace Doors {
     getClosestDoor: GetClosestDoor;
     getClosestDoorToCoords: GetClosestDoorToCoords;
     closeDoor: CloseDoor;
+    attemptLockpick: AttemptLockpick;
+    onDoorHook: OnDoorHook;
   }
 }
 
@@ -30,14 +45,15 @@ declare namespace ClientRPC {
 // Client perspective - events received from various sources
 declare namespace ClientIn {
   interface FromSocket {
-    ['doors.set-door-state']: (doorHash: number, state: number) => void;
+    ['doors.set-door-state']: (doorHash: number, state: number, pairedHash?: number) => void;
+    ['doors.indicator']: (indicators: UI.Door.Indicator[]) => void;
   }
 }
 
 // Client perspective - events sent to various destinations
 declare namespace ClientOut {
   interface ToSocket {
-    ['doors.set-door-state']: (doorHash: number, state: number) => void;
+    ['doors.set-door-state']: (doorHash: number, state: number, pairedHash?: number) => void;
   }
 }
 

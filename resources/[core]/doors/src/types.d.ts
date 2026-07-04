@@ -20,5 +20,6 @@ declare namespace Doors {
 declare namespace ClientOut {
   interface ToSocket {
     'doors.set-door-state': (doorHash: number, state: Doors.State) => void;
+    'doors.set-door-state-bypass': (doorHash: number, state: Doors.State) => void;
   }
 }

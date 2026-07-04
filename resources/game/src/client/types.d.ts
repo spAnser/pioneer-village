@@ -56,7 +56,7 @@ declare namespace Game {
 
   type loadAnimDict = (hash: string, delay?: number) => Promise<void>;
   type playAnimTask = (animTask: Anim.Task, ped?: number) => Promise<void>;
-  type taskPlayAnim = (animTask: Anim.Task) => void;
+  type taskPlayAnim = (animTask: Anim.Task) => Promise<void>;
   type taskPlayAnimArrayNew = (animTasks: Anim.Task | Anim.Task[], ped?: number) => Promise<void>;
   type taskPlayAnimAdvArray = (
     coords: Vector3Format,

@@ -79,6 +79,7 @@ declare namespace ClientIn {
       centered?: boolean,
     ) => void;
     ['interact.pois']: (pois: UI.Interact.POI[]) => void;
+    ['doors.indicator']: (indicators: UI.Door.Indicator[]) => void;
     ['interact.active']: (active: string | null) => void;
     ['chat.state']: (event: UI.Chat.Event) => void;
     ['threejs.state']: (event: UI.ThreeJS.Event) => void;

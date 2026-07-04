@@ -1,0 +1,45 @@
+@use '../../styles/mixins.module.scss' as mixins;
+
+.indicator {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: mixins.uiSize(4);
+  filter: drop-shadow(0 mixins.uiSize(1) mixins.uiSize(3) rgba(0, 0, 0, 0.9));
+  transition: opacity 0.1s ease;
+}
+
+.iconWrapper {
+  width: mixins.uiSize(22);
+  height: mixins.uiSize(22);
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.locked .iconWrapper svg {
+  color: #e05c5c;
+}
+
+.unlocked .iconWrapper svg {
+  color: #5ce07a;
+}
+
+.keyHints {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: mixins.uiSize(2);
+}
+
+.keyHint {
+  font-size: mixins.uiSize(11);
+  color: #ffffff;
+  text-shadow: 0 mixins.uiSize(1) mixins.uiSize(2) rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+}

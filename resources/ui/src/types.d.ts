@@ -259,6 +259,19 @@ declare namespace UI.Interact {
   type Event = Partial<State>;
 }
 
+declare namespace UI.Door {
+  interface Indicator {
+    doorHash: number;
+    screenX: number;
+    screenY: number;
+    locked: boolean;
+    distance: number;
+    canInteract: boolean;
+    lockpickable: boolean;
+    devOpen?: boolean;
+  }
+}
+
 declare namespace UI.TargetLayer {
   interface State extends UI.BaseState {
     active: boolean;

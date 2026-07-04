@@ -1,6 +1,23 @@
 import { PVGame, PVInit, awaitUI } from '@lib/client';
 import { emitSocket } from '@lib/client/comms/ui';
 import { Vector3 } from '@lib/math';
+import { runDoorHooks } from '../misc/hooks';
+
+// Doors that should relock once they swing back to closed position.
+// Keyed by signed 32-bit door hash.
+const AUTOLOCK_DOORS = new Set<number>([
+  // valentine bank gate doors
+  1340831050,   // p_gate_valbankvlt
+  -1951221163,  // p_gate_valbankvlt (2343746133 signed)
+  -1987052564,  // P_DOORSLDPRTN01X (2307914732 signed)
+
+  // valentine jail doors
+  535323366, // P_DOOR_VAL_JAIL_CELL01X
+  295355979, // P_DOOR_VAL_JAIL_CELL01X
+  193903155, // P_DOOR_VAL_JAIL_CELL01X
+
+  // TODO: other bank doors, train station doors, and any other high-traffic doors that should auto-lock
+]);
 
 class DoorManager {
   protected static instance: DoorManager;
@@ -13,6 +30,8 @@ class DoorManager {
   }
 
   doors = new Map<number, Doors.Data>();
+  // Tracks doors that have been opened this session and are pending autolock
+  private autolockPending = new Set<number>();
 
   constructor() {
     setInterval(this.checkDoors.bind(this), 2500);
@@ -82,7 +101,8 @@ class DoorManager {
   }
 
   getDoorState(doorHash: number): Doors.State | null {
-    return this.doors.get(doorHash)?.state || null;
+    const data = this.doors.get(doorHash);
+    return data !== undefined ? data.state : null;
   }
 
   getDoorCoords(doorHash: number): Vector3Format | null {
@@ -111,12 +131,22 @@ class DoorManager {
   }
 
   getDoorDistance(doorHash: number, coords?: Vector3Format): number {
-    const doorCoords = this.getDoorCoords(doorHash);
-    // console.log('getDoorDistance', doorHash, doorCoords);
-    if (doorCoords) {
-      return Vector3.fromObject(doorCoords).getDistance(coords || PVGame.playerCoords(true));
+    const data = this.getDoor(doorHash);
+    if (!data) return Infinity;
+
+    // Resolve entity coords on-demand if not yet populated
+    if (data.coords.z === -69) {
+      const entity = data.entity || GetEntityByDoorhash(doorHash, 0);
+      if (entity) {
+        data.entity = entity;
+        data.coords = Vector3.fromArray(GetEntityCoords(entity, false)).toObject();
+        this.doors.set(doorHash, data);
+      } else {
+        return Infinity;
+      }
     }
-    return Infinity;
+
+    return Vector3.fromObject(data.coords).getDistance(coords || PVGame.playerCoords(true));
   }
 
   getClosestDoor(): number | null {
@@ -169,7 +199,7 @@ class DoorManager {
 
   async hasDoorKey(doorHash: number): Promise<boolean> {
     const items = await awaitUI('inventory.player-get-items', GetHashKey('PV_DOOR_KEY'));
-    // console.log(items);
+    console.log('[doors] hasDoorKey checking doorHash:', doorHash, 'items found:', JSON.stringify(items));
 
     for (const item of items) {
       for (const metadatas of item.metadatas) {
@@ -191,28 +221,60 @@ class DoorManager {
     return false;
   }
 
-  async setDoorState(doorHash: number, state: Doors.State, emit = true) {
+  async setDoorState(doorHash: number, state: Doors.State, emit = true, pairedHash?: number) {
     const data = this.getDoor(doorHash);
-    if (!data || state === null || state < -1 || state > 4 || !(await this.hasDoorKey(doorHash))) {
+    if (!data || state === null || state < -1 || state > 4) {
+      return;
+    }
+    // Key check only applies when the local player is initiating the change
+    if (emit && !(await this.hasDoorKey(doorHash))) {
       return;
     }
     if (data.state !== state) {
+      const isUnlocking = state === 0;
+      const beforeHook = isUnlocking ? 'beforeUnlock' : 'beforeLock';
+      if (!(await runDoorHooks(beforeHook, doorHash))) return;
+
       data.state = state;
       DoorSystemSetDoorState(doorHash, state);
 
       if (emit) {
-        emitSocket('doors.set-door-state', doorHash, state);
+        emitSocket('doors.set-door-state', doorHash, state, pairedHash);
       }
+
+      const afterHook = isUnlocking ? 'afterUnlock' : 'afterLock';
+      await runDoorHooks(afterHook, doorHash);
     }
   }
 
-  async toggleDoorState(doorHash: number, emit = true): Promise<void> {
+  async attemptLockpick(doorHash: number): Promise<void> {
+    const data = this.getDoor(doorHash);
+    if (!data || data.state !== 1) return;
+
+    if (!(await runDoorHooks('onLockpick', doorHash))) return;
+
+    // TODO: trigger lockpicking minigame here
+    // On success, call: await this.setDoorStateBypass(doorHash, 0);
+    emit('doors:client:lockpick_stub', doorHash);
+  }
+
+  async setDoorStateBypass(doorHash: number, state: Doors.State, pairedHash?: number): Promise<void> {
+    const data = this.getDoor(doorHash);
+    if (!data || state === null || state < -1 || state > 4) return;
+    if (data.state !== state) {
+      data.state = state;
+      DoorSystemSetDoorState(doorHash, state);
+      emitSocket('doors.set-door-state-bypass', doorHash, state, pairedHash);
+    }
+  }
+
+  async toggleDoorState(doorHash: number, emit = true, pairedHash?: number): Promise<void> {
     const data = this.getDoor(doorHash);
     if (!data || !(await this.hasDoorKey(doorHash))) {
       return;
     }
     const state = data.state === 0 ? 1 : 0;
-    await this.setDoorState(doorHash, state, emit);
+    await this.setDoorState(doorHash, state, emit, pairedHash);
   }
 
   async checkDoors() {
@@ -224,44 +286,35 @@ class DoorManager {
       if (!this.doors.has(doorHash)) {
         let doorNetId = NetworkGetNetworkIdFromEntity(doorEntity);
 
-        // TODO: Double check this is loading the current state and not using fallback.
-        const data = this.getDoor(doorHash) || {
+        // This is a door the server doesn't know about yet — use game default and report it
+        const data = {
           entity: doorEntity,
           netId: doorNetId,
           state: DoorSystemGetDoorState(doorHash),
           coords: Vector3.fromArray(GetEntityCoords(doorEntity, false)).toObject(),
         };
 
-        data.entity = doorEntity;
-        data.netId = doorNetId;
-        if (data.state !== DoorSystemGetDoorState(doorHash)) {
-          DoorSystemSetDoorState(doorHash, data.state);
-        }
-        if (data.coords.z === -69) {
-          data.coords = Vector3.fromArray(GetEntityCoords(doorEntity, false)).toObject();
-        }
-
-        if (!this.getDoor(doorHash)) {
-          emitSocket('doors.set-door-state', doorHash, data.state);
-        }
-
+        emitSocket('doors.set-door-state', doorHash, data.state);
         this.doors.set(doorHash, data);
-
         doorChanged = true;
         // console.log('addDoor', doorHash, doorEntity);
       } else {
         const data = this.getDoor(doorHash);
-        if (data && data.entity === 0) {
-          const entity = GetEntityByDoorhash(doorHash, 0);
-          if (entity) {
-            data.entity = entity;
-            data.netId = NetworkGetEntityIsNetworked(entity) ? NetworkGetNetworkIdFromEntity(entity) : 0;
-            data.coords = Vector3.fromArray(GetEntityCoords(entity, false)).toObject();
+        if (data) {
+          // Re-apply stored state if game engine has reset it (happens on stream-in)
+          if (DoorSystemGetDoorState(doorHash) !== data.state) {
+            DoorSystemSetDoorState(doorHash, data.state);
           }
 
-          // console.log(`Setting Door Entity: ${doorHash} ${entity}`);
-
-          this.doors.set(doorHash, data);
+          if (data.entity === 0) {
+            const entity = GetEntityByDoorhash(doorHash, 0);
+            if (entity) {
+              data.entity = entity;
+              data.netId = NetworkGetEntityIsNetworked(entity) ? NetworkGetNetworkIdFromEntity(entity) : 0;
+              data.coords = Vector3.fromArray(GetEntityCoords(entity, false)).toObject();
+              this.doors.set(doorHash, data);
+            }
+          }
         }
       }
     }
@@ -270,7 +323,28 @@ class DoorManager {
       // console.log(this.doors);
     }
 
-    // console.log(this.getClosestDoor());
+    for (const [doorHash, data] of this.doors) {
+      if (data.state !== 0) {
+        this.autolockPending.delete(doorHash);
+        continue;
+      }
+
+      const openRatio = Math.abs(DoorSystemGetOpenRatio(doorHash));
+      const isAutolock = AUTOLOCK_DOORS.has(doorHash);
+      const playerNear = this.getDoorDistance(doorHash) < 1.5;
+
+      if (playerNear) continue;
+
+      if (openRatio > 0.05) {
+        this.closeDoor(doorHash, 2.5);
+        if (isAutolock) {
+          this.autolockPending.add(doorHash);
+        }
+      } else if (this.autolockPending.has(doorHash)) {
+        this.autolockPending.delete(doorHash);
+        this.setDoorStateBypass(doorHash, 1);
+      }
+    }
   }
 }
 

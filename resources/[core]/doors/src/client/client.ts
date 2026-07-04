@@ -6,7 +6,9 @@ import './misc/commands';
 import './misc/events';
 import './exports';
 
-onSocket('doors.set-door-state', (doorHash: number, state: number) => {
-  // console.log('doors.set-door-state', doorHash, state);
+onSocket('doors.set-door-state', (doorHash: number, state: number, pairedHash?: number) => {
   doorManager.setDoorState(doorHash, state, false);
+  if (pairedHash !== undefined && pairedHash !== null) {
+    doorManager.setDoorState(pairedHash, state, false);
+  }
 });

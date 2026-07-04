@@ -4,7 +4,8 @@ declare namespace SocketIn {
   
   interface FromClient {
     'doors.get-door-states': (callback: (doorStates: [number, number][]) => void) => void;
-    'doors.set-door-state': (doorHash: number, state: number) => void;
+    'doors.set-door-state': (doorHash: number, state: number, pairedHash?: number) => void;
+    'doors.set-door-state-bypass': (doorHash: number, state: number, pairedHash?: number) => void;
   }
 }
 
