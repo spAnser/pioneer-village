@@ -1,4 +1,4 @@
-import { PedManager, PVTarget, type PedReactionConfig } from '@lib/client';
+import { PedManager, PVTarget, PVDoors, type PedReactionConfig } from '@lib/client';
 import BankData from '../shared/data/bankData';
 import bankController from './controllers/bank-controller';
 
@@ -60,7 +60,7 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
     routine: [
       { type: 'scenario', name: 'WORLD_HUMAN_VAL_BANKTELLER', duration: 10_000 },
       { type: 'anim',     dict: 'script_common@jail_cell@unlock@key', anim: 'action_mp_female', duration: 2_000 },
-      { type: 'speech',   ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'UNAUTHORIZED_AREA', params: 'speech_params_force' },
+      // { type: 'speech',   ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'UNAUTHORIZED_AREA', params: 'speech_params_force' },
       { type: 'wait',     ms: 30_000 },
     ],
     reactions: [
@@ -113,3 +113,23 @@ export const despawnTellers = (): void => {
 
 export const pauseTellerRoutine = (bankId: Bank.Id): void => tellerManager.pauseRoutine(bankId);
 export const resumeTellerRoutine = (bankId: Bank.Id): void => tellerManager.resumeRoutine(bankId);
+
+
+PVDoors.onDoorHook(`banking::teller12345`,'onLockpick', 2117902999, (doorHash) => {
+  // const bank = BankData.find((b) => b.doorHash === doorHash);
+  // if (!bank) return;
+  console.log(`[Banking] Bank door lockpick attempt detected (doorHash: ${doorHash})`);
+  const bankId = bankController.currentBank;
+  if (!bankId) return;
+
+  console.log('[Banking] Bank door interacted with, triggering teller speech reaction');
+  tellerManager.playSpeech(`banking::teller_${bankId}`, {
+    // ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
+    // names: ['NO_IDEA'],
+    // names: ['HAND_OVER_MONEY'],
+    ref:'0083_U_M_O_BLWGENERALSTOREOWNER_01',
+    names: ['LOCKDOWN_BANK', 'LAW_THREAT', 'STOP_THAT'],
+    params: 'speech_params_force',
+    intervalMs: [0, 0],
+  });
+})

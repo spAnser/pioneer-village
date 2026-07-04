@@ -178,7 +178,7 @@ export class PedManager {
       const delay = randomBetween(speech.intervalMs[0], speech.intervalMs[1]);
       managed.speechTimer = setTimeout(() => {
         if (DoesEntityExist(managed.handle)) {
-          const line = speech.lines[Math.floor(Math.random() * speech.names.length)];
+          const line = speech.names[Math.floor(Math.random() * speech.names.length)];
           playAmbientSpeech(managed.handle, speech.ref, line, speech.params);
         }
         schedule();
