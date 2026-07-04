@@ -313,6 +313,7 @@ const isPedFacingCoord: Game.isPedFacingCoord = (targetCoords, ped, toleranceDeg
   return gameManager.isPedFacingCoord(targetCoords, ped, toleranceDeg);
 };
 
+
 exports<'game'>('playerPed', playerPed);
 exports<'game'>('mountPed', mountPed);
 exports<'game'>('playerCoords', playerCoords);

@@ -408,7 +408,11 @@ class GameManager {
     if (typeof hash === 'string') {
       hash = GetHashKey(hash);
     }
-    if (HasModelLoaded(hash) || !IsModelValid(hash)) {
+    if (HasModelLoaded(hash)) {
+      return;
+    }
+    if (!IsModelValid(hash)) {
+      console.warn(`[Game] loadModel: model hash ${hash} is not valid — ped will not spawn`);
       return;
     }
     return new Promise((resolve) => {
@@ -1135,29 +1139,6 @@ class GameManager {
     this.attachEntityToBoneIndex(attacher, GetEntityBoneIndexByName(attachee, boneName), attachee, offset, rotation);
   }
 
-  playAmbientSpeechFromEntity(
-    entity: number,
-    ref: string,
-    name: string,
-    speechParamsString: string,
-    speechLine: number,
-  ) {
-    const struct = new DataView(new ArrayBuffer(128));
-    const soundName = VarString(10, 'LITERAL_STRING', name);
-    const soundRef = VarString(10, 'LITERAL_STRING', ref);
-    const speechParams = GetHashKey(speechParamsString);
-
-    struct.setBigInt64(0, BigInt(soundName), true);
-    struct.setBigInt64(8, BigInt(soundRef), true);
-    struct.setInt32(16, speechLine, true);
-    struct.setBigInt64(24, BigInt(speechParams), true);
-    struct.setInt32(32, 0, true);
-    struct.setInt32(40, 1, true);
-    struct.setInt32(48, 1, true);
-    struct.setInt32(56, 1, true);
-
-    PlayPedAmbientSpeechNative(entity, struct);
-  }
 
   getEntityComponents(entity: number): number[] {
     const metaPedType = GetMetaPedType(entity);

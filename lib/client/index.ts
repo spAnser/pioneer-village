@@ -4,6 +4,8 @@ export { DrawLine, DrawTxt, TxtAtWorldCoord } from './functions';
 export * from './resources';
 export * from './game';
 export * from './events';
+export { PedManager } from './ped-manager';
+export type { PedConfig, PedSpeechConfig, RoutineStep, PedReactionConfig, ReactionSpeech } from './ped-manager';
 
 // @ts-ignore
 export const exports: ClientExports = global.exports;

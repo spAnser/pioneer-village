@@ -188,6 +188,16 @@ const eventMappings = {
     _0: 'i',
     _1: 'i',
   },
+  // size = 1: the ped who fired the shot
+  EVENT_SHOT_FIRED_BULLET_IMPACT: {
+    shooter: 'i',
+  },
+  // size = 3: crime entity + two unknown fields
+  EVENT_CRIME_CONFIRMED: {
+    ped: 'i',
+    _1: 'i',
+    _2: 'i',
+  },
   weapon: {
     mainHand: 'i',
     offHand: 'i',
