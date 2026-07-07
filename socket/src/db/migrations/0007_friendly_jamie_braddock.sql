@@ -1,1 +1,0 @@
-ALTER TABLE "JobPaySlips" ADD COLUMN "bankId" varchar DEFAULT '' NOT NULL;
