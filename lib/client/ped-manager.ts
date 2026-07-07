@@ -67,8 +67,9 @@ interface ManagedPed {
   handle: number;
   config: PedConfig;
   speechTimer?: CitizenTimer;
-  routineTick?: number;
+  routineStopped?: boolean;
   routineRunning: boolean;
+  routineRestart?: boolean;
   reactionCooldowns: Map<string, number>;
 }
 
@@ -158,6 +159,14 @@ export class PedManager {
     if (managed) managed.routineRunning = true;
   }
 
+  /** Resumes the routine, restarting from the first step instead of wherever it was paused. */
+  resumeRoutineFromStart(id: string): void {
+    const managed = this._peds.get(id);
+    if (!managed) return;
+    managed.routineRestart = true;
+    managed.routineRunning = true;
+  }
+
   playSpeech(id: string, psc: PedSpeechConfig): void {
     const managed = this._peds.get(id);
     console.log(`[PedManager] ped found: ${!!managed} with handle ${managed?.handle} - playSpeech "${id}" ref=${psc.ref} names=${psc.names.join(',')} params=${psc.params}`);
@@ -199,58 +208,69 @@ export class PedManager {
     const steps = managed.config.routine;
     if (!steps?.length) return;
 
-    managed.routineTick = setTick(async () => {
-      for (const step of steps) {
-        if (!managed.routineRunning || !DoesEntityExist(managed.handle)) {
-          await Delay(500);
-          continue;
-        }
+    managed.routineStopped = false;
 
-        switch (step.type) {
-          case 'scenario':
-            console.log(`[PedManager] routine "${managed.id}" scenario=${step.name} duration=${step.duration}`);
-            TaskStartScenarioInPlace_2(managed.handle, null, step.name, 0, true, 0, false);
-            if (step.duration) await Delay(step.duration);
-            break;
+    (async () => {
+      while (!managed.routineStopped) {
+        for (const step of steps) {
+          if (managed.routineStopped) return;
 
-          case 'anim':
-            console.log(`[PedManager] routine "${managed.id}" anim=${step.dict}@${step.anim} duration=${step.duration}`);
-            await PVGame.loadAnimDict(step.dict);
-            TaskPlayAnim(
-              managed.handle,
-              step.dict,
-              step.anim,
-              8.0,
-              -8.0,
-              step.duration ?? -1,
-              step.flags ?? 0,
-              0,
-              false,
-              false,
-              false,
-            );
-            if (step.duration) await Delay(step.duration);
-            break;
+          if (!managed.routineRunning || !DoesEntityExist(managed.handle)) {
+            await Delay(500);
+            continue;
+          }
 
-          case 'wait':
-            console.log(`[PedManager] routine "${managed.id}" wait=${step.ms}ms`);
-            await Delay(step.ms);
+          if (managed.routineRestart) {
+            managed.routineRestart = false;
             break;
+          }
 
-          case 'speech':
-            console.log(`[PedManager] routine "${managed.id}" speech ref=${step.ref} name=${step.name}`);
-            playAmbientSpeech(managed.handle, step.ref, step.name, step.params);
-            break;
+          switch (step.type) {
+            case 'scenario':
+              console.log(`[PedManager] routine "${managed.id}" scenario=${step.name} duration=${step.duration}`);
+              TaskStartScenarioInPlace_2(managed.handle, null, step.name, 0, true, 0, false);
+              if (step.duration) await Delay(step.duration);
+              break;
+
+            case 'anim':
+              console.log(`[PedManager] routine "${managed.id}" anim=${step.dict}@${step.anim} duration=${step.duration}`);
+              await PVGame.loadAnimDict(step.dict);
+              TaskPlayAnim(
+                managed.handle,
+                step.dict,
+                step.anim,
+                8.0,
+                8.0,
+                step.duration ?? -1,
+                step.flags ?? 0,
+                0,
+                false,
+                false,
+                false,
+              );
+              if (step.duration) await Delay(step.duration);
+              while (IsEntityPlayingAnim(managed.handle, step.dict, step.anim, 3)) {
+                await Delay(100);
+              }
+              break;
+
+            case 'wait':
+              console.log(`[PedManager] routine "${managed.id}" wait=${step.ms}ms`);
+              await Delay(step.ms);
+              break;
+
+            case 'speech':
+              console.log(`[PedManager] routine "${managed.id}" speech ref=${step.ref} name=${step.name}`);
+              playAmbientSpeech(managed.handle, step.ref, step.name, step.params);
+              break;
+          }
         }
       }
-    });
+    })();
   }
 
   private _stopRoutine(managed: ManagedPed): void {
-    if (managed.routineTick !== undefined) {
-      clearTick(managed.routineTick);
-      managed.routineTick = undefined;
-    }
+    managed.routineStopped = true;
   }
 
   private _registerReactions(managed: ManagedPed): void {
