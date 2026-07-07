@@ -1,5 +1,3 @@
-import { awaitUI } from '@lib/client/comms/ui';
-
 export default class Account {
   _id: BankAccount.Id;
   _characterId: number;

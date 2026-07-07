@@ -21,6 +21,7 @@ const registerTellerTarget = (bankId: Bank.Id): void => {
       { id: `banking::collect_${bankId}`,      label: 'Collect Transfers', icon: 'inbox', event: 'banking:client:collect-transfers', parameters: { bankId } },
       { id: `banking::safetybox_${bankId}`,    label: 'Safety Box',        icon: 'vault', event: 'banking:client:safety-box',        parameters: { bankId } },
       { id: `banking::sellminerals_${bankId}`, label: 'Sell Minerals',     icon: 'gem',   event: 'banking:client:sell-minerals',     parameters: { bankId } },
+      { id: `banking::deposit_${bankId}`,      label: 'test anim',         icon: 'coins', event: 'banking:client:test',              parameters: { bankId } }
     ],
     options: {
       distance: 2.5,
@@ -41,10 +42,10 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
   const ped = await tellerManager.spawn(tellerTargetId(bankId), {
     model: bank.tellerModel,
     position: bank.tellerPosition,
-    freeze: true,
+    freeze: false,
     invincible: true,
-    blockEvents: true,
-    missionEntity: true,
+    blockEvents: false,
+    missionEntity: false,
     // Ambient speech fires on a random interval independently of the routine.
     speech: {
       ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
@@ -58,10 +59,15 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
     //   speech   — one-shot voiced line mid-routine
     //   wait     — brief pause before the next cycle
     routine: [
-      { type: 'scenario', name: 'WORLD_HUMAN_VAL_BANKTELLER', duration: 10_000 },
-      { type: 'anim',     dict: 'script_common@jail_cell@unlock@key', anim: 'action_mp_female', duration: 2_000 },
+      // { type: 'scenario', name: 'WORLD_HUMAN_VAL_BANKTELLER', duration: 10_000 },
+      { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'enter_counter', duration: 3_000, flags: 1 },
+      { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'counter_loop', duration: 15_000, flags: 1 },
+      { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'idle_c', duration: 15_000, flags: 1 },
+      { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'idle_a', duration: 15_000, flags: 1 },
+      { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'idle_b', duration: 15_000, flags: 1 },
+      { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'exit_counter', duration: 3_000, flags: 1 },
       // { type: 'speech',   ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'UNAUTHORIZED_AREA', params: 'speech_params_force' },
-      { type: 'wait',     ms: 30_000 },
+      // { type: 'wait',     ms: 30_000 },
     ],
     reactions: [
       // Teller reacts when they personally are attacked.
@@ -92,6 +98,18 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
 
   if (!ped) return;
 
+  // 1	bullet proof
+  // 2	flame proof
+  // 4	explosion proof
+  // 8	collision proof
+  // 16	melee proof
+  // 32	steam proof
+  // 64	smoke proof
+  // 128	headshots proof
+  // 256	projectile proof
+  // https://github.com/femga/rdr3_discoveries/blob/master/AI/ENTITY_PROOFS/README.md
+  SetEntityProofs(ped, 1 + 2 + 4 + 16 + 32 + 64 + 128 + 256, false);
+
   registerTellerTarget(bankId);
   console.log(`[Banking] Spawned local teller for ${bankId} (ped: ${ped})`);
 };
@@ -114,7 +132,6 @@ export const despawnTellers = (): void => {
 export const pauseTellerRoutine = (bankId: Bank.Id): void => tellerManager.pauseRoutine(bankId);
 export const resumeTellerRoutine = (bankId: Bank.Id): void => tellerManager.resumeRoutine(bankId);
 
-
 PVDoors.onDoorHook(`banking::teller12345`,'onLockpick', 2117902999, (doorHash) => {
   // const bank = BankData.find((b) => b.doorHash === doorHash);
   // if (!bank) return;
@@ -133,3 +150,18 @@ PVDoors.onDoorHook(`banking::teller12345`,'onLockpick', 2117902999, (doorHash) =
     intervalMs: [0, 0],
   });
 })
+
+
+// {
+//     dict: 'script_proc@robberies@bank@valbank_counter',
+//     anim: 'exit_counter180',
+//     blendInSpeed: 1,
+//     blendOutSpeed: -1,
+// }
+// {
+//     dict: 'script_proc@robberies@bank@valbank_counter',
+//     anim: 'counter_loop',
+//     flags: AnimFlag.REPEAT,
+//     blendInSpeed: 1,
+//     blendOutSpeed: -1,
+// }

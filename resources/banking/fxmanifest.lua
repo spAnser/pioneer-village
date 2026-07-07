@@ -6,6 +6,8 @@ version '1.0.0'
 lua54 'yes'
 node_version '22'
 
+dependency 'doors'
+
 server_scripts {
   "build/server.js"
 }
