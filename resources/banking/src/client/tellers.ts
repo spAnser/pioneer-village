@@ -1,14 +1,16 @@
 import { PedManager, PVTarget, PVDoors, type PedReactionConfig } from '@lib/client';
 import BankData from '../shared/data/bankData';
 import bankController from './controllers/bank-controller';
+import { Vector3 } from '@lib/math';
 
 const tellerManager = PedManager.getInstance();
 
 const tellerTargetId = (bankId: Bank.Id) => `banking::teller_${bankId}`;
 
-const registerTellerTarget = (bankId: Bank.Id): void => {
+const registerTellerTarget = (bankId: Bank.Id, ped: Ped): void => {
   const bank = BankData.find((b) => b.identifier === bankId);
   if (!bank) return;
+  if (!ped) return;
 
   const { x, y, z } = bank.tellerPosition;
 
@@ -29,7 +31,21 @@ const registerTellerTarget = (bankId: Bank.Id): void => {
       throttle: 1_000,
       screenThreshold: 0.12,
       isEnabled() {
-        return bankController.currentBank === bankId;
+        if (bankController.currentBank === bankId) {
+          // Only allow interaction if the bank is open
+          // if (bankController.isBankOpen) {
+          //   return true;
+          // }
+
+          // Only allow interaction if the Ped is within 1 meter of the teller position
+          // This is needed as we use a point target instead of an entity target, so we need
+          // to disable the point target when the teller Ped is not in their default position.
+          const pedPos = Vector3.fromArray(GetEntityCoords(ped, true));
+          if (pedPos.getDistance(Vector3.fromObject(bank.tellerPosition)) < 2.0) {
+            return true;
+          }
+        }
+        return false;
       },
     },
   });
@@ -110,7 +126,7 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
   // https://github.com/femga/rdr3_discoveries/blob/master/AI/ENTITY_PROOFS/README.md
   SetEntityProofs(ped, 1 + 2 + 4 + 16 + 32 + 64 + 128 + 256, false);
 
-  registerTellerTarget(bankId);
+  registerTellerTarget(bankId, ped);
   console.log(`[Banking] Spawned local teller for ${bankId} (ped: ${ped})`);
 };
 
