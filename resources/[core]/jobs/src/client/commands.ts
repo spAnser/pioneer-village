@@ -2,13 +2,7 @@ import { PVJobs } from '@lib/client';
 import { emitUI } from '@lib/client/comms/ui';
 
 const notify = (message: string, type: 'info' | 'success' | 'error' = 'success', duration = 5000): void => {
-  const colors: Record<string, { bg: string; fg: string }> = {
-    success: { bg: '#2d5a2d', fg: '#ffffff' },
-    error: { bg: '#5a2d2d', fg: '#ffffff' },
-    info: { bg: '#2d2d5a', fg: '#ffffff' },
-  };
-  const color = colors[type] || colors.info;
-  emitUI('notification.notify', message, duration, color.bg, color.fg, false);
+  emitUI('notification.notify', message, duration, type, false);
 };
 
 RegisterCommand(

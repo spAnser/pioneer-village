@@ -24,6 +24,10 @@ import PawSolid from '@fa/5/solid/paw.svg';
 import RecycleSolid from '@fa/5/solid/recycle.svg';
 import SackSolid from '@fa/5/solid/sack.svg';
 import WagonCoveredSolid from '@fa/5/solid/wagon-covered.svg';
+import GemSolid from '@fa/5/solid/gem.svg';
+import CoinsSolid from '@fa/5/solid/coins.svg';
+import ArchiveSolid from '@fa/5/solid/archive.svg';
+import EnvelopeSolid from '@fa/5/solid/envelope.svg';
 import { ComponentType } from 'react';
 
 // Icon registry mapping
@@ -46,6 +50,10 @@ export const iconRegistry: Record<string, Record<string, ComponentType<any>>> = 
     horse: HorseSolid,
     paw: PawSolid,
     clock: ClockSolid,
+    gem: GemSolid,
+    coins: CoinsSolid,
+    vault: ArchiveSolid,
+    inbox: EnvelopeSolid,
   },
   light: {
     eye: EyeLight,

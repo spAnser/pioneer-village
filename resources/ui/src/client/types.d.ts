@@ -74,8 +74,7 @@ declare namespace ClientIn {
     ['notification.notify']: (
       text: string,
       duration?: number,
-      bgColor?: keyof UI.Theme['colors'],
-      fgColor?: keyof UI.Theme['colors'],
+      type?: UI.Notification.Type,
       centered?: boolean,
     ) => void;
     ['interact.pois']: (pois: UI.Interact.POI[]) => void;
