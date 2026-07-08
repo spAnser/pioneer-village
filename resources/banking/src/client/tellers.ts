@@ -132,14 +132,16 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
 
 export const despawnTeller = (bankId: Bank.Id): void => {
   PVTarget.RemoveTarget(tellerTargetId(bankId));
-  tellerManager.despawn(bankId);
+  console.log(`[Banking] Removed target for teller ${bankId}`);
+  tellerManager.despawn(tellerTargetId(bankId));
   console.log(`[Banking] Despawned local teller for ${bankId}`);
 };
 
 export const despawnTellers = (): void => {
   for (const bankId of BankData.map((b) => b.identifier)) {
-    if (tellerManager.getPed(bankId)) {
+    if (tellerManager.getPed(tellerTargetId(bankId))) {
       PVTarget.RemoveTarget(tellerTargetId(bankId));
+      console.log(`[Banking] Removed target for teller ${bankId}`);
     }
   }
   tellerManager.despawnAll();

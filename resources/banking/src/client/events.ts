@@ -6,6 +6,10 @@ import bankController from './controllers/bank-controller';
 import { Delay } from '@lib/functions';
 import { Vector3 } from '@lib/math';
 
+const notify = (text: string, type: 'success' | 'error' | 'info' = 'info') => {
+  emitUI('notification.notify', text, 3000, type, false);
+};
+
 // Open the banking UI focused on a specific tab and populate live data
 async function openBankingUI(tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay', bankId?: Bank.Id) {
   const resolvedBankId = bankId ?? bankController.currentBank;
@@ -67,6 +71,7 @@ on('banking:client:collect-transfers', async (_entity: number, pArgs: Record<str
     const account = bankController.getAccount(bankId);
     emitUI('banking.update-balance', { balance: account?.balance ?? 0 });
     console.log(`[Banking] Collected ${result.collected} transfer(s) totalling $${result.total}`);
+    notify(`Collected ${result.collected} transfer(s) totalling $${result.total}`, 'success');
     pm.playSpeech(`banking::teller_${bankId}`, {
       ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
       names: ["COME_SEE_THIS"],
@@ -75,6 +80,7 @@ on('banking:client:collect-transfers', async (_entity: number, pArgs: Record<str
     });
   } else {
     console.log('[Banking] No pending transfers ready to collect.');
+    notify('No pending transfers ready to collect.', 'info');
     pm.playSpeech(`banking::teller_${bankId}`, {
       // ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
       // names: ['NO_IDEA'],
@@ -96,12 +102,15 @@ on('banking:client:safety-box', async (_entity: number, pArgs: Record<string, an
 
   if (box) {
     console.log(`[Banking] Safety box active. Next due: ${box.nextDueAt}`);
+    notify(`Safety box active. Next due: ${box.nextDueAt}`, 'info');
   } else {
     const result = await bankController.rentSafetyBox(characterId, bankId);
     if (result.success) {
       console.log(`[Banking] Safety box rented. Box ID: ${result.boxId}`);
+      notify(`Safety box rented. Box ID: ${result.boxId}`, 'success');
     } else {
       console.log(`[Banking] Safety box rental failed: ${result.message}`);
+      notify(`Safety box rental failed: ${result.message}`, 'error');
     }
   }
 });
@@ -113,6 +122,7 @@ on('banking:client:bank-info', async (_entity: number, pArgs: Record<string, any
   const info = await bankController.getBankInfo(bankId);
   if (!info) {
     console.log('[Banking] Could not retrieve bank info.');
+    notify('Could not retrieve bank info.', 'error');
     return;
   }
 
