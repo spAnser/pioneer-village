@@ -1,4 +1,4 @@
-import { eq, inArray, like, or } from 'drizzle-orm';
+import { and, eq, inArray, isNull, like, or } from 'drizzle-orm';
 import { Socket } from 'socket.io';
 import type { DefaultEventsMap } from 'socket.io/dist/typed-events';
 
@@ -20,9 +20,11 @@ type InventoryWithContainerAndItems = InventorySchemaType & {
   container: ContainerSchemaType & { items: ItemSchemaType[] };
 };
 
-const tenDollars = new Array(10).fill({ identifier: 'PV_DOLLAR'.GetHashKey(), slot: 0 });
+const PV_DOLLAR_HASH = 'PV_DOLLAR'.GetHashKey();
 
-const startingInventory = [...tenDollars];
+const startingDollars = new Array(20).fill({ identifier: PV_DOLLAR_HASH, slot: 0 });
+
+const startingInventory = [...startingDollars];
 
 const characterInventoryIdentifiers = ['character', 'clothing', 'birds'];
 
@@ -153,8 +155,11 @@ class Inventories {
         return null;
       }
 
-      // Get items for this container
-      const items = await db.select().from(ItemSchema).where(eq(ItemSchema.containerId, containerData.id));
+      // Get items for this container (exclude soft-deleted rows)
+      const items = await db
+        .select()
+        .from(ItemSchema)
+        .where(and(eq(ItemSchema.containerId, containerData.id), isNull(ItemSchema.deletedAt)));
 
       return {
         ...inventoryData,
@@ -187,6 +192,103 @@ class Inventories {
 
     await db.delete(InventorySchema).where(eq(InventorySchema.id, inventory.id));
     await db.delete(ContainerSchema).where(eq(ContainerSchema.id, inventory.containerId));
+  }
+
+  /**
+   * Counts how many active (non-deleted) items with the given identifier
+   * exist in an inventory.
+   */
+  async getItemCount(identifier: string, itemIdentifier: number): Promise<number> {
+    const inventoryData = await this.getInventory(identifier);
+    if (!inventoryData) {
+      return 0;
+    }
+    return inventoryData.container.items.filter((item) => item.identifier === itemIdentifier && item.deletedAt === null).length;
+  }
+
+  /**
+   * Soft-deletes up to `amount` active items matching the given identifier
+   * from an inventory. Returns the number actually removed (may be less
+   * than requested if the inventory doesn't hold enough).
+   */
+  async removeItemsByIdentifier(identifier: string, itemIdentifier: number, amount: number): Promise<number> {
+    const inventoryData = await this.getInventory(identifier);
+    if (!inventoryData) {
+      return 0;
+    }
+
+    // Drain whole slots/stacks before moving to the next, rather than
+    // removing the oldest rows across every stack indiscriminately.
+    const bySlot = new Map<number | null, ItemSchemaType[]>();
+    for (const item of inventoryData.container.items) {
+      if (item.identifier !== itemIdentifier || item.deletedAt !== null) continue;
+      const slotItems = bySlot.get(item.slot) ?? [];
+      slotItems.push(item);
+      bySlot.set(item.slot, slotItems);
+    }
+
+    const matching: ItemSchemaType[] = [];
+    for (const slotItems of bySlot.values()) {
+      if (matching.length >= amount) break;
+      matching.push(...slotItems.slice(0, amount - matching.length));
+    }
+
+    if (matching.length === 0) {
+      return 0;
+    }
+
+    await db.update(ItemSchema).set({ deletedAt: new Date() }).where(
+      inArray(
+        ItemSchema.id,
+        matching.map((item) => item.id),
+      ),
+    );
+
+    this.checkWorldInventory(identifier, true);
+    await this.broadcastInventory(identifier);
+
+    return matching.length;
+  }
+
+  /** Re-fetches an inventory and pushes a full reload to any subscribed clients. */
+  private async broadcastInventory(identifier: string): Promise<void> {
+    const inventoryData = await this.getInventory(identifier);
+    if (!inventoryData) {
+      return;
+    }
+    const uiInventory = this.convertToUIInventory(inventoryData);
+    userNamespace.to(`inventory:${identifier}`).emit('inventory.load', uiInventory);
+  }
+
+  /** Gives a character physical cash as `PV_DOLLAR` items in their inventory. */
+  async giveCash(characterId: number, amount: number): Promise<void> {
+    if (amount <= 0) return;
+    const identifier = `character:${characterId}`;
+    const itemAddEvent = await this.addItem(identifier, PV_DOLLAR_HASH, Math.round(amount));
+    if (itemAddEvent) {
+      userNamespace.to(`inventory:${identifier}`).emit('inventory.item-add', itemAddEvent);
+    }
+  }
+
+  /**
+   * Removes up to `amount` physical `PV_DOLLAR` items from a character's
+   * inventory. Returns false (removing nothing) if they don't have enough.
+   */
+  async takeCash(characterId: number, amount: number): Promise<boolean> {
+    if (amount <= 0) return true;
+    const rounded = Math.round(amount);
+    const identifier = `character:${characterId}`;
+    const held = await this.getItemCount(identifier, PV_DOLLAR_HASH);
+    if (held < rounded) {
+      return false;
+    }
+    const removed = await this.removeItemsByIdentifier(identifier, PV_DOLLAR_HASH, rounded);
+    return removed === rounded;
+  }
+
+  /** Returns how many physical dollars a character is carrying. */
+  async getCash(characterId: number): Promise<number> {
+    return this.getItemCount(`character:${characterId}`, PV_DOLLAR_HASH);
   }
 
   getInventoryType(identifier: string): Inventory.Type {
@@ -653,54 +755,77 @@ class Inventories {
         throw new Error('Inventory not found');
       }
 
-      const slot = this.findSlotForItem(inventoryData, itemIdentifier);
-      logInfo('slot', slot, slot > -1);
-
-      if (slot < 0) {
-        throw new Error('No free slot found');
-      }
-
       const itemAddEvent: UI.Inventory.AddData = {
         identifier: inventoryIdentifier,
         items: {},
       };
 
       const itemDef = PVItems[itemIdentifier];
+      const stackSize = itemDef?.stackSize ?? 1;
 
-      for (let n = amount; n--; ) {
-        const newItem = await db
-          .insert(ItemSchema)
-          .values({
-            identifier: itemIdentifier,
-            slot,
-            containerId: inventoryData.containerId,
-            metadata,
-            durability,
-          })
-          .returning();
+      let remaining = amount;
+      let currentInventoryData = inventoryData;
 
-        logInfo('item', newItem[0]);
+      while (remaining > 0) {
+        const slot = this.findSlotForItem(currentInventoryData, itemIdentifier);
+        logInfo('slot', slot, slot > -1);
 
-        // Auto-create sub-container inventory if the item definition has a containerType
-        if (itemDef?.containerType) {
-          const subContainerIdentifier = `${itemDef.containerType}:${newItem[0].id}`;
-          logInfo('addItem', `Creating sub-container inventory: ${subContainerIdentifier}`);
-          await this.createInventory(subContainerIdentifier);
+        if (slot < 0) {
+          throw new Error('No free slot found');
         }
 
-        if (itemAddEvent.items[slot]) {
-          itemAddEvent.items[slot].ids.push(newItem[0].id);
-          itemAddEvent.items[slot].metadatas.push(metadata);
-          itemAddEvent.items[slot].durabilities.push(durability);
-          itemAddEvent.items[slot].quantity++;
-        } else {
-          itemAddEvent.items[slot] = {
-            identifier: itemIdentifier,
-            ids: [newItem[0].id],
-            metadatas: [metadata],
-            durabilities: [durability],
-            quantity: 1,
-          };
+        const existingInSlot = currentInventoryData.container.items.filter(
+          (item) => item.slot === slot && item.identifier === itemIdentifier,
+        ).length;
+        const spaceInSlot = Math.max(stackSize - existingInSlot, 1);
+        const toInsert = Math.min(remaining, spaceInSlot);
+
+        for (let n = toInsert; n--; ) {
+          const newItem = await db
+            .insert(ItemSchema)
+            .values({
+              identifier: itemIdentifier,
+              slot,
+              containerId: currentInventoryData.containerId,
+              metadata,
+              durability,
+            })
+            .returning();
+
+          logInfo('item', newItem[0]);
+
+          // Auto-create sub-container inventory if the item definition has a containerType
+          if (itemDef?.containerType) {
+            const subContainerIdentifier = `${itemDef.containerType}:${newItem[0].id}`;
+            logInfo('addItem', `Creating sub-container inventory: ${subContainerIdentifier}`);
+            await this.createInventory(subContainerIdentifier);
+          }
+
+          if (itemAddEvent.items[slot]) {
+            itemAddEvent.items[slot].ids.push(newItem[0].id);
+            itemAddEvent.items[slot].metadatas.push(metadata);
+            itemAddEvent.items[slot].durabilities.push(durability);
+            itemAddEvent.items[slot].quantity++;
+          } else {
+            itemAddEvent.items[slot] = {
+              identifier: itemIdentifier,
+              ids: [newItem[0].id],
+              metadatas: [metadata],
+              durabilities: [durability],
+              quantity: 1,
+            };
+          }
+        }
+
+        remaining -= toInsert;
+
+        if (remaining > 0) {
+          // Re-fetch so the next findSlotForItem sees the slot we just filled.
+          const refreshed = await this.getInventory(inventoryIdentifier);
+          if (!refreshed) {
+            throw new Error('Inventory not found');
+          }
+          currentInventoryData = refreshed;
         }
       }
 

@@ -1,14 +1,10 @@
 import { PVBase, PVGame, PVInventory, PedManager } from '@lib/client';
-import { emitUI, focusUI } from '@lib/client/comms/ui';
+import { emitUI, emitUINotify, focusUI } from '@lib/client/comms/ui';
 
 import BankData from '../shared/data/bankData';
 import bankController from './controllers/bank-controller';
 import { Delay } from '@lib/functions';
 import { Vector3 } from '@lib/math';
-
-const notify = (text: string, type: 'success' | 'error' | 'info' = 'info') => {
-  emitUI('notification.notify', text, 3000, type, false);
-};
 
 // Open the banking UI focused on a specific tab and populate live data
 async function openBankingUI(tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay', bankId?: Bank.Id) {
@@ -18,11 +14,11 @@ async function openBankingUI(tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 're
   const characterId = PVGame.characterId();
   const character = PVGame.getCurrentCharacter();
   const bankData = BankData.find((b) => b.identifier === resolvedBankId);
-  const [loans] = await Promise.all([
+  const [loans, , cashOnPerson] = await Promise.all([
     bankController.getLoans(characterId),
     bankController.loadAccounts(characterId),
+    bankController.getCashOnHand(characterId),
   ]);
-  const cashOnPerson = PVBase.getCurrentCharacter()?.currencies?.dollars ?? 0;
   const account = bankController.getAccount(resolvedBankId);
 
   emitUI('banking.open', {
@@ -71,7 +67,7 @@ on('banking:client:collect-transfers', async (_entity: number, pArgs: Record<str
     const account = bankController.getAccount(bankId);
     emitUI('banking.update-balance', { balance: account?.balance ?? 0 });
     console.log(`[Banking] Collected ${result.collected} transfer(s) totalling $${result.total}`);
-    notify(`Collected ${result.collected} transfer(s) totalling $${result.total}`, 'success');
+    emitUINotify(`Collected ${result.collected} transfer(s) totalling $${result.total}`, 'success');
     pm.playSpeech(`banking::teller_${bankId}`, {
       ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
       names: ["COME_SEE_THIS"],
@@ -80,7 +76,7 @@ on('banking:client:collect-transfers', async (_entity: number, pArgs: Record<str
     });
   } else {
     console.log('[Banking] No pending transfers ready to collect.');
-    notify('No pending transfers ready to collect.', 'info');
+    emitUINotify('No pending transfers ready to collect.', 'info');
     pm.playSpeech(`banking::teller_${bankId}`, {
       // ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
       // names: ['NO_IDEA'],
@@ -105,16 +101,16 @@ on('banking:client:safety-box', async (_entity: number, pArgs: Record<string, an
     if (box.inventoryId) {
       PVInventory.openInventory(`safetybox:${box.bankId}:${box.characterId}`);
     } else {
-      notify(`Safety box active. Next due: ${box.nextDueAt}`, 'info');
+      emitUINotify(`Safety box active. Next due: ${box.nextDueAt}`, 'info');
     }
   } else {
     const result = await bankController.rentSafetyBox(characterId, bankId);
     if (result.success) {
       console.log(`[Banking] Safety box rented. Box ID: ${result.boxId}`);
-      notify(`Safety box rented. Box ID: ${result.boxId}`, 'success');
+      emitUINotify(`Safety box rented. Box ID: ${result.boxId}`, 'success');
     } else {
       console.log(`[Banking] Safety box rental failed: ${result.message}`);
-      notify(`Safety box rental failed: ${result.message}`, 'error');
+      emitUINotify(`Safety box rental failed: ${result.message}`, 'error');
     }
   }
 });
@@ -126,7 +122,7 @@ on('banking:client:bank-info', async (_entity: number, pArgs: Record<string, any
   const info = await bankController.getBankInfo(bankId);
   if (!info) {
     console.log('[Banking] Could not retrieve bank info.');
-    notify('Could not retrieve bank info.', 'error');
+    emitUINotify('Could not retrieve bank info.', 'error');
     return;
   }
 

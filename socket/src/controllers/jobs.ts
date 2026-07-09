@@ -254,7 +254,7 @@ export default () => {
 
       const redeemResult = await jobSystemManager.redeemPaySlip(paySlipId, characterId, bankId);
       if (redeemResult.success && redeemResult.amount > 0) {
-        const depositResult = await Banking.deposit(characterId, bankId, redeemResult.amount);
+        const depositResult = await Banking.depositDirect(characterId, bankId, redeemResult.amount);
         if (!depositResult.success) {
           // TODO: slip is marked redeemed but deposit failed — consider wrapping in a transaction
           logInfoC('[Jobs]', `WARNING: slip ${paySlipId} redeemed but deposit failed:`, depositResult.message);

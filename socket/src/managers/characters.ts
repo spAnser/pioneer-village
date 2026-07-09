@@ -134,7 +134,6 @@ class Characters {
       food: Number(characterData.food || '100'),
       drink: Number(characterData.drink || '100'),
       currencies: {
-        dollars: (characterData.currencies as Record<string, number>)?.dollars || 20,
         gold: (characterData.currencies as Record<string, number>)?.gold || 0,
       },
       healthMetadata: {
@@ -273,7 +272,7 @@ export type Prisma.CharactersCreateInput = {
       lastZ: characterData.lastZ?.toString() || '0.0',
       food: '100.0',
       drink: '100.0',
-      currencies: { dollars: 20, gold: 0 },
+      currencies: { gold: 0 },
       healthMetadata: {
         health: 100,
         stamina: 100,

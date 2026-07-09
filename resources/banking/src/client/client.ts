@@ -294,11 +294,11 @@ RegisterCommand(
 
     const characterId = charId();
     const character = PVGame.getCurrentCharacter();
-    const [loans] = await Promise.all([
+    const [loans, , cashOnPerson] = await Promise.all([
       bankController.getLoans(characterId),
       bankController.loadAccounts(characterId),
+      bankController.getCashOnHand(characterId),
     ]);
-    const cashOnPerson = PVBase.getCurrentCharacter()?.currencies?.dollars ?? 0;
     const account = bankController.getAccount(bankId);
 
     emitUI('banking.open', {

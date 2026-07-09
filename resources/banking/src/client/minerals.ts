@@ -1,5 +1,5 @@
 import { PVGame } from '@lib/client';
-import { awaitUI } from '@lib/client/comms/ui';
+import { awaitUI, emitUINotify } from '@lib/client/comms/ui';
 
 import bankController from './controllers/bank-controller';
 
@@ -14,6 +14,7 @@ on('banking:client:sell-minerals', async (_entity: number, pArgs: Record<string,
 
   if (budget.budgetRemaining <= 0) {
     console.log('[Banking] This bank has exhausted its daily mineral purchasing budget. Try another bank.');
+    emitUINotify('This bank has exhausted its purchasing budget. Try another bank.', 'error');
     return;
   }
 
@@ -25,15 +26,13 @@ on('banking:client:sell-minerals', async (_entity: number, pArgs: Record<string,
   // TODO: Open a UI dialog so the player can pick items and quantities.
   // For now, use the inventory player-get-items call to find minerals in the player's inventory
   // and sell all of them as a proof-of-concept.
-  const playerItems: Record<number, UI.Inventory.ItemData> = await awaitUI('inventory.player-get-items');
-
   const sellLines: { itemIdentifier: string; itemIds: number[]; quantity: number }[] = [];
 
   for (const price of prices) {
     const hashKey = GetHashKey(price.itemIdentifier);
-    for (const [, slotData] of Object.entries(playerItems)) {
-      if ((slotData as any).identifier === hashKey) {
-        const data = slotData as UI.Inventory.ItemData;
+    const matches: UI.Inventory.ItemData[] = await awaitUI('inventory.player-get-items', hashKey);
+    for (const data of matches) {
+      if (data.quantity > 0) {
         sellLines.push({
           itemIdentifier: price.itemIdentifier,
           itemIds: data.ids,
@@ -45,6 +44,7 @@ on('banking:client:sell-minerals', async (_entity: number, pArgs: Record<string,
 
   if (!sellLines.length) {
     console.log('[Banking] No minerals found in inventory.');
+    emitUINotify('No minerals found in inventory.', 'error');
     return;
   }
 
@@ -52,6 +52,7 @@ on('banking:client:sell-minerals', async (_entity: number, pArgs: Record<string,
 
   if (result.success) {
     console.log(`[Banking] Sold minerals for $${result.payout.toFixed(2)}. Bank budget remaining: $${result.budgetRemaining.toFixed(2)}`);
+    emitUINotify(`Sold minerals for $${result.payout.toFixed(2)}.`, 'success');
   } else {
     console.log(`[Banking] Mineral sale failed: ${result.message}`);
   }

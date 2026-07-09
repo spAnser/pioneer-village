@@ -22,6 +22,7 @@ declare namespace SocketIn {
 
   interface FromClient {
     ['banking.get-accounts']: (callback: (accounts: BankAccount.Data[]) => void) => void;
+    ['banking.get-cash-on-hand']: (callback: (cash: number) => void) => void;
     ['banking.deposit']: (bankId: string, amount: number, callback: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
     ['banking.withdraw']: (bankId: string, amount: number, callback: (result: { success: boolean; newBalance: number; message?: string }) => void) => void;
     ['banking.wire-transfer']: (toCharacterId: number, fromBankId: string, toBankId: string, amount: number, callback: (result: { success: boolean; fee: number; availableAt: string; message?: string }) => void) => void;

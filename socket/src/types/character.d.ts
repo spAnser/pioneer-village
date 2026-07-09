@@ -60,7 +60,6 @@ declare interface CharacterHealthMetadata {
 }
 
 declare interface CharacterCurrencies {
-  dollars: number;
   gold: number;
 }
 

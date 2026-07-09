@@ -7,6 +7,7 @@ export default (socket: Socket<SocketIO.Events, SocketIn.FromClient & SocketOut.
 
   const forwards: socketForward[] = [
     'banking.get-accounts',
+    'banking.get-cash-on-hand',
     'banking.deposit',
     'banking.withdraw',
     'banking.wire-transfer',
@@ -22,6 +23,7 @@ export default (socket: Socket<SocketIO.Events, SocketIn.FromClient & SocketOut.
   ];
 
   for (const forward of forwards) {
+    // console.log(`[Banking][diag] registering onClientCall forward: ${forward}`);
     // @ts-ignore
     onClientCall(forward, (...args) => {
       return new Promise((resolve) => {
@@ -32,4 +34,5 @@ export default (socket: Socket<SocketIO.Events, SocketIn.FromClient & SocketOut.
       });
     });
   }
+  // console.log('[Banking][diag] BankingController forward registration complete');
 };

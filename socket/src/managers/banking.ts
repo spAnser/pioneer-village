@@ -37,6 +37,7 @@ const ROBBERY_COOLDOWN_MS = 2 * 60 * 60 * 1000; // 2 hours — minimum time betw
 const REPUTATION_ROBBERY_PENALTY = 20; // reputation points deducted from a player who robs a bank
 const REPUTATION_RECOVERY_RATE = 2; // reputation points restored per tick after a robbery penalty
 const SAFETY_BOX_WEEKLY_FEE = 10; // weekly fee charged to players renting a safety deposit box
+const PV_DOLLAR_HASH = 'PV_DOLLAR'.GetHashKey();
 const LOAN_DAILY_INTEREST = 0.01; // 1% daily interest charged on outstanding loan balances
 
 class Banking {
@@ -115,25 +116,21 @@ class Banking {
   async deposit(characterId: number, bankId: string, amount: number): Promise<{ success: boolean; newBalance: number; message?: string }> {
     if (amount <= 0) return { success: false, newBalance: 0, message: 'Invalid amount' };
 
-    const character = Characters.getActiveCharacterForCharacterId(characterId);
-    if (!character) {
+    const took = await Inventories.takeCash(characterId, amount);
+    if (!took) {
       return { success: false, newBalance: 0, message: 'Insufficient on-hand cash' };
     }
 
-    // Sync in-memory currencies from DB in case they diverged
-    const freshCurrencies = await Characters.getCharacterCurrencies(characterId);
-    if (freshCurrencies) {
-      character.currencies.dollars = Number(freshCurrencies.dollars);
-    }
+    return this.depositDirect(characterId, bankId, amount);
+  }
 
-    if (character.currencies.dollars < amount) {
-      return { success: false, newBalance: 0, message: 'Insufficient on-hand cash' };
-    }
-
-    const dollarsBefore = character.currencies.dollars;
-    const removed = await Characters.removeCharacterCurrency(characterId, 'dollars', amount);
-    logInfo(`[Banking] Deposit deduct: char ${characterId} dollars before=${dollarsBefore} amount=${amount} removed=${removed} dollarsAfter=${character.currencies.dollars}`);
-    if (!removed) return { success: false, newBalance: 0, message: 'Failed to deduct cash' };
+  /**
+   * Deposits an amount directly to a bank account without requiring physical
+   * cash — used for money that never existed as physical PV_DOLLAR items,
+   * e.g. redeeming a job pay slip.
+   */
+  async depositDirect(characterId: number, bankId: string, amount: number): Promise<{ success: boolean; newBalance: number; message?: string }> {
+    if (amount <= 0) return { success: false, newBalance: 0, message: 'Invalid amount' };
 
     const account = await this.getOrCreateAccount(characterId, bankId);
     const newBalance = Number(account.balance) + amount;
@@ -174,7 +171,7 @@ class Banking {
       .set({ vaultBalance: sql`${BankVaultsSchema.vaultBalance} - ${amount}`, updatedAt: new Date() })
       .where(eq(BankVaultsSchema.bankId, bankId));
 
-    await Characters.addCharacterCurrency(characterId, 'dollars', amount);
+    await Inventories.giveCash(characterId, amount);
 
     await this.logTransaction(characterId, bankId, 'WITHDRAWAL', amount, newBalance);
     logInfo(`[Banking] Withdraw: char ${characterId} -$${amount} at ${bankId}. New balance: $${newBalance}`);
@@ -567,8 +564,30 @@ class Banking {
       } else {
         // Deactivate box — insufficient funds
         await db.update(BankSafetyBoxesSchema).set({ active: false }).where(eq(BankSafetyBoxesSchema.id, box.id));
-        await Inventories.deleteInventory(`safetybox:${box.bankId}:${box.characterId}`);
-        logInfo(`[Banking] Safety box ${box.id} deactivated (char ${box.characterId}) — insufficient funds`);
+
+        const boxIdentifier = `safetybox:${box.bankId}:${box.characterId}`;
+        const seizedCash = await Inventories.getItemCount(boxIdentifier, PV_DOLLAR_HASH);
+
+        await Inventories.deleteInventory(boxIdentifier);
+
+        if (seizedCash > 0) {
+          await db
+            .update(BankVaultsSchema)
+            .set({ vaultBalance: sql`${BankVaultsSchema.vaultBalance} + ${seizedCash}`, updatedAt: new Date() })
+            .where(eq(BankVaultsSchema.bankId, box.bankId));
+        }
+
+        await this.logTransaction(
+          box.characterId,
+          box.bankId,
+          'SAFETY_BOX_SEIZURE',
+          seizedCash,
+          Number(account.balance),
+          box.id,
+          `safety box ${box.id} seized — unpaid fee, $${seizedCash} cash swept to vault`,
+        );
+
+        logInfo(`[Banking] Safety box ${box.id} deactivated (char ${box.characterId}) — insufficient funds. Seized $${seizedCash} cash to vault.`);
       }
     }
   }
@@ -738,8 +757,8 @@ class Banking {
 
     actualPayout = Math.round(actualPayout * 100) / 100;
 
-    // Give player cash
-    await Characters.addCharacterCurrency(characterId, 'dollars', actualPayout);
+    // Give player cash (rounded to a whole dollar — physical cash has no fractional cents)
+    await Inventories.giveCash(characterId, actualPayout);
 
     // Update budget: deduct spent, decay multiplier proportional to purchase size
     const newSpent = spentToday + actualPayout;

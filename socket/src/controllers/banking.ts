@@ -1,5 +1,6 @@
 import { logInfoC, logInfoS } from '../helpers';
 import Banking from '../managers/banking';
+import Inventories from '../managers/inventories';
 import jobSystemManager from '../managers/jobs';
 import { serverNamespace, userNamespace } from '../server';
 
@@ -142,6 +143,13 @@ export default () => {
   });
 
   userNamespace.on('connection', (socket) => {
+    socket.on('banking.get-cash-on-hand', async (cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb(0);
+      logInfoC('banking.get-cash-on-hand', characterId);
+      cb(await Inventories.getCash(characterId));
+    });
+
     socket.on('banking.get-accounts', async (cb) => {
       const characterId = socket.data.character?.id;
       if (!characterId) return cb([]);

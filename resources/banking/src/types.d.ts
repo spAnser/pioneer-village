@@ -109,6 +109,7 @@ declare namespace BankTransaction {
     | 'LOAN_REPAYMENT'
     | 'LOAN_INTEREST'
     | 'SAFETY_BOX_FEE'
+    | 'SAFETY_BOX_SEIZURE'
     | 'ROBBERY_LOSS'
     | 'MINERAL_SALE';
 
@@ -141,6 +142,7 @@ declare namespace BankSafetyBox {
 declare namespace ClientRPC {
   interface Socket {
     ['banking.get-accounts']: () => BankAccount.Data[];
+    ['banking.get-cash-on-hand']: () => number;
     ['banking.deposit']: (bankId: Bank.Id, amount: number) => { success: boolean; newBalance: number; message?: string };
     ['banking.withdraw']: (bankId: Bank.Id, amount: number) => { success: boolean; newBalance: number; message?: string };
     ['banking.wire-transfer']: (toCharacterId: number, fromBankId: Bank.Id, toBankId: Bank.Id, amount: number) => { success: boolean; fee: number; availableAt: string; message?: string };

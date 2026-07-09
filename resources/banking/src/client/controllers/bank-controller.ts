@@ -138,6 +138,10 @@ class BankController {
     return awaitUI('banking.get-transactions', bankId, limit);
   }
 
+  async getCashOnHand(characterId: number): Promise<number> {
+    return awaitUI('banking.get-cash-on-hand');
+  }
+
   async getMineralPrices(bankId: Bank.Id): Promise<{ prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data }> {
     return awaitUI('banking.get-mineral-prices', bankId);
   }
