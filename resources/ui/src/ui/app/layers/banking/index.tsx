@@ -354,8 +354,7 @@ function LoanPanel({ state, onClose }: { state: ReturnType<typeof bankingStore.g
   const docNo = useMemo(randDocNo, []);
 
   const principal = parseFloat(amount) || 0;
-  const annualRate = 0.12;
-  const weeklyRate = annualRate / 52;
+  const weeklyRate = 0.12;
   const interest = principal * weeklyRate * term;
   const total = principal + interest;
 
@@ -395,7 +394,7 @@ function LoanPanel({ state, onClose }: { state: ReturnType<typeof bankingStore.g
 
       <div className={styles.interestNote}>
         <div className={styles.pct}>12%</div>
-        <p>Interest per annum, compounded monthly. Miss three payments and the bank sends men far less polite than your teller.</p>
+        <p>Interest per week, simple. Miss three payments and the bank sends men far less polite than your teller.</p>
       </div>
 
       <div className={styles.field}>

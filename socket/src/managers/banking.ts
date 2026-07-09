@@ -38,7 +38,7 @@ const REPUTATION_ROBBERY_PENALTY = 20; // reputation points deducted from a play
 const REPUTATION_RECOVERY_RATE = 2; // reputation points restored per tick after a robbery penalty
 const SAFETY_BOX_WEEKLY_FEE = 10; // weekly fee charged to players renting a safety deposit box
 const PV_DOLLAR_HASH = 'PV_DOLLAR'.GetHashKey();
-const LOAN_DAILY_INTEREST = 0.01; // 1% daily interest charged on outstanding loan balances
+const LOAN_WEEKLY_INTEREST = 0.12; // 12% simple interest per week, charged on the loan principal
 
 class Banking {
   static readonly instance: Banking = new Banking();
@@ -470,7 +470,7 @@ class Banking {
     const now = new Date();
 
     for (const loan of activeLoans) {
-      const daily = Number(loan.outstanding) * LOAN_DAILY_INTEREST;
+      const daily = Number(loan.principal) * (LOAN_WEEKLY_INTEREST / 7);
       const newOutstanding = Number(loan.outstanding) + daily;
       const overdue = loan.dueAt < now;
 
