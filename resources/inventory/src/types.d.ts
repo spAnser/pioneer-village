@@ -74,7 +74,11 @@ declare namespace Inventory {
     baitHash: number;
   };
 
-  type Item = ItemBase | ItemWeapon | ItemAmmo | ItemBait;
+  type ItemLanternOil = ItemBase & {
+    oilColor: [number, number, number];
+  };
+
+  type Item = ItemBase | ItemWeapon | ItemAmmo | ItemBait | ItemLanternOil;
 
   type UIItem = {
     name: string;
@@ -113,7 +117,12 @@ declare namespace Inventory {
     linkedDoors?: number[][];
   };
 
-  type AnyItemMetadata = ItemMetadata | ClothingMetadata | DoorKeyMetadata | undefined;
+  type LanternMetadata = ItemMetadata & {
+    oilColor?: [number, number, number];
+    oilName?: string;
+  };
+
+  type AnyItemMetadata = ItemMetadata | ClothingMetadata | DoorKeyMetadata | LanternMetadata | undefined;
 
   type InventoryMetadata = {
     name: string;

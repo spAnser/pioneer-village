@@ -102,7 +102,7 @@
 import { PVGame } from '@lib/client';
 import { AttachPoint } from '@lib/flags';
 
-on('inventory:client:toggle_weapon', (item: Inventory.ItemWeapon) => {
+on('inventory:client:toggle_weapon', (item: Inventory.ItemWeapon, itemData?: UI.Inventory.ItemData) => {
   const playerPed = PVGame.playerPed();
   const isFirstPerson = IsFirstPersonCameraActive(false, false, false);
   const [hasMainHand, currentWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
@@ -120,6 +120,14 @@ on('inventory:client:toggle_weapon', (item: Inventory.ItemWeapon) => {
     }
 
     SetCurrentPedWeapon(playerPed, item.weaponHash, isFirstPerson, 0, false, false);
+
+    const oilColor = (itemData?.metadatas[0] as Inventory.LanternMetadata | undefined)?.oilColor;
+    if (oilColor) {
+      const weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.MainHand);
+      if (weaponEntity) {
+        SetLightsColorForEntity(weaponEntity, oilColor[0], oilColor[1], oilColor[2]);
+      }
+    }
   }
 });
 
