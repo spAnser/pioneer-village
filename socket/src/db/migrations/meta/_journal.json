@@ -43,6 +43,13 @@
       "when": 1783434281266,
       "tag": "0005_perfect_banshee",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1783594196386,
+      "tag": "0006_mean_darkstar",
+      "breakpoints": true
     }
   ]
 }

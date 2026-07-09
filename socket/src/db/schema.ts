@@ -45,6 +45,7 @@ export const bankTxTypeEnum = pgEnum('BankTxType', [
   'LOAN_REPAYMENT',
   'LOAN_INTEREST',
   'SAFETY_BOX_FEE',
+  'SAFETY_BOX_SEIZURE',
   'ROBBERY_LOSS',
   'MINERAL_SALE',
 ]);
