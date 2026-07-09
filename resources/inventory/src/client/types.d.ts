@@ -43,6 +43,8 @@ declare namespace ClientOut {
     ['inventory.lost-hat']: (hatNetId: number, coords: Vector3) => void;
     ['inventory.pickup-hat']: (itemId: number) => void;
     ['inventory.get-world-inventories']: () => void;
+    ['inventory.item-update-metadata']: (itemId: number, metadata: Record<string, any>) => void;
+    ['inventory.item-consume']: (itemId: number) => void;
   }
   interface ToServer {
     ['inventory.pickup-hat']: (hatNetId: number) => void;

@@ -250,6 +250,21 @@ class Inventories {
     return itemsInSlot[0];
   }
 
+  async getFirstActiveItemByIdentifier(
+    identifier: string,
+    itemIdentifier: number,
+  ): Promise<ItemSchemaType | undefined> {
+    const inventory = await this.getInventory(identifier);
+
+    if (!inventory) {
+      return;
+    }
+
+    return inventory.container.items.find(
+      (item) => item.identifier === itemIdentifier && item.deletedAt === null,
+    );
+  }
+
   async getInventoryForItem(itemId: number): Promise<{ identifier: string; slot: number | null } | undefined> {
     console.log('getInventoryForItem', itemId);
     const itemResult = await db.select().from(ItemSchema).where(eq(ItemSchema.id, itemId)).limit(1);

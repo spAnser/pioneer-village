@@ -3,6 +3,7 @@ import type { SocketReservedEventsMap } from 'socket.io/dist/socket-types';
 import type { DefaultEventsMap, ReservedOrUserEventNames } from 'socket.io/dist/typed-events';
 
 import { Vector3 } from '../../../lib/math';
+import PVItems from '../../../lib/shared/items';
 import { logInfoC, logInfoS } from '../helpers';
 import Characters from '../managers/characters';
 import Inventories from '../managers/inventories';
@@ -52,6 +53,8 @@ export default () => {
       'inventory.item-wear',
       'inventory.item-drop',
       'inventory.item-update-metadata',
+      'inventory.item-consume',
+      'inventory.apply-lantern-oil',
       'inventory.lost-hat',
       'inventory.pickup-hat',
       'inventory.check-world',
@@ -178,6 +181,49 @@ export default () => {
     ['inventory.item-update-metadata']: SocketIn.FromClient['inventory.item-update-metadata'] = async (itemId, metadata) => {
       logInfoC('inventory.item-update-metadata', itemId, metadata);
       await Inventories.updateItemMetadata(itemId, metadata);
+    };
+
+    ['inventory.item-consume']: SocketIn.FromClient['inventory.item-consume'] = async (itemId) => {
+      logInfoC('inventory.item-consume', itemId);
+      const inventoryInfo = await Inventories.getInventoryForItem(itemId);
+      await Inventories.removeItem(itemId);
+
+      if (inventoryInfo?.identifier) {
+        userNamespace.to(`inventory:${inventoryInfo.identifier}`).emit('inventory.item-remove', itemId);
+      }
+    };
+
+    ['inventory.apply-lantern-oil']: SocketIn.FromClient['inventory.apply-lantern-oil'] = async (
+      oilItemId,
+      lanternIdentifier,
+    ) => {
+      logInfoC('inventory.apply-lantern-oil', oilItemId, lanternIdentifier);
+
+      if (!this.socket.data.character?.id) {
+        return;
+      }
+
+      const oilItem = await Inventories.getItem(oilItemId);
+      const oilItemDef = oilItem ? (PVItems[oilItem.identifier] as Inventory.ItemLanternOil | undefined) : undefined;
+
+      if (!oilItem || !oilItemDef?.oilColor) {
+        return;
+      }
+
+      const mainInventoryIdentifier = `character:${this.socket.data.character.id}`;
+      const lanternItem = await Inventories.getFirstActiveItemByIdentifier(mainInventoryIdentifier, lanternIdentifier);
+
+      if (!lanternItem) {
+        return;
+      }
+
+      await Inventories.updateItemMetadata(lanternItem.id, { oilColor: oilItemDef.oilColor, oilName: oilItemDef.name });
+      await Inventories.removeItem(oilItemId);
+
+      userNamespace
+        .to(`inventory:${mainInventoryIdentifier}`)
+        .emit('inventory.item-metadata-update', lanternItem.id, { oilColor: oilItemDef.oilColor, oilName: oilItemDef.name });
+      userNamespace.to(`inventory:${mainInventoryIdentifier}`).emit('inventory.item-remove', oilItemId);
     };
 
     ['inventory.lost-hat']: SocketIn.FromClient['inventory.lost-hat'] = async (hatNetId, coords) => {
