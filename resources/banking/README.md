@@ -10,7 +10,7 @@ A full-featured banking system for Pioneer Village. Players interact with teller
 Each character has a separate account per bank. Balances are tracked independently, and interest is applied hourly server-side.
 
 ### Deposits & Withdrawals
-Players can move money between their on-hand cash and a bank account.
+Players can move money between their on-hand cash and a bank account. Cash is a physical `PV_DOLLAR` inventory item rather than a currency field — deposits pull cash out of the player's inventory and withdrawals hand physical cash back.
 
 ### Wire Transfers
 Send money to another character at any bank. A fee is charged on send, and transfers mature over time before the recipient can collect them at a teller.
@@ -19,9 +19,7 @@ Send money to another character at any bank. A fee is charged on send, and trans
 Characters can borrow money from a bank with a set principal, interest rate, due date, and optional collateral item. Daily interest accrues on outstanding balances. Missed payments are tracked.
 
 ### Safety Boxes
-Characters can rent a private safety box at a bank. A weekly fee is billed automatically, and the box is tracked as a `BankSafetyBox` record with an `inventoryId` field intended to link it to a dedicated inventory container in the inventory resource.
-
-**This feature is not fully functional yet.** The banking side — renting, billing, and record-keeping — is implemented, but it depends on the inventory resource exposing a way to create and manage a persistent, character-bound storage container and hand back an ID that banking can store. Until that contract exists, `inventoryId` is always `null` and the safety box has nowhere to actually hold items. See [In Progress](#in-progress) for details.
+Characters can rent a private safety box at a bank. Renting creates a dedicated `safetybox`-type inventory container (`safetybox:{bankId}:{characterId}`) and stores its ID on the `BankSafetyBox` record. Players open the box from the teller's "Safety Box" menu option, and a weekly fee is billed automatically. If a box goes unpaid, it's deactivated, any cash left inside is seized and swept into the bank vault (logged as a `SAFETY_BOX_SEIZURE` transaction), and the underlying container is deleted.
 
 ### Mineral Trading
 Banks buy minerals from players at dynamic prices. Each bank has a daily budget, and prices decay as the budget is spent — recovering over time. Players currently sell all minerals automatically (see [In Progress](#in-progress)).
@@ -36,10 +34,13 @@ This creates gameplay tension around bank robberies: a successful heist hurts th
 Reputation recovers passively every 6 hours via the `banking.recover-reputation` server tick. The full calculation logic (how much reputation a robbery removes, the mapping from score to interest rate, and the recovery curve) lives in the backend socket handler, not in this resource.
 
 ### Bank Robbery Integration
-External heist/robbery resources can emit `banking:rob-bank` to log theft events and reduce vault balance.
+External heist/robbery resources trigger a robbery by calling `emitNet('banking:rob-bank', bankId, stolenAmount)`. The banking resource's server forwards this to the socket server (`banking.rob-bank`), which runs the actual vault-drain/player-loss/reputation-penalty logic and returns a success/rejection result.
+
+### Job Payslip Integration
+Job pay slip redemption can deposit earnings directly into a specified bank account instead of paying out as loose cash. The `jobs.redeem-pay-slip` socket handler accepts a `bankId` alongside the pay slip ID and calls `Banking.depositDirect` — a variant of `deposit` that skips pulling physical cash from the player's inventory, since the money never left the bank.
 
 ### Transaction History
-Every operation (deposits, withdrawals, wire fees, interest, loan credits, safety box fees, mineral sales, robbery losses) is recorded with a full audit trail.
+Every operation (deposits, withdrawals, wire fees, interest, loan credits, safety box fees, mineral sales, robbery losses, safety box seizures) is recorded with a full audit trail.
 
 ---
 
@@ -76,6 +77,8 @@ getBankInfo(bankId: Bank.Id): Promise<Bank.Info | null>
 Other resources can also trigger deposits/withdrawals via net events:
 - `banking.deposit-from-resource`
 - `banking.withdraw-from-resource`
+
+The socket server additionally exposes `banking.get-cash-on-hand` (used by the client to read the player's physical cash total) and `Banking.depositDirect` (used internally by job pay slip redemption to credit a bank account without pulling cash from inventory, since the money never left the bank).
 
 ---
 
@@ -136,20 +139,8 @@ All commands are client-side only and intended for testing.
 
 ## In Progress
 
-### Safety Boxes — Blocked on Inventory Resource
-The banking side of safety boxes is complete: the rent flow, weekly billing, and `BankSafetyBox` records all work. What's missing is the inventory side.
-
-The intent is that renting a safety box creates a persistent, character-bound storage container in the inventory resource and stores the returned container ID as `inventoryId` on the `BankSafetyBox` record. Players would then open that container from the teller menu, much like a personal stash tied to the bank location.
-
-For this to work, the inventory resource needs to expose something like:
-- A way to create a named/typed persistent container and return its ID
-- A way to open that container for a specific player
-- Optionally: a way to destroy the container when the safety box is cancelled or forfeited
-
-Until those exports or events exist, `inventoryId` is always `null`, the safety box menu option in the teller has nothing to open, and the feature is effectively a no-op beyond billing the player a weekly fee.
-
 ### Mineral Selling UI
-Currently, selecting "Sell Minerals" auto-sells 100% of all minerals in the player's inventory. A proper UI dialog for selecting items and quantities is needed before this is production-ready. See `src/client/minerals.ts` line 25.
+Currently, selecting "Sell Minerals" auto-sells 100% of all minerals in the player's inventory (queried directly by item hash rather than filtering the whole inventory client-side). A proper UI dialog for selecting items and quantities is needed before this is production-ready. See `src/client/minerals.ts` line 26.
 
 ### Missing Bank Interiors
 **Strawberry** and **Tumbleweed** banks are defined in config with daily mineral budgets but are commented out in `src/shared/data/bankData.ts` — no suitable interior locations or NPC positions have been set for these yet.
