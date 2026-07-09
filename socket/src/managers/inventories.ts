@@ -169,6 +169,26 @@ class Inventories {
     }
   }
 
+  /**
+   * Permanently removes an inventory and its container, soft-deleting any
+   * remaining items first (there is no cascade FK from Item -> Container).
+   */
+  async deleteInventory(identifier: string): Promise<void> {
+    const inventoryResult = await db.select().from(InventorySchema).where(eq(InventorySchema.identifier, identifier)).limit(1);
+    const inventory = inventoryResult[0];
+    if (!inventory) {
+      return;
+    }
+
+    await db
+      .update(ItemSchema)
+      .set({ deletedAt: new Date() })
+      .where(eq(ItemSchema.containerId, inventory.containerId));
+
+    await db.delete(InventorySchema).where(eq(InventorySchema.id, inventory.id));
+    await db.delete(ContainerSchema).where(eq(ContainerSchema.id, inventory.containerId));
+  }
+
   getInventoryType(identifier: string): Inventory.Type {
     const inventoryType = identifier.split(':')[0];
     const inventoryTypeData = InventoryTypes[inventoryType];

@@ -531,8 +531,14 @@ class Banking {
       .values({ characterId, bankId, nextDueAt, weeklyFee: String(SAFETY_BOX_WEEKLY_FEE), active: true })
       .returning({ id: BankSafetyBoxesSchema.id });
 
-    await this.logTransaction(characterId, bankId, 'SAFETY_BOX_FEE', SAFETY_BOX_WEEKLY_FEE, newBalance, inserted[0].id, `safety box first week`);
-    return { success: true, boxId: inserted[0].id };
+    const boxId = inserted[0].id;
+    const inventory = await Inventories.createInventory(`safetybox:${bankId}:${characterId}`);
+    if (inventory) {
+      await db.update(BankSafetyBoxesSchema).set({ inventoryId: inventory.id }).where(eq(BankSafetyBoxesSchema.id, boxId));
+    }
+
+    await this.logTransaction(characterId, bankId, 'SAFETY_BOX_FEE', SAFETY_BOX_WEEKLY_FEE, newBalance, boxId, `safety box first week`);
+    return { success: true, boxId };
   }
 
   async getSafetyBox(characterId: number, bankId: string) {
@@ -561,6 +567,7 @@ class Banking {
       } else {
         // Deactivate box — insufficient funds
         await db.update(BankSafetyBoxesSchema).set({ active: false }).where(eq(BankSafetyBoxesSchema.id, box.id));
+        await Inventories.deleteInventory(`safetybox:${box.bankId}:${box.characterId}`);
         logInfo(`[Banking] Safety box ${box.id} deactivated (char ${box.characterId}) — insufficient funds`);
       }
     }

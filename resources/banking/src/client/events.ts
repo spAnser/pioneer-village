@@ -1,4 +1,4 @@
-import { PVBase, PVGame, PedManager } from '@lib/client';
+import { PVBase, PVGame, PVInventory, PedManager } from '@lib/client';
 import { emitUI, focusUI } from '@lib/client/comms/ui';
 
 import BankData from '../shared/data/bankData';
@@ -102,7 +102,11 @@ on('banking:client:safety-box', async (_entity: number, pArgs: Record<string, an
 
   if (box) {
     console.log(`[Banking] Safety box active. Next due: ${box.nextDueAt}`);
-    notify(`Safety box active. Next due: ${box.nextDueAt}`, 'info');
+    if (box.inventoryId) {
+      PVInventory.openInventory(`safetybox:${box.bankId}:${box.characterId}`);
+    } else {
+      notify(`Safety box active. Next due: ${box.nextDueAt}`, 'info');
+    }
   } else {
     const result = await bankController.rentSafetyBox(characterId, bankId);
     if (result.success) {

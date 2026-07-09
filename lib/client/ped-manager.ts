@@ -125,7 +125,10 @@ export class PedManager {
 
   despawn(id: string): void {
     const managed = this._peds.get(id);
+    console.log(`[PedManager] despawn called for ped "${id}" - found: ${!!managed}`);
     if (!managed) return;
+
+    console.log(`[PedManager] despawning ped "${id}"`);
 
     this._stopSpeechLoop(managed);
     this._stopRoutine(managed);
@@ -136,6 +139,7 @@ export class PedManager {
       DeletePed(handle);
     }
 
+    console.log(`[PedManager] ped "${id}" despawned`);
     this._peds.delete(id);
   }
 
