@@ -17,6 +17,7 @@ export default (socket: Socket<SocketIO.Events, SocketIn.FromClient & SocketOut.
     'banking.get-loans',
     'banking.rent-safety-box',
     'banking.get-safety-box',
+    'banking.cancel-safety-box',
     'banking.get-transactions',
     'banking.get-mineral-prices',
     'banking.sell-minerals',

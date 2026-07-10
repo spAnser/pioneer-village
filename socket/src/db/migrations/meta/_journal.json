@@ -50,6 +50,13 @@
       "when": 1783594196386,
       "tag": "0006_mean_darkstar",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1783679806030,
+      "tag": "0007_minor_agent_brand",
+      "breakpoints": true
     }
   ]
 }

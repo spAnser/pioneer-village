@@ -32,6 +32,7 @@ declare namespace SocketIn {
     ['banking.get-loans']: (callback: (loans: BankLoan.Data[]) => void) => void;
     ['banking.rent-safety-box']: (bankId: string, callback: (result: { success: boolean; boxId?: number; message?: string }) => void) => void;
     ['banking.get-safety-box']: (bankId: string, callback: (box: BankSafetyBox.Data | null) => void) => void;
+    ['banking.cancel-safety-box']: (bankId: string, callback: (result: { success: boolean; message?: string }) => void) => void;
     ['banking.get-transactions']: (bankId: string | null, limit: number, callback: (transactions: BankTransaction.Data[]) => void) => void;
     ['banking.get-mineral-prices']: (bankId: string, callback: (result: { prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data }) => void) => void;
     ['banking.sell-minerals']: (bankId: string, items: { itemIdentifier: string; itemIds: number[]; quantity: number }[], callback: (result: { success: boolean; payout: number; budgetRemaining: number; message?: string }) => void) => void;

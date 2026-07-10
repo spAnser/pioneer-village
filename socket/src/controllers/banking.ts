@@ -264,6 +264,14 @@ export default () => {
       );
     });
 
+    socket.on('banking.cancel-safety-box', async (bankId, cb) => {
+      const characterId = socket.data.character?.id;
+      if (!characterId) return cb({ success: false, message: 'No character selected' });
+      logInfoC('banking.cancel-safety-box', characterId, bankId);
+      const result = await Banking.cancelSafetyBox(characterId, bankId);
+      cb(result);
+    });
+
     socket.on('banking.get-transactions', async (bankId, limit, cb) => {
       const characterId = socket.data.character?.id;
       if (!characterId) return cb([]);

@@ -21,7 +21,6 @@ const registerTellerTarget = (bankId: Bank.Id, ped: Ped): void => {
     data: [
       { id: `banking::deposit_${bankId}`,      label: 'Banking',           icon: 'coins', event: 'banking:client:deposit',           parameters: { bankId } },
       { id: `banking::collect_${bankId}`,      label: 'Collect Transfers', icon: 'inbox', event: 'banking:client:collect-transfers', parameters: { bankId } },
-      { id: `banking::safetybox_${bankId}`,    label: 'Safety Box',        icon: 'vault', event: 'banking:client:safety-box',        parameters: { bankId } },
       { id: `banking::sellminerals_${bankId}`, label: 'Sell Minerals',     icon: 'gem',   event: 'banking:client:sell-minerals',     parameters: { bankId } },
       { id: `banking::testanim_${bankId}`,     label: 'test anim',         icon: 'coins', event: 'banking:client:test',              parameters: { bankId } }
     ],

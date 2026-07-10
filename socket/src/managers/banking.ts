@@ -547,6 +547,25 @@ class Banking {
     return result[0] ?? null;
   }
 
+  async cancelSafetyBox(characterId: number, bankId: string): Promise<{ success: boolean; message?: string }> {
+    const box = await this.getSafetyBox(characterId, bankId);
+    if (!box) return { success: false, message: 'No active safety box at this bank' };
+
+    const boxIdentifier = `safetybox:${box.bankId}:${box.characterId}`;
+    const inventory = await Inventories.getInventory(boxIdentifier);
+    if (inventory && inventory.container.items.length > 0) {
+      return { success: false, message: 'Safety box is not empty — remove all contents before cancelling' };
+    }
+
+    await db.update(BankSafetyBoxesSchema).set({ active: false }).where(eq(BankSafetyBoxesSchema.id, box.id));
+    await Inventories.deleteInventory(boxIdentifier);
+
+    const account = await this.getOrCreateAccount(characterId, bankId);
+    await this.logTransaction(characterId, bankId, 'SAFETY_BOX_CANCELLED', 0, Number(account.balance), box.id, `safety box ${box.id} cancelled by player`);
+
+    return { success: true };
+  }
+
   async chargeOverdueSafetyBoxes(): Promise<void> {
     const now = new Date();
     const overdue = await db.select().from(BankSafetyBoxesSchema).where(and(eq(BankSafetyBoxesSchema.active, true), lte(BankSafetyBoxesSchema.nextDueAt, now)));

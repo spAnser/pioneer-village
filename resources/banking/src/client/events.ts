@@ -1,4 +1,4 @@
-import { PVBase, PVGame, PVInventory, PedManager } from '@lib/client';
+import { PVBase, PVGame, PedManager } from '@lib/client';
 import { emitUI, emitUINotify, focusUI } from '@lib/client/comms/ui';
 
 import BankData from '../shared/data/bankData';
@@ -7,7 +7,11 @@ import { Delay } from '@lib/functions';
 import { Vector3 } from '@lib/math';
 
 // Open the banking UI focused on a specific tab and populate live data
-async function openBankingUI(tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay', bankId?: Bank.Id) {
+async function openBankingUI(
+  tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay' | 'safetybox',
+  bankId?: Bank.Id,
+  safetyBox?: BankSafetyBox.Data | null,
+) {
   const resolvedBankId = bankId ?? bankController.currentBank;
   if (!resolvedBankId) return;
 
@@ -30,6 +34,7 @@ async function openBankingUI(tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 're
     cashOnPerson,
     currentBalance: account?.balance ?? 0,
     loans,
+    safetyBox: safetyBox ?? null,
   });
 
   focusUI(true, true);
@@ -86,32 +91,6 @@ on('banking:client:collect-transfers', async (_entity: number, pArgs: Record<str
       params: 'speech_params_force',
       intervalMs: [0, 0],
     });
-  }
-});
-
-on('banking:client:safety-box', async (_entity: number, pArgs: Record<string, any>) => {
-  const bankId = pArgs?.bankId ?? bankController.currentBank;
-  if (!bankId) return;
-
-  const characterId = PVGame.characterId();
-  const box = await bankController.getSafetyBox(characterId, bankId);
-
-  if (box) {
-    console.log(`[Banking] Safety box active. Next due: ${box.nextDueAt}`);
-    if (box.inventoryId) {
-      PVInventory.openInventory(`safetybox:${box.bankId}:${box.characterId}`);
-    } else {
-      emitUINotify(`Safety box active. Next due: ${box.nextDueAt}`, 'info');
-    }
-  } else {
-    const result = await bankController.rentSafetyBox(characterId, bankId);
-    if (result.success) {
-      console.log(`[Banking] Safety box rented. Box ID: ${result.boxId}`);
-      emitUINotify(`Safety box rented. Box ID: ${result.boxId}`, 'success');
-    } else {
-      console.log(`[Banking] Safety box rental failed: ${result.message}`);
-      emitUINotify(`Safety box rental failed: ${result.message}`, 'error');
-    }
   }
 });
 

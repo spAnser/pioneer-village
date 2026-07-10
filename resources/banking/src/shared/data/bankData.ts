@@ -1,6 +1,4 @@
-// Teller model names — period-appropriate townsfolk used as placeholders.
-// Replace with confirmed bank clerk models once found in-game.
-const TELLER_MODEL_MALE   = 's_m_m_bankclerk_01';
+const TELLER_MODEL_MALE = 's_m_m_bankclerk_01';
 
 const BankData: Bank.Data[] = [
   {
@@ -18,6 +16,14 @@ const BankData: Bank.Data[] = [
     tellerPosition:  { x: -308.131103515625, y: 774.0001220703125, z: 117.70309448242188, w: 6.133 },
     tellerModel: TELLER_MODEL_MALE,
     vaultPosition: { x: -307.33880615234375, y: 767.1898803710938, z: 117.7029037475586, w: 190.05 },
+    secureDoorHashes: [
+      1340831050,
+      2343746133,
+      2307914732,
+      3718620420,
+      334467483,
+      576950805,
+    ],
   },
   {
     identifier: 'rhodes',
@@ -34,6 +40,13 @@ const BankData: Bank.Data[] = [
     tellerPosition:  { x: 1291.263427734375, y: -1303.233642578125, z: 76.04118347167969, w: 322.02911376953125 },
     tellerModel: TELLER_MODEL_MALE,
     vaultPosition: { x: 1282.31396484375, y: -1308.405029296875, z: 76.03968811035156, w: 230.05653381347656 },
+    secureDoorHashes: [
+      1634148892,
+      2058564250,
+      3483244267,
+      3142122679,
+      2513778780,
+    ],
   },
   {
     identifier: 'blackwater',
@@ -50,6 +63,11 @@ const BankData: Bank.Data[] = [
     tellerPosition:  { x: -813.2230834960938, y: -1275.484619140625, z: 42.63771438598633, w: 179.35914611816406 },
     tellerModel: TELLER_MODEL_MALE,
     vaultPosition: { x: -817.0316772460938, y: -1273.8338623046875, z: 42.64748001098633, w: 90.05548095703125 },
+    secureDoorHashes: [
+      2817192481,
+      2117902999,
+      1462330364,
+    ],
   },
   {
     identifier: 'saint-denis',
@@ -66,6 +84,12 @@ const BankData: Bank.Data[] = [
     tellerPosition:  { x: 2644.806640625, y: -1293.972900390625, z: 51.24766159057617, w: 22.97601318359375 },
     tellerModel: TELLER_MODEL_MALE,
     vaultPosition: { x: 2643.875, y: -1300.0091552734375, z: 51.24612045288086, w: 170.52244567871094 },
+    secureDoorHashes: [
+      1634115439,
+      965922748,
+      1751238140,
+
+    ],
   },
   {
     identifier: 'annesburg',
@@ -82,11 +106,15 @@ const BankData: Bank.Data[] = [
     tellerPosition:  { x: 2938.801513671875, y: 1287.0623779296875, z: 43.652854919433594, w: 338.81280517578125 },
     tellerModel: TELLER_MODEL_MALE,
     vaultPosition: { x: 2934.58544921875, y: 1284.16650390625, z: 43.652854919433594, w: 338.5799560546875 },
+    secureDoorHashes: [
+      1321590180,
+      1898720605,
+    ],
   },
   {
-    identifier: 'armidillo',
-    name: 'Armidillo Bank',
-    type: 'ARMIDILLO',
+    identifier: 'armadillo',
+    name: 'Armadillo Bank',
+    type: 'ARMADILLO',
     zones: {
       interior: [
         { x: -3669.995361328125, y: -2620.980224609375 },
@@ -97,8 +125,12 @@ const BankData: Bank.Data[] = [
     },
     tellerPosition:  { x: -3666.257568359375, y: -2628.696533203125, z: -14.588133811950684, w: 354.2425537109375 },
     tellerModel: TELLER_MODEL_MALE,
-    // no vault in Armidillo, but we'll use the teller position as a placeholder for now
+    // no vault in Armadillo, but we'll use the teller position as a placeholder for now
     vaultPosition: { x: -3666.257568359375, y: -2628.696533203125, z: -14.588133811950684, w: 354.2425537109375 },
+    secureDoorHashes: [
+      3550475905,
+      1366165179,
+    ],
   },
 
   // Note: Strawberry and Tumbleweed don't have dedicated bank interiors, so these are placeholders until we find better locations/models.

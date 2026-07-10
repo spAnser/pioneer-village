@@ -83,7 +83,11 @@ $table: #171210;
   justify-content: center;
   gap: mixins.uiSize(8);
   flex-wrap: wrap;
-  margin-bottom: mixins.uiSize(28);
+  margin-bottom: mixins.uiSize(10);
+
+  &:last-of-type {
+    margin-bottom: mixins.uiSize(28);
+  }
 }
 .tab {
   font-family: 'Special Elite', monospace;

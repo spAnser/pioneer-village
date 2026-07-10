@@ -1,5 +1,5 @@
-import { PVBase, PVGame } from '@lib/client';
-import { awaitUI, emitUI, focusUI } from '@lib/client/comms/ui';
+import { PVBase, PVGame, PVInventory } from '@lib/client';
+import { awaitUI, emitUI, focusUI, onUICall } from '@lib/client/comms/ui';
 import { BlipModifiers, BlipSprites } from '@lib/shared/blips';
 
 import BankData from '../shared/data/bankData';
@@ -9,6 +9,15 @@ import './minerals';
 import { despawnTeller, despawnTellers, spawnTeller } from './tellers';
 import './targets';
 import './zones';
+
+onUICall('banking.open-safety-box-inventory', async (bankId: Bank.Id) => {
+  const characterId = PVGame.characterId();
+  const box = await bankController.getSafetyBox(characterId, bankId);
+  if (!box?.inventoryId) return { success: false };
+  emitUI('banking.close');
+  PVInventory.openInventory(`safetybox:${box.bankId}:${box.characterId}`);
+  return { success: true };
+});
 
 console.log('[Banking] Client loaded');
 

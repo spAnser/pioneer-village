@@ -11,7 +11,7 @@ declare namespace Bank {
     | 'ANNESBURG'
     | 'STRAWBERRY'
     | 'TUMBLEWEED'
-    | 'ARMIDILLO';
+    | 'ARMADILLO';
 
   interface Data {
     identifier: Id;
@@ -21,6 +21,7 @@ declare namespace Bank {
     vaultPosition: Vector4Format;
     tellerPosition: Vector4Format;
     tellerModel: string;
+    secureDoorHashes: number[];
   }
 
   interface Info {
@@ -110,6 +111,7 @@ declare namespace BankTransaction {
     | 'LOAN_INTEREST'
     | 'SAFETY_BOX_FEE'
     | 'SAFETY_BOX_SEIZURE'
+    | 'SAFETY_BOX_CANCELLED'
     | 'ROBBERY_LOSS'
     | 'MINERAL_SALE';
 
@@ -152,19 +154,21 @@ declare namespace ClientRPC {
     ['banking.get-loans']: () => BankLoan.Data[];
     ['banking.rent-safety-box']: (bankId: Bank.Id) => { success: boolean; boxId?: number; message?: string };
     ['banking.get-safety-box']: (bankId: Bank.Id) => BankSafetyBox.Data | null;
+    ['banking.cancel-safety-box']: (bankId: Bank.Id) => { success: boolean; message?: string };
     ['banking.get-transactions']: (bankId: Bank.Id | null, limit: number) => BankTransaction.Data[];
     ['banking.get-mineral-prices']: (bankId: Bank.Id) => { prices: BankMineralPrice.Data[]; budget: BankMineralBudget.Data };
     ['banking.sell-minerals']: (
       bankId: Bank.Id,
       items: { itemIdentifier: string; itemIds: number[]; quantity: number }[],
     ) => { success: boolean; payout: number; budgetRemaining: number; message?: string };
+    ['banking.open-safety-box-inventory']: (bankId: Bank.Id) => { success: boolean };
   }
 }
 
 declare namespace ClientIn {
   interface FromSocket {
     ['banking.open']: (data: {
-      tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay';
+      tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay' | 'safetybox';
       bankId: Bank.Id;
       bankName: string;
       characterId: number;
@@ -172,6 +176,7 @@ declare namespace ClientIn {
       cashOnPerson: number;
       currentBalance: number;
       loans: BankLoan.Data[];
+      safetyBox?: BankSafetyBox.Data | null;
     }) => void;
     ['banking.close']: () => void;
     ['banking.update-balance']: (data: { balance: number; cashOnPerson?: number }) => void;

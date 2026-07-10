@@ -143,7 +143,7 @@ declare namespace ClientIn {
 
     // Banking events
     ['banking.open']: (data: {
-      tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay';
+      tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay' | 'safetybox';
       bankId: string;
       bankName: string;
       characterId: number;
@@ -151,6 +151,7 @@ declare namespace ClientIn {
       cashOnPerson: number;
       currentBalance: number;
       loans: BankLoan.Data[];
+      safetyBox?: BankSafetyBox.Data | null;
     }) => void;
     ['banking.close']: () => void;
     ['banking.update-balance']: (data: { balance: number; cashOnPerson?: number }) => void;

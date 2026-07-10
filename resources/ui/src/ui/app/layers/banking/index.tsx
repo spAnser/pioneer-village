@@ -2,8 +2,11 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 
 import { useEscapeKey } from '../../hooks/use-game-events';
+import { awaitClient } from '@lib/ui';
 import bankingStore, { BankingTab } from '../../stores/banking-store';
 import styles from './styles.module.scss';
+
+const SAFETY_BOX_WEEKLY_FEE = 10;
 
 const BANK_MASTHEAD: Record<string, { est: string; sub: string }> = {
   valentine:     { est: 'Est. 1871 · West Elizabeth',    sub: '"A steady hand for uncertain times."' },
@@ -11,7 +14,7 @@ const BANK_MASTHEAD: Record<string, { est: string; sub: string }> = {
   blackwater:    { est: 'Est. 1882 · West Elizabeth',    sub: '"The frontier\'s most trusted institution."' },
   'saint-denis': { est: 'Est. 1791 · Lemoyne Territory', sub: '"Wealth managed with Creole distinction."' },
   annesburg:     { est: 'Est. 1876 · Roanoke Ridge',     sub: '"Hard-earned coin, safely kept."' },
-  armidillo:     { est: 'Est. 1885 · New Austin',        sub: '"Your money\'s safe with us, partner."' },
+  armadillo:     { est: 'Est. 1885 · New Austin',        sub: '"Your money\'s safe with us, partner."' },
 };
 
 const DEFAULT_MASTHEAD = { est: 'Est. 1865 · Lemoyne Territory', sub: '"Your fortune, kept under lock, key & honest men."' };
@@ -22,6 +25,7 @@ const TAB_LABELS: Record<BankingTab, string> = {
   wire: 'Wire Transfer',
   loan: 'Request Loan',
   repay: 'Repay Loan',
+  safetybox: 'Safety Box',
 };
 
 const WAX_LETTER: Record<BankingTab, string> = {
@@ -30,6 +34,7 @@ const WAX_LETTER: Record<BankingTab, string> = {
   wire: 'T',
   loan: '£',
   repay: 'R',
+  safetybox: 'S',
 };
 
 function fmt(n: number) {
@@ -572,6 +577,174 @@ function RepayPanel({ state, onClose }: { state: ReturnType<typeof bankingStore.
   );
 }
 
+// ─── Safety box panel ───────────────────────────────────────────────────────────
+function SafetyBoxPanel({ state, onClose }: { state: ReturnType<typeof bankingStore.getState>; onClose: () => void }) {
+  const [busy, setBusy] = useState(false);
+  const [feedback, setFeedback] = useState<{ msg: string; ok: boolean } | null>(null);
+  const [loaded, setLoaded] = useState(false);
+  const docNo = useMemo(randDocNo, []);
+
+  useEffect(() => {
+    setLoaded(false);
+    const bankId = state.bankId;
+    if (!bankId) return;
+    (async () => {
+      const box: BankSafetyBox.Data | null = await bankingStore.call('banking.get-safety-box', bankId);
+      bankingStore.updateState({ safetyBox: box });
+      setLoaded(true);
+    })();
+  }, [state.bankId]);
+
+  const box = state.safetyBox;
+  const fee = box?.weeklyFee ?? SAFETY_BOX_WEEKLY_FEE;
+  const balanceAfter = state.currentBalance - fee;
+
+  const rent = async () => {
+    const bankId = state.bankId;
+    if (busy || !bankId) return;
+    setBusy(true);
+    setFeedback(null);
+    try {
+      const result: { success: boolean; boxId?: number; message?: string } =
+        await bankingStore.call('banking.rent-safety-box', bankId);
+      if (result.success) {
+        const updated: BankSafetyBox.Data | null = await bankingStore.call('banking.get-safety-box', bankId);
+        bankingStore.updateState({
+          currentBalance: state.currentBalance - fee,
+          safetyBox: updated,
+        });
+        setFeedback({ msg: `Box rented. First week's rent settled — $${fmt(fee)} deducted.`, ok: true });
+      } else {
+        setFeedback({ msg: result.message ?? 'Rental refused.', ok: false });
+      }
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const openBox = async () => {
+    if (busy || !state.bankId) return;
+    setBusy(true);
+    try {
+      await awaitClient('banking.open-safety-box-inventory', state.bankId);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const [confirmingCancel, setConfirmingCancel] = useState(false);
+
+  const cancelBox = async () => {
+    const bankId = state.bankId;
+    if (busy || !bankId) return;
+    if (!confirmingCancel) {
+      setConfirmingCancel(true);
+      return;
+    }
+    setBusy(true);
+    setFeedback(null);
+    try {
+      const result: { success: boolean; message?: string } = await bankingStore.call('banking.cancel-safety-box', bankId);
+      if (result.success) {
+        bankingStore.updateState({ safetyBox: null });
+        setFeedback({ msg: 'Box cancelled. The vault space has been released.', ok: true });
+      } else {
+        setFeedback({ msg: result.message ?? 'Cancellation refused.', ok: false });
+      }
+    } finally {
+      setBusy(false);
+      setConfirmingCancel(false);
+    }
+  };
+
+  return (
+    <>
+      <div className={styles.docHead}>
+        <div className={styles.bankName}>
+          {state.bankName}
+          <small>Vault Department · Safekeeping for valuables &amp; documents</small>
+        </div>
+        <div className={styles.docNo}>Box Nº<b>{docNo}</b></div>
+      </div>
+      <h2 className={styles.docTitle}><span>Safety Deposit Box</span></h2>
+
+      {!loaded ? (
+        <p className={styles.tellerNote} style={{ margin: '20px 0', textAlign: 'center' }}>
+          — Checking the vault ledger... —
+        </p>
+      ) : box?.active ? (
+        <>
+          <div className={styles.field}>
+            <label>Box Holder</label>
+            <input type="text" readOnly value={state.characterName} />
+          </div>
+
+          <div className={styles.ledger}>
+            <div className={styles.ledgerRow}><span className={styles.lab}>Rented Since</span><span className={styles.val}>{new Date(box.rentedAt).toLocaleDateString()}</span></div>
+            <div className={styles.ledgerRow}><span className={styles.lab}>Weekly Fee</span><span className={styles.val}>$ {fmt(box.weeklyFee)}</span></div>
+            <div className={styles.ledgerRow}><span className={styles.lab}>Next Payment Due</span><span className={styles.val}>{new Date(box.nextDueAt).toLocaleDateString()}</span></div>
+          </div>
+
+          <p className={styles.tellerNote}>— Rent is drawn from your account automatically each week. Fall behind, and the box is forfeit. —</p>
+
+          {confirmingCancel && (
+            <p className={`${styles.feedback} ${styles.feedbackErr}`}>
+              The box must be empty to cancel. Confirm again to release it — this cannot be undone.
+            </p>
+          )}
+
+          <div className={styles.actions}>
+            <button
+              className={styles.btnGhost}
+              type="button"
+              onClick={confirmingCancel ? () => setConfirmingCancel(false) : onClose}
+            >
+              {confirmingCancel ? 'Keep the Box' : 'Never Mind'}
+            </button>
+            {confirmingCancel ? (
+              <button className={styles.btnSeal} type="button" onClick={cancelBox} disabled={busy}>
+                {busy ? <span className={styles.spinner}>⟳</span> : 'Confirm Cancellation'}
+              </button>
+            ) : (
+              <>
+                <button className={styles.btnGhost} type="button" onClick={cancelBox} disabled={busy}>
+                  Cancel Box
+                </button>
+                <button className={styles.btnSeal} type="button" onClick={openBox} disabled={busy}>
+                  {busy ? <span className={styles.spinner}>⟳</span> : 'Open the Box'}
+                </button>
+              </>
+            )}
+          </div>
+          {feedback && <p className={`${styles.feedback} ${feedback.ok ? styles.feedbackOk : styles.feedbackErr}`}>{feedback.msg}</p>}
+        </>
+      ) : (
+        <>
+          <div className={styles.interestNote}>
+            <div className={styles.pct}>${fmt(fee)}</div>
+            <p>Charged weekly, drawn straight from your account balance. Miss a payment, and the bank empties the box into its own vault.</p>
+          </div>
+
+          <div className={styles.ledger}>
+            <div className={styles.ledgerRow}><span className={styles.lab}>Current Balance</span><span className={styles.val}>$ {fmt(state.currentBalance)}</span></div>
+            <div className={styles.ledgerRow}><span className={styles.lab}>First Week's Rent</span><span className={`${styles.val} ${styles.valRed}`}>− $ {fmt(fee)}</span></div>
+            <div className={styles.ledgerRow}><span className={styles.lab}>Balance After Rental</span><span className={styles.val}>$ {fmt(balanceAfter)}</span></div>
+          </div>
+
+          <div className={styles.actions}>
+            <button className={styles.btnGhost} type="button" onClick={onClose}>Never Mind</button>
+            <button className={styles.btnSeal} type="button" onClick={rent} disabled={busy || balanceAfter < 0}>
+              {busy ? <span className={styles.spinner}>⟳</span> : 'Rent the Box'}
+            </button>
+          </div>
+          {feedback && <p className={`${styles.feedback} ${feedback.ok ? styles.feedbackOk : styles.feedbackErr}`}>{feedback.msg}</p>}
+          <p className={styles.tellerNote}>— Recurring payments are deducted automatically each week; late payment forfeits the box's contents. —</p>
+        </>
+      )}
+    </>
+  );
+}
+
 // ─── SVG filter definitions ───────────────────────────────────────────────────
 function SvgFilters() {
   return (
@@ -637,6 +810,10 @@ const TAB_STAINS: Record<BankingTab, StainConfig> = {
   repay: [
     { type: 'smudge', style: { bottom: 80, left: 18 } },
   ],
+  safetybox: [
+    { type: 'ring',   style: { top: 96, right: 60, width: 60, height: 60 } },
+    { type: 'thumb',  style: { bottom: 100, left: 30 } },
+  ],
 };
 
 const STAIN_CLASS: Record<'ring' | 'blot' | 'smudge' | 'thumb', string> = {
@@ -660,13 +837,19 @@ export default function Banking() {
 
   useEscapeKey(state.show, onClose);
 
-  const tabs = useMemo<BankingTab[]>(() => ['deposit', 'withdraw', 'wire', 'loan', 'repay'], []);
+  const tabRows = useMemo<BankingTab[][]>(
+    () => [
+      ['deposit', 'withdraw', 'wire', 'safetybox'],
+      ['loan', 'repay'],
+    ],
+    [],
+  );
 
   if (!state.show) return null;
 
   const currentTab = state.tab;
 
-  const docRotate = { deposit: '0.35', withdraw: '-0.4', wire: '0.25', loan: '-0.3', repay: '0.2' };
+  const docRotate: Record<BankingTab, string> = { deposit: '0.35', withdraw: '-0.4', wire: '0.25', loan: '-0.3', repay: '0.2', safetybox: '-0.15' };
 
   return (
     <div className={styles.overlay}>
@@ -679,17 +862,19 @@ export default function Banking() {
           <div className={styles.rule} />
         </header>
 
-        <nav className={styles.tabs}>
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              className={`${styles.tab} ${currentTab === tab ? styles.tabActive : ''}`}
-              onClick={() => bankingStore.setTab(tab)}
-            >
-              {TAB_LABELS[tab]}
-            </button>
-          ))}
-        </nav>
+        {tabRows.map((row, i) => (
+          <nav key={i} className={styles.tabs}>
+            {row.map((tab) => (
+              <button
+                key={tab}
+                className={`${styles.tab} ${currentTab === tab ? styles.tabActive : ''}`}
+                onClick={() => bankingStore.setTab(tab)}
+              >
+                {TAB_LABELS[tab]}
+              </button>
+            ))}
+          </nav>
+        ))}
 
         <div className={styles.doc} style={{ transform: `rotate(${docRotate[currentTab]}deg)` }}>
           <div className={styles.paper} />
@@ -703,6 +888,7 @@ export default function Banking() {
             {currentTab === 'wire' && <WirePanel state={state} onClose={onClose} />}
             {currentTab === 'loan' && <LoanPanel state={state} onClose={onClose} />}
             {currentTab === 'repay' && <RepayPanel state={state} onClose={onClose} />}
+            {currentTab === 'safetybox' && <SafetyBoxPanel state={state} onClose={onClose} />}
           </div>
         </div>
       </div>

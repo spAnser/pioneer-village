@@ -2,7 +2,7 @@ import { Socket } from 'socket.io-client';
 
 import { onClient } from '@lib/ui';
 
-export type BankingTab = 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay';
+export type BankingTab = 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay' | 'safetybox';
 
 interface BankingState {
   show: boolean;
@@ -14,6 +14,7 @@ interface BankingState {
   cashOnPerson: number;
   currentBalance: number;
   loans: BankLoan.Data[];
+  safetyBox: BankSafetyBox.Data | null;
 }
 
 type StateListener = (state: BankingState) => void;
@@ -36,6 +37,7 @@ class BankingStore {
       cashOnPerson: 0,
       currentBalance: 0,
       loans: [],
+      safetyBox: null,
     };
   }
 
@@ -63,6 +65,7 @@ class BankingStore {
       cashOnPerson: number;
       currentBalance: number;
       loans: BankLoan.Data[];
+      safetyBox?: BankSafetyBox.Data | null;
     }) => {
       this.updateState({
         show: true,
@@ -74,6 +77,7 @@ class BankingStore {
         cashOnPerson: data.cashOnPerson ?? 0,
         currentBalance: data.currentBalance ?? 0,
         loans: data.loans ?? [],
+        safetyBox: data.safetyBox ?? null,
       });
     });
 

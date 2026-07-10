@@ -53,7 +53,7 @@ Every operation (deposits, withdrawals, wire fees, interest, loan credits, safet
 | Blackwater | Blackwater | $6,000 |
 | Saint Denis | Saint Denis | $12,000 |
 | Annesburg | Annesburg | $2,500 |
-| Armidillo | Armidillo | — |
+| Armadillo | Armadillo | — |
 | Strawberry | — | $2,000 (no interior yet) |
 | Tumbleweed | — | $1,500 (no interior yet) |
 
@@ -144,9 +144,6 @@ Currently, selecting "Sell Minerals" auto-sells 100% of all minerals in the play
 
 ### Missing Bank Interiors
 **Strawberry** and **Tumbleweed** banks are defined in config with daily mineral budgets but are commented out in `src/shared/data/bankData.ts` — no suitable interior locations or NPC positions have been set for these yet.
-
-### Teller NPC Model
-The teller uses `s_m_m_bankclerk_01` as a placeholder. The final model hasn't been decided.
 
 ---
 
