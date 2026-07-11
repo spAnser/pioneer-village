@@ -186,14 +186,14 @@ class ComponentManager {
       if ('weaponHash' in itemData && itemData.weaponHash) {
         lanternOnHip = true;
         const playerPed = PVGame.playerPed();
-        SetCurrentPedWeapon(playerPed, itemData.weaponHash, true, AttachPoint.Hip, false, false);
+        SetCurrentPedWeapon(playerPed, itemData.weaponHash, true, AttachPoint.TempLantern, false, false);
 
         const oilColor = (item.metadatas[0] as Inventory.LanternMetadata | undefined)?.oilColor;
         if (oilColor) {
           let attempts = 0;
-          let weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.Hip);
+          let weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.TempLantern);
           while (weaponEntity === 0) {
-            weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.Hip);
+            weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.TempLantern);
             console.log('weaponEntity', weaponEntity);
             await Delay(100);
           }
@@ -205,7 +205,14 @@ class ComponentManager {
     }
 
     if (!lanternOnHip) {
-      SetCurrentPedWeapon(PVGame.playerPed(), GetHashKey('WEAPON_UNARMED'), true, AttachPoint.Hip, false, false);
+      SetCurrentPedWeapon(
+        PVGame.playerPed(),
+        GetHashKey('WEAPON_UNARMED'),
+        true,
+        AttachPoint.TempLantern,
+        false,
+        false,
+      );
     }
 
     PVGame.finalizePedOutfit(ped);

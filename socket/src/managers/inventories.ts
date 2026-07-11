@@ -155,7 +155,7 @@ class Inventories {
         return null;
       }
 
-      // Get items for this container (exclude soft-deleted rows)
+      // Get items for this container
       const items = await db
         .select()
         .from(ItemSchema)
@@ -382,9 +382,7 @@ class Inventories {
       return;
     }
 
-    return inventory.container.items.find(
-      (item) => item.identifier === itemIdentifier && item.deletedAt === null,
-    );
+    return inventory.container.items.find((item) => item.identifier === itemIdentifier && item.deletedAt === null);
   }
 
   async getInventoryForItem(itemId: number): Promise<{ identifier: string; slot: number | null } | undefined> {
@@ -1247,8 +1245,11 @@ class Inventories {
    */
   async removeItem(itemId: number): Promise<ItemSchemaType | undefined> {
     try {
+      console.log('removeItem', itemId);
       const item = await this.getItem(itemId);
+      console.log('item', item);
       if (!item) {
+        console.log('No item matching', itemId);
         return;
       }
 
@@ -1260,8 +1261,10 @@ class Inventories {
         .returning();
 
       if (deletedItems.length === 0) {
+        console.log('No items deleted matching', itemId);
         return;
       }
+      console.log('deletedItems.length', deletedItems.length);
 
       const deletedItem = deletedItems[0];
 

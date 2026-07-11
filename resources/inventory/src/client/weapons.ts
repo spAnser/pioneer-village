@@ -103,25 +103,31 @@ import { PVGame } from '@lib/client';
 import { AttachPoint } from '@lib/flags';
 import { Delay } from '@lib/functions';
 
+const LATERN_HASHES = [
+  GetHashKey('WEAPON_MELEE_LANTERN'),
+  GetHashKey('WEAPON_MELEE_DAVY_LANTERN'),
+  GetHashKey('WEAPON_MELEE_LANTERN_ELECTRIC'),
+];
+
 on('inventory:client:toggle_weapon', async (item: Inventory.ItemWeapon, itemData?: UI.Inventory.ItemData) => {
   const playerPed = PVGame.playerPed();
-  const isFirstPerson = IsFirstPersonCameraActive(false, false, false);
+  const shouldEquipNow = IsFirstPersonCameraActive(false, false, false) || LATERN_HASHES.includes(item.weaponHash);
   const [hasMainHand, currentWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
   const [hasOffHand, currentWeaponOffhand] = GetCurrentPedWeapon(playerPed, false, AttachPoint.OffHand, false);
   console.log('toggle_weapon', currentWeapon, currentWeaponOffhand);
 
   if (currentWeapon >>> 0 === item.weaponHash >>> 0) {
-    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, isFirstPerson, AttachPoint.MainHand, false, false);
-    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, isFirstPerson, AttachPoint.OffHand, false, false);
+    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.MainHand, false, false);
+    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.OffHand, false, false);
   } else if (currentWeaponOffhand >>> 0 === item.weaponHash >>> 0) {
-    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, isFirstPerson, AttachPoint.OffHand, false, false);
+    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.OffHand, false, false);
   } else {
     // TODO: Handle Thrown Weapons
     if (!HasPedGotWeapon(playerPed, item.weaponHash, false)) {
       GiveWeaponToPed(playerPed, item.weaponHash, 0, false, true, 0, false, 0.5, 1.0, 752097756, false, 0.0, false);
     }
 
-    SetCurrentPedWeapon(playerPed, item.weaponHash, isFirstPerson, 0, false, false);
+    SetCurrentPedWeapon(playerPed, item.weaponHash, shouldEquipNow, 0, false, false);
 
     const oilColor = (itemData?.metadatas[0] as Inventory.LanternMetadata | undefined)?.oilColor;
     if (oilColor) {
@@ -150,13 +156,13 @@ on('inventory:client:equip_ammo', (item: Inventory.ItemAmmo) => {
 on('inventory:client:toggle_thrown', (item: Inventory.ItemWeapon & Inventory.ItemAmmo) => {
   // TODO: Some kind of event when thrown weapon is used remove from inventory
   const playerPed = PVGame.playerPed();
-  const isFirstPerson = IsFirstPersonCameraActive(false, false, false);
+  const shouldEquipNow = IsFirstPersonCameraActive(false, false, false);
   const [hasMainHand, currentWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
   const [hasOffHand, currentWeaponOffhand] = GetCurrentPedWeapon(playerPed, false, AttachPoint.OffHand, false);
 
   if (currentWeapon >>> 0 === item.weaponHash >>> 0) {
-    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, isFirstPerson, AttachPoint.MainHand, false, false);
-    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, isFirstPerson, AttachPoint.OffHand, false, false);
+    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.MainHand, false, false);
+    SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.OffHand, false, false);
   } else {
     if (!HasPedGotWeapon(playerPed, item.weaponHash, false)) {
       GiveWeaponToPed(playerPed, item.weaponHash, 0, false, true, 0, false, 0.5, 1.0, 752097756, false, 0.0, false);
@@ -164,6 +170,6 @@ on('inventory:client:toggle_thrown', (item: Inventory.ItemWeapon & Inventory.Ite
 
     AddAmmoToPedByType(playerPed, item.ammoHash, 1, 752097756);
 
-    SetCurrentPedWeapon(playerPed, item.weaponHash, isFirstPerson, 0, false, false);
+    SetCurrentPedWeapon(playerPed, item.weaponHash, shouldEquipNow, 0, false, false);
   }
 });
