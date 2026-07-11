@@ -1,3 +1,4 @@
+import Bug from '@fa/5/solid/bug.svg';
 import Desktop from '@fa/5/solid/desktop.svg';
 import DiceFive from '@fa/5/solid/dice-five.svg';
 import DiceFour from '@fa/5/solid/dice-four.svg';
@@ -5,12 +6,13 @@ import DiceOne from '@fa/5/solid/dice-one.svg';
 import DiceSix from '@fa/5/solid/dice-six.svg';
 import DiceThree from '@fa/5/solid/dice-three.svg';
 import DiceTwo from '@fa/5/solid/dice-two.svg';
+import ExclamationTriangle from '@fa/5/solid/exclamation-triangle.svg';
+import InfoSquare from '@fa/5/solid/info-square.svg';
 import Info from '@fa/5/solid/info.svg';
 import Server from '@fa/5/solid/server.svg';
 import TrashAlt from '@fa/5/solid/trash-alt.svg';
 import { debounce } from 'lodash';
 import { createRef, useCallback, useEffect, useState } from 'react';
-import type { Socket } from 'socket.io-client';
 
 import { Delay } from '@lib/functions';
 
@@ -145,13 +147,26 @@ export default function Log() {
           onWheel={handleMousewheel}
         >
           {state.messages.map(
-            ({ source, resource, message }, index) =>
+            ({ source, resource, _type, message }, index) =>
               shouldShow(resource) && (
                 <div className={styles.item} key={index}>
                   <i data-source={source}>
                     {source === 'server' && <Server />} {source === 'client' && <Desktop />}
                   </i>
                   <span style={{ backgroundColor: state.colors[resource].hsl }}>{resource}</span>
+                  {_type && (
+                    <span
+                      className={conditionalClass(styles.logType, {
+                        [styles.info]: _type === 'info',
+                        [styles.warn]: _type === 'warn',
+                        [styles.error]: _type === 'error',
+                      })}
+                    >
+                      {_type === 'info' && <InfoSquare />}
+                      {_type === 'warn' && <ExclamationTriangle />}
+                      {_type === 'error' && <Bug />}
+                    </span>
+                  )}
                   <pre>{message}</pre>
                 </div>
               ),

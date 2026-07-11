@@ -134,6 +134,7 @@ class LogStore {
     const newMessages = [
       ...this.state.messages.slice(-999),
       {
+        _type: data._type,
         source,
         resource: data.resource,
         message: data.message,

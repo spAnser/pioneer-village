@@ -131,6 +131,26 @@
   }
 }
 
+.logType {
+  svg {
+    width: 16px;
+    height: 100%;
+    max-height: 19px;
+  }
+
+  &.info {
+    background-color: var(--color-blue-400);
+  }
+
+  &.warn {
+    background-color: var(--color-orange-400);
+  }
+
+  &.error {
+    background-color: var(--color-red-400);
+  }
+}
+
 .filter {
   position: absolute;
   top: mixins.uiSize(32);
