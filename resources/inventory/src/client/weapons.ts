@@ -101,12 +101,14 @@
 // end)
 import { PVGame } from '@lib/client';
 import { AttachPoint } from '@lib/flags';
+import { Delay } from '@lib/functions';
 
-on('inventory:client:toggle_weapon', (item: Inventory.ItemWeapon, itemData?: UI.Inventory.ItemData) => {
+on('inventory:client:toggle_weapon', async (item: Inventory.ItemWeapon, itemData?: UI.Inventory.ItemData) => {
   const playerPed = PVGame.playerPed();
   const isFirstPerson = IsFirstPersonCameraActive(false, false, false);
   const [hasMainHand, currentWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
   const [hasOffHand, currentWeaponOffhand] = GetCurrentPedWeapon(playerPed, false, AttachPoint.OffHand, false);
+  console.log('toggle_weapon', currentWeapon, currentWeaponOffhand);
 
   if (currentWeapon >>> 0 === item.weaponHash >>> 0) {
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, isFirstPerson, AttachPoint.MainHand, false, false);
@@ -123,7 +125,16 @@ on('inventory:client:toggle_weapon', (item: Inventory.ItemWeapon, itemData?: UI.
 
     const oilColor = (itemData?.metadatas[0] as Inventory.LanternMetadata | undefined)?.oilColor;
     if (oilColor) {
-      const weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.MainHand);
+      let attempts = 0;
+      let weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.MainHand);
+      while (weaponEntity === 0) {
+        weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.MainHand);
+        attempts++;
+        if (attempts > 20) {
+          return;
+        }
+        await Delay(100);
+      }
       if (weaponEntity) {
         SetLightsColorForEntity(weaponEntity, oilColor[0], oilColor[1], oilColor[2]);
       }

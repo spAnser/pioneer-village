@@ -45,6 +45,7 @@ declare namespace ClientOut {
     ['inventory.get-world-inventories']: () => void;
     ['inventory.item-update-metadata']: (itemId: number, metadata: Record<string, any>) => void;
     ['inventory.item-consume']: (itemId: number) => void;
+    ['inventory.apply-lantern-oil']: (oilItemId: number, lanternIdentifier: number) => void;
   }
   interface ToServer {
     ['inventory.pickup-hat']: (hatNetId: number) => void;
