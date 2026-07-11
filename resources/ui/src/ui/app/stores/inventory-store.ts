@@ -140,6 +140,12 @@ class InventoryStore {
     // Handle item wear
     this.socket.on('inventory.item-wear', this.handleItemWear);
 
+    // Handle item remove (e.g. consumed item)
+    this.socket.on('inventory.item-remove', this.handleItemRemove);
+
+    // Handle item metadata update (e.g. lantern oil tint)
+    this.socket.on('inventory.item-metadata-update', this.handleItemMetadataUpdate);
+
     // Handle world inventory open
     this.socket.on('inventory.open-world', this.handleOpenWorld);
   }
@@ -431,6 +437,55 @@ class InventoryStore {
           item.durabilities[0] = newDurability;
           itemChanged = true;
         }
+      }
+    }
+
+    if (itemChanged) {
+      this.updateState({ inventories });
+    }
+  };
+
+  // Handle item remove from socket (e.g. a consumed item)
+  private handleItemRemove = (itemId: number): void => {
+    let itemChanged = false;
+    const inventories = new Map(this.state.inventories);
+
+    for (const inventory of inventories.values()) {
+      for (const [slot, item] of Object.entries(inventory.items)) {
+        const idIndex = item.ids.indexOf(itemId);
+        if (idIndex === -1) continue;
+
+        item.ids.splice(idIndex, 1);
+        item.metadatas.splice(idIndex, 1);
+        item.durabilities.splice(idIndex, 1);
+        item.quantity -= 1;
+
+        if (item.quantity <= 0) {
+          delete inventory.items[slot];
+        }
+
+        itemChanged = true;
+      }
+    }
+
+    if (itemChanged) {
+      this.updateState({ inventories });
+      this.computeInventoryWeight();
+    }
+  };
+
+  // Handle item metadata update from socket (e.g. lantern oil tint)
+  private handleItemMetadataUpdate = (itemId: number, metadata: Record<string, any>): void => {
+    let itemChanged = false;
+    const inventories = new Map(this.state.inventories);
+
+    for (const inventory of inventories.values()) {
+      for (const item of Object.values(inventory.items)) {
+        const idIndex = item.ids.indexOf(itemId);
+        if (idIndex === -1) continue;
+
+        item.metadatas[idIndex] = { ...item.metadatas[idIndex], ...metadata };
+        itemChanged = true;
       }
     }
 
@@ -924,6 +979,8 @@ class InventoryStore {
       this.socket.off('inventory.success', this.handleSuccess);
       this.socket.off('inventory.fail', this.handleFail);
       this.socket.off('inventory.item-wear', this.handleItemWear);
+      this.socket.off('inventory.item-remove', this.handleItemRemove);
+      this.socket.off('inventory.item-metadata-update', this.handleItemMetadataUpdate);
       this.socket.off('inventory.open-world', this.handleOpenWorld);
 
       // Unsubscribe from all inventories

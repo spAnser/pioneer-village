@@ -39,6 +39,8 @@ declare namespace SocketIn {
     'inventory.check-world': () => void;
     'inventory.get-world-inventories': () => void;
     'inventory.item-update-metadata': (itemId: number, metadata: Record<string, any>) => void;
+    'inventory.item-consume': (itemId: number) => void;
+    'inventory.apply-lantern-oil': (oilItemId: number, lanternIdentifier: number) => void;
   }
 }
 
@@ -62,6 +64,8 @@ declare namespace SocketOut {
     'inventory.load': (inventory: any) => void;
     'inventory.item-add': (event: any) => void;
     'inventory.item-wear': (itemId: number, wearAmount: number) => void;
+    'inventory.item-remove': (itemId: number) => void;
+    'inventory.item-metadata-update': (itemId: number, metadata: Record<string, any>) => void;
     'inventory.open-world': (identifier: string) => void;
     'inventory.target-inventory': (data: any) => void;
     'inventory.main-inventory': (data: any) => void;

@@ -261,6 +261,15 @@
     pointer-events: none;
   }
 
+  .colorIndicator {
+    position: absolute;
+    top: mixins.uiSize(2);
+    right: mixins.uiSize(2);
+    border-radius: mixins.uiSize(4);
+    width: mixins.uiSize(12);
+    height: mixins.uiSize(12);
+  }
+
   .quantity,
   .weight {
     position: absolute;

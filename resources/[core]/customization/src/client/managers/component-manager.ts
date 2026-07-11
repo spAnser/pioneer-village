@@ -185,7 +185,22 @@ class ComponentManager {
 
       if ('weaponHash' in itemData && itemData.weaponHash) {
         lanternOnHip = true;
-        SetCurrentPedWeapon(PVGame.playerPed(), itemData.weaponHash, true, AttachPoint.Hip, false, false);
+        const playerPed = PVGame.playerPed();
+        SetCurrentPedWeapon(playerPed, itemData.weaponHash, true, AttachPoint.Hip, false, false);
+
+        const oilColor = (item.metadatas[0] as Inventory.LanternMetadata | undefined)?.oilColor;
+        if (oilColor) {
+          let attempts = 0;
+          let weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.Hip);
+          while (weaponEntity === 0) {
+            weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.Hip);
+            console.log('weaponEntity', weaponEntity);
+            await Delay(100);
+          }
+          if (weaponEntity) {
+            SetLightsColorForEntity(weaponEntity, oilColor[0], oilColor[1], oilColor[2]);
+          }
+        }
       }
     }
 

@@ -218,7 +218,7 @@ declare function ClearPedLastDamageBone(ped: Ped): void;
 /**
    * CLEAR_PED_NON_CREATION_AREA
    *
-  
+
    * @return {void}
    */
 declare function ClearPedNonCreationArea(): void;
@@ -310,9 +310,9 @@ declare function CountPedsInCombatWithTargetWithinRadius(ped: Ped, x: number, y:
    * CREATE_GROUP
    * Creates a new ped group.
    * Groups can contain up to 8 peds.
-   * 
+   *
    * The parameter is unused.
-   * 
+   *
    * Returns a handle to the created group, or 0 if a group couldn't be created.
    *
    * @param {number} taskAllocator
@@ -383,10 +383,10 @@ declare function CreatePedOnMount(mount: Ped, modelHash: Hash, index: number, p3
    * DELETE_PED
    * Deletes the specified ped, then sets the handle pointed to by the pointer to NULL.
    *
-  
+
    * @return {number}
    */
-declare function DeletePed(): Ped;
+declare function DeletePed(ped: Ped): Ped;
 
 /**
    * DETACH_CARRIABLE_ENTITY
@@ -417,7 +417,7 @@ declare function DoesGroupExist(groupId: number): boolean;
 /**
    * EXPLODE_PED_HEAD
    * Forces the ped to fall back and kills it.
-   * 
+   *
    * It doesn't really explode the ped's head but it kills the ped
    *
    * @param {number} ped
@@ -429,7 +429,7 @@ declare function ExplodePedHead(ped: Ped, weaponHash: Hash): void;
 /**
    * FADE_AND_DESTROY_PED
    *
-  
+
    * @return {number}
    */
 declare function FadeAndDestroyPed(): Ped;
@@ -715,7 +715,7 @@ declare function GetPedBlackboardScriptInt(ped: Ped, variableName: string | numb
 /**
    * GET_PED_BONE_COORDS
    * Gets the position of the specified bone of the specified ped.
-   * 
+   *
    * ped: The ped to get the position of a bone from.
    * boneId: The ID of the bone to get the position from. This is NOT the index.
    * offsetX: The X-component of the offset to add to the position relative to the bone's rotation.
@@ -931,7 +931,7 @@ declare function GetPedResetFlag(ped: Ped, flagId: number): boolean;
 /**
    * GET_PED_SOURCE_OF_DEATH
    * Returns the entity that killed the ped
-   * 
+   *
    * It is best to check if the Ped is dead before asking for its killer.
    *
    * @param {number} ped
@@ -1033,7 +1033,7 @@ declare function GetVehiclePedIsEntering(ped: Ped): Vehicle;
 /**
    * GET_VEHICLE_PED_IS_IN
    * Gets the vehicle the specified Ped is in.
-   * 
+   *
    * If the Ped is not in a vehicle and includeLastVehicle is true, the vehicle they were last in is returned.
    *
    * @param {number} ped
@@ -1083,7 +1083,7 @@ declare function InitPedDefaultHealth(ped: Ped): void;
 /**
    * INSTANTLY_FILL_PED_POPULATION
    *
-  
+
    * @return {void}
    */
 declare function InstantlyFillPedPopulation(): void;
@@ -1155,7 +1155,7 @@ declare function IsGroupLocallyControlled(groupId: number): boolean;
 /**
    * IS_INSTANTLY_FILL_PED_POPULATION_FINISHED
    *
-  
+
    * @return {boolean}
    */
 declare function IsInstantlyFillPedPopulationFinished(): boolean;
@@ -1440,7 +1440,7 @@ declare function IsPedIncapacitated(ped: Ped): boolean;
 /**
    * IS_PED_INJURED
    * Gets a value indicating whether this ped's health is below its injured threshold.
-   * 
+   *
    * The default threshold is 100.
    *
    * @param {number} ped
@@ -1543,13 +1543,13 @@ declare function IsPedInGroup(ped: Ped): boolean;
 
 /**
    * IS_PED_IN_MELEE_COMBAT
-   * Notes: The function only returns true while the ped is: 
+   * Notes: The function only returns true while the ped is:
    * A.) Swinging a random melee attack (including pistol-whipping)
-   * 
+   *
    * B.) Reacting to being hit by a melee attack (including pistol-whipping)
-   * 
-   * C.) Is locked-on to an enemy (arms up, strafing/skipping in the default fighting-stance, ready to dodge+counter). 
-   * 
+   *
+   * C.) Is locked-on to an enemy (arms up, strafing/skipping in the default fighting-stance, ready to dodge+counter).
+   *
    * You don't have to be holding the melee-targeting button to be in this stance; you stay in it by default for a few seconds after swinging at someone. If you do a sprinting punch, it returns true for the duration of the punch animation and then returns false again, even if you've punched and made-angry many peds
    *
    * @param {number} ped
@@ -1647,7 +1647,7 @@ declare function IsPedOnSpecificVehicle(ped: Ped, vehicle: Vehicle): boolean;
 /**
    * IS_PED_ON_VEHICLE
    * Gets a value indicating whether the specified ped is on top of any vehicle.
-   * 
+   *
    * Return 1 when ped is on vehicle.
    * Return 0 when ped is not on a vehicle.
    *
@@ -1660,7 +1660,7 @@ declare function IsPedOnVehicle(ped: Ped, p1: boolean): boolean;
 /**
    * IS_PED_OPENING_DOOR
    * Returns true if the ped is currently opening a door (CTaskOpenDoor).
-   * 
+   *
    * Old name: _IS_PED_OPENING_A_DOOR
    *
    * @param {number} ped
@@ -2000,7 +2000,7 @@ declare function RemoveScenarioBlockingArea(p0: any, p1: boolean): void;
 /**
    * REMOVE_SCENARIO_BLOCKING_AREAS
    *
-  
+
    * @return {void}
    */
 declare function RemoveScenarioBlockingAreas(): void;
@@ -2056,7 +2056,7 @@ declare function RequestPedVisibilityTracking(ped: Ped): void;
 /**
    * RESET_AI_WEAPON_DAMAGE_MODIFIER
    *
-  
+
    * @return {void}
    */
 declare function ResetAiWeaponDamageModifier(): void;
@@ -2113,9 +2113,9 @@ declare function ResetPedWeaponMovementClipset(ped: Ped): void;
 /**
    * RESURRECT_PED
    * This function will simply bring the dead ped back to life.
-   * 
+   *
    * Before calling this function, you may want to declare the position, where your Resurrected ped to be spawn at because theres a chance the ped will fall through the map
-   * 
+   *
    * Also, disabling any assigned task immediately helped in the number of scenarios, where If you want peds to perform certain decided tasks.
    *
    * @param {number} ped
@@ -2167,7 +2167,7 @@ declare function SetBlockingOfNonTemporaryEventsForAmbientPedsThisFrame(p0: bool
 /**
    * SET_COMBAT_FLOAT
    * combatType can be between 0-14. See GET_COMBAT_FLOAT below for a list of possible parameters.
-   * https://github.com/femga/rdr3_discoveries/tree/master/AI/COMBAT_FLOATS 
+   * https://github.com/femga/rdr3_discoveries/tree/master/AI/COMBAT_FLOATS
    * https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/eCombatAttributeFloats
    *
    * @param {number} ped
@@ -2227,7 +2227,7 @@ declare function SetFormationPositionsTargetRadius(groupId: number, radius: numb
 /**
    * SET_GROUP_FORMATION
    * eFormationType
-   * 
+   *
    * 0: Default
    * 1: Circle Around Leader
    * 2: Alternative Circle Around Leader
@@ -2294,7 +2294,7 @@ declare function SetIkTarget(ped: Ped, ikIndex: number, entityLookAt: Entity, bo
    * SET_LOOTING_FLAG
    * https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/CLootingFlags__Flags
    * https://github.com/femga/rdr3_discoveries/tree/master/AI/LOOTING_FLAGS
-   * 
+   *
    * lootFlag:
    * enum eLootFlag
    * {
@@ -2491,7 +2491,7 @@ declare function SetPedCanRagdollFromPlayerImpact(ped: Ped, toggle: boolean): vo
 /**
    * SET_PED_CAN_TELEPORT_TO_GROUP_LEADER
    * This only will teleport the ped to the group leader if the group leader teleports (sets coords).
-   * 
+   *
    * Only works in singleplayer
    *
    * @param {number} pedHandle
@@ -2541,7 +2541,7 @@ declare function SetPedCanUseAutoConversationLookat(ped: Ped, toggle: boolean): 
    * SET_PED_CAPSULE
    * Overrides the ped's collision capsule radius for the current tick.
    * Must be called every tick to be effective.
-   * 
+   *
    * Setting this to 0.001 will allow warping through some objects.
    *
    * @param {number} ped
@@ -2677,7 +2677,7 @@ declare function SetPedFiringPattern(ped: Ped, patternHash: Hash): void;
 /**
    * SET_PED_FLEE_ATTRIBUTES
    * https://github.com/femga/rdr3_discoveries/tree/master/AI/FLEE_ATTRIBUTES
-   * 
+   *
    * attributeFlags:
    * enum eFleeAttribute
    * {
@@ -2995,7 +2995,7 @@ declare function SetPedRelationshipGroupHash(ped: Ped, relationshipGroup: Hash):
 /**
    * SET_PED_RESET_FLAG
    * Needs to be called every frame
-   * 
+   *
    * flagid:https://github.com/Halen84/RDR3-Native-Flags-And-Enums/tree/main/ePedScriptResetFlags
    * https://github.com/femga/rdr3_discoveries/tree/master/AI/CPED_RESET_FLAGS
    *
@@ -3296,7 +3296,7 @@ declare function SetPopControlSphereThisFrame(p0: any, p1: any, p2: any, p3: any
 /**
    * SET_RAGDOLL_BLOCKING_FLAGS
    * https://github.com/femga/rdr3_discoveries/tree/master/AI/RAGDOLL_BLOCKING_FLAGS
-   * 
+   *
    * flags:
    * enum eRagdollBlockingFlags
    * {
@@ -3349,7 +3349,7 @@ declare function SetScenarioPedDensityMultiplierThisFrame(multiplier: number): v
 /**
    * SPAWNPOINTS_CANCEL_SEARCH
    *
-  
+
    * @return {void}
    */
 declare function SpawnpointsCancelSearch(): void;
@@ -3357,7 +3357,7 @@ declare function SpawnpointsCancelSearch(): void;
 /**
    * SPAWNPOINTS_GET_NUM_SEARCH_RESULTS
    *
-  
+
    * @return {number}
    */
 declare function SpawnpointsGetNumSearchResults(): number;
@@ -3383,7 +3383,7 @@ declare function SpawnpointsGetSearchResultFlags(p0: any, p1: DataView): void;
 /**
    * SPAWNPOINTS_IS_SEARCH_ACTIVE
    *
-  
+
    * @return {boolean}
    */
 declare function SpawnpointsIsSearchActive(): boolean;
@@ -3391,7 +3391,7 @@ declare function SpawnpointsIsSearchActive(): boolean;
 /**
    * SPAWNPOINTS_IS_SEARCH_COMPLETE
    *
-  
+
    * @return {boolean}
    */
 declare function SpawnpointsIsSearchComplete(): boolean;
@@ -3399,7 +3399,7 @@ declare function SpawnpointsIsSearchComplete(): boolean;
 /**
    * SPAWNPOINTS_IS_SEARCH_FAILED
    *
-  
+
    * @return {boolean}
    */
 declare function SpawnpointsIsSearchFailed(): boolean;
@@ -3462,7 +3462,7 @@ declare function TimeSincePedLastShot(ped: Ped): number;
    * TOGGLE_SCENARIO_PED_COWER_IN_PLACE
    * If toggle is true, when the ped is using a scenario he will stop it and become scared
    * If toggle is false, the ped will not be scared anymore and continue his scenario
-   * 
+   *
    * Old name: _SET_PED_SCARED_WHEN_USING_SCENARIO
    *
    * @param {number} ped
@@ -3616,7 +3616,7 @@ declare function N_0x0A4618FFD517E24D(p0: any, p1: any): void;
 /**
    * _0x0ADA3EC589E1736E
    *
-  
+
    * @return {void}
    */
 declare function N_0x0ADA3EC589E1736E(): void;
@@ -3831,7 +3831,7 @@ declare function N_0x1D4636C90BBEFACB(ped: Ped, p1: number): void;
 
 /**
    * _0x1E017404784AA6A3
-   * something to do with speech lines? 
+   * something to do with speech lines?
    *  some hashs MAR2_RIDE1, MAR2_RIDE1, RBCH1_RIDE1, SAD5_RIDE1
    *
    * @param {number} ped
@@ -4024,7 +4024,7 @@ declare function N_0x2FA568BFA725F8D6(p0: any, p1: any, p2: any, p3: any): void;
 
 /**
    * _0x31B2E7F2E3C58B89
-   * _GET_SHOP_ITEM_NUM_*? returns a number of ? p1 seems to be always joaat("base") 
+   * _GET_SHOP_ITEM_NUM_*? returns a number of ? p1 seems to be always joaat("base")
    *
    * @param {number} componentHash
    * @param {number} p1
@@ -4490,7 +4490,7 @@ declare function N_0x57F35552E771BE9D(ped: Ped, p1: number): void;
 
 /**
    * _APPLY_PED_DAMAGE_PACK_TO_BONE
-   * seems to only work with PD_Vomit ? 
+   * seems to only work with PD_Vomit ?
    *
    * @param {number} ped
    * @param {number} boneId
@@ -5473,7 +5473,7 @@ declare function N_0x9BBEAF8B0C007F1E(ped: Ped, p1: boolean): void;
 
 /**
    * _HAS_PED_BEEN_SHOT_BY_PLAYER_RECENTLY
-   * this native checks if player has shot a specific ped for the duration passed p2 is in milliseconds 
+   * this native checks if player has shot a specific ped for the duration passed p2 is in milliseconds
    *
    * @param {number} player
    * @param {number} ped
@@ -5920,7 +5920,7 @@ declare function N_0xBF567DF2BEF211A6(p0: any, p1: any): void;
    * _0xBFA6B7731C3BAF02
    * Only used in R* Script tg_p (CLIENT__AMBIENT_POPULATION - Player starts the populate in region)
    *
-  
+
    * @return {void}
    */
 declare function N_0xBFA6B7731C3BAF02(): void;
@@ -6896,7 +6896,7 @@ declare function AddScenarioTransition(ped: Ped): void;
    * _ADD_TEXTURE_LAYER
    * Creates ped overlay in texture override data and returns it's index.
    * This index are used for further overlay editing.
-   * 
+   *
    * albedoHash: a hash of overlay's albedo texture
    * colorType: a color type(from 0 to 2). 0 is used for overlays with RGB colors usually.
    *
@@ -6948,7 +6948,7 @@ declare function ApplyTextureOnPed(ped: Ped, componentHash: Hash, textureId: num
 /**
    * _ARE_ALL_AMBIENT_PED_RESERVATIONS_READY
    *
-  
+
    * @return {boolean}
    */
 declare function AreAllAmbientPedReservationsReady(): boolean;
@@ -7114,7 +7114,7 @@ declare function ComputeSatchelItemForPedCarcass(outInventoryItemArray: DataView
    * Creates a handle to an instance of "CScriptResource_GravityWell", this system forces local ped to target specified position when moving, however player still can interrupt this.
    * Can be useful to "point" player at some specific position.
    * Only works while on-foot.
-   * 
+   *
    * _CREATE_[P-Z]
    *
    * @param {number} xPos
@@ -7234,14 +7234,14 @@ declare function DoesMetaPedSuboutfitExistForPedModel(outfit: Hash, suboutfit: H
 /**
    * _EQUIP_META_PED_OUTFIT
    * Note: you have to update your ped's variation after calling (using 0xCC8CA3E88256E58F)
-   * 
+   *
    * Body Types:
    * MPCREATOR_NEUTRAL
    * MPCREATOR_SKINNY
    * MPCREATOR_SKINNY_MUSCULAR
    * MPCREATOR_HEAVY
    * MPCREATOR_HEAVY_MUSCULAR
-   * 
+   *
    * eBodyWeightOutfit (pedattributes.ymt):
    * -2045421226 (smallest)
    * -1745814259
@@ -7264,9 +7264,9 @@ declare function DoesMetaPedSuboutfitExistForPedModel(outfit: Hash, suboutfit: H
    * -1173634986
    * -867801909
    * 1960266524 (biggest)
-   * 
+   *
    * https://github.com/femga/rdr3_discoveries/blob/master/peds_customization/ped_outfits.lua
-   * 
+   *
    * Alt name: _EQUIP_META_PED_OUTFIT_COMPONENT
    *
    * @param {number} ped
@@ -7402,9 +7402,9 @@ declare function GetCarrierAsPed(entity: Entity): Ped;
 /**
    * _GET_CHAR_EXPRESSION
    * Gets MetaPedExpression at index specified
-   * 
+   *
    * For index, see: _SET_CHAR_EXPRESSION
-   * 
+   *
    * Old name: _GET_PED_FACE_FEATURE
    *
    * @param {number} ped
@@ -7448,7 +7448,7 @@ declare function GetHealthRechargeMultiplier(ped: Ped): number;
 /**
    * _GET_HORSE_TAMING_STATE
    * Returns an int based on enum eTamingState
-   * 
+   *
    * enum eTamingState
    * {
    *   ATS_INVALID = 0,
@@ -7613,7 +7613,7 @@ declare function GetNumComponentCategoriesInPed(ped: Ped): number;
 /**
    * _GET_NUM_FREE_SLOTS_IN_PED_POOL
    *
-  
+
    * @return {number}
    */
 declare function GetNumFreeSlotsInPedPool(): number;
@@ -7621,7 +7621,7 @@ declare function GetNumFreeSlotsInPedPool(): number;
 /**
    * _GET_NUM_RESERVED_AMBIENT_PEDS_DESIRED
    *
-  
+
    * @return {number}
    */
 declare function GetNumReservedAmbientPedsDesired(): number;
@@ -7629,7 +7629,7 @@ declare function GetNumReservedAmbientPedsDesired(): number;
 /**
    * _GET_NUM_RESERVED_AMBIENT_PEDS_READY
    *
-  
+
    * @return {number}
    */
 declare function GetNumReservedAmbientPedsReady(): number;
@@ -7906,7 +7906,7 @@ declare function GetPedMotivation(ped: Ped, motivationState: number, targetPed: 
 /**
    * _GET_PED_QUALITY
    * Returns Ped Quality to be used to calculate Skinning Quality
-   * 
+   *
    * enum ePedQuality
    * {
    *   PQ_INVALID = -1,
@@ -7924,7 +7924,7 @@ declare function GetPedQuality(ped: Ped): number;
 /**
    * _GET_PED_REGISTER_PROP
    * Gets a registered/attached prop entity for a particular ped. Second parameter will detach the prop entity from the ped if true. Props primarily appear to come from scenarios, such as a broom or hay bale.
-   * 
+   *
    * Known props: https://pastebin.com/ap2NEJqB
    *
    * @param {number} ped
@@ -7940,7 +7940,7 @@ declare function GetPedRegisterProp(ped: Ped, propName: string | number, detachP
    * 0.0        / 1000.0         STARTED IN WRITHE STAGE
    * 1.0        / 0.0            END OF WRITHE, DEAD
    * -1.0                        DEAD
-   * 
+   *
    * Returns some value from AI task 562 (unknown).
    *
    * @param {number} ped
@@ -8060,7 +8060,7 @@ declare function GetShopItemHatComponent(ped: Ped, metapedType: number, p2: bool
 /**
    * _GET_SHOP_ITEM_NUM_WEARABLE_STATES
    * Returns the number of wearable states available for a shop item / component. p2 seems to be true in scripts.
-   * 
+   *
    * For use with 0x6243635AF2F1B826 (_GET_SHOP_ITEM_AVAILABLE_WEARABLE_STATE_BY_INDEX)
    *
    * @param {number} componentHash
@@ -8073,7 +8073,7 @@ declare function GetShopItemNumWearableStates(componentHash: Hash, isMpFemale: b
 /**
    * _GET_SHOP_ITEM_WEARABLE_STATE_BY_INDEX
    * Gets an available wearable state by index for a shop item / component - it does not retreive what the current state is. p3 seems to be true in scripts.
-   * 
+   *
    * Use 0xFFCC2DB2D9953401 (_GET_SHOP_ITEM_NUM_WEARABLE_STATES) to get the number of available wearable states
    *
    * @param {number} componentHash
@@ -8580,7 +8580,7 @@ declare function PedWasKilledByHeadshot(ped: Ped): boolean;
    *   LAP_LOOTING,
    *   LAP_EXITING
    * };
-   * 
+   *
    * _POSSE_* - _REGISTER_HATED*
    *
    * @param {number} ped
@@ -8896,7 +8896,7 @@ declare function RequestPropScenarioPed(ped: Ped, object: number, p2: string | n
    * Also, you can add overlays on it, such as aging, lipstick and more.
    * Textures can be reused by multiple peds at once.
    * You can keep only 32 textures at once(including other peds).
-   * 
+   *
    * https://github.com/femga/rdr3_discoveries/blob/master/clothes/change_overlays_script.lua
    * materialHash: https://github.com/femga/rdr3_discoveries/blob/master/clothes/cloth_drawable_albedo_normal_material_TEMPORARY.lua
    *
@@ -9003,16 +9003,16 @@ declare function SetAmbientPedDensityMultiplierThisFrame(multiplier: number): vo
 /**
    * _SET_CHAR_EXPRESSION
    * Sets MetaPedExpression at index specified. Morphs components, such as changing body size or facial features.
-   * 
+   *
    * Note: You have to update the ped's variation (using 0xCC8CA3E88256E58F) after calling this native
-   * 
+   *
    * index = MetaPedExpression IDs
    * List of face features: https://pastebin.com/9jb88FXW
    * Full list of MetaPedExpressions: https://pastebin.com/Ld76cAn7
    * value: -1.0 to 1.0 (values beyond this likely won't sync to other clients)
-   * 
+   *
    * This native also allows you to change a horse's gender.
-   * 
+   *
    * Old name: _SET_PED_FACE_FEATURE
    *
    * @param {number} ped
@@ -9214,7 +9214,7 @@ declare function SetPedBlackboardFloat(ped: Ped, variableName: string | number, 
    * p1:
    * BodyPartChained
    * OverloadMostInjuredBodyPart
-   * 
+   *
    * p2:
    * LeftLeg
    * Legs
@@ -9252,7 +9252,7 @@ declare function SetPedBlackboardInt(ped: Ped, variableName: string | number, va
    * Human_FastBleedout
    * Human_Generic
    * Human_Mission
-   * 
+   *
    * For more information, see common/data/ai/peddamageinfo.meta
    *
    * @param {number} ped
@@ -9763,7 +9763,7 @@ declare function SetPedLights(ped: Ped, toggle: boolean): void;
    *   SUSPICION,
    *   DRUNK_STATE
    * };
-   * 
+   *
    * If targetPed is set to 0 the ped motivationState affects everyone
    *
    * @param {number} ped
@@ -10024,7 +10024,7 @@ declare function SetScenarioHumanDensityMultiplierThisFrame(multiplier: number):
 /**
    * _SET_SCENARIO_PED_DENSITY_THIS_FRAME
    * Sets the scenario ped density to the given config.
-   * 
+   *
    * Valid configs:
    * - BLACKWATER
    * - DEFAULT
@@ -10034,7 +10034,7 @@ declare function SetScenarioHumanDensityMultiplierThisFrame(multiplier: number):
    * - TUMBLEWEED
    * - VALENTINE
    * - VANHORN
-   * 
+   *
    * See common/data/ai/densityscoringconfigs.meta for more information.
    *
    * @param {number} configHash

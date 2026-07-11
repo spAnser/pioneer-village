@@ -7,6 +7,7 @@ import './events';
 import './exports';
 import './hats';
 import './keybinds';
+import './lantern-oil';
 import './targets';
 import './weapons';
 

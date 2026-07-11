@@ -468,7 +468,11 @@ declare namespace UI.CharacterSelect {
 }
 
 declare namespace UI.Log {
-  type Data = { resource: string; message: string };
+  type Data = {
+    _type?: 'log' | 'info' | 'warn' | 'error';
+    resource: string;
+    message: string;
+  };
 
   type Source = 'server' | 'client';
 

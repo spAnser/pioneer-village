@@ -493,6 +493,17 @@ const Inventories: FC<UI.BaseProps> = () => {
     [],
   );
 
+  const renderColorIndicator = useCallback<(color: [number, number, number]) => React.ReactNode>((color) => {
+    return (
+      <div
+        className={styles.colorIndicator}
+        style={{
+          backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`,
+        }}
+      ></div>
+    );
+  }, []);
+
   const renderItem = useCallback<
     (itemData: UI.Inventory.ItemData, i: number, identifier: string, inventory: UI.Inventory.LoadData) => ReactNode
   >(
@@ -541,6 +552,10 @@ const Inventories: FC<UI.BaseProps> = () => {
               />
             </div>
           )}
+          {firstMetadata &&
+            'oilColor' in firstMetadata &&
+            firstMetadata.oilColor &&
+            renderColorIndicator(firstMetadata.oilColor)}
           {firstMetadata &&
             'palette' in firstMetadata &&
             typeof firstMetadata.palette === 'string' &&
