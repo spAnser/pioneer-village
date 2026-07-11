@@ -14,7 +14,7 @@ on('inventory:client:apply_lantern_oil', (oilItem: Inventory.ItemLanternOil, oil
   const playerPed = PVGame.playerPed();
   const [hasMainHand, mainHandWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
   const [hasOffHand, offHandWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.OffHand, false);
-  const [hasHip, hipWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.Hip, false);
+  const [hasHip, hipWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.TempLantern, false);
 
   let attachPoint: AttachPoint | undefined;
   let lanternIdentifier: number | undefined;
@@ -25,7 +25,7 @@ on('inventory:client:apply_lantern_oil', (oilItem: Inventory.ItemLanternOil, oil
     attachPoint = AttachPoint.OffHand;
     lanternIdentifier = lanternIdentifierByWeaponHash.get(offHandWeapon >>> 0);
   } else if (hasHip && lanternIdentifierByWeaponHash.has(hipWeapon >>> 0)) {
-    attachPoint = AttachPoint.Hip;
+    attachPoint = AttachPoint.TempLantern;
     lanternIdentifier = lanternIdentifierByWeaponHash.get(hipWeapon >>> 0);
   }
 

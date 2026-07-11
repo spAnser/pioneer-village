@@ -1,4 +1,4 @@
-import { eq, inArray, like, or } from 'drizzle-orm';
+import { and, eq, inArray, isNull, like, or } from 'drizzle-orm';
 import { Socket } from 'socket.io';
 import type { DefaultEventsMap } from 'socket.io/dist/typed-events';
 
@@ -154,7 +154,10 @@ class Inventories {
       }
 
       // Get items for this container
-      const items = await db.select().from(ItemSchema).where(eq(ItemSchema.containerId, containerData.id));
+      const items = await db
+        .select()
+        .from(ItemSchema)
+        .where(and(eq(ItemSchema.containerId, containerData.id), isNull(ItemSchema.deletedAt)));
 
       return {
         ...inventoryData,
@@ -260,9 +263,7 @@ class Inventories {
       return;
     }
 
-    return inventory.container.items.find(
-      (item) => item.identifier === itemIdentifier && item.deletedAt === null,
-    );
+    return inventory.container.items.find((item) => item.identifier === itemIdentifier && item.deletedAt === null);
   }
 
   async getInventoryForItem(itemId: number): Promise<{ identifier: string; slot: number | null } | undefined> {
@@ -1102,8 +1103,11 @@ class Inventories {
    */
   async removeItem(itemId: number): Promise<ItemSchemaType | undefined> {
     try {
+      console.log('removeItem', itemId);
       const item = await this.getItem(itemId);
+      console.log('item', item);
       if (!item) {
+        console.log('No item matching', itemId);
         return;
       }
 
@@ -1115,8 +1119,10 @@ class Inventories {
         .returning();
 
       if (deletedItems.length === 0) {
+        console.log('No items deleted matching', itemId);
         return;
       }
+      console.log('deletedItems.length', deletedItems.length);
 
       const deletedItem = deletedItems[0];
 
