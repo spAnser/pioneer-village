@@ -1,7 +1,7 @@
 import { exports } from '@lib/client';
 
 import doorManager from './managers/door-manager';
-import { registerDoorHook, DoorHookType } from './misc/hooks';
+import { registerDoorHook } from './misc/hooks';
 
 const lockDoor: Doors.LockDoor = (doorHash) => {
   doorManager.setDoorState(doorHash, 1);

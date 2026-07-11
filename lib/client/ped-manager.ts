@@ -1,7 +1,12 @@
+import { onResourceStop } from '@lib/client/game';
+import { PedConfigFlag } from '@lib/flags';
+import { EntityProofs } from '@lib/flags/entity-proofs';
 import { Delay } from '@lib/functions';
 
-import { PVGameEvents, type EventData } from './events';
-import { PVGame } from './resources';
+import { type EventData, PVGameEvents } from './events';
+import { PVBase, PVGame } from './resources';
+
+const MAX_HEALTH_AMOUNT = 1_000_000;
 
 const playAmbientSpeech = (entity: number, ref: string, name: string, params: string, line = 0) => {
   emit('game:playAmbientSpeech', entity, ref, name, params, line);
@@ -10,6 +15,7 @@ const playAmbientSpeech = (entity: number, ref: string, name: string, params: st
 export interface PedSpeechConfig {
   ref: string;
   names: string[];
+  lines: string[];
   params: string;
   /** [minMs, maxMs] random interval between speech lines */
   intervalMs: [number, number];
@@ -101,9 +107,31 @@ export class PedManager {
     }
 
     if (config.missionEntity) SetEntityAsMissionEntity(handle, true, true);
-    if (config.invincible) SetEntityInvincible(handle, true);
     if (config.freeze) FreezeEntityPosition(handle, true);
     if (config.blockEvents) SetBlockingOfNonTemporaryEvents(handle, true);
+
+    if (config.invincible) {
+      // SetEntityInvincible(handle, true);
+      SetEntityCanBeDamaged(handle, true);
+      SetPedConfigFlag(handle, PedConfigFlag.NoCriticalHits, true);
+      SetPedConfigFlag(handle, PedConfigFlag.DisableHeadGore, true);
+      SetPedConfigFlag(handle, PedConfigFlag.DisableDismemberment, true);
+      SetPedConfigFlag(handle, PedConfigFlag.DisableLimbGore, true);
+
+      SetEntityMaxHealth(handle, MAX_HEALTH_AMOUNT);
+      SetEntityHealth(handle, MAX_HEALTH_AMOUNT, 0);
+      const proofs =
+        EntityProofs.BULLET +
+        EntityProofs.HEADSHOTS +
+        EntityProofs.FLAME +
+        EntityProofs.EXPLOSION +
+        EntityProofs.COLLISION +
+        // EntityProofs.MELEE +
+        EntityProofs.STEAM +
+        EntityProofs.SMOKE +
+        EntityProofs.PROJECTILE;
+      SetEntityProofs(handle, proofs, false);
+    }
 
     SetPedFleeAttributes(handle, 0, false);
     SetPedCombatAttributes(handle, 17, true);
@@ -131,8 +159,10 @@ export class PedManager {
 
     const { handle, config } = managed;
     if (DoesEntityExist(handle)) {
-      if (config.missionEntity) SetEntityAsMissionEntity(handle, false, true);
-      DeletePed(handle);
+      // if (config.missionEntity) SetEntityAsMissionEntity(handle, false, true);
+      // console.log('delete ped', handle);
+      // DeletePed(handle);
+      PVBase.deleteEntity(handle);
     }
 
     this._peds.delete(id);
@@ -160,7 +190,9 @@ export class PedManager {
 
   playSpeech(id: string, psc: PedSpeechConfig): void {
     const managed = this._peds.get(id);
-    console.log(`[PedManager] ped found: ${!!managed} with handle ${managed?.handle} - playSpeech "${id}" ref=${psc.ref} names=${psc.names.join(',')} params=${psc.params}`);
+    console.log(
+      `[PedManager] ped found: ${!!managed} with handle ${managed?.handle} - playSpeech "${id}" ref=${psc.ref} names=${psc.names.join(',')} params=${psc.params}`,
+    );
 
     if (managed && DoesEntityExist(managed.handle)) {
       if (managed.routineRunning) this.pauseRoutine(id);
@@ -178,7 +210,7 @@ export class PedManager {
       const delay = randomBetween(speech.intervalMs[0], speech.intervalMs[1]);
       managed.speechTimer = setTimeout(() => {
         if (DoesEntityExist(managed.handle)) {
-          const line = speech.lines[Math.floor(Math.random() * speech.names.length)];
+          const line = speech.names[Math.floor(Math.random() * speech.names.length)];
           playAmbientSpeech(managed.handle, speech.ref, line, speech.params);
         }
         schedule();
@@ -214,7 +246,9 @@ export class PedManager {
             break;
 
           case 'anim':
-            console.log(`[PedManager] routine "${managed.id}" anim=${step.dict}@${step.anim} duration=${step.duration}`);
+            console.log(
+              `[PedManager] routine "${managed.id}" anim=${step.dict}@${step.anim} duration=${step.duration}`,
+            );
             await PVGame.loadAnimDict(step.dict);
             TaskPlayAnim(
               managed.handle,
@@ -253,9 +287,36 @@ export class PedManager {
     }
   }
 
+  private _invincibilityHealRegistered = false;
+
+  /**
+   * Registers a single EVENT_ENTITY_DAMAGED listener that tops up health on any
+   * managed `invincible` ped right after damage is applied. Damage has to actually
+   * land (see SetEntityCanBeDamaged in spawn()) for the event to fire at all, so
+   * this keeps the ped effectively unkillable without using SetEntityInvincible.
+   */
+  private _ensureInvincibilityHeal(): void {
+    if (this._invincibilityHealRegistered) return;
+    this._invincibilityHealRegistered = true;
+
+    PVGameEvents.register('EVENT_ENTITY_DAMAGED', (data) => {
+      const attacked = (data as Record<string, number>).attacked;
+
+      for (const ped of this._peds.values()) {
+        if (!ped.config.invincible) continue;
+        if (ped.handle !== attacked) continue;
+        if (!DoesEntityExist(ped.handle)) continue;
+
+        SetEntityHealth(ped.handle, MAX_HEALTH_AMOUNT, 0);
+      }
+    });
+  }
+
   private _registerReactions(managed: ManagedPed): void {
     const { reactions } = managed.config;
     if (!reactions?.length) return;
+
+    this._ensureInvincibilityHeal();
 
     for (const reaction of reactions) {
       if (this._registeredReactionEvents.has(reaction.event)) continue;
@@ -295,3 +356,8 @@ export class PedManager {
     }
   }
 }
+
+onResourceStop(() => {
+  console.log('onResourceStop', 'despawn all');
+  PedManager.getInstance().despawnAll();
+});
