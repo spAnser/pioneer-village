@@ -24,7 +24,7 @@ end
 
 local floor = math.floor
 
-local cacheEvent = AddEventHandler("events_manager:cache", cacheUpdate)
+local cacheEvent = AddEventHandler("events:cache", cacheUpdate)
 local temperature = {temperature = 0, warmth = 0}
 
 LocalPlayer.state.temperature = temperature

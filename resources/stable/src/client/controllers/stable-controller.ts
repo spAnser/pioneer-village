@@ -65,8 +65,8 @@ class StableController {
         this.horseMakeNetworked(mount);
       }
     };
-    on('events_manager:mount', (onMount: number, horsePed: number, currentSeat: number) => {
-      // console.log('events_manager:mount', onMount, horsePed, currentSeat);
+    on('events:mount', (onMount: number, horsePed: number, currentSeat: number) => {
+      // console.log('events:mount', onMount, horsePed, currentSeat);
       this.checkHorse(horsePed);
       if (onMount) {
         handleUnstabledHorse(horsePed);
@@ -74,11 +74,11 @@ class StableController {
         this.updateUnstableHorseCoords();
       }
     });
-    on('events_manager:leading', (isLeading: number, horse: number) => {
+    on('events:leading', (isLeading: number, horse: number) => {
       // console.log('isLeading', isLeading, horse);
       handleUnstabledHorse(horse);
     });
-    on('events_manager:onRoad', (onRoad: boolean) => {
+    on('events:onRoad', (onRoad: boolean) => {
       console.log('onRoad', onRoad);
       if (onRoad) {
         // Rescale Handling | Speed | Acceleration based on horseshoes by about 1/3 each

@@ -154,8 +154,8 @@ RegisterCommand(
   false,
 );
 
-on('events_manager:itemInteraction', async (state: boolean, interactionHash: number, entity: number) => {
-  console.log('events_manager:itemInteraction', state, interactionHash, entity);
+on('events:itemInteraction', async (state: boolean, interactionHash: number, entity: number) => {
+  console.log('events:itemInteraction', state, interactionHash, entity);
   if (holdInteractions.includes(interactionHash)) {
     saloonController.holdingDrink(entity);
     saloonController.endDrinking();

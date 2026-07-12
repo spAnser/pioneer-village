@@ -1,19 +1,25 @@
 import { exports } from '@lib/client';
 
 import timeManager from '../shared/managers/time-manager';
-import { EventManager } from './managers/event-manager';
-import { KeyManager } from './managers/key-manager';
+import { EventName } from './catalog';
+import eventPoller, { EventData } from './managers/event-poller';
+import keyManager from './managers/key-manager';
 import stateManager from './managers/state-manager';
 
-const eventManager = EventManager.getInstance();
-const keyManager = KeyManager.getInstance();
-
-const register: Events.register = (identifier, event, callback) => {
-  return eventManager.register(identifier, event, callback);
+const register = <T extends EventName>(name: T, callback: (data: EventData<T>) => void): void => {
+  eventPoller.register(name, callback);
 };
 
-const unregister: Events.unregister = (identifier, event) => {
-  return eventManager.unregister(identifier, event);
+const unregister = <T extends EventName>(name: T, callback: (data: EventData<T>) => void): void => {
+  eventPoller.unregister(name, callback);
+};
+
+const once = <T extends EventName>(name: T, callback: (data: EventData<T>) => void): void => {
+  eventPoller.once(name, callback);
+};
+
+const awaitEvent = <T extends EventName>(name: T): Promise<EventData<T>> => {
+  return eventPoller.awaitEvent(name);
 };
 
 const keyRegister: Events.keyRegister = (command, name, method, key) => {
@@ -42,6 +48,8 @@ const unregisterStateEvent: Events.unregisterStateEvent = (identifier) => {
 
 exports<'events'>('register', register);
 exports<'events'>('unregister', unregister);
+exports<'events'>('once', once);
+exports<'events'>('awaitEvent', awaitEvent);
 exports<'events'>('keyRegister', keyRegister);
 exports<'events'>('registerCronEvent', registerCronEvent);
 exports<'events'>('registerTimeEvent', registerTimeEvent);

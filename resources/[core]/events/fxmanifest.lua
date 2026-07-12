@@ -10,5 +10,6 @@ server_scripts {
 }
 
 client_scripts {
+  "client/event-data.lua",
   "build/client.js"
 }
