@@ -437,19 +437,23 @@ class Inventories {
   }
 
   // Helper function to validate item can be moved to new inventory
-  private validateItemMove(item: ItemSchemaType[], newIdentifier: string): boolean {
+  private validateItemMove(item: ItemSchemaType[], newIdentifier: string): string | null {
     const itemData = PVItems[item[0].identifier];
-    if (!itemData || !this.isAllowedInInventory(newIdentifier, itemData)) {
-      return false;
+    if (!itemData) {
+      console.error(`validateItemMove: unknown item identifier ${item[0].identifier}, is the socket server out of date?`);
+      return 'Unknown item, please contact staff';
+    }
+    if (!this.isAllowedInInventory(newIdentifier, itemData)) {
+      return 'That item cannot go there';
     }
     // Prevent nesting a container inside the same container type
     if (itemData.containerType) {
       const destType = newIdentifier.split(':')[0];
       if (destType === itemData.containerType) {
-        return false;
+        return 'Cannot place a container inside another of the same type';
       }
     }
-    return true;
+    return null;
   }
 
   // Helper function to create item data for response
@@ -467,12 +471,14 @@ class Inventories {
     identifier: string,
     requestId: number,
     requestType: UI.Inventory.RequestType,
+    reason?: string,
   ): [UI.Inventory.SuccessFailData, null] {
     return [
       {
         identifier,
         requestId,
         requestType,
+        reason,
       } satisfies UI.Inventory.SuccessFailData,
       null,
     ];
@@ -845,13 +851,11 @@ class Inventories {
     newSlot: number,
     quantity?: number,
   ): Promise<[UI.Inventory.MoveOrFailData, UI.Inventory.MoveOrFailData | null]> {
-    console.log('===================');
     try {
       // Validate inventories exist
       const inventories = await this.validateInventories(oldIdentifier, newIdentifier);
       if (!inventories) {
-        console.log('=================== AAA');
-        return this.createFailureResponse(oldIdentifier, requestId, 'move');
+        return this.createFailureResponse(oldIdentifier, requestId, 'move', 'Inventory not found');
       }
 
       const { oldInventory, newInventory } = inventories;
@@ -859,14 +863,13 @@ class Inventories {
       // Find the item to move
       const oldItems = this.findItemsInSlot(oldInventory, oldSlot);
       if (!oldItems || oldItems.length === 0) {
-        console.log('=================== BBB', oldIdentifier, oldSlot, oldItems);
-        return this.createFailureResponse(oldIdentifier, requestId, 'move');
+        return this.createFailureResponse(oldIdentifier, requestId, 'move', 'Item not found');
       }
 
       // Validate item can be moved to new inventory
-      if (!this.validateItemMove(oldItems, newIdentifier)) {
-        console.log('=================== CCC');
-        return this.createFailureResponse(oldIdentifier, requestId, 'move');
+      const moveError = this.validateItemMove(oldItems, newIdentifier);
+      if (moveError) {
+        return this.createFailureResponse(oldIdentifier, requestId, 'move', moveError);
       }
 
       // Determine if this is a partial move
@@ -886,8 +889,9 @@ class Inventories {
           return this.createFailureResponse(oldIdentifier, requestId, 'move');
         }
         // Validate the displaced item can go back to the source inventory
-        if (!this.validateItemMove(existingItem, oldIdentifier)) {
-          return this.createFailureResponse(oldIdentifier, requestId, 'move');
+        const swapBackError = this.validateItemMove(existingItem, oldIdentifier);
+        if (swapBackError) {
+          return this.createFailureResponse(oldIdentifier, requestId, 'move', swapBackError);
         }
         // Perform swap operation
         await this.performItemSwap(oldItems, existingItem, oldSlot, newSlot, oldInventory, newInventory);
@@ -935,8 +939,7 @@ class Inventories {
     } catch (error) {
       console.error('Error in moveItem:', error);
     }
-    console.log('=================== DDD');
-    return this.createFailureResponse(oldIdentifier, requestId, 'move');
+    return this.createFailureResponse(oldIdentifier, requestId, 'move', 'Unexpected error moving item');
   }
 
   async moveItemToInventory(
