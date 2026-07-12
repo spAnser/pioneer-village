@@ -136,7 +136,7 @@ onSocket('world.geyser-show', async (steps: World.GeyserShowSteps) => {
 AddStateBagChangeHandler(
   'applyForce',
   '',
-  (bag: string, key: string, value: any, reserved: number, replicated: boolean) => {
+  (bag: string, key: string, value: [number, number, number], reserved: number, replicated: boolean) => {
     if (!value || replicated) return;
     const player = GetPlayerFromStateBagName(bag);
     const entity = GetPlayerPed(player);

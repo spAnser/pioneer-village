@@ -10,5 +10,7 @@ declare namespace Events {
     registerCronEvent: registerCronEvent;
     registerTimeEvent: registerTimeEvent;
     unregisterCronTimeEvent: unregisterCronTimeEvent;
+    registerStateEvent: registerStateEvent;
+    unregisterStateEvent: unregisterStateEvent;
   };
 }
