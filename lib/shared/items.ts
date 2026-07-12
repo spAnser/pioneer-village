@@ -508,6 +508,19 @@ const PVItems: Record<number, Inventory.Item> = {
     weaponType: WeaponType.THROWN,
     ammoHash: GetHashKey('AMMO_TOMAHAWK'),
   },
+  [GetHashKey('PV_THROWN_BOLAS')]: {
+    identifier: GetHashKey('PV_THROWN_BOLAS'),
+    image: 'bolas',
+    name: 'Bolas',
+    flags: ItemFlags.AMMO,
+    restriction: Restrictions.Ammo + Restrictions.Small,
+    stackSize: 1,
+    weight: 1,
+    useEvent: 'inventory:client:toggle_thrown',
+    weaponHash: GetHashKey('WEAPON_THROWN_BOLAS'),
+    weaponType: WeaponType.THROWN,
+    ammoHash: GetHashKey('AMMO_BOLAS'),
+  },
   /**
    * Rifles
    */
