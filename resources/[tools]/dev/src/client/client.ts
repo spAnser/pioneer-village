@@ -221,6 +221,14 @@ RegisterCommand(
   false,
 );
 
+RegisterCommand(
+  'tp_cellar',
+  () => {
+    teleport(-599.6, 519.5, 96.2);
+  },
+  false,
+);
+
 /**
  * Misc Commands
  */
