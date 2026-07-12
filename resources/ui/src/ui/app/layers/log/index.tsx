@@ -147,13 +147,18 @@ export default function Log() {
           onWheel={handleMousewheel}
         >
           {state.messages.map(
-            ({ source, resource, _type, message }, index) =>
+            ({ source, resource, _type, message, timestamp }, index) =>
               shouldShow(resource) && (
                 <div className={styles.item} key={index}>
                   <i data-source={source}>
                     {source === 'server' && <Server />} {source === 'client' && <Desktop />}
                   </i>
-                  <span style={{ backgroundColor: state.colors[resource].hsl }}>{resource}</span>
+                  <span style={{ backgroundColor: state.colors[resource].hsl }}>
+                    {resource}
+                    <br />
+                    {new Date(timestamp).toLocaleTimeString('en-GB')}.
+                    {String(timestamp % 1000).padStart(3, '0')}
+                  </span>
                   {_type && (
                     <span
                       className={conditionalClass(styles.logType, {

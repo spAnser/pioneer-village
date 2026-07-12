@@ -132,12 +132,13 @@ class LogStore {
     }
 
     const newMessages = [
-      ...this.state.messages.slice(-999),
+      ...this.state.messages.slice(-1999),
       {
         _type: data._type,
         source,
         resource: data.resource,
         message: data.message,
+        timestamp: Date.now(),
       },
     ];
 
