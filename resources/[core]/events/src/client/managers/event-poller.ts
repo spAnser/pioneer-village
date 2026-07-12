@@ -3,12 +3,53 @@ import type { EventDef, EventName } from '../catalog';
 
 const catalogEntry = (name: EventName): EventDef => EVENT_CATALOG[name];
 
-// GET_EVENT_DATA (0x57EC5FA4D4D6AFCA) needs a mutable output buffer, which
-// RedM's JS native-calling ABI has no argument type for - see
-// GET_EVENT_DATA-LIMITATION.md. client/event-data.lua does the native call
-// with a Lua string buffer instead and hands back the decoded int32 fields.
+// GET_EVENT_DATA (0x57EC5FA4D4D6AFCA) fills a caller-provided output buffer.
+// citizenfx/fivem's V8ScriptRuntime.cpp PushArgument() has an IsArrayBufferView()
+// branch (checked before the generic IsObject()/"__data" fallback) that forwards
+// an ArrayBufferView's backing store to the native and copies isolated buffers
+// back after the call (ScriptInvoker.cpp PostInvoke) - see
+// GET_EVENT_DATA-LIMITATION.md "Resolution" for the full trail. `size` is the
+// SIZE_OF-operator field count (8-byte-aligned script vars), not a byte count.
+const DECODE_DEBUG_CONVAR = 'events:decode_debug';
+const decodeDebug = GetConvar(DECODE_DEBUG_CONVAR, 'false') === 'true';
+
 const decodeEventNative = (group: number, index: number, size: number): number[] | undefined => {
-  return exports[GetCurrentResourceName()].decodeEvent(group, index, size);
+  const buffer = new ArrayBuffer(size * 8);
+  const view = new Int32Array(buffer);
+
+  let ok: boolean;
+  try {
+    ok = Citizen.invokeNative('0x57EC5FA4D4D6AFCA', group, index, view, size, Citizen.returnResultAnyway());
+  } catch (e) {
+    if (decodeDebug) {
+      console.log('[GET_EVENT_DATA] invokeNative threw', {
+        group,
+        index,
+        size,
+        isArrayBufferView: ArrayBuffer.isView(view),
+        error: e instanceof Error ? e.message : e,
+      });
+    }
+    throw e;
+  }
+
+  if (!ok) {
+    if (decodeDebug) {
+      console.log('[GET_EVENT_DATA] native returned false', { group, index, size });
+    }
+    return undefined;
+  }
+
+  const fields: number[] = [];
+  for (let i = 0; i < size; i++) {
+    fields.push(view[i * 2]);
+  }
+
+  if (decodeDebug) {
+    console.log('[GET_EVENT_DATA] decoded', { group, index, size, fields });
+  }
+
+  return fields;
 };
 
 type EventFields<T extends EventName> = (typeof EVENT_CATALOG)[T]['fields'];
@@ -92,10 +133,10 @@ export class EventPoller {
 
     const namedFieldCount = Object.keys(def.fields).length;
     if (!raw || namedFieldCount >= raw.length) {
-      return data;
+      return { _namedFields: namedFieldCount, _rawFields: raw?.length, named: data };
     }
 
-    return { named: data, raw };
+    return { _namedFields: namedFieldCount, _rawFields: raw?.length, named: data, raw };
   }
 
   protected warnIfSpamming(name: EventName): void {
