@@ -133,6 +133,35 @@ onSocket('world.geyser-show', async (steps: World.GeyserShowSteps) => {
 // </editor-fold>
 
 // <editor-fold desc="Geyser Ejection">
+AddStateBagChangeHandler(
+  'applyForce',
+  '',
+  (bag: string, key: string, value: any, reserved: number, replicated: boolean) => {
+    if (!value || replicated) return;
+    const player = GetPlayerFromStateBagName(bag);
+    const entity = GetPlayerPed(player);
+
+    const forceVector = Vector3.fromArray(value);
+
+    ApplyForceToEntity(
+      entity,
+      1,
+      forceVector.x,
+      forceVector.y,
+      forceVector.z,
+      0.0,
+      0.0,
+      0.0,
+      0,
+      false,
+      false,
+      true,
+      false,
+      true,
+    );
+  },
+);
+
 const geyserEject = async (name: string, coords: Vector3Format, force: number) => {
   const playerPed = PlayerPedId();
   const playerCoords = Vector3.fromArray(GetEntityCoords(playerPed, true));
@@ -149,25 +178,13 @@ const geyserEject = async (name: string, coords: Vector3Format, force: number) =
   forceVector = forceVector.multiplyScalar(force);
 
   SetPedToRagdoll(playerPed, 3000, 5000, 0, false, false, false);
-  await Delay(1);
-  ApplyForceToEntity(
-    playerPed,
-    1,
-    forceVector.x,
-    forceVector.y,
-    forceVector.z,
-    0.0,
-    0.0,
-    0.0,
-    0,
-    false,
-    false,
-    true,
-    false,
-    true,
-  );
+  await Delay(25);
+  LocalPlayer.state.set('applyForce', forceVector.toArray(), true);
+
+  SetPedToRagdoll(playerPed, 3000, 5000, 0, false, false, false);
 
   await Delay(2_000);
+  LocalPlayer.state.set('applyForce', undefined, true);
   PVWorld.setFxEvolutions(name, {
     erupt: 0.0,
     steam: 1.0,
