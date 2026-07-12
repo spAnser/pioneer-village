@@ -196,6 +196,11 @@ class ComponentManager {
             weaponEntity = GetCurrentPedWeaponEntityIndex(playerPed, AttachPoint.TempLantern);
             console.log('weaponEntity', weaponEntity);
             await Delay(100);
+            attempts++;
+            if (attempts > 10) {
+              console.log('Failed to get weapon entity for lantern after 10 attempts');
+              break;
+            }
           }
           if (weaponEntity) {
             SetLightsColorForEntity(weaponEntity, oilColor[0], oilColor[1], oilColor[2]);
