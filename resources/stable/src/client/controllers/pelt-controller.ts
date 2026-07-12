@@ -40,13 +40,13 @@ export class PeltController {
   eventPlaceCarriable(data: EventData['EVENT_PLACE_CARRIABLE_ONTO_PARENT']) {
     // console.log('EVENT_PLACE_CARRIABLE_ONTO_PARENT', data);
 
-    const horseId = Entity(data.parent).state.horseId;
+    const horseId = Entity(data.carrier).state.horseId;
     // console.log('Horse ID:', horseId);
     if (!horseId || !stableController.isUnstabled(horseId)) {
       return;
     }
 
-    if (data.provision === 0) {
+    if (data.inventoryItemHash === 0) {
       this.storeCorpse(horseId, data);
     } else {
       this.storePelt(horseId, data);
@@ -56,7 +56,7 @@ export class PeltController {
   storeCorpse(horseId: number, data: EventData['EVENT_PLACE_CARRIABLE_ONTO_PARENT']) {
     const model = GetEntityModel(data.carriable);
 
-    const horseState = Entity(data.parent).state;
+    const horseState = Entity(data.carrier).state;
 
     const corpses: Record<string, [number, number, number, number]> = horseState.corpses || {};
 
@@ -83,7 +83,7 @@ export class PeltController {
     if (!GetIsCarriablePelt(data.carriable)) return;
 
     const peltTexture = Citizen.invokeNative<number>('0x120376c23f019c6c', data.carriable, Citizen.pointerValueInt());
-    const horseState = Entity(data.parent).state;
+    const horseState = Entity(data.carrier).state;
 
     // console.log('Pelt with texture placed on horse', peltTexture);
 
@@ -91,7 +91,7 @@ export class PeltController {
 
     // console.log(`Horse ${horseEntity} last pelts:`, pelts);
 
-    pelts.push([data.provision, peltTexture]);
+    pelts.push([data.inventoryItemHash, peltTexture]);
 
     horseState.set('pelts', pelts, true);
     console.log('Pelts\n', pelts.join('\n '));
@@ -100,11 +100,11 @@ export class PeltController {
   }
 
   eventPickupCarriable(data: EventData['EVENT_PICKUP_CARRIABLE']) {
-    if (!data.fromEntity) {
+    if (!data.isPickupDoneFromParent) {
       return;
     }
 
-    const horseState = Entity(data.entity).state;
+    const horseState = Entity(data.carrierMount).state;
     const horseId = horseState.horseId;
     // console.log('Horse ID:', horseId);
     if (!horseId || !stableController.isUnstabled(horseId)) {
@@ -127,7 +127,7 @@ export class PeltController {
     }
 
     if (matchedSlots.length > 1) {
-      const isLeft = this.fromLeft(data.entity);
+      const isLeft = this.fromLeft(data.carrierMount);
       if (isLeft && matchedSlots.includes('5')) {
         //left corpses are slot 5
         delete corpses[5];
