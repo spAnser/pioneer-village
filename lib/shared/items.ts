@@ -138,8 +138,8 @@ const PVItems: Record<number, Inventory.Item> = {
     weaponHash: GetHashKey('WEAPON_KIT_CAMERA_ADVANCED'),
     weaponType: WeaponType.NO_AMMO,
   },
-  [GetHashKey('PV_WEAPON_KIT_DETECTOR')]: {
-    identifier: GetHashKey('PV_WEAPON_KIT_DETECTOR'),
+  [GetHashKey('PV_METAL_DETECTOR')]: {
+    identifier: GetHashKey('PV_METAL_DETECTOR'),
     image: 'metal-detector',
     name: 'Metal Detector',
     flags: ItemFlags.TOOL,
