@@ -32,16 +32,39 @@ export const EVENT_CATALOG = {
     fields: {
       rider: { index: 0, type: 'i' },
       mount: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
     },
   },
   EVENT_CALCULATE_LOOT: {
     group: 0,
     size: 26,
     fields: {
+      _unk0: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
       inventoryItemHash: { index: 2, type: 'i' },
       consumableActionHash: { index: 3, type: 'i' },
+      _unk4: { index: 4, type: 'i' },
+      _unk5: { index: 5, type: 'i' },
+      _unk6: { index: 6, type: 'i' },
+      _unk7: { index: 7, type: 'i' },
+      _unk8: { index: 8, type: 'i' },
+      _unk9: { index: 9, type: 'i' },
+      _unk10: { index: 10, type: 'i' },
+      _unk11: { index: 11, type: 'i' },
+      _unk12: { index: 12, type: 'i' },
+      _unk13: { index: 13, type: 'i' },
+      _unk14: { index: 14, type: 'i' },
+      _unk15: { index: 15, type: 'i' },
+      _unk16: { index: 16, type: 'i' },
+      _unk17: { index: 17, type: 'i' },
+      _unk18: { index: 18, type: 'i' },
+      _unk19: { index: 19, type: 'i' },
+      _unk20: { index: 20, type: 'i' },
+      _unk21: { index: 21, type: 'i' },
+      _unk22: { index: 22, type: 'i' },
       looter: { index: 23, type: 'i' },
       looted: { index: 24, type: 'i' },
+      _unk25: { index: 25, type: 'i' },
     },
   },
   EVENT_CALM_PED: {
@@ -71,21 +94,28 @@ export const EVENT_CATALOG = {
     fields: {
       carriable: { index: 0, type: 'i' },
       carryActionId: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
       vehicle: { index: 3, type: 'i' },
+      _unk4: { index: 4, type: 'i' },
+      _unk5: { index: 5, type: 'i' },
     },
   },
   EVENT_CARRIABLE_VEHICLE_STOW_START: {
     group: 0,
     size: 5,
     fields: {
+      _unk0: { index: 0, type: 'i' },
       carriable: { index: 1, type: 'i' },
       vehicle: { index: 2, type: 'i' },
+      _unk3: { index: 3, type: 'i' },
+      _unk4: { index: 4, type: 'i' },
     },
   },
   EVENT_CARRIABLE_VEHICLE_STOW_COMPLETE: {
     group: 0,
     size: 3,
     fields: {
+      _unk0: { index: 0, type: 'i' },
       vehicle: { index: 1, type: 'i' },
       isItemToAddCancelled: { index: 2, type: 'i' },
     },
@@ -109,6 +139,8 @@ export const EVENT_CATALOG = {
     size: 3,
     fields: {
       challengeRewardHash: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
     },
   },
   EVENT_CONTAINER_INTERACTION: {
@@ -117,6 +149,7 @@ export const EVENT_CATALOG = {
     fields: {
       searcher: { index: 0, type: 'i' },
       searched: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
       isContainerClosed: { index: 3, type: 'i' },
     },
   },
@@ -135,6 +168,11 @@ export const EVENT_CATALOG = {
     size: 9,
     fields: {
       entity: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
+      _unk3: { index: 3, type: 'i' },
+      _unk4: { index: 4, type: 'i' },
+      _unk5: { index: 5, type: 'i' },
       x: { index: 6, type: 'f' },
       y: { index: 7, type: 'f' },
       z: { index: 8, type: 'f' },
@@ -149,7 +187,7 @@ export const EVENT_CATALOG = {
       weaponHash: { index: 2, type: 'i' },
       ammoHash: { index: 3, type: 'i' },
       damage: { index: 4, type: 'f' },
-      // ?
+      _unk5: { index: 5, type: 'i' },
       x: { index: 6, type: 'f' },
       y: { index: 7, type: 'f' },
       z: { index: 8, type: 'f' },
@@ -164,7 +202,7 @@ export const EVENT_CATALOG = {
       weaponHash: { index: 2, type: 'i' },
       ammoHash: { index: 3, type: 'i' },
       damage: { index: 4, type: 'f' },
-      // ?
+      _unk5: { index: 5, type: 'i' },
       x: { index: 6, type: 'f' },
       y: { index: 7, type: 'f' },
       z: { index: 8, type: 'f' },
@@ -177,6 +215,7 @@ export const EVENT_CATALOG = {
       victim: { index: 0, type: 'i' },
       damager: { index: 1, type: 'i' },
       weaponHash: { index: 2, type: 'i' },
+      _unk3: { index: 3, type: 'i' },
     }
   },
   EVENT_ENTITY_EXPLOSION: {
@@ -184,6 +223,7 @@ export const EVENT_CATALOG = {
     size: 6,
     fields: {
       pedOrigin: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
       weaponHash: { index: 2, type: 'i' },
       x: { index: 3, type: 'f' },
       y: { index: 4, type: 'f' },
@@ -196,6 +236,7 @@ export const EVENT_CATALOG = {
     fields: {
       hogtiedEntity: { index: 0, type: 'i' },
       hogtierEntity: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
     }
   },
   EVENT_HEADSHOT_BLOCKED_BY_HAT: {
@@ -210,7 +251,9 @@ export const EVENT_CATALOG = {
     group: 0,
     size: 4,
     fields: {
+      _unk0: { index: 0, type: 'i' },
       tutorialFlagHash: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
       inventoryItemHash: { index: 3, type: 'i' },
     },
   },
@@ -245,6 +288,7 @@ export const EVENT_CATALOG = {
     group: 0,
     size: 2,
     fields: {
+      _unk0: { index: 0, type: 'i' },
       inventoryItemHash: { index: 1, type: 'i' },
     },
   },
@@ -294,6 +338,7 @@ export const EVENT_CATALOG = {
     size: 3,
     fields: {
       playerPed: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
       entity: { index: 2, type: 'i' },
     },
   },
@@ -335,8 +380,10 @@ export const EVENT_CATALOG = {
     fields: {
       rider: { index: 0, type: 'i' },
       mount: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
       overspurCount: { index: 3, type: 'i' },
       maxOverspurCount: { index: 4, type: 'i' },
+      _unk5: { index: 5, type: 'i' },
     },
   },
   EVENT_OBJECT_INTERACTION: {
@@ -347,7 +394,12 @@ export const EVENT_CATALOG = {
       interactionEntity: { index: 1, type: 'i' },
       inventoryItemHash: { index: 2, type: 'i' },
       inventoryItemQuantity: { index: 3, type: 'i' },
+      _unk4: { index: 4, type: 'i' },
+      _unk5: { index: 5, type: 'i' },
+      _unk6: { index: 6, type: 'i' },
+      _unk7: { index: 7, type: 'i' },
       scenarioPointId: { index: 8, type: 'i' },
+      _unk9: { index: 9, type: 'i' },
     },
   },
   EVENT_PED_ANIMAL_INTERACTION: {
@@ -412,8 +464,11 @@ export const EVENT_CATALOG = {
     size: 8,
     fields: {
       pickupNameHash: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
       player: { index: 2, type: 'i' },
       pickupModelHash: { index: 3, type: 'i' },
+      _unk4: { index: 4, type: 'i' },
+      _unk5: { index: 5, type: 'i' },
       collectedQuantity: { index: 6, type: 'i' },
       inventoryItemHash: { index: 7, type: 'i' },
     },
@@ -449,6 +504,8 @@ export const EVENT_CATALOG = {
       player: { index: 0, type: 'i' },
       causePed: { index: 1, type: 'i' },
       hat: { index: 2, type: 'i' },
+      _unk3: { index: 3, type: 'i' },
+      _unk4: { index: 4, type: 'i' },
     },
   },
   EVENT_PLAYER_HORSE_AGITATED_BY_ANIMAL: {
@@ -457,6 +514,8 @@ export const EVENT_CATALOG = {
     fields: {
       horse: { index: 0, type: 'i' },
       agitatedAnimal: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
+      _unk3: { index: 3, type: 'i' },
     },
   },
   EVENT_PLAYER_MOUNT_WILD_HORSE: {
@@ -471,11 +530,14 @@ export const EVENT_CATALOG = {
     size: 10,
     fields: {
       promptTypeId: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
       targetEntity: { index: 2, type: 'i' },
+      _unk3: { index: 3, type: 'i' },
       x: { index: 4, type: 'f' },
       y: { index: 5, type: 'f' },
       z: { index: 6, type: 'f' },
       discoverableEntityTypeId: { index: 7, type: 'i' },
+      _unk8: { index: 8, type: 'i' },
       kitEmoteActionHash: { index: 9, type: 'i' },
     },
   },
@@ -483,6 +545,7 @@ export const EVENT_CATALOG = {
     group: 0,
     size: 2,
     fields: {
+      _unk0: { index: 0, type: 'i' },
       ranOverPed: { index: 1, type: 'i' },
     },
   },
@@ -499,6 +562,8 @@ export const EVENT_CATALOG = {
     group: 0,
     size: 3,
     fields: {
+      _unk0: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
       carriable: { index: 2, type: 'i' },
     },
   },
@@ -521,6 +586,7 @@ export const EVENT_CATALOG = {
     size: 2,
     fields: {
       statValueTypeHash: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
     },
   },
   EVENT_TRIGGERED_ANIMAL_WRITHE: {
@@ -564,6 +630,7 @@ export const EVENT_CATALOG = {
     size: 6,
     fields: {
       transactionId: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
       failed: { index: 2, type: 'i' },
       resultCode: { index: 3, type: 'i' },
       itemsAmount: { index: 4, type: 'i' },
@@ -583,6 +650,7 @@ export const EVENT_CATALOG = {
     size: 2,
     fields: {
       isDisbandingSuccessful: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
     },
   },
   EVENT_NETWORK_CREW_INVITE_RECEIVED: {
@@ -607,6 +675,7 @@ export const EVENT_CATALOG = {
     size: 2,
     fields: {
       leftCrewId: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
     },
   },
   EVENT_NETWORK_CREW_RANK_CHANGE: {
@@ -652,6 +721,7 @@ export const EVENT_CATALOG = {
       victimMissionEntity: { index: 27, type: 'i' },
       victimFleeing: { index: 28, type: 'i' },
       victimInCombat: { index: 29, type: 'i' },
+      _unk30: { index: 30, type: 'i' },
       isSuicide: { index: 31, type: 'i' },
     }
   },
@@ -714,6 +784,7 @@ export const EVENT_CATALOG = {
     fields: {
       victim: { index: 0, type: 'i' },
       attacker: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
     },
   },
   EVENT_NETWORK_LASSO_DETACH: {
@@ -767,6 +838,7 @@ export const EVENT_CATALOG = {
     group: 1,
     size: 3,
     fields: {
+      _unk0: { index: 0, type: 'i' },
       player: { index: 1, type: 'i' },
       pickupTypeHash: { index: 2, type: 'i' },
     },
@@ -776,6 +848,7 @@ export const EVENT_CATALOG = {
     size: 2,
     fields: {
       pickup: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
     },
   },
   EVENT_NETWORK_PLAYER_COLLECTED_PICKUP: {
@@ -796,6 +869,7 @@ export const EVENT_CATALOG = {
     fields: {
       collectedPickupNetworkId: { index: 0, type: 'i' },
       player: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
     },
   },
   EVENT_NETWORK_PLAYER_DROPPED_PORTABLE_PICKUP: {
@@ -804,6 +878,7 @@ export const EVENT_CATALOG = {
     fields: {
       collectedPickupNetworkId: { index: 0, type: 'i' },
       player: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
     },
   },
   EVENT_NETWORK_PLAYER_JOIN_SCRIPT: {
@@ -842,6 +917,10 @@ export const EVENT_CATALOG = {
     fields: {
       shooter: { index: 0, type: 'i' },
       weaponHash: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
+      _unk3: { index: 3, type: 'i' },
+      _unk4: { index: 4, type: 'i' },
+      _unk5: { index: 5, type: 'i' },
 
       // isn't shooter position, something like how close it was to entity bounds
       // not always set, only when the shot is close to an entity (ped/animal/vehicle) and the shot is a miss
@@ -985,6 +1064,7 @@ export const EVENT_CATALOG = {
     fields: {
       looter: { index: 0, type: 'i' },
       lootedVehicle: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
     },
   },
   EVENT_NETWORK_VEHICLE_UNDRIVABLE: {
@@ -993,6 +1073,7 @@ export const EVENT_CATALOG = {
     fields: {
       vehicle: { index: 0, type: 'i' },
       damager: { index: 1, type: 'i' },
+      _unk2: { index: 2, type: 'i' },
     },
   },
 
@@ -1002,6 +1083,7 @@ export const EVENT_CATALOG = {
     size: 2,
     fields: {
       scriptUID: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
     },
   },
   EVENT_SCENARIO_DESTROY_PROP: {
@@ -1009,6 +1091,7 @@ export const EVENT_CATALOG = {
     size: 2,
     fields: {
       scriptUID: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
     },
   },
   EVENT_SCENARIO_REMOVE_PED: {
@@ -1016,6 +1099,7 @@ export const EVENT_CATALOG = {
     size: 2,
     fields: {
       scriptUID: { index: 0, type: 'i' },
+      _unk1: { index: 1, type: 'i' },
     },
   },
 
