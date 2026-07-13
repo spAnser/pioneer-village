@@ -1,7 +1,7 @@
 // Client perspective - events received from various sources
 declare namespace ClientIn {
   interface FromServer {
-    ['gametime:sync']: (state: import('../shared/types').GameTimeState) => void;
+    ['gametime.sync']: (state: import('../shared/types').GameTimeState) => void;
   }
 }
 
