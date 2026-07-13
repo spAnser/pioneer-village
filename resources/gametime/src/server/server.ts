@@ -2,7 +2,7 @@ import { onClientCall } from '@lib/server';
 import { GameClock } from './clock';
 
 // How long an in-game day (24 hours) should take in real time
-const DAY_LENGTH_MINUTES = Number(GetConvar('GAMETIME_DAY_LENGTH_MINUTES', '1'));
+const DAY_LENGTH_MINUTES = Number(GetConvar('GAMETIME_DAY_LENGTH_MINUTES', '30'));
 
 // Drift-correction only — the client's own clock free-runs between syncs via
 // SetMillisecondsPerGameMinute, so this can be infrequent.
