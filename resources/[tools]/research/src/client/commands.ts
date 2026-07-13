@@ -109,33 +109,6 @@ RegisterCommand(
 );
 
 RegisterCommand(
-  'daytime',
-  (source: number, args: string[]) => {
-    const currentHour = GetClockHours();
-
-    const transitionTime = Math.round(lerp(1_000, 10_000, Math.abs(currentHour - 12) / 12));
-
-    console.log(currentHour, transitionTime);
-
-    NetworkClockTimeOverride(12, 0, 0, transitionTime, args[0] === 'true' || args[0] === '1');
-  },
-  false,
-);
-
-RegisterCommand(
-  'nighttime',
-  async (source: number, args: any[], rawCommand: string) => {
-    const currentHour = GetClockHours();
-
-    const transitionTime = Math.round(lerp(1_000, 5_000, currentHour / 12));
-    console.log(currentHour, transitionTime);
-
-    NetworkClockTimeOverride(0, 0, 0, transitionTime, args[0] === 'true' || args[0] === '1');
-  },
-  false,
-);
-
-RegisterCommand(
   'finalize',
   async (source: number, args: any[], rawCommand: string) => {
     // console.log({ source, args, rawCommand });
