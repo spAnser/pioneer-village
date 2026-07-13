@@ -1,7 +1,7 @@
 // Server perspective - events sent to various destinations
 declare namespace ServerOut {
   interface ToClient {
-    ['gametime:sync']: (state: import('../shared/types').GameTimeState) => void;
+    ['gametime.sync']: (state: import('../shared/types').GameTimeState) => void;
   }
 }
 

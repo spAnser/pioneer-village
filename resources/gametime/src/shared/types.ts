@@ -8,11 +8,13 @@ export interface GameTimeState {
   hour: number;
   minute: number;
   second: number;
-  dayLengthMinutes: number;
-  transitionMs: number
+  tickIntervalMs: number;
+  transitionMs: number;
 }
 
-export const GAMETIME_EVENTS = {
-  /** Routine periodic broadcast — clients snap/correct with no transition */
-  SYNC: 'gametime:sync',
-} as const;
+export const SECONDS_PER_DAY = 24 * 60 * 60;
+export const REAL_MINUTES_PER_DAY: number = 15;
+export const GAME_HOURS_PER_DAY: number = 24;
+export const MINUTES_PER_HOUR: number = 60;
+export const SECONDS_PER_MINUTE: number = 60;
+export const MILISECONDS_PER_SECOND: number = 1000;
