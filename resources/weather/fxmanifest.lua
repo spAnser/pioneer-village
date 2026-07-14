@@ -5,6 +5,10 @@ version '1.0.0'
 
 lua54 'yes'
 
+server_scripts {
+  "build/server.js",
+}
+
 client_scripts {
   "@rdr3-shared/client/rdr3_natives.js",
   "build/client.js",
