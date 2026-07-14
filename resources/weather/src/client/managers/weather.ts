@@ -109,6 +109,8 @@ export class ClientWeatherManager {
       if (weather) {
         console.log(`[Weather] Global override set to ${weather}`);
         const weatherType = weather as WeatherType;
+        this.setAllCellsToWeatherType(weatherType);
+        this.resetPlayerStatesToWeather(weatherType);
         this.transitionToWeather(weatherType, 0.0);
       } else {
         console.log('[Weather] Global override removed');
@@ -1110,6 +1112,22 @@ export class ClientWeatherManager {
 
   public getWeatherGrid(): BiomeWeatherGrid {
     return this.weatherGrid;
+  }
+
+  /**
+   * Reset all tracked players' transition state to settled at the given
+   * weather, clearing any in-flight approach/cross so a global override
+   * isn't fought by a stale transition target.
+   */
+  private resetPlayerStatesToWeather(weatherType: WeatherType): void {
+    for (const playerState of this.playerWeatherStates.values()) {
+      playerState.currentWeather = weatherType;
+      playerState.targetWeather = null;
+      playerState.targetNeighborCell = null;
+      playerState.previousCell = null;
+      playerState.transitionPhase = 'settled';
+      playerState.transitionPercent = 0.0;
+    }
   }
 
   public setAllCellsToWeatherType(weatherType: WeatherType): void {
