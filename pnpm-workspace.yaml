@@ -1,6 +1,7 @@
 packages:
   - 'resources/**/*'
   - 'socket'
+  - '!**/sessionmanager-rdr3' 
 allowBuilds:
   '@citizenfx/protobufjs': false
   bufferutil: false
