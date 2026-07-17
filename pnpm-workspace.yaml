@@ -1,0 +1,11 @@
+packages:
+  - 'resources/**/*'
+  - 'socket'
+allowBuilds:
+  '@citizenfx/protobufjs': false
+  bufferutil: false
+  canvas: true
+  core-js: false
+  ejs: false
+  esbuild: true
+  utf-8-validate: false

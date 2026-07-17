@@ -1,6 +1,6 @@
 import { and, eq, inArray, isNull, like, or } from 'drizzle-orm';
 import { Socket } from 'socket.io';
-import type { DefaultEventsMap } from 'socket.io/dist/typed-events';
+import type { DefaultEventsMap } from 'socket.io';
 
 import InventoryTypes from '../../../lib/shared/inventory-types';
 import PVItems from '../../../lib/shared/items';

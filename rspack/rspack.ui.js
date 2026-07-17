@@ -12,11 +12,12 @@ module.exports = () => ({
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
-  experiments: {
-    css: true,
-  },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        type: 'css/auto',
+      },
       {
         test: /\.(js|ts)$/,
         exclude: [/[\\/]node_modules[\\/]/, /[\\/]build[\\/]/],

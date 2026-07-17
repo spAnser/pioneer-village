@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "CC-BY-NC-SA-4.0",
   "scripts": {
-    "build": "ts-node src/socket.ts",
-    "watch": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node src/socket.ts\"",
+    "build": "tsx src/socket.ts",
+    "watch": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"tsx src/socket.ts\"",
     "prettier": "prettier src/**/*.{ts,tsx} --write"
   }
 }

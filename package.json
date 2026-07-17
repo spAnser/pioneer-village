@@ -6,13 +6,15 @@
   "data": {
     "serverVersion": "29586"
   },
+  "packageManager": "pnpm@11.5.0",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "download-server": "cd artifacts && node download.js",
-    "start": "./artifacts/29586/FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1491",
-    "watch": "lerna run watch --stream --parallel",
-    "build": "lerna run build --stream --parallel",
-    "build:socket": "lerna run build --stream --parallel --scope=socket",
-    "prettier": "lerna run prettier --stream --parallel",
+    "start": ".\\artifacts\\29586\\FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1491 --allow-fs-read",
+    "watch": "turbo watch watch --concurrency 120",
+    "build": "turbo build --concurrency 120",
+    "build:socket": "turbo build --concurrency 120 --filter=socket",
+    "prettier": "turbo prettier --concurrency 120",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
@@ -26,8 +28,8 @@
     "@babel/plugin-syntax-typescript": "^7.27.1",
     "@citizenfx/client": "2.0.29586-1",
     "@citizenfx/server": "2.0.29586-1",
-    "@rspack/cli": "^1.4.11",
-    "@rspack/core": "^1.4.11",
+    "@rspack/cli": "^2.1.0",
+    "@rspack/core": "^2.1.0",
     "@svgr/cli": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-prettier": "^8.1.0",
@@ -54,7 +56,6 @@
     "esbuild-loader": "^2.21.0",
     "fs-extra": "^11.1.0",
     "glob": "^8.0.3",
-    "lerna": "3.22.1",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.15",
     "prettier": "^3.5.3",
@@ -63,9 +64,10 @@
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.3",
     "three": "^0.179.1",
-    "ts-checker-rspack-plugin": "^1.1.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^6.0.3"
+    "ts-checker-rspack-plugin": "^1.5.2",
+    "tsx": "^4.19.2",
+    "turbo": "^2.10.5",
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "@nativewrappers/redm": "^0.0.103",
