@@ -112,6 +112,10 @@ declare function NewStateBag(name: string): StateBagInterface;
 declare function Entity(entity: number): EntityInterface;
 declare var GlobalState: StateBagInterface;
 declare function Player(entity: number | string): EntityInterface;
+declare var LocalPlayer: EntityInterface;
+declare function AddStateBagChangeHandler(keyFilter: string, bagFilter: string, handler: Function): number;
+declare function GetPlayerFromStateBagName(bagName: string): number;
+declare function GetEntityFromStateBagName(bagName: string): number;
 
 // @ts-ignore
 declare var exports: any;

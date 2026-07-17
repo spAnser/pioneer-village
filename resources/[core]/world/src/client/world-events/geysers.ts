@@ -164,7 +164,7 @@ AddStateBagChangeHandler(
 
 const geyserEject = async (name: string, coords: Vector3Format, force: number) => {
   const playerPed = PlayerPedId();
-  const playerCoords = Vector3.fromArray(GetEntityCoords(playerPed, true));
+  const playerCoords = Vector3.fromArray(GetEntityCoords(playerPed, true, false));
 
   await PVWorld.startFxAtCoords(name, true, GeyserDict, GeyserFx, coords);
   PVWorld.setFxEvolutions(name, {

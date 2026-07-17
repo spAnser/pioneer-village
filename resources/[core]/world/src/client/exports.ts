@@ -2,8 +2,17 @@ import { exports } from '@lib/client';
 
 import ptfxManager from './managers/ptfx-manager';
 
-export const startFxAtCoords: World.StartFxAtCoords = async (id, looped, dict, name, coords, rot, scale) => {
-  return ptfxManager.startFxAtCoords(id, looped, dict, name, coords, rot, scale);
+export const startFxAtCoords: World.StartFxAtCoords = async (
+  id,
+  looped,
+  dict,
+  name,
+  coords,
+  rot,
+  scale,
+  ignoreDistance = false,
+) => {
+  return ptfxManager.startFxAtCoords(id, looped, dict, name, coords, rot, scale, ignoreDistance);
 };
 
 export const startFxOnEntity: World.StartFxOnEntity = async (id, looped, dict, name, entity, offset, rot, scale) => {
