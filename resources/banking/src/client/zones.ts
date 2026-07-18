@@ -1,4 +1,4 @@
-import { addZone, onResourceInit, onResourceStart } from '@lib/client';
+import { addZone } from '@lib/client';
 
 import BankData from '../shared/data/bankData';
 import { ZonePrefix } from './config';
@@ -31,6 +31,10 @@ const registerBankZones = async () => {
 
 on('onResourceStart', (resourceName: string) => {
   if (resourceName === GetCurrentResourceName()) {
-    registerBankZones()
+    registerBankZones();
   }
+});
+
+onNet('onPlayerJoining', () => {
+  registerBankZones();
 });
