@@ -79,11 +79,12 @@ export const spawnTeller = async (bankId: Bank.Id): Promise<void> => {
     routine: [
       // { type: 'scenario', name: 'WORLD_HUMAN_VAL_BANKTELLER', duration: 10_000 },
       { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'counter_loop', duration: 15_000, flags: 1 },
-      { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'idle_c', duration: 15_000, flags: 1 },
-      { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'idle_b', duration: 15_000, flags: 1 },
+      
       // Note: Disabled for now, as these animations cause the ped to slowly drift from there original position/
       // will need to create some sort of re-centering routine type to ensure npc stays at desired location over time.
       // { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'enter_counter', duration: 3_000, flags: 1 },
+      // { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'idle_c', duration: 15_000, flags: 1 },
+      // { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'idle_b', duration: 15_000, flags: 1 },
       // { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'idle_a', duration: 15_000, flags: 1 },
       // { type: 'anim',     dict: 'script_proc@robberies@bank@valbank_counter', anim: 'exit_counter', duration: 1_200, flags: 1 },
       // { type: 'speech',   ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'UNAUTHORIZED_AREA', params: 'speech_params_force' },
