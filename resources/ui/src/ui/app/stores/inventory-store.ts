@@ -3,6 +3,8 @@ import { Socket } from 'socket.io-client';
 import { clamp } from '@lib/math';
 import { LoadResourceJson, emitClient, onClient, onClientCall } from '@lib/ui';
 
+import notificationStore from './notification-store';
+
 // Store state interface matching the component's state
 interface InventoryState {
   show: boolean;
@@ -344,6 +346,12 @@ class InventoryStore {
           emitClient('inventory.clothing-change', Object.values(inventory.items));
         }
 
+        // Resync ped weapons/props when items enter or leave the main or clothing inventory
+        // (e.g. dropping a holstered weapon into another inventory must remove it from the ped)
+        if (moveData.identifier === this.state.mainInventory || moveData.identifier === `clothing:${this.state.characterId}`) {
+          this.resyncPedWeapons(inventories);
+        }
+
         // Auto-close target inventory if the container item was moved by another player
         if (this.state.targetContainerItemId) {
           const containerItemId = this.state.targetContainerItemId;
@@ -383,6 +391,10 @@ class InventoryStore {
 
       this.requests.delete(failData.requestId);
       const { sourceIdentifier, oldSlot, targetIdentifier, newSlot } = request;
+
+      if (failData.reason) {
+        notificationStore.notifyError(failData.reason);
+      }
 
       if (failData.requestType === 'move') {
         const inventories = new Map(this.state.inventories);
@@ -657,6 +669,15 @@ class InventoryStore {
 
     this.updateState({ inventories });
     this.computeInventoryWeight();
+
+    if (
+      sourceIdentifier === this.state.mainInventory ||
+      sourceIdentifier === `clothing:${this.state.characterId}` ||
+      targetIdentifier === this.state.mainInventory ||
+      targetIdentifier === `clothing:${this.state.characterId}`
+    ) {
+      this.resyncPedWeapons(inventories);
+    }
   }
 
   // Stack items
@@ -730,6 +751,15 @@ class InventoryStore {
     }
 
     this.updateState({ inventories });
+
+    if (
+      sourceIdentifier === this.state.mainInventory ||
+      sourceIdentifier === `clothing:${this.state.characterId}` ||
+      targetIdentifier === this.state.mainInventory ||
+      targetIdentifier === `clothing:${this.state.characterId}`
+    ) {
+      this.resyncPedWeapons(inventories);
+    }
   }
 
   // Drop an item
@@ -759,6 +789,10 @@ class InventoryStore {
       inventories.set(identifier, { ...inventory, items: updatedItems });
       this.updateState({ inventories });
       this.computeInventoryWeight();
+
+      if (identifier === this.state.mainInventory || identifier === `clothing:${this.state.characterId}`) {
+        this.resyncPedWeapons(inventories);
+      }
     }
 
     this.requestId++;
@@ -800,6 +834,15 @@ class InventoryStore {
     for (const element of draggedElements) {
       element.classList.remove('dragged-source');
     }
+  }
+
+  // Resync ped weapons/props against the current main + clothing inventory contents
+  // (e.g. dropping/moving a holstered weapon out of inventory must remove it from the ped)
+  private resyncPedWeapons(inventories: Map<string, UI.Inventory.LoadData>): void {
+    const mainInv = inventories.get(this.state.mainInventory);
+    if (!mainInv) return;
+    const clothingInv = inventories.get(`clothing:${this.state.characterId}`);
+    emitClient('inventory.main-inventory', mainInv, clothingInv);
   }
 
   // Compute inventory weights

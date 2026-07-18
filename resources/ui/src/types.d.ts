@@ -440,6 +440,7 @@ declare namespace UI.Inventory {
     identifier: string;
     requestId: number;
     requestType: RequestType;
+    reason?: string;
   }
 
   type MoveOrFailData = MoveData | SuccessFailData;

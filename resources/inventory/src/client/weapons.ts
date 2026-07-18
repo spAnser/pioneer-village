@@ -107,6 +107,7 @@ const LATERN_HASHES = [
   GetHashKey('WEAPON_MELEE_LANTERN'),
   GetHashKey('WEAPON_MELEE_DAVY_LANTERN'),
   GetHashKey('WEAPON_MELEE_LANTERN_ELECTRIC'),
+  GetHashKey('PV_MELEE_LANTERN_HALLOWEEN'),
 ];
 
 on('inventory:client:toggle_weapon', async (item: Inventory.ItemWeapon, itemData?: UI.Inventory.ItemData) => {
@@ -114,20 +115,44 @@ on('inventory:client:toggle_weapon', async (item: Inventory.ItemWeapon, itemData
   const shouldEquipNow = IsFirstPersonCameraActive(false, false, false) || LATERN_HASHES.includes(item.weaponHash);
   const [hasMainHand, currentWeapon] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
   const [hasOffHand, currentWeaponOffhand] = GetCurrentPedWeapon(playerPed, false, AttachPoint.OffHand, false);
-  console.log('toggle_weapon', currentWeapon, currentWeaponOffhand);
+  console.log(
+    'toggle_weapon',
+    'item.weaponHash',
+    item.weaponHash >>> 0,
+    'currentWeapon',
+    currentWeapon >>> 0,
+    'currentWeaponOffhand',
+    currentWeaponOffhand >>> 0,
+  );
 
   if (currentWeapon >>> 0 === item.weaponHash >>> 0) {
+    console.log('toggle_weapon: unequipping from main+off hand');
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.MainHand, false, false);
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.OffHand, false, false);
   } else if (currentWeaponOffhand >>> 0 === item.weaponHash >>> 0) {
+    console.log('toggle_weapon: unequipping from off hand');
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.OffHand, false, false);
   } else {
     // TODO: Handle Thrown Weapons
-    if (!HasPedGotWeapon(playerPed, item.weaponHash, false)) {
-      GiveWeaponToPed(playerPed, item.weaponHash, 0, false, true, 0, false, 0.5, 1.0, 752097756, false, 0.0, false);
+    const hasWeapon = HasPedGotWeapon(playerPed, item.weaponHash, false);
+    console.log('toggle_weapon: equipping, hasWeapon=', hasWeapon);
+    if (!hasWeapon) {
+      const gaveWeapon = GiveWeaponToPed(playerPed, item.weaponHash, 0, false, true, 0, false, 0.5, 1.0, 752097756, false, 0.0, false);
+      console.log('toggle_weapon: GiveWeaponToPed result=', gaveWeapon);
     }
 
-    SetCurrentPedWeapon(playerPed, item.weaponHash, shouldEquipNow, 0, false, false);
+    const setResult = SetCurrentPedWeapon(playerPed, item.weaponHash, shouldEquipNow, 0, false, false);
+    const [, weaponAfterSet] = GetCurrentPedWeapon(playerPed, false, AttachPoint.MainHand, false);
+    console.log(
+      'toggle_weapon: SetCurrentPedWeapon result=',
+      setResult,
+      'weaponAfterSet=',
+      weaponAfterSet >>> 0,
+      'matchesItem=',
+      (weaponAfterSet >>> 0) === (item.weaponHash >>> 0),
+      'hasWeaponNow=',
+      HasPedGotWeapon(playerPed, item.weaponHash, false),
+    );
 
     const oilColor = (itemData?.metadatas[0] as Inventory.LanternMetadata | undefined)?.oilColor;
     if (oilColor) {
