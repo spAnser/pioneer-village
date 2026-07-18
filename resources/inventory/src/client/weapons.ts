@@ -99,7 +99,7 @@
 //         end
 //     end
 // end)
-import { PVGame } from '@lib/client';
+import { PVGame, setLanternOilColor } from '@lib/client';
 import { AttachPoint } from '@lib/flags';
 import { Delay } from '@lib/functions';
 
@@ -167,7 +167,7 @@ on('inventory:client:toggle_weapon', async (item: Inventory.ItemWeapon, itemData
         await Delay(100);
       }
       if (weaponEntity) {
-        SetLightsColorForEntity(weaponEntity, oilColor[0], oilColor[1], oilColor[2]);
+        setLanternOilColor(playerPed, AttachPoint.MainHand, oilColor);
       }
     }
   }

@@ -1,4 +1,4 @@
-import { PVGame } from '@lib/client';
+import { PVGame, setLanternOilColor } from '@lib/client';
 import { emitSocket } from '@lib/client/comms/ui';
 import { AttachPoint } from '@lib/flags';
 import PVItems from '@lib/shared/items';
@@ -34,11 +34,7 @@ on('inventory:client:apply_lantern_oil', (oilItem: Inventory.ItemLanternOil, oil
     return;
   }
 
-  const lanternEntity = GetCurrentPedWeaponEntityIndex(playerPed, attachPoint);
-  if (lanternEntity) {
-    const [red, green, blue] = oilItem.oilColor;
-    SetLightsColorForEntity(lanternEntity, red, green, blue);
-  }
+  setLanternOilColor(playerPed, attachPoint, oilItem.oilColor);
 
   const oilItemId = oilItemData.ids[0];
   emitSocket('inventory.apply-lantern-oil', oilItemId, lanternIdentifier);

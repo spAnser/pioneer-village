@@ -1,4 +1,4 @@
-import { PVGame } from '@lib/client';
+import { PVGame, setLanternOilColor } from '@lib/client';
 import { AttachPoint } from '@lib/flags';
 import { Delay } from '@lib/functions';
 import { BODY_CATEGORIES } from '@lib/shared/body-categories';
@@ -203,7 +203,7 @@ class ComponentManager {
             }
           }
           if (weaponEntity) {
-            SetLightsColorForEntity(weaponEntity, oilColor[0], oilColor[1], oilColor[2]);
+            setLanternOilColor(playerPed, AttachPoint.TempLantern, oilColor);
           }
         }
       }
