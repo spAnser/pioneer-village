@@ -1,7 +1,9 @@
-import { PVCustomization, PVGame, emitUI, onUI } from '@lib/client';
+import { PVCustomization, PVGame, emitUI, initLanternLightSync, onUI } from '@lib/client';
 import { Delay } from '@lib/functions';
 import InventoryTypes from '@lib/shared/inventory-types';
 import PVItems from '@lib/shared/items';
+
+initLanternLightSync();
 
 import './events';
 import './exports';

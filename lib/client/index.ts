@@ -5,6 +5,7 @@ export * from './resources';
 export * from './game';
 export * from './events';
 export { PedManager } from './ped-manager';
+export { setLanternOilColor, initLanternLightSync } from './lantern-light';
 export type { PedConfig, PedSpeechConfig, RoutineStep, PedReactionConfig, ReactionSpeech } from './ped-manager';
 
 // @ts-ignore
