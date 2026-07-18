@@ -2,11 +2,11 @@ import { emitSocket } from '@lib/server';
 import { LogToUI } from '@lib/server/comms/client';
 
 
-const INTEREST_INTERVAL_MS = 60 * 60 * 1000;           // 1 hour
-const VAULT_INTEREST_INTERVAL_MS = 5 * 60 * 1000;      // 5 minutes
-const REPUTATION_INTERVAL_MS = 6 * 60 * 60 * 1000;     // 6 hours
+const INTEREST_INTERVAL_MS = 60 * 60 * 1000;            // 1 hour
+const VAULT_INTEREST_INTERVAL_MS = 5 * 60 * 1000;       // 5 minutes
+const REPUTATION_INTERVAL_MS = 6 * 60 * 60 * 1000;      // 6 hours
 const TRANSFER_CHECK_MS = 60 * 1000;                    // 1 minute
-const LOAN_INTEREST_INTERVAL_MS = 24 * 60 * 60 * 1000; // 24 hours
+const LOAN_INTEREST_INTERVAL_MS = 24 * 60 * 60 * 1000;  // 24 hours
 const SAFETY_BOX_CHECK_MS = 60 * 60 * 1000;             // 1 hour
 const MINERAL_PRICE_RECOVERY_MS = 60 * 60 * 1000;       // 1 hour
 

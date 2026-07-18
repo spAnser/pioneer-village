@@ -1,4 +1,4 @@
-import { addZone, onResourceInit } from '@lib/client';
+import { addZone, onResourceInit, onResourceStart } from '@lib/client';
 
 import BankData from '../shared/data/bankData';
 import { ZonePrefix } from './config';
@@ -29,4 +29,8 @@ const registerBankZones = async () => {
   }
 };
 
-onResourceInit('zones', registerBankZones);
+on('onResourceStart', (resourceName: string) => {
+  if (resourceName === GetCurrentResourceName()) {
+    registerBankZones()
+  }
+});

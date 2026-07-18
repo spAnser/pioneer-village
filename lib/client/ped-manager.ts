@@ -15,7 +15,6 @@ const playAmbientSpeech = (entity: number, ref: string, name: string, params: st
 export interface PedSpeechConfig {
   ref: string;
   names: string[];
-  lines: string[];
   params: string;
   /** [minMs, maxMs] random interval between speech lines */
   intervalMs: [number, number];
@@ -277,8 +276,8 @@ export class PedManager {
                 managed.handle,
                 step.dict,
                 step.anim,
-                8.0,
-                -8.0,
+                1.0,
+                -1.0,
                 step.duration ?? -1,
                 step.flags ?? 0,
                 0,

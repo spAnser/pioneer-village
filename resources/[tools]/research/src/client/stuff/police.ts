@@ -5,8 +5,6 @@ import {
   PVJobs,
   PVKeymapper,
   PVTarget,
-  PedManager,
-  type PedReactionConfig,
   onResourceStop,
 } from '@lib/client';
 import { AnimFlag, AttachPoint, PedConfigFlag } from '@lib/flags';
@@ -403,75 +401,3 @@ RegisterCommand(
   },
   false,
 );
-
-const manager = PedManager.getInstance();
-
-(async () => {
-  const ped = await manager.spawn('my-ped', {
-    model: 's_m_m_bankclerk_01',
-    position: { x: -308.09, y: 773.89, z: 117.7, w: 9.3 },
-    freeze: true,
-    invincible: true,
-    blockEvents: true,
-    missionEntity: true,
-    // Ambient speech fires on a random interval independently of the routine.
-    speech: {
-      ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
-      names: ['HOWS_IT_GOING', 'WELCOME'],
-      lines: ['HOWS_IT_GOING', 'WELCOME'],
-      params: 'speech_params_standard',
-      intervalMs: [15_000, 45_000],
-    },
-    // Routine loops through all step types as a demonstration:
-    //   scenario — teller works at the counter
-    //   anim     — does key unlock animation
-    //   speech   — one-shot voiced line mid-routine
-    //   wait     — brief pause before the next cycle
-    routine: [
-      { type: 'scenario', name: 'WORLD_HUMAN_VAL_BANKTELLER', duration: 10_000 },
-      // { type: 'anim', dict: 'script_common@jail_cell@unlock@key', anim: 'action_mp_female', duration: 2_000 },
-      // {
-      //   type: 'speech',
-      //   ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
-      //   name: 'UNAUTHORIZED_AREA',
-      //   params: 'speech_params_force',
-      // },
-      // { type: 'wait', ms: 2_000 },
-    ],
-    reactions: [
-      // Teller reacts when they personally are attacked.
-      {
-        event: 'EVENT_ENTITY_DAMAGED',
-        entityField: 'attacked',
-        cooldownMs: 8_000,
-        lines: [
-          { ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'GENERIC_FRIGHTENED_HIGH', params: 'speech_params_force' },
-          { ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'LAW_THREAT', params: 'speech_params_force' },
-        ],
-        onReact: (pedHandle, data) => {
-          // e.g. trigger a flee animation, send a server event, update UI, etc.
-          console.log(`ped ${pedHandle} was hit:`, data);
-        },
-      },
-      // Teller reacts to any violence happening nearby (any entity damaged).
-      {
-        event: 'EVENT_SHOT_FIRED_BULLET_IMPACT',
-        cooldownMs: 15_000,
-        lines: [
-          { ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'GET_AWAY_FROM_ME', params: 'speech_params_force_shouted' },
-          {
-            ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
-            name: 'GENERIC_SHOCKED_MED',
-            params: 'speech_params_force_shouted',
-          },
-        ],
-        onReact: (pedHandle, data) => {
-          // e.g. trigger a flee animation, send a server event, update UI, etc.
-          console.log(`ped ${pedHandle} was hit:`, data);
-        },
-      },
-    ] satisfies PedReactionConfig[],
-  });
-
-  console.log('bank ped', ped);
-})();

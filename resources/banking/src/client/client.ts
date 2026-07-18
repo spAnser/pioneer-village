@@ -7,7 +7,6 @@ import bankController from './controllers/bank-controller';
 import './events';
 import './minerals';
 import { despawnTeller, despawnTellers, spawnTeller } from './tellers';
-import './targets';
 import './zones';
 
 onUICall('banking.open-safety-box-inventory', async (bankId: Bank.Id) => {
