@@ -30,6 +30,7 @@ interface ResultAsObject {}
 //   | ResultAsObject;
 
 interface StateBagInterface {
+  // @ts-ignore
   [key: string]: any;
   set(key: string, value: any, replicated: boolean): void;
 }
@@ -70,6 +71,7 @@ interface CitizenInterface {
   makeRefFunction(refFunction: Function): string;
 }
 
+// @ts-ignore
 declare var Citizen: CitizenInterface;
 
 declare function addRawEventListener(eventName: string, callback: Function): void;
@@ -116,6 +118,8 @@ declare var LocalPlayer: EntityInterface;
 declare function AddStateBagChangeHandler(keyFilter: string, bagFilter: string, handler: Function): number;
 declare function GetPlayerFromStateBagName(bagName: string): number;
 declare function GetEntityFromStateBagName(bagName: string): number;
+declare function GetCurrentResourceName(): string;
+declare function LoadResourceFile(resourceName: string, fileName: string): string;
 
 // @ts-ignore
 declare var exports: any;

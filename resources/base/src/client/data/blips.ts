@@ -1,8 +1,9 @@
 import { BlipModifiers, BlipSprites } from '@lib/shared/blips';
 import PostOffices from '@lib/shared/post-offices';
 
-const postOfficeBlips: Omit<Base.BlipData, 'id'>[] = PostOffices.map((po) => ({
+const postOfficeBlips: Base.BlipDataWithoutId[] = PostOffices.map((po) => ({
   label: 'Post Office',
+  type: 'sprite',
   sprite: BlipSprites.POST_OFFICE,
   coords: po.coords,
 }));
@@ -12,66 +13,78 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
    * Valentine
    */
   {
+    type: 'sprite',
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -338.99, y: 767.6321, z: 115.5632 },
   },
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -175.2594, y: 631.9643, z: 113.0896 },
   },
   {
+    type: 'sprite',
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
     coords: { x: -317.424, y: 762.619, z: 117.436 },
   },
   {
+    type: 'sprite',
     label: 'General Store',
     sprite: BlipSprites.SHOP_STORE,
     coords: { x: -324.0513, y: 803.7102, z: 116.8817 },
   },
   {
+    type: 'sprite',
     label: 'Gunsmith',
     sprite: BlipSprites.SHOP_GUNSMITH,
     coords: { x: -281.0177, y: 778.9867, z: 118.504 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: -309.6799, y: 805.6077, z: 118.9795 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: -242.4913, y: 769.6014, z: 118.085 },
   },
   {
+    type: 'sprite',
     label: 'Barber',
     sprite: BlipSprites.SHOP_BARBER,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: -306.615, y: 813.569, z: 119.0 },
   },
   {
+    type: 'sprite',
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: -325.9, y: 806.1, z: 117.9 },
   },
   {
+    type: 'sprite',
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
     coords: { x: -307.679, y: 778.314, z: 118.7042 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -368.7, y: 786.9, z: 116.2 },
   },
   {
+    type: 'sprite',
     label: 'Doctor',
     sprite: BlipSprites.SHOP_DOCTOR,
     modifiers: [BlipModifiers.TEAL],
@@ -80,288 +93,340 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
 
   // -=================
   {
+    type: 'sprite',
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: 2540.75, y: 802.25, z: 76.37 },
   },
   {
+    type: 'sprite',
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -1752.9288, y: -392.7518, z: 155.2471 },
   },
   {
+    type: 'sprite',
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -753.337, y: -1284.7538, z: 42.5011 },
   },
   {
+    type: 'sprite',
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
     coords: { x: -811.9281, y: -1278.3322, z: 43.6377 },
   },
   {
+    type: 'sprite',
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -5510.3481, y: -2946.9421, z: -2.8951 },
   },
   {
+    type: 'sprite',
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: 2819.4917, y: -1331.3773, z: 45.5076 },
   },
   {
+    type: 'sprite',
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
     coords: { x: 2645.4055, y: -1295.6056, z: 52.2461 },
   },
   {
+    type: 'sprite',
     label: 'Gunsmith',
     sprite: BlipSprites.SHOP_GUNSMITH,
     coords: { x: 2946.45, y: 1319.47, z: 44.82 },
   },
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -732.5, y: -1226.7, z: 44.8 },
   },
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: 1230.3, y: -1298.7, z: 76.0 },
   },
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -3729.1, y: -2601.4, z: -13.9 },
   },
   {
+    type: 'sprite',
     // Annesburg
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: 2933.088, y: 1282.3311, z: 44.652 },
   },
   {
+    type: 'sprite',
     // Annesburg
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
     coords: { x: 2951.886, y: 1335.001, z: 44.452 },
   },
   {
+    type: 'sprite',
     // Rhodes
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
     coords: { x: 1336.573, y: -1378.813, z: 84.291 },
   },
   {
+    type: 'sprite',
     // St.Denis
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
     coords: { x: 2630.503, y: -1223.306, z: 59.587 },
   },
   {
+    type: 'sprite',
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
     coords: { x: 1294.1935, y: -1300.2317, z: 77.0401 },
   },
   {
+    type: 'sprite',
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
     coords: { x: -3665.6079, y: -2623.0203, z: -13.5551 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: 1340.2, y: -1374.7, z: 80.5 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: 2632.9, y: -1224.4, z: 53.4 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: 2794.4, y: -1170.4, z: 48.0 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: 1448.9, y: 371.8, z: 89.9 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: 2947.8, y: 523.6, z: 45.4 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: -815.1, y: -1319.3, z: 43.7 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: -3705.3, y: -2597.9, z: -13.3 },
   },
   {
+    type: 'sprite',
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
     coords: { x: -5513.9, y: -2913.8, z: -1.7 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -866.5, y: -1366.9, z: 43.5 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -1819.4, y: -561.9, z: 156.1 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: 1209.2, y: -192.9, z: 101.4 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: 2503.2, y: -1451.8, z: 46.3 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: 2968.7, y: 796.4, z: 51.4 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -5520.9, y: -3044.5, z: -2.4 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: 1434.199, y: -1294.95, z: 77.823 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -1338.55, y: 2399.3, z: 306.985 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -2217.875, y: 733.65, z: 123.08 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -2407.496, y: -2376.35, z: 61.176 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -1415.363, y: -2197.88, z: 43.395 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -629.495, y: -64.463, z: 82.933 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -861.817, y: 336.34, z: 96.424 },
   },
   {
+    type: 'sprite',
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -3709.043, y: -2553.437, z: -14.64 },
   },
   {
+    type: 'sprite',
     label: 'Barber',
     sprite: BlipSprites.SHOP_BARBER,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: -815.35, y: -1367.875, z: 43.8 },
   },
   {
+    type: 'sprite',
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: -766.3, y: -1293.2, z: 43.9 },
   },
   {
+    type: 'sprite',
     label: 'Barber',
     sprite: BlipSprites.SHOP_BARBER,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: 2655.375, y: -1181.1, z: 53.3 },
   },
   {
+    type: 'sprite',
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: 2552.6, y: -1168.5, z: 53.7 },
   },
   {
+    type: 'sprite',
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: -1792.2, y: -391.8, z: 160.3 },
   },
   {
+    type: 'sprite',
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: 1323.5, y: -1292.0, z: 77.1 },
   },
   {
+    type: 'sprite',
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: -5481.3, y: -2935.0, z: -0.3 },
   },
   {
+    type: 'sprite',
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
     coords: { x: -1298.5, y: 396.8, z: 95.5 },
   },
   {
+    type: 'sprite',
     label: 'Sheriff',
     sprite: BlipSprites.AMB_SHERIFF,
     coords: { x: 2907.331, y: 1311.787, z: 44.938 },
   },
   {
+    type: 'sprite',
     label: 'Poker',
     sprite: BlipSprites.MG_POKER,
     coords: { x: 2718.1831, y: -1288.4312, z: 60.36 },
   },
   // St Dennis
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: 2747.800537, y: -1396.466431, z: 46.183098 },
   },
   // Wallace Station
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -1300.310913, y: 400.040833, z: 95.452156 },
   },
   // <editor-fold desc="Riggs Station">
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -1094.323608, y: -577.707947, z: 82.409836 },
@@ -370,6 +435,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
 
   // <editor-fold desc="Emerald Station">
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: 1523.589111, y: 442.681946, z: 90.67852 },
@@ -378,6 +444,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
 
   // <editor-fold desc="Benedict Point">
   {
+    type: 'sprite',
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -5228.602051, y: -3468.348145, z: -20.569672 },

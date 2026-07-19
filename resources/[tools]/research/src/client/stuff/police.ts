@@ -13,6 +13,7 @@ import { AnimFlag, AttachPoint, PedConfigFlag } from '@lib/flags';
 import { EntityProofs } from '@lib/flags/entity-proofs';
 import { Delay } from '@lib/functions';
 import { Vector3 } from '@lib/math';
+import { BlipModifiers, BlipStyles, Sonars } from '@lib/shared/blips';
 
 let isWhistling = false;
 
@@ -23,7 +24,7 @@ const whistle = async (): Promise<void> => {
   isWhistling = true;
   const playerPed = PlayerPedId();
   const [ret, weaponHash] = GetCurrentPedWeapon(playerPed, false, 0, false);
-  SetCurrentPedWeapon(playerPed, GetHashKey('WEAPON_UNARMED'), true);
+  SetCurrentPedWeapon(playerPed, GetHashKey('WEAPON_UNARMED'), true, 0, false, false);
   const whistleObj = await PVGame.createObject('p_whistle01x', undefined, undefined, false);
   PVGame.attachEntityToBoneName(whistleObj, 'IK_R_HAND', undefined, new Vector3(-0.1, 0, 0), new Vector3(0, 90, 0));
   PVGame.taskPlayAnim({
@@ -40,7 +41,7 @@ const whistle = async (): Promise<void> => {
   PlaySoundFromEntity('POLICE_WHISTLE_SINGLE', playerPed, 'NBD1_Sounds', true, 0, 0);
   await Delay(1000);
   await PVBase.deleteEntity(whistleObj);
-  SetCurrentPedWeapon(playerPed, weaponHash, true);
+  SetCurrentPedWeapon(playerPed, weaponHash, true, 0, false, false);
   isWhistling = false;
 };
 
@@ -163,7 +164,7 @@ on('research:client:uncuff', async (entity: number) => {
 });
 
 on('research:client:arrest_entity', async (entity: number) => {
-  const coords = Vector3.fromArray(GetEntityCoords(entity, true));
+  const coords = Vector3.fromArray(GetEntityCoords(entity, true, true));
 
   const [rtn, z] = GetGroundZFor_3DCoord(coords.x, coords.y, coords.z, false);
 
@@ -475,3 +476,59 @@ const manager = PedManager.getInstance();
 
   console.log('bank ped', ped);
 })();
+/*
+const blipCoords = {
+  x: 0,
+  y: 800,
+  z: 120,
+};
+
+PVBase.blipRegister('test-1', {
+  type: 'area',
+  coords: blipCoords,
+  label: 'Area',
+  scale: [100, 150],
+  style: BlipStyles.MISSION,
+  modifiers: [BlipModifiers.OBJECTIVE],
+});
+
+PVBase.blipRegister('test-2', {
+  type: 'radius',
+  coords: Vector3.fromObject(blipCoords).add(new Vector3(66.6, -150, 0)),
+  label: 'Radius',
+  style: BlipStyles.MISSION,
+  modifiers: [BlipModifiers.RED],
+  scale: 100,
+});
+
+const volumeCylinder = CreateVolumeCylinder(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 100, 100, 1);
+SetVolumeCoords(volumeCylinder, blipCoords.x + 200, blipCoords.y + 200, blipCoords.z);
+SetVolumeScale(volumeCylinder, 100, 100, 1);
+
+PVBase.blipRegister('test-3', {
+  type: 'volume',
+  volume: volumeCylinder,
+  label: 'Volume Cylinder',
+  style: BlipStyles.MISSION,
+  modifiers: [BlipModifiers.RED],
+});
+
+const volumeAggregate = CreateVolumeAggregate();
+AddBoxVolumeToVolumeAggregate(volumeAggregate, -270.606, 827.282, 118.4249, 0.0, 0.0, 11.275, 80.0, 100.4, 86.6);
+AddBoxVolumeToVolumeAggregate(volumeAggregate, -235.442, 653.1498, 112.3099, 0.0, 0.0, 49.575, 44.4, 76.775, 50.0);
+AddBoxVolumeToVolumeAggregate(volumeAggregate, -236.9004, 797.5648, 121.6383, 0.0, 0.0, 17.55, 53.975, 105.5, 20.0);
+AddBoxVolumeToVolumeAggregate(volumeAggregate, -339.8, 829.675, 100.0, 0.0, 0.0, 14.975, 25.0, 75.0, 50.0);
+
+PVBase.blipRegister('test-4', {
+  type: 'volume',
+  volume: volumeAggregate,
+  label: 'Volume Aggregate',
+  style: BlipStyles.MISSION,
+  modifiers: [BlipModifiers.RED],
+});
+
+AllowSonarBlips(true);
+ForceSonarBlipsThisFrame();
+
+TriggerSonarBlip(Sonars.CONVERSATION, blipCoords.x, blipCoords.y, blipCoords.z);
+*/
