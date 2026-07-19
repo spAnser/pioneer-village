@@ -1,4 +1,4 @@
-import { PVGame, setLanternOilColor } from '@lib/client';
+import { PVGame } from '@lib/client';
 import { AttachPoint } from '@lib/flags';
 import { Delay } from '@lib/functions';
 import { BODY_CATEGORIES } from '@lib/shared/body-categories';
@@ -7,6 +7,7 @@ import { getWearableStateConfig } from '@lib/shared/wearable-states';
 
 import componentCategories from '../data/component-categories';
 import wearableStates from '../data/wearable-states';
+import { setLanternOilColor } from '../misc/lantern-oils';
 import { paletteManager } from './palette-manager';
 
 const BASE_HASH = GetHashKey('BASE');

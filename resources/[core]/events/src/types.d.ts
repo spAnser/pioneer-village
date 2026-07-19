@@ -5,6 +5,7 @@ declare namespace Events {
   // Extend this (here or via declaration merging from other resources) to add keys.
   interface StateEventMap {
     applyForce: [number, number, number];
+    lanternOilColor: { attachPoint: number; oilColor: [number, number, number] };
   }
 
   // The set of known state keys, derived from the map.
@@ -32,6 +33,7 @@ declare namespace Events {
   type StateOpts<K extends StateName = StateName> = {
     callback: StateCallback<K>;
     includeClear?: boolean;
+    includeSelf?: boolean;
   };
 
   // The union of every key's opts, for heterogeneous storage (e.g. the manager's Map).

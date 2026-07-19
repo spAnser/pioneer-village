@@ -191,7 +191,7 @@ declare function GiveDelayedWeaponToPed(ped: Ped, weaponHash: Hash, ammoCount: n
    * GIVE_WEAPON_TO_PED
    * Gives the ped the weapon.
    * List: https://github.com/femga/rdr3_discoveries/blob/master/weapons/weapons.lua
-   * 
+   *
    * Params: p7 is 0.5f, and p8 is 1.0f. p11 and p12 are both 0 in R* Scripts
    * attachPoint: see SET_CURRENT_PED_WEAPON
    * addReason: see _ADD_AMMO_TO_PED
@@ -1539,7 +1539,7 @@ declare function GetWeaponDirt(weaponObject: number): number;
 /**
    * _GET_WEAPON_EMOTE_VARIATION
    * Returns weaponEmoteVariation
-   * 
+   *
    * WEAPON_EMOTE_VARIATION_INVALID = -2,
    * WEAPON_EMOTE_VARIATION_BASE,
    * WEAPON_EMOTE_VARIATION_A,
@@ -1939,7 +1939,7 @@ declare function RemoveAllPedAmmo(ped: Ped): void;
 /**
    * _REMOVE_AMMO_FROM_PED
    * removeReason must be REMOVE_REASON_USED, REMOVE_REASON_GIVEN, REMOVE_REASON_DROPPED or REMOVE_REASON_DEBUG, unless amount is -1
-   * 
+   *
    * removeReason: see REMOVE_WEAPON_FROM_PED
    *
    * @param {number} ped
@@ -1953,7 +1953,7 @@ declare function RemoveAmmoFromPed(ped: Ped, weaponHash: Hash, amount: number, r
 /**
    * _REMOVE_AMMO_FROM_PED_BY_TYPE
    * removeReason must be REMOVE_REASON_USED, REMOVE_REASON_GIVEN, REMOVE_REASON_DROPPED or REMOVE_REASON_DEBUG, unless amount is -1
-   * 
+   *
    * removeReason: see REMOVE_WEAPON_FROM_PED
    *
    * @param {number} ped

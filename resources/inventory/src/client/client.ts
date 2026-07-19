@@ -1,15 +1,12 @@
-import { PVCustomization, PVGame, emitUI, initLanternLightSync, onUI } from '@lib/client';
+import { PVCustomization, PVGame, emitUI, onUI } from '@lib/client';
 import { Delay } from '@lib/functions';
 import InventoryTypes from '@lib/shared/inventory-types';
 import PVItems from '@lib/shared/items';
-
-initLanternLightSync();
 
 import './events';
 import './exports';
 import './hats';
 import './keybinds';
-import './lantern-oil';
 import './targets';
 import './weapons';
 
@@ -106,7 +103,7 @@ const processItemData = (items: Record<string, UI.Inventory.ItemData>) => {
         continue;
       }
       const weapon = item.weaponHash;
-      if (!HasPedGotWeapon(playerPed, weapon, false)) {
+      if (!HasPedGotWeapon(playerPed, weapon, 0, false)) {
         GiveWeaponToPed(playerPed, weapon, 0, false, true, -1, false, 0.5, 1.0, 752097756, false, 0.0, false);
       }
     }

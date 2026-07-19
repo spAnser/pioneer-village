@@ -120,6 +120,15 @@ declare function GetPlayerFromStateBagName(bagName: string): number;
 declare function GetEntityFromStateBagName(bagName: string): number;
 declare function GetCurrentResourceName(): string;
 declare function LoadResourceFile(resourceName: string, fileName: string): string;
+declare function GetRegisteredCommands(): any;
+declare function GetResourceByFindIndex(findIndex: number): string;
+declare function GetResourceCommands(resource: string): any;
+declare function GetResourceKvpFloat(key: string): number;
+declare function GetResourceKvpInt(key: string): number;
+declare function GetResourceKvpString(key: string): string;
+declare function GetResourceMetadata(resourceName: string, metadataKey: string, index: number): string;
+declare function GetResourcePath(resourceName: string): string;
+declare function GetResourceState(resourceName: string): string;
 
 // @ts-ignore
 declare var exports: any;
