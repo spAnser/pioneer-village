@@ -4,31 +4,63 @@ declare interface ClientExports {
 
 declare namespace Base {
   type DoorData = [doorHash: number, modelHash: number, modelName: string, x: number, y: number, z: number];
-  type BlipData = {
-    id: number;
-    // type: 'sprite';
-    label: string;
-    sprite: number;
-    modifiers?: number[];
-    coords: Vector3Format;
-  };
-  // TODO: Implement other blip types like area, entity, etc.
-  // | {
-  //   id: number;
-  //   type: 'entity';
-  //   label: string;
-  //   color?: number;
-  //   entity: number;
-  // }
-  // | {
-  //   id: number;
-  //   type: 'area';
-  //   label: string;
-  //   scale?: number;
-  //   color?: number;
-  //   coords: Vector3Format;
-  // };
-  type BlipDataWithoutId = Omit<BlipData, 'id'>;
+  type BlipData =
+    | {
+        id: number;
+        type: 'sprite';
+        label: string;
+        sprite: string | number;
+        modifiers?: number[];
+        coords: Vector3Format;
+      }
+    | {
+        id: number;
+        type: 'entity';
+        label: string;
+        sprite: string | number;
+        modifiers?: number[];
+        entity: number;
+      }
+    | {
+        id: number;
+        type: 'pickup';
+        label: string;
+        sprite: string | number;
+        modifiers?: number[];
+        pickup: number;
+      }
+    | {
+        id: number;
+        type: 'radius';
+        style: string | number;
+        sprite?: string | number;
+        label: string;
+        modifiers?: number[];
+        coords: Vector3Format;
+        scale: number;
+      }
+    | {
+        id: number;
+        type: 'area';
+        label: string;
+        style: string | number;
+        sprite?: string | number;
+        modifiers?: number[];
+        coords: Vector3Format;
+        scale: [number, number];
+      }
+    | {
+        id: number;
+        type: 'volume';
+        label: string;
+        style: string | number;
+        sprite?: string | number;
+        volume: number;
+        modifiers?: number[];
+      };
+  type DistributiveOmit<T, K extends PropertyKey> = T extends unknown ? Omit<T, K> : never;
+
+  type BlipDataWithoutId = DistributiveOmit<BlipData, 'id'>;
 
   type getNetworkControlOfEntity = (entity: number) => Promise<void>;
   type deleteEntity = (entity: number, attached?: boolean) => void;

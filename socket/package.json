@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "CC-BY-NC-SA-4.0",
   "scripts": {
-    "build": "tsx src/socket.ts",
-    "watch": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"tsx src/socket.ts\"",
+    "build": "rspack --mode production",
+    "watch": "tsx watch src/socket.ts",
+    "typecheck": "tsc --noEmit -p src/tsconfig.json",
     "prettier": "prettier src/**/*.{ts,tsx} --write"
   }
 }

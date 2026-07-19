@@ -279,6 +279,7 @@ RegisterCommand(
       { x: 2895.893, y: 1650.213, z: 1000.863 },
       { x: 0, y: 0, z: 0 },
       2.0,
+      true,
     );
 
     await Delay(60e3);

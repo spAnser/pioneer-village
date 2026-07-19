@@ -1,4 +1,4 @@
-import { PVGame, PVWorld, addZone } from '@lib/client';
+import { PVEvents, PVGame, PVWorld, addZone } from '@lib/client';
 import { onSocket } from '@lib/client/comms/ui';
 import { Delay } from '@lib/functions';
 import { Vector3, lerp } from '@lib/math';
@@ -53,15 +53,14 @@ onSocket('world.geyser-show', async (steps: World.GeyserShowSteps) => {
 
   for (const step of steps) {
     switch (step._type) {
-      case 'start': {
+      case 'start':
         const geyser = Geysers.find((g) => g.name === step.id);
         if (geyser) {
           await ptfxManager.startFxAtCoords(geyser.name, true, GeyserDict, GeyserFx, geyser.coords);
         }
         break;
-      }
 
-      case 'evolve': {
+      case 'evolve':
         if (step.evolutions) {
           ptfxManager.setFxEvolutions(step.id, step.evolutions);
 
@@ -82,7 +81,7 @@ onSocket('world.geyser-show', async (steps: World.GeyserShowSteps) => {
 
               if (shakeIntensity > 0.2) {
                 const playerCoords = Vector3.fromObject(PVGame.playerCoords(true));
-                SetPedToRagdoll(playerPed, 2000, 3000, 0, false, false, false);
+                SetPedToRagdoll(playerPed, 2000, 3000, 0, false, false, '');
                 await Delay(1);
                 const geyserData = Geysers.find((g) => g.name === step.id);
                 if (!geyserData) break;
@@ -113,12 +112,10 @@ onSocket('world.geyser-show', async (steps: World.GeyserShowSteps) => {
           }
         }
         break;
-      }
 
-      case 'stop': {
+      case 'stop':
         ptfxManager.stopFx(step.id);
         break;
-      }
     }
 
     if (step.delayAfter) {
@@ -133,9 +130,33 @@ onSocket('world.geyser-show', async (steps: World.GeyserShowSteps) => {
 // </editor-fold>
 
 // <editor-fold desc="Geyser Ejection">
+PVEvents.registerStateEvent('geyser:applyForce', 'applyForce', {
+  callback: (entity, key, value) => {
+    const forceVector = Vector3.fromArray(value);
+
+    ApplyForceToEntity(
+      entity,
+      1,
+      forceVector.x,
+      forceVector.y,
+      forceVector.z,
+      0.0,
+      0.0,
+      0.0,
+      0,
+      false,
+      false,
+      true,
+      false,
+      true,
+    );
+  },
+  includeClear: false,
+});
+
 const geyserEject = async (name: string, coords: Vector3Format, force: number) => {
   const playerPed = PlayerPedId();
-  const playerCoords = Vector3.fromArray(GetEntityCoords(playerPed, true));
+  const playerCoords = Vector3.fromArray(GetEntityCoords(playerPed, true, false));
 
   await PVWorld.startFxAtCoords(name, true, GeyserDict, GeyserFx, coords);
   PVWorld.setFxEvolutions(name, {
@@ -148,26 +169,14 @@ const geyserEject = async (name: string, coords: Vector3Format, force: number) =
   forceVector = forceVector.magnitude() !== 0 ? forceVector.normalize() : new Vector3(0, 0, 0);
   forceVector = forceVector.multiplyScalar(force);
 
-  SetPedToRagdoll(playerPed, 3000, 5000, 0, false, false, false);
-  await Delay(1);
-  ApplyForceToEntity(
-    playerPed,
-    1,
-    forceVector.x,
-    forceVector.y,
-    forceVector.z,
-    0.0,
-    0.0,
-    0.0,
-    0,
-    false,
-    false,
-    true,
-    false,
-    true,
-  );
+  SetPedToRagdoll(playerPed, 3000, 5000, 0, false, false, '');
+  await Delay(25);
+  LocalPlayer.state.set('applyForce', forceVector.toArray(), true);
+
+  SetPedToRagdoll(playerPed, 3000, 5000, 0, false, false, '');
 
   await Delay(2_000);
+  LocalPlayer.state.set('applyForce', undefined, true);
   PVWorld.setFxEvolutions(name, {
     erupt: 0.0,
     steam: 1.0,

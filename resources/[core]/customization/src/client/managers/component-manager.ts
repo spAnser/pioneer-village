@@ -7,6 +7,7 @@ import { getWearableStateConfig } from '@lib/shared/wearable-states';
 
 import componentCategories from '../data/component-categories';
 import wearableStates from '../data/wearable-states';
+import { setLanternOilColor } from '../misc/lantern-oils';
 import { paletteManager } from './palette-manager';
 
 const BASE_HASH = GetHashKey('BASE');
@@ -203,7 +204,7 @@ class ComponentManager {
             }
           }
           if (weaponEntity) {
-            SetLightsColorForEntity(weaponEntity, oilColor[0], oilColor[1], oilColor[2]);
+            setLanternOilColor(playerPed, AttachPoint.TempLantern, oilColor);
           }
         }
       }

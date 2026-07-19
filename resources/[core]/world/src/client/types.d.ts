@@ -11,6 +11,7 @@ declare namespace World {
     coords: Vector3Format,
     rot?: Vector3Format,
     scale?: number,
+    ignoreDistance?: boolean,
   ) => Promise<number>;
   type StartFxOnEntity = (
     id: string,

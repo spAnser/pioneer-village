@@ -1,11 +1,10 @@
 const path = require('path');
-const HotReloadPlugin = require('./rspack.hot-reload');
 
 // @ts-check
 /** @type {import('@rspack/cli').Configuration} */
 module.exports = () => ({
-  name: 'server',
-  entry: path.resolve('./src/server/server.ts'),
+  name: 'socket',
+  entry: path.resolve('./src/socket.ts'),
   module: {
     rules: [
       {
@@ -26,17 +25,18 @@ module.exports = () => ({
   externalsPresets: {
     node: true,
   },
-  plugins: [new HotReloadPlugin('server')],
+  externalsType: 'commonjs',
+  externals: [/^[a-z@][^!?:]*$/],
   optimization: {
     minimize: false,
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    tsConfig: { configFile: path.resolve('./src/server/tsconfig.json') },
+    tsConfig: { configFile: path.resolve('./src/tsconfig.json') },
   },
   output: {
     path: path.resolve('./build'),
-    filename: 'server.js',
+    filename: 'socket.js',
   },
   target: 'node',
 });

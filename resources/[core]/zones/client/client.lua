@@ -97,6 +97,9 @@ end
 -- Creates a box-shaped zone with rotation support
 -- Box zones are rectangular prisms that can be rotated around the Z-axis
 function generateBox(data)
+    data.coords = vector3(data.coords.x, data.coords.y, data.coords.z) -- Ensure coords is a vector3
+    data.size = vector3(data.size.x, data.size.y, data.size.z) -- Ensure size is a vector3
+
     -- Calculate vertical bounds from center and height
     local halfHeight = data.size.z / 2
     local centerPoint = data.coords.z
@@ -105,7 +108,7 @@ function generateBox(data)
 
     -- Create quaternion for rotation (around Z-axis only)
     -- Quaternions prevent gimbal lock and provide smooth rotations
-    local quatRotation = quat(data.rotation or 0, vec3(0, 0, 1))
+    local quatRotation = quat(data.rotation or 0, vector3(0, 0, 1))
 
     Zones[data.name] = {
         type = 'box',
@@ -115,6 +118,7 @@ function generateBox(data)
             rotation = data.rotation, -- Rotation angle in radians
             quat = quatRotation, -- Quaternion for efficient rotation calculations
             debug = data.options.debug,
+            debugColor = data.options.debugColor or { r = 255, g = 0, b = 255, a = 128 }, -- Debug color (default magenta)
             delayEnter = data.options.delayEnter,
             delayExit = data.options.delayExit,
             maxZ = maxZ,
@@ -124,10 +128,10 @@ function generateBox(data)
         -- Create a rotated polygon from the box corners
         -- Start with box corners in local space, apply rotation, then translate to world position
         polygon = (quatRotation * glm.polygon.new({
-            vec3(data.size.x, data.size.y, 0),    -- Front-right corner
-            vec3(-data.size.x, data.size.y, 0),   -- Front-left corner
-            vec3(-data.size.x, -data.size.y, 0),  -- Back-left corner
-            vec3(data.size.x, -data.size.y, 0),   -- Back-right corner
+            vector3(data.size.x, data.size.y, 0),    -- Front-right corner
+            vector3(-data.size.x, data.size.y, 0),   -- Front-left corner
+            vector3(-data.size.x, -data.size.y, 0),  -- Back-left corner
+            vector3(data.size.x, -data.size.y, 0),   -- Back-right corner
         }) + data.coords) -- Apply rotation then translate to world position
     }
 end
@@ -143,6 +147,7 @@ function generateSphere(data)
             coords = data.coords, -- Center position of the sphere
             radius = data.radius, -- Radius for distance-based containment checks
             debug = data.options.debug,
+            debugColor = data.options.debugColor or { r = 255, g = 0, b = 255, a = 128 }, -- Debug color (default magenta)
             delayEnter = data.options.delayEnter,
             delayExit = data.options.delayExit,
         }
@@ -415,6 +420,7 @@ if DEBUG then
             local playerCoords = GetEntityCoords(PlayerPedId(), false)
             -- Loop through all zones and draw those with debug enabled
             for _, zone in pairs(Zones) do
+
                 if zone.data.debug then
                     if zone.polygon then
                         -- Draw polygon/box zones by connecting vertices with walls
@@ -441,8 +447,7 @@ if DEBUG then
                         local x = zone.data.coords.x
                         local y = zone.data.coords.y
                         local z = zone.data.coords.z
-                        -- Black color (0,0,0) with 50% transparency (128)
-                        DrawSphere(x, y, z, zone.data.radius, 0, 0, 0, 128)
+                        DrawSphere(x, y, z, zone.data.radius, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, zone.data.debugColor.a)
                     end
                 end
             end

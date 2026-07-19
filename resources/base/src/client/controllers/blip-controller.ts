@@ -31,19 +31,58 @@ export class BlipController {
   }
 
   register(id: string, data: Base.BlipDataWithoutId, style = BlipStyles.NEUTRAL_OBJECTIVE) {
-    // console.log('BlipController::register', id, data);
+    console.log('BlipController::register', id, data);
     if (this.blips.has(id)) {
       console.log(`Blip with id ${id} already exists, unregistering before registering new one.`);
       this.unregister(id);
     }
 
-    const blipId = BlipAddForCoords(style, data.coords.x, data.coords.y, data.coords.z);
-    SetBlipSprite(blipId, data.sprite, true);
+    let blipId: number;
+    switch (data.type) {
+      case 'sprite':
+        blipId = BlipAddForCoords(style, data.coords.x, data.coords.y, data.coords.z);
+        SetBlipSprite(blipId, data.sprite, true);
+        break;
+      case 'entity':
+        blipId = BlipAddForEntity(style, data.entity);
+        break;
+      case 'pickup':
+        blipId = BlipAddForPickupPlacement(style, data.pickup);
+        break;
+      case 'radius':
+        blipId = BlipAddForRadius(style, data.coords.x, data.coords.y, data.coords.z, data.scale);
+        break;
+      case 'area':
+        blipId = BlipAddForArea(
+          style,
+          data.coords.x,
+          data.coords.y,
+          data.coords.z,
+          data.scale[0],
+          data.scale[1],
+          0,
+          19,
+        );
+        break;
+      case 'volume':
+        blipId = BlipAddForVolume(style, data.volume);
+        break;
+    }
+    if ('sprite' in data && data.sprite) {
+      SetBlipSprite(blipId, data.sprite, true);
+    } else if ('style' in data) {
+      SetBlipSprite(blipId, data.style, true);
+    }
     if (data.modifiers) {
       for (const modifier of data.modifiers) {
         BlipAddModifier(blipId, modifier);
       }
     }
+
+    SetBlipFlashTimer(blipId, 16, -1);
+
+    const [_, blipType, mapCardId] = SetBlipFlashes(0);
+    // will return whatever you passed in blipType as long is an int
 
     SetBlipName(blipId, data.label);
     // console.log('Registering blip with id', id, blipId);
