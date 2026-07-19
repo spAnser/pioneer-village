@@ -17,5 +17,5 @@ export const LoadResourceJson = async (resourceName: string, fileName: string): 
     throw new Error(`Failed to load ${fileName} from ${resourceName}`);
   }
 
-  return response.json();
+  return (await response.json()) as Record<string, any>;
 };

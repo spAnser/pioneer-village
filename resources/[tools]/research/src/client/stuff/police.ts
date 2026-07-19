@@ -408,7 +408,7 @@ RegisterCommand(
 const manager = PedManager.getInstance();
 
 (async () => {
-  const ped = await manager.spawn('my-ped', {
+  const ped = await manager.spawn('val-bank-ped', {
     model: 's_m_m_bankclerk_01',
     position: { x: -308.09, y: 773.89, z: 117.7, w: 9.3 },
     freeze: true,
