@@ -4,7 +4,7 @@ import timeManager from '../shared/managers/time-manager';
 import { EventName } from './catalog';
 import eventPoller, { EventData } from './managers/event-poller';
 import keyManager from './managers/key-manager';
-import stateManager from './managers/state-manager';
+import stateManager from './managers/state-bag-manager';
 
 const register = <T extends EventName>(name: T, callback: (data: EventData<T>) => void): void => {
   eventPoller.register(name, callback);

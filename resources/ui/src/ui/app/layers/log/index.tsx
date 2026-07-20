@@ -1,4 +1,5 @@
 import Bug from '@fa/5/solid/bug.svg';
+import Clipboard from '@fa/5/solid/clipboard.svg';
 import Desktop from '@fa/5/solid/desktop.svg';
 import DiceFive from '@fa/5/solid/dice-five.svg';
 import DiceFour from '@fa/5/solid/dice-four.svg';
@@ -62,6 +63,24 @@ export default function Log() {
   }, [handleScrollUpdate]);
 
   useEscapeKey(state.show, onEscape);
+
+  // The async Clipboard API is blocked by CEF's permissions policy inside RedM's NUI
+  // frame, so we fall back to the legacy textarea + execCommand('copy') trick.
+  const copyToClipboard = (text: string) => {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  };
+
+  const copyEntry = (entry: UI.Log.LogData) => {
+    copyToClipboard(entry.message);
+  };
 
   const addMessage = (source: UI.Log.Source, data: UI.Log.Data) => {
     logStore.addMessage(source, data);
@@ -147,32 +166,37 @@ export default function Log() {
           onWheel={handleMousewheel}
         >
           {state.messages.map(
-            ({ source, resource, _type, message, timestamp }, index) =>
-              shouldShow(resource) && (
+            (entry, index) =>
+              shouldShow(entry.resource) && (
                 <div className={styles.item} key={index}>
-                  <i data-source={source}>
-                    {source === 'server' && <Server />} {source === 'client' && <Desktop />}
-                  </i>
-                  <span style={{ backgroundColor: state.colors[resource].hsl }}>
-                    {resource}
+                  <div className={styles.icons}>
+                    <i data-source={entry.source}>
+                      {entry.source === 'server' && <Server />} {entry.source === 'client' && <Desktop />}
+                    </i>
+                    <i className={styles.copyIcon} onClick={() => copyEntry(entry)}>
+                      <Clipboard />
+                    </i>
+                  </div>
+                  <span style={{ backgroundColor: state.colors[entry.resource].hsl }}>
+                    {entry.resource}
                     <br />
-                    {new Date(timestamp).toLocaleTimeString('en-GB')}.
-                    {String(timestamp % 1000).padStart(3, '0')}
+                    {new Date(entry.timestamp).toLocaleTimeString('en-GB')}.
+                    {String(entry.timestamp % 1000).padStart(3, '0')}
                   </span>
-                  {_type && (
+                  {entry._type && (
                     <span
                       className={conditionalClass(styles.logType, {
-                        [styles.info]: _type === 'info',
-                        [styles.warn]: _type === 'warn',
-                        [styles.error]: _type === 'error',
+                        [styles.info]: entry._type === 'info',
+                        [styles.warn]: entry._type === 'warn',
+                        [styles.error]: entry._type === 'error',
                       })}
                     >
-                      {_type === 'info' && <InfoSquare />}
-                      {_type === 'warn' && <ExclamationTriangle />}
-                      {_type === 'error' && <Bug />}
+                      {entry._type === 'info' && <InfoSquare />}
+                      {entry._type === 'warn' && <ExclamationTriangle />}
+                      {entry._type === 'error' && <Bug />}
                     </span>
                   )}
-                  <pre>{message}</pre>
+                  <pre>{entry.message}</pre>
                 </div>
               ),
           )}
