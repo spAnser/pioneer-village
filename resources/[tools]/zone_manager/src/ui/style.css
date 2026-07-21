@@ -12,6 +12,12 @@
   --axis-z: #3d6fcc;
   --axis-z-hover: #4f8bff;
   --axis-z-active: #86b3ff;
+  /* Gizmo legs specifically use duller resting tones than --axis-x/y/z (used
+     elsewhere for labels/buttons) — those are already close to the hover
+     color, so hovering a leg barely read as a state change. */
+  --gizmo-leg-x: #7a3030;
+  --gizmo-leg-y: #276b3d;
+  --gizmo-leg-z: #2a4a8c;
   --panel-bg: rgba(18, 20, 24, 0.85);
   --panel-border: rgba(255, 255, 255, 0.08);
 }
@@ -25,6 +31,20 @@ body, html {
   padding: 0;
   overflow: hidden;
   font-family: 'Segoe UI', Arial, sans-serif;
+  color: #eee;
+  user-select: none;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 0 1px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--panel-border);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.9em;
   color: #eee;
 }
 
@@ -268,9 +288,9 @@ body, html {
   transition: stroke 100ms ease;
 }
 
-.gizmo-handle--x { stroke: var(--axis-x); }
-.gizmo-handle--y { stroke: var(--axis-y); }
-.gizmo-handle--z { stroke: var(--axis-z); }
+.gizmo-handle--x { stroke: var(--gizmo-leg-x); }
+.gizmo-handle--y { stroke: var(--gizmo-leg-y); }
+.gizmo-handle--z { stroke: var(--gizmo-leg-z); }
 
 /* Hovering the (much larger, invisible) hit area lights the handle up to
    its brighter variant — confirms "you're on the right handle" before
@@ -288,19 +308,17 @@ body, html {
   stroke-width: 10;
 }
 
-/* 64px — matches HIT_RADIUS_PX * 2 in gizmo-overlay.ts (2-3x the original
-   28px), so the clickable area is actually big enough to grab reliably. */
+/* Invisible, wide-stroke twin of .gizmo-handle sharing its exact endpoints
+   (set together in gizmo-overlay.ts's render) — hit-tests the actual leg
+   geometry instead of a circular area that drifts from the visible line at
+   oblique camera angles. 64px total width (32 either side of the line),
+   matching the old circular hit target's diameter. */
 .gizmo-handle-hit {
-  position: fixed;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  pointer-events: auto;
+  stroke: transparent;
+  stroke-width: 64;
+  stroke-linecap: round;
+  pointer-events: stroke;
   cursor: grab;
-}
-
-.gizmo-handle-hit:hover {
-  background: rgba(255, 255, 255, 0.08);
 }
 
 .gizmo-handle-hit:active {
@@ -367,6 +385,24 @@ body, html {
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 8px 0 0 8px;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.side-panel__scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-panel__scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.side-panel__scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+
+.side-panel__scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .side-panel__peek-handle {
@@ -394,6 +430,11 @@ body, html {
   letter-spacing: 0.06em;
   cursor: pointer;
   writing-mode: vertical-rl;
+}
+
+.side-panel__peek-handle kbd {
+  margin: 4px 0;
+  padding: 3px 1px;
 }
 
 .side-panel:not(.side-panel--open) .side-panel__peek-handle:hover {
@@ -503,6 +544,24 @@ body, html {
   padding: 0;
   max-height: 220px;
   overflow-y: auto;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.point-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.point-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.point-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+
+.point-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .point-list__row {
@@ -513,6 +572,7 @@ body, html {
   font-size: 12px;
   border-radius: 4px;
   cursor: pointer;
+  border-top: 2px solid transparent;
 }
 
 .point-list__row:hover {
@@ -524,10 +584,24 @@ body, html {
   color: var(--accent);
 }
 
+.point-list__row--dragging {
+  opacity: 0.4;
+}
+
+.point-list__row--drag-over {
+  border-top-color: var(--accent);
+}
+
 .point-list__remove {
   color: var(--axis-x);
   cursor: pointer;
   padding: 0 4px;
+  border-radius: 3px;
+}
+
+.point-list__remove:hover {
+  color: var(--axis-x-hover);
+  background: rgba(204, 71, 71, 0.18);
 }
 
 .bounds__row {
@@ -584,5 +658,24 @@ body, html {
   color: #eee;
   font-family: monospace;
   font-size: 11px;
-  resize: vertical;
+  resize: none;
+  user-select: text;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.export-block textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.export-block textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.export-block textarea::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+
+.export-block textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }

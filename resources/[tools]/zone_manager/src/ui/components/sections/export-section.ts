@@ -5,28 +5,22 @@ export class ExportSection extends Component<UiState> {
   private toggle: HTMLElement;
   private body: HTMLElement;
   private hint: HTMLElement;
-  private generateBtn: HTMLButtonElement;
   private tsArea: HTMLTextAreaElement;
   private luaArea: HTMLTextAreaElement;
   private tsCopyBtn: HTMLButtonElement;
   private luaCopyBtn: HTMLButtonElement;
 
   private onToggle: () => void;
-  private onGenerate: () => void;
 
-  constructor(handlers: { onToggle: () => void; onGenerate: () => void }) {
+  constructor(handlers: { onToggle: () => void }) {
     super('div', 'panel-section panel-section--export');
     this.onToggle = handlers.onToggle;
-    this.onGenerate = handlers.onGenerate;
 
     this.toggle = el('h2', 'panel-section__title panel-section__title--toggle', 'Export');
     this.toggle.addEventListener('click', () => this.onToggle());
 
     this.body = el('div', 'panel-section__body');
     this.hint = el('p', 'panel-section__hint', 'Add at least 3 points to export a polygon.');
-
-    this.generateBtn = el('button', 'panel-button', 'Generate') as HTMLButtonElement;
-    this.generateBtn.addEventListener('click', () => this.onGenerate());
 
     const tsBlock = this.makeCopyBlock('TypeScript');
     this.tsArea = tsBlock.area;
@@ -36,7 +30,7 @@ export class ExportSection extends Component<UiState> {
     this.luaArea = luaBlock.area;
     this.luaCopyBtn = luaBlock.copyBtn;
 
-    this.body.append(this.hint, this.generateBtn, tsBlock.el, luaBlock.el);
+    this.body.append(this.hint, tsBlock.el, luaBlock.el);
     this.el.append(this.toggle, this.body);
   }
 
@@ -80,7 +74,6 @@ export class ExportSection extends Component<UiState> {
     this.toggle.classList.toggle('panel-section__title--expanded', state.exportSectionExpanded);
 
     const canExport = state.points.length >= 3;
-    this.generateBtn.disabled = !canExport;
     this.hint.classList.toggle('panel-section--hidden', canExport);
 
     const hasData = !!state.exportData;

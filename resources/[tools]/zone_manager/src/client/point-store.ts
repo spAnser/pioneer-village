@@ -58,6 +58,14 @@ export class PointStore {
     this.refresh();
   }
 
+  reorder(fromIndex: number, toIndex: number): void {
+    if (!this.points[fromIndex] || fromIndex === toIndex) return;
+    if (toIndex < 0 || toIndex >= this.points.length) return;
+    const [moved] = this.points.splice(fromIndex, 1);
+    this.points.splice(toIndex, 0, moved);
+    this.refresh();
+  }
+
   reset(): void {
     this.points = [];
     this.preview.remove();

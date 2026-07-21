@@ -26,7 +26,12 @@ export class StatusStrip extends Component<UiState> {
 
     this.countEl = el('span', 'status-strip__count');
     this.modeEl = el('span', 'status-strip__mode');
-    const hint = el('span', 'status-strip__hints', '[F] place  [Tab] panel  [Esc] deselect');
+    const hint = el('span', 'status-strip__hints');
+    hint.append(
+      el('kbd', undefined, 'F'), ' place point  ',
+      el('kbd', undefined, 'Tab'), ' open / close panel  ',
+      el('kbd', undefined, 'Esc'), ' deselect / exit ',
+    );
 
     this.undoBtn = el('button', 'status-strip__icon-btn', '↶');
     this.undoBtn.title = 'Undo last point';
