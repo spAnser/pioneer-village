@@ -29,7 +29,8 @@ export class SidePanel extends Component<UiState> {
     this.boundsSection = sections.boundsSection;
     this.exportSection = sections.exportSection;
 
-    const peekHandle = el('div', 'side-panel__peek-handle', 'Press Tab to expand');
+    const peekHandle = el('div', 'side-panel__peek-handle');
+    peekHandle.append('Press ', el('kbd', undefined, 'Tab'), ' to expand');
     peekHandle.addEventListener('click', () => sections.onOpen());
     this.el.appendChild(peekHandle);
 

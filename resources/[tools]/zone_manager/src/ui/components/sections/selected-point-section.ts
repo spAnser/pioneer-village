@@ -40,7 +40,7 @@ export class SelectedPointSection extends Component<UiState> {
     const zHint = el(
       'p',
       'panel-section__hint',
-      "Z doesn't affect the green preview's height — that only follows Bounds' Min/Max Z below.",
+      "The Z axis doesn't affect the rendered green preview section's height, that only follows Bounds' Min/Max Z set below.",
     );
 
     this.deleteBtn = el('button', 'panel-button panel-button--danger', 'Delete point') as HTMLButtonElement;

@@ -50,7 +50,7 @@ export class BoundsSection extends Component<UiState> {
     this.snapInput = document.createElement('input');
     this.snapInput.type = 'checkbox';
     this.snapInput.addEventListener('change', () => this.onSnapChange(this.snapInput.checked));
-    snapLabel.append(this.snapInput, el('span', '', 'Snap point Z to detected ground'));
+    snapLabel.append(this.snapInput, el('span', '', 'Snap Z axis of point to detected ground height.'));
 
     this.body.append(hint, row, snapLabel);
     this.el.append(this.toggle, this.body);

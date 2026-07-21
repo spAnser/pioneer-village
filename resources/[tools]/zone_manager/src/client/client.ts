@@ -156,6 +156,20 @@ onNuiCallback('delete_point', (data: ZoneManagerNew.DeletePointPayload): ZoneMan
   return { points: points.getPoints() };
 });
 
+onNuiCallback('reorder_point', (data: ZoneManagerNew.ReorderPointPayload): ZoneManagerNew.PointsResult => {
+  points.reorder(data.fromIndex, data.toIndex);
+  // Keep the selection following the moved point, and shift anything that
+  // sat between the old/new slot the same way splice() just shifted it —
+  // same "selection tracks the underlying data" contract as delete_point.
+  if (selectedIndex === data.fromIndex) {
+    selectedIndex = data.toIndex;
+  } else if (selectedIndex !== null) {
+    if (data.fromIndex < selectedIndex && selectedIndex <= data.toIndex) selectedIndex -= 1;
+    else if (data.toIndex <= selectedIndex && selectedIndex < data.fromIndex) selectedIndex += 1;
+  }
+  return { points: points.getPoints() };
+});
+
 onNuiCallback('set_bounds', (data: ZoneManagerNew.SetBoundsPayload) => {
   points.setBounds(data.minZ, data.maxZ);
   return points.getBounds();
@@ -220,8 +234,29 @@ const cursorFeedTick = setTick(() => {
 // with no delay, was a second source of the runaway per-frame cost. ~33ms
 // (~30Hz) keeps markers/gizmo visually smooth without the every-frame cost.
 // 3x the original 0.5 — the old length made handles hard to see/click,
-// especially at a distance from the camera.
+// especially at a distance from the camera. Now used as the calibration
+// point for computeHandleLength's distance scaling below: at
+// MIN_GIZMO_SCALE_DISTANCE the world length is exactly this value, and it
+// scales proportionally with distance in both directions from there so the
+// ON-SCREEN size stays roughly constant instead of ballooning up close or
+// shrinking to a sliver far away.
 const AXIS_HANDLE_LENGTH = 1.5;
+const MIN_GIZMO_SCALE_DISTANCE = 5;
+// World length floor/ceiling — without these, a camera clipped right up
+// against the point (near-zero distance) would collapse the handles to
+// nothing, and extreme range would grow them large enough to overlap
+// neighboring points.
+const MIN_GIZMO_HANDLE_LENGTH = 0.5;
+const MAX_GIZMO_HANDLE_LENGTH = 12;
+
+function computeHandleLength(camPos: Vector3Format, point: Vector3Format): number {
+  const dx = point.x - camPos.x;
+  const dy = point.y - camPos.y;
+  const dz = point.z - camPos.z;
+  const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+  const scale = distance / MIN_GIZMO_SCALE_DISTANCE;
+  return Math.min(Math.max(AXIS_HANDLE_LENGTH * scale, MIN_GIZMO_HANDLE_LENGTH), MAX_GIZMO_HANDLE_LENGTH);
+}
 // Where along the X/Y arms the flat plane-drag square sits, as a fraction of
 // AXIS_HANDLE_LENGTH — inset from the arm tips so it reads as a distinct
 // "square between the two arms" rather than overlapping either handle.
@@ -256,11 +291,12 @@ const frameFeedTick = setTick(() => {
   let selectedGizmo: ZoneManagerNew.GizmoScreenPositions | null = null;
   if (selectedIndex !== null && points.getPoints()[selectedIndex]) {
     const p = points.getPoints()[selectedIndex];
+    const handleLength = computeHandleLength(camera.getCoord(), p);
     const origin = worldToScreen(p);
-    const xEnd = worldToScreen({ x: p.x + AXIS_HANDLE_LENGTH, y: p.y, z: p.z });
-    const yEnd = worldToScreen({ x: p.x, y: p.y + AXIS_HANDLE_LENGTH, z: p.z });
-    const zEnd = worldToScreen({ x: p.x, y: p.y, z: p.z + AXIS_HANDLE_LENGTH });
-    const planeOffset = AXIS_HANDLE_LENGTH * PLANE_HANDLE_FRACTION;
+    const xEnd = worldToScreen({ x: p.x + handleLength, y: p.y, z: p.z });
+    const yEnd = worldToScreen({ x: p.x, y: p.y + handleLength, z: p.z });
+    const zEnd = worldToScreen({ x: p.x, y: p.y, z: p.z + handleLength });
+    const planeOffset = handleLength * PLANE_HANDLE_FRACTION;
     const planePos = worldToScreen({ x: p.x + planeOffset, y: p.y + planeOffset, z: p.z });
     if (origin && xEnd && yEnd && zEnd && planePos) {
       activeKeys.add('gizmo:origin').add('gizmo:x').add('gizmo:y').add('gizmo:z').add('gizmo:plane');
@@ -270,7 +306,7 @@ const frameFeedTick = setTick(() => {
         y: screenSmoother.smooth('gizmo:y', yEnd),
         z: screenSmoother.smooth('gizmo:z', zEnd),
         plane: screenSmoother.smooth('gizmo:plane', planePos),
-        handleLength: AXIS_HANDLE_LENGTH,
+        handleLength,
       };
     }
   }

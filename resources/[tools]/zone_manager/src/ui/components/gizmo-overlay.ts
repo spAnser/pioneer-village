@@ -1,13 +1,9 @@
-import { Component, el } from '../component';
+import { Component } from '../component';
 import { UiState } from '../state';
-
-// 2-3x the original 14px hit radius — the old size made handles hard to
-// grab, especially combined with how thin the visible line was.
-const HIT_RADIUS_PX = 32;
 
 interface HandleEls {
   line: SVGLineElement;
-  hit: HTMLElement;
+  hit: SVGLineElement;
 }
 
 interface Px {
@@ -64,15 +60,22 @@ export class GizmoOverlay extends Component<UiState> {
       line.setAttribute('class', `gizmo-handle gizmo-handle--${axis}`);
       this.svg.appendChild(line);
 
-      const hit = el('div', `gizmo-handle-hit gizmo-handle-hit--${axis}`);
+      // Same endpoints as the visible line (kept in sync every render, not
+      // positioned separately), just a much wider invisible stroke — a
+      // circular hit div centered on the leg's midpoint drifted from the
+      // actual rendered leg the more the camera skewed it at oblique angles
+      // (same class of bug the plane handle's hit-testing comment below
+      // describes), so this hit-tests the real leg geometry instead.
+      const hit = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      hit.setAttribute('class', `gizmo-handle-hit gizmo-handle-hit--${axis}`);
       hit.addEventListener('mousedown', (e) => this.startDrag(axis, e));
-      // Hover state lives on the SVG line (not the hit div itself) since the
+      // Hover state lives on the SVG line (not the hit line itself) since the
       // line is what's visually confirming "you're on the right handle" —
       // toggled here rather than pure CSS :hover because line/hit are
       // separate sibling elements, not parent/child.
       hit.addEventListener('mouseenter', () => line.classList.add('gizmo-handle--hovered'));
       hit.addEventListener('mouseleave', () => line.classList.remove('gizmo-handle--hovered'));
-      this.el.appendChild(hit);
+      this.svg.appendChild(hit);
 
       return { line, hit };
     };
@@ -113,8 +116,10 @@ export class GizmoOverlay extends Component<UiState> {
       line.setAttribute('y2', String(endPx.y));
       line.classList.toggle('gizmo-handle--dragging', this.draggingMode === axis);
 
-      hit.style.left = `${(originPx.x + endPx.x) / 2 - HIT_RADIUS_PX}px`;
-      hit.style.top = `${(originPx.y + endPx.y) / 2 - HIT_RADIUS_PX}px`;
+      hit.setAttribute('x1', String(originPx.x));
+      hit.setAttribute('y1', String(originPx.y));
+      hit.setAttribute('x2', String(endPx.x));
+      hit.setAttribute('y2', String(endPx.y));
     });
 
     // The plane handle is a true perspective-skewed parallelogram bound to

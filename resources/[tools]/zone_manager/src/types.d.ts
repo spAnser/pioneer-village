@@ -65,6 +65,11 @@ declare namespace ZoneManagerNew {
     index: number;
   }
 
+  interface ReorderPointPayload {
+    fromIndex: number;
+    toIndex: number;
+  }
+
   interface DragPointPlanePayload {
     index: number;
     deltaX: number;

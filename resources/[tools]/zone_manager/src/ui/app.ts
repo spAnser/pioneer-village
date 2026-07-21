@@ -68,6 +68,7 @@ export class App {
         onSelect: (index) => this.selectPoint(index),
         onHover: (index) => this.hoverPoint(index),
         onDelete: (index) => this.deletePoint(index),
+        onReorder: (fromIndex, toIndex) => this.reorderPoint(fromIndex, toIndex),
       }),
       boundsSection: new BoundsSection({
         onToggle: () => this.update({ boundsSectionExpanded: !this.state.boundsSectionExpanded }),
@@ -76,7 +77,6 @@ export class App {
       }),
       exportSection: new ExportSection({
         onToggle: () => this.update({ exportSectionExpanded: !this.state.exportSectionExpanded }),
-        onGenerate: () => this.generateExport(),
       }),
       onOpen: () => this.update({ panelOpen: true }),
     });
@@ -136,15 +136,16 @@ export class App {
             maxZ: message.maxZ,
             selectedIndex: null,
             panelOpen: false,
-            exportData: null,
             snapToGround: message.snapToGround,
           });
+          this.refreshExport();
           break;
         case 'hide':
           this.update({ show: false, selectedIndex: null, panelOpen: false });
           break;
         case 'points_updated':
-          this.update({ points: toArray(message.points), exportData: null });
+          this.update({ points: toArray(message.points) });
+          this.refreshExport();
           break;
         case 'cursor_updated':
           this.updateCursor(message.cursor);
@@ -323,7 +324,22 @@ export class App {
   private deletePoint(index: number): void {
     post<ZoneManagerNew.PointsResult>('delete_point', { index }).then((res) => {
       const selectedIndex = this.state.selectedIndex === index ? null : this.state.selectedIndex;
-      this.update({ points: toArray(res.points), selectedIndex, exportData: null });
+      this.update({ points: toArray(res.points), selectedIndex });
+      this.refreshExport();
+    });
+  }
+
+  private reorderPoint(fromIndex: number, toIndex: number): void {
+    post<ZoneManagerNew.PointsResult>('reorder_point', { fromIndex, toIndex }).then((res) => {
+      let selectedIndex = this.state.selectedIndex;
+      if (selectedIndex === fromIndex) {
+        selectedIndex = toIndex;
+      } else if (selectedIndex !== null) {
+        if (fromIndex < selectedIndex && selectedIndex <= toIndex) selectedIndex -= 1;
+        else if (toIndex <= selectedIndex && selectedIndex < fromIndex) selectedIndex += 1;
+      }
+      this.update({ points: toArray(res.points), selectedIndex });
+      this.refreshExport();
     });
   }
 
@@ -336,13 +352,15 @@ export class App {
     post<ZoneManagerNew.PointsResult>('undo_point').then((res) => {
       const points = toArray(res.points);
       const selectedIndex = this.state.selectedIndex !== null && this.state.selectedIndex >= points.length ? null : this.state.selectedIndex;
-      this.update({ points, selectedIndex, exportData: null });
+      this.update({ points, selectedIndex });
+      this.refreshExport();
     });
   }
 
   private clearPoints(): void {
     post<ZoneManagerNew.PointsResult>('clear_points').then((res) => {
-      this.update({ points: toArray(res.points), selectedIndex: null, exportData: null });
+      this.update({ points: toArray(res.points), selectedIndex: null });
+      this.refreshExport();
     });
   }
 
@@ -356,9 +374,16 @@ export class App {
     this.update({ snapToGround: enabled });
   }
 
-  private generateExport(): void {
+  // Called after every points mutation so the export text areas stay live
+  // without a manual "Generate" step; below the 3-point minimum there's
+  // nothing to export, so just clear rather than round-tripping.
+  private refreshExport(): void {
+    if (this.state.points.length < 3) {
+      this.update({ exportData: null });
+      return;
+    }
     post<ZoneManagerNew.ExportResult>('get_export').then((res) => {
-      this.update({ exportData: res, exportSectionExpanded: true });
+      this.update({ exportData: res });
     });
   }
 
@@ -381,7 +406,8 @@ export class App {
     post('set_point_position', { index, ...next });
     const points = this.state.points.slice();
     points[index] = next;
-    this.update({ points, exportData: null });
+    this.update({ points });
+    this.refreshExport();
   }
 
   private dismissNudge(): void {
@@ -472,8 +498,9 @@ export class App {
   // (if open) and export-staleness in sync, not re-render the gizmo/markers
   // (those already redraw from the next frame_updated message).
   private updatePointsLight(points: ZoneManagerNew.Point[]): void {
-    this.state = { ...this.state, points, exportData: null };
+    this.state = { ...this.state, points };
     this.sidePanel.render(this.state);
+    this.refreshExport();
   }
 
   private close(): void {
