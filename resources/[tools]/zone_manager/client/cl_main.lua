@@ -210,10 +210,15 @@ Citizen.CreateThread(function()
         Wait(0)
         if menuOpen then
             for i, p in ipairs(points) do
-                if hoveredIndex == i - 1 then
-                    DrawMarkerSphere(p.x, p.y, p.z, 0.4, 255, 40, 40, 230)
-                else
-                    DrawMarkerSphere(p.x, p.y, p.z, 0.3, 255, 255, 0, 200)
+                -- Defensive: a nil/non-numeric coordinate here would throw
+                -- inside InvokeNative and permanently kill this thread for
+                -- every point, not just the bad one — skip instead of crash.
+                if type(p.x) == 'number' and type(p.y) == 'number' and type(p.z) == 'number' then
+                    if hoveredIndex == i - 1 then
+                        DrawMarkerSphere(p.x, p.y, p.z, 0.4, 255, 40, 40, 230)
+                    else
+                        DrawMarkerSphere(p.x, p.y, p.z, 0.3, 255, 255, 0, 200)
+                    end
                 end
             end
         else
@@ -306,15 +311,9 @@ function AddPointAtCursor()
     return hit
 end
 
-RegisterNuiCallbackType('add_point')
-AddEventHandler('__cfx_nui:add_point', function(data, callback)
-    local hit = AddPointAtCursor()
-    callback({ ok = hit, points = points })
-end)
-
--- Placement is also triggered by a keypress (forwarded from the NUI, since
--- the cursor must stay over the target — clicking a panel button would move
--- the cursor off the aim point before the click registers).
+-- Placement is triggered by a keypress or a left click (both forwarded
+-- from the NUI), never a panel button — the cursor must stay over the
+-- target, and clicking a button would move it off the aim point first.
 RegisterNuiCallbackType('place_point_key')
 AddEventHandler('__cfx_nui:place_point_key', function(data, callback)
     local hit = AddPointAtCursor()
@@ -325,6 +324,26 @@ end)
 RegisterNuiCallbackType('hover_point')
 AddEventHandler('__cfx_nui:hover_point', function(data, callback)
     hoveredIndex = data.index
+    callback({})
+end)
+
+-- Live position update while a gizmo drag is in progress in the NUI —
+-- fired continuously (not just on release) so the AddPoly preview and
+-- in-world marker track the drag in real time.
+RegisterNuiCallbackType('set_point_position')
+AddEventHandler('__cfx_nui:set_point_position', function(data, callback)
+    local index = tonumber(data.index)
+    local x, y, z = tonumber(data.x), tonumber(data.y), tonumber(data.z)
+    -- A malformed/non-numeric x/y/z (tonumber returning nil) must never
+    -- reach `points` — DrawMarkerSphere would then call InvokeNative with
+    -- a nil argument, which throws and permanently kills that draw thread
+    -- (uncaught errors stop a FiveM thread for good), silently disappearing
+    -- that point's marker while its data elsewhere (list, cyan dot) is
+    -- unaffected since they don't go through this same native call.
+    if index and points[index + 1] and x and y and z then
+        points[index + 1] = { x = x, y = y, z = z }
+        RefreshPreview()
+    end
     callback({})
 end)
 
@@ -450,6 +469,44 @@ Citizen.CreateThread(function()
                 action = 'update_positions',
                 cursor = lastCursorHit,
                 pointCount = #points,
+            }))
+        end
+    end
+end)
+
+-- Higher-frequency camera feed for the Three.js gizmo overlay, which needs
+-- smooth per-frame updates to avoid visibly lagging behind the real camera.
+Citizen.CreateThread(function()
+    while true do
+        Wait(0)
+        if not menuOpen or not camera or not IsCamActive(camera) then
+            Wait(100)
+        else
+            local camCoords = GetCamCoord(camera)
+            local camRot = GetCamRot(camera, 1)
+            local camFov = GetCamFov(camera)
+
+            -- GetScreenCoordFromWorldCoord is the same native RDR3 itself
+            -- uses to project world space to screen space, so it's ground
+            -- truth — unlike trying to replicate RDR3's projection inside
+            -- Three.js via a possibly-mismatched fov/aspect, this can't
+            -- drift out of alignment with what the player actually sees.
+            local pointScreenCoords = {}
+            for i, p in ipairs(points) do
+                local onScreen, sx, sy = GetScreenCoordFromWorldCoord(p.x, p.y, p.z)
+                if onScreen then
+                    table.insert(pointScreenCoords, { index = i - 1, x = sx, y = sy })
+                end
+            end
+
+            SendNuiMessage(json.encode({
+                action = 'update_camera',
+                cam = {
+                    position = { x = camCoords.x, y = camCoords.y, z = camCoords.z },
+                    rotation = { x = camRot.x, y = camRot.y, z = camRot.z },
+                    fov = camFov,
+                },
+                pointScreenCoords = pointScreenCoords,
             }))
         end
     end

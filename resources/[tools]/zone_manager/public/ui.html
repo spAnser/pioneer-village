@@ -8,9 +8,21 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <title>Zone Manager</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" integrity="sha512-yNJzAsg5JyP91u+sLHlUDULMBd3hmEiVkYeeN1cQBKaLZ7EyT6oH2u5THNIRM2Fu6VKcZJv+F/QAp1h/qzy9Ow==" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app" :class="{ show }">
+        <template v-for="(point, index) of points">
+            <div v-if="screenCoordFor(index)" :key="'marker-' + index" class="point-marker"
+                 :style="{ left: (screenCoordFor(index).x * 100) + '%', top: (screenCoordFor(index).y * 100) + '%' }">
+                {{ index }}
+            </div>
+        </template>
+        <div class="window window--debug" v-if="debugInfo">
+            <p>FOV (raw): {{ round(debugInfo.fov) }}</p>
+            <p>Aspect: {{ round(debugInfo.aspect) }}</p>
+            <p>Window: {{ debugInfo.windowW }} x {{ debugInfo.windowH }}</p>
+        </div>
         <div class="window window--left">
             <h1>Points ({{ points.length }})</h1>
             <p class="hint" v-if="cursor">Next: {{ round(cursor.x) }}, {{ round(cursor.y) }}, {{ round(cursor.z) }} <span class="key-hint">[F]</span></p>
@@ -23,8 +35,9 @@
                     </li>
                 </template>
             </ol>
+            <p class="hint">Click or press <span class="key-hint">F</span> to place a point at the cursor.</p>
+            <p class="hint" v-if="nearestIndex !== -1">A drag gizmo is attached to point [{{ nearestIndex }}] — the nearest to your cursor.</p>
             <div class="button-grid">
-                <button @click="addPoint">Add Point (here)</button>
                 <button :disabled="!points.length" @click="undoPoint">Undo</button>
                 <button :disabled="!points.length" @click="clearPoints">Clear</button>
             </div>
@@ -50,16 +63,18 @@
                     <span>TypeScript</span>
                     <button class="copy-button" @click="copyText(exportData.ts, $event)">Copy</button>
                 </div>
-                <textarea rows="12" readonly ref="tsExport">{{ exportData.ts }}</textarea>
+                <textarea rows="12" readonly>{{ exportData.ts }}</textarea>
                 <div class="label-row">
                     <span>Lua</span>
                     <button class="copy-button" @click="copyText(exportData.lua, $event)">Copy</button>
                 </div>
-                <textarea rows="12" readonly ref="luaExport">{{ exportData.lua }}</textarea>
+                <textarea rows="12" readonly>{{ exportData.lua }}</textarea>
             </template>
         </div>
     </div>
     <script src="vue.min.js"></script>
+    <script src="transformControls.js"></script>
+    <script src="gizmo.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
