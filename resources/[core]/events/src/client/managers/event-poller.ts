@@ -15,7 +15,7 @@ const decodeEventNative = (group: number, index: number, size: number): number[]
     ok = Citizen.invokeNative('0x57EC5FA4D4D6AFCA', group, index, view, size, Citizen.returnResultAnyway());
   } catch (e) {
     if (decodeDebug) {
-      console.debug('[GET_EVENT_DATA] invokeNative threw', {
+      console.error('[GET_EVENT_DATA] invokeNative threw', {
         group,
         index,
         size,
@@ -28,7 +28,7 @@ const decodeEventNative = (group: number, index: number, size: number): number[]
 
   if (!ok) {
     if (decodeDebug) {
-      console.debug('[GET_EVENT_DATA] native returned false', { group, index, size });
+      console.error('[GET_EVENT_DATA] native returned false', { group, index, size });
     }
     return undefined;
   }
@@ -39,7 +39,7 @@ const decodeEventNative = (group: number, index: number, size: number): number[]
   }
 
   if (decodeDebug) {
-    console.debug('[GET_EVENT_DATA] decoded', { group, index, size, fields });
+    console.error('[GET_EVENT_DATA] decoded', { group, index, size, fields });
   }
 
   return fields;
@@ -138,7 +138,7 @@ export class EventPoller {
     const now = GetGameTimer();
     const last = this.warnings.get(name);
     if (last !== undefined && now - last < 500) {
-      console.warn(`${name} has triggered an event in ${now - last}ms (events spamming can create performance issues)`);
+      console.warn(`${name} has triggered one or more events in ${now - last}ms - spam threshold is 500ms (events spamming can create performance issues. To disable set ${WARNINGS_CONVAR} to false in server.cfg)`);
     }
     this.warnings.set(name, now);
   }

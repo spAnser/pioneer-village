@@ -178,11 +178,18 @@
   width: 10vw;
 
   display: flex;
+  flex-direction: column;
   gap: mixins.uiSize(3);
   margin-top: mixins.uiSize(16);
-  flex-wrap: wrap;
 
   user-select: none;
+}
+
+.filterControls,
+.filterResources {
+  display: flex;
+  gap: mixins.uiSize(3);
+  flex-wrap: wrap;
 }
 
 .filterItem {
@@ -200,6 +207,30 @@
 
   &.red {
     background-color: var(--theme-danger);
+
+    svg {
+      color: var(--theme-white);
+    }
+  }
+
+  &.info {
+    background-color: var(--color-blue-400);
+
+    svg {
+      color: var(--theme-white);
+    }
+  }
+
+  &.warn {
+    background-color: var(--color-orange-400);
+
+    svg {
+      color: var(--theme-white);
+    }
+  }
+
+  &.error {
+    background-color: var(--color-red-400);
 
     svg {
       color: var(--theme-white);

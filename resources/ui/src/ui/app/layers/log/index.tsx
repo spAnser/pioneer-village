@@ -122,6 +122,10 @@ export default function Log() {
     logStore.toggleReverseResource(resource);
   };
 
+  const toggleType = (type: NonNullable<UI.Log.LogData['_type']>) => {
+    logStore.toggleType(type);
+  };
+
   const getClassName = (resource: string) => {
     if (state.filter.has(resource)) {
       return 'active';
@@ -132,11 +136,14 @@ export default function Log() {
     return 'inactive';
   };
 
-  const shouldShow = (resource: string) => {
+  const shouldShow = (resource: string, type?: UI.Log.LogData['_type']) => {
     if (state.filter.size > 0 && !state.filter.has(resource)) {
       return false;
     }
     if (state.reverseFilter.has(resource)) {
+      return false;
+    }
+    if (state.typeFilter.size > 0 && (!type || !state.typeFilter.has(type))) {
       return false;
     }
     return true;
@@ -167,7 +174,7 @@ export default function Log() {
         >
           {state.messages.map(
             (entry, index) =>
-              shouldShow(entry.resource) && (
+              shouldShow(entry.resource, entry._type) && (
                 <div className={styles.item} key={index}>
                   <div className={styles.icons}>
                     <i data-source={entry.source}>
@@ -212,40 +219,68 @@ export default function Log() {
       </div>
       {state.show && (
         <div className={styles.filter}>
-          <div className={`${styles.filterItem} ${styles.red}`}>
-            <TrashAlt onClick={() => logStore.clearMessages()} />
-          </div>
-          <div className={styles.filterItem}>
-            <Dice className="dice" onClick={randomizeColors} />
-          </div>
-          <div
-            className={conditionalClass(styles.filterItem, {
-              [styles.inactive]: !(
-                state.filter.size === 0 && state.reverseFilter.size !== Object.values(state.colors).length
-              ),
-            })}
-            onClick={clearFilter}
-          >
-            all
-          </div>
-          {Object.entries(state.colors).map(([resource, color]) => (
-            <div
-              key={resource}
-              style={{ backgroundColor: color.hsl }}
-              className={conditionalClass([styles.filterItem, getClassName(resource)], {
-                [styles.inactive]: !shouldShow(resource),
-              })}
-              onClick={() => {
-                toggleResource(resource);
-              }}
-              onContextMenu={(e) => {
-                e.preventDefault();
-                toggleReverseResource(resource);
-              }}
-            >
-              {resource}
+          <div className={styles.filterControls}>
+            <div className={`${styles.filterItem} ${styles.red}`}>
+              <TrashAlt onClick={() => logStore.clearMessages()} />
             </div>
-          ))}
+            <div className={styles.filterItem}>
+              <Dice className="dice" onClick={randomizeColors} />
+            </div>
+            <div
+              className={conditionalClass(styles.filterItem, {
+                [styles.inactive]: !(
+                  state.filter.size === 0 && state.reverseFilter.size !== Object.values(state.colors).length
+                ),
+              })}
+              onClick={clearFilter}
+            >
+              all
+            </div>
+            <div
+              className={conditionalClass([styles.filterItem, styles.info], {
+                [styles.inactive]: state.typeFilter.size > 0 && !state.typeFilter.has('info'),
+              })}
+              onClick={() => toggleType('info')}
+            >
+              <InfoSquare />
+            </div>
+            <div
+              className={conditionalClass([styles.filterItem, styles.warn], {
+                [styles.inactive]: state.typeFilter.size > 0 && !state.typeFilter.has('warn'),
+              })}
+              onClick={() => toggleType('warn')}
+            >
+              <ExclamationTriangle />
+            </div>
+            <div
+              className={conditionalClass([styles.filterItem, styles.error], {
+                [styles.inactive]: state.typeFilter.size > 0 && !state.typeFilter.has('error'),
+              })}
+              onClick={() => toggleType('error')}
+            >
+              <Bug />
+            </div>
+          </div>
+          <div className={styles.filterResources}>
+            {Object.entries(state.colors).map(([resource, color]) => (
+              <div
+                key={resource}
+                style={{ backgroundColor: color.hsl }}
+                className={conditionalClass([styles.filterItem, getClassName(resource)], {
+                  [styles.inactive]: !shouldShow(resource),
+                })}
+                onClick={() => {
+                  toggleResource(resource);
+                }}
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                  toggleReverseResource(resource);
+                }}
+              >
+                {resource}
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </>
