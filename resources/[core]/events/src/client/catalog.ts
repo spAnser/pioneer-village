@@ -11,9 +11,8 @@
  * failure) if it doesn't match the event's real field count, for any group.
  * EVENT_NETWORK_LASSO_ATTACH's size was wrong (2 instead of 3) and looked
  * like a "group 1 doesn't work" bug until a size sweep found the native
- * succeeds at size 3. See GET_EVENT_DATA-LIMITATION.md for the investigation
- * - double-check any other group 1-3 sizes here against the reference before
- * relying on them, since they haven't all been live-verified.
+ * succeeds at size 3. double-check any other group 1-3 sizes here against
+ * the reference before relying on them, since they haven't all been live-verified.
  */
 
 export type FieldType = 'i' | 'f';
@@ -1120,7 +1119,7 @@ export const EVENT_GROUPS = [...new Set(Object.values(EVENT_CATALOG).map((def) =
 
 /**
  * Events confirmed common/high-frequency in normal play. Excluded from the
- * discovery log (events:log_all) so it stays useful for spotting genuinely
+ * discovery log (EVENTS_LOG_ALL) so it stays useful for spotting genuinely
  * unfamiliar events, but still registerable as normal by any consumer.
  */
 export const NOISY_EVENTS = new Set<EventName>([

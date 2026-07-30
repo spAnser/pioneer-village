@@ -3,14 +3,7 @@ import type { EventDef, EventName } from '../catalog';
 
 const catalogEntry = (name: EventName): EventDef => EVENT_CATALOG[name];
 
-// GET_EVENT_DATA (0x57EC5FA4D4D6AFCA) fills a caller-provided output buffer.
-// citizenfx/fivem's V8ScriptRuntime.cpp PushArgument() has an IsArrayBufferView()
-// branch (checked before the generic IsObject()/"__data" fallback) that forwards
-// an ArrayBufferView's backing store to the native and copies isolated buffers
-// back after the call (ScriptInvoker.cpp PostInvoke) - see
-// GET_EVENT_DATA-LIMITATION.md "Resolution" for the full trail. `size` is the
-// SIZE_OF-operator field count (8-byte-aligned script vars), not a byte count.
-const DECODE_DEBUG_CONVAR = 'events:decode_debug';
+const DECODE_DEBUG_CONVAR = 'EVENTS_DEBUG_DECODE';
 const decodeDebug = GetConvar(DECODE_DEBUG_CONVAR, 'false') === 'true';
 
 const decodeEventNative = (group: number, index: number, size: number): number[] | undefined => {
@@ -22,7 +15,7 @@ const decodeEventNative = (group: number, index: number, size: number): number[]
     ok = Citizen.invokeNative('0x57EC5FA4D4D6AFCA', group, index, view, size, Citizen.returnResultAnyway());
   } catch (e) {
     if (decodeDebug) {
-      console.log('[GET_EVENT_DATA] invokeNative threw', {
+      console.debug('[GET_EVENT_DATA] invokeNative threw', {
         group,
         index,
         size,
@@ -35,7 +28,7 @@ const decodeEventNative = (group: number, index: number, size: number): number[]
 
   if (!ok) {
     if (decodeDebug) {
-      console.log('[GET_EVENT_DATA] native returned false', { group, index, size });
+      console.debug('[GET_EVENT_DATA] native returned false', { group, index, size });
     }
     return undefined;
   }
@@ -46,7 +39,7 @@ const decodeEventNative = (group: number, index: number, size: number): number[]
   }
 
   if (decodeDebug) {
-    console.log('[GET_EVENT_DATA] decoded', { group, index, size, fields });
+    console.debug('[GET_EVENT_DATA] decoded', { group, index, size, fields });
   }
 
   return fields;
@@ -59,8 +52,8 @@ export type EventData<T extends EventName> = EventFields<T> extends undefined
 
 type Listener = (data: unknown) => void;
 
-const WARNINGS_CONVAR = 'events:warnings';
-const LOG_ALL_CONVAR = 'events:log_all';
+const WARNINGS_CONVAR = 'EVENTS_WARN_SPAMMING_EVENTS';
+const LOG_ALL_CONVAR = 'EVENTS_LOG_ALL';
 
 export class EventPoller {
   protected static instance: EventPoller;
@@ -145,7 +138,7 @@ export class EventPoller {
     const now = GetGameTimer();
     const last = this.warnings.get(name);
     if (last !== undefined && now - last < 500) {
-      console.log(`${name} has triggered an event in ${now - last}ms (events spamming can create performance issues)`);
+      console.warn(`${name} has triggered an event in ${now - last}ms (events spamming can create performance issues)`);
     }
     this.warnings.set(name, now);
   }
