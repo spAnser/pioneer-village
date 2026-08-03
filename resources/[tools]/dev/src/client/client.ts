@@ -240,7 +240,7 @@ RegisterCommand(
     const heightAboveGround = GetEntityHeightAboveGround(playerPed);
     const heading = GetEntityHeading(playerPed);
 
-    console.log(`x: ${coords[0]}, y: ${coords[1]}, z: ${coords[2] - heightAboveGround}, heading: ${heading}`);
+    emit('client.copy.clipboard', `${coords[0]}, ${coords[1]}, ${coords[2] - heightAboveGround}, ${heading}`);
   },
   false,
 );

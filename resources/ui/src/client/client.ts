@@ -45,3 +45,11 @@ onNet('server.log.message', (logData: { resource: string; message: string }) => 
     global.exports['ui'].emitUI('log.message', logData, 'server');
   }
 });
+
+on('client.copy.clipboard', (payload: string) => {
+  SendNUIMessage({
+    action: 'copy.clipboard',
+    payload: payload,
+  });
+  console.log(`Copied to clipboard: ${payload}`);
+});

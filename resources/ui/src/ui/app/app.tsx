@@ -1,7 +1,7 @@
 import ExclamationTriangle from '@fa/5/solid/exclamation-triangle.svg';
 import WifiSlash from '@fa/5/solid/signal-slash.svg';
 import 'normalize.css';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Button, DisabledLayers, DisconnectedSocket } from '@styled/core';
 
@@ -90,6 +90,25 @@ export default function App({ socket }: UIComponents.App.Props) {
     console.log(`setSocketConnected(true)`);
   });
 
+  const messageListener = (e: MessageEvent) => {
+    const item = e.data as { action?: string; payload: string };
+
+    if (!item.action || item.action !== 'copy.clipboard') return;
+
+    const el = document.createElement('textarea');
+    el.style.position = 'fixed';
+    el.style.top = '-9999px';
+    el.style.left = '-9999px';
+
+    el.value = item.payload ?? '';
+
+    document.body.appendChild(el);
+    el.focus();
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  };
+
   const getCrashData = useCallback<() => CrashData>(() => {
     try {
       const data = sessionStorage.getItem('ui-crash-data');
@@ -137,6 +156,11 @@ export default function App({ socket }: UIComponents.App.Props) {
   useEffect(() => {
     updateDisabledLayers();
   }, [updateDisabledLayers]);
+
+  useEffect(() => {
+    window.addEventListener('message', messageListener);
+    return () => window.removeEventListener('message', messageListener);
+  });
 
   const isLayerDisabled = useCallback<(layerName: string) => boolean>(
     (layerName) => {
