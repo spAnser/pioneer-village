@@ -1,7 +1,7 @@
 import ExclamationTriangle from '@fa/5/solid/exclamation-triangle.svg';
 import WifiSlash from '@fa/5/solid/signal-slash.svg';
 import 'normalize.css';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { Button, DisabledLayers, DisconnectedSocket } from '@styled/core';
 
