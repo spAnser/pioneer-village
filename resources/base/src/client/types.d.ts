@@ -6,31 +6,38 @@ declare namespace Base {
   type DoorData = [doorHash: number, modelHash: number, modelName: string, x: number, y: number, z: number];
   type BlipData =
     | {
-        id: number;
+        handle?: number;
+        resource: string;
         type: 'sprite';
         label: string;
         sprite: string | number;
         modifiers?: number[];
+        style: number;
         coords: Vector3Format;
       }
     | {
-        id: number;
+        handle?: number;
+        resource: string;
         type: 'entity';
         label: string;
         sprite: string | number;
         modifiers?: number[];
+        style: number;
         entity: number;
       }
     | {
-        id: number;
+        handle?: number;
+        resource: string;
         type: 'pickup';
         label: string;
         sprite: string | number;
         modifiers?: number[];
+        style: number;
         pickup: number;
       }
     | {
-        id: number;
+        handle?: number;
+        resource: string;
         type: 'radius';
         style: string | number;
         sprite?: string | number;
@@ -40,7 +47,8 @@ declare namespace Base {
         scale: number;
       }
     | {
-        id: number;
+        handle?: number;
+        resource: string;
         type: 'area';
         label: string;
         style: string | number;
@@ -50,7 +58,8 @@ declare namespace Base {
         scale: [number, number];
       }
     | {
-        id: number;
+        handle?: number;
+        resource: string;
         type: 'volume';
         label: string;
         style: string | number;
@@ -58,15 +67,31 @@ declare namespace Base {
         volume: number;
         modifiers?: number[];
       };
+
+  type BlipConstraints = {
+    jobHandle?: string;
+  };
+
   type DistributiveOmit<T, K extends PropertyKey> = T extends unknown ? Omit<T, K> : never;
 
-  type BlipDataWithoutId = DistributiveOmit<BlipData, 'id'>;
+  type InternalBlips = BlipData & {
+    constraints: BlipConstraints;
+    id: string;
+  };
+
+  type BlipDataWithoutIdAndResource = DistributiveOmit<DistributiveOmit<BlipData, 'handle'>, 'resource'>;
 
   type getNetworkControlOfEntity = (entity: number) => Promise<void>;
   type deleteEntity = (entity: number, attached?: boolean) => void;
   type deleteEntities = (entities: number[], attached?: boolean) => void;
 
-  type blipRegister = (id: string, data: BlipDataWithoutId, style?: number) => number;
+  type blipRegister = (id: string, data: BlipDataWithoutIdAndResource, constraints?: BlipConstraints) => void;
+  type blipGetHandle = (id: string) => void;
+  type blipUpdateCoords = (id: string, coords: Vector3Format) => void;
+  type blipUpdateSprite = (id: string, sprite: number) => void;
+  type blipUpdateLabel = (id: string, label: string) => void;
+  type blipAddModifier = (id: string, modifier: number) => void;
+  type blipRemoveModifier = (id: string, modifier: number) => void;
   type blipUnregister = (id: string) => void;
 
   type ClientExports = {
@@ -76,6 +101,12 @@ declare namespace Base {
     getCurrentCharacter: () => CharacterData | null;
     blipRegister: blipRegister;
     blipUnregister: blipUnregister;
+    blipUpdateCoords: blipUpdateCoords;
+    blipUpdateSprite: blipUpdateSprite;
+    blipUpdateLabel: blipUpdateLabel;
+    blipAddModifier: blipAddModifier;
+    blipRemoveModifier: blipRemoveModifier;
+    blipGetHandle: blipGetHandle;
   };
 }
 

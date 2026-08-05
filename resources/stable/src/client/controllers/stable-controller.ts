@@ -1,9 +1,9 @@
-import { PVBase, PVCustomization, PVGame, PVInit, PVZone, onResourceInit } from '@lib/client';
+import { PVBase, PVCustomization, PVGame, PVInit, onResourceInit } from '@lib/client';
 import { awaitUI } from '@lib/client/comms/ui';
 import { PedConfigFlag } from '@lib/flags';
 import { Delay } from '@lib/functions';
 import { Vector3, lerp } from '@lib/math';
-import { BlipModifiers, BlipSprites } from '@lib/shared/blips';
+import { BlipModifiers, BlipSprites, BlipStyles } from '@lib/shared/blips';
 import { GetDays } from '@lib/shared/time';
 
 import HorseExpressions from '../../shared/data/horse-expressions';
@@ -65,7 +65,7 @@ class StableController {
         this.horseMakeNetworked(mount);
       }
     };
-    on('events_manager:mount', (onMount: number, horsePed: number, currentSeat: number) => {
+    on('events_manager:mount', (onMount: number, horsePed: number, _currentSeat: number) => {
       // console.log('events_manager:mount', onMount, horsePed, currentSeat);
       this.checkHorse(horsePed);
       if (onMount) {
@@ -132,10 +132,12 @@ class StableController {
           continue;
         }
         PVBase.blipRegister(`horse:${horseId}`, {
+          type: 'sprite',
           label: horse.name,
           sprite: BlipSprites.HORSE_OWNED,
           modifiers: [BlipModifiers.SCALE_2],
           coords: { x: horse.lastX, y: horse.lastY, z: horse.lastZ },
+          style: BlipStyles.NEUTRAL,
         });
         continue;
       }
@@ -152,7 +154,7 @@ class StableController {
         continue;
       }
 
-      const coords = GetEntityCoords(horsePed, true);
+      const coords = GetEntityCoords(horsePed, true, true);
       horse.lastX = coords[0];
       horse.lastY = coords[1];
       horse.lastZ = coords[2];
@@ -175,10 +177,12 @@ class StableController {
     for (const horse of this._horses.values()) {
       if (!horse.stable) {
         PVBase.blipRegister(`horse:${horse.id}`, {
+          type: 'sprite',
           label: horse.name,
           sprite: BlipSprites.HORSE_OWNED,
           modifiers: [BlipModifiers.SCALE_2],
           coords: { x: horse.lastX, y: horse.lastY, z: horse.lastZ },
+          style: BlipStyles.NEUTRAL,
         });
       }
     }
@@ -252,7 +256,7 @@ class StableController {
       duration: 500,
     });
     await Delay(500);
-    SetPedToRagdoll(foalPed, 1000, 3000, 0, false, false, false);
+    SetPedToRagdoll(foalPed, 1000, 3000, 0, false, false, 0);
 
     foalHorse.save();
     console.log('Foal born', foalHorse);
@@ -261,11 +265,7 @@ class StableController {
   canHorseSpawn(horseId: Horse.Id): boolean {
     const foalPregnancy = this._pregnancies.find((pregnancy) => pregnancy.foalId === horseId);
 
-    if (foalPregnancy && foalPregnancy.status !== 'BIRTHED') {
-      return false;
-    }
-
-    return true;
+    return !(foalPregnancy && foalPregnancy.status !== 'BIRTHED');
   }
 
   addStable(data: Stable.Data): void {

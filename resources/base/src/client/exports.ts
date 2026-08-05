@@ -1,7 +1,6 @@
 import { exports } from '@lib/client';
 import { onUI } from '@lib/client/comms/ui';
 import { Delay } from '@lib/functions';
-import { BlipStyles } from '@lib/shared/blips';
 
 import blipController from './controllers/blip-controller';
 
@@ -105,12 +104,36 @@ const deleteEntities: Base.deleteEntities = (entities: number[], attached = fals
   }
 };
 
-const blipRegister: Base.blipRegister = (id, data, style = BlipStyles.NEUTRAL_OBJECTIVE) => {
-  return blipController.register(id, data, style);
+const blipRegister: Base.blipRegister = (id, data, constraints) => {
+  return blipController.register(id, GetInvokingResource(), data, constraints);
 };
 
 const blipUnregister: Base.blipUnregister = (id) => {
   blipController.unregister(id);
+};
+
+const blipUpdateCoords: Base.blipUpdateCoords = (id, coords) => {
+  blipController.updateCoords(id, coords);
+};
+
+const blipUpdateSprite: Base.blipUpdateSprite = (id, sprite) => {
+  blipController.updateSprite(id, sprite);
+};
+
+const blipGetHandle: Base.blipGetHandle = (id) => {
+  return blipController.getHandle(id);
+};
+
+const blipUpdateLabel: Base.blipUpdateLabel = (id, label) => {
+  blipController.updateLabel(id, label);
+};
+
+const blipAddModifier: Base.blipAddModifier = (id: string, modifier: number) => {
+  blipController.addModifier(id, modifier);
+};
+
+const blipRemoveModifier: Base.blipRemoveModifier = (id: string, modifier: number) => {
+  blipController.removeModifier(id, modifier);
 };
 
 // Register all exports
@@ -119,4 +142,10 @@ exports<'base'>('getNetworkControlOfEntity', getNetworkControlOfEntity);
 exports<'base'>('deleteEntity', deleteEntity);
 exports<'base'>('deleteEntities', deleteEntities);
 exports<'base'>('blipRegister', blipRegister);
+exports<'base'>('blipGetHandle', blipGetHandle);
+exports<'base'>('blipUpdateCoords', blipUpdateCoords);
+exports<'base'>('blipUpdateSprite', blipUpdateSprite);
+exports<'base'>('blipUpdateLabel', blipUpdateLabel);
+exports<'base'>('blipAddModifier', blipAddModifier);
+exports<'base'>('blipRemoveModifier', blipRemoveModifier);
 exports<'base'>('blipUnregister', blipUnregister);
