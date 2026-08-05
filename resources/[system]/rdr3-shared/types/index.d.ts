@@ -119,6 +119,7 @@ declare function AddStateBagChangeHandler(keyFilter: string, bagFilter: string, 
 declare function GetPlayerFromStateBagName(bagName: string): number;
 declare function GetEntityFromStateBagName(bagName: string): number;
 declare function GetCurrentResourceName(): string;
+declare function GetInvokingResource(): string;
 declare function LoadResourceFile(resourceName: string, fileName: string): string;
 declare function GetRegisteredCommands(): any;
 declare function GetResourceByFindIndex(findIndex: number): string;

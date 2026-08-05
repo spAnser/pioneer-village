@@ -38,7 +38,7 @@ declare function DestroyItemset(itemset: ItemSet): void;
    * @param {number} itemset
    * @return {number}
    */
-declare function GetIndexedItemInItemset(index: number, itemset: ItemSet): ScrHandle;
+declare function GetIndexedItemInItemset(index: number, itemset: ItemSet): number;
 
 /**
    * GET_INDEXED_SCENARIO_POINT_INDEX_IN_ITEMSET

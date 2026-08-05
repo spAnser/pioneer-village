@@ -1,49 +1,56 @@
-import { BlipModifiers, BlipSprites } from '@lib/shared/blips';
+import { BlipModifiers, BlipSprites, BlipStyles } from '@lib/shared/blips';
 import PostOffices from '@lib/shared/post-offices';
 
-const postOfficeBlips: Base.BlipDataWithoutId[] = PostOffices.map((po) => ({
+const postOfficeBlips: Base.BlipDataWithoutIdAndResource[] = PostOffices.map((po) => ({
   label: 'Post Office',
   type: 'sprite',
   sprite: BlipSprites.POST_OFFICE,
   coords: po.coords,
+  style: BlipStyles.NEUTRAL,
 }));
 
-const Blips: Omit<Base.BlipData, 'id'>[] = [
+const Blips: Base.BlipDataWithoutIdAndResource[] = [
   /**
    * Valentine
    */
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -338.99, y: 767.6321, z: 115.5632 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -175.2594, y: 631.9643, z: 113.0896 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
     coords: { x: -317.424, y: 762.619, z: 117.436 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'General Store',
     sprite: BlipSprites.SHOP_STORE,
     coords: { x: -324.0513, y: 803.7102, z: 116.8817 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Gunsmith',
     sprite: BlipSprites.SHOP_GUNSMITH,
     coords: { x: -281.0177, y: 778.9867, z: 118.504 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -51,6 +58,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -58,6 +66,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Barber',
     sprite: BlipSprites.SHOP_BARBER,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -65,6 +74,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -72,6 +82,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
@@ -79,12 +90,14 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -368.7, y: 786.9, z: 116.2 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Doctor',
     sprite: BlipSprites.SHOP_DOCTOR,
     modifiers: [BlipModifiers.TEAL],
@@ -94,24 +107,28 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   // -=================
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: 2540.75, y: 802.25, z: 76.37 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -1752.9288, y: -392.7518, z: 155.2471 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -753.337, y: -1284.7538, z: 42.5011 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
@@ -119,18 +136,21 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -5510.3481, y: -2946.9421, z: -2.8951 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: 2819.4917, y: -1331.3773, z: 45.5076 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
@@ -138,30 +158,35 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Gunsmith',
     sprite: BlipSprites.SHOP_GUNSMITH,
     coords: { x: 2946.45, y: 1319.47, z: 44.82 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -732.5, y: -1226.7, z: 44.8 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: 1230.3, y: -1298.7, z: 76.0 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -3729.1, y: -2601.4, z: -13.9 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     // Annesburg
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
@@ -169,6 +194,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     // Annesburg
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
@@ -176,6 +202,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     // Rhodes
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
@@ -183,6 +210,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     // St.Denis
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
@@ -190,6 +218,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
@@ -197,6 +226,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Bank',
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
@@ -204,6 +234,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -211,6 +242,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -218,6 +250,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -225,6 +258,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -232,6 +266,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -239,6 +274,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -246,6 +282,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -253,6 +290,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Saloon',
     sprite: BlipSprites.SALOON,
     modifiers: [BlipModifiers.TAN],
@@ -260,90 +298,105 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -866.5, y: -1366.9, z: 43.5 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -1819.4, y: -561.9, z: 156.1 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: 1209.2, y: -192.9, z: 101.4 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: 2503.2, y: -1451.8, z: 46.3 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: 2968.7, y: 796.4, z: 51.4 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -5520.9, y: -3044.5, z: -2.4 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: 1434.199, y: -1294.95, z: 77.823 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -1338.55, y: 2399.3, z: 306.985 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -2217.875, y: 733.65, z: 123.08 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -2407.496, y: -2376.35, z: 61.176 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -1415.363, y: -2197.88, z: 43.395 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -629.495, y: -64.463, z: 82.933 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -861.817, y: 336.34, z: 96.424 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -3709.043, y: -2553.437, z: -14.64 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Barber',
     sprite: BlipSprites.SHOP_BARBER,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -351,6 +404,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -358,6 +412,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Barber',
     sprite: BlipSprites.SHOP_BARBER,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -365,6 +420,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -372,6 +428,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -379,6 +436,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -386,6 +444,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -393,6 +452,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Tailor',
     sprite: BlipSprites.SHOP_TAILOR,
     modifiers: [BlipModifiers.OFF_WHITE],
@@ -400,12 +460,14 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Sheriff',
     sprite: BlipSprites.AMB_SHERIFF,
     coords: { x: 2907.331, y: 1311.787, z: 44.938 },
   },
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Poker',
     sprite: BlipSprites.MG_POKER,
     coords: { x: 2718.1831, y: -1288.4312, z: 60.36 },
@@ -413,6 +475,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   // St Dennis
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: 2747.800537, y: -1396.466431, z: 46.183098 },
@@ -420,6 +483,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   // Wallace Station
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -1300.310913, y: 400.040833, z: 95.452156 },
@@ -427,6 +491,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   // <editor-fold desc="Riggs Station">
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -1094.323608, y: -577.707947, z: 82.409836 },
@@ -436,6 +501,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   // <editor-fold desc="Emerald Station">
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: 1523.589111, y: 442.681946, z: 90.67852 },
@@ -445,6 +511,7 @@ const Blips: Omit<Base.BlipData, 'id'>[] = [
   // <editor-fold desc="Benedict Point">
   {
     type: 'sprite',
+    style: BlipStyles.NEUTRAL,
     label: 'Train Station',
     sprite: BlipSprites.SHOP_TRAIN,
     coords: { x: -5228.602051, y: -3468.348145, z: -20.569672 },
