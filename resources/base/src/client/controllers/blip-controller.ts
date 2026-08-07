@@ -212,7 +212,7 @@ export class BlipController {
     this.blips.set(id, { ...blip, modifiers: newModifiers });
   }
 
-  public getHandle(id: string): Base.BlipData['handle'] {
+  public getHandle(id: string) {
     const blip = this.blips.get(id);
     if (blip) {
       return blip.handle;
