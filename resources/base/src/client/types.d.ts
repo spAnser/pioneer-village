@@ -86,7 +86,7 @@ declare namespace Base {
   type deleteEntities = (entities: number[], attached?: boolean) => void;
 
   type blipRegister = (id: string, data: BlipDataWithoutIdAndResource, constraints?: BlipConstraints) => void;
-  type blipGetHandle = (id: string) => void;
+  type blipGetHandle = (id: string) => number | undefined;
   type blipUpdateCoords = (id: string, coords: Vector3Format) => void;
   type blipUpdateSprite = (id: string, sprite: number) => void;
   type blipUpdateLabel = (id: string, label: string) => void;
