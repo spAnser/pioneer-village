@@ -1,6 +1,6 @@
 import { PVBase, PVGame, PVInventory } from '@lib/client';
 import { awaitUI, emitUI, focusUI, onUICall } from '@lib/client/comms/ui';
-import { BlipModifiers, BlipSprites } from '@lib/shared/blips';
+import { BlipModifiers, BlipSprites, BlipStyles } from '@lib/shared/blips';
 
 import BankData from '../shared/data/bankData';
 import bankController from './controllers/bank-controller';
@@ -22,10 +22,12 @@ console.log('[Banking] Client loaded');
 
 for (const bank of BankData) {
   PVBase.blipRegister(`bank:${bank.identifier}`, {
+    type: 'sprite',
     label: bank.name,
     sprite: BlipSprites.PROC_BANK,
     modifiers: [BlipModifiers.GREEN],
     coords: bank.tellerPosition,
+    style: BlipStyles.NEUTRAL,
   });
 }
 
