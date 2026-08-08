@@ -1,4 +1,5 @@
 import { Socket } from 'socket.io-client';
+
 import { emitClient, onClient, onClientCall } from '@lib/ui';
 
 // Store state interface matching the Target component's state
@@ -49,7 +50,7 @@ class TargetStore {
 
     // Set up socket event handlers
     this.setupSocketHandlers();
-    
+
     // Set up client event handlers
     this.setupClientHandlers();
   }
@@ -70,12 +71,12 @@ class TargetStore {
   // Handle target state update from client
   private handleTargetState = (event: UI.TargetLayer.Event): void => {
     if (!event) return;
-    
+
     // Don't hide if we have actions displayed
     if (!event.show && this.state.actions.length > 0) {
       return;
     }
-    
+
     this.updateState(event);
   };
 
@@ -121,7 +122,7 @@ class TargetStore {
 
   // Remove an action by id
   removeAction(actionId: string): void {
-    const actions = this.state.actions.filter(a => a.id !== actionId);
+    const actions = this.state.actions.filter((a) => a.id !== actionId);
     this.updateState({ actions });
   }
 
@@ -158,6 +159,8 @@ class TargetStore {
     switch (this.state.flag) {
       case 'isHorse':
         return { style: 'solid', icon: 'horse-saddle' };
+      case 'isPiano':
+        return { style: 'solid', icon: 'piano' };
       case 'isCashRegister':
         return { style: 'duotone', icon: 'cash-register' };
     }
@@ -194,7 +197,7 @@ class TargetStore {
 
   // Get action by id
   getAction(actionId: string): Target.Item | undefined {
-    return this.state.actions.find(a => a.id === actionId);
+    return this.state.actions.find((a) => a.id === actionId);
   }
 
   // Batch update multiple values
@@ -205,14 +208,14 @@ class TargetStore {
   // Update state and notify listeners
   updateState(newState: Partial<TargetState>): void {
     this.state = { ...this.state, ...newState };
-    this.listeners.forEach(listener => listener(this.state));
+    this.listeners.forEach((listener) => listener(this.state));
   }
 
   // Subscribe to state changes
   subscribe(listener: StateListener): () => void {
     this.listeners.add(listener);
     listener(this.state); // Call immediately with current state
-    
+
     return () => {
       this.listeners.delete(listener);
     };

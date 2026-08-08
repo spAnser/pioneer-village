@@ -11,6 +11,7 @@ import EyeLight from '@fa/5/light/eye.svg';
 import CashRegisterSolid from '@fa/5/solid/cash-register.svg';
 import ClockSolid from '@fa/5/solid/clock.svg';
 import CloudMeatballSolid from '@fa/5/solid/cloud-meatball.svg';
+import DollarSignSolid from '@fa/5/solid/dollar-sign.svg';
 import DoorClosedSolid from '@fa/5/solid/door-closed.svg';
 import DoorOpenSolid from '@fa/5/solid/door-open.svg';
 import EyeSolid from '@fa/5/solid/eye.svg';
@@ -21,6 +22,8 @@ import HorseSolid from '@fa/5/solid/horse.svg';
 import LassoSolid from '@fa/5/solid/lasso.svg';
 import MaleSolid from '@fa/5/solid/male.svg';
 import PawSolid from '@fa/5/solid/paw.svg';
+import PianoKeyboardSolid from '@fa/5/solid/piano-keyboard.svg';
+import PianoSolid from '@fa/5/solid/piano.svg';
 import RecycleSolid from '@fa/5/solid/recycle.svg';
 import SackSolid from '@fa/5/solid/sack.svg';
 import WagonCoveredSolid from '@fa/5/solid/wagon-covered.svg';
@@ -46,6 +49,9 @@ export const iconRegistry: Record<string, Record<string, ComponentType<any>>> = 
     horse: HorseSolid,
     paw: PawSolid,
     clock: ClockSolid,
+    piano: PianoSolid,
+    'piano-keyboard': PianoKeyboardSolid,
+    'dollar-sign': DollarSignSolid,
   },
   light: {
     eye: EyeLight,
