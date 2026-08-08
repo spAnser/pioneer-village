@@ -1,15 +1,16 @@
 import { PVGame, PVInit, awaitUI } from '@lib/client';
 import { emitSocket } from '@lib/client/comms/ui';
 import { Vector3 } from '@lib/math';
+
 import { runDoorHooks } from '../misc/hooks';
 
 // Doors that should relock once they swing back to closed position.
 // Keyed by signed 32-bit door hash.
 const AUTOLOCK_DOORS = new Set<number>([
   // valentine bank gate doors
-  1340831050,   // p_gate_valbankvlt
-  -1951221163,  // p_gate_valbankvlt (2343746133 signed)
-  -1987052564,  // P_DOORSLDPRTN01X (2307914732 signed)
+  1340831050, // p_gate_valbankvlt
+  -1951221163, // p_gate_valbankvlt (2343746133 signed)
+  -1987052564, // P_DOORSLDPRTN01X (2307914732 signed)
 
   // valentine jail doors
   535323366, // P_DOOR_VAL_JAIL_CELL01X
@@ -50,7 +51,7 @@ class DoorManager {
           entity,
           netId: NetworkGetEntityIsNetworked(entity) ? NetworkGetNetworkIdFromEntity(entity) : 0,
           state,
-          coords: Vector3.fromArray(GetEntityCoords(entity, false)).toObject(),
+          coords: Vector3.fromArray(GetEntityCoords(entity, false, false)).toObject(),
         };
 
         this.doors.set(doorHash, data);
@@ -65,7 +66,12 @@ class DoorManager {
         this.doors.set(doorHash, data);
       }
 
-      DoorSystemSetDoorState(doorHash, state);
+      if (doorHash === 475159788) {
+        console.log('DoorManager init: doorHash', doorHash, 'state', state, 'entity', GetEntityByDoorhash(doorHash, 0));
+      }
+      if (state >= 0) {
+        DoorSystemSetDoorState(doorHash, state);
+      }
     }
     PVInit.resolveResource('doors');
   }
@@ -139,7 +145,7 @@ class DoorManager {
       const entity = data.entity || GetEntityByDoorhash(doorHash, 0);
       if (entity) {
         data.entity = entity;
-        data.coords = Vector3.fromArray(GetEntityCoords(entity, false)).toObject();
+        data.coords = Vector3.fromArray(GetEntityCoords(entity, false, false)).toObject();
         this.doors.set(doorHash, data);
       } else {
         return Infinity;
@@ -223,7 +229,7 @@ class DoorManager {
 
   async setDoorState(doorHash: number, state: Doors.State, emit = true, pairedHash?: number) {
     const data = this.getDoor(doorHash);
-    if (!data || state === null || state < -1 || state > 4) {
+    if (!data || state === null || state < 0 || state > 4) {
       return;
     }
     // Key check only applies when the local player is initiating the change
@@ -260,7 +266,7 @@ class DoorManager {
 
   async setDoorStateBypass(doorHash: number, state: Doors.State, pairedHash?: number): Promise<void> {
     const data = this.getDoor(doorHash);
-    if (!data || state === null || state < -1 || state > 4) return;
+    if (!data || state === null || state < 0 || state > 4) return;
     if (data.state !== state) {
       data.state = state;
       DoorSystemSetDoorState(doorHash, state);
@@ -283,7 +289,10 @@ class DoorManager {
 
     for (const [doorHashUnsigned, doorEntity] of DoorSystemGetActive()) {
       const doorHash = doorHashUnsigned << 0;
-      if (!this.doors.has(doorHash)) {
+      if (!this.doors.has(doorHash) || this.doors.get(doorHash)?.state === -1) {
+        if (!NetworkGetEntityIsNetworked(doorEntity)) {
+          continue;
+        }
         let doorNetId = NetworkGetNetworkIdFromEntity(doorEntity);
 
         // This is a door the server doesn't know about yet — use game default and report it
@@ -291,8 +300,12 @@ class DoorManager {
           entity: doorEntity,
           netId: doorNetId,
           state: DoorSystemGetDoorState(doorHash),
-          coords: Vector3.fromArray(GetEntityCoords(doorEntity, false)).toObject(),
+          coords: Vector3.fromArray(GetEntityCoords(doorEntity, false, false)).toObject(),
         };
+
+        if (data.state === -1) {
+          continue;
+        }
 
         emitSocket('doors.set-door-state', doorHash, data.state);
         this.doors.set(doorHash, data);
@@ -302,7 +315,7 @@ class DoorManager {
         const data = this.getDoor(doorHash);
         if (data) {
           // Re-apply stored state if game engine has reset it (happens on stream-in)
-          if (DoorSystemGetDoorState(doorHash) !== data.state) {
+          if (DoorSystemGetDoorState(doorHash) !== data.state && data.state >= 0) {
             DoorSystemSetDoorState(doorHash, data.state);
           }
 
@@ -311,7 +324,7 @@ class DoorManager {
             if (entity) {
               data.entity = entity;
               data.netId = NetworkGetEntityIsNetworked(entity) ? NetworkGetNetworkIdFromEntity(entity) : 0;
-              data.coords = Vector3.fromArray(GetEntityCoords(entity, false)).toObject();
+              data.coords = Vector3.fromArray(GetEntityCoords(entity, false, false)).toObject();
               this.doors.set(doorHash, data);
             }
           }
