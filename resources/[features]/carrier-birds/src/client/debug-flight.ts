@@ -1,11 +1,11 @@
 import { PVBase } from '@lib/client';
+import { Vector3 } from '@lib/math';
 import BirdTypes from '@lib/shared/bird-types';
 import { BlipModifiers, BlipSprites, BlipStyles } from '@lib/shared/blips';
 
 const BLIP_ID = 'debug-bird-flight';
 
 interface FlightSim {
-  blipId: number;
   originX: number;
   originY: number;
   originZ: number;
@@ -77,19 +77,16 @@ RegisterCommand(
 
     const totalDistance = Math.max(calculate2DDistance(originX, originY, finalDestX, finalDestY), 200);
 
-    const blipId = PVBase.blipRegister(
-      BLIP_ID,
-      {
-        label: `${birdType} (debug flight)`,
-        sprite: BlipSprites.MISSION_BG,
-        modifiers: [BlipModifiers.LIGHT_BLUE],
-        coords: { x: originX, y: originY, z: originZ },
-      },
-      BlipStyles.FRIENDLY,
-    );
+    PVBase.blipRegister(BLIP_ID, {
+      type: 'sprite',
+      label: `${birdType} (debug flight)`,
+      sprite: BlipSprites.MISSION_BG,
+      modifiers: [BlipModifiers.LIGHT_BLUE],
+      coords: { x: originX, y: originY, z: originZ },
+      style: BlipStyles.FRIENDLY,
+    });
 
     activeSim = {
-      blipId,
       originX,
       originY,
       originZ,
@@ -133,7 +130,7 @@ setTick(() => {
   const currentY = lerp(activeSim.originY, activeSim.destY, progress);
   const currentZ = lerp(activeSim.originZ, activeSim.destZ, progress);
 
-  SetBlipCoords(activeSim.blipId, currentX, currentY, currentZ);
+  PVBase.blipUpdateCoords(BLIP_ID, Vector3.fromArray([currentX, currentY, currentZ]));
 
   if (progress >= 1) {
     console.log(`[BirdFlight] Arrived! Total time: ${(activeSim.distanceCovered / activeSim.speed).toFixed(1)}s`);

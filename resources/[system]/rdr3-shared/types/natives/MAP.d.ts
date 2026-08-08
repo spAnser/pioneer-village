@@ -197,11 +197,10 @@ declare function LockMinimapAngle(angle: number): void;
 
 /**
    * REMOVE_BLIP
-   *
-  
+   * @param {number} blip
    * @return {number}
    */
-declare function RemoveBlip(): Blip;
+declare function RemoveBlip(blip: number): Blip;
 
 /**
    * RESET_MINIMAP_FOW

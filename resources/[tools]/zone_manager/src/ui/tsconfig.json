@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "types": ["@types/node"],
+    "moduleResolution": "node",
+    "downlevelIteration": true
+  },
+  "include": [
+    "./",
+    "../../../../../types.d.ts",
+    "../../../../*/rdr3-shared/types/**/*.d.ts",
+    "../../../../**/src/types.d.ts",
+    "../../../../**/src/client/types.d.ts"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "zone_manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "CC-BY-NC-SA-4.0",
+  "scripts": {
+    "build": "rspack --mode production",
+    "watch": "rspack --mode development --watch",
+    "prettier": "prettier src/**/*.{ts,tsx} --write"
+  }
+}

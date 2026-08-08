@@ -1,7 +1,6 @@
 import {
   PVBase,
   PVGame,
-  PVGameEvents,
   PVJobs,
   PVKeymapper,
   PVTarget,
@@ -9,11 +8,9 @@ import {
   type PedReactionConfig,
   onResourceStop,
 } from '@lib/client';
-import { AnimFlag, AttachPoint, PedConfigFlag } from '@lib/flags';
-import { EntityProofs } from '@lib/flags/entity-proofs';
+import { AnimFlag, AttachPoint } from '@lib/flags';
 import { Delay } from '@lib/functions';
 import { Vector3 } from '@lib/math';
-import { BlipModifiers, BlipStyles, Sonars } from '@lib/shared/blips';
 
 let isWhistling = false;
 
@@ -85,6 +82,7 @@ PVTarget.AddTarget({
       label: 'Clock Out',
       icon: 'clock',
       event: 'jobs:client:clock-out',
+      parameters: { jobHandle: 'sheriff' },
       isEnabled() {
         return PVJobs.isCurrentlyClocked();
       },
