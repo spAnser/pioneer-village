@@ -99,7 +99,7 @@
 //         end
 //     end
 // end)
-import { PVGame } from '@lib/client';
+import { PVCustomization, PVGame } from '@lib/client';
 import { AttachPoint } from '@lib/flags';
 import { Delay } from '@lib/functions';
 
@@ -134,10 +134,24 @@ on('inventory:client:toggle_weapon', async (item: Inventory.ItemWeapon, itemData
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.OffHand, false, false);
   } else {
     // TODO: Handle Thrown Weapons
-    const hasWeapon = HasPedGotWeapon(playerPed, item.weaponHash, false);
+    const hasWeapon = HasPedGotWeapon(playerPed, item.weaponHash, 0, false);
     console.log('toggle_weapon: equipping, hasWeapon=', hasWeapon);
     if (!hasWeapon) {
-      const gaveWeapon = GiveWeaponToPed(playerPed, item.weaponHash, 0, false, true, 0, false, 0.5, 1.0, 752097756, false, 0.0, false);
+      const gaveWeapon = GiveWeaponToPed(
+        playerPed,
+        item.weaponHash,
+        0,
+        false,
+        true,
+        0,
+        false,
+        0.5,
+        1.0,
+        752097756,
+        false,
+        0.0,
+        false,
+      );
       console.log('toggle_weapon: GiveWeaponToPed result=', gaveWeapon);
     }
 
@@ -149,9 +163,9 @@ on('inventory:client:toggle_weapon', async (item: Inventory.ItemWeapon, itemData
       'weaponAfterSet=',
       weaponAfterSet >>> 0,
       'matchesItem=',
-      (weaponAfterSet >>> 0) === (item.weaponHash >>> 0),
+      weaponAfterSet >>> 0 === item.weaponHash >>> 0,
       'hasWeaponNow=',
-      HasPedGotWeapon(playerPed, item.weaponHash, false),
+      HasPedGotWeapon(playerPed, item.weaponHash, 0, false),
     );
 
     const oilColor = (itemData?.metadatas[0] as Inventory.LanternMetadata | undefined)?.oilColor;
@@ -167,7 +181,7 @@ on('inventory:client:toggle_weapon', async (item: Inventory.ItemWeapon, itemData
         await Delay(100);
       }
       if (weaponEntity) {
-        SetLightsColorForEntity(weaponEntity, oilColor[0], oilColor[1], oilColor[2]);
+        PVCustomization.setLanternColor(playerPed, AttachPoint.MainHand, oilColor);
       }
     }
   }
@@ -189,7 +203,7 @@ on('inventory:client:toggle_thrown', (item: Inventory.ItemWeapon & Inventory.Ite
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.MainHand, false, false);
     SetCurrentPedWeapon(playerPed, `WEAPON_UNARMED`, shouldEquipNow, AttachPoint.OffHand, false, false);
   } else {
-    if (!HasPedGotWeapon(playerPed, item.weaponHash, false)) {
+    if (!HasPedGotWeapon(playerPed, item.weaponHash, 0, false)) {
       GiveWeaponToPed(playerPed, item.weaponHash, 0, false, true, 0, false, 0.5, 1.0, 752097756, false, 0.0, false);
     }
 

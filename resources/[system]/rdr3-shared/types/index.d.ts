@@ -30,6 +30,7 @@ interface ResultAsObject {}
 //   | ResultAsObject;
 
 interface StateBagInterface {
+  // @ts-ignore
   [key: string]: any;
   set(key: string, value: any, replicated: boolean): void;
 }
@@ -70,6 +71,7 @@ interface CitizenInterface {
   makeRefFunction(refFunction: Function): string;
 }
 
+// @ts-ignore
 declare var Citizen: CitizenInterface;
 
 declare function addRawEventListener(eventName: string, callback: Function): void;
@@ -112,6 +114,22 @@ declare function NewStateBag(name: string): StateBagInterface;
 declare function Entity(entity: number): EntityInterface;
 declare var GlobalState: StateBagInterface;
 declare function Player(entity: number | string): EntityInterface;
+declare var LocalPlayer: EntityInterface;
+declare function AddStateBagChangeHandler(keyFilter: string, bagFilter: string, handler: Function): number;
+declare function GetPlayerFromStateBagName(bagName: string): number;
+declare function GetEntityFromStateBagName(bagName: string): number;
+declare function GetCurrentResourceName(): string;
+declare function GetInvokingResource(): string;
+declare function LoadResourceFile(resourceName: string, fileName: string): string;
+declare function GetRegisteredCommands(): any;
+declare function GetResourceByFindIndex(findIndex: number): string;
+declare function GetResourceCommands(resource: string): any;
+declare function GetResourceKvpFloat(key: string): number;
+declare function GetResourceKvpInt(key: string): number;
+declare function GetResourceKvpString(key: string): string;
+declare function GetResourceMetadata(resourceName: string, metadataKey: string, index: number): string;
+declare function GetResourcePath(resourceName: string): string;
+declare function GetResourceState(resourceName: string): string;
 
 // @ts-ignore
 declare var exports: any;

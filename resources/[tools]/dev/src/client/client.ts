@@ -49,7 +49,7 @@ RegisterCommand(
 
     await collisionLoaded(waypoint.x, waypoint.y, 250.0);
 
-    const [ret, groundZ] = GetGroundZAndNormalFor_3dCoord(waypoint.x, waypoint.y, 400.0);
+    const [ret, groundZ] = GetGroundZAndNormalFor_3DCoord(waypoint.x, waypoint.y, 400.0);
     SetEntityCoords(
       PVGame.mountPed() || PVGame.playerPed(),
       waypoint.x,
@@ -221,6 +221,14 @@ RegisterCommand(
   false,
 );
 
+RegisterCommand(
+  'tp_cellar',
+  () => {
+    teleport(-599.6, 519.5, 96.2);
+  },
+  false,
+);
+
 /**
  * Misc Commands
  */
@@ -228,11 +236,11 @@ RegisterCommand(
   'get_pos',
   () => {
     const playerPed = PlayerPedId();
-    const coords = GetEntityCoords(playerPed, false);
+    const coords = GetEntityCoords(playerPed, false, true);
     const heightAboveGround = GetEntityHeightAboveGround(playerPed);
     const heading = GetEntityHeading(playerPed);
 
-    console.log(`x: ${coords[0]}, y: ${coords[1]}, z: ${coords[2] - heightAboveGround}, w: ${heading}`);
+    console.log(`x: ${coords[0]}, y: ${coords[1]}, z: ${coords[2] - heightAboveGround}, heading: ${heading}`);
   },
   false,
 );

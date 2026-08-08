@@ -1,14 +1,12 @@
 import {
   PVBase,
   PVGame,
-  PVGameEvents,
   PVJobs,
   PVKeymapper,
   PVTarget,
   onResourceStop,
 } from '@lib/client';
-import { AnimFlag, AttachPoint, PedConfigFlag } from '@lib/flags';
-import { EntityProofs } from '@lib/flags/entity-proofs';
+import { AnimFlag, AttachPoint } from '@lib/flags';
 import { Delay } from '@lib/functions';
 import { Vector3 } from '@lib/math';
 
@@ -21,7 +19,7 @@ const whistle = async (): Promise<void> => {
   isWhistling = true;
   const playerPed = PlayerPedId();
   const [ret, weaponHash] = GetCurrentPedWeapon(playerPed, false, 0, false);
-  SetCurrentPedWeapon(playerPed, GetHashKey('WEAPON_UNARMED'), true);
+  SetCurrentPedWeapon(playerPed, GetHashKey('WEAPON_UNARMED'), true, 0, false, false);
   const whistleObj = await PVGame.createObject('p_whistle01x', undefined, undefined, false);
   PVGame.attachEntityToBoneName(whistleObj, 'IK_R_HAND', undefined, new Vector3(-0.1, 0, 0), new Vector3(0, 90, 0));
   PVGame.taskPlayAnim({
@@ -38,7 +36,7 @@ const whistle = async (): Promise<void> => {
   PlaySoundFromEntity('POLICE_WHISTLE_SINGLE', playerPed, 'NBD1_Sounds', true, 0, 0);
   await Delay(1000);
   await PVBase.deleteEntity(whistleObj);
-  SetCurrentPedWeapon(playerPed, weaponHash, true);
+  SetCurrentPedWeapon(playerPed, weaponHash, true, 0, false, false);
   isWhistling = false;
 };
 
@@ -82,6 +80,7 @@ PVTarget.AddTarget({
       label: 'Clock Out',
       icon: 'clock',
       event: 'jobs:client:clock-out',
+      parameters: { jobHandle: 'sheriff' },
       isEnabled() {
         return PVJobs.isCurrentlyClocked();
       },
@@ -161,7 +160,7 @@ on('research:client:uncuff', async (entity: number) => {
 });
 
 on('research:client:arrest_entity', async (entity: number) => {
-  const coords = Vector3.fromArray(GetEntityCoords(entity, true));
+  const coords = Vector3.fromArray(GetEntityCoords(entity, true, true));
 
   const [rtn, z] = GetGroundZFor_3DCoord(coords.x, coords.y, coords.z, false);
 
@@ -401,3 +400,133 @@ RegisterCommand(
   },
   false,
 );
+
+// THIS IS Example / research code, not needed in this file but here for reference.
+
+// const manager = PedManager.getInstance();
+
+// (async () => {
+//   const ped = await manager.spawn('val-bank-ped', {
+//     model: 's_m_m_bankclerk_01',
+//     position: { x: -308.09, y: 773.89, z: 117.7, w: 9.3 },
+//     freeze: true,
+//     invincible: true,
+//     blockEvents: true,
+//     missionEntity: true,
+//     // Ambient speech fires on a random interval independently of the routine.
+//     speech: {
+//       ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
+//       names: ['HOWS_IT_GOING', 'WELCOME'],
+//       lines: ['HOWS_IT_GOING', 'WELCOME'],
+//       params: 'speech_params_standard',
+//       intervalMs: [15_000, 45_000],
+//     },
+//     // Routine loops through all step types as a demonstration:
+//     //   scenario — teller works at the counter
+//     //   anim     — does key unlock animation
+//     //   speech   — one-shot voiced line mid-routine
+//     //   wait     — brief pause before the next cycle
+//     routine: [
+//       { type: 'scenario', name: 'WORLD_HUMAN_VAL_BANKTELLER', duration: 10_000 },
+//       // { type: 'anim', dict: 'script_common@jail_cell@unlock@key', anim: 'action_mp_female', duration: 2_000 },
+//       // {
+//       //   type: 'speech',
+//       //   ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
+//       //   name: 'UNAUTHORIZED_AREA',
+//       //   params: 'speech_params_force',
+//       // },
+//       // { type: 'wait', ms: 2_000 },
+//     ],
+//     reactions: [
+//       // Teller reacts when they personally are attacked.
+//       {
+//         event: 'EVENT_ENTITY_DAMAGED',
+//         entityField: 'attacked',
+//         cooldownMs: 8_000,
+//         lines: [
+//           { ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'GENERIC_FRIGHTENED_HIGH', params: 'speech_params_force' },
+//           { ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'LAW_THREAT', params: 'speech_params_force' },
+//         ],
+//         onReact: (pedHandle, data) => {
+//           // e.g. trigger a flee animation, send a server event, update UI, etc.
+//           console.log(`ped ${pedHandle} was hit:`, data);
+//         },
+//       },
+//       // Teller reacts to any violence happening nearby (any entity damaged).
+//       {
+//         event: 'EVENT_SHOT_FIRED_BULLET_IMPACT',
+//         cooldownMs: 15_000,
+//         lines: [
+//           { ref: '0822_S_M_M_BANKCLERK_01_WHITE_01', name: 'GET_AWAY_FROM_ME', params: 'speech_params_force_shouted' },
+//           {
+//             ref: '0822_S_M_M_BANKCLERK_01_WHITE_01',
+//             name: 'GENERIC_SHOCKED_MED',
+//             params: 'speech_params_force_shouted',
+//           },
+//         ],
+//         onReact: (pedHandle, data) => {
+//           // e.g. trigger a flee animation, send a server event, update UI, etc.
+//           console.log(`ped ${pedHandle} was hit:`, data);
+//         },
+//       },
+//     ] satisfies PedReactionConfig[],
+//   });
+
+//   console.log('bank ped', ped);
+// })();
+/*
+const blipCoords = {
+  x: 0,
+  y: 800,
+  z: 120,
+};
+
+PVBase.blipRegister('test-1', {
+  type: 'area',
+  coords: blipCoords,
+  label: 'Area',
+  scale: [100, 150],
+  style: BlipStyles.MISSION,
+  modifiers: [BlipModifiers.OBJECTIVE],
+});
+
+PVBase.blipRegister('test-2', {
+  type: 'radius',
+  coords: Vector3.fromObject(blipCoords).add(new Vector3(66.6, -150, 0)),
+  label: 'Radius',
+  style: BlipStyles.MISSION,
+  modifiers: [BlipModifiers.RED],
+  scale: 100,
+});
+
+const volumeCylinder = CreateVolumeCylinder(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 100, 100, 1);
+SetVolumeCoords(volumeCylinder, blipCoords.x + 200, blipCoords.y + 200, blipCoords.z);
+SetVolumeScale(volumeCylinder, 100, 100, 1);
+
+PVBase.blipRegister('test-3', {
+  type: 'volume',
+  volume: volumeCylinder,
+  label: 'Volume Cylinder',
+  style: BlipStyles.MISSION,
+  modifiers: [BlipModifiers.RED],
+});
+
+const volumeAggregate = CreateVolumeAggregate();
+AddBoxVolumeToVolumeAggregate(volumeAggregate, -270.606, 827.282, 118.4249, 0.0, 0.0, 11.275, 80.0, 100.4, 86.6);
+AddBoxVolumeToVolumeAggregate(volumeAggregate, -235.442, 653.1498, 112.3099, 0.0, 0.0, 49.575, 44.4, 76.775, 50.0);
+AddBoxVolumeToVolumeAggregate(volumeAggregate, -236.9004, 797.5648, 121.6383, 0.0, 0.0, 17.55, 53.975, 105.5, 20.0);
+AddBoxVolumeToVolumeAggregate(volumeAggregate, -339.8, 829.675, 100.0, 0.0, 0.0, 14.975, 25.0, 75.0, 50.0);
+
+PVBase.blipRegister('test-4', {
+  type: 'volume',
+  volume: volumeAggregate,
+  label: 'Volume Aggregate',
+  style: BlipStyles.MISSION,
+  modifiers: [BlipModifiers.RED],
+});
+
+AllowSonarBlips(true);
+ForceSonarBlipsThisFrame();
+
+TriggerSonarBlip(Sonars.CONVERSATION, blipCoords.x, blipCoords.y, blipCoords.z);
+*/

@@ -2,6 +2,7 @@ import { exports } from '@lib/client';
 
 import { componentManager } from './managers/component-manager';
 import { paletteManager } from './managers/palette-manager';
+import { setLanternOilColor } from './misc/lantern-oils';
 
 const getGuidsAtIndex: Customization.GetGuidsAtIndex = (...args) => {
   return paletteManager.getGuidsAtIndex(...args);
@@ -111,6 +112,10 @@ const setWearableState: Customization.SetWearableState = (...args) => {
   return componentManager.setWearableState(...args);
 };
 
+const setLanternColor: Customization.SetLanternColor = (...args) => {
+  return setLanternOilColor(...args);
+};
+
 exports<'customization'>('getGuidsAtIndex', getGuidsAtIndex);
 exports<'customization'>('getDrawableAtIndex', getDrawableAtIndex);
 exports<'customization'>('getAlbedoAtIndex', getAlbedoAtIndex);
@@ -138,3 +143,4 @@ exports<'customization'>('setTintByHorsePart', setTintByHorsePart);
 exports<'customization'>('equipItems', equipItems);
 exports<'customization'>('applyMetaPedOutfit', applyMetaPedOutfit);
 exports<'customization'>('setWearableState', setWearableState);
+exports<'customization'>('setLanternColor', setLanternColor);

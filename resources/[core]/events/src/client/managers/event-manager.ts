@@ -1,6 +1,9 @@
+type EventName = string;
+type EventIdentifier = string;
+
 export class EventManager {
   protected static instance: EventManager;
-  protected events: Map<string, Map<string, Function>> = new Map();
+  protected events: Map<EventName, Map<EventIdentifier, Function>> = new Map();
 
   static getInstance(): EventManager {
     if (!EventManager.instance) {

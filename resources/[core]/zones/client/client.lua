@@ -96,6 +96,9 @@ end
 -- Creates a box-shaped zone with rotation support
 -- Box zones are rectangular prisms that can be rotated around the Z-axis
 function generateBox(data)
+    data.coords = vector3(data.coords.x, data.coords.y, data.coords.z) -- Ensure coords is a vector3
+    data.size = vector3(data.size.x, data.size.y, data.size.z) -- Ensure size is a vector3
+
     -- Calculate vertical bounds from center and height
     local halfHeight = data.size.z / 2
     local centerPoint = data.coords.z
@@ -104,7 +107,7 @@ function generateBox(data)
 
     -- Create quaternion for rotation (around Z-axis only)
     -- Quaternions prevent gimbal lock and provide smooth rotations
-    local quatRotation = quat(data.rotation or 0, vec3(0, 0, 1))
+    local quatRotation = quat(data.rotation or 0, vector3(0, 0, 1))
 
     Zones[data.name] = {
         type = 'box',
@@ -114,6 +117,7 @@ function generateBox(data)
             rotation = data.rotation, -- Rotation angle in radians
             quat = quatRotation, -- Quaternion for efficient rotation calculations
             debug = data.options.debug,
+            debugColor = data.options.debugColor or { r = 255, g = 0, b = 255, a = 128 }, -- Debug color (default magenta)
             delayEnter = data.options.delayEnter,
             delayExit = data.options.delayExit,
             maxZ = maxZ,
@@ -123,10 +127,10 @@ function generateBox(data)
         -- Create a rotated polygon from the box corners
         -- Start with box corners in local space, apply rotation, then translate to world position
         polygon = (quatRotation * glm.polygon.new({
-            vec3(data.size.x, data.size.y, 0),    -- Front-right corner
-            vec3(-data.size.x, data.size.y, 0),   -- Front-left corner
-            vec3(-data.size.x, -data.size.y, 0),  -- Back-left corner
-            vec3(data.size.x, -data.size.y, 0),   -- Back-right corner
+            vector3(data.size.x, data.size.y, 0),    -- Front-right corner
+            vector3(-data.size.x, data.size.y, 0),   -- Front-left corner
+            vector3(-data.size.x, -data.size.y, 0),  -- Back-left corner
+            vector3(data.size.x, -data.size.y, 0),   -- Back-right corner
         }) + data.coords) -- Apply rotation then translate to world position
     }
 end
@@ -142,6 +146,7 @@ function generateSphere(data)
             coords = data.coords, -- Center position of the sphere
             radius = data.radius, -- Radius for distance-based containment checks
             debug = data.options.debug,
+            debugColor = data.options.debugColor or { r = 255, g = 0, b = 255, a = 128 }, -- Debug color (default magenta)
             delayEnter = data.options.delayEnter,
             delayExit = data.options.delayExit,
         }
@@ -418,12 +423,34 @@ Citizen.CreateThread(function()
     while true do
         if debugRender then
             for _, zone in pairs(Zones) do
-                if zone.polygon then
-                    local corner = zone.polygon
-                    local color = zone.data.debugColor or { r = 255, g = 0, b = 255, a = 128 }
-                    for k, point in pairs(corner) do
-                        local secondPoint = k < #corner and corner[k + 1] or corner[1]
-                        DrawWall(point, secondPoint, zone.data.minZ, zone.data.maxZ, color.r, color.g, color.b, color.a)
+
+                if zone.data.debug then
+                    if zone.polygon then
+                        -- Draw polygon/box zones by connecting vertices with walls
+                        local corner = zone.polygon
+                        for k, point in pairs(corner) do
+                            -- Connect current point to next point (or first point if at end)
+                            local secondPoint = corner[1] -- Default to first point for closing the shape
+                            if k < #corner then
+                                secondPoint = corner[k + 1] -- Use next point if not at end
+                            end
+
+                            DrawWall(point, secondPoint, zone.data.minZ, zone.data.maxZ, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, zone.data.debugColor.a)
+                            --if #(playerCoords - point) < 2500.0 then
+                            --    -- Draw a vertical wall between the two points
+                            --    -- Black color (0,0,0) with 50% transparency (128)
+                            --    DrawWall(point, secondPoint, zone.data.minZ, zone.data.maxZ, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, zone.data.debugColor.a)
+                            --end
+                            --if #(playerCoords - point) < 2000.0 then
+                            --    DrawLine(point.x * 1.0, point.y * 1.0, zone.data.debugColor.a + 150.01, secondPoint.x * 1.0, secondPoint.y * 1.0, zone.data.debugColor.a + 150.01, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, 255) -- Draw line between corners
+                            --end
+                        end
+                    elseif zone.type == 'sphere' then
+                        -- Draw sphere zones using the sphere marker
+                        local x = zone.data.coords.x
+                        local y = zone.data.coords.y
+                        local z = zone.data.coords.z
+                        DrawSphere(x, y, z, zone.data.radius, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, zone.data.debugColor.a)
                     end
                 elseif zone.type == 'sphere' then
                     DrawSphere(zone.data.coords.x, zone.data.coords.y, zone.data.coords.z, zone.data.radius, 255, 0, 255, 128)

@@ -1,0 +1,681 @@
+:root {
+  --accent: #4fb8ff;
+  /* Resting tone is deliberately a shade darker than the hover/dragging
+     tones below it, so hovering a handle reads as a clear "lit up" state
+     confirming you're on the right one, not just a color swap. */
+  --axis-x: #cc4747;
+  --axis-x-hover: #ff5c5c;
+  --axis-x-active: #ff8a8a;
+  --axis-y: #37a35d;
+  --axis-y-hover: #4fdb7a;
+  --axis-y-active: #82f0a6;
+  --axis-z: #3d6fcc;
+  --axis-z-hover: #4f8bff;
+  --axis-z-active: #86b3ff;
+  /* Gizmo legs specifically use duller resting tones than --axis-x/y/z (used
+     elsewhere for labels/buttons) — those are already close to the hover
+     color, so hovering a leg barely read as a state change. */
+  --gizmo-leg-x: #7a3030;
+  --gizmo-leg-y: #276b3d;
+  --gizmo-leg-z: #2a4a8c;
+  --panel-bg: rgba(18, 20, 24, 0.85);
+  --panel-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #eee;
+  user-select: none;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 0 1px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--panel-border);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.9em;
+  color: #eee;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+
+#app.app--show {
+  display: block;
+}
+
+/* ---------- Status strip ---------- */
+
+.status-strip {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+
+.status-strip__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+}
+
+.status-strip__count {
+  font-weight: 600;
+}
+
+.status-strip__mode {
+  color: var(--accent);
+}
+
+.status-strip__hints {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.status-strip__icon-btn {
+  background: transparent;
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+  padding: 2px 8px;
+  font-size: 13px;
+}
+
+.status-strip__icon-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.status-strip__icon-btn:not(:disabled):hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Cursor-position readout as a second row inside the same status-strip
+   element (real DOM parent/child, not a second independently-positioned
+   box) — this is what makes the two rows seamless and prevents any drift/
+   overlap between them. Collapsed (0 height, no border) only while the
+   nudge stepper takes its place — a raycast miss (aiming past the max ray
+   distance, or at open sky) still shows the row with an "out of range"
+   message instead of hiding it, so the readout doesn't read as broken.
+   Fixed-width value column with tabular-nums so digit-count changes (e.g.
+   "-9.50" vs "123.45") don't visibly resize the box every frame. */
+.status-strip__cursor-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 14px;
+  max-height: 0;
+  overflow: hidden;
+  border-top: 0px solid var(--panel-border);
+}
+
+.status-strip__cursor-row--visible {
+  max-height: 24px;
+  padding: 6px 14px;
+  border-top-width: 1px;
+}
+
+.status-strip__cursor-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.status-strip__cursor-value {
+  display: inline-block;
+  min-width: 132px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.status-strip__cursor-row--out-of-range .status-strip__cursor-value {
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ---------- HUD (nudge stepper) ---------- */
+
+.hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hud__nudge {
+  position: fixed;
+  top: 54px;
+  left: 50%;
+  width: 220px;
+  transform: translateX(-50%);
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  pointer-events: auto;
+  display: none;
+}
+
+.hud__nudge.hud--visible {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hud__nudge-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hud__nudge-label {
+  width: 12px;
+  font-weight: 700;
+}
+
+.hud__nudge-row--x .hud__nudge-label { color: var(--axis-x); }
+.hud__nudge-row--y .hud__nudge-label { color: var(--axis-y); }
+.hud__nudge-row--z .hud__nudge-label { color: var(--axis-z); }
+
+.hud__nudge-value {
+  width: 52px;
+  text-align: right;
+}
+
+.hud__nudge-btn {
+  background: transparent;
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.hud__nudge-dismiss {
+  margin-top: 4px;
+  background: transparent;
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+  padding: 3px 0;
+}
+
+/* ---------- Point markers ---------- */
+
+.point-markers {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.point-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 0, 0.85);
+  color: #111;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.point-marker--hovered {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.point-marker--selected {
+  background: var(--accent);
+  color: #05131c;
+  border-color: #fff;
+}
+
+/* ---------- Gizmo ---------- */
+
+.gizmo-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.gizmo-overlay--visible {
+  display: block;
+}
+
+.gizmo-overlay__svg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gizmo-handle {
+  stroke-width: 7;
+  stroke-linecap: round;
+  transition: stroke 100ms ease;
+}
+
+.gizmo-handle--x { stroke: var(--gizmo-leg-x); }
+.gizmo-handle--y { stroke: var(--gizmo-leg-y); }
+.gizmo-handle--z { stroke: var(--gizmo-leg-z); }
+
+/* Hovering the (much larger, invisible) hit area lights the handle up to
+   its brighter variant — confirms "you're on the right handle" before
+   committing to a drag, same principle as the placement HUD previewing the
+   next point before it's placed. */
+.gizmo-handle--hovered.gizmo-handle--x { stroke: var(--axis-x-hover); }
+.gizmo-handle--hovered.gizmo-handle--y { stroke: var(--axis-y-hover); }
+.gizmo-handle--hovered.gizmo-handle--z { stroke: var(--axis-z-hover); }
+
+.gizmo-handle--dragging.gizmo-handle--x { stroke: var(--axis-x-active); }
+.gizmo-handle--dragging.gizmo-handle--y { stroke: var(--axis-y-active); }
+.gizmo-handle--dragging.gizmo-handle--z { stroke: var(--axis-z-active); }
+
+.gizmo-handle--dragging {
+  stroke-width: 10;
+}
+
+/* Invisible, wide-stroke twin of .gizmo-handle sharing its exact endpoints
+   (set together in gizmo-overlay.ts's render) — hit-tests the actual leg
+   geometry instead of a circular area that drifts from the visible line at
+   oblique camera angles. 64px total width (32 either side of the line),
+   matching the old circular hit target's diameter. */
+.gizmo-handle-hit {
+  stroke: transparent;
+  stroke-width: 64;
+  stroke-linecap: round;
+  pointer-events: stroke;
+  cursor: grab;
+}
+
+.gizmo-handle-hit:active {
+  cursor: grabbing;
+}
+
+/* Flat plane-drag square — sits between the X and Y arms, moves the point
+   freely along both world axes at once instead of one at a time. Uses a
+   neutral fill (not an axis color) since it represents both axes together,
+   not a single one. The polygon IS the hit target (pointer-events: auto,
+   hit-tests against its own real geometry) rather than a separate
+   fixed-size CSS box guessing at the shape's position — a separate box
+   drifted from the visible parallelogram as the camera angle skewed the
+   X/Y legs, so you could click squarely on the rendered shape at an angle
+   and miss the old hit target. The wide near-transparent stroke widens the
+   effective clickable margin beyond the visible fill/border without
+   needing a second element. */
+.gizmo-plane-square {
+  fill: rgba(255, 255, 255, 0.18);
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 2;
+  pointer-events: auto;
+  cursor: move;
+}
+
+.gizmo-plane-square:hover {
+  fill: rgba(255, 255, 255, 0.28);
+}
+
+.gizmo-plane-square--dragging {
+  fill: rgba(255, 255, 255, 0.32);
+  stroke: #fff;
+  cursor: grabbing;
+}
+
+/* ---------- Side panel ---------- */
+
+/* Closed state leaves a narrow sliver on screen (rather than sliding fully
+   off) so the panel's existence is discoverable without already knowing the
+   Tab shortcut — a completely hidden panel gives no visual hint that
+   pressing Tab does anything. The peek strip is itself clickable to open. */
+.side-panel {
+  position: fixed;
+  top: 12px;
+  right: 0;
+  bottom: 12px;
+  width: 320px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  pointer-events: auto;
+  transform: translateX(calc(100% - 14px));
+  transition: transform 180ms ease;
+}
+
+.side-panel--open {
+  transform: translateX(0);
+}
+
+.side-panel__scroll {
+  height: 100%;
+  padding: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 8px 0 0 8px;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.side-panel__scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.side-panel__scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.side-panel__scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+
+.side-panel__scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.side-panel__peek-handle {
+  display: none;
+}
+
+.side-panel:not(.side-panel--open) .side-panel__peek-handle {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 160px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+}
+
+.side-panel__peek-handle kbd {
+  margin: 4px 0;
+  padding: 3px 1px;
+}
+
+.side-panel:not(.side-panel--open) .side-panel__peek-handle:hover {
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.panel-section {
+  margin-bottom: 18px;
+}
+
+.panel-section--hidden {
+  display: none;
+}
+
+.panel-section__title {
+  font-size: 14px;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.panel-section__title--toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.panel-section__title--toggle::after {
+  content: ' ▸';
+}
+
+.panel-section__title--expanded::after {
+  content: ' ▾';
+}
+
+.panel-section__hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.panel-section--selected-point {
+  border-bottom: 1px solid var(--panel-border);
+  padding-bottom: 16px;
+}
+
+.selected-point__fields {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.selected-point__field {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  gap: 2px;
+}
+
+.selected-point__axis-label {
+  font-weight: 700;
+}
+
+.selected-point__field--x .selected-point__axis-label { color: var(--axis-x); }
+.selected-point__field--y .selected-point__axis-label { color: var(--axis-y); }
+.selected-point__field--z .selected-point__axis-label { color: var(--axis-z); }
+
+.selected-point__field input {
+  width: 100%;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  color: #eee;
+  padding: 4px;
+}
+
+.panel-button {
+  background: var(--accent);
+  border: none;
+  border-radius: 4px;
+  color: #05131c;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.panel-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.panel-button--danger {
+  background: var(--axis-x);
+}
+
+.panel-button--small {
+  padding: 3px 8px;
+}
+
+.point-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.point-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.point-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.point-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+
+.point-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.point-list__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-top: 2px solid transparent;
+}
+
+.point-list__row:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.point-list__row--selected {
+  background: rgba(79, 184, 255, 0.18);
+  color: var(--accent);
+}
+
+.point-list__row--dragging {
+  opacity: 0.4;
+}
+
+.point-list__row--drag-over {
+  border-top-color: var(--accent);
+}
+
+.point-list__remove {
+  color: var(--axis-x);
+  cursor: pointer;
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+.point-list__remove:hover {
+  color: var(--axis-x-hover);
+  background: rgba(204, 71, 71, 0.18);
+}
+
+.bounds__row {
+  display: flex;
+  gap: 8px;
+}
+
+.bounds__field {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  gap: 2px;
+}
+
+.bounds__field input {
+  width: 100%;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  color: #eee;
+  padding: 4px;
+}
+
+.bounds__snap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.export-block {
+  margin-top: 10px;
+}
+
+.export-block__label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.export-block textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  color: #eee;
+  font-family: monospace;
+  font-size: 11px;
+  resize: none;
+  user-select: text;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.export-block textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.export-block textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.export-block textarea::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}
+
+.export-block textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

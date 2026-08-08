@@ -54,6 +54,7 @@ export class PtfxManager {
     coords: Vector3Format,
     rot: Vector3Format = { x: 0, y: 0, z: 0 },
     scale: number = 1.0,
+    ignoreDistance = false,
   ): Promise<number> {
     if (this.ptfxs.has(id)) {
       return this.ptfxs.get(id)!.id;
@@ -61,10 +62,12 @@ export class PtfxManager {
     // console.log('Starting PTFX', id, dict, name, coords, rot, scale, looped);
 
     const playerCoords = PVGame.playerCoords();
-    const distance = Vector3.fromObject(coords).getDistance(playerCoords);
-    if (distance > 500) {
-      console.log('PTFX too far away, not starting', id, distance);
-      return 0;
+    if (!ignoreDistance) {
+      const distance = Vector3.fromObject(coords).getDistance(playerCoords);
+      if (distance > 500) {
+        console.log('PTFX too far away, not starting', id, distance);
+        return 0;
+      }
     }
 
     let ptfxId = 0;

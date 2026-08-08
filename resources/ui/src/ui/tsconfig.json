@@ -1,39 +1,24 @@
 {
   "compilerOptions": {
-      "baseUrl": ".",
-      "strictNullChecks": true,
-      "noImplicitAny": true,
-      "allowSyntheticDefaultImports": true,
-      "target": "es5",
-      "lib": [
-        "dom",
-        "dom.iterable",
-        "esnext"
-      ],
-      "paths": {
-        "@lib/*": [
-          "../../../../lib/*",
-        ],
-        "@styled/*": [
-          "./app/styled/*",
-        ],
-        "@uiLib/*": [
-          "./app/lib/*",
-        ],
-        "@fa/5/*": [
-          "./app/styled/fa5/*",
-        ],
-        "@fa/6/*": [
-          "./app/styled/fa6/*",
-        ]
-      },
-      "experimentalDecorators": true,
-      "jsx": "react-jsx",
-      "jsxImportSource": "react",
-      "module": "esnext",
-      "types": ["@citizenfx/client", "@types/node"],
-      "moduleResolution": "node",
-      "downlevelIteration": true
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "paths": {
+      "@lib/*": ["../../../../lib/*"],
+      "@styled/*": ["./app/styled/*"],
+      "@uiLib/*": ["./app/lib/*"],
+      "@fa/5/*": ["./app/styled/fa5/*"],
+      "@fa/6/*": ["./app/styled/fa6/*"]
+    },
+    "experimentalDecorators": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "module": "esnext",
+    "types": ["@types/node"],
+    "moduleResolution": "node",
+    "downlevelIteration": true
   },
   "include": [
     "./",

@@ -130,11 +130,11 @@ on('world:client:open-cellar', async (_pEntity: number, _pArgs: Record<string, a
   const rot = new Vector3(0.0, 0.0, doorRot.z);
   rot.z -= 40.0;
 
-  TaskGoToCoordAnyMeans(PVGame.playerPed(), coords.x, coords.y, coords.z, 1.5, 0, false, 0, 0);
-  await PVGame.reachedCoords(coords, 0.5);
-
-  setDoorOpen(true);
   if (PVGame.playerCoords().z > 96.0) {
+    TaskGoToCoordAnyMeans(PVGame.playerPed(), coords.x, coords.y, coords.z, 1.5, 0, false, 0, 0);
+    await PVGame.reachedCoords(coords, 0.5);
+
+    setDoorOpen(true);
     PVGame.taskPlayAnimAdvArray(coords.toObject(), rot.toObject(), [
       {
         dict: ANIM_DICT,
@@ -163,6 +163,7 @@ on('world:client:open-cellar', async (_pEntity: number, _pArgs: Record<string, a
       },
     ]);
   } else {
+    setDoorOpen(true);
     playDoorAnim(doorLeft, true);
     playDoorAnim(doorRight, true);
   }

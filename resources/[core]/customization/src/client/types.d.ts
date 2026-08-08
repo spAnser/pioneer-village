@@ -69,6 +69,8 @@ declare namespace Customization {
 
   type SetWearableState = (catgegory: string | number, state: string | number, ped?: number) => void;
 
+  type SetLanternColor = (ped: number, attachPoint: number, oilColor: [number, number, number]) => void;
+
   interface ClientExports {
     getGuidsAtIndex: GetGuidsAtIndex;
     getDrawableAtIndex: GetDrawableAtIndex;
@@ -97,6 +99,7 @@ declare namespace Customization {
     equipItems: EquipItems;
     applyMetaPedOutfit: ApplyMetaPedOutfit;
     setWearableState: SetWearableState;
+    setLanternColor: SetLanternColor;
   }
 }
 

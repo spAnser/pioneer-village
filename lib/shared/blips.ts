@@ -401,6 +401,16 @@ const BLIP_SPRITES = [
   'WEAPON_THROWING_KNIFE',
   'WEAPON_TOMAHAWK',
   'WEAPON_TORCH',
+  'BLIP_PROC_BANK',
+  // 'BLIP_PROC_BOATROBBERY',
+  'BLIP_PROC_BOUNTY_POSTER',
+  'BLIP_PROC_COACH',
+  // 'BLIP_PROC_COACHROBBERY',
+  'BLIP_PROC_HOME',
+  // 'BLIP_PROC_HOME_KEY',
+  'BLIP_PROC_HOME_LOCKED',
+  'BLIP_PROC_LOANSHARK',
+  // 'BLIP_PROC_TRAINROBBERY',
 ] as const;
 
 const BlipSprites = {} as Record<(typeof BLIP_SPRITES)[number], number>;
@@ -829,4 +839,31 @@ for (const modifier of BLIP_MODIFIERS) {
   BlipModifiers[modifier] = GetHashKey(`BLIP_MODIFIER_${modifier}`);
 }
 
-export { BlipStyles, BlipSprites, BlipModifiers };
+const SONAR_BLIPS = [
+  'CONVERSATION',
+  'OVERHEARD_BEAT',
+  'OVERHEARD_BEAT_SMALL',
+  'OVERHEARD_BEAT_BIG',
+  'OVERHEARD_BEAT_MEDIUM',
+  'VICTIM_MEDIUM',
+  // 729220490,
+  // 919052783,
+  // -890428877,
+  // 1515458263,
+  // 1066055203,
+  // -2119219982,
+  // 682760074,
+  // -1455840275,
+  // 227904798,
+  // -111342534,
+  // 1434382007,
+  // -718003063,
+] as const;
+
+const Sonars = {} as Record<(typeof SONAR_BLIPS)[number], number>;
+
+for (const sprite of SONAR_BLIPS) {
+  Sonars[sprite] = GetHashKey(`SONAR_${sprite}`);
+}
+
+export { BlipStyles, BlipSprites, BlipModifiers, Sonars };

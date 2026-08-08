@@ -34,6 +34,25 @@ const patrolTask = {
   },
 } satisfies Jobs.TaskDefinition;
 
+// Create a patrol task
+const escortTask = {
+  handle: 'escort-main-street',
+  name: 'Escort Prisoner',
+  description: 'Prison escort',
+  taskType: 'patrol',
+  requirements: { badge: true },
+  rewards: { money: 10 },
+  timeConstraints: {
+    startHour: 8,
+    endHour: 20,
+  },
+  repeatConfig: {
+    type: 'COOLDOWN',
+    cooldownMinutes: 30,
+    maxPerDay: 8,
+  },
+} satisfies Jobs.TaskDefinition;
+
 // Function to register job and task
 const registerJobAndTask = () => {
   if (PVJobs && PVJobs.registerJob) {
@@ -42,6 +61,7 @@ const registerJobAndTask = () => {
 
     // Create the task
     PVJobs.createTask('sheriff', patrolTask);
+    PVJobs.createTask('sheriff', escortTask);
   } else {
     console.error('[Research] Jobs exports not available - ensure jobs resource is started before research');
   }

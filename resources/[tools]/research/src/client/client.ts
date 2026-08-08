@@ -1,6 +1,7 @@
 import { PVGame, onUI } from '@lib/client';
 
 import './commands';
+import './events';
 import './natives';
 import './stuff/animal';
 import './stuff/apple';

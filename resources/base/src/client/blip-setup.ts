@@ -4,6 +4,6 @@ import Blips from './data/blips';
 setTimeout(() => {
   let b = 0;
   for (const blip of Blips) {
-    blipController.register(`base:${b++}`, blip);
+    blipController.register(`base:${b++}`, GetCurrentResourceName(), blip);
   }
 }, 5e3);

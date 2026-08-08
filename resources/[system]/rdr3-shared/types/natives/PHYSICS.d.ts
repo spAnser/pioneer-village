@@ -93,10 +93,10 @@ declare function DeleteChildRope(ropeId: number): void;
 /**
    * DELETE_ROPE
    *
-  
+
    * @return {number}
    */
-declare function DeleteRope(): number;
+declare function DeleteRope(ropeId: number): void;
 
 /**
    * DETACH_ROPE_FROM_ENTITY

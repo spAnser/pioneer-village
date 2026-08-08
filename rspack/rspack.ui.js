@@ -1,6 +1,5 @@
 const path = require('path');
 const HotReloadPlugin = require('./rspack.hot-reload');
-const { TsCheckerRspackPlugin } = require('ts-checker-rspack-plugin');
 
 // @ts-check
 /** @type {import('@rspack/cli').Configuration} */
@@ -11,9 +10,6 @@ module.exports = () => ({
     hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
-  },
-  experiments: {
-    css: true,
   },
   module: {
     rules: [
@@ -60,8 +56,8 @@ module.exports = () => ({
         ],
       },
       {
-        test: /\.(png|jpg)$/,
-        type: 'asset/resource',
+        test: /\.css$/,
+        type: 'css/auto',
       },
       {
         test: /\.(sass|scss)$/,
@@ -80,6 +76,10 @@ module.exports = () => ({
         type: 'css/auto',
       },
       {
+        test: /\.(png|jpg)$/,
+        type: 'asset/resource',
+      },
+      {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
         use: ['@svgr/webpack'],
@@ -91,16 +91,7 @@ module.exports = () => ({
       },
     },
   },
-  plugins: [
-    new HotReloadPlugin('ui'),
-    process.env.NODE_ENV === 'development' &&
-      new TsCheckerRspackPlugin({
-        typescript: {
-          typescriptPath: require.resolve('typescript'),
-          configFile: path.resolve('./src/ui/tsconfig.json'),
-        },
-      }),
-  ].filter(Boolean),
+  plugins: [new HotReloadPlugin('ui')],
   optimization: {
     minimize: false,
   },
