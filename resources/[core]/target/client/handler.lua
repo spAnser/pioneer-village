@@ -104,6 +104,69 @@ local function collectActions(target, data, allActions)
     end
 end
 
+--- Model check natives return a boolean on some builds and an integer on others,
+--- and 0 is truthy in Lua, so the comparison has to be explicit
+--- @param value boolean|number
+--- @return boolean
+local function nativeTruthy(value)
+    return value == true or value == 1
+end
+
+--- Resolution order for class flags, so a model carrying more than one flag
+--- always reports the most specific one to the UI
+local classFlagPriority = {
+    'isPiano',
+    'isCashRegister',
+    'isChair',
+    'isHorse',
+    'isWagon',
+    'isBush',
+}
+
+--- Resolves the UI display flag for a model, preferring the model specific
+--- class map over the broad native checks
+--- @param model number|false The entity model hash, or false when the ray hit no entity
+--- @return string
+local function resolveFlag(model)
+    if not model then
+        return ''
+    end
+
+    local classFlags = Target.class[model]
+
+    if classFlags then
+        for _, flag in ipairs(classFlagPriority) do
+            if classFlags[flag] then
+                return flag
+            end
+        end
+
+        -- Flags added to class.lua without a priority entry still resolve, sorted so the pick is stable
+        local unranked = {}
+
+        for flag in pairs(classFlags) do
+            unranked[#unranked + 1] = flag
+        end
+
+        if #unranked > 0 then
+            table.sort(unranked)
+            return unranked[1]
+        end
+    end
+
+    if nativeTruthy(IsThisModelATrain(model)) then
+        return 'isTrain'
+    elseif nativeTruthy(IsThisModelABoat(model)) then
+        return 'isBoat'
+    elseif nativeTruthy(IsThisModelADraftVehicle(model)) then
+        return 'isWagon'
+    elseif nativeTruthy(IsThisModelAHorse(model)) then
+        return 'isHorse'
+    end
+
+    return ''
+end
+
 function RegisterKeyMapping()
     while GetResourceState("keymapper") ~= "started" do
         Wait(1000)
@@ -564,28 +627,7 @@ function Target:Enable(state)
 
             local dstCheck = data.distance <= self.distance
 
-            local flag = ''
-
-            local isHorse = IsThisModelAHorse(data.model)
-            local isBoat = IsThisModelABoat(data.model)
-            local isVehicle = IsThisModelADraftVehicle(data.model)
-            local isTrain = IsThisModelATrain(data.model)
-
-            if isHorse == 1 or isHorse == true then
-                flag = 'isHorse'
-            end
-
-            if isBoat == 1 or isBoat == true then
-                flag = 'isBoat'
-            end
-
-            if isVehicle == 1 or isVehicle == true then
-                flag = 'isWagon'
-            end
-
-            if isTrain == 1 or isTrain == true then
-                flag = 'isTrain'
-            end
+            local flag = resolveFlag(data.model)
 
             if dstCheck then
                 local targets = self.targets(data)

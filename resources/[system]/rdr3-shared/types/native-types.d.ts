@@ -25,12 +25,3 @@ type Volume = number;
 type Hash = number | string;
 type ScrHandle = [number, number];
 type Vector3 = [number, number, number];
-
-/** Additional Natives */
-declare function SetTextCentre(align: boolean): void;
-
-declare function SetTextDropshadow(distance: number, r: number, g: number, b: number, a: number): void;
-
-declare function SetTextFontForCurrentCommand(fontId: number): void;
-
-declare function SetTextScale(scale: number, size: number): void;

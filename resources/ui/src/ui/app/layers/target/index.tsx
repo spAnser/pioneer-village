@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 
 import { emitClient } from '@lib/ui';
 
-import { uiSize } from '@uiLib/helpers';
+import { conditionalClass, uiSize } from '@uiLib/helpers';
 
 import { useEscapeKey } from '../../hooks/use-game-events';
 import targetStore from '../../stores/target-store';
@@ -42,10 +42,12 @@ export default function Target() {
   };
 
   const getIconData = (): { style?: 'light' | 'regular' | 'solid' | 'duotone'; icon: string } => {
-    // console.log(state.flag);
+    // console.log('state.flag', state.flag);
     switch (state.flag) {
       case 'isHorse':
         return { style: 'solid', icon: 'horse-saddle' };
+      case 'isPiano':
+        return { style: 'solid', icon: 'piano' };
       case 'isCashRegister':
         return { style: 'duotone', icon: 'cash-register' };
     }
@@ -73,7 +75,10 @@ export default function Target() {
         <InteractIconComponent
           width={uiSize(28)}
           height={uiSize(28)}
-          color={state.active ? 'var(--theme-white)' : 'var(--theme-gray-medium)'}
+          className={conditionalClass(styles.icon, {
+            [styles.active]: state.active,
+          })}
+          color={state.active ? '#ffffff' : '#404040'}
         />
       )}
       <ul className={styles.choices}>

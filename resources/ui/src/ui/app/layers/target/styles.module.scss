@@ -8,6 +8,10 @@
   transform: translate(-50%, -50%);
 }
 
+.icon.active {
+  filter: drop-shadow(0 0 1px #000000) drop-shadow(0 0 2px #00000077);
+}
+
 .choices {
   position: absolute;
   top: 0;
@@ -28,7 +32,7 @@
     padding: mixins.uiSize(4) mixins.uiSize(6);
     border-radius: var(--theme-radius-md);
     color: var(--theme-white);
-    text-shadow: 0 0 2px var(--theme-black);
+    filter: drop-shadow(0 0 1px #000000) drop-shadow(0 0 2px #00000077);
     cursor: pointer;
 
     &:before {
