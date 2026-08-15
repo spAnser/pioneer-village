@@ -1,6 +1,8 @@
 // Register a Sheriff job
 import { PVJobs } from '@lib/server';
 
+import taskManager from './jobs';
+
 const sheriffJob = {
   handle: 'sheriff',
   name: 'Sheriff Department',
@@ -17,9 +19,9 @@ const sheriffJob = {
 
 // Create a patrol task
 const patrolTask = {
-  handle: 'patrol-main-street',
-  name: 'Patrol Main Street',
-  description: 'Walk patrol around the main street area',
+  handle: 'patrol-valentine',
+  name: 'Patrol Valentine',
+  description: 'Walk patrol around the Valentine area',
   taskType: 'patrol',
   requirements: { badge: true },
   rewards: { money: 10 },
@@ -32,14 +34,15 @@ const patrolTask = {
     cooldownMinutes: 30,
     maxPerDay: 8,
   },
+  zone: 'research_zone_valentine_0',
 } satisfies Jobs.TaskDefinition;
 
 // Create a patrol task
 const escortTask = {
-  handle: 'escort-main-street',
+  handle: 'escort-valentine-prisoner',
   name: 'Escort Prisoner',
   description: 'Prison escort',
-  taskType: 'patrol',
+  taskType: 'escort',
   requirements: { badge: true },
   rewards: { money: 10 },
   timeConstraints: {
@@ -51,6 +54,8 @@ const escortTask = {
     cooldownMinutes: 30,
     maxPerDay: 8,
   },
+  startLocation: { x: 0, y: 0, z: 0 },
+  endLocation: { x: 0, y: 0, z: 0 },
 } satisfies Jobs.TaskDefinition;
 
 // Function to register job and task
@@ -79,3 +84,9 @@ on('onResourceStart', (resourceName: string) => {
 if (GetResourceState('jobs') === 'started') {
   setTimeout(registerJobAndTask, 100);
 }
+
+onNet('research:jobs:task', () => {
+  console.log('research:jobs:task event received');
+
+  taskManager.startTask(source);
+});

@@ -63,6 +63,7 @@ for (const zones of mapzones) {
   const debugColor = ZoneTypeColors[zones.type] ?? FALLBACK_COLOR;
   let n = 0;
   for (const zone of zones.rings) {
+    // console.log(`research_zone_${zones.name}_${n}`);
     addZone({
       name: `research_zone_${zones.name}_${n}`,
       _type: 'poly',

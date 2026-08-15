@@ -1,6 +1,7 @@
 export { emitSocket, awaitSocket, onSocket } from './comms/socket';
 export { onClientCall, onClient, awaitClient, emitClient } from './comms/client';
 export * from './resources';
+export * from './zones';
 
 // @ts-ignore
 export const exports: ServerExports = global.exports;

@@ -4,11 +4,12 @@ declare interface ClientExports {
 
 declare namespace Jobs {
   interface ClientExports {
-    clockIn: (jobHandle: string, location: Vector3Format) => Promise<void>;
+    clockIn: (jobHandle: string) => Promise<void>;
     clockOut: () => Promise<void>;
     getCurrentJob: () => Jobs.JobDefinition | null;
     isCurrentlyClocked: () => boolean;
     canStartTask: (taskId: number) => Promise<Jobs.TaskAvailability>;
+    acceptTask: (jobHandle: string, taskHandle: string) => Promise<Jobs.TaskInstance | null>;
     getAvailableTasks: (jobHandle?: string) => Promise<Jobs.TaskDefinition[]>;
   }
 }
@@ -20,6 +21,7 @@ declare namespace ClientRPC {
     ['jobs.clock-out']: () => Jobs.ClockResult;
     ['jobs.get-state']: () => UI.Jobs.State & { error?: string };
     ['jobs.can-start-task']: (taskId: number) => Jobs.TaskAvailability;
+    ['jobs.start-task']: (jobHandle: string, taskHandle: string) => Jobs.TaskInstance | null;
     ['jobs.get-available-tasks']: (jobHandle?: string) => Jobs.TaskDefinition[];
   }
 }

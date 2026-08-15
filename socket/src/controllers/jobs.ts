@@ -200,18 +200,19 @@ export default () => {
       cb(instance);
     });
 
-    socket.on('jobs.start-task', async (instanceId: number, cb = () => {}) => {
+    socket.on('jobs.start-task', async (jobHandle, taskHandle, cb = () => {}) => {
       const characterId = socket.data?.character?.id;
       if (!characterId) {
         cb(false);
         return;
       }
 
-      const success = await jobSystemManager.startTask(instanceId);
-      if (success) {
-        userNamespace.emit('__client__', 'jobs.task-started', characterId, instanceId);
-      }
-      cb(success);
+      // const success = await jobSystemManager.startTask(jobHandle, taskHandle);
+      // if (success) {
+      //   userNamespace.emit('__client__', 'jobs.task-started', characterId, instanceId);
+      // }
+      // cb(success);
+      cb(false);
     });
 
     socket.on('jobs.complete-task', async (instanceId: number, cb = () => {}) => {

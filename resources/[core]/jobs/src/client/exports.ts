@@ -80,9 +80,7 @@ getJobState();
 // Exported functions
 const clockIn: Jobs.ClientExports['clockIn'] = async (jobHandle) => {
   try {
-    const ped = PlayerPedId();
-    const [x, y, z] = GetEntityCoords(ped, false);
-    const location = { x, y, z };
+    const location = PVGame.playerCoords(true);
     const result = await awaitUI('jobs.clock-in', jobHandle, location);
     if (!result.success) {
       notify(`Failed to clock in: ${result.error}`, 'error');
@@ -119,6 +117,20 @@ const canStartTask: Jobs.ClientExports['canStartTask'] = async (taskId) => {
   }
 };
 
+const acceptTask: Jobs.ClientExports['acceptTask'] = async (jobHandle, taskHandle) => {
+  try {
+    const activeTask = await awaitUI('jobs.start-task', jobHandle, taskHandle);
+    if (!activeTask) {
+      notify('Failed to accept task', 'error');
+    }
+    return activeTask;
+  } catch (_error) {
+    notify('Failed to accept task', 'error');
+  }
+
+  return null;
+};
+
 const getAvailableTasks: Jobs.ClientExports['getAvailableTasks'] = async (jobHandle?) => {
   try {
     const handle = jobHandle || currentJob?.handle;
@@ -134,4 +146,5 @@ exports<'jobs'>('clockOut', clockOut);
 exports<'jobs'>('getCurrentJob', getCurrentJob);
 exports<'jobs'>('isCurrentlyClocked', isCurrentlyClocked);
 exports<'jobs'>('canStartTask', canStartTask);
+exports<'jobs'>('acceptTask', acceptTask);
 exports<'jobs'>('getAvailableTasks', getAvailableTasks);

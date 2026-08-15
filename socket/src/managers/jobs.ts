@@ -546,29 +546,29 @@ class JobSystemManager {
     }
   }
 
-  async startTask(instanceId: number): Promise<boolean> {
-    try {
-      const [instance] = await db
-        .select()
-        .from(JobTaskInstancesSchema)
-        .where(eq(JobTaskInstancesSchema.id, instanceId));
-
-      if (!instance || instance.status !== 'ASSIGNED') {
-        return false;
-      }
-
-      await db
-        .update(JobTaskInstancesSchema)
-        .set({ status: 'IN_PROGRESS', startedAt: new Date() })
-        .where(eq(JobTaskInstancesSchema.id, instanceId));
-
-      logInfoS('[Jobs]', `Started task instance ${instanceId}`);
-      return true;
-    } catch (error) {
-      logInfoS('[Jobs]', `Task start failed: ${error}`);
-      return false;
-    }
-  }
+  // async startTask(jobHandle: string, taskHandle: string): Promise<boolean> {
+  //   try {
+  //     const [instance] = await db
+  //       .select()
+  //       .from(JobTaskInstancesSchema)
+  //       .where(eq(JobTaskInstancesSchema.id, instanceId));
+  //
+  //     if (!instance || instance.status !== 'ASSIGNED') {
+  //       return false;
+  //     }
+  //
+  //     await db
+  //       .update(JobTaskInstancesSchema)
+  //       .set({ status: 'IN_PROGRESS', startedAt: new Date() })
+  //       .where(eq(JobTaskInstancesSchema.id, instanceId));
+  //
+  //     logInfoS('[Jobs]', `Started task instance ${instanceId}`);
+  //     return true;
+  //   } catch (error) {
+  //     logInfoS('[Jobs]', `Task start failed: ${error}`);
+  //     return false;
+  //   }
+  // }
 
   async completeTask(instanceId: number): Promise<{ success: boolean; payment?: number }> {
     try {

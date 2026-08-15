@@ -37,7 +37,7 @@ declare namespace SocketIn {
       callback: (tasks: Jobs.TaskDefinition[]) => void,
     ) => void;
     ['jobs.assign-task']: (taskId: number, callback: (instance: Jobs.TaskInstance | null) => void) => void;
-    ['jobs.start-task']: (instanceId: number, callback: (success: boolean) => void) => void;
+    ['jobs.start-task']: (jobHandle: string, taskHandle: string, callback: (success: boolean) => void) => void;
     ['jobs.complete-task']: (
       instanceId: number,
       callback: (result: { success: boolean; payment?: number }) => void,

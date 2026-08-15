@@ -3,7 +3,9 @@ import { PVJobs, emitUI, focusUI, onUI } from '@lib/client';
 on('jobs:client:clock-in', async (type: string, data: { jobHandle: string }) => {
   console.log('Clocking in', type, data);
 
-  const tasks = await PVJobs.clockIn(data.jobHandle, { x: 0, y: 0, z: 0 });
+  const tasks = await PVJobs.clockIn(data.jobHandle);
+
+  console.log('tasks', tasks);
 });
 
 on('jobs:client:tasks', async (type: string, data: { jobHandle: string }) => {
@@ -18,7 +20,7 @@ on('jobs:client:tasks', async (type: string, data: { jobHandle: string }) => {
   for (const task of tasks) {
     actions.push({
       id: 'jobs:client:task:accept',
-      label: `Accept ${task.name}`,
+      label: `${task.name}`,
       icon: 'fa-solid fa-briefcase',
       event: 'jobs:client:task:accept',
       parameters: { jobHandle: data.jobHandle, taskHandle: task.handle },
@@ -35,6 +37,8 @@ on('jobs:client:tasks', async (type: string, data: { jobHandle: string }) => {
 
 on('jobs:client:task:accept', async (type: string, data: { jobHandle: string; taskHandle: string }) => {
   console.log('Accepting task', data);
+
+  // PVJobs.acceptTask(data.jobHandle, data.taskHandle)
 });
 
 on('jobs:client:clock-out', (type: string, data: { jobHandle: string }) => {

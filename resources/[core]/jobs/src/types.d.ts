@@ -1,4 +1,3 @@
-
 declare namespace UI {
   namespace Jobs {
     interface State {
@@ -36,7 +35,7 @@ declare namespace Jobs {
     metadata?: Record<string, any>;
   }
 
-  interface TaskDefinition {
+  interface TaskDefinitionBase {
     handle: string;
     name: string;
     description?: string;
@@ -62,6 +61,23 @@ declare namespace Jobs {
     rateLimits?: Record<string, any>;
     metadata?: Record<string, any>;
   }
+
+  interface TaskDefinitionInvalid {
+    taskType: string;
+  }
+
+  interface TaskDefinitionEscort {
+    taskType: 'escort';
+    startLocation: Vector3Format;
+    endLocation: Vector3Format;
+  }
+
+  interface TaskDefinitionPatrol {
+    taskType: 'patrol';
+    zone: string | Zones.ZoneData;
+  }
+
+  type TaskDefinition = TaskDefinitionBase & (TaskDefinitionInvalid | TaskDefinitionEscort | TaskDefinitionPatrol);
 
   interface TaskAvailability {
     canStart: boolean;

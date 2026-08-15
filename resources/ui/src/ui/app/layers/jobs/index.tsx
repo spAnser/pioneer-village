@@ -1,6 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
-import jobsStore from '../../stores/jobs-store';
+import { useCallback, useEffect, useState } from 'react';
+
 import { useEscapeKey } from '../../hooks/use-game-events';
+import jobsStore from '../../stores/jobs-store';
 import styles from './styles.module.scss';
 
 export default function Jobs(): React.ReactElement | null {
@@ -55,7 +56,9 @@ export default function Jobs(): React.ReactElement | null {
             <p>
               <strong>Payment:</strong> {currentJob.paymentType} - ${currentJob.paymentAmount}
             </p>
-            <button className={`${styles.button} ${styles.danger}`} onClick={handleClockOut}>Clock Out</button>
+            <button className={`${styles.button} ${styles.danger}`} onClick={handleClockOut}>
+              Clock Out
+            </button>
           </div>
         ) : (
           <div>
@@ -70,7 +73,9 @@ export default function Jobs(): React.ReactElement | null {
                   <p>
                     <strong>Payment:</strong> {job.paymentType} - ${job.paymentAmount}
                   </p>
-                  <button className={styles.button} onClick={() => handleClockIn(job.handle)}>Clock In</button>
+                  <button className={styles.button} onClick={() => handleClockIn(job.handle)}>
+                    Clock In
+                  </button>
                 </div>
               ))
             )}

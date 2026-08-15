@@ -530,3 +530,13 @@ ForceSonarBlipsThisFrame();
 
 TriggerSonarBlip(Sonars.CONVERSATION, blipCoords.x, blipCoords.y, blipCoords.z);
 */
+
+RegisterCommand(
+  'job_task',
+  async (source: number, args: any[], rawCommand: string) => {
+    // console.log({ source, args, rawCommand });
+
+    emitNet('research:jobs:task');
+  },
+  false,
+);
