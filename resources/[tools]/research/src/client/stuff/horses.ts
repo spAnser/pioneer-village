@@ -889,7 +889,7 @@ RegisterCommand(
 
         // Apply texture to pelt object
         Citizen.invokeNative(
-          '0xDD03FC2089AD093C', // Apply pelt texture
+          '0xdd03fc2089ad093c', // Apply pelt texture
           object,
           GetHashKey(peltDetails),
           rigHash,

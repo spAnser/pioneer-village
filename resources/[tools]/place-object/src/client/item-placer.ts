@@ -31,7 +31,7 @@ export default class ItemPlacer {
       this.resolver = resolve;
     });
 
-    if (!(Citizen.invokeNative('0x274EE1B90CFA669E', model) as boolean)) {
+    if (!(Citizen.invokeNative('0x274ee1b90cfa669e', model) as boolean)) {
       this.destroy();
       return;
     }
@@ -148,7 +148,7 @@ export default class ItemPlacer {
     }
     */
   setPlayerCoords(): void {
-    this.playerCoords = Vector3.fromArray(GetEntityCoords(PVGame.playerPed(), true));
+    this.playerCoords = Vector3.fromArray(GetEntityCoords(PVGame.playerPed(), true, false));
   }
 
   async createGhostObject(): Promise<void> {
@@ -204,7 +204,7 @@ export default class ItemPlacer {
     const [rtnVal, hit, endCoords, surfaceNormal, entityHit] = GetShapeTestResult(shapeTest);
     const hitCoords = Vector3.fromArray(endCoords);
     // if (hit > 0 && (!this.groundObject || (surfaceNormal[0] < 0.45 && surfaceNormal[1] < 0.45 && surfaceNormal[2] > 0.5))) {
-    if (hit > 0) {
+    if (hit) {
       if (IsEntityInWater(this.ghostItem)) {
         this.isValidPlacement = false;
       } else {
@@ -326,7 +326,7 @@ export default class ItemPlacer {
 
       if (subItem.dof) {
         Citizen.invokeNative(
-          '0x669655FFB29EF1A9',
+          '0x669655ffb29ef1a9',
           subObjectId,
           subItem.dof.expression || 0,
           subItem.dof.name,

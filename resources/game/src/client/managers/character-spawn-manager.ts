@@ -27,7 +27,7 @@ class CharacterSpawnManager {
   }
 
   public async setCoords(coords: Vector3, doScenario = false) {
-    ClearPedTasksImmediately(PVGame.playerPed());
+    ClearPedTasksImmediately(PVGame.playerPed(), false, false);
     DoScreenFadeOut(500);
     await Delay(1000);
     this.coords = coords;
@@ -80,7 +80,7 @@ class CharacterSpawnManager {
   }
 
   async getScenariosInArea() {
-    ClearPedTasksImmediately(PVGame.playerPed());
+    ClearPedTasksImmediately(PVGame.playerPed(), false, false);
     let buffer = new ArrayBuffer(256 * 4);
     let view = new DataView(buffer);
 
@@ -125,7 +125,7 @@ class CharacterSpawnManager {
         false,
       );
     } else {
-      const [found, groundZ] = GetGroundZFor_3dCoord(this.coords.x, this.coords.y, this.coords.z, true);
+      const [found, groundZ] = GetGroundZFor_3DCoord(this.coords.x, this.coords.y, this.coords.z, true);
       if (found) {
         SetEntityCoordsNoOffset(PVGame.playerPed(), this.coords.x, this.coords.y, groundZ, false, false, false);
       }
@@ -152,11 +152,11 @@ class CharacterSpawnManager {
     const heldEntity = GetCurrentPedWeaponEntityIndex(PVGame.playerPed(), 0);
     PVPrompt.hide('character-spawn:cancel:task');
     if (immediate) {
-      ClearPedTasksImmediately(PVGame.playerPed());
+      ClearPedTasksImmediately(PVGame.playerPed(), false, false);
       PVBase.deleteEntity(heldEntity);
       return;
     }
-    ClearPedTasks(PVGame.playerPed());
+    ClearPedTasks(PVGame.playerPed(), false, false);
     characterSpawn.promptLoopRunning = false;
     await Delay(500);
     PVBase.deleteEntity(heldEntity);

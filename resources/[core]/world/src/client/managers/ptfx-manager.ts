@@ -290,7 +290,7 @@ export class PtfxManager {
     } else {
       // _START_PARTICLE_FX_NON_LOOPED_ON_PED_BONE_2
       Citizen.invokeNative(
-        '0xC695870B8A149B96',
+        '0xc695870b8a149b96',
         name,
         ped,
         offset.x,

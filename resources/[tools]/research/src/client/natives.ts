@@ -168,7 +168,7 @@ RegisterCommand(
     const playerPed = PlayerPedId();
     for (let n = 0; n < GetNumMetaPedOutfits(playerPed); n++) {
       // GetMetaPedOutfit
-      const rtn = Citizen.invokeNative('0x62FDF4E678E40CC6', playerPed, n);
+      const rtn = Citizen.invokeNative('0x62fdf4e678e40cc6', playerPed, n);
       console.log(`Meta Ped Outfit ${n}:`, rtn);
     }
   },

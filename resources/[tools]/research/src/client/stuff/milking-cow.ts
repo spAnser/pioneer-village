@@ -141,7 +141,7 @@ class MilkingCowManager {
     // Push the MinigameMilking control context. Re-applied every tick in
     // rhythmFrame because contexts drift away if not asserted per frame.
     SetControlContext(0, GetHashKey('MinigameMilking'));
-    SetPlayerControl(PlayerId(), false, 0);
+    SetPlayerControl(PlayerId(), false, 0, false);
 
     // sceneHeading is the rotation of the scene anchor's reference frame —
     // distinct from the cow's physical heading. They MAY match (if the cow
@@ -206,7 +206,7 @@ class MilkingCowManager {
       // positions are 1cm off from the udders, visible as "udders slightly
       // to the left." Apply nudge to all derived prop positions.
       const nudgedX = raw[0] + 0.01;
-      const [hit, groundZ] = GetGroundZFor_3dCoord(nudgedX, raw[1], raw[2] + 1.0, false);
+      const [hit, groundZ] = GetGroundZFor_3DCoord(nudgedX, raw[1], raw[2] + 1.0, false);
       return new Vector3(nudgedX, raw[1], hit ? groundZ : raw[2]);
     };
 
@@ -441,7 +441,7 @@ class MilkingCowManager {
     // Re-apply control state after the networks attach. TaskMoveNetwork* calls
     // can wipe scripted input-control state set up earlier.
     SetControlContext(0, GetHashKey('MinigameMilking'));
-    SetPlayerControl(PlayerId(), false, 0);
+    SetPlayerControl(PlayerId(), false, 0, false);
 
     // Mirror the decomp's state 0 → state 1 startup sequence (milking_cow.c
     // func_176 + func_177 + state 1 setting reach=1.0):
@@ -702,7 +702,7 @@ class MilkingCowManager {
     PVCamera.destroy(CAM_ID);
     // Restore default control context and player control.
     SetControlContext(0, GetHashKey('OnFoot'));
-    SetPlayerControl(PlayerId(), true, 0);
+    SetPlayerControl(PlayerId(), true, 0, false);
     this.session = null;
   }
 }
@@ -772,7 +772,7 @@ RegisterCommand(
     const playerPed = PVGame.playerPed();
     const playerHeading = GetEntityHeading(playerPed);
     const inFrontCoords = Vector3.fromArray(GetOffsetFromEntityInWorldCoords(playerPed, 0, 2.5, 0));
-    const [, groundZ] = GetGroundZFor_3dCoord(inFrontCoords.x, inFrontCoords.y, inFrontCoords.z + 1.0, false);
+    const [, groundZ] = GetGroundZFor_3DCoord(inFrontCoords.x, inFrontCoords.y, inFrontCoords.z + 1.0, false);
     const z = groundZ || inFrontCoords.z;
     const cowHeading = (playerHeading - 135) % 360;
     const cow = await PVGame.createPed('A_C_COW', inFrontCoords.x, inFrontCoords.y, z, cowHeading, true, true);

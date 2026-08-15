@@ -152,7 +152,7 @@ const turnEngineOneValue = async () => {
       10,
       false,
     );
-    Citizen.invokeNative('0x531A78D6BF27014B', 'RRTL7_Sounds');
+    Citizen.invokeNative('0x531a78d6bf27014b', 'RRTL7_Sounds');
     PVGame.taskPlayEntityAnim([
       {
         obj: entity,
@@ -221,7 +221,7 @@ const turnEngineTwoValue = async () => {
       0,
       false,
     );
-    Citizen.invokeNative('0x531A78D6BF27014B', 'RRTL7_Sounds');
+    Citizen.invokeNative('0x531a78d6bf27014b', 'RRTL7_Sounds');
     PVGame.taskPlayEntityAnim([
       {
         obj: entity,

@@ -39,40 +39,15 @@ interface EntityInterface {
   state: StateBagInterface;
 }
 
-interface CitizenInterface {
-  trace(...args: string[]): void;
-  setTickFunction(callback: Function): void;
-  setEventFunction(callback: Function): void;
-
-  setCallRefFunction(callback: Function): void;
-  setDeleteRefFunction(callback: Function): void;
-  setDuplicateRefFunction(callback: Function): void;
-  canonicalizeRef(ref: number): string;
-  invokeFunctionReference(ref: string, args: Uint8Array): Uint8Array;
-
-  getTickCount(): number;
-  invokeNative<T = void>(hash: string, ...args: InputArgument[]): T;
-  startProfiling(name?: string): void;
-  stopProfiling(name?: string): {};
-
-  pointerValueIntInitialized(): IntPtrInitialized;
-  pointerValueFloatInitialized(): FloatPtrInitialized;
-  pointerValueInt(): IntPtr;
-  pointerValueFloat(): FloatPtr;
-  pointerValueVector(): VectorPtr;
-  returnResultAnyway(): ReturnResultAnyway;
-  resultAsInteger(): ResultAsInteger;
-  resultAsFloat(): ResultAsFloat;
-  resultAsString(): ResultAsString;
-  resultAsVector(): ResultAsVector;
-  resultAsLong(): ResultAsLong;
-  resultAsObject(): ResultAsObject;
-
-  makeRefFunction(refFunction: Function): string;
+interface CitizenTimer {
+  ref(): CitizenTimer;
+  unref(): CitizenTimer;
+  hasRef(): boolean;
+  refresh(): CitizenTimer;
+  [Symbol.toPrimitive](): number;
 }
 
-// @ts-ignore
-declare var Citizen: CitizenInterface;
+// type CitizenImmediate = Omit<CitizenTimer, 'refresh'>;
 
 declare function addRawEventListener(eventName: string, callback: Function): void;
 

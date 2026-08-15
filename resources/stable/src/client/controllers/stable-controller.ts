@@ -628,7 +628,7 @@ class StableController {
       return 0;
     }
 
-    const [retval, groundZ] = GetGroundZFor_3dCoord(horse.lastX, horse.lastY, horse.lastZ - 1.0, false);
+    const [retval, groundZ] = GetGroundZFor_3DCoord(horse.lastX, horse.lastY, horse.lastZ - 1.0, false);
 
     let spawnCoord = {
       x: horse.lastX,
@@ -705,33 +705,33 @@ class StableController {
     await this.horsePedLoadDNA(horsePed, horse.dna, horse.age);
     if (horse.gender === 'MALE') {
       console.log('Set Horse Face Features to Male');
-      PVGame.setPedFaceFeature(horsePed, 0xa28b, 0.0); // Default
+      PVGame.setCharExpression(horsePed, 0xa28b, 0.0); // Default
     } else if (horse.gender === 'FEMALE') {
       console.log('Set Horse Face Features to Female');
-      PVGame.setPedFaceFeature(horsePed, 0xa28b, 1.0);
+      PVGame.setCharExpression(horsePed, 0xa28b, 1.0);
     }
 
     const pregnancyProgress = this.pregnancyProgress(horse.id);
     if (pregnancyProgress) {
       console.log('Set Pregnant Horse Face Features');
-      const bellyHeight = GetPedFaceFeature(horsePed, 63348);
-      const bellyWidth = GetPedFaceFeature(horsePed, 57577);
+      const bellyHeight = GetCharExpression(horsePed, 63348);
+      const bellyWidth = GetCharExpression(horsePed, 57577);
 
-      SetPedFaceFeature(horsePed, 63348, bellyHeight - pregnancyProgress * 1.5);
-      SetPedFaceFeature(horsePed, 57577, bellyWidth + pregnancyProgress * 1.5);
+      SetCharExpression(horsePed, 63348, bellyHeight - pregnancyProgress * 1.5);
+      SetCharExpression(horsePed, 57577, bellyWidth + pregnancyProgress * 1.5);
 
       const maxSpeed = lerp(1.0, 3.0, 1.0 - pregnancyProgress);
       emit('health:client:horseSpeedLimit', horsePed, maxSpeed);
     }
 
-    const bellyHeight = GetPedFaceFeature(horsePed, 63348);
-    const bellyWidth = GetPedFaceFeature(horsePed, 57577);
+    const bellyHeight = GetCharExpression(horsePed, 63348);
+    const bellyWidth = GetCharExpression(horsePed, 57577);
 
     const weightFactor = (horse.weight - 30) / 70;
 
     if (weightFactor !== 0) {
-      SetPedFaceFeature(horsePed, 63348, bellyHeight - weightFactor * 1.5);
-      SetPedFaceFeature(horsePed, 57577, bellyWidth + weightFactor * 1.5);
+      SetCharExpression(horsePed, 63348, bellyHeight - weightFactor * 1.5);
+      SetCharExpression(horsePed, 57577, bellyWidth + weightFactor * 1.5);
 
       if (horse.weight > 50) {
         const maxSpeed = lerp(3.0, 1.0, (horse.weight - 50) / 50);
@@ -823,7 +823,7 @@ class StableController {
           true,
           NetworkGetEntityIsNetworked(horsePed),
         );
-        SetEntityHealth(corpse, 0);
+        SetEntityHealth(corpse, 0, 0);
         SetPedDamageCleanliness(corpse, quality);
 
         if (outfit) {
@@ -922,7 +922,7 @@ class StableController {
     for (const [name, id] of Object.entries(HorseExpressions)) {
       const gene = dna.getGene<number>(name);
       if (gene) {
-        SetPedFaceFeature(horsePed, id, gene.value);
+        SetCharExpression(horsePed, id, gene.value);
         await Delay(1);
         // console.log(`Set ${name}`, gene.value);
       }
@@ -932,14 +932,14 @@ class StableController {
       (dna.getGene<number>('Health')?.value || 0) +
       (dna.getGene<number>('Handling')?.value || 0) +
       (dna.getGene<number>('Speed')?.value || 0);
-    SetPedFaceFeature(horsePed, 8147, lerp(-1, 1, HealthHandlingSpeed / 6000));
+    SetCharExpression(horsePed, 8147, lerp(-1, 1, HealthHandlingSpeed / 6000));
     await Delay(1);
     // console.log('HealthHandlingSpeed', lerp(-1, 1, HealthHandlingSpeed / 6000), HealthHandlingSpeed);
     const OffRoadEnduranceAcceleration =
       (dna.getGene<number>('OffRoad')?.value || 0) +
       (dna.getGene<number>('Endurance')?.value || 0) +
       (dna.getGene<number>('Acceleration')?.value || 0);
-    SetPedFaceFeature(horsePed, 3015, lerp(-1, 1, OffRoadEnduranceAcceleration / 6000));
+    SetCharExpression(horsePed, 3015, lerp(-1, 1, OffRoadEnduranceAcceleration / 6000));
     await Delay(1);
     // console.log('OffRoadEnduranceAcceleration', lerp(-1, 1, OffRoadEnduranceAcceleration / 6000), OffRoadEnduranceAcceleration);
 

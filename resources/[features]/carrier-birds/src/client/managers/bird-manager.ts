@@ -84,7 +84,7 @@ export class BirdManager {
     SetPedPromptName(bird, '');
     SetEntityCollision(bird, false, false);
     SetEntityCompletelyDisableCollision(bird, false, false);
-    Citizen.invokeNative('0x283978A15512B2FE', bird, 1);
+    Citizen.invokeNative('0x283978a15512b2fe', bird, 1);
 
     return bird;
   }

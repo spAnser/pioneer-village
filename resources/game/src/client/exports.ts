@@ -59,7 +59,7 @@ export const skinPed = async (ped: number, character: Game.Character) => {
   await gameManager.pedIsReadyToRender(ped);
   for (const [feature, value] of Object.entries(character.features)) {
     const featureIndex = Number(feature);
-    SetPedFaceFeature(ped, featureIndex, value);
+    SetCharExpression(ped, featureIndex, value);
     await Delay(1);
   }
   gameManager.finalizePedOutfit(ped);
@@ -312,7 +312,6 @@ const getAngleTo: Game.getAngleTo = (targetCoords, ped) => {
 const isPedFacingCoord: Game.isPedFacingCoord = (targetCoords, ped, toleranceDeg) => {
   return gameManager.isPedFacingCoord(targetCoords, ped, toleranceDeg);
 };
-
 
 exports<'game'>('playerPed', playerPed);
 exports<'game'>('mountPed', mountPed);

@@ -23,7 +23,7 @@ async function spawnChildHorse(child: DNA, model: string | number) {
   for (const [name, id] of Object.entries(HorseExpressions)) {
     const gene = child.getGene<number>(name);
     if (gene) {
-      SetPedFaceFeature(horsePed, id, gene.value);
+      SetCharExpression(horsePed, id, gene.value);
     }
   }
 
@@ -34,12 +34,12 @@ async function spawnChildHorse(child: DNA, model: string | number) {
     (child.getGene<number>('Health')?.value || 0) +
     (child.getGene<number>('Handling')?.value || 0) +
     (child.getGene<number>('Speed')?.value || 0);
-  SetPedFaceFeature(horsePed, 8147, lerp(-1, 1, HealthHandlingSpeed / 6000));
+  SetCharExpression(horsePed, 8147, lerp(-1, 1, HealthHandlingSpeed / 6000));
   const OffRoadEnduranceAcceleration =
     (child.getGene<number>('OffRoad')?.value || 0) +
     (child.getGene<number>('Endurance')?.value || 0) +
     (child.getGene<number>('Acceleration')?.value || 0);
-  SetPedFaceFeature(horsePed, 3015, lerp(-1, 1, OffRoadEnduranceAcceleration / 6000));
+  SetCharExpression(horsePed, 3015, lerp(-1, 1, OffRoadEnduranceAcceleration / 6000));
 
   await PVGame.pedIsReadyToRender(horsePed);
 

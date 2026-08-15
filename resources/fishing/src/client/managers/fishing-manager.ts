@@ -341,7 +341,7 @@ class FishingManager {
   }
 
   async handleStateIdleInWater() {
-    const hookCoords = Vector3.fromArray(GetEntityCoords(this.state.hookEntity, false));
+    const hookCoords = Vector3.fromArray(GetEntityCoords(this.state.hookEntity, false, false));
     SetVolumeCoords(this.volumeArea, hookCoords.x, hookCoords.y, hookCoords.z - this.range / 2);
     SetVolumeScale(this.volumeArea, this.range, this.range, this.range);
     // SetVolumeCoords(this.volumeArea, hookCoords.x, hookCoords.y, hookCoords.z - this.range / 2);
@@ -399,7 +399,7 @@ class FishingManager {
         if (Math.random() < this.junkChance) {
           console.log('Caught Junk');
           this.caughtJunk = true;
-          SetEntityVisible(this.nibblingFish, false, false);
+          SetEntityVisible(this.nibblingFish, false);
         }
         if (!this.caughtJunk || Math.random() < this.junkRemoveBaitChance) {
           this.removeBait();
@@ -425,7 +425,7 @@ class FishingManager {
         if (this.isNibbling) {
           continue;
         }
-        const fishCoords = Vector3.fromArray(GetEntityCoords(fish, true));
+        const fishCoords = Vector3.fromArray(GetEntityCoords(fish, true, false));
         const distance = hookCoords.getDistance(fishCoords);
 
         if (distance > 30) {
@@ -460,7 +460,7 @@ class FishingManager {
     for (const [fish, fishInfo] of this.nearbyFish.entries()) {
       fishInfo.baitInterest = 0;
       if (fishInfo.hasGoToTask) {
-        ClearPedTasks(fish);
+        ClearPedTasks(fish, false, false);
         fishInfo.hasGoToTask = false;
       }
     }
@@ -471,7 +471,7 @@ class FishingManager {
       this.nearbyFish.delete(fish);
       if (fishInfo.hasGoToTask && this.state.hookedEntity !== fish) {
         fishInfo.hasGoToTask = false;
-        ClearPedTasks(fish);
+        ClearPedTasks(fish, false, false);
       }
     }
   }
@@ -553,7 +553,7 @@ class FishingManager {
         PVBase.deleteEntity(this.state.hookedEntity);
         this.dragOutOfWater(junkData);
       } else {
-        const hookCoords = Vector3.fromArray(GetEntityCoords(this.state.hookEntity, false));
+        const hookCoords = Vector3.fromArray(GetEntityCoords(this.state.hookEntity, false, false));
         this.attachedJunk = await PVGame.createObject(junkData.model, hookCoords, new Vector3(0, 0, 0), true);
         if (this.attachedJunk) {
           SetEntityCollision(this.attachedJunk, false, false);
@@ -576,12 +576,12 @@ class FishingManager {
 
   async dragOutOfWater(junkData: Fishing.JunkOption) {
     const object = await PVGame.createObject(junkData.model);
-    const objectCoords = Vector3.fromArray(GetEntityCoords(this.playerPed, false));
+    const objectCoords = Vector3.fromArray(GetEntityCoords(this.playerPed, false, false));
     const forward = Vector3.fromArray(GetEntityForwardVector(this.playerPed));
     forward.multiplyScalar(2);
     objectCoords.add(forward);
 
-    const [ret, groundZ] = GetGroundZAndNormalFor_3dCoord(objectCoords.x, objectCoords.y, objectCoords.z);
+    const [ret, groundZ] = GetGroundZAndNormalFor_3DCoord(objectCoords.x, objectCoords.y, objectCoords.z);
 
     SetEntityCoords(object, objectCoords.x, objectCoords.y, groundZ, false, false, false, false);
     SetEntityHeading(object, GetEntityHeading(this.playerPed) + 90);
@@ -767,7 +767,7 @@ unk7: ${this.state.unk7}`;
 
   debugFish() {
     for (const [fish, fishInfo] of this.nearbyFish.entries()) {
-      const fishCoords = Vector3.fromArray(GetEntityCoords(fish, true));
+      const fishCoords = Vector3.fromArray(GetEntityCoords(fish, true, false));
       // const fishModel = GetEntityModel(fish);
       const r = 0;
       const g = 127;

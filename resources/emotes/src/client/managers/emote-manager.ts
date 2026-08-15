@@ -65,7 +65,7 @@ export class EmoteManager {
 
   cancelCurrentEmote(): void {
     console.log('Canceling emote');
-    ClearPedTasks(PVGame.playerPed());
+    ClearPedTasks(PVGame.playerPed(), false, false);
     //ClearPedTasksImmediately(PVGame.playerPed, true, true)
   }
 
@@ -80,7 +80,7 @@ export class EmoteManager {
     if (!emote.emote) {
       return;
     }
-    // Citizen.invokeNative('0xB31A277C1AC7B7FF', PVGame.playerPed, 0, 0, GetHashKey(emote.emote), true, true, false, false, false);
+    // Citizen.invokeNative('0xb31a277c1ac7b7ff', PVGame.playerPed, 0, 0, GetHashKey(emote.emote), true, true, false, false, false);
     console.log('Emote: ', emote);
     TaskPlayEmoteWithHash(
       PVGame.playerPed(),

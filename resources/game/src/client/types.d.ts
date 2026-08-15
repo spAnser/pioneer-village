@@ -193,7 +193,7 @@ declare namespace Game {
     // Lua Exports
     getStateValue: (entity: number, key: string) => any;
     getChildEntity: (entity: number, name: string) => number;
-    setPedFaceFeature: (ped: number, index: number, scale: number) => void;
+    setCharExpression: (ped: number, index: number, scale: number) => void;
     makeHorseMale: (ped: number) => void;
     makeHorseFemale: (ped: number) => void;
   };

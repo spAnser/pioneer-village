@@ -43,7 +43,7 @@ const testPtfxDict = async (dict: string) => {
 
       const fxCoords: Vector3 = new Vector3(coords.x + col * SPACING, coords.y + row * SPACING, coords.z);
 
-      const [found, groundZ] = GetGroundZFor_3dCoord(fxCoords.x, fxCoords.y, fxCoords.z, true);
+      const [found, groundZ] = GetGroundZFor_3DCoord(fxCoords.x, fxCoords.y, fxCoords.z, true);
       if (found) {
         fxCoords.z = groundZ + 1.0;
       }
@@ -89,7 +89,7 @@ const testPtfxDict = async (dict: string) => {
 
         const fxCoords: Vector3 = new Vector3(coords.x + col * SPACING, coords.y + row * SPACING, coords.z);
 
-        const [found, groundZ] = GetGroundZFor_3dCoord(fxCoords.x, fxCoords.y, fxCoords.z, true);
+        const [found, groundZ] = GetGroundZFor_3DCoord(fxCoords.x, fxCoords.y, fxCoords.z, true);
         if (found) {
           fxCoords.z = groundZ + 1.0;
         }
