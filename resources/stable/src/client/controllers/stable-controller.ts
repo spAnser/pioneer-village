@@ -66,7 +66,7 @@ class StableController {
       }
     };
     on('events:mount', (onMount: number, horsePed: number, _currentSeat: number) => {
-      // console.log('events_manager:mount', onMount, horsePed, currentSeat);
+      // console.log('events:mount', onMount, horsePed, currentSeat);
       this.checkHorse(horsePed);
       if (onMount) {
         handleUnstabledHorse(horsePed);
