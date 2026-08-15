@@ -1,6 +1,4 @@
-import type { Socket } from 'socket.io';
-import type { SocketReservedEventsMap } from 'socket.io/dist/socket-types';
-import type { DefaultEventsMap, ReservedOrUserEventNames } from 'socket.io/dist/typed-events';
+import type { DefaultEventsMap, DisconnectReason, Socket } from 'socket.io';
 
 import { Vector3 } from '../../../lib/math';
 import PVItems from '../../../lib/shared/items';
@@ -8,6 +6,15 @@ import { logInfoC, logInfoS } from '../helpers';
 import Characters from '../managers/characters';
 import Inventories from '../managers/inventories';
 import { serverNamespace, userNamespace } from '../server';
+
+interface SocketReservedEventsMap {
+  disconnect: (reason: DisconnectReason, description?: unknown) => void;
+  disconnecting: (reason: DisconnectReason, description?: unknown) => void;
+  error: (err: Error) => void;
+}
+
+type EventNames<Map> = keyof Map & (string | symbol);
+type ReservedOrUserEventNames<Reserved, User> = EventNames<Reserved> | EventNames<User>;
 
 Inventories.init();
 

@@ -14,6 +14,10 @@ module.exports = () => ({
   module: {
     rules: [
       {
+        test: /\.css$/,
+        type: 'css/auto',
+      },
+      {
         test: /\.(js|ts)$/,
         exclude: [/[\\/]node_modules[\\/]/, /[\\/]build[\\/]/],
         use: [

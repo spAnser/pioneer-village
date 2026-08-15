@@ -1,11 +1,9 @@
-import { Buffer } from 'buffer';
-
 import { PVEvents, PVEventsManager } from '@lib/client/resources';
 
 const intToFloat = (int: number) => {
-  const buffer = Buffer.alloc(4);
-  buffer.writeInt32LE(int, 0);
-  return buffer.readFloatLE(0);
+  const view = new DataView(new ArrayBuffer(4));
+  view.setInt32(0, int, true);
+  return view.getFloat32(0, true);
 };
 
 const registeredEvents = new Set();

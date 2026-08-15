@@ -6,13 +6,15 @@
   "data": {
     "serverVersion": "29586"
   },
+  "packageManager": "pnpm@11.5.0",
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "download-server": "cd artifacts && node download.js",
-    "start": "./artifacts/29586/FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1491",
-    "watch": "lerna run watch --stream --parallel",
-    "build": "lerna run build --stream --parallel",
-    "build:socket": "lerna run build --stream --parallel --scope=socket",
-    "prettier": "lerna run prettier --stream --parallel",
+    "start": ".\\artifacts\\29586\\FXServer.exe +exec server.cfg +set onesync on +set svgui_disable 1 +set sv_lan 1 +sv_enforceGameBuild 1491 --allow-fs-read",
+    "watch": "turbo watch watch --concurrency 120",
+    "build": "turbo build --concurrency 120",
+    "build:socket": "turbo build --concurrency 120 --filter=socket",
+    "prettier": "turbo prettier --concurrency 120",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
@@ -54,7 +56,6 @@
     "esbuild-loader": "^2.21.0",
     "fs-extra": "^11.1.0",
     "glob": "^8.0.3",
-    "lerna": "3.22.1",
     "lodash": "^4.17.21",
     "prettier": "^3.5.3",
     "sass-embedded": "^1.90.0",
@@ -63,8 +64,8 @@
     "styled-components": "^5.3.3",
     "three": "^0.179.1",
     "ts-checker-rspack-plugin": "^1.5.2",
-    "ts-node": "^10.9.2",
     "tsx": "^4.23.0",
+    "turbo": "^2.10.5",
     "typescript": "^7.0.2"
   },
   "dependencies": {

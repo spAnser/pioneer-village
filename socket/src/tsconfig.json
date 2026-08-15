@@ -1,19 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": "../../",
     "rootDir": "../../",
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "module": "none",
+    "module": "commonjs",
     "target": "es2017",
     "lib": ["es2017"],
     "outDir": "./build",
     "types": ["@types/node"],
     "skipLibCheck": true,
-    "moduleResolution": "node"
-  },
-  "ts-node": {
-    "files": true
+    "moduleResolution": "bundler"
   },
   "include": [
     "./**/*.ts",
