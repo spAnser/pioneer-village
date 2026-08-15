@@ -45,6 +45,7 @@ class InventoryStore {
   private drawableMap: Record<string, [number, string]> = {};
   private failedImages = new Set<string>();
   private initialized = false;
+  private resyncInterval: ReturnType<typeof setInterval> | null = null;
 
   private constructor() {
     this.state = {
@@ -89,8 +90,24 @@ class InventoryStore {
     // Load drawable map for clothing thumbnails
     this.loadDrawableMap();
 
+    // Periodic safety-net resync while the panel is open, in case an
+    // incremental broadcast (item-add/item-move) was ever missed — cheaper
+    // and simpler than a server-push invalidation signal.
+    this.resyncInterval = setInterval(() => this.performBackgroundResync(), 60_000);
+
     // Emit startup event
     emitClient('inventory.startup');
+  }
+
+  private performBackgroundResync(): void {
+    if (!this.socket || !this.state.show) return;
+
+    if (this.state.mainInventory) {
+      this.socket.emit('inventory.subscribe', this.state.mainInventory);
+    }
+    if (this.state.targetInventory) {
+      this.socket.emit('inventory.subscribe', this.state.targetInventory);
+    }
   }
 
   private async loadDrawableMap(): Promise<void> {
@@ -153,20 +170,22 @@ class InventoryStore {
   private handleInventoryState = (event: Partial<UI.Inventory.State>): void => {
     if (!event || !this.socket) return;
 
-    // Subscribe to clothing inventory if needed
-    if (event.clothingInventory && !this.subscriptions.has(event.clothingInventory)) {
+    // Re-subscribe to clothing inventory on every open — forces a fresh
+    // authoritative reload so the client can self-heal from any missed
+    // incremental broadcast, instead of trusting a session-long cache.
+    if (event.clothingInventory) {
       this.socket.emit('inventory.subscribe', event.clothingInventory);
       this.subscriptions.add(event.clothingInventory);
     }
 
-    // Subscribe to birds inventory if needed
-    if (event.birdsInventory && !this.subscriptions.has(event.birdsInventory)) {
+    // Re-subscribe to birds inventory on every open (see comment above).
+    if (event.birdsInventory) {
       this.socket.emit('inventory.subscribe', event.birdsInventory);
       this.subscriptions.add(event.birdsInventory);
     }
 
-    // Subscribe to main inventory if needed
-    if (event.mainInventory && !this.subscriptions.has(event.mainInventory)) {
+    // Re-subscribe to main inventory on every open (see comment above).
+    if (event.mainInventory) {
       this.socket.emit('inventory.subscribe', event.mainInventory);
       this.subscriptions.add(event.mainInventory);
 
@@ -990,6 +1009,11 @@ class InventoryStore {
 
   // Cleanup when store is destroyed
   cleanup(): void {
+    if (this.resyncInterval !== null) {
+      clearInterval(this.resyncInterval);
+      this.resyncInterval = null;
+    }
+
     if (this.socket) {
       // Remove socket handlers
       this.socket.off('inventory.load', this.handleInventoryLoad);

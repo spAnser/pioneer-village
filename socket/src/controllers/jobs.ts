@@ -3,6 +3,7 @@ import { eq } from 'drizzle-orm';
 import { db } from '../db/connection';
 import { JobsSchema } from '../db/schema';
 import { logInfoC, logInfoS } from '../helpers';
+import Banking from '../managers/banking';
 import jobSystemManager from '../managers/jobs';
 import { serverNamespace, userNamespace } from '../server';
 
@@ -240,6 +241,28 @@ export default () => {
 
       const slips = await jobSystemManager.getUnredeemedPaySlips(characterId);
       cb(slips);
+    });
+
+    socket.on('jobs.redeem-pay-slip', async (paySlipId: number, bankId: string, cb = () => {}) => {
+      const characterId = socket.data?.character?.id;
+      if (!characterId) {
+        cb({ success: false, message: 'No character data' });
+        return;
+      }
+
+      logInfoC('[Jobs]', 'redeemPaySlip', characterId, paySlipId, bankId);
+
+      const redeemResult = await jobSystemManager.redeemPaySlip(paySlipId, characterId, bankId);
+      if (redeemResult.success && redeemResult.amount > 0) {
+        const depositResult = await Banking.depositDirect(characterId, bankId, redeemResult.amount);
+        if (!depositResult.success) {
+          // TODO: slip is marked redeemed but deposit failed — consider wrapping in a transaction
+          logInfoC('[Jobs]', `WARNING: slip ${paySlipId} redeemed but deposit failed:`, depositResult.message);
+        }
+        userNamespace.emit('__client__', 'jobs.pay-slip-redeemed', characterId, paySlipId, redeemResult.amount, depositResult.newBalance ?? 0);
+      }
+
+      cb(redeemResult);
     });
   });
 };

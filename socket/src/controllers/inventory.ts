@@ -373,10 +373,20 @@ export default () => {
   serverNamespace.on('connection', (socket) => {
     logInfoS('[Inventory]', 'Game server connected');
 
-    socket.on('createInventory', (identifier, inventoryType, cb) => {
+    socket.on('createInventory', async (identifier, inventoryType, cb) => {
       logInfoS('[Inventory]', 'createInventory', identifier, inventoryType);
       try {
-        Inventories.createInventory(identifier);
+        await Inventories.createInventory(identifier);
+        cb(true);
+      } catch (e) {
+        cb(false);
+      }
+    });
+
+    socket.on('deleteInventory', async (identifier, cb) => {
+      logInfoS('[Inventory]', 'deleteInventory', identifier);
+      try {
+        await Inventories.deleteInventory(identifier);
         cb(true);
       } catch (e) {
         cb(false);

@@ -39,6 +39,37 @@ local function tlen(t)
     return retval
 end
 
+--- Checks (and caches, throttled) whether a point's own isEnabled passes
+--- @param point table The point with .id and .options fields
+--- @param pedCoords vector3 Current ped coords
+--- @param coord vector3 The specific point coord being evaluated
+--- @return boolean
+local function isPointEnabled(point, pedCoords, coord)
+    if not point.options or not point.options.isEnabled then
+        return true
+    end
+
+    local cacheKey = ("%s_point"):format(point.id)
+    local cached = Target.enabledCache[cacheKey]
+    local currentTime = GetGameTimer()
+
+    if cached and currentTime < cached.expiry then
+        return cached.result
+    end
+
+    local result = point.options.isEnabled({
+        distance = #(pedCoords - coord),
+        coords = coord,
+    })
+    local enabledTime = point.options.enabledThrottle or point.options.throttle or Target.enabledThrottle
+    local disabledTime = point.options.disabledThrottle or point.options.throttle or Target.disabledThrottle
+    Target.enabledCache[cacheKey] = {
+        result = result,
+        expiry = currentTime + (result and enabledTime or disabledTime)
+    }
+    return result
+end
+
 --- Checks if a target has at least one enabled item (fast bail-out for active highlight)
 --- @param target table The target with .data and .hasItemEnabled fields
 --- @param data table The isEnabled context data
@@ -400,13 +431,21 @@ function Target:Enable(state)
                                 if not HasStreamedTextureDictLoaded(sprite.dict) then
                                     RequestStreamedTextureDict(sprite.dict, false)
                                 else
+                                    -- Dim the marker when the point's isEnabled check currently fails,
+                                    -- so players can tell an out-of-range/inactive target apart from an active one.
+                                    local pointEnabled = isPointEnabled(point, pedCoords, coord)
+                                    local r, g, b, a = sprite.r, sprite.g, sprite.b, sprite.a
+                                    if not pointEnabled then
+                                        r, g, b = 169, 169, 169
+                                    end
+
                                     DrawMarker(
                                         GetHashKey('MARKERTYPE_SPHERE'),
                                         coord.x, coord.y, coord.z,
                                         0, 0, 0,
                                         0, 0, 0,
                                         scaleFactor, scaleFactor, scaleFactor,
-                                        sprite.r, sprite.g, sprite.b, sprite.a,
+                                        r, g, b, a,
                                         false, false, 2, false, 0, 0, false
                                     )
                                     drewAny = true

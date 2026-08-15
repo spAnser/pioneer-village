@@ -83,14 +83,6 @@ const Blips: Base.BlipDataWithoutIdAndResource[] = [
   {
     type: 'sprite',
     style: BlipStyles.NEUTRAL,
-    label: 'Bank',
-    sprite: BlipSprites.PROC_BANK,
-    modifiers: [BlipModifiers.GREEN],
-    coords: { x: -307.679, y: 778.314, z: 118.7042 },
-  },
-  {
-    type: 'sprite',
-    style: BlipStyles.NEUTRAL,
     label: 'Stables',
     sprite: BlipSprites.STABLE,
     coords: { x: -368.7, y: 786.9, z: 116.2 },
@@ -129,14 +121,6 @@ const Blips: Base.BlipDataWithoutIdAndResource[] = [
   {
     type: 'sprite',
     style: BlipStyles.NEUTRAL,
-    label: 'Bank',
-    sprite: BlipSprites.PROC_BANK,
-    modifiers: [BlipModifiers.GREEN],
-    coords: { x: -811.9281, y: -1278.3322, z: 43.6377 },
-  },
-  {
-    type: 'sprite',
-    style: BlipStyles.NEUTRAL,
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: -5510.3481, y: -2946.9421, z: -2.8951 },
@@ -147,14 +131,6 @@ const Blips: Base.BlipDataWithoutIdAndResource[] = [
     label: 'Butcher',
     sprite: BlipSprites.SHOP_BUTCHER,
     coords: { x: 2819.4917, y: -1331.3773, z: 45.5076 },
-  },
-  {
-    type: 'sprite',
-    style: BlipStyles.NEUTRAL,
-    label: 'Bank',
-    sprite: BlipSprites.PROC_BANK,
-    modifiers: [BlipModifiers.GREEN],
-    coords: { x: 2645.4055, y: -1295.6056, z: 52.2461 },
   },
   {
     type: 'sprite',
@@ -215,22 +191,6 @@ const Blips: Base.BlipDataWithoutIdAndResource[] = [
     label: 'Bath',
     sprite: BlipSprites.BATH_HOUSE,
     coords: { x: 2630.503, y: -1223.306, z: 59.587 },
-  },
-  {
-    type: 'sprite',
-    style: BlipStyles.NEUTRAL,
-    label: 'Bank',
-    sprite: BlipSprites.PROC_BANK,
-    modifiers: [BlipModifiers.GREEN],
-    coords: { x: 1294.1935, y: -1300.2317, z: 77.0401 },
-  },
-  {
-    type: 'sprite',
-    style: BlipStyles.NEUTRAL,
-    label: 'Bank',
-    sprite: BlipSprites.PROC_BANK,
-    modifiers: [BlipModifiers.GREEN],
-    coords: { x: -3665.6079, y: -2623.0203, z: -13.5551 },
   },
   {
     type: 'sprite',

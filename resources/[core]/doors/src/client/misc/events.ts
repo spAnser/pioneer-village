@@ -13,13 +13,7 @@ const LOCKPICK_DISTANCE = 2.0;
 // ---- Notifications ----
 
 const notify = (text: string, type: 'success' | 'error' | 'info' = 'info') => {
-  const colors: Record<string, ['primary' | 'success' | 'danger' | 'warning', 'white']> = {
-    success: ['success', 'white'],
-    error: ['danger', 'white'],
-    info: ['primary', 'white'],
-  };
-  const [bg, fg] = colors[type];
-  emitUI('notification.notify', text, 3000, bg, fg, false);
+  emitUI('notification.notify', text, 3000, type, false);
 };
 
 // ---- Door toggle logic ----

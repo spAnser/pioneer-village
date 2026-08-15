@@ -2,7 +2,6 @@
 local glm = require 'glm'
 
 -- Configuration variables
-local DEBUG = true -- Enable/disable debug visualization of zones
 local LOOP_DELAY = 250 -- Milliseconds between zone check iterations (lower = more responsive, higher = better performance)
 
 -- Storage tables for zone management
@@ -376,7 +375,7 @@ Citizen.CreateThread(function()
                     InZones[zoneName] = true -- Mark as inside zone
                     InZonesTimeEnter[zoneName] = nil -- Clear entry timer
                     TriggerEvent('zones::' .. zoneName .. '::enter') -- Fire enter event
-                    if DEBUG then
+                    if debugRender then
                         print('Entered Zone', zoneName)
                     end
                 end
@@ -392,7 +391,7 @@ Citizen.CreateThread(function()
                     InZones[zoneName] = nil -- Mark as outside zone
                     InZonesTimeExit[zoneName] = nil -- Clear exit timer
                     TriggerEvent('zones::' .. zoneName .. '::exit') -- Fire exit event
-                    if DEBUG then
+                    if debugRender then
                         print('Left Zone', zoneName)
                     end
                 end
@@ -411,14 +410,18 @@ end)
 
 
 -- DEBUG VISUALIZATION
--- Renders zone boundaries when DEBUG mode is enabled
--- Only draws zones that have debug flag set to true
-if DEBUG then
-    Citizen.CreateThread(function()
-        Wait(500) -- Small delay to ensure zones are loaded
-        while true do
-            local playerCoords = GetEntityCoords(PlayerPedId(), false)
-            -- Loop through all zones and draw those with debug enabled
+-- Renders zone boundaries for all zones when debug rendering is active.
+-- Toggled at runtime with /zonedebug — no restart required.
+local debugRender = false
+
+RegisterCommand('zonedebug', function()
+    debugRender = not debugRender
+    print('[Zones] Debug rendering ' .. (debugRender and 'ON' or 'OFF'))
+end, false)
+
+Citizen.CreateThread(function()
+    while true do
+        if debugRender then
             for _, zone in pairs(Zones) do
 
                 if zone.data.debug then
@@ -449,9 +452,13 @@ if DEBUG then
                         local z = zone.data.coords.z
                         DrawSphere(x, y, z, zone.data.radius, zone.data.debugColor.r, zone.data.debugColor.g, zone.data.debugColor.b, zone.data.debugColor.a)
                     end
+                elseif zone.type == 'sphere' then
+                    DrawSphere(zone.data.coords.x, zone.data.coords.y, zone.data.coords.z, zone.data.radius, 255, 0, 255, 128)
                 end
             end
-            Wait(0) -- Run every frame for smooth visualization
+            Wait(0)
+        else
+            Wait(500)
         end
-    end)
-end
+    end
+end)

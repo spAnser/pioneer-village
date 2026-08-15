@@ -70,6 +70,7 @@ class JobSystemManager {
       amount: slip.amount,
       reason: slip.reason,
       jobHandle: slip.jobHandle,
+      bankId: slip.bankId ?? '',
       redeemed: slip.redeemed,
       redeemedAt: slip.redeemedAt,
       createdAt: slip.createdAt,
@@ -634,14 +635,13 @@ class JobSystemManager {
         return;
       }
 
-      const job = jobHandle ? this.registeredJobs.get(jobHandle) : null;
-
       await db.insert(JobPaySlipsSchema).values({
         characterId,
         jobId: (jobHandle && this.jobDbIds.get(jobHandle)) || 0,
         amount: amount.toFixed(2),
         reason,
         jobHandle: jobHandle || 'unknown',
+        bankId: '',
       });
 
       logInfoS('[Jobs]', `Pay slip created for character ${characterId}: $${amount.toFixed(2)} - ${reason}`);
@@ -663,16 +663,24 @@ class JobSystemManager {
     }
   }
 
-  async redeemPaySlip(paySlipId: number): Promise<boolean> {
+  async redeemPaySlip(paySlipId: number, characterId: number, bankId: string): Promise<{ success: boolean; amount: number; message?: string }> {
     try {
+      const [slip] = await db.select().from(JobPaySlipsSchema).where(eq(JobPaySlipsSchema.id, paySlipId));
+      if (!slip) return { success: false, amount: 0, message: 'Pay slip not found' };
+      if (slip.characterId !== characterId) return { success: false, amount: 0, message: 'Pay slip does not belong to this character' };
+      if (slip.redeemed) return { success: false, amount: 0, message: 'Pay slip already redeemed' };
+
       await db
         .update(JobPaySlipsSchema)
-        .set({ redeemed: true, redeemedAt: new Date() })
+        .set({ redeemed: true, redeemedAt: new Date(), bankId })
         .where(eq(JobPaySlipsSchema.id, paySlipId));
-      return true;
+
+      const amount = parseFloat(slip.amount);
+      logInfoS('[Jobs]', `Pay slip ${paySlipId} redeemed for character ${characterId}: $${amount.toFixed(2)} at bank ${bankId}`);
+      return { success: true, amount };
     } catch (error) {
       logInfoS('[Jobs]', `Pay slip redemption failed: ${error}`);
-      return false;
+      return { success: false, amount: 0, message: 'Redemption failed' };
     }
   }
 

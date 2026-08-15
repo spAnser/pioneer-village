@@ -45,6 +45,11 @@ const InventoryTypes: Record<string, Inventory.Type> = {
     maxWeight: 500,
     restrictions: Restrictions.None,
   },
+  safetybox: {
+    slots: 8,
+    maxWeight: 100,
+    restrictions: Restrictions.None,
+  },
   paperBag: {
     slots: 8,
     maxWeight: 6,

@@ -538,7 +538,7 @@ const Inventories: FC<UI.BaseProps> = () => {
             tint1={isClothing ? firstMetadata.tint1 : undefined}
             tint2={isClothing ? firstMetadata.tint2 : undefined}
           />
-          <span className={styles.weight}>{item?.weight * itemData.quantity}</span>
+          <span className={styles.weight}>{Math.round((item?.weight ?? 0) * itemData.quantity * 100) / 100}</span>
           <span className={styles.quantity}>x{itemData.quantity}</span>
           {durabilityProgress !== null && (
             <div style={progressStyleTop}>
