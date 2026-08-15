@@ -1,5 +1,7 @@
 import type { Socket } from 'socket.io';
+// @ts-ignore
 import type { SocketReservedEventsMap } from 'socket.io/dist/socket-types';
+// @ts-ignore
 import type { DefaultEventsMap, ReservedOrUserEventNames } from 'socket.io/dist/typed-events';
 
 import { Vector3 } from '../../../lib/math';
@@ -178,7 +180,10 @@ export default () => {
       }
     };
 
-    ['inventory.item-update-metadata']: SocketIn.FromClient['inventory.item-update-metadata'] = async (itemId, metadata) => {
+    ['inventory.item-update-metadata']: SocketIn.FromClient['inventory.item-update-metadata'] = async (
+      itemId,
+      metadata,
+    ) => {
       logInfoC('inventory.item-update-metadata', itemId, metadata);
       await Inventories.updateItemMetadata(itemId, metadata);
     };
@@ -222,7 +227,10 @@ export default () => {
 
       userNamespace
         .to(`inventory:${mainInventoryIdentifier}`)
-        .emit('inventory.item-metadata-update', lanternItem.id, { oilColor: oilItemDef.oilColor, oilName: oilItemDef.name });
+        .emit('inventory.item-metadata-update', lanternItem.id, {
+          oilColor: oilItemDef.oilColor,
+          oilName: oilItemDef.name,
+        });
       userNamespace.to(`inventory:${mainInventoryIdentifier}`).emit('inventory.item-remove', oilItemId);
     };
 
