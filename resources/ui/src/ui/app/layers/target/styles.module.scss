@@ -19,7 +19,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  width: mixins.uiSize(128);
+  min-width: mixins.uiSize(128);
+  white-space: nowrap;
 
   li {
     display: flex;
