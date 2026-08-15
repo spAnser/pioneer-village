@@ -27,14 +27,14 @@ const registerEvents = () => {
 
 on('onResourceStart', (resourceName: string) => {
   // Events Resource Starts
-  if (resourceName === 'events_manager') {
+  if (resourceName === 'events') {
     registerEvents();
   } else if (resourceName === 'prompts') {
     fishingManager.registerPrompts();
   }
 });
 
-if (GetResourceState('events_manager') === 'started') {
+if (GetResourceState('events') === 'started') {
   registerEvents();
 }
 

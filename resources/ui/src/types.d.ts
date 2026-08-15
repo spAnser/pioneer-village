@@ -474,6 +474,7 @@ declare namespace UI.Log {
 
   type LogData = {
     source: Source;
+    timestamp: number;
   } & Data;
 
   type ColorData = { h: number; s: number; l: number; hsl: string };

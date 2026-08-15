@@ -10,6 +10,7 @@ interface LogState {
   scrollOverride: number;
   filter: Set<string>;
   reverseFilter: Set<string>;
+  typeFilter: Set<NonNullable<UI.Log.LogData['_type']>>;
   messages: UI.Log.LogData[];
   colors: Record<string, UI.Log.ColorData>;
 }
@@ -32,6 +33,7 @@ class LogStore {
       scrollOverride: 0,
       filter: new Set(),
       reverseFilter: new Set(),
+      typeFilter: new Set(),
       messages: [],
       colors: {},
     };
@@ -132,12 +134,13 @@ class LogStore {
     }
 
     const newMessages = [
-      ...this.state.messages.slice(-999),
+      ...this.state.messages.slice(-1999),
       {
         _type: data._type,
         source,
         resource: data.resource,
         message: data.message,
+        timestamp: Date.now(),
       },
     ];
 
@@ -168,7 +171,21 @@ class LogStore {
     this.updateState({
       filter: new Set(),
       reverseFilter: new Set(),
+      typeFilter: new Set(),
     });
+  }
+
+  // Toggle a log type in the type filter
+  toggleType(type: NonNullable<UI.Log.LogData['_type']>): void {
+    const typeFilter = new Set(this.state.typeFilter);
+
+    if (typeFilter.has(type)) {
+      typeFilter.delete(type);
+    } else {
+      typeFilter.add(type);
+    }
+
+    this.updateState({ typeFilter });
   }
 
   // Toggle a resource in the filter
@@ -223,11 +240,14 @@ class LogStore {
   }
 
   // Check if a message should be shown based on filters
-  shouldShowMessage(resource: string): boolean {
+  shouldShowMessage(resource: string, type?: UI.Log.LogData['_type']): boolean {
     if (this.state.filter.size > 0 && !this.state.filter.has(resource)) {
       return false;
     }
     if (this.state.reverseFilter.has(resource)) {
+      return false;
+    }
+    if (this.state.typeFilter.size > 0 && (!type || !this.state.typeFilter.has(type))) {
       return false;
     }
     return true;

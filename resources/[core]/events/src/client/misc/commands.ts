@@ -1,19 +1,14 @@
-import { EventManager } from '../managers/event-manager';
+import eventPoller from '../managers/event-poller';
 
-const eventManager = EventManager.getInstance();
+const onEntityDamaged = (data: unknown) => console.log('EVENT_ENTITY_DAMAGED', data);
+const onEntityDestroyed = (data: unknown) => console.log('EVENT_ENTITY_DESTROYED', data);
 
 RegisterCommand(
   'registerEvent',
   async () => {
-    console.log('registering');
-    const added1 = eventManager.register('event:test', 'entityDamaged', (variable, variable2, variable3) => {
-      console.log('event entityDamagedCB', variable, variable2, variable3);
-    });
-    console.log('Added1: ', added1);
-    const added2 = eventManager.register('event:test', 'entityKilled', (variable, variable2, variable3) => {
-      console.log('event entityKilledCB', variable, variable2, variable3);
-    });
-    console.log('Added2: ', added2);
+    console.log('registering test events');
+    eventPoller.register('EVENT_ENTITY_DAMAGED', onEntityDamaged);
+    eventPoller.register('EVENT_ENTITY_DESTROYED', onEntityDestroyed);
   },
   false,
 );
@@ -21,11 +16,9 @@ RegisterCommand(
 RegisterCommand(
   'unregisterEvent',
   async () => {
-    console.log('unregistering');
-    const added = eventManager.unregister('event:test', 'entityDamaged');
-    console.log('Removed: ', added);
-    const added1 = eventManager.unregister('event:test', 'entityKilled');
-    console.log('Removed1: ', added1);
+    console.log('unregistering test events');
+    eventPoller.unregister('EVENT_ENTITY_DAMAGED', onEntityDamaged);
+    eventPoller.unregister('EVENT_ENTITY_DESTROYED', onEntityDestroyed);
   },
   false,
 );

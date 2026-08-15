@@ -1,14 +1,4 @@
-import { Buffer } from 'buffer';
-
-import { PVEvents, PVEventsManager } from '@lib/client/resources';
-
-const intToFloat = (int: number) => {
-  const buffer = Buffer.alloc(4);
-  buffer.writeInt32LE(int, 0);
-  return buffer.readFloatLE(0);
-};
-
-const registeredEvents = new Set();
+import { PVEvents } from '@lib/client/resources';
 
 const callbacks = new Map();
 
@@ -218,49 +208,38 @@ const eventMappings = {
 //   ...params: DropLastParam<SocketServer.Server[T]>
 // ) => Promise<Parameters<LastParam<SocketServer.Server[T]>>[0]>;
 
-type EventsManagerDataStuff = Record<keyof EventMappingData, number>;
-
 export type EventData = {
   [K in keyof typeof eventMappings]: Record<keyof (typeof eventMappings)[K], number>;
 };
+
+// Derived player-state events (from events' PlayerStateManager) aren't raw
+// game events, so they're not registered through the events resource's game
+// event poller - they're plain broadcasts consumers subscribe to directly.
+const DERIVED_STATE_EVENTS = new Set(['weapon']);
 
 function register<T extends keyof typeof eventMappings>(
   event: T,
   callback: (data: Record<keyof (typeof eventMappings)[T], number>) => void,
 ) {
-  if (!callbacks.has(event)) {
-    callbacks.set(event, []);
-  }
-  callbacks.get(event).push(callback);
-  if (!registeredEvents.has(event)) {
-    registeredEvents.add(event);
-    PVEventsManager.Register(event);
-    on(`events_manager:${event}`, (dataArray: number[]): void => {
-      const data: Record<string, number> = {};
-      let n = 0;
-      if (eventMappings[event]) {
-        for (const [index, dataType] of Object.entries(eventMappings[event])) {
-          switch (dataType) {
-            case 'f':
-              data[index] = intToFloat(dataArray[n]);
-              break;
-            default:
-              data[index] = dataArray[n];
-              break;
-          }
-          n++;
+  if (DERIVED_STATE_EVENTS.has(event as string)) {
+    if (!callbacks.has(event)) {
+      callbacks.set(event, []);
+      const fieldNames = Object.keys(eventMappings[event]);
+      on(`events:${event}`, (dataArray: number[]): void => {
+        const data: Record<string, number> = {};
+        fieldNames.forEach((name, n) => {
+          data[name] = dataArray[n];
+        });
+        for (const cb of callbacks.get(event) ?? []) {
+          cb(data);
         }
-      } else {
-        for (const value of dataArray) {
-          data[`_${n}`] = value;
-          n++;
-        }
-      }
-      for (const callback of callbacks.get(event) ?? []) {
-        callback(data);
-      }
-    });
+      });
+    }
+    callbacks.get(event).push(callback);
+    return;
   }
+
+  PVEvents.register(event as Events.EventName, callback as (data: unknown) => void);
 }
 
 type CronEntry = {

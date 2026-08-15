@@ -241,7 +241,7 @@ function Target.Start(threadId)
     RegisterCommand('+eye_target:click', function() self.click = true end)
     RegisterCommand('-eye_target:click', function() self.click = false end)
 
-    self.cacheHandler = AddEventHandler("events_manager:cache", self.UpdateCache)
+    self.cacheHandler = AddEventHandler("events:cache", self.UpdateCache)
 
     self.ready = true
 
