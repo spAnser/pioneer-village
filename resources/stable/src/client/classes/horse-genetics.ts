@@ -98,8 +98,8 @@ RegisterCommand(
       .addGene('HairTint2', parent2ManeTints.tint2);
 
     for (const [name, id] of Object.entries(HorseExpressions)) {
-      const value1 = GetPedFaceFeature(parent1Ped, id);
-      const value2 = GetPedFaceFeature(parent2Ped, id);
+      const value1 = GetCharExpression(parent1Ped, id);
+      const value2 = GetCharExpression(parent2Ped, id);
       parent1builder.addGene(name, value1);
       parent2builder.addGene(name, value2);
     }
@@ -130,7 +130,7 @@ RegisterCommand(
       for (const [name, id] of Object.entries(HorseExpressions)) {
         const gene = child.getGene<number>(name);
         if (gene) {
-          SetPedFaceFeature(horsePed, id, gene.value);
+          SetCharExpression(horsePed, id, gene.value);
         }
       }
 
@@ -141,12 +141,12 @@ RegisterCommand(
         (child.getGene<number>('Health')?.value || 0) +
         (child.getGene<number>('Handling')?.value || 0) +
         (child.getGene<number>('Speed')?.value || 0);
-      SetPedFaceFeature(horsePed, 8147, lerp(-1, 1, HealthHandlingSpeed / 6000));
+      SetCharExpression(horsePed, 8147, lerp(-1, 1, HealthHandlingSpeed / 6000));
       const OffRoadEnduranceAcceleration =
         (child.getGene<number>('OffRoad')?.value || 0) +
         (child.getGene<number>('Endurance')?.value || 0) +
         (child.getGene<number>('Acceleration')?.value || 0);
-      SetPedFaceFeature(horsePed, 3015, lerp(-1, 1, OffRoadEnduranceAcceleration / 6000));
+      SetCharExpression(horsePed, 3015, lerp(-1, 1, OffRoadEnduranceAcceleration / 6000));
 
       await PVGame.pedIsReadyToRender(horsePed);
 
@@ -335,7 +335,7 @@ RegisterCommand(
       .addGene('HairTint1', maneTints.tint1)
       .addGene('HairTint2', maneTints.tint2);
     for (const [name, id] of Object.entries(HorseExpressions)) {
-      const value = GetPedFaceFeature(ped, id);
+      const value = GetCharExpression(ped, id);
       builder.addGene(name, value);
     }
     console.log(builder.build().toJSON());

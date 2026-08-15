@@ -40,13 +40,13 @@ class GameManager {
 
     this.playerId = PlayerId();
     this.playerPed = GetPlayerPed(this.playerId);
-    this._playerCoords = Vector3.fromArray(GetEntityCoords(this.playerPed, false));
+    this._playerCoords = Vector3.fromArray(GetEntityCoords(this.playerPed, false, false));
     this.mountPed = GetMount(this.playerPed);
 
     this._interval = setInterval(() => {
       this.playerPed = GetPlayerPed(this.playerId);
       this.playerIsAnimal = GetIsAnimal(this.playerPed);
-      this._playerCoords.setFromArray(GetEntityCoords(this.playerPed, false));
+      this._playerCoords.setFromArray(GetEntityCoords(this.playerPed, false, false));
       this.mountPed = GetMount(this.playerPed);
       this._movementSpeed = GetPedDesiredMoveBlendRatio(this.playerPed);
     }, 5000);
@@ -54,7 +54,7 @@ class GameManager {
     onNet('game:character-selected', (charId: number) => {
       this.playerPed = GetPlayerPed(this.playerId);
       this._characterId = charId;
-      this._playerCoords.setFromArray(GetEntityCoords(this.playerPed, false));
+      this._playerCoords.setFromArray(GetEntityCoords(this.playerPed, false, false));
       this.mountPed = GetMount(this.playerPed);
     });
   }
@@ -122,7 +122,7 @@ class GameManager {
   }
 
   updatePlayerCoords(): void {
-    this._playerCoords.setFromArray(GetEntityCoords(this.playerPed, false));
+    this._playerCoords.setFromArray(GetEntityCoords(this.playerPed, false, false));
   }
 
   getInventoryIdForEntity(entity: number): number | void {
@@ -495,7 +495,7 @@ class GameManager {
       const tickId = setInterval(() => {
         const hasTimedOut = Date.now() - start > duration + 250;
         if (
-          GetScriptTaskStatus(ped, ScriptTaskHash.SCRIPT_TASK_TURN_PED_TO_FACE_COORD) ===
+          GetScriptTaskStatus(ped, ScriptTaskHash.SCRIPT_TASK_TURN_PED_TO_FACE_COORD, false) ===
             ScriptTaskStatus.FINISHED_TASK ||
           hasTimedOut
         ) {
@@ -913,7 +913,7 @@ class GameManager {
       if (animTask.entities) {
         this.handleAnimTaskEntities(animTask.dict, animName, animTask.entities, animTask.duration);
       }
-      const coords = animTask.coords ?? Vector3.fromArray(GetEntityCoords(gameManager.playerPed, false));
+      const coords = animTask.coords ?? Vector3.fromArray(GetEntityCoords(gameManager.playerPed, false, false));
       const rotation = animTask.rotation ?? Vector3.fromArray(GetEntityRotation(gameManager.playerPed, 2));
       TaskPlayAnimAdvanced(
         this.playerPed,
@@ -1023,7 +1023,10 @@ class GameManager {
           : // If first animation in loop
             l === 0
             ? this.getAnimOffset(animTask.dict, animName, coords, rotation)
-            : [Vector3.fromArray(GetEntityCoords(animPed, false)), Vector3.fromArray(GetEntityRotation(animPed, 2))];
+            : [
+                Vector3.fromArray(GetEntityCoords(animPed, false, false)),
+                Vector3.fromArray(GetEntityRotation(animPed, 2)),
+              ];
       TaskPlayAnimAdvanced(
         animPed,
         animTask.dict,
@@ -1138,7 +1141,6 @@ class GameManager {
   ): void {
     this.attachEntityToBoneIndex(attacher, GetEntityBoneIndexByName(attachee, boneName), attachee, offset, rotation);
   }
-
 
   getEntityComponents(entity: number): number[] {
     const metaPedType = GetMetaPedType(entity);

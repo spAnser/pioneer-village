@@ -183,7 +183,7 @@ on('stable:client:attach', async (pEntity: number, pArgs: Record<string, any>) =
       SetPedConfigFlag(pEntity, PedConfigFlag.CantWitnessCrimes, true);
       SetPedConfigFlag(pEntity, PedConfigFlag.DisableEvasiveStep, true);
       SetPedConfigFlag(pEntity, 304, false);
-      Citizen.invokeNative('0xE31A04513237DC89', pEntity);
+      Citizen.invokeNative('0xe31a04513237dc89', pEntity);
       AttachDraftVehicleHarnessPed(pEntity, wagon, i);
       console.log(`AttachDraftVehicleHarnessPed(${pEntity}, ${wagon}, ${i});`);
       break;

@@ -101,7 +101,7 @@ RegisterCommand(
         const var0 = new DataView(new ArrayBuffer(4 * 256));
         const var1 = new DataView(new ArrayBuffer(4));
         // ItemdatabaseFilloutTagData
-        const ret = Citizen.invokeNative('0x5A11D6EEA17165B0', component, var0, var1, 20) as boolean;
+        const ret = Citizen.invokeNative('0x5a11d6eea17165b0', component, var0, var1, 20) as boolean;
         if (ret) {
           const tagCount = var1.getUint32(0, true);
           // console.log(tagCount, buf2hex(var0.buffer));
@@ -453,7 +453,7 @@ RegisterCommand(
     // setExpressions 2.5 90
 
     for (const expression of expressions) {
-      SetPedFaceFeature(ped, expression, value);
+      SetCharExpression(ped, expression, value);
     }
 
     UpdatePedVariation(ped, false, true, true, true, false);
@@ -467,8 +467,8 @@ RegisterCommand(
   'setExpression',
   async (source: number, args: string[]) => {
     const ped = args[2] ? Number(args[2]) : PlayerPedId();
-    SetPedFaceFeature(ped, Number(args[0]), Number(args[1]));
-    console.log(`SetPedFaceFeature(${ped}, ${Number(args[0])}, ${Number(args[1])})`);
+    SetCharExpression(ped, Number(args[0]), Number(args[1]));
+    console.log(`SetCharExpression(${ped}, ${Number(args[0])}, ${Number(args[1])})`);
     UpdatePedVariation(ped, false, true, true, true, false);
   },
   false,
@@ -530,7 +530,7 @@ RegisterCommand(
         console.log('Set', n);
       }
 
-      SetPedFaceFeature(ped, n, value);
+      SetCharExpression(ped, n, value);
       if (n % 100 === 0) {
         await Delay(1);
         UpdatePedVariation(ped, false, true, true, true, false);
@@ -555,7 +555,7 @@ RegisterCommand(
     for (const expression of expressions) {
       const value = GetCharExpression(ped, expression);
       console.log(expression, value);
-      SetPedFaceFeature(ped2, expression, value);
+      SetCharExpression(ped2, expression, value);
     }
 
     UpdatePedVariation(ped2, false, true, true, true, false);
@@ -749,16 +749,16 @@ RegisterCommand(
     const ped = Number(args[0]);
     for (let n = 0; n < 10; n++) {
       console.log(n / 10);
-      SetPedFaceFeature(ped, 57577, n / 10); // Belly Size
-      SetPedFaceFeature(ped, 60649, -n / 5); // Shrink the width of belly size
-      SetPedFaceFeature(ped, 63348, -n / 3.75); // Lower the belly rear
+      SetCharExpression(ped, 57577, n / 10); // Belly Size
+      SetCharExpression(ped, 60649, -n / 5); // Shrink the width of belly size
+      SetCharExpression(ped, 63348, -n / 3.75); // Lower the belly rear
       UpdatePedVariation(ped, false, true, true, true, false);
       await Delay(100);
     }
 
     await Delay(5e3);
-    SetPedFaceFeature(ped, 60649, 0);
-    SetPedFaceFeature(ped, 57577, 0);
+    SetCharExpression(ped, 60649, 0);
+    SetCharExpression(ped, 57577, 0);
     UpdatePedVariation(ped, false, true, true, true, false);
   },
   false,

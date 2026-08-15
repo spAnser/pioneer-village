@@ -798,7 +798,7 @@ class CreationManager {
       return;
     }
     console.log('setFaceFeature', this.chosen, feature, value);
-    SetPedFaceFeature(this.chosen, feature, value);
+    SetCharExpression(this.chosen, feature, value);
     await Delay(1);
     // UpdatePedVariation(this.chosen, false, true, true, true, false);
     PVGame.finalizePedOutfit(this.chosen);
@@ -904,7 +904,7 @@ class CreationManager {
       return;
     }
 
-    Citizen.invokeNative('0xFC23348F0F4E245F', textureId, layerId, 3.5, 2.5);
+    Citizen.invokeNative('0xfc23348f0f4e245f', textureId, layerId, 3.5, 2.5);
 
     if (overlay.palette) {
       SetTextureLayerPallete(textureId, layerId, overlay.palette.palette);

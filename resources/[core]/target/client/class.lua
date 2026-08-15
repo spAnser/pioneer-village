@@ -169,6 +169,15 @@ local class = {
     -- Wagons
     [joaat('COACH2')] = {isWagon = true},
     [joaat('COACH3')] = {isWagon = true},
+
+    -- Cash Registers
+    [joaat('P_REGISTER01X')] = {isCashRegister = true},
+    [joaat('P_REGISTER03X')] = {isCashRegister = true},
+    [joaat('P_REGISTER04X')] = {isCashRegister = true},
+    [joaat('P_REGISTER05X')] = {isCashRegister = true},
+    [joaat('P_REGISTER06X')] = {isCashRegister = true},
+    [joaat('P_REGISTER07X')] = {isCashRegister = true},
+    [joaat('P_REGISTER08X')] = {isCashRegister = true},
 }
 
 CreateThread(function()

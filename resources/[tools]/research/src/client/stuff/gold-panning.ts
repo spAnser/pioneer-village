@@ -104,7 +104,7 @@ on('gold:panning', async (goldCradleEntityId: number, parameters: any) => {
           ]);
         },
         onEnd() {
-          Citizen.invokeNative('0x669655FFB29EF1A9', carryBucketEntity, 0, 'bucket_fill', 0);
+          Citizen.invokeNative('0x669655ffb29ef1a9', carryBucketEntity, 0, 'bucket_fill', 0);
         },
       },
       {
@@ -225,7 +225,7 @@ const fillBucket = async () => {
       anim: 'enter_back_lf',
       flags: AnimFlag.STOP_LAST_FRAME,
       onEnd: () => {
-        Citizen.invokeNative('0x669655FFB29EF1A9', carryBucketEntity, 0, 'bucket_fill', 0.5 + Math.random() * 0.49999);
+        Citizen.invokeNative('0x669655ffb29ef1a9', carryBucketEntity, 0, 'bucket_fill', 0.5 + Math.random() * 0.49999);
       },
     },
     {

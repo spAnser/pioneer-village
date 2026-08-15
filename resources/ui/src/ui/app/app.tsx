@@ -1,5 +1,6 @@
 import ExclamationTriangle from '@fa/5/solid/exclamation-triangle.svg';
 import WifiSlash from '@fa/5/solid/signal-slash.svg';
+// @ts-ignore
 import 'normalize.css';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 

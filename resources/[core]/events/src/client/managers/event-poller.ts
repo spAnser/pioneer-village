@@ -12,7 +12,7 @@ const decodeEventNative = (group: number, index: number, size: number): number[]
 
   let ok: boolean;
   try {
-    ok = Citizen.invokeNative('0x57EC5FA4D4D6AFCA', group, index, view, size, Citizen.returnResultAnyway());
+    ok = Citizen.invokeNative('0x57ec5fa4d4d6afca', group, index, view, size, Citizen.returnResultAnyway());
   } catch (e) {
     if (decodeDebug) {
       console.error('[GET_EVENT_DATA] invokeNative threw', {
