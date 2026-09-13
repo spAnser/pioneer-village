@@ -334,6 +334,22 @@ function DrawVehicleInfo(entity)
         str = str .. " | Model: " .. tostring(model_hash) .. "\n"
         str = str .. model_name .. "\n"
     end
+    if IsThisModelATrain(model_hash) then
+        local train_track, junction_index = Citizen.InvokeNative(0x09034479E6E3E269, entity, Citizen.PointerValueInt(), Citizen.PointerValueInt())
+        local track_name = GetHashName(train_track)
+        if not track_name then
+            str = str .. "Train Track: " .. tostring(train_track)
+        else
+            str = str .. "Train Track: " .. tostring(track_name)
+        end
+        str = str .. " |  Junction: " .. tostring(junction_index)
+        str = str .. " | Station:" .. tostring(GetCurrentStationForTrain(entity))
+        str = str .. " | Next Station:" .. tostring(Citizen.InvokeNative(0x1180A2974D251B7B, entity))
+        str = str .. "\n"
+        str = str .. "Train Track Alt: " .. tostring(GetTrainTrackFromTrainVehicle(entity)) .. "\n"
+        str = str .. "Speed: " .. tostring(string.format("%.2f", GetEntitySpeed(entity)))
+        str = str .. " Direction: " .. tostring(GetTrainDirection(entity)) .. "\n"
+    end
     str = str .. "Networked: " .. tostring(NetworkGetEntityIsNetworked(entity))
     if NetworkGetEntityIsNetworked(entity) then
         str = str .. " | Network ID: " .. tostring(NetworkGetNetworkIdFromEntity(entity)) .. "\n"
@@ -380,6 +396,9 @@ function GetHashName(hash)
     end
     if HASH_SCENARIOS[hash] then
         return HASH_SCENARIOS[hash]
+    end
+    if HASH_GENERIC[hash] then
+        return HASH_GENERIC[hash]
     end
     if HASH_RAW_MODELS[hash] then
         return HASH_RAW_MODELS[hash]

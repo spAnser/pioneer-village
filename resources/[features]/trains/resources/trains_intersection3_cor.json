@@ -1,0 +1,144 @@
+{
+  "count": 13,
+  "curveCount": 13,
+  "_type": "open",
+  "source": "trains_intersection3_cor",
+  "configName": "trains_intersection3_cor",
+  "list": "train",
+  "flags": {
+    "byValue": {
+      "0": 10,
+      "2": 1,
+      "8": 2
+    },
+    "bits": {
+      "2": {
+        "bit": 2,
+        "label": "station?",
+        "count": 1,
+        "nodes": [
+          {
+            "index": 7,
+            "flags": 2,
+            "name": "Station_corn"
+          }
+        ]
+      },
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "trains3"
+          },
+          {
+            "index": 12,
+            "flags": 8,
+            "name": "trains3"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [613.963, 683.593, 114.517],
+      "handleIn": [613.963, 683.593, 114.517],
+      "handleOut": [612.639, 683.083, 114.537],
+      "length": 13.227,
+      "flags": 8,
+      "name": "trains3"
+    },
+    {
+      "position": [603.404, 675.655, 114.614],
+      "handleIn": [607.789, 679.198, 114.57],
+      "handleOut": [599.019, 672.112, 114.658],
+      "length": 21.3324,
+      "flags": 0
+    },
+    {
+      "position": [587.095, 661.988, 114.783],
+      "handleIn": [594.144, 666.018, 114.719],
+      "handleOut": [580.045, 657.958, 114.847],
+      "length": 28.0776,
+      "flags": 0
+    },
+    {
+      "position": [561.105, 651.477, 114.999],
+      "handleIn": [569.006, 654.036, 114.916],
+      "handleOut": [553.205, 648.918, 115.082],
+      "length": 21.9961,
+      "flags": 0
+    },
+    {
+      "position": [539.69, 646.635, 115.018],
+      "handleIn": [547.764, 647.62, 115.025],
+      "handleOut": [531.616, 645.649, 115.012],
+      "length": 27.0639,
+      "flags": 0
+    },
+    {
+      "position": [512.662, 645.564, 114.961],
+      "handleIn": [522.338, 645.651, 114.984],
+      "handleOut": [502.986, 645.477, 114.938],
+      "length": 31.0366,
+      "flags": 0
+    },
+    {
+      "position": [481.635, 646.115, 114.881],
+      "handleIn": [491.407, 645.63, 114.898],
+      "handleOut": [471.863, 646.601, 114.863],
+      "length": 27.7143,
+      "flags": 0
+    },
+    {
+      "position": [454.031, 648.477, 114.858],
+      "handleIn": [463.02, 648.359, 114.863],
+      "handleOut": [445.042, 648.596, 114.853],
+      "length": 26.4631,
+      "flags": 2,
+      "name": "Station_corn"
+    },
+    {
+      "position": [427.701, 646.829, 114.853],
+      "handleIn": [435.7, 648.922, 114.854],
+      "handleOut": [419.703, 644.736, 114.851],
+      "length": 24.349,
+      "flags": 0
+    },
+    {
+      "position": [406.038, 635.92, 114.849],
+      "handleIn": [412.558, 639.848, 114.851],
+      "handleOut": [399.518, 631.991, 114.847],
+      "length": 21.5883,
+      "flags": 0
+    },
+    {
+      "position": [388.458, 623.41, 114.84],
+      "handleIn": [393.524, 627.26, 114.842],
+      "handleOut": [383.393, 619.56, 114.839],
+      "length": 16.6282,
+      "flags": 0
+    },
+    {
+      "position": [375.646, 612.818, 114.84],
+      "handleIn": [380.726, 617.266, 114.84],
+      "handleOut": [370.566, 608.37, 114.84],
+      "length": 24.1627,
+      "flags": 0
+    },
+    {
+      "position": [357.959, 596.374, 114.842],
+      "handleIn": [362.925, 601.826, 114.841],
+      "handleOut": [357.959, 596.374, 114.842],
+      "length": 0,
+      "flags": 8,
+      "name": "trains3"
+    }
+  ]
+}

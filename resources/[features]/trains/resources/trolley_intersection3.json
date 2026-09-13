@@ -1,0 +1,67 @@
+{
+  "count": 4,
+  "curveCount": 4,
+  "_type": "open",
+  "source": "trolley_intersection3",
+  "configName": "trolley_intersection3",
+  "list": "train",
+  "flags": {
+    "byValue": {
+      "0": 2,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "trolley4"
+          },
+          {
+            "index": 3,
+            "flags": 8,
+            "name": "nb_trolley_track_config"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2624.78, -1284.85, 51.3241],
+      "handleIn": [2624.78, -1284.85, 51.3241],
+      "handleOut": [2623.71, -1285.41, 51.324],
+      "length": 3.52782,
+      "flags": 8,
+      "name": "trolley4"
+    },
+    {
+      "position": [2621.37, -1285.56, 51.324],
+      "handleIn": [2622.56, -1285.63, 51.324],
+      "handleOut": [2620.17, -1285.49, 51.324],
+      "length": 4.04735,
+      "flags": 0
+    },
+    {
+      "position": [2617.57, -1284.31, 51.3241],
+      "handleIn": [2618.61, -1285.05, 51.3241],
+      "handleOut": [2616.52, -1283.57, 51.3241],
+      "length": 4.05302,
+      "flags": 0
+    },
+    {
+      "position": [2615.05, -1281.2, 51.3242],
+      "handleIn": [2615.64, -1282.56, 51.3242],
+      "handleOut": [2614.98, -1281.03, 51.3242],
+      "length": 0,
+      "flags": 8,
+      "name": "nb_trolley_track_config"
+    }
+  ]
+}

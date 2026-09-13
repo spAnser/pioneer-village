@@ -1,0 +1,74 @@
+{
+  "count": 7,
+  "curveCount": 0,
+  "_type": "open",
+  "source": "sd_trolley_cable07",
+  "configName": "sd_trolley_cable07",
+  "list": "trolley-cable",
+  "flags": {
+    "byValue": {
+      "0": 5,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "SD_trolley_cable01"
+          },
+          {
+            "index": 6,
+            "flags": 8,
+            "name": "SD_trolley_cable03"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2608.71, -1153, 57.892],
+      "length": 3.11903,
+      "flags": 8,
+      "name": "SD_trolley_cable01"
+    },
+    {
+      "position": [2608.83, -1149.88, 57.8282],
+      "length": 2.27423,
+      "flags": 0
+    },
+    {
+      "position": [2608.7, -1147.61, 57.8282],
+      "length": 2.54306,
+      "flags": 0
+    },
+    {
+      "position": [2608.46, -1145.08, 57.8282],
+      "length": 3.92545,
+      "flags": 0
+    },
+    {
+      "position": [2607.04, -1141.42, 57.8282],
+      "length": 2.63568,
+      "flags": 0
+    },
+    {
+      "position": [2605.18, -1139.55, 57.8282],
+      "length": 3.52487,
+      "flags": 0
+    },
+    {
+      "position": [2602.26, -1137.58, 57.8283],
+      "length": 0,
+      "flags": 8,
+      "name": "SD_trolley_cable03"
+    }
+  ]
+}

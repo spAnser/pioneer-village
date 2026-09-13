@@ -60,6 +60,54 @@
   }
 }
 
+.error {
+  background: var(--theme-black);
+  border-left: 4px solid var(--theme-danger);
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  color: var(--theme-danger-light);
+  font-size: 14px;
+}
+
+.loading {
+  color: var(--theme-gray50);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.note {
+  color: var(--theme-gray50);
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.taskRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--theme-gray12);
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.taskHandle {
+  flex: 1;
+  color: var(--theme-gray88);
+}
+
+.taskStatus {
+  color: var(--theme-success);
+  font-weight: bold;
+}
+
+.taskTime {
+  color: var(--theme-gray50);
+}
+
 .jobCard {
   background: var(--theme-gray12);
   border-radius: 6px;

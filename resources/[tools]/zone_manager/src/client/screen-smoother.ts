@@ -1,4 +1,4 @@
-import { ScreenPoint } from './raycast';
+import type { ScreenPoint } from '@lib/client/screen-world';
 
 // GetScreenCoordFromWorldCoord carries tiny per-frame floating point noise
 // from the camera's own position/rotation, even when the camera and the

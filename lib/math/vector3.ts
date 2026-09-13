@@ -108,6 +108,13 @@ export class Vector3 {
     return this;
   }
 
+  toFixed(precision: number): this {
+    this.x = Number(this.x.toFixed(precision));
+    this.y = Number(this.y.toFixed(precision));
+    this.z = Number(this.z.toFixed(precision));
+    return this;
+  }
+
   magnitude(): number {
     return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
   }
@@ -190,6 +197,13 @@ export class Vector3 {
 
   toArray(): [number, number, number] {
     return [this.x, this.y, this.z];
+  }
+
+  toString(precision?: number): string {
+    if (precision !== undefined) {
+      return `Vector3(${this.x.toFixed(precision)}, ${this.y.toFixed(precision)}, ${this.z.toFixed(precision)})`;
+    }
+    return `Vector3(${this.x}, ${this.y}, ${this.z})`;
   }
 
   static fromOrCreate(vectors?: Vector3 | Vector3Format | Array<number>): Vector3 {

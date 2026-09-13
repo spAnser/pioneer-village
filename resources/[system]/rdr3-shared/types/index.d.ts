@@ -105,6 +105,26 @@ declare function GetResourceKvpString(key: string): string;
 declare function GetResourceMetadata(resourceName: string, metadataKey: string, index: number): string;
 declare function GetResourcePath(resourceName: string): string;
 declare function GetResourceState(resourceName: string): string;
+declare function SetNoLoadingScreen(toggle: boolean): void;
+declare function SetNoiseoveride(toggle: boolean): void;
+declare function SetNoisinessoveride(value: number): void;
+declare function SetNuiFocus(hasFocus: boolean, hasCursor: boolean): void;
+declare function SetNuiFocusKeepInput(keepInput: boolean): void;
+declare function SetNuiZindex(zIndex: number): void;
+declare function SendNuiMessage(jsonString: string): boolean;
+declare function RegisterNuiCallbackType(callbackType: string): void;
+declare function GetNuiCursorPosition(): [number, number];
+declare function StartShapeTestRay(
+  x1: number,
+  y1: number,
+  z1: number,
+  x2: number,
+  y2: number,
+  z2: number,
+  flags: number,
+  entity: number,
+  p8: number,
+): number;
 
 // @ts-ignore
 declare var exports: any;

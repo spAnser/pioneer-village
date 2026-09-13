@@ -5866,7 +5866,7 @@ type NativeArgumentMap = {
   '0x1ce875505d45338a': [ped: Ped, pedKiller: Ped, weapon: Hash];
   '0xdc9273d95976ba22': [ped: Ped];
   '0xf103823ffe72bb49': [animal: Ped];
-  '0x569f1e1237508deb': [ped: Ped];
+  '0x569f1e1237508deb': [ped: Ped, scenario: ResultAsInteger];
   '0xc22aa08a8adb87d4': [ped: Ped];
   '0x268b3aebf032a88d': [ped: Ped];
   '0x79443d56c8df45ee': [entity: Entity];
@@ -7141,7 +7141,13 @@ type NativeArgumentMap = {
   '0xff975bc4435a0fa3': [threadId: number];
   '0xfa3b530a5cc693d5': [value: DataView, p1: number];
   '0xa85e614430eff816': [eventGroup: number, eventIndex: number];
-  '0x57ec5fa4d4d6afca': [eventGroup: number, eventIndex: number, eventData: DataView, eventDataSize: number];
+  '0x57ec5fa4d4d6afca': [
+    eventGroup: number,
+    eventIndex: number,
+    eventData: DataView,
+    eventDataSize: number,
+    _: ReturnResultAnyway,
+  ];
   '0xc9f59c0a710ecd34': [eventGroup: number, eventType: Hash];
   '0xbc2c927f5c264960': [];
   '0x55525c346bef6960': [];
@@ -7648,6 +7654,7 @@ type NativeArgumentMap = {
     radius: number,
     scenariosInRadius: any,
     size: number,
+    foundScenarios: ReturnResultAnyway,
   ];
   '0x594a1028fc2a3e85': [coverpoint: ScrHandle];
   '0x77f1beb8863288d5': [ped: Ped, taskHash: Hash, p2: boolean];
@@ -9572,7 +9579,7 @@ type NativeArgumentMap = {
   '0x06a09a6e0c6d2a84': [train: Vehicle, p1: boolean];
   '0x0794199b25e499e1': [wagon: Vehicle, p1: boolean];
   '0x07e2e21e799080a0': [p0: any, p1: any];
-  '0x09034479e6e3e269': [train: Vehicle];
+  '0x09034479e6e3e269': [train: Vehicle, traintrack: IntPtr, junctionIndex: IntPtr];
   '0x0ba4250d20007c2e': [p0: any];
   '0x0cd7914d17a970ab': [p0: any, p1: any];
   '0x0d5fdf0d36fa10cd': [trackIndex: number];
@@ -9652,7 +9659,7 @@ type NativeArgumentMap = {
   '0x750d42c013f64ae7': [p0: any, p1: any];
   '0x762fdc4c19e5a981': [trainCarriage: Entity, p1: boolean];
   '0x7840576c50a13dba': [train: Vehicle, p1: boolean];
-  '0x785639d89f8451ab': [p0: any, p1: any];
+  '0x785639d89f8451ab': [p0: any, p1: any, coords: ResultAsVector];
   '0x7be0746539def0c8': [p0: any, p1: any];
   '0x8379e05871ad24e0': [];
   '0x850ce59dec2028f3': [vehicle: Vehicle, p1: any];
@@ -10368,7 +10375,7 @@ type NativeArgumentMap = {
   '0xd4071efc83794b2f': [weaponObject: number, threshold: number];
   '0xc3544ad0522e69b4': [weaponObject: number, scale: number];
   '0xa9ef4ad10bdddb57': [weaponObject: number, level: number, p2: boolean];
-  '0x43ad8fc02b429d33': [x: number, y: number, z: number, type: number];
+  '0x43ad8fc02b429d33': [x: number, y: number, z: number, type: number, zoneHash: ResultAsInteger];
   '0x5ba7a68a346a5a91': [x: number, y: number, z: number];
   '0xc31c44c43b48fde3': [gamerHandle: DataView, badSportBehaviorType: number];
 };

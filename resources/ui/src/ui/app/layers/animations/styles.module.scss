@@ -6,12 +6,12 @@
   right: 0;
   width: mixins.uiSize(960);
   background-color: rgba(0, 0, 0, 0.75);
-  color: var(--theme-white);
+  color: #fff;
   padding: mixins.uiSize(16) mixins.uiSize(24);
   font-size: mixins.uiSize(12);
 
   label {
-    color: var(--theme-white);
+    color: #fff;
   }
 
   [type='checkbox'] {

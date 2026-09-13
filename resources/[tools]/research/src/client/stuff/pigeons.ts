@@ -76,7 +76,7 @@ const birdLand = async (hasLetter = false) => {
     letter = attachLetterToBird(bird);
   }
 
-  Citizen.invokeNative('0x283978a15512b2fe', bird, 1);
+  Citizen.invokeNative('0x283978a15512b2fe', bird, true);
 
   const playerShoulderBoneIndex = GetEntityBoneIndexByName(player, 'CP_R_Shoulder');
 

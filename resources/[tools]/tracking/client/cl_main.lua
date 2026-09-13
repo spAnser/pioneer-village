@@ -32,6 +32,7 @@ AddEventHandler('onResourceStop', function(resourceName)
         HASH_CARRIABLE = nil
         HASH_SCENARIOS = nil
         HASH_RAW_MODELS = nil
+        HASH_GENERIC = nil
         collectgarbage()
     end
 end)
@@ -1052,6 +1053,8 @@ RegisterCommand('identify', function(source, args, rawCommand)
         print('HASH_YMAP: ', HASH_YMAP[hash])
     elseif HASH_RAW_MODELS[hash] then
         print('HASH_RAW_MODELS: ', HASH_RAW_MODELS[hash])
+    elseif HASH_GENERIC[hash] then
+        print('HASH_GENERIC: ', HASH_GENERIC[hash])
     else
         print("I don't know that hash.")
     end
@@ -1307,33 +1310,71 @@ local BLIP_TYPES = {
 
 RegisterCommand('train', function(source, args, rawCommand)
     Citizen.CreateThread(function()
-        local trainHash = GetHashKey('northSteamer01x')
-        trainHash = -1464742217
+        local trainHash = GetHashKey('winter4_config')
+        --trainHash = -1464742217
         print(trainHash)
-        local trainWagons = N_0x635423d55ca84fc8(trainHash)
+        local trainWagons = GetNumCarsFromTrainConfig(trainHash)
         print(trainWagons)
         for wagonIndex = 0, trainWagons - 1 do
-            local trainWagonModel = N_0x8df5f6a19f99f0d5(trainHash, wagonIndex)
+            local trainWagonModel = GetTrainModelFromTrainConfigByCarIndex(trainHash, wagonIndex)
             LoadModel(trainWagonModel)
         end
-        local train = N_0xc239dbd9a57d2a71(trainHash, GetEntityCoords(PlayerPedId()), 0, 0, 1, 1)
-        print(train)
+        local direction = 1 -- 0 | 1
+        local train = CreateMissionTrain(trainHash, GetEntityCoords(PlayerPedId()), direction, 0, 1, 1)
+        print('train', train)
+        SetTrainStopsForStations(train, true)
+
+        --Wait(1000)
+        --
+        --local driver = GetPedInVehicleSeat(train, -1)
+        --print('driver', driver)
+        --SetEntityAsMissionEntity(driver, true, true)
+        --SetEntityInvincible(driver, true)
+        --SetPedResetFlag(driver, 245, true)
         SetTrainSpeed(train, 0.0)
-        -- TaskWarpPedIntoVehicle(PlayerPedId(), train, -1)
+        TaskWarpPedIntoVehicle(PlayerPedId(), train, -1)
+    end)
+end)
+
+RegisterCommand('trolley', function(source, args, rawCommand)
+    Citizen.CreateThread(function()
+        local trainHash = GetHashKey('trolley_config_2')
+        --trainHash = -1464742217
+        print(trainHash)
+        local trainWagons = GetNumCarsFromTrainConfig(trainHash)
+        print(trainWagons)
+        for wagonIndex = 0, trainWagons - 1 do
+            local trainWagonModel = GetTrainModelFromTrainConfigByCarIndex(trainHash, wagonIndex)
+            LoadModel(trainWagonModel)
+        end
+        local direction = 0 -- 0 | 1
+        local train = CreateMissionTrain(trainHash, GetEntityCoords(PlayerPedId()), direction, 0, 1, 1)
+        print('trolley', train)
+        SetTrainStopsForStations(train, true)
+
+        --Wait(1000)
+        --
+        --local driver = GetPedInVehicleSeat(train, -1)
+        --print('driver', driver)
+        --SetEntityAsMissionEntity(driver, true, true)
+        --SetEntityInvincible(driver, true)
+        --SetPedResetFlag(driver, 245, true)
+        SetTrainSpeed(train, 0.0)
+        TaskWarpPedIntoVehicle(PlayerPedId(), train, -1)
     end)
 end)
 
 RegisterCommand('handcart', function(source, args, rawCommand)
     Citizen.CreateThread(function()
-        local trainHash = 1054492269 -- handcart
+        local trainHash = GetHashKey('handcart_config') -- handcart
         print(trainHash)
-        local trainWagons = N_0x635423d55ca84fc8(trainHash)
+        local trainWagons = GetNumCarsFromTrainConfig(trainHash)
         print(trainWagons)
         for wagonIndex = 0, trainWagons - 1 do
-            local trainWagonModel = N_0x8df5f6a19f99f0d5(trainHash, wagonIndex)
+            local trainWagonModel = GetTrainModelFromTrainConfigByCarIndex(trainHash, wagonIndex)
             LoadModel(trainWagonModel)
         end
-        local train = N_0xc239dbd9a57d2a71(trainHash, GetEntityCoords(PlayerPedId()), 0, 0, 1, 1)
+        local train = CreateMissionTrain(trainHash, GetEntityCoords(PlayerPedId()), 0, 0, 1, 1)
         print(train)
         SetTrainSpeed(train, 0.0)
         -- TaskWarpPedIntoVehicle(PlayerPedId(), train, -1)
@@ -1342,15 +1383,15 @@ end)
 
 RegisterCommand('minecart', function(source, args, rawCommand)
     Citizen.CreateThread(function()
-        local trainHash = -950361972 -- minecart
+        local trainHash = GetHashKey('minecart_config') -- minecart
         print(trainHash)
-        local trainWagons = N_0x635423d55ca84fc8(trainHash)
+        local trainWagons = GetNumCarsFromTrainConfig(trainHash)
         print(trainWagons)
         for wagonIndex = 0, trainWagons - 1 do
-            local trainWagonModel = N_0x8df5f6a19f99f0d5(trainHash, wagonIndex)
+            local trainWagonModel = GetTrainModelFromTrainConfigByCarIndex(trainHash, wagonIndex)
             LoadModel(trainWagonModel)
         end
-        local train = N_0xc239dbd9a57d2a71(trainHash, GetEntityCoords(PlayerPedId()), 0, 0, 1, 1)
+        local train = CreateMissionTrain(trainHash, GetEntityCoords(PlayerPedId()), 0, 0, 1, 1)
         print(train)
         SetTrainSpeed(train, 0.0)
         -- TaskWarpPedIntoVehicle(PlayerPedId(), train, -1)
@@ -1503,7 +1544,7 @@ RegisterCommand('test_scenario_spot', function(source, args, rawCommand)
         print('Scenario Created: ', scenario)
         TaskUseScenarioPoint(entity, scenario, 0, 0, true, false, 0, false, -1.0, false)
         Citizen.Wait(60000)
-        N_0x81948dfe4f5a0283(scenario) -- DELETE_SCENARIO_POINT
+        DeleteScenarioPoint(scenario) -- DELETE_SCENARIO_POINT
         print('Scenario Deleted: ', scenario)
     end)
 end)

@@ -1,0 +1,107 @@
+{
+  "count": 10,
+  "curveCount": 9,
+  "_type": "open",
+  "source": "trains_intersection2_ann",
+  "configName": "trains_intersection2_ann",
+  "list": "train",
+  "flags": {
+    "byValue": {
+      "0": 8,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "trains_intersection1_ann"
+          },
+          {
+            "index": 9,
+            "flags": 8,
+            "name": "trains_intersection1_ann"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2940.86, 1374.45, 43.0859],
+      "handleIn": [2940.86, 1374.45, 43.0859],
+      "handleOut": [2940.26, 1372.6, 43.0967],
+      "length": 8.54803,
+      "flags": 8,
+      "name": "trains_intersection1_ann"
+    },
+    {
+      "position": [2939.25, 1366.07, 43.1075],
+      "handleIn": [2939.73, 1369.81, 43.1039],
+      "handleOut": [2938.77, 1362.33, 43.1111],
+      "length": 14.1316,
+      "flags": 0
+    },
+    {
+      "position": [2937.98, 1352, 43.1075],
+      "handleIn": [2938.97, 1357, 43.103],
+      "handleOut": [2936.99, 1347.01, 43.112],
+      "length": 16.5822,
+      "flags": 0
+    },
+    {
+      "position": [2933.3, 1336.11, 43.1346],
+      "handleIn": [2935.3, 1342.22, 43.117],
+      "handleOut": [2931.31, 1329.99, 43.1521],
+      "length": 22.037,
+      "flags": 0
+    },
+    {
+      "position": [2926.02, 1315.31, 43.213],
+      "handleIn": [2928.52, 1322.32, 43.1675],
+      "handleOut": [2923.52, 1308.3, 43.2585],
+      "length": 22.5969,
+      "flags": 0
+    },
+    {
+      "position": [2918.31, 1294.07, 43.4074],
+      "handleIn": [2921.17, 1301.64, 43.3487],
+      "handleOut": [2915.45, 1286.5, 43.4661],
+      "length": 25.9642,
+      "flags": 0
+    },
+    {
+      "position": [2908.84, 1269.89, 43.565],
+      "handleIn": [2911.92, 1277.44, 43.5123],
+      "handleOut": [2905.77, 1262.35, 43.6177],
+      "length": 22.9468,
+      "flags": 0
+    },
+    {
+      "position": [2899.87, 1248.78, 43.7235],
+      "handleIn": [2902.67, 1254.23, 43.6845],
+      "handleOut": [2897.07, 1243.33, 43.7625],
+      "length": 14.0015,
+      "flags": 0
+    },
+    {
+      "position": [2892.05, 1237.19, 43.7925],
+      "length": 11.5561,
+      "flags": 0
+    },
+    {
+      "position": [2885.57, 1227.62, 43.845],
+      "handleIn": [2887.32, 1230.51, 43.8305],
+      "handleOut": [2885.57, 1227.62, 43.845],
+      "length": 0,
+      "flags": 8,
+      "name": "trains_intersection1_ann"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "count": 12,
+  "curveCount": 0,
+  "_type": "open",
+  "source": "trolley_intersection6",
+  "flags": {
+    "byValue": {
+      "0": 12
+    },
+    "bits": {},
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2705.37, -1420.11, 45.5379],
+      "length": 1.07204,
+      "flags": 0
+    },
+    {
+      "position": [2706.44, -1420.04, 45.5397],
+      "length": 2.56139,
+      "flags": 0
+    },
+    {
+      "position": [2708.98, -1419.73, 45.5393],
+      "length": 2.71834,
+      "flags": 0
+    },
+    {
+      "position": [2711.47, -1418.65, 45.5393],
+      "length": 2.43768,
+      "flags": 0
+    },
+    {
+      "position": [2713.43, -1417.2, 45.5393],
+      "length": 2.62916,
+      "flags": 0
+    },
+    {
+      "position": [2715.2, -1415.26, 45.5393],
+      "length": 2.57923,
+      "flags": 0
+    },
+    {
+      "position": [2716.49, -1413.02, 45.5394],
+      "length": 2.54676,
+      "flags": 0
+    },
+    {
+      "position": [2717.26, -1410.59, 45.4201],
+      "length": 2.59144,
+      "flags": 0
+    },
+    {
+      "position": [2717.58, -1408.02, 45.3506],
+      "length": 2.60495,
+      "flags": 0
+    },
+    {
+      "position": [2717.36, -1405.43, 45.2984],
+      "length": 1.4135,
+      "flags": 0
+    },
+    {
+      "position": [2716.95, -1404.08, 45.2276],
+      "length": 1.27097,
+      "flags": 0
+    },
+    {
+      "position": [2716.47, -1402.95, 45.5592],
+      "length": 0,
+      "flags": 0
+    }
+  ]
+}

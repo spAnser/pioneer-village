@@ -3,13 +3,13 @@ import {
   boolean,
   decimal,
   foreignKey,
+  index,
   integer,
   json,
   pgEnum,
   pgTable,
   serial,
   smallint,
-  text,
   timestamp,
   unique,
   varchar,
@@ -19,17 +19,7 @@ import {
 export const roleEnum = pgEnum('Role', ['USER', 'DEVELOPER', 'ADMIN']);
 export const genderEnum = pgEnum('Gender', ['MALE', 'FEMALE', 'OTHER']);
 export const sealedEnum = pgEnum('Sealed', ['NONE', 'SEALED', 'BROKEN']);
-export const paymentTypeEnum = pgEnum('PaymentType', ['HOURLY', 'PER_TASK', 'COMMISSION', 'SALARY', 'CALLBACK']);
-export const taskStatusEnum = pgEnum('TaskStatus', [
-  'AVAILABLE',
-  'ASSIGNED',
-  'IN_PROGRESS',
-  'COMPLETED',
-  'FAILED',
-  'EXPIRED',
-]);
 export const permissionTypeEnum = pgEnum('PermissionType', ['JOB', 'TASK']);
-export const repeatTypeEnum = pgEnum('RepeatType', ['COOLDOWN', 'BURST', 'WINDOW', 'UNLIMITED']);
 export const pregnantEnum = pgEnum('PregnantStatus', ['ACTIVE', 'BIRTHED', 'LOST']);
 export const pigeonStateEnum = pgEnum('PigeonState', ['DELIVERING', 'WAITING_REPLY', 'RETURNING']);
 
@@ -250,52 +240,34 @@ export const PigeonDeliveriesSchema = pgTable('PigeonDeliveries', {
 });
 
 // Job System Tables
-export const JobsSchema = pgTable('Jobs', {
-  id: serial('id').primaryKey(),
-  handle: varchar('handle').unique().notNull(),
-  name: varchar('name').notNull(),
-  description: text('description'),
-  paymentType: paymentTypeEnum('paymentType').default('HOURLY'),
-  paymentAmount: decimal('paymentAmount').default('0.0'),
-  requirements: json('requirements').default('{}'),
-  inventory: json('inventory').default('{}'),
-  clockInConstraints: json('clockInConstraints').default('{}'),
-  metadata: json('metadata').default('{}'),
-  active: boolean('active').default(true),
-  createdAt: timestamp('createdAt').defaultNow(),
-  updatedAt: timestamp('updatedAt'),
-});
-
-export const JobTasksSchema = pgTable('JobTasks', {
-  id: serial('id').primaryKey(),
-  jobId: integer('jobId').notNull(),
-  handle: varchar('handle').notNull(),
-  name: varchar('name').notNull(),
-  description: text('description'),
-  taskType: varchar('taskType').notNull(),
-  requirements: json('requirements').default('{}'),
-  rewards: json('rewards').default('{}'),
-  timeConstraints: json('timeConstraints').default('{}'),
-  repeatConfig: json('repeatConfig').default('{}'),
-  rateLimits: json('rateLimits').default('{}'),
-  metadata: json('metadata').default('{}'),
-  active: boolean('active').default(true),
-  createdAt: timestamp('createdAt').defaultNow(),
-  updatedAt: timestamp('updatedAt'),
-});
-
-export const JobEmployeesSchema = pgTable('JobEmployees', {
-  id: serial('id').primaryKey(),
-  characterId: integer('characterId').notNull(),
-  jobId: integer('jobId').notNull(),
-  position: varchar('position').default('Employee'),
-  salary: decimal('salary').default('0.0'),
-  clockedInAt: timestamp('clockedInAt'),
-  totalHoursWorked: decimal('totalHoursWorked').default('0.0'),
-  hiredAt: timestamp('hiredAt').defaultNow(),
-  firedAt: timestamp('firedAt'),
-  metadata: json('metadata').default('{}'),
-});
+// Job and task definitions are declared by resource code at boot and task instances only ever
+// describe a live session, so neither is persisted — only employment, permissions, metering and
+// pay reach the database.
+export const JobEmployeesSchema = pgTable(
+  'JobEmployees',
+  {
+    id: serial('id').primaryKey(),
+    characterId: integer('characterId').notNull(),
+    jobHandle: varchar('jobHandle').notNull(),
+    position: varchar('position').default('Employee'),
+    salary: decimal('salary').default('0.0'),
+    // Memory is the live authority; this lets a shift lost to a crash be settled on boot.
+    clockedInAt: timestamp('clockedInAt'),
+    // Snapshot of the job's hourly wage taken at clock-in. Boot-time settling runs before the game
+    // server re-registers its jobs, so the live registry cannot be consulted; this also keeps a
+    // shift payable when the job's owning resource has since been removed.
+    clockedInRate: decimal('clockedInRate'),
+    totalHoursWorked: decimal('totalHoursWorked').default('0.0'),
+    hiredAt: timestamp('hiredAt').defaultNow(),
+    firedAt: timestamp('firedAt'),
+    metadata: json('metadata').default('{}'),
+  },
+  (table) => [
+    index('job-employees-character-id-idx').on(table.characterId),
+    // One employment row per character per job, so a double clock-in cannot insert a second.
+    unique('job-employees-character-job-unique').on(table.characterId, table.jobHandle),
+  ],
+);
 
 export const JobPermissionsSchema = pgTable('JobPermissions', {
   id: serial('id').primaryKey(),
@@ -308,46 +280,42 @@ export const JobPermissionsSchema = pgTable('JobPermissions', {
   metadata: json('metadata').default('{}'),
 });
 
-export const JobTaskInstancesSchema = pgTable('JobTaskInstances', {
-  id: serial('id').primaryKey(),
-  taskId: integer('taskId').notNull(),
-  assignedTo: integer('assignedTo'),
-  status: taskStatusEnum('status').default('AVAILABLE'),
-  progress: json('progress').default('{}'),
-  createdAt: timestamp('createdAt').defaultNow(),
-  assignedAt: timestamp('assignedAt'),
-  startedAt: timestamp('startedAt'),
-  completedAt: timestamp('completedAt'),
-  scheduledFor: timestamp('scheduledFor'),
-  expiresAt: timestamp('expiresAt'),
-  metadata: json('metadata').default('{}'),
-});
+export const JobTaskCooldownsSchema = pgTable(
+  'JobTaskCooldowns',
+  {
+    id: serial('id').primaryKey(),
+    characterId: integer('characterId').notNull(),
+    jobHandle: varchar('jobHandle').notNull(),
+    taskHandle: varchar('taskHandle').notNull(),
+    lastCompletedAt: timestamp('lastCompletedAt').notNull(),
+    // Epoch-ms completion stamps pruned to the last 24h on write. Storing the raw stamps lets
+    // every window be counted at read time, so no scheduled job has to reset a counter.
+    completions: json('completions').$type<number[]>().default([]),
+    metadata: json('metadata').default('{}'),
+  },
+  // Unique rather than a plain index: writes upsert onto this constraint, which both gives the
+  // read-then-write path a conflict target and stops concurrent completions from splitting one
+  // task's history across duplicate rows. The constraint supplies the index the reads need.
+  (table) => [
+    unique('job-task-cooldowns-character-job-task-unique').on(table.characterId, table.jobHandle, table.taskHandle),
+  ],
+);
 
-export const JobTaskCooldownsSchema = pgTable('JobTaskCooldowns', {
-  id: serial('id').primaryKey(),
-  characterId: integer('characterId').notNull(),
-  taskId: integer('taskId').notNull(),
-  lastCompletedAt: timestamp('lastCompletedAt').notNull(),
-  completionCount: integer('completionCount').default(1),
-  hourlyResetAt: timestamp('hourlyResetAt').notNull(),
-  hourlyCount: integer('hourlyCount').default(1),
-  dailyResetAt: timestamp('dailyResetAt').notNull(),
-  dailyCount: integer('dailyCount').default(1),
-  metadata: json('metadata').default('{}'),
-});
-
-export const JobPaySlipsSchema = pgTable('JobPaySlips', {
-  id: serial('id').primaryKey(),
-  characterId: integer('characterId').notNull(),
-  jobId: integer('jobId').notNull(),
-  amount: decimal('amount').notNull(),
-  reason: varchar('reason').notNull(),
-  jobHandle: varchar('jobHandle').notNull(),
-  redeemed: boolean('redeemed').default(false),
-  redeemedAt: timestamp('redeemedAt'),
-  createdAt: timestamp('createdAt').defaultNow(),
-  metadata: json('metadata').default('{}'),
-});
+export const JobPaySlipsSchema = pgTable(
+  'JobPaySlips',
+  {
+    id: serial('id').primaryKey(),
+    characterId: integer('characterId').notNull(),
+    amount: decimal('amount').notNull(),
+    reason: varchar('reason').notNull(),
+    jobHandle: varchar('jobHandle').notNull(),
+    redeemed: boolean('redeemed').default(false),
+    redeemedAt: timestamp('redeemedAt'),
+    createdAt: timestamp('createdAt').defaultNow(),
+    metadata: json('metadata').default('{}'),
+  },
+  (table) => [index('job-pay-slips-character-id-idx').on(table.characterId)],
+);
 
 // Relations
 export const accountsRelations = relations(AccountsSchema, ({ many }) => ({
@@ -375,7 +343,6 @@ export const charactersRelations = relations(CharactersSchema, ({ one, many }) =
   outfits: many(OutfitsSchema),
   jobEmployees: many(JobEmployeesSchema),
   jobPermissions: many(JobPermissionsSchema),
-  jobTaskInstances: many(JobTaskInstancesSchema),
   jobTaskCooldowns: many(JobTaskCooldownsSchema),
   jobPaySlips: many(JobPaySlipsSchema),
 }));
@@ -448,29 +415,10 @@ export const itemRelations = relations(ItemSchema, ({ one }) => ({
 }));
 
 // Job System Relations
-export const jobsRelations = relations(JobsSchema, ({ many }) => ({
-  tasks: many(JobTasksSchema),
-  employees: many(JobEmployeesSchema),
-  jobPaySlips: many(JobPaySlipsSchema),
-}));
-
-export const jobTasksRelations = relations(JobTasksSchema, ({ one, many }) => ({
-  job: one(JobsSchema, {
-    fields: [JobTasksSchema.jobId],
-    references: [JobsSchema.id],
-  }),
-  instances: many(JobTaskInstancesSchema),
-  cooldowns: many(JobTaskCooldownsSchema),
-}));
-
 export const jobEmployeesRelations = relations(JobEmployeesSchema, ({ one }) => ({
   character: one(CharactersSchema, {
     fields: [JobEmployeesSchema.characterId],
     references: [CharactersSchema.id],
-  }),
-  job: one(JobsSchema, {
-    fields: [JobEmployeesSchema.jobId],
-    references: [JobsSchema.id],
   }),
 }));
 
@@ -485,25 +433,10 @@ export const jobPermissionsRelations = relations(JobPermissionsSchema, ({ one })
   }),
 }));
 
-export const jobTaskInstancesRelations = relations(JobTaskInstancesSchema, ({ one }) => ({
-  task: one(JobTasksSchema, {
-    fields: [JobTaskInstancesSchema.taskId],
-    references: [JobTasksSchema.id],
-  }),
-  assignedToCharacter: one(CharactersSchema, {
-    fields: [JobTaskInstancesSchema.assignedTo],
-    references: [CharactersSchema.id],
-  }),
-}));
-
 export const jobTaskCooldownsRelations = relations(JobTaskCooldownsSchema, ({ one }) => ({
   character: one(CharactersSchema, {
     fields: [JobTaskCooldownsSchema.characterId],
     references: [CharactersSchema.id],
-  }),
-  task: one(JobTasksSchema, {
-    fields: [JobTaskCooldownsSchema.taskId],
-    references: [JobTasksSchema.id],
   }),
 }));
 
@@ -511,10 +444,6 @@ export const jobPaySlipsRelations = relations(JobPaySlipsSchema, ({ one }) => ({
   character: one(CharactersSchema, {
     fields: [JobPaySlipsSchema.characterId],
     references: [CharactersSchema.id],
-  }),
-  job: one(JobsSchema, {
-    fields: [JobPaySlipsSchema.jobId],
-    references: [JobsSchema.id],
   }),
 }));
 
@@ -545,16 +474,10 @@ export type DoorSchemaType = typeof DoorSchema.$inferSelect;
 export type NewDoorSchemaType = typeof DoorSchema.$inferInsert;
 export type WorldObjectSchemaType = typeof WorldObjectsSchema.$inferSelect;
 export type NewWorldObjectSchemaType = typeof WorldObjectsSchema.$inferInsert;
-export type JobSchemaType = typeof JobsSchema.$inferSelect;
-export type NewJobSchemaType = typeof JobsSchema.$inferInsert;
-export type JobTaskSchemaType = typeof JobTasksSchema.$inferSelect;
-export type NewJobTaskSchemaType = typeof JobTasksSchema.$inferInsert;
 export type JobEmployeeSchemaType = typeof JobEmployeesSchema.$inferSelect;
 export type NewJobEmployeeSchemaType = typeof JobEmployeesSchema.$inferInsert;
 export type JobPermissionSchemaType = typeof JobPermissionsSchema.$inferSelect;
 export type NewJobPermissionSchemaType = typeof JobPermissionsSchema.$inferInsert;
-export type JobTaskInstanceSchemaType = typeof JobTaskInstancesSchema.$inferSelect;
-export type NewJobTaskInstanceSchemaType = typeof JobTaskInstancesSchema.$inferInsert;
 export type JobTaskCooldownSchemaType = typeof JobTaskCooldownsSchema.$inferSelect;
 export type NewJobTaskCooldownSchemaType = typeof JobTaskCooldownsSchema.$inferInsert;
 export type JobPaySlipSchemaType = typeof JobPaySlipsSchema.$inferSelect;

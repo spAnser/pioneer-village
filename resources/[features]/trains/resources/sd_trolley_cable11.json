@@ -1,0 +1,102 @@
+{
+  "count": 13,
+  "curveCount": 0,
+  "_type": "open",
+  "source": "sd_trolley_cable11",
+  "flags": {
+    "byValue": {
+      "0": 11,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "SD_trolley_cable08"
+          },
+          {
+            "index": 12,
+            "flags": 8,
+            "name": "SD_trolley_cable04"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2717.4, -1405.1, 52.6226],
+      "length": 1.33041,
+      "flags": 8,
+      "name": "SD_trolley_cable08"
+    },
+    {
+      "position": [2718.06, -1406.26, 52.5935],
+      "length": 0.886712,
+      "flags": 0
+    },
+    {
+      "position": [2718.5, -1407.02, 52.5754],
+      "length": 2.21648,
+      "flags": 0
+    },
+    {
+      "position": [2719.6, -1408.95, 52.5311],
+      "length": 1.91591,
+      "flags": 0
+    },
+    {
+      "position": [2720.69, -1410.52, 52.531],
+      "length": 0.638622,
+      "flags": 0
+    },
+    {
+      "position": [2721.05, -1411.05, 52.5311],
+      "length": 0.910915,
+      "flags": 0
+    },
+    {
+      "position": [2721.61, -1411.77, 52.5305],
+      "length": 1.36626,
+      "flags": 0
+    },
+    {
+      "position": [2722.45, -1412.85, 52.5311],
+      "length": 1.82179,
+      "flags": 0
+    },
+    {
+      "position": [2723.81, -1414.05, 52.5304],
+      "length": 0.780587,
+      "flags": 0
+    },
+    {
+      "position": [2724.4, -1414.57, 52.5311],
+      "length": 2.60386,
+      "flags": 0
+    },
+    {
+      "position": [2726.7, -1415.79, 52.5311],
+      "length": 3.82896,
+      "flags": 0
+    },
+    {
+      "position": [2730.48, -1416.42, 52.5311],
+      "length": 3.14129,
+      "flags": 0
+    },
+    {
+      "position": [2733.53, -1417.07, 52.1842],
+      "length": 0,
+      "flags": 8,
+      "name": "SD_trolley_cable04"
+    }
+  ]
+}

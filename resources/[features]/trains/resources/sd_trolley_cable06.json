@@ -1,0 +1,71 @@
+{
+  "count": 11,
+  "curveCount": 0,
+  "_type": "open",
+  "source": "sd_trolley_cable06",
+  "flags": {
+    "byValue": {
+      "0": 11
+    },
+    "bits": {},
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2692.81, -1403.93, 52.5312],
+      "length": 1.27355,
+      "flags": 0
+    },
+    {
+      "position": [2693.55, -1402.89, 52.5304],
+      "length": 0.849102,
+      "flags": 0
+    },
+    {
+      "position": [2694.05, -1402.2, 52.5311],
+      "length": 0.560225,
+      "flags": 0
+    },
+    {
+      "position": [2694.35, -1401.74, 52.5307],
+      "length": 1.30658,
+      "flags": 0
+    },
+    {
+      "position": [2695.07, -1400.65, 52.5309],
+      "length": 1.95098,
+      "flags": 0
+    },
+    {
+      "position": [2696.35, -1399.17, 52.5311],
+      "length": 1.94644,
+      "flags": 0
+    },
+    {
+      "position": [2697.82, -1397.9, 52.531],
+      "length": 2.48687,
+      "flags": 0
+    },
+    {
+      "position": [2699.96, -1396.63, 52.5162],
+      "length": 1.59598,
+      "flags": 0
+    },
+    {
+      "position": [2701.45, -1396.05, 52.5299],
+      "length": 1.02442,
+      "flags": 0
+    },
+    {
+      "position": [2702.43, -1395.74, 52.5299],
+      "length": 1.53734,
+      "flags": 0
+    },
+    {
+      "position": [2703.89, -1395.29, 52.5311],
+      "length": 0,
+      "flags": 0
+    }
+  ]
+}

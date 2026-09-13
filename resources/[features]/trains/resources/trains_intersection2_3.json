@@ -1,0 +1,116 @@
+{
+  "count": 11,
+  "curveCount": 11,
+  "_type": "open",
+  "source": "trains_intersection2_3",
+  "configName": "trains_intersection2_3",
+  "list": "train",
+  "flags": {
+    "byValue": {
+      "0": 9,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "trains3"
+          },
+          {
+            "index": 10,
+            "flags": 8,
+            "name": "braithwaites2_track_config"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [1481.54, 648.331, 91.4573],
+      "handleIn": [1480.73, 648.952, 91.4573],
+      "handleOut": [1482.72, 647.435, 91.4573],
+      "length": 3.33186,
+      "flags": 8,
+      "name": "trains3"
+    },
+    {
+      "position": [1484.16, 646.269, 91.4736],
+      "handleIn": [1483.22, 647.113, 91.4682],
+      "handleOut": [1485.09, 645.424, 91.4791],
+      "length": 1.53872,
+      "flags": 0
+    },
+    {
+      "position": [1485.29, 645.226, 91.4899],
+      "handleIn": [1484.93, 645.568, 91.4845],
+      "handleOut": [1486.01, 644.544, 91.5007],
+      "length": 3.07791,
+      "flags": 0
+    },
+    {
+      "position": [1487.55, 643.138, 91.522],
+      "handleIn": [1486.79, 643.851, 91.5114],
+      "handleOut": [1489.08, 641.712, 91.5431],
+      "length": 6.28874,
+      "flags": 0
+    },
+    {
+      "position": [1492.11, 638.811, 91.5827],
+      "handleIn": [1490.58, 640.305, 91.5636],
+      "handleOut": [1495.18, 635.823, 91.6209],
+      "length": 13.4594,
+      "flags": 0
+    },
+    {
+      "position": [1501.17, 628.866, 91.676],
+      "handleIn": [1498.16, 632.564, 91.6538],
+      "handleOut": [1507.19, 621.469, 91.7204],
+      "length": 31.8514,
+      "flags": 0
+    },
+    {
+      "position": [1519.27, 602.734, 91.7236],
+      "handleIn": [1514.81, 611.832, 91.8163],
+      "handleOut": [1523.73, 593.636, 91.6309],
+      "length": 29.8867,
+      "flags": 0
+    },
+    {
+      "position": [1527.93, 574.278, 91.1196],
+      "handleIn": [1526.21, 585.721, 91.4532],
+      "handleOut": [1529.66, 562.835, 90.786],
+      "length": 40.286,
+      "flags": 0
+    },
+    {
+      "position": [1529.59, 534.078, 89.7221],
+      "handleIn": [1529.31, 546.182, 90.106],
+      "handleOut": [1529.87, 521.974, 89.3381],
+      "length": 32.4377,
+      "flags": 0
+    },
+    {
+      "position": [1529.59, 501.655, 88.8161],
+      "handleIn": [1529.55, 512.759, 88.9326],
+      "handleOut": [1529.63, 490.551, 88.6995],
+      "length": 34.1345,
+      "flags": 0
+    },
+    {
+      "position": [1529.94, 467.529, 89.3801],
+      "handleIn": [1529.98, 473.943, 89.241],
+      "handleOut": [1529.93, 466.977, 89.3921],
+      "length": 0,
+      "flags": 8,
+      "name": "braithwaites2_track_config"
+    }
+  ]
+}

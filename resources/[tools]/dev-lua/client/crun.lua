@@ -40,6 +40,19 @@ end)
 
 InvokeNative = Citizen.InvokeNative
 IN = InvokeNative
+_I = Citizen.PointerValueInt()
+_F = Citizen.PointerValueFloat()
+_V = Citizen.PointerValueVector()
+_R = Citizen.ReturnResultAnyway()
+_RI = Citizen.ResultAsInteger()
+_RF = Citizen.ResultAsFloat()
+_RL = Citizen.ResultAsLong()
+_S = Citizen.ResultAsString()
+_RV = Citizen.ResultAsVector()
+_RO = Citizen.ResultAsObject2()
+_IN = Citizen.InvokeNativeByHash
+_II = Citizen.PointerValueIntInitialized
+_FI = Citizen.PointerValueFloatInitialized
 
 RegisterCommand('crun', function(source, args, rawCommand)
     local command = GetTextSubstring(rawCommand, 5, GetLengthOfLiteralString(rawCommand))

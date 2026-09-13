@@ -1,0 +1,466 @@
+/*
+ * The NUI page is transparent over the game, so only the panel and status bar
+ * paint a background. Everything else must let the world through.
+ */
+
+:root {
+  --bg: rgba(14, 17, 23, 0.92);
+  --bg-raised: rgba(28, 33, 43, 0.9);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #e6e9ef;
+  --text-dim: #98a2b3;
+  --accent: #ffd24a;
+  --accent-dim: rgba(255, 210, 74, 0.16);
+  --danger: #ff6b5e;
+  --junction: #38d9d0;
+  --mono: ui-monospace, "Cascadia Mono", "Consolas", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 12px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+  /* The page itself must never paint: it sits on top of the rendered game. */
+  background: transparent;
+  user-select: none;
+}
+
+.editor-root {
+  display: none;
+}
+
+.editor-root--visible {
+  display: block;
+}
+
+.overlay-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* The canvas takes clicks so nodes can be picked; the gizmo needs them too. */
+  pointer-events: auto;
+}
+
+/* ------------------------------------------------------------------ panel */
+
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 96px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow-y: auto;
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  backdrop-filter: blur(6px);
+}
+
+.panel-section {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-section__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.panel-section h2 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.panel-note {
+  margin: 0 0 6px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.panel-warning {
+  margin: 0 0 8px;
+  padding: 6px 8px;
+  font-size: 11px;
+  color: #ffd8d3;
+  background: rgba(255, 107, 94, 0.14);
+  border-left: 2px solid var(--danger);
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------- track list */
+
+.filter-input,
+.text-input,
+.axis-input {
+  width: 100%;
+  padding: 4px 6px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.axis-input {
+  font-family: var(--mono);
+}
+
+.filter-input:focus,
+.text-input:focus,
+.axis-input:focus {
+  outline: 1px solid var(--accent);
+  border-color: var(--accent);
+}
+
+.track-list__rows,
+.node-list__rows {
+  max-height: 240px;
+  overflow-y: auto;
+  margin-top: 6px;
+}
+
+.track-row,
+.node-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.track-row--selected,
+.node-row--selected {
+  background: var(--accent-dim);
+}
+
+.node-row--broken .node-row__badges {
+  color: var(--danger);
+}
+
+.track-row__name {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.track-row__config {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.track-row__stem,
+.track-row__meta {
+  flex: none;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.node-row__index {
+  width: 42px;
+  flex: none;
+  padding: 0;
+  font: inherit;
+  font-family: var(--mono);
+  text-align: right;
+  color: var(--text-dim);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.node-row--selected .node-row__index {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.node-row__type {
+  width: 10px;
+  flex: none;
+  font-family: var(--mono);
+  color: var(--text-dim);
+}
+
+.node-row__name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11px;
+  color: var(--junction);
+}
+
+.node-row__badges {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.node-row__delta {
+  flex: none;
+  width: 52px;
+  text-align: right;
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.node-row__delta--warn {
+  color: var(--accent);
+}
+
+/* --------------------------------------------------------------- inspector */
+
+.part-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.part-tab {
+  flex: 1;
+  padding: 3px 0;
+  font: inherit;
+  color: var(--text-dim);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.part-tab--active {
+  color: #1a1d24;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.part-tab:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.axis-row {
+  display: grid;
+  grid-template-columns: 68px repeat(3, 1fr);
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.axis-row__label {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* Axis tint matches the gizmo arrows, so an input maps to an arrow at a glance. */
+.axis-input--x { border-bottom: 2px solid rgba(255, 90, 77, 0.7); }
+.axis-input--y { border-bottom: 2px solid rgba(120, 220, 120, 0.7); }
+.axis-input--z { border-bottom: 2px solid rgba(77, 140, 255, 0.7); }
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.flag-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 8px;
+  margin: 8px 0;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.field-row__label {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.button {
+  padding: 4px 8px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: var(--accent);
+}
+
+.button--danger:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.link-button {
+  padding: 0;
+  font: inherit;
+  font-size: 11px;
+  color: var(--text-dim);
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------------ export */
+
+.export__block {
+  margin-top: 8px;
+}
+
+.export__block-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.export__label {
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.export__text {
+  width: 100%;
+  height: 180px;
+  padding: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--text);
+  background: #0b0e13;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  resize: vertical;
+  white-space: pre;
+  user-select: text;
+}
+
+.export__text--short {
+  height: 92px;
+}
+
+/* -------------------------------------------------------------- status bar */
+
+.status {
+  position: fixed;
+  left: 0;
+  right: 340px;
+  bottom: 0;
+  padding: 8px 12px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(6px);
+}
+
+.status__row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status__selection {
+  font-weight: 600;
+}
+
+.status__cursor,
+.status__hints {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.status__hints {
+  margin-top: 6px;
+}
+
+.status__failures:not(:empty) {
+  margin-top: 6px;
+}
+
+.chip-group {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.chip-group__label {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-right: 2px;
+}
+
+.chip {
+  padding: 2px 7px;
+  font: inherit;
+  font-size: 11px;
+  color: var(--text-dim);
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.chip--active {
+  color: #1a1d24;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.chip--danger:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.chip:disabled {
+  opacity: 0.4;
+  cursor: default;
+}

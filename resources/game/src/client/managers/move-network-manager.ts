@@ -243,7 +243,7 @@ class MoveNetworkManager {
       const pos = config.anchorCoords ?? { x: 0, y: 0, z: 0 };
       const rot = config.anchorRotation ?? { x: 0, y: 0, z: 0 };
       Citizen.invokeNative(
-        '0x7B6A04F98BBAFB2C',
+        '0x7b6a04f98bbafb2c',
         config.entity,
         config.networkDef,
         initParams,
@@ -266,12 +266,12 @@ class MoveNetworkManager {
       //   TASK_MOVE_NETWORK_BY_NAME_WITH_INIT_PARAMS(
       //     bucket, networkDef, &struct, 0.0f, false, animDict, flags)
       Citizen.invokeNative(
-        '0x139805C2A67C4795',
+        '0x139805c2a67c4795',
         config.entity,
         config.networkDef,
         initParams,
         blendIn,
-        0, // isAttached / bool
+        false, // isAttached / bool
         config.clipSet ?? '',
         flags,
       );

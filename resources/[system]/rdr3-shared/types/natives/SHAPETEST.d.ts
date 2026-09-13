@@ -15,7 +15,9 @@
  * @param {number} entityHit
  * @return {[number, boolean, Vector3, Vector3]}
  */
-declare function GetShapeTestResult(shapeTestHandle: ScrHandle): [number, boolean, Vector3, Vector3, entityHit: Entity];
+declare function GetShapeTestResult(
+  shapeTestHandle: ScrHandle | number,
+): [number, boolean, Vector3, Vector3, entityHit: Entity];
 
 /**
  * START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE

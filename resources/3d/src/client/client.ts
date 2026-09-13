@@ -5,7 +5,7 @@ const loadModel = (model: number | string): Promise<void> => {
     model = GetHashKey(model);
   }
   return new Promise((resolve) => {
-    RequestModel(model);
+    RequestModel(model, false);
     if (HasModelLoaded(model)) {
       resolve();
     } else {
@@ -29,8 +29,8 @@ RegisterCommand(
     }
 
     await loadModel(model);
-    const coords = GetEntityCoords(PlayerPedId(), true);
-    const entity = CreateObject(model, coords[0] + 1, coords[1], coords[2] - 1.0, true, true, false);
+    const coords = GetEntityCoords(PlayerPedId(), true, false);
+    const entity = CreateObject(model, coords[0] + 1, coords[1], coords[2] - 1.0, true, true, false, false, false);
     SetEntityRotation(entity, 0.0, 0.0, 0.0, 2, false);
     console.log('spawned', entity);
   },
@@ -40,7 +40,7 @@ RegisterCommand(
 // RequestStreamedTextureDict('pv_markers', true);
 
 const obj = 47874;
-const waterBottleCoords = GetEntityCoords(obj, false);
+const waterBottleCoords = GetEntityCoords(obj, false, false);
 let target = PlayerPedId();
 
 on('target:changed', (newTarget: number) => {

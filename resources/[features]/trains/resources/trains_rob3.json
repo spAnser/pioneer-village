@@ -1,0 +1,109 @@
+{
+  "count": 10,
+  "curveCount": 10,
+  "_type": "open",
+  "source": "trains_rob3",
+  "configName": "trains_rob3",
+  "list": "train",
+  "flags": {
+    "byValue": {
+      "0": 8,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "freight_group"
+          },
+          {
+            "index": 9,
+            "flags": 8,
+            "name": "freight_group"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [556.65, 1725.99, 186.968],
+      "handleIn": [556.65, 1725.99, 186.968],
+      "handleOut": [558.292, 1724.68, 186.994],
+      "length": 5.78656,
+      "flags": 8,
+      "name": "freight_group"
+    },
+    {
+      "position": [560.442, 1721.66, 186.968],
+      "handleIn": [559.47, 1723.18, 186.994],
+      "handleOut": [561.414, 1720.13, 186.943],
+      "length": 5.26146,
+      "flags": 0
+    },
+    {
+      "position": [562.479, 1716.82, 186.815],
+      "handleIn": [561.797, 1718.86, 186.834],
+      "handleOut": [563.162, 1714.79, 186.796],
+      "length": 7.69116,
+      "flags": 0
+    },
+    {
+      "position": [564.54, 1709.43, 186.854],
+      "handleIn": [563.398, 1711.63, 186.857],
+      "handleOut": [565.682, 1707.24, 186.851],
+      "length": 7.49256,
+      "flags": 0
+    },
+    {
+      "position": [568.739, 1703.25, 186.798],
+      "handleIn": [566.856, 1705.48, 186.816],
+      "handleOut": [570.622, 1701.02, 186.78],
+      "length": 10.1494,
+      "flags": 0
+    },
+    {
+      "position": [575.727, 1695.9, 186.747],
+      "handleIn": [573.137, 1698.37, 186.76],
+      "handleOut": [578.316, 1693.42, 186.733],
+      "length": 11.3578,
+      "flags": 0
+    },
+    {
+      "position": [584.278, 1688.42, 186.718],
+      "handleIn": [581.366, 1691.08, 186.734],
+      "handleOut": [587.19, 1685.77, 186.701],
+      "length": 12.2889,
+      "flags": 0
+    },
+    {
+      "position": [593.31, 1680.09, 186.648],
+      "handleIn": [590.016, 1683.19, 186.677],
+      "handleOut": [596.604, 1676.99, 186.619],
+      "length": 14.8566,
+      "flags": 0
+    },
+    {
+      "position": [604.041, 1669.82, 186.543],
+      "handleIn": [601.222, 1672.81, 186.561],
+      "handleOut": [606.859, 1666.83, 186.526],
+      "length": 9.84899,
+      "flags": 0
+    },
+    {
+      "position": [610.22, 1662.17, 186.543],
+      "handleIn": [608.919, 1664.28, 186.526],
+      "handleOut": [610.22, 1662.17, 186.543],
+      "length": 0,
+      "flags": 8,
+      "name": "freight_group"
+    }
+  ]
+}

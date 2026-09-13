@@ -1,0 +1,5904 @@
+{
+  "generatedAt": "2026-09-02T00:34:57.772Z",
+  "inputDir": "C:\\Users\\spAnser\\Downloads\\rdr3-trains",
+  "trackCount": 42,
+  "nodeCount": 3898,
+  "tracks": [
+    {
+      "file": "freight_nb1_inter.dat",
+      "name": "freight_nb1_inter",
+      "configName": "freight_nb1_inter",
+      "list": "train",
+      "count": 9,
+      "curveCount": 9,
+      "_type": "open",
+      "nodeCount": 9,
+      "curveRowCount": 9,
+      "totalLength": 36.01468,
+      "measuredArcLength": 36.014418975964745,
+      "handleFit": {
+        "curvedSegments": 8,
+        "candidates": {
+          "absolute:in-out": 0.003818069146917402,
+          "absolute:out-in": 0.9063598774162132,
+          "relative:in-out": 4492.454386470428,
+          "relative:out-in": 4492.338381292194
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.003818069146917402
+      },
+      "markers": {
+        "c": 9
+      },
+      "flags": {
+        "byValue": {
+          "0": 7,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 8,
+                "flags": 8,
+                "name": "trains_nb1"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 8,
+          "name": "trains_nb1",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        },
+        {
+          "name": "trains_nb1",
+          "loaded": true,
+          "file": "trains_nb1"
+        }
+      ]
+    },
+    {
+      "file": "minecart_jam3_4.dat",
+      "name": "minecart_jam3_4",
+      "configName": "minecart_Jam3_4",
+      "list": "train",
+      "count": 220,
+      "curveCount": 219,
+      "_type": "open",
+      "nodeCount": 220,
+      "curveRowCount": 219,
+      "totalLength": 194.82550500000002,
+      "measuredArcLength": 194.83403482537295,
+      "handleFit": {
+        "curvedSegments": 219,
+        "candidates": {
+          "absolute:in-out": 0.003531483839940809,
+          "absolute:out-in": 0.15726853436404448,
+          "relative:in-out": 4650.569790654675,
+          "relative:out-in": 4650.568926418076
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.003531483839940809
+      },
+      "markers": {
+        "c": 219,
+        "": 1
+      },
+      "flags": {
+        "byValue": {
+          "0": 220
+        },
+        "bits": {},
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [],
+      "resolvedLinks": []
+    },
+    {
+      "file": "rivers1.dat",
+      "name": "rivers1",
+      "configName": "riverboat_track_config",
+      "list": "train",
+      "count": 432,
+      "curveCount": 0,
+      "_type": "closed",
+      "typeRaw": "close",
+      "nodeCount": 432,
+      "curveRowCount": 0,
+      "totalLength": 9131.4063,
+      "measuredArcLength": 9140.03861390869,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 432
+      },
+      "flags": {
+        "byValue": {
+          "0": 432
+        },
+        "bits": {},
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [],
+      "resolvedLinks": []
+    },
+    {
+      "file": "sd_trolley_cable01.dat",
+      "name": "sd_trolley_cable01",
+      "configName": "sd_trolley_cable01",
+      "list": "trolley-cable",
+      "count": 398,
+      "curveCount": 0,
+      "_type": "closed",
+      "typeRaw": "close",
+      "nodeCount": 398,
+      "curveRowCount": 0,
+      "totalLength": 780.0683450000001,
+      "measuredArcLength": 780.0721306960498,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 398
+      },
+      "flags": {
+        "byValue": {
+          "0": 389,
+          "8": 9
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 9,
+            "nodes": [
+              {
+                "index": 7,
+                "flags": 8,
+                "name": "SD_trolley_cable03"
+              },
+              {
+                "index": 18,
+                "flags": 8,
+                "name": "SD_trolley_cable02"
+              },
+              {
+                "index": 22,
+                "flags": 8,
+                "name": "SD_trolley_cable05"
+              },
+              {
+                "index": 70,
+                "flags": 8,
+                "name": "SD_trolley_cable04"
+              },
+              {
+                "index": 88,
+                "flags": 8,
+                "name": "SD_trolley_cable08"
+              },
+              {
+                "index": 132,
+                "flags": 8,
+                "name": "SD_trolley_cable04"
+              },
+              {
+                "index": 299,
+                "flags": 8,
+                "name": "SD_trolley_cable02"
+              },
+              {
+                "index": 331,
+                "flags": 8,
+                "name": "SD_trolley_cable03"
+              },
+              {
+                "index": 337,
+                "flags": 8,
+                "name": "SD_trolley_cable07"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 7,
+          "name": "SD_trolley_cable03",
+          "flags": 8
+        },
+        {
+          "index": 18,
+          "name": "SD_trolley_cable02",
+          "flags": 8
+        },
+        {
+          "index": 22,
+          "name": "SD_trolley_cable05",
+          "flags": 8
+        },
+        {
+          "index": 70,
+          "name": "SD_trolley_cable04",
+          "flags": 8
+        },
+        {
+          "index": 88,
+          "name": "SD_trolley_cable08",
+          "flags": 8
+        },
+        {
+          "index": 132,
+          "name": "SD_trolley_cable04",
+          "flags": 8
+        },
+        {
+          "index": 299,
+          "name": "SD_trolley_cable02",
+          "flags": 8
+        },
+        {
+          "index": 331,
+          "name": "SD_trolley_cable03",
+          "flags": 8
+        },
+        {
+          "index": 337,
+          "name": "SD_trolley_cable07",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "SD_trolley_cable03",
+          "loaded": true,
+          "file": "sd_trolley_cable03"
+        },
+        {
+          "name": "SD_trolley_cable02",
+          "loaded": true,
+          "file": "sd_trolley_cable02"
+        },
+        {
+          "name": "SD_trolley_cable05",
+          "loaded": true,
+          "file": "sd_trolley_cable05"
+        },
+        {
+          "name": "SD_trolley_cable04",
+          "loaded": true,
+          "file": "sd_trolley_cable04"
+        },
+        {
+          "name": "SD_trolley_cable08",
+          "loaded": true,
+          "file": "sd_trolley_cable08"
+        },
+        {
+          "name": "SD_trolley_cable07",
+          "loaded": true,
+          "file": "sd_trolley_cable07"
+        }
+      ]
+    },
+    {
+      "file": "sd_trolley_cable02.dat",
+      "name": "sd_trolley_cable02",
+      "configName": "sd_trolley_cable02",
+      "list": "trolley-cable",
+      "count": 128,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 128,
+      "curveRowCount": 0,
+      "totalLength": 209.58273999999997,
+      "measuredArcLength": 209.58520016122753,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 128
+      },
+      "flags": {
+        "byValue": {
+          "0": 125,
+          "8": 3
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 3,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              },
+              {
+                "index": 4,
+                "flags": 8,
+                "name": "SD_trolley_cable05"
+              },
+              {
+                "index": 127,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        },
+        {
+          "index": 4,
+          "name": "SD_trolley_cable05",
+          "flags": 8
+        },
+        {
+          "index": 127,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "SD_trolley_cable01",
+          "loaded": true,
+          "file": "sd_trolley_cable01"
+        },
+        {
+          "name": "SD_trolley_cable05",
+          "loaded": true,
+          "file": "sd_trolley_cable05"
+        }
+      ]
+    },
+    {
+      "file": "sd_trolley_cable03.dat",
+      "name": "sd_trolley_cable03",
+      "configName": "sd_trolley_cable03",
+      "list": "trolley-cable",
+      "count": 146,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 146,
+      "curveRowCount": 0,
+      "totalLength": 360.71483100000006,
+      "measuredArcLength": 360.7065364219971,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 146
+      },
+      "flags": {
+        "byValue": {
+          "0": 143,
+          "8": 3
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 3,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              },
+              {
+                "index": 7,
+                "flags": 8,
+                "name": "SD_trolley_cable07"
+              },
+              {
+                "index": 145,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        },
+        {
+          "index": 7,
+          "name": "SD_trolley_cable07",
+          "flags": 8
+        },
+        {
+          "index": 145,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "SD_trolley_cable01",
+          "loaded": true,
+          "file": "sd_trolley_cable01"
+        },
+        {
+          "name": "SD_trolley_cable07",
+          "loaded": true,
+          "file": "sd_trolley_cable07"
+        }
+      ]
+    },
+    {
+      "file": "sd_trolley_cable04.dat",
+      "name": "sd_trolley_cable04",
+      "configName": "sd_trolley_cable04",
+      "list": "trolley-cable",
+      "count": 82,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 82,
+      "curveRowCount": 0,
+      "totalLength": 153.41722800000002,
+      "measuredArcLength": 153.4231850793941,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 82
+      },
+      "flags": {
+        "byValue": {
+          "0": 79,
+          "8": 3
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 3,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              },
+              {
+                "index": 30,
+                "flags": 8,
+                "name": "SD_trolley_cable08"
+              },
+              {
+                "index": 81,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        },
+        {
+          "index": 30,
+          "name": "SD_trolley_cable08",
+          "flags": 8
+        },
+        {
+          "index": 81,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "SD_trolley_cable01",
+          "loaded": true,
+          "file": "sd_trolley_cable01"
+        },
+        {
+          "name": "SD_trolley_cable08",
+          "loaded": true,
+          "file": "sd_trolley_cable08"
+        }
+      ]
+    },
+    {
+      "file": "sd_trolley_cable05.dat",
+      "name": "sd_trolley_cable05",
+      "configName": "sd_trolley_cable05",
+      "list": "trolley-cable",
+      "count": 5,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 5,
+      "curveRowCount": 0,
+      "totalLength": 8.96471,
+      "measuredArcLength": 8.967315417443698,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 5
+      },
+      "flags": {
+        "byValue": {
+          "0": 3,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              },
+              {
+                "index": 4,
+                "flags": 8,
+                "name": "SD_trolley_cable02"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        },
+        {
+          "index": 4,
+          "name": "SD_trolley_cable02",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "SD_trolley_cable01",
+          "loaded": true,
+          "file": "sd_trolley_cable01"
+        },
+        {
+          "name": "SD_trolley_cable02",
+          "loaded": true,
+          "file": "sd_trolley_cable02"
+        }
+      ]
+    },
+    {
+      "file": "sd_trolley_cable06.dat",
+      "name": "sd_trolley_cable06",
+      "count": 11,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 11,
+      "curveRowCount": 0,
+      "totalLength": 14.531486999999998,
+      "measuredArcLength": 14.526508420556896,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 11
+      },
+      "flags": {
+        "byValue": {
+          "0": 11
+        },
+        "bits": {},
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [],
+      "resolvedLinks": []
+    },
+    {
+      "file": "sd_trolley_cable07.dat",
+      "name": "sd_trolley_cable07",
+      "configName": "sd_trolley_cable07",
+      "list": "trolley-cable",
+      "count": 7,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 7,
+      "curveRowCount": 0,
+      "totalLength": 18.02232,
+      "measuredArcLength": 18.023765470136407,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 7
+      },
+      "flags": {
+        "byValue": {
+          "0": 5,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              },
+              {
+                "index": 6,
+                "flags": 8,
+                "name": "SD_trolley_cable03"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        },
+        {
+          "index": 6,
+          "name": "SD_trolley_cable03",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "SD_trolley_cable01",
+          "loaded": true,
+          "file": "sd_trolley_cable01"
+        },
+        {
+          "name": "SD_trolley_cable03",
+          "loaded": true,
+          "file": "sd_trolley_cable03"
+        }
+      ]
+    },
+    {
+      "file": "sd_trolley_cable08.dat",
+      "name": "sd_trolley_cable08",
+      "configName": "sd_trolley_cable08",
+      "list": "trolley-cable",
+      "count": 18,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 18,
+      "curveRowCount": 0,
+      "totalLength": 36.48295300000001,
+      "measuredArcLength": 36.487481766599544,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 18
+      },
+      "flags": {
+        "byValue": {
+          "0": 16,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "SD_trolley_cable01"
+              },
+              {
+                "index": 17,
+                "flags": 8,
+                "name": "SD_trolley_cable04"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "SD_trolley_cable01",
+          "flags": 8
+        },
+        {
+          "index": 17,
+          "name": "SD_trolley_cable04",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "SD_trolley_cable01",
+          "loaded": true,
+          "file": "sd_trolley_cable01"
+        },
+        {
+          "name": "SD_trolley_cable04",
+          "loaded": true,
+          "file": "sd_trolley_cable04"
+        }
+      ]
+    },
+    {
+      "file": "sd_trolley_cable11.dat",
+      "name": "sd_trolley_cable11",
+      "count": 13,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 13,
+      "curveRowCount": 0,
+      "totalLength": 21.441796,
+      "measuredArcLength": 21.44111954476095,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 13
+      },
+      "flags": {
+        "byValue": {
+          "0": 11,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "SD_trolley_cable08"
+              },
+              {
+                "index": 12,
+                "flags": 8,
+                "name": "SD_trolley_cable04"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "SD_trolley_cable08",
+          "flags": 8
+        },
+        {
+          "index": 12,
+          "name": "SD_trolley_cable04",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "SD_trolley_cable08",
+          "loaded": true,
+          "file": "sd_trolley_cable08"
+        },
+        {
+          "name": "SD_trolley_cable04",
+          "loaded": true,
+          "file": "sd_trolley_cable04"
+        }
+      ]
+    },
+    {
+      "file": "spanser_train.dat",
+      "name": "spanser_train",
+      "count": 7,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 7,
+      "curveRowCount": 0,
+      "totalLength": 145.0926,
+      "measuredArcLength": 145.09265006434958,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 7
+      },
+      "flags": {
+        "byValue": {
+          "0": 6,
+          "8": 1
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "freight_group"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "freight_group",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        }
+      ]
+    },
+    {
+      "file": "trains1.dat",
+      "name": "trains1",
+      "configName": "freight_group",
+      "list": "train",
+      "count": 473,
+      "curveCount": 454,
+      "_type": "closed",
+      "typeRaw": "close",
+      "nodeCount": 473,
+      "curveRowCount": 454,
+      "totalLength": 15058.431549999996,
+      "measuredArcLength": 15058.389381612546,
+      "handleFit": {
+        "curvedSegments": 460,
+        "candidates": {
+          "absolute:in-out": 0.000313784413730156,
+          "absolute:out-in": 5.861032874744689,
+          "relative:in-out": 3191.7727451702854,
+          "relative:out-in": 3193.131651291445
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.000313784413730156
+      },
+      "markers": {
+        "c": 454,
+        "": 19
+      },
+      "flags": {
+        "byValue": {
+          "0": 408,
+          "1": 5,
+          "4": 25,
+          "6": 1,
+          "8": 20,
+          "32": 14
+        },
+        "bits": {
+          "1": {
+            "bit": 1,
+            "label": "station?",
+            "count": 5,
+            "nodes": [
+              {
+                "index": 48,
+                "flags": 1,
+                "name": "Station_rho"
+              },
+              {
+                "index": 121,
+                "flags": 1,
+                "name": "Station_riggs"
+              },
+              {
+                "index": 154,
+                "flags": 1,
+                "name": "Station_wallace"
+              },
+              {
+                "index": 335,
+                "flags": 1,
+                "name": "Station_anns"
+              },
+              {
+                "index": 437,
+                "flags": 1,
+                "name": "Station_NB"
+              }
+            ]
+          },
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 113,
+                "flags": 6,
+                "name": "Station_hea_south"
+              }
+            ]
+          },
+          "4": {
+            "bit": 4,
+            "label": "low-ceiling/tunnel?",
+            "count": 26,
+            "nodes": [
+              {
+                "index": 19,
+                "flags": 4
+              },
+              {
+                "index": 20,
+                "flags": 4
+              },
+              {
+                "index": 113,
+                "flags": 6,
+                "name": "Station_hea_south"
+              },
+              {
+                "index": 182,
+                "flags": 4
+              },
+              {
+                "index": 183,
+                "flags": 4
+              },
+              {
+                "index": 184,
+                "flags": 4
+              },
+              {
+                "index": 185,
+                "flags": 4
+              },
+              {
+                "index": 186,
+                "flags": 4
+              },
+              {
+                "index": 222,
+                "flags": 4
+              },
+              {
+                "index": 229,
+                "flags": 4
+              },
+              {
+                "index": 230,
+                "flags": 4
+              },
+              {
+                "index": 231,
+                "flags": 4
+              },
+              {
+                "index": 287,
+                "flags": 4
+              },
+              {
+                "index": 288,
+                "flags": 4
+              },
+              {
+                "index": 291,
+                "flags": 4
+              },
+              {
+                "index": 292,
+                "flags": 4
+              },
+              {
+                "index": 295,
+                "flags": 4
+              },
+              {
+                "index": 296,
+                "flags": 4
+              },
+              {
+                "index": 366,
+                "flags": 4
+              },
+              {
+                "index": 367,
+                "flags": 4
+              },
+              {
+                "index": 427,
+                "flags": 4
+              },
+              {
+                "index": 428,
+                "flags": 4
+              },
+              {
+                "index": 429,
+                "flags": 4
+              },
+              {
+                "index": 430,
+                "flags": 4
+              },
+              {
+                "index": 458,
+                "flags": 4
+              },
+              {
+                "index": 459,
+                "flags": 4
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 20,
+            "nodes": [
+              {
+                "index": 42,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 105,
+                "flags": 8,
+                "name": "trains_intersection1_3"
+              },
+              {
+                "index": 112,
+                "flags": 8,
+                "name": "trains3"
+              },
+              {
+                "index": 118,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 130,
+                "flags": 8,
+                "name": "trains_intersection1_app"
+              },
+              {
+                "index": 143,
+                "flags": 8,
+                "name": "trains_intersection1_app"
+              },
+              {
+                "index": 155,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 252,
+                "flags": 8,
+                "name": "trains_rob3"
+              },
+              {
+                "index": 255,
+                "flags": 8,
+                "name": "trains_rob3"
+              },
+              {
+                "index": 294,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 328,
+                "flags": 8,
+                "name": "trains_intersection1_ann"
+              },
+              {
+                "index": 347,
+                "flags": 8,
+                "name": "trains_intersection1_ann"
+              },
+              {
+                "index": 360,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 386,
+                "flags": 8,
+                "name": "trains3"
+              },
+              {
+                "index": 402,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 419,
+                "flags": 8,
+                "name": "trains_nb1"
+              },
+              {
+                "index": 421,
+                "flags": 8,
+                "name": "trains_nb2"
+              },
+              {
+                "index": 435,
+                "flags": 8,
+                "name": "trains_nb2"
+              },
+              {
+                "index": 462,
+                "flags": 8,
+                "name": "freight_nb1_inter"
+              },
+              {
+                "index": 469,
+                "flags": 8,
+                "name": "braithwaites2_track_config"
+              }
+            ]
+          },
+          "32": {
+            "bit": 32,
+            "label": "tunnel?",
+            "count": 14,
+            "nodes": [
+              {
+                "index": 214,
+                "flags": 32
+              },
+              {
+                "index": 263,
+                "flags": 32
+              },
+              {
+                "index": 264,
+                "flags": 32
+              },
+              {
+                "index": 265,
+                "flags": 32
+              },
+              {
+                "index": 266,
+                "flags": 32
+              },
+              {
+                "index": 267,
+                "flags": 32
+              },
+              {
+                "index": 268,
+                "flags": 32
+              },
+              {
+                "index": 269,
+                "flags": 32
+              },
+              {
+                "index": 270,
+                "flags": 32
+              },
+              {
+                "index": 271,
+                "flags": 32
+              },
+              {
+                "index": 277,
+                "flags": 32
+              },
+              {
+                "index": 278,
+                "flags": 32
+              },
+              {
+                "index": 279,
+                "flags": 32
+              },
+              {
+                "index": 280,
+                "flags": 32
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 42,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 48,
+          "name": "Station_rho",
+          "flags": 1
+        },
+        {
+          "index": 105,
+          "name": "trains_intersection1_3",
+          "flags": 8
+        },
+        {
+          "index": 112,
+          "name": "trains3",
+          "flags": 8
+        },
+        {
+          "index": 113,
+          "name": "Station_hea_south",
+          "flags": 6
+        },
+        {
+          "index": 118,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 121,
+          "name": "Station_riggs",
+          "flags": 1
+        },
+        {
+          "index": 130,
+          "name": "trains_intersection1_app",
+          "flags": 8
+        },
+        {
+          "index": 143,
+          "name": "trains_intersection1_app",
+          "flags": 8
+        },
+        {
+          "index": 154,
+          "name": "Station_wallace",
+          "flags": 1
+        },
+        {
+          "index": 155,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 252,
+          "name": "trains_rob3",
+          "flags": 8
+        },
+        {
+          "index": 255,
+          "name": "trains_rob3",
+          "flags": 8
+        },
+        {
+          "index": 294,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 328,
+          "name": "trains_intersection1_ann",
+          "flags": 8
+        },
+        {
+          "index": 335,
+          "name": "Station_anns",
+          "flags": 1
+        },
+        {
+          "index": 347,
+          "name": "trains_intersection1_ann",
+          "flags": 8
+        },
+        {
+          "index": 360,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 386,
+          "name": "trains3",
+          "flags": 8
+        },
+        {
+          "index": 402,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 419,
+          "name": "trains_nb1",
+          "flags": 8
+        },
+        {
+          "index": 421,
+          "name": "trains_nb2",
+          "flags": 8
+        },
+        {
+          "index": 435,
+          "name": "trains_nb2",
+          "flags": 8
+        },
+        {
+          "index": 437,
+          "name": "Station_NB",
+          "flags": 1
+        },
+        {
+          "index": 462,
+          "name": "freight_nb1_inter",
+          "flags": 8
+        },
+        {
+          "index": 469,
+          "name": "braithwaites2_track_config",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        },
+        {
+          "name": "trains_intersection1_3",
+          "loaded": true,
+          "file": "trains_intersection1_3"
+        },
+        {
+          "name": "trains3",
+          "loaded": true,
+          "file": "trains3"
+        },
+        {
+          "name": "trains_intersection1_app",
+          "loaded": true,
+          "file": "trains_intersection1_app"
+        },
+        {
+          "name": "trains_rob3",
+          "loaded": true,
+          "file": "trains_rob3"
+        },
+        {
+          "name": "trains_intersection1_ann",
+          "loaded": true,
+          "file": "trains_intersection1_ann"
+        },
+        {
+          "name": "trains_nb1",
+          "loaded": true,
+          "file": "trains_nb1"
+        },
+        {
+          "name": "trains_nb2",
+          "loaded": true,
+          "file": "trains_nb2"
+        },
+        {
+          "name": "freight_nb1_inter",
+          "loaded": true,
+          "file": "freight_nb1_inter"
+        },
+        {
+          "name": "braithwaites2_track_config",
+          "loaded": true,
+          "file": "trains2"
+        }
+      ]
+    },
+    {
+      "file": "trains2.dat",
+      "name": "trains2",
+      "configName": "braithwaites2_track_config",
+      "list": "train",
+      "count": 119,
+      "curveCount": 113,
+      "_type": "open",
+      "nodeCount": 119,
+      "curveRowCount": 113,
+      "totalLength": 2818.42637,
+      "measuredArcLength": 2818.40941873443,
+      "handleFit": {
+        "curvedSegments": 115,
+        "candidates": {
+          "absolute:in-out": 0.00019271868167022456,
+          "absolute:out-in": 4.265667117445928,
+          "relative:in-out": 2937.586725344208,
+          "relative:out-in": 2938.1370018262032
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.00019271868167022456
+      },
+      "markers": {
+        "": 6,
+        "c": 113
+      },
+      "flags": {
+        "byValue": {
+          "0": 111,
+          "2": 1,
+          "8": 7
+        },
+        "bits": {
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 13,
+                "flags": 2,
+                "name": "Station_eme"
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 7,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains3"
+              },
+              {
+                "index": 10,
+                "flags": 8,
+                "name": "trains_intersection2_3"
+              },
+              {
+                "index": 31,
+                "flags": 8,
+                "name": "braithwaites2_track_config"
+              },
+              {
+                "index": 86,
+                "flags": 8,
+                "name": "braithwaites2_track_config"
+              },
+              {
+                "index": 111,
+                "flags": 8,
+                "name": "braithwaites2_track_config"
+              },
+              {
+                "index": 112,
+                "flags": 8,
+                "name": "trains_nb1"
+              },
+              {
+                "index": 118,
+                "flags": 8,
+                "name": "freight_group"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains3",
+          "flags": 8
+        },
+        {
+          "index": 10,
+          "name": "trains_intersection2_3",
+          "flags": 8
+        },
+        {
+          "index": 13,
+          "name": "Station_eme",
+          "flags": 2
+        },
+        {
+          "index": 31,
+          "name": "braithwaites2_track_config",
+          "flags": 8
+        },
+        {
+          "index": 86,
+          "name": "braithwaites2_track_config",
+          "flags": 8
+        },
+        {
+          "index": 111,
+          "name": "braithwaites2_track_config",
+          "flags": 8
+        },
+        {
+          "index": 112,
+          "name": "trains_nb1",
+          "flags": 8
+        },
+        {
+          "index": 118,
+          "name": "freight_group",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains3",
+          "loaded": true,
+          "file": "trains3"
+        },
+        {
+          "name": "trains_intersection2_3",
+          "loaded": true,
+          "file": "trains_intersection2_3"
+        },
+        {
+          "name": "braithwaites2_track_config",
+          "loaded": true,
+          "file": "trains2"
+        },
+        {
+          "name": "trains_nb1",
+          "loaded": true,
+          "file": "trains_nb1"
+        },
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        }
+      ]
+    },
+    {
+      "file": "trains3.dat",
+      "name": "trains3",
+      "configName": "trains3",
+      "list": "train",
+      "count": 147,
+      "curveCount": 142,
+      "_type": "open",
+      "nodeCount": 147,
+      "curveRowCount": 142,
+      "totalLength": 5572.687520000001,
+      "measuredArcLength": 5572.660534951691,
+      "handleFit": {
+        "curvedSegments": 144,
+        "candidates": {
+          "absolute:in-out": 0.0007715139639708922,
+          "absolute:out-in": 6.920703278033335,
+          "relative:in-out": 2012.1440780143175,
+          "relative:out-in": 2014.4290092184597
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0007715139639708922
+      },
+      "markers": {
+        "c": 142,
+        "": 5
+      },
+      "flags": {
+        "byValue": {
+          "0": 134,
+          "2": 1,
+          "4": 5,
+          "8": 7
+        },
+        "bits": {
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 105,
+                "flags": 2,
+                "name": "Station_val"
+              }
+            ]
+          },
+          "4": {
+            "bit": 4,
+            "label": "low-ceiling/tunnel?",
+            "count": 5,
+            "nodes": [
+              {
+                "index": 77,
+                "flags": 4
+              },
+              {
+                "index": 78,
+                "flags": 4
+              },
+              {
+                "index": 79,
+                "flags": 4
+              },
+              {
+                "index": 97,
+                "flags": 4
+              },
+              {
+                "index": 98,
+                "flags": 4
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 7,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 55,
+                "flags": 8,
+                "name": "braithwaites2_track_config"
+              },
+              {
+                "index": 63,
+                "flags": 8,
+                "name": "trains_intersection2_3"
+              },
+              {
+                "index": 80,
+                "flags": 8,
+                "name": "trains_intersection3_cor"
+              },
+              {
+                "index": 89,
+                "flags": 8,
+                "name": "trains_intersection3_cor"
+              },
+              {
+                "index": 124,
+                "flags": 8,
+                "name": "trains_intersection1_3"
+              },
+              {
+                "index": 146,
+                "flags": 8,
+                "name": "freight_group"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 55,
+          "name": "braithwaites2_track_config",
+          "flags": 8
+        },
+        {
+          "index": 63,
+          "name": "trains_intersection2_3",
+          "flags": 8
+        },
+        {
+          "index": 80,
+          "name": "trains_intersection3_cor",
+          "flags": 8
+        },
+        {
+          "index": 89,
+          "name": "trains_intersection3_cor",
+          "flags": 8
+        },
+        {
+          "index": 105,
+          "name": "Station_val",
+          "flags": 2
+        },
+        {
+          "index": 124,
+          "name": "trains_intersection1_3",
+          "flags": 8
+        },
+        {
+          "index": 146,
+          "name": "freight_group",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        },
+        {
+          "name": "braithwaites2_track_config",
+          "loaded": true,
+          "file": "trains2"
+        },
+        {
+          "name": "trains_intersection2_3",
+          "loaded": true,
+          "file": "trains_intersection2_3"
+        },
+        {
+          "name": "trains_intersection3_cor",
+          "loaded": true,
+          "file": "trains_intersection3_cor"
+        },
+        {
+          "name": "trains_intersection1_3",
+          "loaded": true,
+          "file": "trains_intersection1_3"
+        }
+      ]
+    },
+    {
+      "file": "trains_intersection1_3.dat",
+      "name": "trains_intersection1_3",
+      "configName": "trains_intersection1_3",
+      "list": "train",
+      "count": 40,
+      "curveCount": 39,
+      "_type": "open",
+      "nodeCount": 40,
+      "curveRowCount": 39,
+      "totalLength": 393.67386000000005,
+      "measuredArcLength": 393.67373977529553,
+      "handleFit": {
+        "curvedSegments": 39,
+        "candidates": {
+          "absolute:in-out": 0.00023803375585383326,
+          "absolute:out-in": 1.7144224609343643,
+          "relative:in-out": 353.8452652623526,
+          "relative:out-in": 354.4234032634166
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.00023803375585383326
+      },
+      "markers": {
+        "c": 39,
+        "": 1
+      },
+      "flags": {
+        "byValue": {
+          "0": 38,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains3"
+              },
+              {
+                "index": 39,
+                "flags": 8,
+                "name": "freight_group"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains3",
+          "flags": 8
+        },
+        {
+          "index": 39,
+          "name": "freight_group",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains3",
+          "loaded": true,
+          "file": "trains3"
+        },
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        }
+      ]
+    },
+    {
+      "file": "trains_intersection1_ann.dat",
+      "name": "trains_intersection1_ann",
+      "configName": "trains_intersection1_ann",
+      "list": "train",
+      "count": 23,
+      "curveCount": 23,
+      "_type": "open",
+      "nodeCount": 23,
+      "curveRowCount": 23,
+      "totalLength": 331.91768999999994,
+      "measuredArcLength": 331.91520308813574,
+      "handleFit": {
+        "curvedSegments": 22,
+        "candidates": {
+          "absolute:in-out": 0.001745692963377979,
+          "absolute:out-in": 2.583882337235402,
+          "relative:in-out": 4840.71824889596,
+          "relative:out-in": 4840.783658473768
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.001745692963377979
+      },
+      "markers": {
+        "c": 23
+      },
+      "flags": {
+        "byValue": {
+          "0": 19,
+          "8": 4
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 4,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 10,
+                "flags": 8,
+                "name": "trains_intersection2_ann"
+              },
+              {
+                "index": 20,
+                "flags": 8,
+                "name": "trains_intersection2_ann"
+              },
+              {
+                "index": 22,
+                "flags": 8,
+                "name": "freight_group"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 10,
+          "name": "trains_intersection2_ann",
+          "flags": 8
+        },
+        {
+          "index": 20,
+          "name": "trains_intersection2_ann",
+          "flags": 8
+        },
+        {
+          "index": 22,
+          "name": "freight_group",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        },
+        {
+          "name": "trains_intersection2_ann",
+          "loaded": true,
+          "file": "trains_intersection2_ann"
+        }
+      ]
+    },
+    {
+      "file": "trains_intersection1_app.dat",
+      "name": "trains_intersection1_app",
+      "configName": "trains_intersection1_app",
+      "list": "train",
+      "count": 13,
+      "curveCount": 13,
+      "_type": "open",
+      "nodeCount": 13,
+      "curveRowCount": 13,
+      "totalLength": 169.6113,
+      "measuredArcLength": 169.61296563725185,
+      "handleFit": {
+        "curvedSegments": 12,
+        "candidates": {
+          "absolute:in-out": 0.00018559387421494358,
+          "absolute:out-in": 2.6062382034545335,
+          "relative:in-out": 2019.6140697036728,
+          "relative:out-in": 2020.4952843711853
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.00018559387421494358
+      },
+      "markers": {
+        "c": 13
+      },
+      "flags": {
+        "byValue": {
+          "0": 11,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 12,
+                "flags": 8,
+                "name": "freight_group"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 12,
+          "name": "freight_group",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        }
+      ]
+    },
+    {
+      "file": "trains_intersection2_3.dat",
+      "name": "trains_intersection2_3",
+      "configName": "trains_intersection2_3",
+      "list": "train",
+      "count": 11,
+      "curveCount": 11,
+      "_type": "open",
+      "nodeCount": 11,
+      "curveRowCount": 11,
+      "totalLength": 196.29293,
+      "measuredArcLength": 196.2954961315929,
+      "handleFit": {
+        "curvedSegments": 10,
+        "candidates": {
+          "absolute:in-out": 0.001471263487977148,
+          "absolute:out-in": 3.467920533358209,
+          "relative:in-out": 2417.58959002178,
+          "relative:out-in": 2418.068735794758
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.001471263487977148
+      },
+      "markers": {
+        "c": 11
+      },
+      "flags": {
+        "byValue": {
+          "0": 9,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains3"
+              },
+              {
+                "index": 10,
+                "flags": 8,
+                "name": "braithwaites2_track_config"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains3",
+          "flags": 8
+        },
+        {
+          "index": 10,
+          "name": "braithwaites2_track_config",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains3",
+          "loaded": true,
+          "file": "trains3"
+        },
+        {
+          "name": "braithwaites2_track_config",
+          "loaded": true,
+          "file": "trains2"
+        }
+      ]
+    },
+    {
+      "file": "trains_intersection2_ann.dat",
+      "name": "trains_intersection2_ann",
+      "configName": "trains_intersection2_ann",
+      "list": "train",
+      "count": 10,
+      "curveCount": 9,
+      "_type": "open",
+      "nodeCount": 10,
+      "curveRowCount": 9,
+      "totalLength": 158.36433,
+      "measuredArcLength": 158.3684090804157,
+      "handleFit": {
+        "curvedSegments": 9,
+        "candidates": {
+          "absolute:in-out": 0.0033890814654894776,
+          "absolute:out-in": 2.768753327004179,
+          "relative:in-out": 4350.358375565184,
+          "relative:out-in": 4350.484281124631
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0033890814654894776
+      },
+      "markers": {
+        "c": 9,
+        "": 1
+      },
+      "flags": {
+        "byValue": {
+          "0": 8,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains_intersection1_ann"
+              },
+              {
+                "index": 9,
+                "flags": 8,
+                "name": "trains_intersection1_ann"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains_intersection1_ann",
+          "flags": 8
+        },
+        {
+          "index": 9,
+          "name": "trains_intersection1_ann",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains_intersection1_ann",
+          "loaded": true,
+          "file": "trains_intersection1_ann"
+        }
+      ]
+    },
+    {
+      "file": "trains_intersection3_cor.dat",
+      "name": "trains_intersection3_cor",
+      "configName": "trains_intersection3_cor",
+      "list": "train",
+      "count": 13,
+      "curveCount": 13,
+      "_type": "open",
+      "nodeCount": 13,
+      "curveRowCount": 13,
+      "totalLength": 283.63919999999996,
+      "measuredArcLength": 283.63855180246776,
+      "handleFit": {
+        "curvedSegments": 12,
+        "candidates": {
+          "absolute:in-out": 0.0002885311875095257,
+          "absolute:out-in": 3.971357051795563,
+          "relative:in-out": 1202.8951005021192,
+          "relative:out-in": 1203.460103901543
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0002885311875095257
+      },
+      "markers": {
+        "c": 13
+      },
+      "flags": {
+        "byValue": {
+          "0": 10,
+          "2": 1,
+          "8": 2
+        },
+        "bits": {
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 7,
+                "flags": 2,
+                "name": "Station_corn"
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains3"
+              },
+              {
+                "index": 12,
+                "flags": 8,
+                "name": "trains3"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains3",
+          "flags": 8
+        },
+        {
+          "index": 7,
+          "name": "Station_corn",
+          "flags": 2
+        },
+        {
+          "index": 12,
+          "name": "trains3",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains3",
+          "loaded": true,
+          "file": "trains3"
+        }
+      ]
+    },
+    {
+      "file": "trains_nb1.dat",
+      "name": "trains_nb1",
+      "configName": "trains_nb1",
+      "list": "train",
+      "count": 49,
+      "curveCount": 21,
+      "_type": "open",
+      "nodeCount": 49,
+      "curveRowCount": 21,
+      "totalLength": 457.77812,
+      "measuredArcLength": 457.7764781157965,
+      "handleFit": {
+        "curvedSegments": 23,
+        "candidates": {
+          "absolute:in-out": 0.00016854551270612214,
+          "absolute:out-in": 1.4099708486953673,
+          "relative:in-out": 4090.8590317561616,
+          "relative:out-in": 4090.723889824145
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.00016854551270612214
+      },
+      "markers": {
+        "c": 21,
+        "": 28
+      },
+      "flags": {
+        "byValue": {
+          "0": 39,
+          "1": 1,
+          "4": 4,
+          "8": 5
+        },
+        "bits": {
+          "1": {
+            "bit": 1,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 15,
+                "flags": 1,
+                "name": "Station_NB_trains_nb1"
+              }
+            ]
+          },
+          "4": {
+            "bit": 4,
+            "label": "low-ceiling/tunnel?",
+            "count": 4,
+            "nodes": [
+              {
+                "index": 7,
+                "flags": 4
+              },
+              {
+                "index": 8,
+                "flags": 4
+              },
+              {
+                "index": 9,
+                "flags": 4
+              },
+              {
+                "index": 35,
+                "flags": 4
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 5,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 16,
+                "flags": 8,
+                "name": "trains_nb3"
+              },
+              {
+                "index": 31,
+                "flags": 8,
+                "name": "trains_nb3"
+              },
+              {
+                "index": 34,
+                "flags": 8,
+                "name": "freight_nb1_inter"
+              },
+              {
+                "index": 48,
+                "flags": 8,
+                "name": "braithwaites2_track_config"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 15,
+          "name": "Station_NB_trains_nb1",
+          "flags": 1
+        },
+        {
+          "index": 16,
+          "name": "trains_nb3",
+          "flags": 8
+        },
+        {
+          "index": 31,
+          "name": "trains_nb3",
+          "flags": 8
+        },
+        {
+          "index": 34,
+          "name": "freight_nb1_inter",
+          "flags": 8
+        },
+        {
+          "index": 48,
+          "name": "braithwaites2_track_config",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        },
+        {
+          "name": "trains_nb3",
+          "loaded": true,
+          "file": "trains_nb3"
+        },
+        {
+          "name": "freight_nb1_inter",
+          "loaded": true,
+          "file": "freight_nb1_inter"
+        },
+        {
+          "name": "braithwaites2_track_config",
+          "loaded": true,
+          "file": "trains2"
+        }
+      ]
+    },
+    {
+      "file": "trains_nb2.dat",
+      "name": "trains_nb2",
+      "configName": "trains_nb2",
+      "list": "train",
+      "count": 17,
+      "curveCount": 9,
+      "_type": "open",
+      "nodeCount": 17,
+      "curveRowCount": 9,
+      "totalLength": 120.99703000000001,
+      "measuredArcLength": 120.99086603033085,
+      "handleFit": {
+        "curvedSegments": 9,
+        "candidates": {
+          "absolute:in-out": 0.0030816622552449027,
+          "absolute:out-in": 0.8852870209878438,
+          "relative:in-out": 4257.453609207073,
+          "relative:out-in": 4257.433945181368
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0030816622552449027
+      },
+      "markers": {
+        "c": 9,
+        "": 8
+      },
+      "flags": {
+        "byValue": {
+          "0": 15,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 16,
+                "flags": 8,
+                "name": "freight_group"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 16,
+          "name": "freight_group",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        }
+      ]
+    },
+    {
+      "file": "trains_nb3.dat",
+      "name": "trains_nb3",
+      "configName": "trains_nb3",
+      "list": "train",
+      "count": 20,
+      "curveCount": 9,
+      "_type": "open",
+      "nodeCount": 20,
+      "curveRowCount": 9,
+      "totalLength": 104.67981999999999,
+      "measuredArcLength": 104.6742965689323,
+      "handleFit": {
+        "curvedSegments": 10,
+        "candidates": {
+          "absolute:in-out": 0.0006722378407650886,
+          "absolute:out-in": 0.538166451394821,
+          "relative:in-out": 3856.564966537383,
+          "relative:out-in": 3856.4770476450853
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0006722378407650886
+      },
+      "markers": {
+        "c": 9,
+        "": 11
+      },
+      "flags": {
+        "byValue": {
+          "0": 18,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains_nb1"
+              },
+              {
+                "index": 19,
+                "flags": 8,
+                "name": "trains_nb1"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains_nb1",
+          "flags": 8
+        },
+        {
+          "index": 19,
+          "name": "trains_nb1",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains_nb1",
+          "loaded": true,
+          "file": "trains_nb1"
+        }
+      ]
+    },
+    {
+      "file": "trains_old_west01.dat",
+      "name": "trains_old_west01",
+      "configName": "trains_old_west01",
+      "list": "train",
+      "count": 98,
+      "curveCount": 96,
+      "_type": "closed",
+      "typeRaw": "close",
+      "nodeCount": 98,
+      "curveRowCount": 96,
+      "totalLength": 1442.4079599999977,
+      "measuredArcLength": 1442.0538013802827,
+      "handleFit": {
+        "curvedSegments": 98,
+        "candidates": {
+          "absolute:in-out": 0.006855423508259461,
+          "absolute:out-in": 2.6731759068574736,
+          "relative:in-out": 4586.466988258282,
+          "relative:out-in": 4586.5201266408785
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.006855423508259461
+      },
+      "markers": {
+        "": 2,
+        "c": 96
+      },
+      "flags": {
+        "byValue": {
+          "0": 93,
+          "8": 5
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 5,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains_old_west02"
+              },
+              {
+                "index": 2,
+                "flags": 8,
+                "name": "trains_old_west_intersection02"
+              },
+              {
+                "index": 45,
+                "flags": 8,
+                "name": "trains_old_west01"
+              },
+              {
+                "index": 61,
+                "flags": 8,
+                "name": "trains_old_west01"
+              },
+              {
+                "index": 87,
+                "flags": 8,
+                "name": "trains_old_west01"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains_old_west02",
+          "flags": 8
+        },
+        {
+          "index": 2,
+          "name": "trains_old_west_intersection02",
+          "flags": 8
+        },
+        {
+          "index": 45,
+          "name": "trains_old_west01",
+          "flags": 8
+        },
+        {
+          "index": 61,
+          "name": "trains_old_west01",
+          "flags": 8
+        },
+        {
+          "index": 87,
+          "name": "trains_old_west01",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains_old_west02",
+          "loaded": true,
+          "file": "trains_old_west02"
+        },
+        {
+          "name": "trains_old_west_intersection02",
+          "loaded": true,
+          "file": "trains_old_west_intersection02"
+        },
+        {
+          "name": "trains_old_west01",
+          "loaded": true,
+          "file": "trains_old_west01"
+        }
+      ]
+    },
+    {
+      "file": "trains_old_west02.dat",
+      "name": "trains_old_west02",
+      "configName": "trains_old_west02",
+      "list": "train",
+      "count": 429,
+      "curveCount": 429,
+      "_type": "open",
+      "nodeCount": 429,
+      "curveRowCount": 429,
+      "totalLength": 4307.609810000003,
+      "measuredArcLength": 4307.61887269352,
+      "handleFit": {
+        "curvedSegments": 428,
+        "candidates": {
+          "absolute:in-out": 0.0033524416889890874,
+          "absolute:out-in": 1.7854268047083892,
+          "relative:in-out": 6478.6617516142205,
+          "relative:out-in": 6478.704244043158
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0033524416889890874
+      },
+      "markers": {
+        "c": 429
+      },
+      "flags": {
+        "byValue": {
+          "0": 364,
+          "1": 1,
+          "2": 1,
+          "4": 55,
+          "8": 7,
+          "12": 1
+        },
+        "bits": {
+          "1": {
+            "bit": 1,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 279,
+                "flags": 1,
+                "name": "armastation"
+              }
+            ]
+          },
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 40,
+                "flags": 2,
+                "name": "mfranch"
+              }
+            ]
+          },
+          "4": {
+            "bit": 4,
+            "label": "low-ceiling/tunnel?",
+            "count": 56,
+            "nodes": [
+              {
+                "index": 92,
+                "flags": 4
+              },
+              {
+                "index": 93,
+                "flags": 4
+              },
+              {
+                "index": 94,
+                "flags": 4
+              },
+              {
+                "index": 95,
+                "flags": 4
+              },
+              {
+                "index": 96,
+                "flags": 4
+              },
+              {
+                "index": 97,
+                "flags": 4
+              },
+              {
+                "index": 98,
+                "flags": 4
+              },
+              {
+                "index": 99,
+                "flags": 12,
+                "name": "trains_old_west02"
+              },
+              {
+                "index": 100,
+                "flags": 4
+              },
+              {
+                "index": 101,
+                "flags": 4
+              },
+              {
+                "index": 102,
+                "flags": 4
+              },
+              {
+                "index": 103,
+                "flags": 4
+              },
+              {
+                "index": 104,
+                "flags": 4
+              },
+              {
+                "index": 105,
+                "flags": 4
+              },
+              {
+                "index": 106,
+                "flags": 4
+              },
+              {
+                "index": 107,
+                "flags": 4
+              },
+              {
+                "index": 108,
+                "flags": 4
+              },
+              {
+                "index": 109,
+                "flags": 4
+              },
+              {
+                "index": 110,
+                "flags": 4
+              },
+              {
+                "index": 111,
+                "flags": 4
+              },
+              {
+                "index": 112,
+                "flags": 4
+              },
+              {
+                "index": 113,
+                "flags": 4
+              },
+              {
+                "index": 114,
+                "flags": 4
+              },
+              {
+                "index": 115,
+                "flags": 4
+              },
+              {
+                "index": 116,
+                "flags": 4
+              },
+              {
+                "index": 117,
+                "flags": 4
+              },
+              {
+                "index": 118,
+                "flags": 4
+              },
+              {
+                "index": 119,
+                "flags": 4
+              },
+              {
+                "index": 120,
+                "flags": 4
+              },
+              {
+                "index": 121,
+                "flags": 4
+              },
+              {
+                "index": 122,
+                "flags": 4
+              },
+              {
+                "index": 123,
+                "flags": 4
+              },
+              {
+                "index": 124,
+                "flags": 4
+              },
+              {
+                "index": 125,
+                "flags": 4
+              },
+              {
+                "index": 126,
+                "flags": 4
+              },
+              {
+                "index": 127,
+                "flags": 4
+              },
+              {
+                "index": 128,
+                "flags": 4
+              },
+              {
+                "index": 129,
+                "flags": 4
+              },
+              {
+                "index": 130,
+                "flags": 4
+              },
+              {
+                "index": 131,
+                "flags": 4
+              },
+              {
+                "index": 132,
+                "flags": 4
+              },
+              {
+                "index": 133,
+                "flags": 4
+              },
+              {
+                "index": 134,
+                "flags": 4
+              },
+              {
+                "index": 135,
+                "flags": 4
+              },
+              {
+                "index": 136,
+                "flags": 4
+              },
+              {
+                "index": 137,
+                "flags": 4
+              },
+              {
+                "index": 138,
+                "flags": 4
+              },
+              {
+                "index": 139,
+                "flags": 4
+              },
+              {
+                "index": 140,
+                "flags": 4
+              },
+              {
+                "index": 141,
+                "flags": 4
+              },
+              {
+                "index": 142,
+                "flags": 4
+              },
+              {
+                "index": 143,
+                "flags": 4
+              },
+              {
+                "index": 144,
+                "flags": 4
+              },
+              {
+                "index": 145,
+                "flags": 4
+              },
+              {
+                "index": 146,
+                "flags": 4
+              },
+              {
+                "index": 147,
+                "flags": 4
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 8,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains_old_west01"
+              },
+              {
+                "index": 4,
+                "flags": 8,
+                "name": "trains_old_west_intersection02"
+              },
+              {
+                "index": 99,
+                "flags": 12,
+                "name": "trains_old_west02"
+              },
+              {
+                "index": 199,
+                "flags": 8,
+                "name": "trains_old_west02"
+              },
+              {
+                "index": 299,
+                "flags": 8,
+                "name": "trains_old_west02"
+              },
+              {
+                "index": 399,
+                "flags": 8,
+                "name": "trains_old_west02"
+              },
+              {
+                "index": 418,
+                "flags": 8,
+                "name": "trains_old_west_intersection01"
+              },
+              {
+                "index": 428,
+                "flags": 8,
+                "name": "trains_old_west03"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains_old_west01",
+          "flags": 8
+        },
+        {
+          "index": 4,
+          "name": "trains_old_west_intersection02",
+          "flags": 8
+        },
+        {
+          "index": 40,
+          "name": "mfranch",
+          "flags": 2
+        },
+        {
+          "index": 99,
+          "name": "trains_old_west02",
+          "flags": 12
+        },
+        {
+          "index": 199,
+          "name": "trains_old_west02",
+          "flags": 8
+        },
+        {
+          "index": 279,
+          "name": "armastation",
+          "flags": 1
+        },
+        {
+          "index": 299,
+          "name": "trains_old_west02",
+          "flags": 8
+        },
+        {
+          "index": 399,
+          "name": "trains_old_west02",
+          "flags": 8
+        },
+        {
+          "index": 418,
+          "name": "trains_old_west_intersection01",
+          "flags": 8
+        },
+        {
+          "index": 428,
+          "name": "trains_old_west03",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains_old_west01",
+          "loaded": true,
+          "file": "trains_old_west01"
+        },
+        {
+          "name": "trains_old_west_intersection02",
+          "loaded": true,
+          "file": "trains_old_west_intersection02"
+        },
+        {
+          "name": "trains_old_west02",
+          "loaded": true,
+          "file": "trains_old_west02"
+        },
+        {
+          "name": "trains_old_west_intersection01",
+          "loaded": true,
+          "file": "trains_old_west_intersection01"
+        },
+        {
+          "name": "trains_old_west03",
+          "loaded": true,
+          "file": "trains_old_west03"
+        }
+      ]
+    },
+    {
+      "file": "trains_old_west03.dat",
+      "name": "trains_old_west03",
+      "configName": "trains_old_west03",
+      "list": "train",
+      "count": 410,
+      "curveCount": 410,
+      "_type": "closed",
+      "typeRaw": "close",
+      "nodeCount": 410,
+      "curveRowCount": 410,
+      "totalLength": 4130.642319999995,
+      "measuredArcLength": 4130.640678745717,
+      "handleFit": {
+        "curvedSegments": 410,
+        "candidates": {
+          "absolute:in-out": 0.0033008831745219417,
+          "absolute:out-in": 1.7881041517933611,
+          "relative:in-out": 9379.61133249862,
+          "relative:out-in": 9379.633042848915
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0033008831745219417
+      },
+      "markers": {
+        "c": 410
+      },
+      "flags": {
+        "byValue": {
+          "0": 402,
+          "1": 1,
+          "2": 1,
+          "8": 6
+        },
+        "bits": {
+          "1": {
+            "bit": 1,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 341,
+                "flags": 1,
+                "name": "benstation"
+              }
+            ]
+          },
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 244,
+                "flags": 2,
+                "name": "endoftheline"
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 6,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains_old_west_intersection01"
+              },
+              {
+                "index": 99,
+                "flags": 8,
+                "name": "trains_old_west03"
+              },
+              {
+                "index": 199,
+                "flags": 8,
+                "name": "trains_old_west03"
+              },
+              {
+                "index": 299,
+                "flags": 8,
+                "name": "trains_old_west03"
+              },
+              {
+                "index": 349,
+                "flags": 8,
+                "name": "trains_old_west03"
+              },
+              {
+                "index": 401,
+                "flags": 8,
+                "name": "trains_old_west02"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains_old_west_intersection01",
+          "flags": 8
+        },
+        {
+          "index": 99,
+          "name": "trains_old_west03",
+          "flags": 8
+        },
+        {
+          "index": 199,
+          "name": "trains_old_west03",
+          "flags": 8
+        },
+        {
+          "index": 244,
+          "name": "endoftheline",
+          "flags": 2
+        },
+        {
+          "index": 299,
+          "name": "trains_old_west03",
+          "flags": 8
+        },
+        {
+          "index": 341,
+          "name": "benstation",
+          "flags": 1
+        },
+        {
+          "index": 349,
+          "name": "trains_old_west03",
+          "flags": 8
+        },
+        {
+          "index": 401,
+          "name": "trains_old_west02",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains_old_west_intersection01",
+          "loaded": true,
+          "file": "trains_old_west_intersection01"
+        },
+        {
+          "name": "trains_old_west03",
+          "loaded": true,
+          "file": "trains_old_west03"
+        },
+        {
+          "name": "trains_old_west02",
+          "loaded": true,
+          "file": "trains_old_west02"
+        }
+      ]
+    },
+    {
+      "file": "trains_old_west_intersection01.dat",
+      "name": "trains_old_west_intersection01",
+      "configName": "trains_old_west_intersection01",
+      "list": "train",
+      "count": 11,
+      "curveCount": 11,
+      "_type": "open",
+      "nodeCount": 11,
+      "curveRowCount": 11,
+      "totalLength": 105.6,
+      "measuredArcLength": 105.60474475412605,
+      "handleFit": {
+        "curvedSegments": 10,
+        "candidates": {
+          "absolute:in-out": 0.00455682243754083,
+          "absolute:out-in": 1.7942425260943822,
+          "relative:in-out": 8633.203323799566,
+          "relative:out-in": 8633.079355647513
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.00455682243754083
+      },
+      "markers": {
+        "c": 11
+      },
+      "flags": {
+        "byValue": {
+          "0": 9,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains_old_west03"
+              },
+              {
+                "index": 10,
+                "flags": 8,
+                "name": "trains_old_west02"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains_old_west03",
+          "flags": 8
+        },
+        {
+          "index": 10,
+          "name": "trains_old_west02",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains_old_west03",
+          "loaded": true,
+          "file": "trains_old_west03"
+        },
+        {
+          "name": "trains_old_west02",
+          "loaded": true,
+          "file": "trains_old_west02"
+        }
+      ]
+    },
+    {
+      "file": "trains_old_west_intersection02.dat",
+      "name": "trains_old_west_intersection02",
+      "configName": "trains_old_west_intersection02",
+      "list": "train",
+      "count": 6,
+      "curveCount": 6,
+      "_type": "open",
+      "nodeCount": 6,
+      "curveRowCount": 6,
+      "totalLength": 43.59549,
+      "measuredArcLength": 43.59287809780168,
+      "handleFit": {
+        "curvedSegments": 5,
+        "candidates": {
+          "absolute:in-out": 0.003296759948983663,
+          "absolute:out-in": 1.6153395736187868,
+          "relative:in-out": 5003.87143757408,
+          "relative:out-in": 5002.613632177522
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.003296759948983663
+      },
+      "markers": {
+        "c": 6
+      },
+      "flags": {
+        "byValue": {
+          "0": 4,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trains_old_west01"
+              },
+              {
+                "index": 5,
+                "flags": 8,
+                "name": "trains_old_west02"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trains_old_west01",
+          "flags": 8
+        },
+        {
+          "index": 5,
+          "name": "trains_old_west02",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trains_old_west01",
+          "loaded": true,
+          "file": "trains_old_west01"
+        },
+        {
+          "name": "trains_old_west02",
+          "loaded": true,
+          "file": "trains_old_west02"
+        }
+      ]
+    },
+    {
+      "file": "trains_rob3.dat",
+      "name": "trains_rob3",
+      "configName": "trains_rob3",
+      "list": "train",
+      "count": 10,
+      "curveCount": 10,
+      "_type": "open",
+      "nodeCount": 10,
+      "curveRowCount": 10,
+      "totalLength": 84.73343,
+      "measuredArcLength": 84.73383316361704,
+      "handleFit": {
+        "curvedSegments": 9,
+        "candidates": {
+          "absolute:in-out": 0.002870192102873265,
+          "absolute:out-in": 1.5563185492101035,
+          "relative:in-out": 2695.3531120419075,
+          "relative:out-in": 2695.3931866815237
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.002870192102873265
+      },
+      "markers": {
+        "c": 10
+      },
+      "flags": {
+        "byValue": {
+          "0": 8,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "freight_group"
+              },
+              {
+                "index": 9,
+                "flags": 8,
+                "name": "freight_group"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "freight_group",
+          "flags": 8
+        },
+        {
+          "index": 9,
+          "name": "freight_group",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "freight_group",
+          "loaded": true,
+          "file": "trains1"
+        }
+      ]
+    },
+    {
+      "file": "trolley1.dat",
+      "name": "trolley1",
+      "configName": "nb_trolley_track_config",
+      "list": "train",
+      "count": 245,
+      "curveCount": 77,
+      "_type": "closed",
+      "typeRaw": "close",
+      "nodeCount": 245,
+      "curveRowCount": 77,
+      "totalLength": 778.553811,
+      "measuredArcLength": 778.5683049147186,
+      "handleFit": {
+        "curvedSegments": 88,
+        "candidates": {
+          "absolute:in-out": 0.003087620106818562,
+          "absolute:out-in": 0.3206825515909143,
+          "relative:in-out": 4003.941214783352,
+          "relative:out-in": 4003.950689452188
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.003087620106818562
+      },
+      "markers": {
+        "": 168,
+        "c": 77
+      },
+      "flags": {
+        "byValue": {
+          "0": 220,
+          "1": 3,
+          "2": 5,
+          "8": 17
+        },
+        "bits": {
+          "1": {
+            "bit": 1,
+            "label": "station?",
+            "count": 3,
+            "nodes": [
+              {
+                "index": 13,
+                "flags": 1,
+                "name": "Trolley_Station_Stop_A"
+              },
+              {
+                "index": 136,
+                "flags": 1,
+                "name": "Gallow_Park"
+              },
+              {
+                "index": 230,
+                "flags": 1,
+                "name": "Market"
+              }
+            ]
+          },
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 5,
+            "nodes": [
+              {
+                "index": 40,
+                "flags": 2,
+                "name": "Canal_Robinson_Northbound"
+              },
+              {
+                "index": 71,
+                "flags": 2,
+                "name": "Tickets"
+              },
+              {
+                "index": 103,
+                "flags": 2,
+                "name": "Oysters"
+              },
+              {
+                "index": 159,
+                "flags": 2,
+                "name": "Bourbon_Street_Stop1"
+              },
+              {
+                "index": 191,
+                "flags": 2,
+                "name": "Bourbon_Street_Stop2"
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 17,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "nb_trolley_track_config_temp"
+              },
+              {
+                "index": 9,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 22,
+                "flags": 8,
+                "name": "trolley_intersection2"
+              },
+              {
+                "index": 35,
+                "flags": 8,
+                "name": "nb_trolley_track_config_temp"
+              },
+              {
+                "index": 41,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 62,
+                "flags": 8,
+                "name": "trolley4"
+              },
+              {
+                "index": 64,
+                "flags": 8,
+                "name": "trolley_intersection3"
+              },
+              {
+                "index": 80,
+                "flags": 8,
+                "name": "trolley3"
+              },
+              {
+                "index": 88,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 99,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 105,
+                "flags": 8,
+                "name": "trolley_intersection5"
+              },
+              {
+                "index": 121,
+                "flags": 8,
+                "name": "trolley3"
+              },
+              {
+                "index": 135,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 137,
+                "flags": 8,
+                "name": "trolley4"
+              },
+              {
+                "index": 160,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 193,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 235,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "nb_trolley_track_config_temp",
+          "flags": 8
+        },
+        {
+          "index": 9,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 13,
+          "name": "Trolley_Station_Stop_A",
+          "flags": 1
+        },
+        {
+          "index": 22,
+          "name": "trolley_intersection2",
+          "flags": 8
+        },
+        {
+          "index": 35,
+          "name": "nb_trolley_track_config_temp",
+          "flags": 8
+        },
+        {
+          "index": 40,
+          "name": "Canal_Robinson_Northbound",
+          "flags": 2
+        },
+        {
+          "index": 41,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 62,
+          "name": "trolley4",
+          "flags": 8
+        },
+        {
+          "index": 64,
+          "name": "trolley_intersection3",
+          "flags": 8
+        },
+        {
+          "index": 71,
+          "name": "Tickets",
+          "flags": 2
+        },
+        {
+          "index": 80,
+          "name": "trolley3",
+          "flags": 8
+        },
+        {
+          "index": 88,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 99,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 103,
+          "name": "Oysters",
+          "flags": 2
+        },
+        {
+          "index": 105,
+          "name": "trolley_intersection5",
+          "flags": 8
+        },
+        {
+          "index": 121,
+          "name": "trolley3",
+          "flags": 8
+        },
+        {
+          "index": 135,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 136,
+          "name": "Gallow_Park",
+          "flags": 1
+        },
+        {
+          "index": 137,
+          "name": "trolley4",
+          "flags": 8
+        },
+        {
+          "index": 159,
+          "name": "Bourbon_Street_Stop1",
+          "flags": 2
+        },
+        {
+          "index": 160,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 191,
+          "name": "Bourbon_Street_Stop2",
+          "flags": 2
+        },
+        {
+          "index": 193,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 230,
+          "name": "Market",
+          "flags": 1
+        },
+        {
+          "index": 235,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "nb_trolley_track_config_temp",
+          "loaded": true,
+          "file": "trolley2"
+        },
+        {
+          "name": "nb_trolley_track_config",
+          "loaded": true,
+          "file": "trolley1"
+        },
+        {
+          "name": "trolley_intersection2",
+          "loaded": true,
+          "file": "trolley_intersection2"
+        },
+        {
+          "name": "trolley4",
+          "loaded": true,
+          "file": "trolley4"
+        },
+        {
+          "name": "trolley_intersection3",
+          "loaded": true,
+          "file": "trolley_intersection3"
+        },
+        {
+          "name": "trolley3",
+          "loaded": true,
+          "file": "trolley3"
+        },
+        {
+          "name": "trolley_intersection5",
+          "loaded": true,
+          "file": "trolley_intersection5"
+        }
+      ]
+    },
+    {
+      "file": "trolley2.dat",
+      "name": "trolley2",
+      "configName": "nb_trolley_track_config_temp",
+      "list": "train",
+      "count": 57,
+      "curveCount": 38,
+      "_type": "open",
+      "nodeCount": 57,
+      "curveRowCount": 38,
+      "totalLength": 161.60851999999997,
+      "measuredArcLength": 161.62531528527916,
+      "handleFit": {
+        "curvedSegments": 42,
+        "candidates": {
+          "absolute:in-out": 0.0032614290623459866,
+          "absolute:out-in": 0.4373283452928712,
+          "relative:in-out": 4197.133642965993,
+          "relative:out-in": 4197.132153267874
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0032614290623459866
+      },
+      "markers": {
+        "c": 38,
+        "": 19
+      },
+      "flags": {
+        "byValue": {
+          "0": 53,
+          "2": 1,
+          "8": 3
+        },
+        "bits": {
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 1,
+            "nodes": [
+              {
+                "index": 29,
+                "flags": 2,
+                "name": "Trolley_Station_Stop_B"
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 3,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 27,
+                "flags": 8,
+                "name": "trolley_intersection2"
+              },
+              {
+                "index": 56,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 27,
+          "name": "trolley_intersection2",
+          "flags": 8
+        },
+        {
+          "index": 29,
+          "name": "Trolley_Station_Stop_B",
+          "flags": 2
+        },
+        {
+          "index": 56,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "nb_trolley_track_config",
+          "loaded": true,
+          "file": "trolley1"
+        },
+        {
+          "name": "trolley_intersection2",
+          "loaded": true,
+          "file": "trolley_intersection2"
+        }
+      ]
+    },
+    {
+      "file": "trolley3.dat",
+      "name": "trolley3",
+      "configName": "trolley3",
+      "list": "train",
+      "count": 84,
+      "curveCount": 33,
+      "_type": "open",
+      "nodeCount": 84,
+      "curveRowCount": 33,
+      "totalLength": 362.69649700000014,
+      "measuredArcLength": 362.72961269586307,
+      "handleFit": {
+        "curvedSegments": 36,
+        "candidates": {
+          "absolute:in-out": 0.0031261701212704465,
+          "absolute:out-in": 0.3158431551564064,
+          "relative:in-out": 3885.414104709013,
+          "relative:out-in": 3885.404689668131
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0031261701212704465
+      },
+      "markers": {
+        "c": 33,
+        "": 51
+      },
+      "flags": {
+        "byValue": {
+          "0": 75,
+          "2": 3,
+          "8": 6
+        },
+        "bits": {
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 3,
+            "nodes": [
+              {
+                "index": 27,
+                "flags": 2,
+                "name": "Opera_House"
+              },
+              {
+                "index": 53,
+                "flags": 2,
+                "name": "City_hall"
+              },
+              {
+                "index": 76,
+                "flags": 2,
+                "name": "Confed"
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 6,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 31,
+                "flags": 8,
+                "name": "trolley3"
+              },
+              {
+                "index": 51,
+                "flags": 8,
+                "name": "trolley3"
+              },
+              {
+                "index": 69,
+                "flags": 8,
+                "name": "trolley3"
+              },
+              {
+                "index": 80,
+                "flags": 8,
+                "name": "trolley_intersection5"
+              },
+              {
+                "index": 83,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 27,
+          "name": "Opera_House",
+          "flags": 2
+        },
+        {
+          "index": 31,
+          "name": "trolley3",
+          "flags": 8
+        },
+        {
+          "index": 51,
+          "name": "trolley3",
+          "flags": 8
+        },
+        {
+          "index": 53,
+          "name": "City_hall",
+          "flags": 2
+        },
+        {
+          "index": 69,
+          "name": "trolley3",
+          "flags": 8
+        },
+        {
+          "index": 76,
+          "name": "Confed",
+          "flags": 2
+        },
+        {
+          "index": 80,
+          "name": "trolley_intersection5",
+          "flags": 8
+        },
+        {
+          "index": 83,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "nb_trolley_track_config",
+          "loaded": true,
+          "file": "trolley1"
+        },
+        {
+          "name": "trolley3",
+          "loaded": true,
+          "file": "trolley3"
+        },
+        {
+          "name": "trolley_intersection5",
+          "loaded": true,
+          "file": "trolley_intersection5"
+        }
+      ]
+    },
+    {
+      "file": "trolley4.dat",
+      "name": "trolley4",
+      "configName": "trolley4",
+      "list": "train",
+      "count": 75,
+      "curveCount": 32,
+      "_type": "open",
+      "nodeCount": 75,
+      "curveRowCount": 32,
+      "totalLength": 212.44409999999996,
+      "measuredArcLength": 212.47144643871263,
+      "handleFit": {
+        "curvedSegments": 34,
+        "candidates": {
+          "absolute:in-out": 0.0037643703238361185,
+          "absolute:out-in": 0.2209341690747874,
+          "relative:in-out": 4158.564703520723,
+          "relative:out-in": 4158.553810903917
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0037643703238361185
+      },
+      "markers": {
+        "": 43,
+        "c": 32
+      },
+      "flags": {
+        "byValue": {
+          "0": 70,
+          "2": 2,
+          "8": 3
+        },
+        "bits": {
+          "2": {
+            "bit": 2,
+            "label": "station?",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 15,
+                "flags": 2,
+                "name": "Lemoyne_National_Bank"
+              },
+              {
+                "index": 50,
+                "flags": 2,
+                "name": "The_Napoleon_House"
+              }
+            ]
+          },
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 3,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 10,
+                "flags": 8,
+                "name": "trolley_intersection3"
+              },
+              {
+                "index": 74,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 10,
+          "name": "trolley_intersection3",
+          "flags": 8
+        },
+        {
+          "index": 15,
+          "name": "Lemoyne_National_Bank",
+          "flags": 2
+        },
+        {
+          "index": 50,
+          "name": "The_Napoleon_House",
+          "flags": 2
+        },
+        {
+          "index": 74,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "nb_trolley_track_config",
+          "loaded": true,
+          "file": "trolley1"
+        },
+        {
+          "name": "trolley_intersection3",
+          "loaded": true,
+          "file": "trolley_intersection3"
+        }
+      ]
+    },
+    {
+      "file": "trolley_intersection1_2.dat",
+      "name": "trolley_intersection1_2",
+      "count": 8,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 8,
+      "curveRowCount": 0,
+      "totalLength": 35.35611,
+      "measuredArcLength": 35.35846506359634,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 8
+      },
+      "flags": {
+        "byValue": {
+          "0": 8
+        },
+        "bits": {},
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [],
+      "resolvedLinks": []
+    },
+    {
+      "file": "trolley_intersection2.dat",
+      "name": "trolley_intersection2",
+      "configName": "trolley_intersection2",
+      "list": "train",
+      "count": 17,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 17,
+      "curveRowCount": 0,
+      "totalLength": 40.691720000000004,
+      "measuredArcLength": 40.69310156238085,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 17
+      },
+      "flags": {
+        "byValue": {
+          "0": 15,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 16,
+                "flags": 8,
+                "name": "nb_trolley_track_config_temp"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 16,
+          "name": "nb_trolley_track_config_temp",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "nb_trolley_track_config",
+          "loaded": true,
+          "file": "trolley1"
+        },
+        {
+          "name": "nb_trolley_track_config_temp",
+          "loaded": true,
+          "file": "trolley2"
+        }
+      ]
+    },
+    {
+      "file": "trolley_intersection3.dat",
+      "name": "trolley_intersection3",
+      "configName": "trolley_intersection3",
+      "list": "train",
+      "count": 4,
+      "curveCount": 4,
+      "_type": "open",
+      "nodeCount": 4,
+      "curveRowCount": 4,
+      "totalLength": 11.62819,
+      "measuredArcLength": 11.627905603352957,
+      "handleFit": {
+        "curvedSegments": 3,
+        "candidates": {
+          "absolute:in-out": 0.0012194452173490689,
+          "absolute:out-in": 0.46311971174502364,
+          "relative:in-out": 4373.15641062757,
+          "relative:out-in": 4373.020139400333
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.0012194452173490689
+      },
+      "markers": {
+        "c": 4
+      },
+      "flags": {
+        "byValue": {
+          "0": 2,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "trolley4"
+              },
+              {
+                "index": 3,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "trolley4",
+          "flags": 8
+        },
+        {
+          "index": 3,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "trolley4",
+          "loaded": true,
+          "file": "trolley4"
+        },
+        {
+          "name": "nb_trolley_track_config",
+          "loaded": true,
+          "file": "trolley1"
+        }
+      ]
+    },
+    {
+      "file": "trolley_intersection4.dat",
+      "name": "trolley_intersection4",
+      "count": 8,
+      "curveCount": 6,
+      "_type": "open",
+      "nodeCount": 8,
+      "curveRowCount": 6,
+      "totalLength": 11.917649999999998,
+      "measuredArcLength": 11.931196953693243,
+      "handleFit": {
+        "curvedSegments": 6,
+        "candidates": {
+          "absolute:in-out": 0.003729799866263687,
+          "absolute:out-in": 0.27657069197521283,
+          "relative:in-out": 4047.307955367883,
+          "relative:out-in": 4047.174827399771
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.003729799866263687
+      },
+      "markers": {
+        "c": 6,
+        "": 2
+      },
+      "flags": {
+        "byValue": {
+          "0": 8
+        },
+        "bits": {},
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [],
+      "resolvedLinks": []
+    },
+    {
+      "file": "trolley_intersection5.dat",
+      "name": "trolley_intersection5",
+      "configName": "trolley_intersection5",
+      "list": "train",
+      "count": 6,
+      "curveCount": 4,
+      "_type": "open",
+      "nodeCount": 6,
+      "curveRowCount": 4,
+      "totalLength": 22.000970000000002,
+      "measuredArcLength": 21.96746360360487,
+      "handleFit": {
+        "curvedSegments": 5,
+        "candidates": {
+          "absolute:in-out": 0.008659006922953872,
+          "absolute:out-in": 0.7291367601841096,
+          "relative:in-out": 3570.8019615122807,
+          "relative:out-in": 3570.8918291369455
+        },
+        "best": "absolute:in-out",
+        "bestError": 0.008659006922953872
+      },
+      "markers": {
+        "": 2,
+        "c": 4
+      },
+      "flags": {
+        "byValue": {
+          "0": 4,
+          "8": 2
+        },
+        "bits": {
+          "8": {
+            "bit": 8,
+            "label": "junction",
+            "count": 2,
+            "nodes": [
+              {
+                "index": 0,
+                "flags": 8,
+                "name": "nb_trolley_track_config"
+              },
+              {
+                "index": 5,
+                "flags": 8,
+                "name": "trolley3"
+              }
+            ]
+          }
+        },
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [
+        {
+          "index": 0,
+          "name": "nb_trolley_track_config",
+          "flags": 8
+        },
+        {
+          "index": 5,
+          "name": "trolley3",
+          "flags": 8
+        }
+      ],
+      "resolvedLinks": [
+        {
+          "name": "nb_trolley_track_config",
+          "loaded": true,
+          "file": "trolley1"
+        },
+        {
+          "name": "trolley3",
+          "loaded": true,
+          "file": "trolley3"
+        }
+      ]
+    },
+    {
+      "file": "trolley_intersection6.dat",
+      "name": "trolley_intersection6",
+      "count": 12,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 12,
+      "curveRowCount": 0,
+      "totalLength": 24.425459999999994,
+      "measuredArcLength": 24.421209308685384,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 12
+      },
+      "flags": {
+        "byValue": {
+          "0": 12
+        },
+        "bits": {},
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [],
+      "resolvedLinks": []
+    },
+    {
+      "file": "trolley_intersection7.dat",
+      "name": "trolley_intersection7",
+      "count": 7,
+      "curveCount": 0,
+      "_type": "open",
+      "nodeCount": 7,
+      "curveRowCount": 0,
+      "totalLength": 17.336759999999998,
+      "measuredArcLength": 17.333051631834792,
+      "handleFit": {
+        "curvedSegments": 0,
+        "candidates": null,
+        "best": null,
+        "bestError": null
+      },
+      "markers": {
+        "": 7
+      },
+      "flags": {
+        "byValue": {
+          "0": 7
+        },
+        "bits": {},
+        "unknownMask": 0,
+        "namedWithoutFlags": []
+      },
+      "namedNodes": [],
+      "resolvedLinks": []
+    }
+  ],
+  "junctions": [
+    {
+      "position": {
+        "x": 2588.54,
+        "y": -1482.19,
+        "z": 45.2241
+      },
+      "members": [
+        {
+          "file": "freight_nb1_inter",
+          "index": 0
+        },
+        {
+          "file": "trains1",
+          "index": 462
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2624.16,
+        "y": -1477.2,
+        "z": 45.1535
+      },
+      "members": [
+        {
+          "file": "freight_nb1_inter",
+          "index": 8
+        },
+        {
+          "file": "trains_nb1",
+          "index": 34
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2608.68,
+        "y": -1255.25,
+        "z": 58.6431
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 7
+        },
+        {
+          "file": "sd_trolley_cable03",
+          "index": 145
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2615.79,
+        "y": -1282.89,
+        "z": 58.3901
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 18
+        },
+        {
+          "file": "sd_trolley_cable02",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2619.96,
+        "y": -1292.45,
+        "z": 58.3899
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 22
+        },
+        {
+          "file": "sd_trolley_cable05",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2688.23,
+        "y": -1387.57,
+        "z": 52.5311
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 70
+        },
+        {
+          "file": "sd_trolley_cable04",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2703.89,
+        "y": -1395.29,
+        "z": 52.5311
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 87
+        },
+        {
+          "file": "sd_trolley_cable06",
+          "index": 10
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2706.85,
+        "y": -1395.47,
+        "z": 52.531
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 88
+        },
+        {
+          "file": "sd_trolley_cable08",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2772.28,
+        "y": -1355.53,
+        "z": 52.6632
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 132
+        },
+        {
+          "file": "sd_trolley_cable04",
+          "index": 81
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2702.27,
+        "y": -1139.92,
+        "z": 56.3551
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 299
+        },
+        {
+          "file": "sd_trolley_cable02",
+          "index": 127
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2622.65,
+        "y": -1139.88,
+        "z": 57.8282
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 331
+        },
+        {
+          "file": "sd_trolley_cable03",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2608.71,
+        "y": -1153,
+        "z": 57.892
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable01",
+          "index": 337
+        },
+        {
+          "file": "sd_trolley_cable07",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2624.47,
+        "y": -1285.03,
+        "z": 58.3889
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable02",
+          "index": 4
+        },
+        {
+          "file": "sd_trolley_cable05",
+          "index": 4
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2602.26,
+        "y": -1137.58,
+        "z": 57.8282
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable03",
+          "index": 7
+        },
+        {
+          "file": "sd_trolley_cable07",
+          "index": 6
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2692.81,
+        "y": -1403.93,
+        "z": 52.5312
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable04",
+          "index": 8
+        },
+        {
+          "file": "sd_trolley_cable06",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2733.53,
+        "y": -1417.07,
+        "z": 52.1841
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable04",
+          "index": 30
+        },
+        {
+          "file": "sd_trolley_cable08",
+          "index": 17
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 12
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2717.4,
+        "y": -1405.1,
+        "z": 52.6226
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 5
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2718.06,
+        "y": -1406.26,
+        "z": 52.5935
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 6
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 1
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2718.5,
+        "y": -1407.02,
+        "z": 52.5754
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 7
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 2
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2719.6,
+        "y": -1408.95,
+        "z": 52.5311
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 8
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2720.69,
+        "y": -1410.52,
+        "z": 52.531
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 9
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 4
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2721.05,
+        "y": -1411.05,
+        "z": 52.5311
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 10
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 5
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2721.61,
+        "y": -1411.77,
+        "z": 52.5305
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 11
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 6
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2722.45,
+        "y": -1412.85,
+        "z": 52.5311
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 12
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2723.81,
+        "y": -1414.05,
+        "z": 52.5304
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 13
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 8
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2724.4,
+        "y": -1414.57,
+        "z": 52.5311
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 14
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 9
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2726.7,
+        "y": -1415.79,
+        "z": 52.5311
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 15
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 10
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2730.48,
+        "y": -1416.42,
+        "z": 52.5311
+      },
+      "members": [
+        {
+          "file": "sd_trolley_cable08",
+          "index": 16
+        },
+        {
+          "file": "sd_trolley_cable11",
+          "index": 11
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 69.6194,
+        "y": -375.174,
+        "z": 90.0691
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 105
+        },
+        {
+          "file": "trains_intersection1_3",
+          "index": 39
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": -1307.26,
+        "y": -291.26,
+        "z": 100.096
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 130
+        },
+        {
+          "file": "trains_intersection1_app",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": -1375.64,
+        "y": -137.358,
+        "z": 100.036
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 143
+        },
+        {
+          "file": "trains_intersection1_app",
+          "index": 12
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 556.65,
+        "y": 1725.99,
+        "z": 186.968
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 252
+        },
+        {
+          "file": "trains_rob3",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 610.22,
+        "y": 1662.17,
+        "z": 186.543
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 255
+        },
+        {
+          "file": "trains_rob3",
+          "index": 9
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 3032.64,
+        "y": 1482.22,
+        "z": 48.7368
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 328
+        },
+        {
+          "file": "trains_intersection1_ann",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2873.65,
+        "y": 1199.61,
+        "z": 44.2112
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 347
+        },
+        {
+          "file": "trains_intersection1_ann",
+          "index": 22
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2659.79,
+        "y": -435.711,
+        "z": 42.5659
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 386
+        },
+        {
+          "file": "trains3",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2855.28,
+        "y": -1314.74,
+        "z": 45.1157
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 419
+        },
+        {
+          "file": "trains_nb1",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2842.43,
+        "y": -1330.06,
+        "z": 45.1738
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 421
+        },
+        {
+          "file": "trains_nb2",
+          "index": 16
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2520.46,
+        "y": -1482.19,
+        "z": 45.1254
+      },
+      "members": [
+        {
+          "file": "trains1",
+          "index": 469
+        },
+        {
+          "file": "trains2",
+          "index": 118
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 1692.86,
+        "y": 544.329,
+        "z": 97.7636
+      },
+      "members": [
+        {
+          "file": "trains2",
+          "index": 0
+        },
+        {
+          "file": "trains3",
+          "index": 55
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 1529.94,
+        "y": 467.529,
+        "z": 89.3801
+      },
+      "members": [
+        {
+          "file": "trains2",
+          "index": 10
+        },
+        {
+          "file": "trains_intersection2_3",
+          "index": 10
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2464.55,
+        "y": -1475.74,
+        "z": 45.1397
+      },
+      "members": [
+        {
+          "file": "trains2",
+          "index": 112
+        },
+        {
+          "file": "trains_nb1",
+          "index": 48
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 1481.54,
+        "y": 648.331,
+        "z": 91.4573
+      },
+      "members": [
+        {
+          "file": "trains3",
+          "index": 63
+        },
+        {
+          "file": "trains_intersection2_3",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 613.963,
+        "y": 683.593,
+        "z": 114.517
+      },
+      "members": [
+        {
+          "file": "trains3",
+          "index": 80
+        },
+        {
+          "file": "trains_intersection3_cor",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 357.959,
+        "y": 596.374,
+        "z": 114.842
+      },
+      "members": [
+        {
+          "file": "trains3",
+          "index": 89
+        },
+        {
+          "file": "trains_intersection3_cor",
+          "index": 12
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 31.4046,
+        "y": -29.3296,
+        "z": 102.485
+      },
+      "members": [
+        {
+          "file": "trains3",
+          "index": 124
+        },
+        {
+          "file": "trains_intersection1_3",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2940.86,
+        "y": 1374.45,
+        "z": 43.0859
+      },
+      "members": [
+        {
+          "file": "trains_intersection1_ann",
+          "index": 10
+        },
+        {
+          "file": "trains_intersection2_ann",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2885.57,
+        "y": 1227.62,
+        "z": 43.845
+      },
+      "members": [
+        {
+          "file": "trains_intersection1_ann",
+          "index": 20
+        },
+        {
+          "file": "trains_intersection2_ann",
+          "index": 9
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2748.47,
+        "y": -1434.33,
+        "z": 45.0192
+      },
+      "members": [
+        {
+          "file": "trains_nb1",
+          "index": 16
+        },
+        {
+          "file": "trains_nb3",
+          "index": 19
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": -2175.79,
+        "y": -2533.91,
+        "z": 65.7094
+      },
+      "members": [
+        {
+          "file": "trains_old_west01",
+          "index": 0
+        },
+        {
+          "file": "trains_old_west02",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": -2174.31,
+        "y": -2508.44,
+        "z": 64.9507
+      },
+      "members": [
+        {
+          "file": "trains_old_west01",
+          "index": 2
+        },
+        {
+          "file": "trains_old_west_intersection02",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": -2214.41,
+        "y": -2519.54,
+        "z": 64.8763
+      },
+      "members": [
+        {
+          "file": "trains_old_west02",
+          "index": 4
+        },
+        {
+          "file": "trains_old_west_intersection02",
+          "index": 5
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": -4848.95,
+        "y": -3086.33,
+        "z": -16.5875
+      },
+      "members": [
+        {
+          "file": "trains_old_west02",
+          "index": 418
+        },
+        {
+          "file": "trains_old_west_intersection01",
+          "index": 10
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": -4951.81,
+        "y": -3083.8,
+        "z": -18.4324
+      },
+      "members": [
+        {
+          "file": "trains_old_west02",
+          "index": 428
+        },
+        {
+          "file": "trains_old_west03",
+          "index": 401
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": -4916.56,
+        "y": -3009.53,
+        "z": -19.1817
+      },
+      "members": [
+        {
+          "file": "trains_old_west03",
+          "index": 0
+        },
+        {
+          "file": "trains_old_west_intersection01",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2774.8,
+        "y": -1350.44,
+        "z": 45.3053
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 0
+        },
+        {
+          "file": "trolley2",
+          "index": 56
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2770.01,
+        "y": -1358.07,
+        "z": 45.2414
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 3
+        },
+        {
+          "file": "trolley_intersection1_2",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2707.35,
+        "y": -1395.51,
+        "z": 45.5655
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 22
+        },
+        {
+          "file": "trolley_intersection2",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2686.55,
+        "y": -1385.46,
+        "z": 45.3387
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 35
+        },
+        {
+          "file": "trolley2",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2621.12,
+        "y": -1295.28,
+        "z": 51.1928
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 62
+        },
+        {
+          "file": "trolley4",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2615.05,
+        "y": -1281.2,
+        "z": 51.3241
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 64
+        },
+        {
+          "file": "trolley_intersection3",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2610.37,
+        "y": -1269.1,
+        "z": 51.6665
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 72
+        },
+        {
+          "file": "trolley_intersection4",
+          "index": 7
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2608.49,
+        "y": -1254.66,
+        "z": 51.6083
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 80
+        },
+        {
+          "file": "trolley3",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2608.72,
+        "y": -1153.3,
+        "z": 50.7375
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 105
+        },
+        {
+          "file": "trolley_intersection5",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2624.4,
+        "y": -1139.85,
+        "z": 50.4319
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 121
+        },
+        {
+          "file": "trolley3",
+          "index": 83
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2701.58,
+        "y": -1140.01,
+        "z": 49.4393
+      },
+      "members": [
+        {
+          "file": "trolley1",
+          "index": 137
+        },
+        {
+          "file": "trolley4",
+          "index": 74
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2705.37,
+        "y": -1420.11,
+        "z": 45.5379
+      },
+      "members": [
+        {
+          "file": "trolley2",
+          "index": 17
+        },
+        {
+          "file": "trolley_intersection6",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2738.02,
+        "y": -1415.14,
+        "z": 45.071
+      },
+      "members": [
+        {
+          "file": "trolley2",
+          "index": 27
+        },
+        {
+          "file": "trolley_intersection2",
+          "index": 16
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2598.65,
+        "y": -1137.41,
+        "z": 50.4326
+      },
+      "members": [
+        {
+          "file": "trolley3",
+          "index": 80
+        },
+        {
+          "file": "trolley_intersection5",
+          "index": 5
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2624.78,
+        "y": -1284.85,
+        "z": 51.3241
+      },
+      "members": [
+        {
+          "file": "trolley4",
+          "index": 10
+        },
+        {
+          "file": "trolley_intersection3",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2709,
+        "y": -1151.07,
+        "z": 49.4518
+      },
+      "members": [
+        {
+          "file": "trolley4",
+          "index": 64
+        },
+        {
+          "file": "trolley_intersection7",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "position": {
+        "x": 2716.47,
+        "y": -1402.95,
+        "z": 45.5592
+      },
+      "members": [
+        {
+          "file": "trolley_intersection2",
+          "index": 4
+        },
+        {
+          "file": "trolley_intersection6",
+          "index": 11
+        }
+      ]
+    }
+  ],
+  "failures": []
+}

@@ -92,7 +92,7 @@ export class EventListener {
     const view = new DataView(buffer);
 
     // GetEventData(eventGroup, index, view, argStructSize);
-    Citizen.invokeNative('0x57ec5fa4d4d6afca', eventGroup, index, view, argStructSize, Citizen.returnResultAnyway());
+    Citizen.invokeNative('0x57ec5fa4d4d6afca', eventGroup, index, view, argStructSize);
 
     // const floats = new Float32Array(buffer);
     // const ints = new Int32Array(buffer);

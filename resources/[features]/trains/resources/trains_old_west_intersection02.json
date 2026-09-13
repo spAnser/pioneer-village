@@ -1,0 +1,81 @@
+{
+  "count": 6,
+  "curveCount": 6,
+  "_type": "open",
+  "source": "trains_old_west_intersection02",
+  "configName": "trains_old_west_intersection02",
+  "list": "train",
+  "flags": {
+    "byValue": {
+      "0": 4,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "trains_old_west01"
+          },
+          {
+            "index": 5,
+            "flags": 8,
+            "name": "trains_old_west02"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [-2174.31, -2508.44, 64.9507],
+      "handleIn": [-2170.31, -2505.37, 64.8956],
+      "handleOut": [-2177.77, -2511.1, 64.9982],
+      "length": 13.6718,
+      "flags": 8,
+      "name": "trains_old_west01"
+    },
+    {
+      "position": [-2185.41, -2516.41, 65.0492],
+      "handleIn": [-2181.03, -2513.68, 65.0359],
+      "handleOut": [-2187.73, -2517.85, 65.0563],
+      "length": 7.43651,
+      "flags": 0
+    },
+    {
+      "position": [-2192.17, -2519.45, 65.0313],
+      "handleIn": [-2189.92, -2518.73, 65.0479],
+      "handleOut": [-2194.54, -2520.21, 65.0139],
+      "length": 7.26026,
+      "flags": 0
+    },
+    {
+      "position": [-2199.29, -2520.8, 65.0467],
+      "handleIn": [-2197.14, -2520.62, 65],
+      "handleOut": [-2201.32, -2520.97, 65.0908],
+      "length": 6.88402,
+      "flags": 0
+    },
+    {
+      "position": [-2206.17, -2520.73, 65.0012],
+      "handleIn": [-2203.66, -2520.95, 65.0374],
+      "handleOut": [-2208.96, -2520.48, 64.9607],
+      "length": 8.3429,
+      "flags": 0
+    },
+    {
+      "position": [-2214.41, -2519.54, 64.8763],
+      "handleIn": [-2212.69, -2520.09, 64.8744],
+      "handleOut": [-2214.41, -2519.54, 64.8763],
+      "length": 0,
+      "flags": 8,
+      "name": "trains_old_west02"
+    }
+  ]
+}

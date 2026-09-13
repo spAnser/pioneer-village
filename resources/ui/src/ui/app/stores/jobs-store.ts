@@ -4,34 +4,51 @@ import { onClient } from '@lib/ui';
 
 interface JobsState {
   show: boolean;
+  loading: boolean;
+  error: string | null;
   isClocked: boolean;
   currentJob: Jobs.JobDefinition | null;
   availableJobs: Jobs.JobDefinition[];
   clockedInEmployees: number;
-  activeTasks: Jobs.TaskDefinition[];
-  taskAvailability: Map<string, Jobs.TaskAvailability>;
+  activeTasks: Jobs.TaskInstance[];
 }
 
 type StateListener = (state: JobsState) => void;
 
+const REFRESH_INTERVAL = 30000;
+
+/**
+ * Read-mostly panel over the socket server's jobs state.
+ *
+ * Clocking in is deliberately absent: a job may carry a location constraint and
+ * only the game client knows where the ped is standing, so clock-in belongs to
+ * the jobs client resource, which passes real coords. Clocking out has no such
+ * constraint and is safe to drive from here.
+ *
+ * Nothing pushes jobs updates into NUI — the socket server broadcasts under the
+ * `__client__` envelope, which the app forwards on to the game client rather
+ * than back into the UI — so the panel polls while it is open instead.
+ */
 class JobsStore {
   private static instance: JobsStore;
   private socket: Socket<SocketOut.ToClient, SocketIn.FromClient> | null = null;
   private state: JobsState;
   private listeners = new Set<StateListener>();
-  private initialized = false;
   private clientHandlersSetup = false;
   private refreshInterval: NodeJS.Timeout | null = null;
+  /** Discards responses from a refresh the panel has already moved past. */
+  private refreshToken = 0;
 
   private constructor() {
     this.state = {
       show: false,
+      loading: false,
+      error: null,
       isClocked: false,
       currentJob: null,
       availableJobs: [],
       clockedInEmployees: 0,
       activeTasks: [],
-      taskAvailability: new Map(),
     };
   }
 
@@ -43,93 +60,99 @@ class JobsStore {
   }
 
   initialize(socket: Socket<SocketOut.ToClient, SocketIn.FromClient>): void {
-    if (this.initialized) {
-      this.cleanup();
-    }
+    this.cleanup();
 
     this.socket = socket;
-    this.initialized = true;
-
     this.setupClientHandlers();
 
-    setTimeout(() => {
-      if (this.state.show) {
-        this.refreshJobState();
-      }
-    }, 1000);
-
-    this.refreshInterval = setInterval(() => {
-      if (this.state.show) {
-        this.refreshJobState();
-      }
-    }, 30000);
+    if (this.state.show) {
+      this.refreshJobState();
+      this.startPolling();
+    }
   }
 
   private setupClientHandlers(): void {
+    // @lib/ui offers no way to unregister, so these are registered exactly once
+    // for the lifetime of the page.
     if (this.clientHandlersSetup) return;
     this.clientHandlersSetup = true;
 
     onClient('jobs.toggle', this.handleToggle);
     onClient('jobs.show', this.handleShow);
     onClient('jobs.hide', this.handleHide);
-
-    onClient('jobs.clock-in-update', () => {
-      this.refreshJobState();
-    });
-
-    onClient('jobs.clock-out-update', () => {
-      this.refreshJobState();
-    });
-
-    onClient('jobs.task-created', () => {
-      this.refreshJobState();
-    });
   }
 
-  private handleToggle = (): void => {
-    const newShow = !this.state.show;
-    this.updateState({ show: newShow });
-    if (newShow) {
-      this.refreshJobState();
+  private handleToggle = (show: boolean): void => {
+    if (show) {
+      this.handleShow();
+    } else {
+      this.handleHide();
     }
   };
 
   private handleShow = (): void => {
+    if (this.state.show) return;
+
     this.updateState({ show: true });
     this.refreshJobState();
+    this.startPolling();
   };
 
   private handleHide = (): void => {
-    this.updateState({ show: false });
+    if (!this.state.show) return;
+
+    this.stopPolling();
+    this.refreshToken += 1;
+    this.updateState({ show: false, loading: false });
   };
 
-  refreshJobState = (): void => {
-    if (!this.socket) return;
+  private startPolling(): void {
+    this.stopPolling();
+    this.refreshInterval = setInterval(this.refreshJobState, REFRESH_INTERVAL);
+  }
+
+  private stopPolling(): void {
+    if (!this.refreshInterval) return;
+
+    clearInterval(this.refreshInterval);
+    this.refreshInterval = null;
+  }
+
+  private refreshJobState = (): void => {
+    if (!this.socket) {
+      this.updateState({ loading: false, error: 'Not connected' });
+      return;
+    }
+
+    this.refreshToken += 1;
+    const token = this.refreshToken;
+
+    this.updateState({ loading: true, error: null });
 
     this.socket.emit('jobs.get-state', (state) => {
-      if (!state.error) {
-        this.updateState({
-          isClocked: state.isClocked || false,
-          currentJob: state.currentJob || null,
-          availableJobs: state.availableJobs || [],
-          clockedInEmployees: state.clockedInEmployees || 0,
-        });
-      }
-    });
-  };
+      if (token !== this.refreshToken) return;
 
-  performClockIn(jobHandle: string): Promise<Jobs.ClockResult> {
-    return new Promise((resolve) => {
-      if (!this.socket) {
-        resolve({ success: false, error: 'Not connected' });
+      if (state.error) {
+        this.updateState({ loading: false, error: state.error });
         return;
       }
 
-      this.socket.emit('jobs.clock-in', jobHandle, undefined, (result) => {
-        resolve(result);
+      this.updateState({
+        loading: false,
+        error: null,
+        isClocked: state.isClocked,
+        currentJob: state.currentJob,
+        availableJobs: state.availableJobs,
+        clockedInEmployees: state.clockedInEmployees,
       });
     });
-  }
+
+    this.socket.emit('jobs.get-active-tasks', (instances) => {
+      if (token !== this.refreshToken) return;
+
+      this.updateState({ activeTasks: instances });
+    });
+  };
 
   performClockOut(): Promise<Jobs.ClockResult> {
     return new Promise((resolve) => {
@@ -139,34 +162,23 @@ class JobsStore {
       }
 
       this.socket.emit('jobs.clock-out', (result) => {
+        if (result.success) {
+          this.refreshJobState();
+        } else {
+          this.updateState({ error: result.error ?? 'Unable to clock out' });
+        }
         resolve(result);
       });
     });
   }
 
-  toggleVisibility(): void {
-    this.handleToggle();
-  }
-
-  show(): void {
-    this.handleShow();
-  }
-
-  hide(): void {
+  close(): void {
     this.handleHide();
-  }
-
-  refresh(): void {
-    this.refreshJobState();
   }
 
   updateState(newState: Partial<JobsState>): void {
     this.state = { ...this.state, ...newState };
     this.listeners.forEach((listener) => listener(this.state));
-  }
-
-  close(): void {
-    this.hide();
   }
 
   subscribe(listener: StateListener): () => void {
@@ -181,13 +193,13 @@ class JobsStore {
     return this.state;
   }
 
+  /**
+   * Drops the poll timer bound to the previous socket. React subscribers are owned
+   * by the components that added them and deliberately survive a re-initialize.
+   */
   cleanup(): void {
-    if (this.refreshInterval) {
-      clearInterval(this.refreshInterval);
-      this.refreshInterval = null;
-    }
-    this.listeners.clear();
-    this.initialized = false;
+    this.stopPolling();
+    this.refreshToken += 1;
   }
 }
 

@@ -1,0 +1,56 @@
+{
+  "count": 8,
+  "curveCount": 0,
+  "_type": "open",
+  "source": "trolley_intersection1_2",
+  "flags": {
+    "byValue": {
+      "0": 8
+    },
+    "bits": {},
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2770.01, -1358.07, 45.2414],
+      "length": 2.68677,
+      "flags": 0
+    },
+    {
+      "position": [2769.23, -1360.63, 45.4946],
+      "length": 4.65322,
+      "flags": 0
+    },
+    {
+      "position": [2767.99, -1365.12, 45.6],
+      "length": 6.42831,
+      "flags": 0
+    },
+    {
+      "position": [2767.06, -1371.48, 45.6],
+      "length": 6.35356,
+      "flags": 0
+    },
+    {
+      "position": [2768.39, -1377.69, 45.6],
+      "length": 5.21445,
+      "flags": 0
+    },
+    {
+      "position": [2769.88, -1382.69, 45.5538],
+      "length": 5.5224,
+      "flags": 0
+    },
+    {
+      "position": [2771.32, -1388.02, 45.4739],
+      "length": 4.4974,
+      "flags": 0
+    },
+    {
+      "position": [2771.86, -1392.48, 45.3865],
+      "length": 0,
+      "flags": 0
+    }
+  ]
+}

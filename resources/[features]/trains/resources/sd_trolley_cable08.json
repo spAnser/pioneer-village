@@ -1,0 +1,129 @@
+{
+  "count": 18,
+  "curveCount": 0,
+  "_type": "open",
+  "source": "sd_trolley_cable08",
+  "configName": "sd_trolley_cable08",
+  "list": "trolley-cable",
+  "flags": {
+    "byValue": {
+      "0": 16,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "SD_trolley_cable01"
+          },
+          {
+            "index": 17,
+            "flags": 8,
+            "name": "SD_trolley_cable04"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2706.85, -1395.47, 52.531],
+      "length": 3.24366,
+      "flags": 8,
+      "name": "SD_trolley_cable01"
+    },
+    {
+      "position": [2709.99, -1396.29, 52.5311],
+      "length": 2.32545,
+      "flags": 0
+    },
+    {
+      "position": [2711.96, -1397.53, 52.5312],
+      "length": 2.81565,
+      "flags": 0
+    },
+    {
+      "position": [2714.1, -1399.36, 52.531],
+      "length": 2.53372,
+      "flags": 0
+    },
+    {
+      "position": [2715.64, -1401.37, 52.5309],
+      "length": 4.12279,
+      "flags": 0
+    },
+    {
+      "position": [2717.4, -1405.1, 52.6226],
+      "length": 1.33031,
+      "flags": 0
+    },
+    {
+      "position": [2718.06, -1406.26, 52.5935],
+      "length": 0.886722,
+      "flags": 0
+    },
+    {
+      "position": [2718.5, -1407.02, 52.5754],
+      "length": 2.21647,
+      "flags": 0
+    },
+    {
+      "position": [2719.6, -1408.95, 52.5311],
+      "length": 1.91591,
+      "flags": 0
+    },
+    {
+      "position": [2720.69, -1410.52, 52.531],
+      "length": 0.638632,
+      "flags": 0
+    },
+    {
+      "position": [2721.05, -1411.05, 52.5311],
+      "length": 0.910906,
+      "flags": 0
+    },
+    {
+      "position": [2721.61, -1411.77, 52.5305],
+      "length": 1.36627,
+      "flags": 0
+    },
+    {
+      "position": [2722.45, -1412.85, 52.5311],
+      "length": 1.82178,
+      "flags": 0
+    },
+    {
+      "position": [2723.81, -1414.05, 52.5304],
+      "length": 0.780583,
+      "flags": 0
+    },
+    {
+      "position": [2724.4, -1414.57, 52.5311],
+      "length": 2.60386,
+      "flags": 0
+    },
+    {
+      "position": [2726.7, -1415.79, 52.5311],
+      "length": 3.82896,
+      "flags": 0
+    },
+    {
+      "position": [2730.48, -1416.42, 52.5311],
+      "length": 3.14128,
+      "flags": 0
+    },
+    {
+      "position": [2733.53, -1417.07, 52.1842],
+      "length": 0,
+      "flags": 8,
+      "name": "SD_trolley_cable04"
+    }
+  ]
+}

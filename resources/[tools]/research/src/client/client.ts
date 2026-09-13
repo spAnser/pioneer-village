@@ -16,6 +16,7 @@ import './stuff/pigeons';
 import './stuff/police';
 import './stuff/ptfx';
 // import './stuff/side-saddle';
+import './stuff/trains';
 import './stuff/zones';
 import './targets';
 

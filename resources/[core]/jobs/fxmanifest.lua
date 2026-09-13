@@ -1,23 +1,17 @@
 fx_version 'cerulean'
-game 'rdr3'
+games { 'rdr3' }
 rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
 
 author 'Pioneer Village Development Team'
 description 'Core Job Management System'
 version '1.0.0'
 
-shared_scripts {
-    'build/shared.js'
+lua54 'yes'
+
+server_scripts {
+  "build/server.js"
 }
 
 client_scripts {
-    'build/client.js'
-}
-
-server_scripts {
-    'build/server.js'
-}
-
-dependencies {
-    'ui'
+  "build/client.js"
 }

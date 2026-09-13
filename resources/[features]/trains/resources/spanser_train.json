@@ -1,0 +1,66 @@
+{
+  "count": 7,
+  "curveCount": 0,
+  "_type": "open",
+  "source": "spanser_train",
+  "flags": {
+    "byValue": {
+      "0": 6,
+      "8": 1
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 1,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "freight_group"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2885.27, -1128.59, 45.24],
+      "length": 17.4168,
+      "flags": 8,
+      "name": "freight_group"
+    },
+    {
+      "position": [2894.15, -1143.55, 46.07],
+      "length": 23.4602,
+      "flags": 0
+    },
+    {
+      "position": [2900.37, -1166.17, 45.9],
+      "length": 24.0427,
+      "flags": 0
+    },
+    {
+      "position": [2903.16, -1190.05, 46.01],
+      "length": 21.4722,
+      "flags": 0
+    },
+    {
+      "position": [2904.3, -1211.49, 45.72],
+      "length": 24.2327,
+      "flags": 0
+    },
+    {
+      "position": [2905.32, -1235.7, 45.96],
+      "length": 34.468,
+      "flags": 0
+    },
+    {
+      "position": [2895.27, -1268.67, 45.81],
+      "length": 0,
+      "flags": 0
+    }
+  ]
+}

@@ -1,31 +1,22 @@
-// Import exports to register them
-import './exports';
+import { PVBase, onSocket } from '@lib/server';
 
-// Example usage for other resources:
-/*
-// Register a job
-exports.jobs.registerJob({
-  handle: 'sheriff',
-  name: 'Sheriff Department',
-  description: 'Maintain law and order in the town',
-  paymentType: 'HOURLY',
-  paymentAmount: '25.00',
-  requirements: { badge: true },
-  clockInConstraints: {
-    location: { x: 100, y: 200, z: 30, radius: 10 },
-    timeWindow: { start: '08:00', end: '20:00' }
+import { seedClockedIn, setClockedIn, setClockedOut } from './exports';
+import { runJobHooks } from './hooks';
+
+onSocket('jobs.hook', (type, jobHandle, payload) => {
+  // Keep the local clock mirror ahead of the subscribers so a hook can read it.
+  if (type === 'onClockIn') {
+    setClockedIn(payload.characterId, jobHandle);
+  } else if (type === 'onClockOut') {
+    setClockedOut(payload.characterId);
   }
+
+  runJobHooks(type, jobHandle, payload);
 });
 
-// Create a task
-exports.jobs.createTask('sheriff', {
-  name: 'Patrol Main Street',
-  description: 'Walk patrol around the main street area',
-  taskType: 'patrol',
-  requirements: { badge: true },
-  rewards: { money: 10 }
-});
-
-// Grant permission
-// exports.jobs.grantPermission(characterId, 'JOB', 'sheriff', adminCharacterId);
-*/
+// `socket.connected` fires on every socket connect, so this also recovers when the
+// socket server restarts underneath a game server that never stopped.
+on('socket.connected', seedClockedIn);
+if (PVBase.socketConnected()) {
+  void seedClockedIn();
+}

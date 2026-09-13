@@ -1,0 +1,124 @@
+{
+  "count": 17,
+  "curveCount": 0,
+  "_type": "open",
+  "source": "trolley_intersection2",
+  "configName": "trolley_intersection2",
+  "list": "train",
+  "flags": {
+    "byValue": {
+      "0": 15,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "nb_trolley_track_config"
+          },
+          {
+            "index": 16,
+            "flags": 8,
+            "name": "nb_trolley_track_config_temp"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2707.35, -1395.51, 45.5655],
+      "length": 4.34774,
+      "flags": 8,
+      "name": "nb_trolley_track_config"
+    },
+    {
+      "position": [2711.38, -1397.14, 45.5448],
+      "length": 2.63373,
+      "flags": 0
+    },
+    {
+      "position": [2713.45, -1398.77, 45.5606],
+      "length": 2.57792,
+      "flags": 0
+    },
+    {
+      "position": [2715.16, -1400.69, 45.5665],
+      "length": 2.60629,
+      "flags": 0
+    },
+    {
+      "position": [2716.47, -1402.95, 45.5592],
+      "length": 2.59365,
+      "flags": 0
+    },
+    {
+      "position": [2717.67, -1405.25, 45.5249],
+      "length": 2.87613,
+      "flags": 0
+    },
+    {
+      "position": [2718.95, -1407.83, 45.4831],
+      "length": 2.28243,
+      "flags": 0
+    },
+    {
+      "position": [2720.16, -1409.76, 45.4024],
+      "length": 2.57064,
+      "flags": 0
+    },
+    {
+      "position": [2721.66, -1411.85, 45.3232],
+      "length": 1.30211,
+      "flags": 0
+    },
+    {
+      "position": [2722.51, -1412.83, 45.2881],
+      "length": 2.58453,
+      "flags": 0
+    },
+    {
+      "position": [2724.45, -1414.54, 45.2553],
+      "length": 1.18512,
+      "flags": 0
+    },
+    {
+      "position": [2725.46, -1415.15, 45.248],
+      "length": 1.1651,
+      "flags": 0
+    },
+    {
+      "position": [2726.48, -1415.71, 45.2464],
+      "length": 1.57707,
+      "flags": 0
+    },
+    {
+      "position": [2727.93, -1416.33, 45.2426],
+      "length": 2.81948,
+      "flags": 0
+    },
+    {
+      "position": [2730.69, -1416.9, 45.2163],
+      "length": 3.6189,
+      "flags": 0
+    },
+    {
+      "position": [2734.28, -1416.42, 45.1934],
+      "length": 3.95088,
+      "flags": 0
+    },
+    {
+      "position": [2738.02, -1415.14, 45.071],
+      "length": 0,
+      "flags": 8,
+      "name": "nb_trolley_track_config_temp"
+    }
+  ]
+}

@@ -1,3 +1,9 @@
+import { MarkerTypes } from '@lib/shared/markers';
+
+function _fv(flt: number) {
+  return flt === 0.0 ? flt : flt + 0.0000001;
+}
+
 export const DrawLine = (
   x1: number,
   y1: number,
@@ -10,7 +16,7 @@ export const DrawLine = (
   blue: number,
   alpha: number,
 ): void => {
-  Citizen.invokeNative('0xb3426bcc', x1, y1, z1, x2, y2, z2, red, green, blue, alpha);
+  Citizen.invokeNative('0xb3426bcc', _fv(x1), _fv(y1), _fv(z1), _fv(x2), _fv(y2), _fv(z2), red, green, blue, alpha);
 };
 
 export const DrawTxt = (
@@ -43,4 +49,57 @@ export const TxtAtWorldCoord = (x: number, y: number, z: number, txt: string, si
     const [h, hx, hy] = GetHudScreenPositionFromWorldPosition(x, y, z);
     DrawTxt(txt, hx, hy, size, true, 255, 255, 255, alpha, true, font); // Font 2 has some symbol conversions ex. @ becomes the rockstar logo
   }
+};
+
+/**
+ * Sphere marker at a world point.
+ *
+ * The engine draws this inside the world, so it is depth-tested against terrain
+ * and buildings. That is the whole reason to reach for it from a tool that
+ * already has a three.js overlay: the overlay has no access to the game's depth
+ * buffer and therefore always draws on top, which is right for track lines but
+ * useless for judging whether a point sits above or below the ground in front
+ * of it.
+ *
+ * p19 and the texture pair are pinned to 0 rather than left to the caller: no
+ * call site in this repo has ever needed a textured or bobbing marker, and the
+ * native's twenty-four positional arguments are the thing worth hiding.
+ */
+export const DrawMarkerSphere = (
+  x: number,
+  y: number,
+  z: number,
+  /** Uniform scale, fed to the native's scaleX/Y/Z. */
+  scale: number,
+  red: number,
+  green: number,
+  blue: number,
+  alpha: number,
+): void => {
+  DrawMarker(
+    MarkerTypes.SPHERE,
+    x,
+    y,
+    z,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    scale,
+    scale,
+    scale,
+    red,
+    green,
+    blue,
+    alpha,
+    false,
+    false,
+    0,
+    false,
+    0,
+    0,
+    false,
+  );
 };

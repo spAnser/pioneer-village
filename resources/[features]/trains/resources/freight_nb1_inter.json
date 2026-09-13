@@ -1,0 +1,102 @@
+{
+  "count": 9,
+  "curveCount": 9,
+  "_type": "open",
+  "source": "freight_nb1_inter",
+  "configName": "freight_nb1_inter",
+  "list": "train",
+  "flags": {
+    "byValue": {
+      "0": 7,
+      "8": 2
+    },
+    "bits": {
+      "8": {
+        "bit": 8,
+        "label": "junction",
+        "count": 2,
+        "nodes": [
+          {
+            "index": 0,
+            "flags": 8,
+            "name": "freight_group"
+          },
+          {
+            "index": 8,
+            "flags": 8,
+            "name": "trains_nb1"
+          }
+        ]
+      }
+    },
+    "unknownMask": 0,
+    "namedWithoutFlags": []
+  },
+  "nodes": [
+    {
+      "position": [2588.54, -1482.19, 45.2241],
+      "handleIn": [2588.54, -1482.19, 45.2241],
+      "handleOut": [2590.46, -1482.06, 45.182],
+      "length": 5.77081,
+      "flags": 8,
+      "name": "freight_group"
+    },
+    {
+      "position": [2594.3, -1481.79, 45.23],
+      "handleIn": [2592.38, -1481.93, 45.2094],
+      "handleOut": [2595.29, -1481.72, 45.2407],
+      "length": 3.0002,
+      "flags": 0
+    },
+    {
+      "position": [2597.28, -1481.48, 45.2254],
+      "handleIn": [2596.29, -1481.6, 45.2331],
+      "handleOut": [2598.27, -1481.36, 45.2177],
+      "length": 2.99148,
+      "flags": 0
+    },
+    {
+      "position": [2600.24, -1481.08, 45.2118],
+      "handleIn": [2599.26, -1481.22, 45.2147],
+      "handleOut": [2601.64, -1480.88, 45.2076],
+      "length": 4.21266,
+      "flags": 0
+    },
+    {
+      "position": [2604.4, -1480.36, 45.1995],
+      "handleIn": [2603.01, -1480.6, 45.2036],
+      "handleOut": [2607.93, -1479.76, 45.1891],
+      "length": 10.7513,
+      "flags": 0
+    },
+    {
+      "position": [2614.94, -1478.24, 45.1577],
+      "handleIn": [2611.42, -1478.95, 45.1723],
+      "handleOut": [2615.67, -1478.1, 45.1547],
+      "length": 2.23884,
+      "flags": 0
+    },
+    {
+      "position": [2617.15, -1477.92, 45.1526],
+      "handleIn": [2616.41, -1478.01, 45.1536],
+      "handleOut": [2618.14, -1477.8, 45.1511],
+      "length": 2.99992,
+      "flags": 0
+    },
+    {
+      "position": [2620.13, -1477.56, 45.1458],
+      "handleIn": [2619.14, -1477.68, 45.1314],
+      "handleOut": [2621.47, -1477.4, 45.1652],
+      "length": 4.04947,
+      "flags": 0
+    },
+    {
+      "position": [2624.16, -1477.2, 45.1535],
+      "handleIn": [2623.85, -1477.17, 45.1594],
+      "handleOut": [2624.16, -1477.2, 45.1535],
+      "length": 0,
+      "flags": 8,
+      "name": "trains_nb1"
+    }
+  ]
+}

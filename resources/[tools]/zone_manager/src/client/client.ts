@@ -1,9 +1,10 @@
-import { FreeCamera, MoveKey } from './camera';
+import { FreeCamera, type FreeCameraMoveKey } from '@lib/client/free-camera';
+import { raycastFromCursor, raycastGroundZ, worldToScreen } from '@lib/client/screen-world';
+
 import { buildExport } from './export';
 import { MarkerRenderer } from './markers';
 import { onNuiCallback, sendToUI } from './nui-bridge';
 import { PointStore } from './point-store';
-import { raycastFromCursor, raycastGroundZ, round2, worldToScreen } from './raycast';
 import { ScreenSmoother } from './screen-smoother';
 
 let menuOpen = false;
@@ -112,17 +113,20 @@ onNuiCallback('set_point_position', (data: ZoneManagerNew.SetPointPositionPayloa
 // recommendation) and reports which axis is being dragged plus a scalar
 // distance-along-that-axis; the actual world-space translation is computed
 // here, once, using the real (unprojected) world axis direction.
-onNuiCallback('drag_point_axis', (data: { index: number; axis: ZoneManagerNew.Axis; delta: number }): ZoneManagerNew.PointsResult => {
-  const p = points.getPoints()[data.index];
-  if (p) {
-    const next = { ...p };
-    next[data.axis] = p[data.axis] + data.delta;
-    // Dragging the Z handle itself is an explicit manual override — ground
-    // snap only reacts to X/Y moving, so it must not immediately fight it.
-    points.setPosition(data.index, data.axis === 'z' ? next : applyGroundSnap(next));
-  }
-  return { points: points.getPoints() };
-});
+onNuiCallback(
+  'drag_point_axis',
+  (data: { index: number; axis: ZoneManagerNew.Axis; delta: number }): ZoneManagerNew.PointsResult => {
+    const p = points.getPoints()[data.index];
+    if (p) {
+      const next = { ...p };
+      next[data.axis] = p[data.axis] + data.delta;
+      // Dragging the Z handle itself is an explicit manual override — ground
+      // snap only reacts to X/Y moving, so it must not immediately fight it.
+      points.setPosition(data.index, data.axis === 'z' ? next : applyGroundSnap(next));
+    }
+    return { points: points.getPoints() };
+  },
+);
 
 // Flat plane drag: same split as drag_point_axis — the NUI reports raw
 // world-space deltas along X and Y (calibrated from the plane handle's own
@@ -204,7 +208,7 @@ onNuiCallback('move_camera', (data: { x: number; y: number; z: number }) => {
 });
 
 onNuiCallback('move_input', (data: ZoneManagerNew.MoveInputPayload) => {
-  camera.setMoveKey(data.key as MoveKey, data.pressed);
+  camera.setMoveKey(data.key as FreeCameraMoveKey, data.pressed);
 });
 
 // Live cursor world-hit feed, throttled to ~50ms. setTick fires every game

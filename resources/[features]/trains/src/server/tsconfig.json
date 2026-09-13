@@ -1,0 +1,12 @@
+{
+  "extends": "../../../../../tsconfig.server.json",
+  "include": [
+    "./",
+    "../../../../../types.d.ts",
+    "../../../../../env.d.ts",
+    "../../../../../socket/src/types.d.ts",
+    "../../../../../socket/src/types/*.d.ts",
+    "../../../../**/src/types.d.ts",
+    "../../../../**/src/server/types.d.ts"
+  ]
+}

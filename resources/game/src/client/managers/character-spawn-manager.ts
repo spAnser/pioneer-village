@@ -42,7 +42,7 @@ class CharacterSpawnManager {
         let scenario = 0;
         if (position === 'wilderness') {
           // GetActiveDynamicScenario
-          scenario = Citizen.invokeNative('0x569F1E1237508DEB', PVGame.playerPed(), Citizen.resultAsInteger());
+          scenario = Citizen.invokeNative('0x569f1e1237508deb', PVGame.playerPed(), Citizen.resultAsInteger());
           if (scenario === 0) {
             scenario = GetHashKey(WildernessScenarios[randomRange(1, WildernessScenarios.length)]);
             console.log('predetermined wilderness scenario', scenario);
@@ -85,7 +85,7 @@ class CharacterSpawnManager {
     let view = new DataView(buffer);
 
     const foundScenarios: number | boolean = Citizen.invokeNative(
-      '0x345EC3B7EBDE1CB5', // GetScenarioPointsInArea
+      '0x345ec3b7ebde1cb5', // GetScenarioPointsInArea
       this.coords.x,
       this.coords.y,
       this.coords.z,
@@ -138,7 +138,7 @@ class CharacterSpawnManager {
 
   isPlayerInsideCity() {
     const ZoneHash: number = Citizen.invokeNative(
-      '0x43AD8FC02B429D33',
+      '0x43ad8fc02b429d33',
       this.coords.x,
       this.coords.y,
       this.coords.z,
