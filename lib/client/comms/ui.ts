@@ -5,6 +5,10 @@ const socketBuffer: Set<any[]> = new Set();
 const awaitBuffer: Map<any[], any> = new Map();
 const focusBuffer: Map<any[], any> = new Map();
 
+export const emitUINotify = (text: string, type: 'success' | 'error' | 'info' = 'info') => {
+  emitUI('notification.notify', text, 3000, type, false);
+};
+
 export const emitUI: UI.emitUI = <T extends keyof ClientIn.FromSocket>(
   evtName: T,
   ...args: Parameters<ClientIn.FromSocket[T]>

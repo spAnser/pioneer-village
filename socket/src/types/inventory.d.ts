@@ -2,6 +2,7 @@
 declare namespace SocketIn {
   interface FromGameServer {
     createInventory: (identifier: string, inventoryType: number, callback: (success: boolean) => void) => void;
+    deleteInventory: (identifier: string, callback: (success: boolean) => void) => void;
     inventoryAddItem: (
       inventoryId: string,
       itemIdentifier: number,

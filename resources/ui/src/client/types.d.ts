@@ -74,8 +74,7 @@ declare namespace ClientIn {
     ['notification.notify']: (
       text: string,
       duration?: number,
-      bgColor?: keyof UI.Theme['colors'],
-      fgColor?: keyof UI.Theme['colors'],
+      type?: UI.Notification.Type,
       centered?: boolean,
     ) => void;
     ['interact.pois']: (pois: UI.Interact.POI[]) => void;
@@ -141,5 +140,20 @@ declare namespace ClientIn {
 
     // Notification events
     ['notification.state']: (state: UI.Notification.State) => void;
+
+    // Banking events
+    ['banking.open']: (data: {
+      tab: 'deposit' | 'withdraw' | 'wire' | 'loan' | 'repay' | 'safetybox';
+      bankId: string;
+      bankName: string;
+      characterId: number;
+      characterName: string;
+      cashOnPerson: number;
+      currentBalance: number;
+      loans: BankLoan.Data[];
+      safetyBox?: BankSafetyBox.Data | null;
+    }) => void;
+    ['banking.close']: () => void;
+    ['banking.update-balance']: (data: { balance: number; cashOnPerson?: number }) => void;
   }
 }

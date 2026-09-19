@@ -2,12 +2,18 @@ import { Socket } from 'socket.io-client';
 
 import { onClient } from '@lib/ui';
 
+// Maximum number of notifications shown at once; the oldest is evicted once exceeded
+const MAX_ACTIVE_NOTIFICATIONS = 3;
+// How long a notification holds on screen before it starts fading out
+const MIN_HOLD_MS = 3000;
+// Must match the CSS opacity transition duration for fade-out
+const FADE_OUT_MS = 1200;
+
 // Store state interface
 interface NotificationState {
   show: boolean;
-  active: boolean;
   notifications: UI.Notification.Notification[];
-  currentNotification: UI.Notification.Notification | null;
+  activeNotifications: UI.Notification.ActiveNotification[];
 }
 
 type StateListener = (state: NotificationState) => void;
@@ -17,16 +23,15 @@ class NotificationStore {
   private socket: Socket<SocketOut.ToClient, SocketIn.FromClient> | null = null;
   private state: NotificationState;
   private listeners = new Set<StateListener>();
-  private activeTimeout: NodeJS.Timeout | null = null;
-  private isProcessing = false;
+  private timeouts = new Map<number, { hide: NodeJS.Timeout; remove?: NodeJS.Timeout }>();
+  private nextId = 1;
   private initialized = false;
 
   private constructor() {
     this.state = {
       show: true,
-      active: false,
       notifications: [],
-      currentNotification: null,
+      activeNotifications: [],
     };
   }
 
@@ -75,15 +80,13 @@ class NotificationStore {
   private handleClientNotification = (
     text: string,
     duration?: number,
-    bgColor?: string,
-    fgColor?: string,
+    type?: UI.Notification.Type,
     centered?: boolean,
   ): void => {
     this.addNotification({
       text,
       duration: duration || 3000,
-      bgColor: bgColor || 'blue',
-      fgColor: fgColor || 'white',
+      type: type || 'info',
       centered: centered || false,
     });
   };
@@ -93,128 +96,109 @@ class NotificationStore {
     this.updateState((prevState) => ({ ...prevState, ...event }));
   };
 
-  // Add a notification to the queue
+  // Add a notification to the stack (newest first, each tracked independently)
   addNotification(notification: UI.Notification.Notification): void {
-    // Ensure defaults are set
-    const completeNotification: UI.Notification.Notification = {
+    const id = this.nextId++;
+    const active: UI.Notification.ActiveNotification = {
       text: notification.text,
       duration: notification.duration || 3000,
-      bgColor: notification.bgColor || 'blue',
-      fgColor: notification.fgColor || 'white',
+      type: notification.type || 'info',
       centered: notification.centered || false,
+      id,
+      active: false,
     };
 
-    this.updateState((prevState) => ({
-      ...prevState,
-      notifications: [...prevState.notifications, completeNotification],
-    }));
-
-    // Process queue if not already processing
-    if (!this.isProcessing) {
-      this.processNextNotification();
-    }
-  }
-
-  // Process the next notification in the queue
-  private processNextNotification(): void {
-    if (this.isProcessing || this.state.notifications.length === 0) {
-      return;
-    }
-
-    this.isProcessing = true;
-
     this.updateState((prevState) => {
-      const notifications = [...prevState.notifications];
-      const notification = notifications.shift();
+      const activeNotifications = [active, ...prevState.activeNotifications];
 
-      if (!notification) {
-        this.isProcessing = false;
-        return prevState;
+      // Evict the oldest notification(s) once the stack exceeds the max size
+      while (activeNotifications.length > MAX_ACTIVE_NOTIFICATIONS) {
+        const evicted = activeNotifications.pop();
+        if (evicted) {
+          this.clearTimeoutsFor(evicted.id);
+        }
       }
-
-      // Clear any existing timeout
-      if (this.activeTimeout) {
-        clearTimeout(this.activeTimeout);
-        this.activeTimeout = null;
-      }
-
-      // Set timeout to hide the notification
-      this.activeTimeout = setTimeout(() => {
-        this.hideCurrentNotification();
-      }, notification.duration);
 
       return {
         ...prevState,
-        notifications,
-        currentNotification: notification,
-        active: true,
+        activeNotifications,
       };
     });
+
+    // Fade in on the next tick so the mount-time opacity:0 has a chance to paint first
+    setTimeout(() => {
+      this.updateState((prevState) => ({
+        ...prevState,
+        activeNotifications: prevState.activeNotifications.map((n) => (n.id === id ? { ...n, active: true } : n)),
+      }));
+    }, 0);
+
+    // Schedule this notification's own fade-out, independent of the others
+    const hide = setTimeout(() => {
+      this.hideNotificationById(id);
+    }, Math.max(active.duration, MIN_HOLD_MS));
+
+    this.timeouts.set(id, { hide });
   }
 
-  // Hide the current notification and process the next one
-  private hideCurrentNotification(): void {
+  // Start fading out a single notification by id
+  private hideNotificationById(id: number): void {
     this.updateState((prevState) => ({
       ...prevState,
-      active: false,
-      currentNotification: null,
+      activeNotifications: prevState.activeNotifications.map((n) => (n.id === id ? { ...n, active: false } : n)),
     }));
 
-    // Clear timeout reference
-    if (this.activeTimeout) {
-      clearTimeout(this.activeTimeout);
-      this.activeTimeout = null;
+    // Remove it from the stack once the fade-out transition finishes
+    const remove = setTimeout(() => {
+      this.updateState((prevState) => ({
+        ...prevState,
+        activeNotifications: prevState.activeNotifications.filter((n) => n.id !== id),
+      }));
+      this.timeouts.delete(id);
+    }, FADE_OUT_MS);
+
+    const existing = this.timeouts.get(id);
+    if (existing) {
+      existing.remove = remove;
     }
+  }
 
-    this.isProcessing = false;
-
-    // Process next notification after a brief delay
-    setTimeout(() => {
-      this.processNextNotification();
-    }, 100);
+  // Clear any pending timers for a given notification id
+  private clearTimeoutsFor(id: number): void {
+    const existing = this.timeouts.get(id);
+    if (existing) {
+      clearTimeout(existing.hide);
+      if (existing.remove) {
+        clearTimeout(existing.remove);
+      }
+      this.timeouts.delete(id);
+    }
   }
 
   // Clear all notifications
   clearNotifications(): void {
-    // Clear any active timeout
-    if (this.activeTimeout) {
-      clearTimeout(this.activeTimeout);
-      this.activeTimeout = null;
-    }
-
-    this.isProcessing = false;
+    this.timeouts.forEach(({ hide, remove }) => {
+      clearTimeout(hide);
+      if (remove) clearTimeout(remove);
+    });
+    this.timeouts.clear();
 
     this.updateState((prevState) => ({
       ...prevState,
       notifications: [],
-      currentNotification: null,
-      active: false,
+      activeNotifications: [],
     }));
   }
 
-  // Remove a specific notification from the queue
-  removeNotification(index: number): void {
-    this.updateState((prevState) => ({
-      ...prevState,
-      notifications: prevState.notifications.filter((_, i) => i !== index),
-    }));
-  }
-
-  // Skip the current notification
-  skipCurrent(): void {
-    if (this.state.currentNotification) {
-      this.hideCurrentNotification();
-    }
-  }
-
-  // Get the number of queued notifications
-  getQueueLength(): number {
-    return this.state.notifications.length;
+  // Skip (immediately start fading out) a specific active notification
+  skipNotification(id: number): void {
+    this.clearTimeoutsFor(id);
+    this.hideNotificationById(id);
   }
 
   // Check if there's an active notification
   hasActiveNotification(): boolean {
-    return this.state.active && this.state.currentNotification !== null;
+    return this.state.activeNotifications.length > 0;
   }
 
   // Toggle notification visibility
@@ -228,16 +212,14 @@ class NotificationStore {
     text: string,
     options?: {
       duration?: number;
-      bgColor?: string;
-      fgColor?: string;
+      type?: UI.Notification.Type;
       centered?: boolean;
     },
   ): void {
     this.addNotification({
       text,
       duration: options?.duration || 3000,
-      bgColor: options?.bgColor || 'blue',
-      fgColor: options?.fgColor || 'white',
+      type: options?.type || 'info',
       centered: options?.centered || false,
     });
   }
@@ -247,8 +229,7 @@ class NotificationStore {
     this.addNotification({
       text,
       duration: duration || 3000,
-      bgColor: 'green',
-      fgColor: 'white',
+      type: 'success',
       centered: centered || false,
     });
   }
@@ -258,19 +239,7 @@ class NotificationStore {
     this.addNotification({
       text,
       duration: duration || 5000,
-      bgColor: 'red',
-      fgColor: 'white',
-      centered: centered || false,
-    });
-  }
-
-  // Create notification with warning styling
-  notifyWarning(text: string, duration?: number, centered?: boolean): void {
-    this.addNotification({
-      text,
-      duration: duration || 4000,
-      bgColor: 'yellow',
-      fgColor: 'black',
+      type: 'error',
       centered: centered || false,
     });
   }
@@ -280,26 +249,9 @@ class NotificationStore {
     this.addNotification({
       text,
       duration: duration || 3000,
-      bgColor: 'blue',
-      fgColor: 'white',
+      type: 'info',
       centered: centered || false,
     });
-  }
-
-  // Show notification (sets active to true)
-  showNotification(): void {
-    this.updateState((prevState) => ({
-      ...prevState,
-      active: true,
-    }));
-  }
-
-  // Hide notification (sets active to false)
-  hideNotification(): void {
-    this.updateState((prevState) => ({
-      ...prevState,
-      active: false,
-    }));
   }
 
   // Update state helper with callback support
@@ -334,23 +286,22 @@ class NotificationStore {
 
   // Cleanup when store is destroyed
   cleanup(): void {
-    // Clear any active timeout
-    if (this.activeTimeout) {
-      clearTimeout(this.activeTimeout);
-      this.activeTimeout = null;
-    }
+    // Clear all pending timers
+    this.timeouts.forEach(({ hide, remove }) => {
+      clearTimeout(hide);
+      if (remove) clearTimeout(remove);
+    });
+    this.timeouts.clear();
 
     // Clear all listeners
     this.listeners.clear();
-    this.isProcessing = false;
     this.initialized = false;
 
     // Reset to initial state
     this.state = {
       show: true,
-      active: false,
       notifications: [],
-      currentNotification: null,
+      activeNotifications: [],
     };
   }
 }

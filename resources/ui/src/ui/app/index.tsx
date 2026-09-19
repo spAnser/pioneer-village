@@ -4,6 +4,7 @@ import { Socket } from 'socket.io-client';
 import { emitClient, onClient } from '@lib/ui';
 
 import App from './app';
+import BankingController from './controllers/banking';
 import BaseController from './controllers/base';
 import CarrierPigeonsController from './controllers/carrier-birds';
 import CharacterSelectController from './controllers/character-select';
@@ -14,6 +15,7 @@ import JobsController from './controllers/jobs';
 import StableController from './controllers/stable';
 import WeatherController from './controllers/weather';
 import animationsStore from './stores/animations-store';
+import bankingStore from './stores/banking-store';
 import birdStore from './stores/bird-store';
 import characterSelectStore from './stores/character-select-store';
 import chatStore from './stores/chat-store';
@@ -32,6 +34,7 @@ import threejsStore from './stores/threejs-store';
 export default (socket: Socket<UISocketEvents, SocketServer.Client & SocketServer.ClientEvents>) => {
   // Initialize all stores before rendering
   animationsStore.initialize(socket);
+  bankingStore.initialize(socket);
   birdStore.initialize(socket);
   characterSelectStore.initialize(socket);
   chatStore.initialize(socket);
@@ -77,6 +80,7 @@ export default (socket: Socket<UISocketEvents, SocketServer.Client & SocketServe
   InventoryController(socket);
   JobsController(socket);
   CarrierPigeonsController(socket);
+  BankingController(socket);
   StableController(socket);
   WeatherController(socket);
   BaseController(socket);

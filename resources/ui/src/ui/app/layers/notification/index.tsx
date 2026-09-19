@@ -1,6 +1,15 @@
 import { useState, useEffect } from 'react';
+import CheckCircle from '@fa/5/solid/check-circle.svg';
+import TimesCircle from '@fa/5/solid/times-circle.svg';
+import InfoCircle from '@fa/5/solid/info-circle.svg';
 import notificationStore from '../../stores/notification-store';
 import styles from './styles.module.scss';
+
+const typeIcons: Record<UI.Notification.Type, typeof CheckCircle> = {
+  success: CheckCircle,
+  error: TimesCircle,
+  info: InfoCircle,
+};
 
 export default function Notification() {
   const [state, setState] = useState(notificationStore.getState());
@@ -10,57 +19,22 @@ export default function Notification() {
     return unsubscribe;
   }, []);
 
-  useEffect(() => {
-    // Store handles all events
-  }, []);
-
-  useEffect(() => {
-    handleActive();
-  }, [state.notifications, state.active]);
-
-  const handleActive = () => {
-    if (state.active) {
-      return;
-    }
-    const notification = state.notifications[0];
-    if (!notification) {
-      return;
-    }
-    notificationStore.showNotification();
-    setTimeout(() => {
-      notificationStore.hideNotification();
-    }, notification.duration);
-  };
-
-  // Map color names to CSS variables
-  const getColorVar = (color: string) => {
-    const colorMap: { [key: string]: string } = {
-      blue: 'var(--theme-primary)',
-      white: 'var(--theme-white)',
-      red: 'var(--theme-danger)',
-      green: 'var(--theme-success)',
-      yellow: 'var(--theme-warning)',
-      black: 'var(--theme-black)',
-      gray: 'var(--theme-gray)',
-    };
-    return colorMap[color] || color;
-  };
-
   return (
-    <>
-      {state.currentNotification && (
-        <div
-          className={`${styles.notif} ${state.active ? 'active' : ''}${
-            state.currentNotification.centered ? ' centered' : ''
-          }`}
-          style={{
-            backgroundColor: getColorVar(state.currentNotification.bgColor),
-            color: getColorVar(state.currentNotification.fgColor),
-          }}
-        >
-          {state.currentNotification.text}
-        </div>
-      )}
-    </>
+    <div className={styles.stack}>
+      {state.activeNotifications.map((notification) => {
+        const Icon = typeIcons[notification.type];
+        return (
+          <div
+            key={notification.id}
+            className={`${styles.notif} ${styles[notification.type]} ${notification.active ? styles.active : ''}${
+              notification.centered ? ` ${styles.centered}` : ''
+            }`}
+          >
+            <Icon className={styles.icon} />
+            {notification.text}
+          </div>
+        );
+      })}
+    </div>
   );
 }

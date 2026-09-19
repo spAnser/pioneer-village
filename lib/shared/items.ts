@@ -973,6 +973,54 @@ const PVItems: Record<number, Inventory.Item> = {
     stackSize: 1,
     weight: 0.1,
   },
+  /**
+   * Rare Earth Minerals
+   */
+  [GetHashKey('PV_GOLD_NUGGET')]: {
+    identifier: GetHashKey('PV_GOLD_NUGGET'),
+    image: 'gold-nugget',
+    name: 'Gold Nugget',
+    flags: ItemFlags.MATERIAL,
+    restriction: Restrictions.Tiny,
+    stackSize: 20,
+    weight: 0.3,
+  },
+  [GetHashKey('PV_SILVER_ORE')]: {
+    identifier: GetHashKey('PV_SILVER_ORE'),
+    image: 'silver-ore',
+    name: 'Silver Ore',
+    flags: ItemFlags.MATERIAL,
+    restriction: Restrictions.Tiny,
+    stackSize: 20,
+    weight: 0.4,
+  },
+  [GetHashKey('PV_DIAMOND')]: {
+    identifier: GetHashKey('PV_DIAMOND'),
+    image: 'diamond',
+    name: 'Diamond',
+    flags: ItemFlags.MATERIAL,
+    restriction: Restrictions.Tiny,
+    stackSize: 10,
+    weight: 0.1,
+  },
+  [GetHashKey('PV_RUBY')]: {
+    identifier: GetHashKey('PV_RUBY'),
+    image: 'ruby',
+    name: 'Ruby',
+    flags: ItemFlags.MATERIAL,
+    restriction: Restrictions.Tiny,
+    stackSize: 10,
+    weight: 0.1,
+  },
+  [GetHashKey('PV_EMERALD')]: {
+    identifier: GetHashKey('PV_EMERALD'),
+    image: 'emerald',
+    name: 'Emerald',
+    flags: ItemFlags.MATERIAL,
+    restriction: Restrictions.Tiny,
+    stackSize: 10,
+    weight: 0.1,
+  },
 };
 
 export default PVItems;

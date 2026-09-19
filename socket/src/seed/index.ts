@@ -58,7 +58,7 @@ export const seedDB = async () => {
             lastZ: data.character.lastZ?.toString() || '0.0',
             food: data.character.food?.toString() || '100.0',
             drink: data.character.drink?.toString() || '100.0',
-            currencies: data.character.currencies || { dollars: 20, gold: 0 },
+            currencies: data.character.currencies || { gold: 0 },
             healthMetadata: data.character.healthMetadata || {
               health: 100,
               stamina: 100,

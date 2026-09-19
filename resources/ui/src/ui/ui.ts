@@ -26,7 +26,6 @@ setTimeout(async () => {
 
   let isReconnecting = false;
   let reconnectAttempts = 0;
-  const maxReconnectAttempts = 5;
 
   const reconnect = async () => {
     // Check if we should attempt reconnection
@@ -35,19 +34,16 @@ setTimeout(async () => {
       return;
     }
 
+    isReconnecting = true;
+
     while (true) {
       if (socket.connected) break;
-      if (reconnectAttempts >= maxReconnectAttempts) {
-        console.error(`Failed to connect after ${maxReconnectAttempts} attempts`);
-        break;
-      }
 
-      isReconnecting = true;
       reconnectAttempts++;
 
-      console.log(`Attempting reconnection ${reconnectAttempts}/${maxReconnectAttempts}...`);
+      console.log(`Attempting reconnection ${reconnectAttempts}...`);
 
-      // Wait before attempting reconnection (exponential backoff)
+      // Wait before attempting reconnection (exponential backoff, capped)
       const delay = Math.min(1000 * Math.pow(2, reconnectAttempts - 1), 10000);
       console.log(`Waiting ${delay}ms before next reconnection attempt...`);
       await new Promise((res) => setTimeout(res, delay));
@@ -65,10 +61,10 @@ setTimeout(async () => {
         }
       } catch (error) {
         console.error('Failed to get socket details:', error);
-      } finally {
-        isReconnecting = false;
       }
     }
+
+    isReconnecting = false;
   };
 
   socket.on('connect_error', async (e) => {

@@ -1,3 +1,4 @@
+import BankingController from './controllers/banking';
 import JobsController from './controllers/jobs';
 import PigeonController from './controllers/birds';
 import CharacterController from './controllers/characters';
@@ -24,6 +25,7 @@ InventoryController();
 StableController();
 WorldController();
 PigeonController();
+BankingController();
 JobsController();
 WeatherController();
 

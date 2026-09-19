@@ -136,6 +136,7 @@ declare namespace Jobs {
     amount: string;
     reason: string;
     jobHandle: string;
+    bankId: string;
     redeemed: boolean;
     createdAt: number;
   }

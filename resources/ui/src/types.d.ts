@@ -224,18 +224,23 @@ declare namespace UI.Form {
 }
 
 declare namespace UI.Notification {
+  type Type = 'success' | 'error' | 'info';
+
   interface Notification {
     text: string;
     duration: number;
-    bgColor: keyof UI.Theme['colors'];
-    fgColor: keyof UI.Theme['colors'];
+    type: Type;
     centered?: boolean;
   }
 
-  interface State extends UI.BaseState {
+  interface ActiveNotification extends Notification {
+    id: number;
     active: boolean;
+  }
+
+  interface State extends UI.BaseState {
     notifications: Notification[];
-    currentNotification: Notification | null;
+    activeNotifications: ActiveNotification[];
   }
 
   type Event = Partial<State>;

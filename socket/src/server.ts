@@ -44,6 +44,11 @@ export const userNamespace: Namespace<SocketIn.FromClient, SocketOut.ToClient> =
   .use(requireUuid)
   .use(logAll);
 
+// Each controller registers one 'connection' listener per namespace.
+// Set a generous limit so Node doesn't warn as more controllers are added.
+serverNamespace.setMaxListeners(50);
+userNamespace.setMaxListeners(50);
+
 // setTimeout(() => {
 //   console.log('Shutting down server after 1 second for testing purposes');
 //   process.exit();

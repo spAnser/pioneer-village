@@ -1,3 +1,4 @@
+export { default as bankingStore } from './banking-store';
 // Export all stores from a central location
 export { default as inventoryStore } from './inventory-store';
 export { default as chatStore } from './chat-store';

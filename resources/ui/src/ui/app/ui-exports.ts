@@ -26,8 +26,7 @@ export const notify = (
   text: string,
   options?: {
     duration?: number;
-    bgColor?: string;
-    fgColor?: string;
+    type?: UI.Notification.Type;
     centered?: boolean;
   }
 ) => {
@@ -46,13 +45,6 @@ export const notifySuccess = (text: string, duration?: number, centered?: boolea
  */
 export const notifyError = (text: string, duration?: number, centered?: boolean) => {
   notificationStore.notifyError(text, duration, centered);
-};
-
-/**
- * Send a warning notification
- */
-export const notifyWarning = (text: string, duration?: number, centered?: boolean) => {
-  notificationStore.notifyWarning(text, duration, centered);
 };
 
 /**
