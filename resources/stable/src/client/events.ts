@@ -195,11 +195,11 @@ PVGameEvents.register('EVENT_PED_WHISTLE', (data) => {
   console.log('EVENT_PED_WHISTLE', data);
   const playerPed = PlayerPedId();
 
-  if (data._0 !== playerPed) {
+  if (data.ped !== playerPed) {
     return;
   }
 
-  stableController.whistleLastOrNearby(data._1);
+  stableController.whistleLastOrNearby(data.whistleType);
 });
 
 // Generate random point within the scaled quadrilateral using triangulation

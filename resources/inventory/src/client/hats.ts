@@ -15,7 +15,7 @@ const registerEvents = () => {
     console.log(`EVENT_PLAYER_HAT_KNOCKED_OFF: Hat ${hat} knocked off by ${data.causePed} on player ${player}`);
 
     setTimeout(() => {
-      const coords = Vector3.fromArray(GetEntityCoords(hat, false));
+      const coords = Vector3.fromArray(GetEntityCoords(hat, false, false));
 
       const hatNetId = NetworkGetNetworkIdFromEntity(hat);
 

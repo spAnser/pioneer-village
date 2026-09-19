@@ -1,8 +1,8 @@
 import { exports } from '@lib/client';
 
 import timeManager from '../shared/managers/time-manager';
-import { EventName } from './catalog';
-import eventPoller, { EventData } from './managers/event-poller';
+import type { EventName } from './catalog';
+import eventPoller, { type EventData } from './managers/event-poller';
 import keyManager from './managers/key-manager';
 import stateManager from './managers/state-bag-manager';
 

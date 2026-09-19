@@ -45,10 +45,12 @@ const decodeEventNative = (group: number, index: number, size: number): number[]
   return fields;
 };
 
-type EventFields<T extends EventName> = (typeof EVENT_CATALOG)[T]['fields'];
-export type EventData<T extends EventName> = EventFields<T> extends undefined
-  ? number[]
-  : { [K in keyof EventFields<T>]: number };
+// Catalog entries without a `fields` mapping decode to the raw int32 array;
+// entries with one decode to a named view of it. Matched with `infer` rather
+// than indexing `['fields']`, since that key only exists on some entries.
+export type EventData<T extends EventName> = (typeof EVENT_CATALOG)[T] extends { fields: infer F }
+  ? { [K in keyof F]: number }
+  : number[];
 
 type Listener = (data: unknown) => void;
 

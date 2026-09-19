@@ -4,8 +4,8 @@ import healthManager from '../managers/health-manager';
 
 const registerEvents = () => {
   PVGameEvents.register('EVENT_ENTITY_DAMAGED', (data) => {
-    const { attacked, attacker, weaponHash, ammoHash, damage, x, y, z } = data;
-    healthManager.handleDamageEvent(attacker, attacked, weaponHash, ammoHash, x, y, z);
+    const { attacked, damager, weaponHash, ammoHash, damage, x, y, z } = data;
+    healthManager.handleDamageEvent(damager, attacked, weaponHash, ammoHash, x, y, z);
   });
 };
 

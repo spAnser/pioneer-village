@@ -883,7 +883,7 @@ class StableController {
     }
 
     for (const [provision, texture] of pelts.slice(-3)) {
-      Citizen.invokeNative('0xc412aa1c73111fe0', horsePed, provision, texture, 0, 0);
+      Citizen.invokeNative('0xc412aa1c73111fe0', horsePed, provision, texture, 0, false);
     }
   }
 

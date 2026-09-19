@@ -1,198 +1,25 @@
 import { PVEvents } from '@lib/client/resources';
 
-const callbacks = new Map();
+/**
+ * Derived player-state events, broadcast by the events resource's
+ * PlayerStateManager rather than pulled from a game event queue. They have no
+ * catalog entry, so their field names live here - listed in the order the
+ * manager packs its payload array (see the `events:weapon` emit in
+ * `resources/[core]/events/src/client/managers/player-state-manager.ts`).
+ */
+const derivedEventFields = {
+  weapon: ['mainHand', 'offHand'],
+} as const satisfies Record<string, readonly string[]>;
 
-type EventMappingData = { [p: string]: 'i' | 'f' };
+type DerivedEventName = keyof typeof derivedEventFields;
 
-const eventMappings = {
-  EVENT_ENTITY_DAMAGED: {
-    attacked: 'i',
-    attacker: 'i',
-    weaponHash: 'i',
-    ammoHash: 'i',
-    damage: 'f',
-    _5: 'i',
-    x: 'f',
-    y: 'f',
-    z: 'f',
-  },
-  EVENT_ENTITY_DESTROYED: {
-    attacked: 'i',
-    attacker: 'i',
-    weaponHash: 'i',
-    ammoHash: 'i',
-    damage: 'f',
-    _5: 'i',
-    x: 'f',
-    y: 'f',
-    z: 'f',
-  },
-  EVENT_ENTITY_EXPLOSION: {
-    pedOrigin: 'i',
-    _1: 'i',
-    weaponHash: 'i',
-    x: 'f',
-    y: 'f',
-    z: 'f',
-  },
-  EVENT_PLAYER_HAT_KNOCKED_OFF: {
-    originPed: 'i',
-    causePed: 'i',
-    hat: 'i',
-    _3: 'i',
-    _4: 'i',
-  },
-  EVENT_CARRIABLE_UPDATE_CARRY_STATE: {
-    carriable: 'i',
-    ped: 'i',
-    ped2: 'i',
-    _3: 'i',
-    dropped: 'i',
-  },
-  // {name = 'EVENT_PICKUP_CARRIABLE', group = 0, size = 4},
-  EVENT_PICKUP_CARRIABLE: {
-    ped: 'i',
-    carriable: 'i',
-    fromEntity: 'i',
-    entity: 'i',
-  },
-  // {name = 'EVENT_PED_ANIMAL_INTERACTION', group = 0, size = 3},
-  EVENT_PED_ANIMAL_INTERACTION: {
-    _0: 'i',
-    _1: 'i',
-    _2: 'i',
-  },
-  // {name = 'EVENT_PLACE_CARRIABLE_ONTO_PARENT', group = 0, size = 6},
-  EVENT_PLACE_CARRIABLE_ONTO_PARENT: {
-    ped: 'i',
-    carriable: 'i',
-    parent: 'i',
-    slot: 'i',
-    subSlot: 'i',
-    provision: 'i',
-  },
-  // {name = 'EVENT_LOOT', group = 0, size = 38},
-  EVENT_LOOT: {
-    _0: 'i',
-    _1: 'i',
-    _2: 'i',
-    _3: 'i',
-    _4: 'i',
-    _5: 'i',
-    _6: 'i',
-    _7: 'i',
-    _8: 'i',
-    _9: 'i',
-    _10: 'i',
-    _11: 'i',
-    _12: 'i',
-    _13: 'i',
-    _14: 'i',
-    _15: 'i',
-    _16: 'i',
-    _17: 'i',
-    _18: 'i',
-    _19: 'i',
-    _20: 'i',
-    _21: 'i',
-    _22: 'i',
-    _23: 'i',
-    _24: 'i',
-    _25: 'i',
-    _26: 'i',
-    _27: 'i',
-    _28: 'i',
-    _29: 'i',
-    _30: 'i',
-    _31: 'i',
-    _32: 'i',
-    _33: 'i',
-    _34: 'i',
-    _35: 'i',
-    _36: 'i',
-    _37: 'i',
-  },
-  // {name = 'EVENT_LOOT_COMPLETE', group = 0, size = 3},
-  EVENT_LOOT_COMPLETE: {
-    playerPed: 'i',
-    entity: 'i',
-    _2: 'i',
-  },
-  // {name = 'EVENT_LOOT_PLANT_START', group = 0, size = 36},
-  EVENT_LOOT_PLANT_START: {
-    _0: 'i',
-    _1: 'i',
-    _2: 'i',
-    _3: 'i',
-    _4: 'i',
-    _5: 'i',
-    _6: 'i',
-    _7: 'i',
-    _8: 'i',
-    _9: 'i',
-    _10: 'i',
-    _11: 'i',
-    _12: 'i',
-    _13: 'i',
-    _14: 'i',
-    _15: 'i',
-    _16: 'i',
-    _17: 'i',
-    _18: 'i',
-    _19: 'i',
-    _20: 'i',
-    _21: 'i',
-    _22: 'i',
-    _23: 'i',
-    _24: 'i',
-    _25: 'i',
-    _26: 'i',
-    _27: 'i',
-    _28: 'i',
-    _29: 'i',
-    _30: 'i',
-    _31: 'i',
-    _32: 'i',
-    _33: 'i',
-    _34: 'i',
-    _35: 'i',
-  },
-  // {name = 'EVENT_LOOT_VALIDATION_FAIL', group = 0, size = 2},
-  EVENT_LOOT_VALIDATION_FAIL: {
-    _0: 'i',
-    _1: 'i',
-  },
-  EVENT_PLAYER_HAT_EQUIPPED: {
-    ped: 'i',
-    hat: 'i',
-    _2: 'i',
-    _3: 'i',
-    _4: 'i',
-    _5: 'i',
-    palette: 'i',
-    tint0: 'i',
-    tint1: 'i',
-    tint2: 'i',
-  },
-  EVENT_PED_WHISTLE: {
-    _0: 'i',
-    _1: 'i',
-  },
-  // size = 1: the ped who fired the shot
-  EVENT_SHOT_FIRED_BULLET_IMPACT: {
-    shooter: 'i',
-  },
-  // size = 3: crime entity + two unknown fields
-  EVENT_CRIME_CONFIRMED: {
-    ped: 'i',
-    _1: 'i',
-    _2: 'i',
-  },
-  weapon: {
-    mainHand: 'i',
-    offHand: 'i',
-  },
+type DerivedEventData = {
+  [K in DerivedEventName]: Record<(typeof derivedEventFields)[K][number], number>;
 };
+
+type DerivedListener = (data: unknown) => void;
+
+const callbacks = new Map<DerivedEventName, DerivedListener[]>();
 
 // type emitSocket = <T extends keyof SocketServer.ServerEvents>(
 //   evtName: T,
@@ -208,23 +35,32 @@ const eventMappings = {
 //   ...params: DropLastParam<SocketServer.Server[T]>
 // ) => Promise<Parameters<LastParam<SocketServer.Server[T]>>[0]>;
 
+/**
+ * Every event `register` accepts, keyed by event name.
+ *
+ * Raw game event shapes come straight from the events resource's catalog
+ * (`resources/[core]/events/src/client/catalog.ts`), which is the single
+ * source of truth for field names, indices and types - the same mapping the
+ * event poller decodes with. Never mirror those field names here.
+ */
 export type EventData = {
-  [K in keyof typeof eventMappings]: Record<keyof (typeof eventMappings)[K], number>;
-};
+  [K in Events.EventName]: Events.EventData<K>;
+} & DerivedEventData;
 
-// Derived player-state events (from events' PlayerStateManager) aren't raw
-// game events, so they're not registered through the events resource's game
-// event poller - they're plain broadcasts consumers subscribe to directly.
-const DERIVED_STATE_EVENTS = new Set(['weapon']);
+export type EventName = keyof EventData;
 
-function register<T extends keyof typeof eventMappings>(
-  event: T,
-  callback: (data: Record<keyof (typeof eventMappings)[T], number>) => void,
-) {
-  if (DERIVED_STATE_EVENTS.has(event as string)) {
-    if (!callbacks.has(event)) {
-      callbacks.set(event, []);
-      const fieldNames = Object.keys(eventMappings[event]);
+const isDerivedEvent = (event: EventName): event is DerivedEventName => event in derivedEventFields;
+
+function register<T extends EventName>(event: T, callback: (data: EventData[T]) => void): void {
+  if (isDerivedEvent(event)) {
+    let listeners = callbacks.get(event);
+
+    if (!listeners) {
+      listeners = [];
+      callbacks.set(event, listeners);
+
+      const fieldNames: readonly string[] = derivedEventFields[event];
+
       on(`events:${event}`, (dataArray: number[]): void => {
         const data: Record<string, number> = {};
         fieldNames.forEach((name, n) => {
@@ -235,7 +71,8 @@ function register<T extends keyof typeof eventMappings>(
         }
       });
     }
-    callbacks.get(event).push(callback);
+
+    listeners.push(callback as DerivedListener);
     return;
   }
 

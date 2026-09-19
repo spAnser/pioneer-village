@@ -640,9 +640,11 @@ class FishingManager {
 
     if (isFishingContext && this.controlContext !== 'MinigameFishing') {
       SetControlContext(0, GetHashKey('MinigameFishing'));
+      console.log('SetControlContext', 'MinigameFishing');
       this.controlContext = 'MinigameFishing';
     } else if (!isFishingContext && this.controlContext !== 'OnFoot') {
       SetControlContext(0, GetHashKey('OnFoot'));
+      console.log('SetControlContext', 'OnFoot');
       this.controlContext = 'OnFoot';
     }
 
