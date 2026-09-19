@@ -4,7 +4,6 @@ const exports: ClientExports = global.exports;
 export const PVInit = exports['init'];
 export const PVBase = exports['base'];
 export const PVCamera = exports['camera'];
-export const PVEventsManager = exports['events_manager'];
 export const PVEvents = exports['events'];
 export const PVGame = exports['game'];
 export const PVHealth = exports['health'];

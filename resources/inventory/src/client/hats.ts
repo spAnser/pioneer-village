@@ -4,15 +4,15 @@ import { Vector3 } from '@lib/math';
 
 const registerEvents = () => {
   PVGameEvents.register('EVENT_PLAYER_HAT_KNOCKED_OFF', (data) => {
-    const { originPed, hat } = data;
+    const { player, hat } = data;
 
-    if (!originPed || !hat || originPed !== PVGame.playerPed()) {
+    if (!player || !hat || player !== PVGame.playerPed()) {
       return;
     }
 
     BlockPickupObjectLight(hat, true);
 
-    console.log(`EVENT_PLAYER_HAT_KNOCKED_OFF: Hat ${hat} knocked off by ${data.causePed} on player ${originPed}`);
+    console.log(`EVENT_PLAYER_HAT_KNOCKED_OFF: Hat ${hat} knocked off by ${data.causePed} on player ${player}`);
 
     setTimeout(() => {
       const coords = Vector3.fromArray(GetEntityCoords(hat, false));
@@ -24,13 +24,13 @@ const registerEvents = () => {
   });
 
   PVGameEvents.register('EVENT_PLAYER_HAT_EQUIPPED', (data) => {
-    const { ped, hat } = data;
+    const { player, hat } = data;
 
-    if (!ped || !hat || ped !== PVGame.playerPed()) {
+    if (!player || !hat || player !== PVGame.playerPed()) {
       return;
     }
 
-    console.log(`EVENT_PLAYER_HAT_EQUIPPED: Hat ${hat} equipped on player ${ped}`);
+    console.log(`EVENT_PLAYER_HAT_EQUIPPED: Hat ${hat} equipped on player ${player}`);
 
     // const hatNetId = NetworkGetNetworkIdFromEntity(hat);
 
@@ -42,11 +42,11 @@ const registerEvents = () => {
 
 on('onResourceStart', (resourceName: string) => {
   // Events Resource Starts
-  if (resourceName === 'events_manager') {
+  if (resourceName === 'events') {
     registerEvents();
   }
 });
 
-if (GetResourceState('events_manager') === 'started') {
+if (GetResourceState('events') === 'started') {
   registerEvents();
 }

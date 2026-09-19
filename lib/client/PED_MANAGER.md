@@ -146,7 +146,7 @@ Events must be mapped in `lib/client/events.ts` (`eventMappings`) to be usable a
 | `EVENT_CRIME_CONFIRMED` | `ped` |
 | `EVENT_LOOT_COMPLETE` | `playerPed`, `entity` |
 
-To add a new event, add its field mapping to `eventMappings` in `lib/client/events.ts`. The size (number of fields) can be found in `resources/[core]/events_manager/client/handler.lua`.
+To add a new event, add its field mapping to `eventMappings` in `lib/client/events.ts`. The event's group and field count are defined in `resources/[core]/events/src/client/catalog.ts`.
 
 ---
 

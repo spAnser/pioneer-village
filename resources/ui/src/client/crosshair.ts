@@ -33,16 +33,16 @@ const checkAiming = (isAiming: boolean) => {
   }
 };
 
-on('events_manager:aimingInAir', (isAimingInAir: boolean) => {
+on('events:aimingInAir', (isAimingInAir: boolean) => {
   aimingInAir = isAimingInAir;
   checkAiming(wasAiming);
 });
 
-on('events_manager:aiming', (isAiming: boolean) => {
+on('events:aiming', (isAiming: boolean) => {
   checkAiming(isAiming);
 });
 
-on('events_manager:weapon', ([mainHand, offHand]: [number, number]) => {
+on('events:weapon', ([mainHand, offHand]: [number, number]) => {
   currentWeapon = mainHand;
   checkAiming(wasAiming);
 });

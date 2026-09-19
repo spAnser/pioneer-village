@@ -94,16 +94,31 @@
     user-select: none;
   }
 
+  .icons {
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: mixins.uiSize(3);
+    border-bottom-left-radius: mixins.uiSize(3);
+    overflow: hidden;
+  }
+
   i {
     display: inline-block;
     padding: mixins.uiSize(5) mixins.uiSize(5);
     vertical-align: top;
-    border-top-left-radius: mixins.uiSize(3);
-    border-bottom-left-radius: mixins.uiSize(3);
 
     &[data-source='server'] {
       background-color: #fff;
       color: #000;
+    }
+  }
+
+  .copyIcon {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
     }
   }
 
@@ -123,6 +138,8 @@
   }
 
   pre {
+    flex: 1;
+    min-width: 0;
     margin: 0;
     padding-top: mixins.uiSize(3);
     padding-bottom: mixins.uiSize(3);
@@ -161,11 +178,18 @@
   width: 10vw;
 
   display: flex;
+  flex-direction: column;
   gap: mixins.uiSize(3);
   margin-top: mixins.uiSize(16);
-  flex-wrap: wrap;
 
   user-select: none;
+}
+
+.filterControls,
+.filterResources {
+  display: flex;
+  gap: mixins.uiSize(3);
+  flex-wrap: wrap;
 }
 
 .filterItem {
@@ -183,6 +207,30 @@
 
   &.red {
     background-color: var(--theme-danger);
+
+    svg {
+      color: var(--theme-white);
+    }
+  }
+
+  &.info {
+    background-color: var(--color-blue-400);
+
+    svg {
+      color: var(--theme-white);
+    }
+  }
+
+  &.warn {
+    background-color: var(--color-orange-400);
+
+    svg {
+      color: var(--theme-white);
+    }
+  }
+
+  &.error {
+    background-color: var(--color-red-400);
 
     svg {
       color: var(--theme-white);

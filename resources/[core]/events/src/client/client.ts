@@ -1,24 +1,32 @@
-import eventListener from './event/event-listener';
+import eventPoller from './managers/event-poller';
+import keyManager from './managers/key-manager';
+import playerStateManager from './managers/player-state-manager';
 import './exports';
 import './misc/commands';
-import './misc/events';
 
-on('onResourceStart', (resourceName: string) => {
-  // Events Resource Starts
-  if (resourceName === GetCurrentResourceName()) {
-    eventListener.restartListener();
-    console.log('EventListener Started');
+let tickHandle: number;
+
+function startTicking(): void {
+  if (tickHandle !== undefined) {
+    clearTick(tickHandle);
   }
-});
+
+  tickHandle = setTick(() => {
+    eventPoller.tick();
+    playerStateManager.tick();
+    keyManager.tick();
+  });
+}
+
+startTicking();
 
 on('onResourceStop', (resourceName: string) => {
-  // Current Resource Stops
-  if (resourceName === GetCurrentResourceName() && eventListener) {
-    eventListener.destroy();
+  if (resourceName === GetCurrentResourceName() && tickHandle !== undefined) {
+    clearTick(tickHandle);
   }
 });
 
-onNet('game:character-selected', (charId: number) => {
-  eventListener.restartListener();
-  console.log('EventListener Restarted');
+onNet('game:character-selected', () => {
+  startTicking();
+  console.log('EventListener restarted');
 });

@@ -1,4 +1,5 @@
 import Bug from '@fa/5/solid/bug.svg';
+import Clipboard from '@fa/5/solid/clipboard.svg';
 import Desktop from '@fa/5/solid/desktop.svg';
 import DiceFive from '@fa/5/solid/dice-five.svg';
 import DiceFour from '@fa/5/solid/dice-four.svg';
@@ -63,6 +64,24 @@ export default function Log() {
 
   useEscapeKey(state.show, onEscape);
 
+  // The async Clipboard API is blocked by CEF's permissions policy inside RedM's NUI
+  // frame, so we fall back to the legacy textarea + execCommand('copy') trick.
+  const copyToClipboard = (text: string) => {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+  };
+
+  const copyEntry = (entry: UI.Log.LogData) => {
+    copyToClipboard(entry.message);
+  };
+
   const addMessage = (source: UI.Log.Source, data: UI.Log.Data) => {
     logStore.addMessage(source, data);
   };
@@ -103,6 +122,10 @@ export default function Log() {
     logStore.toggleReverseResource(resource);
   };
 
+  const toggleType = (type: NonNullable<UI.Log.LogData['_type']>) => {
+    logStore.toggleType(type);
+  };
+
   const getClassName = (resource: string) => {
     if (state.filter.has(resource)) {
       return 'active';
@@ -113,11 +136,14 @@ export default function Log() {
     return 'inactive';
   };
 
-  const shouldShow = (resource: string) => {
+  const shouldShow = (resource: string, type?: UI.Log.LogData['_type']) => {
     if (state.filter.size > 0 && !state.filter.has(resource)) {
       return false;
     }
     if (state.reverseFilter.has(resource)) {
+      return false;
+    }
+    if (state.typeFilter.size > 0 && (!type || !state.typeFilter.has(type))) {
       return false;
     }
     return true;
@@ -147,27 +173,37 @@ export default function Log() {
           onWheel={handleMousewheel}
         >
           {state.messages.map(
-            ({ source, resource, _type, message }, index) =>
-              shouldShow(resource) && (
+            (entry, index) =>
+              shouldShow(entry.resource, entry._type) && (
                 <div className={styles.item} key={index}>
-                  <i data-source={source}>
-                    {source === 'server' && <Server />} {source === 'client' && <Desktop />}
-                  </i>
-                  <span style={{ backgroundColor: state.colors[resource].hsl }}>{resource}</span>
-                  {_type && (
+                  <div className={styles.icons}>
+                    <i data-source={entry.source}>
+                      {entry.source === 'server' && <Server />} {entry.source === 'client' && <Desktop />}
+                    </i>
+                    <i className={styles.copyIcon} onClick={() => copyEntry(entry)}>
+                      <Clipboard />
+                    </i>
+                  </div>
+                  <span style={{ backgroundColor: state.colors[entry.resource].hsl }}>
+                    {entry.resource}
+                    <br />
+                    {new Date(entry.timestamp).toLocaleTimeString('en-GB')}.
+                    {String(entry.timestamp % 1000).padStart(3, '0')}
+                  </span>
+                  {entry._type && (
                     <span
                       className={conditionalClass(styles.logType, {
-                        [styles.info]: _type === 'info',
-                        [styles.warn]: _type === 'warn',
-                        [styles.error]: _type === 'error',
+                        [styles.info]: entry._type === 'info',
+                        [styles.warn]: entry._type === 'warn',
+                        [styles.error]: entry._type === 'error',
                       })}
                     >
-                      {_type === 'info' && <InfoSquare />}
-                      {_type === 'warn' && <ExclamationTriangle />}
-                      {_type === 'error' && <Bug />}
+                      {entry._type === 'info' && <InfoSquare />}
+                      {entry._type === 'warn' && <ExclamationTriangle />}
+                      {entry._type === 'error' && <Bug />}
                     </span>
                   )}
-                  <pre>{message}</pre>
+                  <pre>{entry.message}</pre>
                 </div>
               ),
           )}
@@ -183,40 +219,68 @@ export default function Log() {
       </div>
       {state.show && (
         <div className={styles.filter}>
-          <div className={`${styles.filterItem} ${styles.red}`}>
-            <TrashAlt onClick={() => logStore.clearMessages()} />
-          </div>
-          <div className={styles.filterItem}>
-            <Dice className="dice" onClick={randomizeColors} />
-          </div>
-          <div
-            className={conditionalClass(styles.filterItem, {
-              [styles.inactive]: !(
-                state.filter.size === 0 && state.reverseFilter.size !== Object.values(state.colors).length
-              ),
-            })}
-            onClick={clearFilter}
-          >
-            all
-          </div>
-          {Object.entries(state.colors).map(([resource, color]) => (
-            <div
-              key={resource}
-              style={{ backgroundColor: color.hsl }}
-              className={conditionalClass([styles.filterItem, getClassName(resource)], {
-                [styles.inactive]: !shouldShow(resource),
-              })}
-              onClick={() => {
-                toggleResource(resource);
-              }}
-              onContextMenu={(e) => {
-                e.preventDefault();
-                toggleReverseResource(resource);
-              }}
-            >
-              {resource}
+          <div className={styles.filterControls}>
+            <div className={`${styles.filterItem} ${styles.red}`}>
+              <TrashAlt onClick={() => logStore.clearMessages()} />
             </div>
-          ))}
+            <div className={styles.filterItem}>
+              <Dice className="dice" onClick={randomizeColors} />
+            </div>
+            <div
+              className={conditionalClass(styles.filterItem, {
+                [styles.inactive]: !(
+                  state.filter.size === 0 && state.reverseFilter.size !== Object.values(state.colors).length
+                ),
+              })}
+              onClick={clearFilter}
+            >
+              all
+            </div>
+            <div
+              className={conditionalClass([styles.filterItem, styles.info], {
+                [styles.inactive]: state.typeFilter.size > 0 && !state.typeFilter.has('info'),
+              })}
+              onClick={() => toggleType('info')}
+            >
+              <InfoSquare />
+            </div>
+            <div
+              className={conditionalClass([styles.filterItem, styles.warn], {
+                [styles.inactive]: state.typeFilter.size > 0 && !state.typeFilter.has('warn'),
+              })}
+              onClick={() => toggleType('warn')}
+            >
+              <ExclamationTriangle />
+            </div>
+            <div
+              className={conditionalClass([styles.filterItem, styles.error], {
+                [styles.inactive]: state.typeFilter.size > 0 && !state.typeFilter.has('error'),
+              })}
+              onClick={() => toggleType('error')}
+            >
+              <Bug />
+            </div>
+          </div>
+          <div className={styles.filterResources}>
+            {Object.entries(state.colors).map(([resource, color]) => (
+              <div
+                key={resource}
+                style={{ backgroundColor: color.hsl }}
+                className={conditionalClass([styles.filterItem, getClassName(resource)], {
+                  [styles.inactive]: !shouldShow(resource),
+                })}
+                onClick={() => {
+                  toggleResource(resource);
+                }}
+                onContextMenu={(e) => {
+                  e.preventDefault();
+                  toggleReverseResource(resource);
+                }}
+              >
+                {resource}
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </>

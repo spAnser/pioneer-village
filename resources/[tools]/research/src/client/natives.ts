@@ -231,11 +231,11 @@ on('onResourceStop', (resourceName: string) => {
   }
 });
 
-on('events_manager:firstPerson', (isInFirstPerson: boolean) => {
+on('events:firstPerson', (isInFirstPerson: boolean) => {
   console.log(`First Person: ${isInFirstPerson}`);
 });
 
-on('events_manager:controlsChanged', () => {
+on('events:controlsChanged', () => {
   console.log(`Controls Changed`);
 
   // IsControlEnabled(0, GetHashKey());
