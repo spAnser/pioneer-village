@@ -53,7 +53,7 @@ const InventoryTypes: Record<string, Inventory.Type> = {
   paperBag: {
     slots: 8,
     maxWeight: 6,
-    restrictions: Restrictions.Tiny + Restrictions.Small,
+    restrictions: Restrictions.Tiny | Restrictions.Small,
   },
   // Character bird slots
   birds: {
