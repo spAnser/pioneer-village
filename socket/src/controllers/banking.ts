@@ -89,7 +89,9 @@ export default () => {
         cb?.({ success: false, amount: 0, message: redeemResult.message });
         return;
       }
-      const depositResult = await Banking.deposit(characterId, bankId, redeemResult.amount);
+      // Slip money never existed as physical PV_DOLLAR items, so it is credited directly
+      // rather than through deposit(), which would first try to take cash the player never had.
+      const depositResult = await Banking.depositDirect(characterId, bankId, redeemResult.amount);
       cb?.({ success: depositResult.success, amount: redeemResult.amount, message: depositResult.message });
     });
 

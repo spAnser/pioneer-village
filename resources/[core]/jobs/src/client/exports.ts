@@ -1,19 +1,10 @@
 import { PVGame, exports, onResourceInit } from '@lib/client';
 import { awaitUI, emitUI, onUI } from '@lib/client/comms/ui';
 
-type NotifyType = 'info' | 'success' | 'error';
-
-/** The notification layer maps these names to theme vars; anything else reaches the DOM as raw CSS. */
-const notifyColors: Record<NotifyType, string> = {
-  success: 'green',
-  error: 'red',
-  info: 'blue',
-};
-
 const TRANSPORT_ERROR = 'Could not reach the job server';
 
-export const notify = (message: string, type: NotifyType = 'info', duration = 5000): void => {
-  emitUI('notification.notify', message, duration, notifyColors[type], 'white', false);
+export const notify = (message: string, type: UI.Notification.Type = 'info', duration = 5000): void => {
+  emitUI('notification.notify', message, duration, type, false);
 };
 
 /** Clock results carry their own failure text; success is announced by the clock-in/out broadcasts. */
@@ -26,59 +17,7 @@ export const notifyClockFailure = (result: Jobs.ClockResult, fallback: string): 
 let currentJob: Jobs.JobDefinition | null = null;
 let isClocked = false;
 
-// Notification helper
-const notify = (message: string, type: 'info' | 'success' | 'error' = 'success', duration = 5000): void => {
-  emitUI('notification.notify', message, duration, type, false);
-};
-
-const getCharacterId = (): number => {
-  const id = PVGame.characterId();
-  return id ?? 0;
-};
-
-// Event handlers
-onUI('jobs.clock-in-update', (characterId, jobHandle) => {
-  if (characterId === getCharacterId()) {
-    isClocked = true;
-    getJobState();
-    notify(`Clocked in to ${jobHandle}`, 'success');
-  }
-});
-
-onUI('jobs.clock-out-update', (characterId, hoursWorked, payment) => {
-  if (characterId === getCharacterId()) {
-    isClocked = false;
-    currentJob = null;
-    notify(`Clocked out! Worked ${hoursWorked.toFixed(2)} hours. Earned $${payment.toFixed(2)}`, 'success');
-  }
-});
-
-onUI('jobs.task-started', (characterId, taskId) => {
-  if (characterId === getCharacterId()) {
-    notify(`Started task #${taskId}`, 'info');
-  }
-});
-
-onUI('jobs.task-completed', (characterId, _taskId, payment) => {
-  if (characterId === getCharacterId()) {
-    notify(`Task completed! Earned $${payment.toFixed(2)}`, 'success');
-  }
-});
-
-onUI('jobs.payment-processed', (characterId, amount, reason) => {
-  if (characterId === getCharacterId()) {
-    notify(`Pay slip: $${amount.toFixed(2)} — ${reason}`, 'info');
-  }
-});
-
-onUI('jobs.permission-granted', (characterId, type, typeId) => {
-  if (characterId === getCharacterId()) {
-    notify(`Permission granted: ${type} ${typeId}`, 'info');
-  }
-});
-
-// State management
-const getJobState = async (): Promise<void> => {
+const refreshState: Jobs.ClientExports['refreshState'] = async () => {
   try {
     const state = await awaitUI('jobs.get-state');
     if (!state || state.error) {
@@ -98,13 +37,13 @@ const isLocalCharacter = (characterId: number): boolean => {
 };
 
 onNet('game:character-selected', () => {
-  getJobState();
+  refreshState();
 });
 
 onResourceInit('game', () => {
   // Restarting jobs mid-session never re-fires game:character-selected.
   if (PVGame.characterId() !== null) {
-    getJobState();
+    refreshState();
   }
 });
 
@@ -112,7 +51,7 @@ onUI('jobs.clock-in-update', (characterId, jobHandle) => {
   if (!isLocalCharacter(characterId)) {
     return;
   }
-  getJobState();
+  refreshState();
   notify(`Clocked in to ${jobHandle}`, 'success');
 });
 
@@ -120,7 +59,7 @@ onUI('jobs.clock-out-update', (characterId, jobHandle, hoursWorked) => {
   if (!isLocalCharacter(characterId)) {
     return;
   }
-  getJobState();
+  refreshState();
   notify(`Clocked out of ${jobHandle} after ${hoursWorked.toFixed(2)} hours`, 'success');
 });
 
@@ -161,6 +100,13 @@ onUI('jobs.payment-processed', (characterId, amount, reason) => {
     return;
   }
   notify(`$${amount.toFixed(2)} — ${reason}`, 'success');
+});
+
+onUI('jobs.permission-granted', (characterId, type, typeId) => {
+  if (!isLocalCharacter(characterId)) {
+    return;
+  }
+  notify(`Permission granted: ${type} ${typeId}`, 'info');
 });
 
 const clockIn: Jobs.ClientExports['clockIn'] = async (jobHandle) => {
@@ -255,11 +201,11 @@ const getPaySlips: Jobs.ClientExports['getPaySlips'] = async () => {
   }
 };
 
-const redeemPaySlip: Jobs.ClientExports['redeemPaySlip'] = async (paySlipId) => {
+const redeemPaySlip: Jobs.ClientExports['redeemPaySlip'] = async (paySlipId, bankId) => {
   try {
-    return await awaitUI('jobs.redeem-pay-slip', paySlipId);
+    return await awaitUI('jobs.redeem-pay-slip', paySlipId, bankId);
   } catch (_error) {
-    return false;
+    return { success: false, message: TRANSPORT_ERROR };
   }
 };
 

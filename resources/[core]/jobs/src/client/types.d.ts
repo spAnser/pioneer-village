@@ -18,7 +18,7 @@ declare namespace Jobs {
     failTask: (instanceId: string, reason?: string) => Promise<boolean>;
     getActiveTasks: () => Promise<Jobs.TaskInstance[]>;
     getPaySlips: () => Promise<Jobs.PaySlip[]>;
-    redeemPaySlip: (paySlipId: number) => Promise<boolean>;
+    redeemPaySlip: (paySlipId: number, bankId: string) => Promise<Jobs.PaySlipRedemption>;
   }
 }
 
@@ -40,7 +40,7 @@ declare namespace ClientRPC {
     ['jobs.fail-task']: (instanceId: string, reason: string) => boolean;
     ['jobs.get-active-tasks']: () => Jobs.TaskInstance[];
     ['jobs.get-pay-slips']: () => Jobs.PaySlip[];
-    ['jobs.redeem-pay-slip']: (paySlipId: number) => boolean;
+    ['jobs.redeem-pay-slip']: (paySlipId: number, bankId: string) => Jobs.PaySlipRedemption;
   }
 }
 
@@ -55,5 +55,6 @@ declare namespace ClientIn {
     ['jobs.task-completed']: (characterId: number, instance: Jobs.TaskInstance, payment: number) => void;
     ['jobs.task-failed']: (characterId: number, instance: Jobs.TaskInstance, reason: string) => void;
     ['jobs.payment-processed']: (characterId: number, amount: number, reason: string) => void;
+    ['jobs.permission-granted']: (characterId: number, type: string, typeId: number) => void;
   }
 }

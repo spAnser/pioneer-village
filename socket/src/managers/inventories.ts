@@ -1,6 +1,5 @@
 import { and, eq, inArray, isNull, like, or } from 'drizzle-orm';
-import { Socket } from 'socket.io';
-import type { DefaultEventsMap } from 'socket.io/dist/typed-events';
+import { type DefaultEventsMap, Socket } from 'socket.io';
 
 import InventoryTypes from '../../../lib/shared/inventory-types';
 import PVItems from '../../../lib/shared/items';
@@ -179,16 +178,17 @@ class Inventories {
    * remaining items first (there is no cascade FK from Item -> Container).
    */
   async deleteInventory(identifier: string): Promise<void> {
-    const inventoryResult = await db.select().from(InventorySchema).where(eq(InventorySchema.identifier, identifier)).limit(1);
+    const inventoryResult = await db
+      .select()
+      .from(InventorySchema)
+      .where(eq(InventorySchema.identifier, identifier))
+      .limit(1);
     const inventory = inventoryResult[0];
     if (!inventory) {
       return;
     }
 
-    await db
-      .update(ItemSchema)
-      .set({ deletedAt: new Date() })
-      .where(eq(ItemSchema.containerId, inventory.containerId));
+    await db.update(ItemSchema).set({ deletedAt: new Date() }).where(eq(ItemSchema.containerId, inventory.containerId));
 
     await db.delete(InventorySchema).where(eq(InventorySchema.id, inventory.id));
     await db.delete(ContainerSchema).where(eq(ContainerSchema.id, inventory.containerId));
@@ -203,7 +203,8 @@ class Inventories {
     if (!inventoryData) {
       return 0;
     }
-    return inventoryData.container.items.filter((item) => item.identifier === itemIdentifier && item.deletedAt === null).length;
+    return inventoryData.container.items.filter((item) => item.identifier === itemIdentifier && item.deletedAt === null)
+      .length;
   }
 
   /**
@@ -237,12 +238,15 @@ class Inventories {
       return 0;
     }
 
-    await db.update(ItemSchema).set({ deletedAt: new Date() }).where(
-      inArray(
-        ItemSchema.id,
-        matching.map((item) => item.id),
-      ),
-    );
+    await db
+      .update(ItemSchema)
+      .set({ deletedAt: new Date() })
+      .where(
+        inArray(
+          ItemSchema.id,
+          matching.map((item) => item.id),
+        ),
+      );
 
     this.checkWorldInventory(identifier, true);
     await this.broadcastInventory(identifier);
@@ -559,7 +563,9 @@ class Inventories {
   private validateItemMove(item: ItemSchemaType[], newIdentifier: string): string | null {
     const itemData = PVItems[item[0].identifier];
     if (!itemData) {
-      console.error(`validateItemMove: unknown item identifier ${item[0].identifier}, is the socket server out of date?`);
+      console.error(
+        `validateItemMove: unknown item identifier ${item[0].identifier}, is the socket server out of date?`,
+      );
       return 'Unknown item, please contact staff';
     }
     if (!this.isAllowedInInventory(newIdentifier, itemData)) {

@@ -1,8 +1,8 @@
 import type { Socket } from 'socket.io';
 
 import { logInfoC, logInfoS } from '../helpers';
-import Characters from '../managers/characters';
 import Banking from '../managers/banking';
+import Characters from '../managers/characters';
 import jobSystemManager from '../managers/jobs';
 import { serverNamespace, userNamespace } from '../server';
 
@@ -480,36 +480,6 @@ export default (): void => {
       );
     });
 
-    socket.on('jobs.redeem-pay-slip', async (paySlipId, cb = () => {}): Promise<void> => {
-      const characterId = characterIdOf(socket);
-      if (!characterId) {
-        cb(false);
-        return;
-      }
-
-      logInfoC('[Jobs]', 'redeem-pay-slip', characterId, paySlipId);
-
-      await respondToClient<boolean>('redeem-pay-slip', cb, false, async () => {
-        // Redemption only reports whether it worked, so the slip is read first for the
-        // job, amount and reason the payment announcement has to name. A failed read
-        // yields an empty list, so bail rather than burn a slip nobody can be paid for —
-        // redemption is the one point where money changes hands.
-        const slips = await jobSystemManager.getUnredeemedPaySlips(characterId);
-        const slip = slips.find((entry) => entry.id === paySlipId);
-        if (!slip) {
-          return false;
-        }
-
-        const success = await jobSystemManager.redeemPaySlip(characterId, paySlipId);
-
-        if (success) {
-          announcePayment(characterId, slip.jobHandle, Number(slip.amount), slip.reason);
-        }
-
-        return success;
-      });
-    });
-
     socket.on('disconnect', async (): Promise<void> => {
       const characterId = characterIdOf(socket);
       if (!characterId) {
@@ -541,23 +511,36 @@ export default (): void => {
       }
     });
 
-    socket.on('jobs.redeem-pay-slip', async (paySlipId: number, bankId: string, cb = () => {}) => {
-      const characterId = socket.data?.character?.id;
+    socket.on('jobs.redeem-pay-slip', async (paySlipId, bankId, cb = () => {}): Promise<void> => {
+      const characterId = characterIdOf(socket);
       if (!characterId) {
         cb({ success: false, message: 'No character data' });
         return;
       }
 
-      logInfoC('[Jobs]', 'redeemPaySlip', characterId, paySlipId, bankId);
+      logInfoC('[Jobs]', 'redeem-pay-slip', characterId, paySlipId, bankId);
 
+      // The slip is burned atomically before the deposit, so a concurrent redeem cannot
+      // pay the same slip twice. A failed deposit therefore leaves money owed rather than
+      // money duplicated — the safer side to fail on, but it still needs reconciling.
       const redeemResult = await jobSystemManager.redeemPaySlip(paySlipId, characterId, bankId);
-      if (redeemResult.success && redeemResult.amount > 0) {
+
+      if (redeemResult.success && redeemResult.paySlip && redeemResult.amount > 0) {
         const depositResult = await Banking.depositDirect(characterId, bankId, redeemResult.amount);
+
         if (!depositResult.success) {
-          // TODO: slip is marked redeemed but deposit failed — consider wrapping in a transaction
           logInfoC('[Jobs]', `WARNING: slip ${paySlipId} redeemed but deposit failed:`, depositResult.message);
         }
-        userNamespace.emit('__client__', 'jobs.pay-slip-redeemed', characterId, paySlipId, redeemResult.amount, depositResult.newBalance ?? 0);
+
+        announcePayment(characterId, redeemResult.paySlip.jobHandle, redeemResult.amount, redeemResult.paySlip.reason);
+        userNamespace.emit(
+          '__client__',
+          'jobs.pay-slip-redeemed',
+          characterId,
+          paySlipId,
+          redeemResult.amount,
+          depositResult.newBalance ?? 0,
+        );
       }
 
       cb(redeemResult);

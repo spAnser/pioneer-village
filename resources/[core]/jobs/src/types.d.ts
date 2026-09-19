@@ -141,6 +141,16 @@ declare namespace Jobs {
     createdAt: number;
   }
 
+  /**
+   * Outcome of cashing a slip at a bank. `amount` is absent on failure, so a caller
+   * that reads it without checking `success` cannot mistake a refusal for a $0 payout.
+   */
+  interface PaySlipRedemption {
+    success: boolean;
+    amount?: number;
+    message?: string;
+  }
+
   /** Who is on shift right now, for seeding a game-server mirror after a reconnect. */
   interface ClockedInEntry {
     characterId: number;

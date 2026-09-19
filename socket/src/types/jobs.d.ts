@@ -76,7 +76,11 @@ declare namespace SocketIn {
     ['jobs.fail-task']: (instanceId: string, reason: string, callback: (success: boolean) => void) => void;
     ['jobs.get-active-tasks']: (callback: (instances: Jobs.TaskInstance[]) => void) => void;
     ['jobs.get-pay-slips']: (callback: (slips: Jobs.PaySlip[]) => void) => void;
-    ['jobs.redeem-pay-slip']: (paySlipId: number, bankId: string, callback: (result: { success: boolean; amount?: number; message?: string }) => void) => void;
+    ['jobs.redeem-pay-slip']: (
+      paySlipId: number,
+      bankId: string,
+      callback: (result: Jobs.PaySlipRedemption) => void,
+    ) => void;
   }
 }
 
@@ -99,8 +103,6 @@ declare namespace SocketOut {
     'jobs.task-completed': (characterId: number, instance: Jobs.TaskInstance, payment: number) => void;
     'jobs.task-failed': (characterId: number, instance: Jobs.TaskInstance, reason: string) => void;
     'jobs.payment-processed': (characterId: number, amount: number, reason: string) => void;
-    'jobs.task-started': (characterId: number, taskId: number) => void;
-    'jobs.task-completed': (characterId: number, taskId: number, payment: number) => void;
     'jobs.permission-granted': (characterId: number, type: string, typeId: number) => void;
     'jobs.pay-slip-redeemed': (characterId: number, paySlipId: number, amount: number, newBalance: number) => void;
   }

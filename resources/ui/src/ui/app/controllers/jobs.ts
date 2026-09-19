@@ -63,6 +63,6 @@ export default (socket: Socket<SocketOut.ToClient, SocketIn.FromClient>): void =
 
   onClientCall(
     'jobs.redeem-pay-slip',
-    (paySlipId) => new Promise((resolve) => socket.emit('jobs.redeem-pay-slip', paySlipId, resolve)),
+    (paySlipId, bankId) => new Promise((resolve) => socket.emit('jobs.redeem-pay-slip', paySlipId, bankId, resolve)),
   );
 };
