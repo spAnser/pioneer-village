@@ -10,77 +10,98 @@ const isWindows = os.platform() === 'win32';
 const platformFolder = isWindows ? 'build_server_windows' : 'build_proot_linux';
 
 const url = `https://runtime.fivem.net/artifacts/fivem/${platformFolder}/master/`;
+const serverFile = isWindows ? 'server.7z' : 'fx.tar.xz';
 
 const serverVersion = packageJson.data.serverVersion;
-const downloadRE = new RegExp(`${serverVersion}-[a-f0-9]+/(?:server|fx)\\.[a-z0-9.]+`, 'gim');
+// The artifacts listing page was removed, so resolve the build's commit hash from its release tag
+const tagUrl = `https://api.github.com/repos/citizenfx/fivem/commits/v1.0.0.${serverVersion}`;
 
 const http = require('https');
 const fs = require('fs');
-
-const activeDownloads = new Set();
-
-const Delay = (ms) => new Promise((res) => setTimeout(res, Math.max(1, ms)));
 
 if (fs.existsSync(serverVersion)) {
   console.log(`Server version ${serverVersion} already exists.`);
   process.exit(0);
 }
 
-const downloadServer = async (serverFile) => {
-  const filename = `server-${serverVersion}.${serverFile.split('.').pop()}`;
-
-  if (activeDownloads.has(filename)) {
-    return;
-  }
-  activeDownloads.add(filename);
-  console.log('Downloading: ', serverFile);
-
-  http.get(`${url}${serverFile}`, (res) => {
-    let body = Buffer.alloc(0);
-    res.on('data', (chunk) => {
-      body = Buffer.concat([body, chunk]);
-    });
-
-    res.on('end', async () => {
-      console.log('Artifact Downloaded', body.length);
-      fs.writeFileSync(filename, body);
-
-      fs.mkdirSync(serverVersion);
-
-      console.log('Extracting...');
-      let task;
-      if (isWindows) {
-        task = spawn(_7z, ['x', filename, '-y', `-o${serverVersion}`]);
-      } else {
-        task = spawn('tar', ['-xf', filename, '-C', serverVersion]);
-      }
-      task.stdout.on('data', (data) => {
-        console.log(data.toString());
-      });
-
-      task.stderr.on('data', (data) => {
-        console.error(data.toString());
-      });
-
-      task.on('exit', async () => {
-        console.log('Extraction Complete');
-        console.log('Deleting zip...');
-        fs.unlinkSync(filename);
-      });
-    });
-  });
+const fail = (...msg) => {
+  console.error(...msg);
+  process.exitCode = 1;
 };
 
-http.get(url, (res) => {
-  let body = '';
-  res.on('data', (chunk) => {
-    body += chunk;
-  });
+const downloadServer = (artifactPath) => {
+  const filename = `server-${serverVersion}.${artifactPath.split('.').pop()}`;
+  console.log('Downloading: ', artifactPath);
 
-  res.on('end', () => {
-    const matches = body.match(downloadRE);
-    for (const match of matches) {
-      downloadServer(match);
-    }
-  });
-});
+  http
+    .get(`${url}${artifactPath}`, (res) => {
+      if (res.statusCode !== 200) {
+        res.resume();
+        return fail(`Failed to download artifact: HTTP ${res.statusCode}`, `${url}${artifactPath}`);
+      }
+
+      const file = fs.createWriteStream(filename);
+      res.pipe(file);
+
+      file.on('finish', () => {
+        file.close(() => {
+          console.log('Artifact Downloaded', fs.statSync(filename).size);
+          fs.mkdirSync(serverVersion, { recursive: true });
+
+          console.log('Extracting...');
+
+          let task;
+
+          if (isWindows) {
+            task = spawn(_7z, ['x', filename, '-y', `-o${serverVersion}`]);
+          } else {
+            task = spawn('tar', ['-xf', filename, '-C', serverVersion]);
+          }
+
+          task.stdout.on('data', (data) => {
+            console.log(data.toString());
+          });
+
+          task.stderr.on('data', (data) => {
+            console.error(data.toString());
+          });
+
+          task.on('exit', (code) => {
+            if (code !== 0) {
+              return fail(`Extraction failed (exit code ${code}).`);
+            }
+
+            console.log('Extraction Complete');
+            console.log('Deleting archive...');
+            
+            fs.unlinkSync(filename);
+          });
+        });
+      });
+    })
+    .on('error', (err) => fail('Connection error:', err.message));
+};
+
+const headers = { 'User-Agent': 'pioneer-village-download', Accept: 'application/vnd.github+json' };
+
+http
+  .get(tagUrl, { headers }, (res) => {
+    let body = '';
+    res.setEncoding('utf8');
+    res.on('data', (chunk) => {
+      body += chunk;
+    });
+
+    res.on('end', () => {
+      if (res.statusCode !== 200) {
+        return fail(
+          `Could not find tag v1.0.0.${serverVersion}: HTTP ${res.statusCode}`,
+          'Check data.serverVersion in package.json.',
+        );
+      }
+
+      const { sha } = JSON.parse(body);
+      downloadServer(`${serverVersion}-${sha}/${serverFile}`);
+    });
+  })
+  .on('error', (err) => fail('Connection error:', err.message));
