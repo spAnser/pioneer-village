@@ -14,9 +14,9 @@ files {
     'public/**/*.*',
 }
 
-shared_script './**/sh_*.lua'
+--shared_script './**/sh_*.lua'
 client_script {
     'hashes/hash_*',
     './**/cl_*.lua'
 }
-server_script './**/sv_*.lua'
+--server_script './**/sv_*.lua'

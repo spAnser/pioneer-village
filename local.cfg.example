@@ -1,5 +1,4 @@
 sv_licenseKey _LICENSE_KEY_
-set steam_webApiKey _WEB_API_KEY_
 
 sv_master1 " "
 
